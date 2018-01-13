@@ -1,0 +1,288 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2017 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#ifndef MESSAGEBUS_H_
+#define MESSAGEBUS_H_
+
+#include <string>
+#include <vector>
+#include <stdexcept>
+#include <algorithm>
+#include <iostream>
+
+#ifdef __linux__
+	#include <SDL2/SDL.h>
+#else
+	#include <SDL.h>
+#endif
+
+
+namespace jetfuel {
+    namespace core {
+        namespace exceptions{
+            class Out_of_vector_range_exception : public std::runtime_error{
+                public:
+                    Out_of_vector_range_exception() :
+                    std::runtime_error
+                    ("[!]Out of Vector Range Exception Thrown!"){}
+            };
+            /// jetfuel::core::exceptions::Out_of_vector_range_exception()
+            ///
+            /// This exception is thrown when a function requests for
+            /// data from a vector location
+            /// that is outside of that vector's range.
+            ///
+            /// Code Example:
+            ///     int Get_int_in_vector(const int location) const {
+            ///         if(intvector.size() <= location){
+            ///             throw exceptions::Out_of_vector_range_exception();
+            ///         }else{
+            ///             return intvector[location];
+            ///         }
+            ///     }
+        }
+
+        class Message_bus {
+        public:
+            /// \brief Construct a Message_bus with or without
+            /// logging.
+            /// Constructs a Message_bus which enables logging
+            /// by default.
+            ///
+            /// \param bool disablelogging
+            Message_bus(const bool disablelogging = false);
+
+
+            /// \brief Posts a new unprocessed message to the message bus.
+            ///
+            /// Posts a new unprocessed message from a std::string to
+            /// the message bus to be processed.
+            ///
+            /// \param std::string message
+            void Post_message(const std::string message);
+
+            /// \brief Returns the size of queued SDL_Events.
+            ///
+            /// Returns the size of queued SDL_Events.
+            size_t Get_SDL_events_size() const{
+                return m_currentsdlevents.size();
+            }
+
+            /// \brief Checks if any queued messages exist.
+            ///
+            /// Returns a boolean pertaining to whether
+            /// any messages exist. NOTE: This REFRESHES
+            /// the SDL events vector, possibly deleting
+            /// events that have not been processed!
+            /// Make sure that UIS knows of all current SDL events
+            /// in the vector before calling this function!
+            bool Do_messages_exist(){
+                Prepare();
+
+                return Get_message_size()>0 || Get_SDL_events_size()>0;
+            }
+
+            /// \brief Checks if at least one UIS message exists.
+            ///
+            /// Checks if at least one UIS message exists.
+            /// If so, this function will return true and the message
+            /// std::string pointer's value will be set to that UIS
+            /// message.
+            ///
+            /// \param std::string *message
+            bool Does_a_UIS_message_exist(std::string *message);
+
+            /// \brief Checks if a certain message exists in the
+            /// message bus.
+            ///
+            /// Returns a boolean pertaining to whether a message is
+            /// in the message bus. If it is, it will mark the
+            /// message as processed which means it can be deleted
+            /// by calling Clear_processed_messages().
+            ///
+            /// \param std::string message
+            bool Does_message_exist(const std::string message);
+
+            /// \brief Gets the next message in the queued message
+            /// vector.
+            ///
+            /// Gets the next message in the queued message vector.
+            /// This function will return a string with the contents
+            /// of "No next message"(without the quotes, of course)
+            /// if the last message checked (both by this function
+            /// and any other message checking function) is the last
+            /// message in the message vector.
+            std::string Get_next_message();
+
+            /// \brief Gets a SDL_Event in the SDL_Event vector.
+            ///
+            /// Gets a SDL_Event in the SDL_Event vector. This will
+            /// throw an Out_of_vector_range_exception() if the
+            /// place int given to the function is not in the
+            /// SDL_Event vector's range.
+            ///
+            /// \param int place
+            SDL_Event Get_SDL_event(const int place){
+                if(place>=Get_SDL_events_size()){
+                    throw exceptions::Out_of_vector_range_exception();
+                }else{
+                    return m_currentsdlevents[place];
+                }
+            }
+        protected:
+            /// \brief Returns the size of queued messages.
+            ///
+            /// This function takes the amount of messages
+            /// that have not been checked via the
+            /// Does_message_exist() function and returns the quantity
+            /// of them.
+            size_t Get_message_size() {
+                return m_messages.size();
+            }
+
+            /// \brief Check if logging is disabled.
+            ///
+            /// Returns a bool pertaining to whether logging was
+            /// enabled or disabled during initialization.
+            bool Is_logging_disabled() const {
+                return m_loggingdisabled;
+            }
+
+            /// \brief Adds message to the m_queuedmessages vector
+            ///
+            /// Adds a message to the internal private
+            /// m_queuedmessages vector.
+            ///
+            /// \param std::string message
+            void Queue_message(const std::string message){
+                m_messages.push_back(message);
+            }
+
+            /// \brief Returns a certain message from the internal
+            /// message vector.
+            ///
+            /// Returns a message from the internal private message
+            /// vector(m_messages). If the int given is outside the
+            /// vector's range, this function will throw a
+            /// jetfuel::core::exceptions::
+            /// Out_of_vector_range_exception() exception.
+            ///
+            /// \param int whichqueuedmessage
+            std::string Get_message(const int whichqueuedmessage) const {
+                if(m_messages.size() <= whichqueuedmessage){
+                    // Not in vector range...
+                    // throw Out_of_vector_range_exception
+                    throw exceptions::Out_of_vector_range_exception();
+                }else{
+                    return m_messages[whichqueuedmessage];
+                }
+            }
+
+            /// \brief Erases a certain message from the internal
+            /// message vector.
+            ///
+            /// Erases a certain message from the internal
+            /// message vector. If whichmessage is equal to or
+            /// greater than the size of the internal message vector,
+            /// then this function will throw a
+            /// Out_of_vector_range_exception. Otherwise, this
+            /// function will erase the message specified.
+            ///
+            /// \param unsigned int whichmessage
+            void Erase_message(const unsigned int whichmessage){
+                if(whichmessage >= m_messages.size()){
+                    throw exceptions::
+                          Out_of_vector_range_exception();
+                }else{
+                    m_messages.erase(m_messages.begin()+whichmessage);
+                }
+            }
+
+            /// \brief Returns the internal m_lastmessageplacement
+            /// variable.
+            ///
+            /// Returns the internal private m_lastmessageplacement
+            /// variable, to be used for tracking the last message
+            /// checked's placement in the message vector.
+            int Get_last_message_placement() const {
+                return m_lastmessageplacement;
+            }
+
+            /// \brief Sets the internal m_lastmessageplacement
+            /// variable.
+            ///
+            /// Sets the internal private m_lastmessageplacement
+            /// variable. This function should be used for marking
+            /// the placement of the last message processed.
+            ///
+            /// \param int lastmessageplacement
+            void Set_last_message_placement(const int lastmessageplacement) {
+                m_lastmessageplacement = lastmessageplacement;
+            }
+        private:
+            /// \brief Prepares the internal SDL_Event vector
+            /// to be checked.
+            ///
+            /// Prepares the internal SDL_Event vector to be checked
+            /// for SDL_Event Existence. NOTE: This REFRESHES
+            /// the SDL events vector, possibly deleting
+            /// events that have not been processed!
+            /// Make sure that UIS knows of all current SDL events
+            /// in the vector before calling this function!
+            void Prepare();
+
+            ///////////////////
+            /// Member data ///
+            ///////////////////
+
+            int m_lastmessageplacement = -1; ///< Last message
+            ///^ placement variable.
+
+            std::vector<std::string> m_messages; ///< message vector
+            std::vector<SDL_Event> m_currentsdlevents; ///< SDL_Event
+            ///^ vector
+            bool m_loggingdisabled; ///< logging disabled boolean
+        };
+
+
+        /// jetfuel::core::Message_bus
+        ///
+        /// Initialize a Message_bus, used at the core of Neon, to
+        /// Send and Recieve messages, and disable logging
+        /// at the programmer's request.
+        ///
+        /// Code Example:
+        ///  jetfuel::core::Message_bus messagebus;
+        ///  messagebus.Post_message("hello");
+        ///  if(messagebus.Do_messages_exist()){
+        ///     if(messagebus.Does_message_exist("hello")){
+        ///         std::cout <<
+        ///         "Hello message recieved and processed!" << std::endl;
+        ///     }
+        ///
+        ///     for(int i = 0; messagebus.Get_SDL_events_size() > i; i++){
+        ///         if(messagebus.Get_SDL_event(i) == SDL_QUIT){
+        ///             // Quit app here...
+        ///         }
+        ///     }
+        ///     Clear_processed_messages();
+        ///  }
+
+    } /* namespace core */
+} /* namespace jetfuel */
+
+#endif /* MESSAGEBUS_H_ */

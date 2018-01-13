@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\config.h" />
+    <ClInclude Include="..\..\..\src\jetfuelcontrol.h" />
+    <ClInclude Include="..\..\..\src\jetfuelcontrol\UISinterpreter.h" />
+    <ClInclude Include="..\..\..\src\jetfuelcontrol\UISmanager.h" />
+    <ClInclude Include="..\..\..\src\jetfuelcore.h" />
+    <ClInclude Include="..\..\..\src\jetfuelcore\messagebus.h" />
+    <ClInclude Include="..\..\..\src\jetfuelcore\timer.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\circle2d.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\circle2dshape.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\circleinterface.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\color.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\drawable.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\font.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\image.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\rect2d.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\rectangle2dshape.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\rectangleinterface.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\scene.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\scenemanager.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\sprite.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\text.h" />
+    <ClInclude Include="..\..\..\src\jetfueldraw\vector2d.h" />
+    <ClInclude Include="..\..\..\src\jetfuelgui.h" />
+    <ClInclude Include="..\..\..\src\jetfuelgui\button.h" />
+    <ClInclude Include="..\..\..\src\jetfuelgui\checkbox.h" />
+    <ClInclude Include="..\..\..\src\jetfuelgui\dropdownbox.h" />
+    <ClInclude Include="..\..\..\src\jetfuelgui\iclickable.h" />
+    <ClInclude Include="..\..\..\src\jetfuelgui\menu.h" />
+    <ClInclude Include="..\..\..\src\jetfuelgui\progressbar.h" />
+    <ClInclude Include="..\..\..\src\jetfuelgui\slider.h" />
+    <ClInclude Include="..\..\..\src\jetfuelinspire.h" />
+    <ClInclude Include="..\..\..\src\jetfuelinspire\pointerbridge.h" />
+    <ClInclude Include="..\..\..\src\jetfuelinspire\pythonclassloader.h" />
+    <ClInclude Include="..\..\..\src\jetfuelinspire\pythonmoduleloader.h" />
+    <ClInclude Include="..\..\..\src\jetfuellocale.h" />
+    <ClInclude Include="..\..\..\src\jetfuellocale\stringlocalefile.h" />
+    <ClInclude Include="..\..\..\src\jetfuellocale\stringlocalemanager.h" />
+    <ClInclude Include="..\..\..\src\jetfuelmedia.h" />
+    <ClInclude Include="..\..\..\src\jetfuelmedia\music.h" />
+    <ClInclude Include="..\..\..\src\jetfuelmedia\sound.h" />
+    <ClInclude Include="..\..\..\src\jetfuelmedia\soundeffect.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\jetfuelcontrol\UISinterpreter.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelcontrol\UISmanager.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelcore\messagebus.cpp" />
+    <ClCompile Include="..\..\..\src\jetfueldraw\circle2dshape.cpp" />
+    <ClCompile Include="..\..\..\src\jetfueldraw\color.cpp" />
+    <ClCompile Include="..\..\..\src\jetfueldraw\font.cpp" />
+    <ClCompile Include="..\..\..\src\jetfueldraw\image.cpp" />
+    <ClCompile Include="..\..\..\src\jetfueldraw\rectangle2dshape.cpp" />
+    <ClCompile Include="..\..\..\src\jetfueldraw\scene.cpp" />
+    <ClCompile Include="..\..\..\src\jetfueldraw\scenemanager.cpp" />
+    <ClCompile Include="..\..\..\src\jetfueldraw\sprite.cpp" />
+    <ClCompile Include="..\..\..\src\jetfueldraw\text.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelgui\button.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelgui\checkbox.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelgui\dropdownbox.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelgui\menu.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelgui\progressbar.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelgui\slider.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelinspire\pythonclassloader.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelinspire\pythonmoduleloader.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuellocale\stringlocalefile.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelmedia\music.cpp" />
+    <ClCompile Include="..\..\..\src\jetfuelmedia\soundeffect.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\src\jetfueldraw\circle2d.tpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>JetfuelGameEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\src;$(SolutionDir)\..\..\windowsdependencies\SDL2-2.0.6\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_ttf-2.0.14\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_mixer-2.0.1\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_gfx-1.0.3;$(SolutionDir)\..\..\windowsdependencies\rapidjson-master\include;$(SolutionDir)\..\..\windowsdependencies\Python32-36\include;$(SolutionDir)\..\..\windowsdependencies\crossguid-0.2.2;$(SolutionDir)\..\..\windowsdependencies\SDL2_image-2.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

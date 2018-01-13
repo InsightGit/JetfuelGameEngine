@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2738d61c-1e6c-44e7-91c1-f769aba01e78}</ProjectGuid>
+    <ProjectHome>..\..\..\PythonAPI\pythonwrappers\jetfuel\</ProjectHome>
+    <StartupFile>__init__.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="control\uisinputactionsreplacement.py" />
+    <Compile Include="control\__init__.py" />
+    <Compile Include="core\messagebus.py" />
+    <Compile Include="core\__init__.py" />
+    <Compile Include="draw\circle2dshape.py" />
+    <Compile Include="draw\circle2dshapecharacteristicsreplacement.py" />
+    <Compile Include="draw\circleinterface.py" />
+    <Compile Include="draw\color.py" />
+    <Compile Include="draw\drawable.py" />
+    <Compile Include="draw\font.py" />
+    <Compile Include="draw\image.py" />
+    <Compile Include="draw\rectangle2dshape.py" />
+    <Compile Include="draw\rectangle2dshapecharacteristicsreplacement.py" />
+    <Compile Include="draw\rectangleinterface.py" />
+    <Compile Include="draw\scenemanager.py" />
+    <Compile Include="draw\sprite.py" />
+    <Compile Include="draw\text.py" />
+    <Compile Include="draw\textcharacteristicsreplacement.py" />
+    <Compile Include="draw\textchars.py" />
+    <Compile Include="draw\__init__.py" />
+    <Compile Include="gui\button.py" />
+    <Compile Include="gui\buttoncharacteristicsreplacement.py" />
+    <Compile Include="gui\checkbox.py" />
+    <Compile Include="gui\dropdownbox.py" />
+    <Compile Include="gui\menu.py" />
+    <Compile Include="gui\progressbar.py" />
+    <Compile Include="gui\slider.py" />
+    <Compile Include="gui\__init__.py" />
+    <Compile Include="inspire\pointerbridge.py" />
+    <Compile Include="inspire\__init__.py" />
+    <Compile Include="jetfuelsoloader.py" />
+    <Compile Include="locale\localestring.py" />
+    <Compile Include="locale\stringlocalefile.py" />
+    <Compile Include="locale\stringlocalemanager.py" />
+    <Compile Include="locale\__init__.py" />
+    <Compile Include="media\music.py" />
+    <Compile Include="media\sound_effect.py" />
+    <Compile Include="media\__init__.py" />
+    <Compile Include="__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="control" />
+    <Folder Include="core" />
+    <Folder Include="draw" />
+    <Folder Include="gui" />
+    <Folder Include="inspire" />
+    <Folder Include="locale" />
+    <Folder Include="media" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

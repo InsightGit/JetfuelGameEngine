@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Jetfuel Game Engine", "Jetfuel Game Engine\Jetfuel Game Engine.vcxproj", "{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Jetfuel Game Engine Python API", "Jetfuel Game Engine Python API\Jetfuel Game Engine Python API.vcxproj", "{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Jetfuel Graphical Example", "Jetfuel Graphical Example\Jetfuel Graphical Example.vcxproj", "{72651E1E-DB46-4952-A7B8-D39E9D53C14A}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "jetfuel", "Jetfuel Python API Wrappers\jetfuel.pyproj", "{2738D61C-1E6C-44E7-91C1-F769ABA01E78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}.Debug|x64.ActiveCfg = Debug|x64
+		{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}.Debug|x64.Build.0 = Debug|x64
+		{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}.Debug|x86.ActiveCfg = Debug|Win32
+		{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}.Debug|x86.Build.0 = Debug|Win32
+		{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}.Release|Any CPU.ActiveCfg = Release|Win32
+		{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}.Release|x64.ActiveCfg = Release|x64
+		{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}.Release|x64.Build.0 = Release|x64
+		{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}.Release|x86.ActiveCfg = Release|Win32
+		{C1BD33DE-6D12-4F60-BB24-5E6235CD7B0A}.Release|x86.Build.0 = Release|Win32
+		{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}.Debug|x64.ActiveCfg = Debug|x64
+		{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}.Debug|x64.Build.0 = Debug|x64
+		{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}.Debug|x86.ActiveCfg = Debug|Win32
+		{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}.Debug|x86.Build.0 = Debug|Win32
+		{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}.Release|Any CPU.ActiveCfg = Release|Win32
+		{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}.Release|x64.ActiveCfg = Release|x64
+		{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}.Release|x64.Build.0 = Release|x64
+		{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}.Release|x86.ActiveCfg = Release|Win32
+		{C1FA04B9-2756-4E4F-A855-CE84918EFEF8}.Release|x86.Build.0 = Release|Win32
+		{72651E1E-DB46-4952-A7B8-D39E9D53C14A}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{72651E1E-DB46-4952-A7B8-D39E9D53C14A}.Debug|x64.ActiveCfg = Debug|x64
+		{72651E1E-DB46-4952-A7B8-D39E9D53C14A}.Debug|x64.Build.0 = Debug|x64
+		{72651E1E-DB46-4952-A7B8-D39E9D53C14A}.Debug|x86.ActiveCfg = Debug|Win32
+		{72651E1E-DB46-4952-A7B8-D39E9D53C14A}.Debug|x86.Build.0 = Debug|Win32
+		{72651E1E-DB46-4952-A7B8-D39E9D53C14A}.Release|Any CPU.ActiveCfg = Release|Win32
+		{72651E1E-DB46-4952-A7B8-D39E9D53C14A}.Release|x64.ActiveCfg = Release|x64
+		{72651E1E-DB46-4952-A7B8-D39E9D53C14A}.Release|x64.Build.0 = Release|x64
+		{72651E1E-DB46-4952-A7B8-D39E9D53C14A}.Release|x86.ActiveCfg = Release|Win32
+		{72651E1E-DB46-4952-A7B8-D39E9D53C14A}.Release|x86.Build.0 = Release|Win32
+		{2738D61C-1E6C-44E7-91C1-F769ABA01E78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2738D61C-1E6C-44E7-91C1-F769ABA01E78}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2738D61C-1E6C-44E7-91C1-F769ABA01E78}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2738D61C-1E6C-44E7-91C1-F769ABA01E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2738D61C-1E6C-44E7-91C1-F769ABA01E78}.Release|x64.ActiveCfg = Release|Any CPU
+		{2738D61C-1E6C-44E7-91C1-F769ABA01E78}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {621419AD-B5A7-410D-8382-4224BE8CA8B0}
+	EndGlobalSection
+EndGlobal

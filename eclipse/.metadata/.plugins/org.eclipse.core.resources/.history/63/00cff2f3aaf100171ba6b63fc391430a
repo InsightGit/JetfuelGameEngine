@@ -1,0 +1,1091 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2017 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#include <iostream>
+
+#include <cstring>
+
+#include <jetfueldraw.h>
+
+#include "../jetfueldraw/textcharacteristicsreplacement.h"
+#include "../jetfueldraw/rectangle2dshapecharacteristicsreplacement.h"
+#include "../jetfueldraw/circle2dshapecharacteristicsreplacement.h"
+
+#include "../stringconversions.h"
+
+#if defined(_MSC_VER)
+	#define EXPORT __declspec(dllexport)
+#else
+	#define EXPORT 
+#endif
+
+extern "C"{
+    // jetfuel::draw::Image wrappers
+
+	EXPORT jetfuel::draw::Image *Image_new(){
+        return new jetfuel::draw::Image();
+    }
+
+	EXPORT void Image_delete(jetfuel::draw::Image *image){
+        delete image;
+    }
+
+	EXPORT int Image_get_image_size_x(jetfuel::draw::Image *image){
+        return image->Get_size_of_image().x;
+    }
+
+	EXPORT int Image_get_image_size_y(jetfuel::draw::Image *image){
+        return image->Get_size_of_image().y;
+    }
+
+	EXPORT wchar_t *Image_get_image_location(jetfuel::draw::Image *image){
+        char *getlocationcstring = new char[image->Get_image_location().size()
+                                            + 1];
+
+        strcpy(getlocationcstring, image->Get_image_location().c_str());
+
+        const size_t wcharsize = strlen(getlocationcstring)+1;
+
+        wchar_t *returnvalue = new wchar_t[wcharsize];
+
+        mbstowcs(returnvalue,getlocationcstring,
+                 wcharsize);
+
+        delete getlocationcstring;
+
+        return returnvalue;
+    }
+
+	EXPORT void Image_set_image_location(jetfuel::draw::Image *image,
+										 wchar_t *imagelocation,
+										 int sizewidth,
+										 int sizeheight){
+       image->Set_image(String_conversions::
+			Convert_wide_char_to_narrow_char(imagelocation), 
+			jetfuel::draw::Vector2d_int(sizewidth, sizeheight));
+    }
+
+	EXPORT void Image_set_image_location_and_size(jetfuel::draw::Image *image,
+                                  wchar_t *imagelocation,
+                                  int imagesizex,
+                                  int imagesizey){
+        const size_t charsize = wcslen(imagelocation)+1;
+
+        char *imagelocationcstring = new char(charsize)+1;
+
+        wcstombs(imagelocationcstring, imagelocation,
+                 charsize);
+
+
+        image->Set_image(imagelocationcstring, jetfuel::draw::Vector2d_int(
+                                               imagesizex,imagesizey));
+    }
+
+    // jetfuel::draw::Scene_manager/jetfuel::draw::Scene wrappers
+
+	EXPORT void Scene_attach_drawable(jetfuel::draw::Scene_manager *scenemanager,
+                               jetfuel::draw::Drawable *drawable,
+                               unsigned int drawableweight){
+        scenemanager->Get_current_scene()->
+                Attach_drawable(drawable, drawableweight);
+    }
+
+	EXPORT void Scene_disable_drawable(jetfuel::draw::Scene_manager *scenemanager,
+                                jetfuel::draw::Drawable *drawable){
+        scenemanager->Get_current_scene()->Disable_drawable(drawable);
+    }
+
+    // jetfuel::draw::Drawable wrappers
+
+	EXPORT void Drawable_delete(jetfuel::draw::Drawable *drawable){
+        delete drawable;
+    }
+
+	EXPORT int Drawable_get_position_x(jetfuel::draw::Drawable *drawable){
+        return drawable->Get_position().x;
+    }
+
+	EXPORT int Drawable_get_position_y(jetfuel::draw::Drawable *drawable){
+        return drawable->Get_position().y;
+    }
+
+	EXPORT void Drawable_set_position(jetfuel::draw::Drawable *drawable, int x, 
+		                              int y){
+        drawable->Set_position(jetfuel::draw::Vector2d_int(x, y));
+    }
+
+	EXPORT bool Drawable_draw(jetfuel::draw::Drawable *drawable){
+        return drawable->Draw();
+    }
+
+    // jetfuel::draw::Rectangle_interface wrappers
+
+	EXPORT int Rectangle_interface_get_size_width(jetfuel::draw::Rectangle_interface
+                                           *rectangle){
+        return rectangle->Get_rect_to_draw().width;
+    }
+
+	EXPORT int Rectangle_interface_get_size_height(jetfuel::draw::Rectangle_interface
+                                            *rectangle){
+        return rectangle->Get_rect_to_draw().height;
+    }
+
+    // jetfuel::draw::Sprite wrappers
+
+	EXPORT jetfuel::draw::Sprite *Sprite_new(){
+        return new jetfuel::draw::Sprite();
+    }
+
+	EXPORT void Sprite_delete(jetfuel::draw::Sprite *sprite){
+        delete sprite;
+    }
+
+	EXPORT void Sprite_dynamic_load_from_image(jetfuel::draw::Sprite *sprite,
+                                jetfuel::draw::Image *image){
+        sprite->Dynamic_load_from_image(*image);
+    }
+
+    // jetfuel::draw::Color wrappers
+
+	EXPORT jetfuel::draw::Color *Color_new(){
+        return new jetfuel::draw::Color();
+    }
+
+	EXPORT jetfuel::draw::Color *Color_new_from_rgba(unsigned int red,
+               unsigned int green, unsigned int blue, unsigned int alpha){
+        return new jetfuel::draw::Color(red, green, blue, alpha);
+    }
+
+	EXPORT void Color_delete(jetfuel::draw::Color *color){
+        delete color;
+    }
+
+	EXPORT int Color_get_red(jetfuel::draw::Color *color){
+        return color->r;
+    }
+
+	EXPORT void Color_set_red(jetfuel::draw::Color *color,
+                       unsigned int red){
+        color->r = red;
+    }
+
+	EXPORT int Color_get_green(jetfuel::draw::Color *color){
+        return color->g;
+    }
+
+	EXPORT void Color_set_green(jetfuel::draw::Color *color,
+                       unsigned int green){
+        color->g = green;
+    }
+
+	EXPORT int Color_get_blue(jetfuel::draw::Color *color){
+        return color->b;
+    }
+
+	EXPORT void Color_set_blue(jetfuel::draw::Color *color,
+                       unsigned int blue){
+        color->b = blue;
+    }
+
+	EXPORT int Color_get_alpha(jetfuel::draw::Color *color){
+        return color->a;
+    }
+
+	EXPORT void Color_set_alpha(jetfuel::draw::Color *color,
+                         unsigned int alpha){
+        color->a = alpha;
+    }
+
+    // jetfuel::draw::Rectangle_2d_shape_characteristics replacement wrappers
+
+	EXPORT jetfuel::draw::
+    Rectangle_2d_shape_characteristics_replacement
+     *Rectangle_2d_shape_characteristics_replacement_new(){
+        return new
+         jetfuel::draw::Rectangle_2d_shape_characteristics_replacement();
+    }
+
+	EXPORT int Rectangle_2d_shape_characteristics_replacement_get_position_x(
+          jetfuel::draw::Rectangle_2d_shape_characteristics_replacement
+          *rect2dshapechars){
+        return rect2dshapechars->rectpositionx;
+    }
+
+	EXPORT int Rectangle_2d_shape_characteristics_replacement_get_position_y(
+          jetfuel::draw::Rectangle_2d_shape_characteristics_replacement
+          *rect2dshapechars){
+        return rect2dshapechars->rectpositiony;
+    }
+
+	EXPORT void Rectangle_2d_shape_characteristics_replacement_set_position(
+          jetfuel::draw::Rectangle_2d_shape_characteristics_replacement
+          *rect2dshapechars, int x, int y){
+        rect2dshapechars->rectpositionx = x;
+        rect2dshapechars->rectpositiony = y;
+    }
+
+	EXPORT int Rectangle_2d_shape_characteristics_replacement_get_size_width(
+          jetfuel::draw::Rectangle_2d_shape_characteristics_replacement
+          *rect2dshapechars){
+        return rect2dshapechars->rectsizewidth;
+    }
+
+	EXPORT int Rectangle_2d_shape_characteristics_replacement_get_size_height(
+          jetfuel::draw::Rectangle_2d_shape_characteristics_replacement
+          *rect2dshapechars){
+        return rect2dshapechars->rectsizeheight;
+    }
+
+	EXPORT void Rectangle_2d_shape_characteristics_replacement_set_size(
+          jetfuel::draw::Rectangle_2d_shape_characteristics_replacement
+          *rect2dshapechars, int width, int height){
+        rect2dshapechars->rectsizewidth = width;
+        rect2dshapechars->rectsizeheight = height;
+    }
+
+    jetfuel::draw::Color
+    *Rectangle_2d_shape_characteristics_replacement_get_fill_color(
+            jetfuel::draw::Rectangle_2d_shape_characteristics_replacement
+            *rect2dshapechars){
+        jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+        *returnvalue = rect2dshapechars->fillcolor;
+
+        return returnvalue;
+    }
+
+	EXPORT void Rectangle_2d_shape_characteristics_replacement_set_fill_color(
+            jetfuel::draw::Rectangle_2d_shape_characteristics_replacement
+            *rect2dshapechars, jetfuel::draw::Color *fillcolor){
+        rect2dshapechars->fillcolor = *fillcolor;
+    }
+
+    jetfuel::draw::Color
+    *Rectangle_2d_shape_characteristics_replacement_get_outline_color(
+            jetfuel::draw::Rectangle_2d_shape_characteristics_replacement
+            *rect2dshapechars){
+        jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+        *returnvalue = rect2dshapechars->outlinecolor;
+
+        return returnvalue;
+    }
+
+	EXPORT void Rectangle_2d_shape_characteristics_replacement_set_outline_color(
+            jetfuel::draw::Rectangle_2d_shape_characteristics_replacement
+            *rect2dshapechars, jetfuel::draw::Color *outlinecolor){
+        rect2dshapechars->outlinecolor = *outlinecolor;
+    }
+
+    // jetfuel::draw::Rectangle_2d_shape wrappers
+
+	EXPORT jetfuel::draw::Rectangle_2d_shape *Rectangle_2d_shape_new(){
+        return new jetfuel::draw::Rectangle_2d_shape();
+    }
+
+	EXPORT jetfuel::draw::Rectangle_2d_shape *Rectangle_2d_shape_new_from_rect(
+															 int x,
+                                                             int y,
+                                                             int width,
+                                                             int height){
+        return new jetfuel::draw::Rectangle_2d_shape(jetfuel::draw::Rect2d_int(x,
+                                                     y, width, height));
+    }
+
+	EXPORT void Rectangle_2d_shape_delete(jetfuel::draw::Rectangle_2d_shape 
+											*rectangle){
+        delete rectangle;
+    }
+
+	EXPORT jetfuel::draw::Color *Rectangle_2d_shape_get_fill_color(
+                           jetfuel::draw::Rectangle_2d_shape *rectangle){
+        jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+        returnvalue->r = rectangle->Get_fill_color().r;
+
+        returnvalue->g = rectangle->Get_fill_color().g;
+
+        returnvalue->b = rectangle->Get_fill_color().b;
+
+        returnvalue->a = rectangle->Get_fill_color().a;
+
+        return returnvalue;
+    }
+
+	EXPORT void Rectangle_2d_shape_set_fill_color(jetfuel::draw::Rectangle_2d_shape
+                                           *rectangle, jetfuel::draw::Color
+                                           *fillcolor){
+        rectangle->Set_fill_color(*fillcolor);
+    }
+
+	EXPORT jetfuel::draw::Color *Rectangle_2d_shape_get_outline_color(
+                           jetfuel::draw::Rectangle_2d_shape *rectangle){
+        jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+        returnvalue->r = rectangle->Get_outline_color().r;
+
+        returnvalue->g = rectangle->Get_outline_color().g;
+
+        returnvalue->b = rectangle->Get_outline_color().b;
+
+        returnvalue->a = rectangle->Get_outline_color().a;
+
+        return returnvalue;
+    }
+
+	EXPORT void Rectangle_2d_shape_set_outline_color(
+										jetfuel::draw::Rectangle_2d_shape
+                                           *rectangle, jetfuel::draw::Color
+                                           *outlinecolor){
+        rectangle->Set_outline_color(*outlinecolor);
+    }
+
+	EXPORT void Rectangle_2d_shape_disable_drawing_outline_color(
+										jetfuel::draw::Rectangle_2d_shape
+                                                          *rectangle){
+        rectangle->Disable_drawing_outline_color();
+    }
+
+	EXPORT int Rectangle_2d_shape_get_position_x(
+							jetfuel::draw::Rectangle_2d_shape
+                                          *rectangle){
+        return rectangle->Get_position().x;
+    }
+
+	EXPORT int Rectangle_2d_shape_get_position_y(
+							jetfuel::draw::Rectangle_2d_shape
+                                          *rectangle){
+        return rectangle->Get_position().y;
+    }
+
+    EXPORT void Rectangle_2d_shape_set_position(
+								jetfuel::draw::Rectangle_2d_shape
+                                         *rectangle, int x, int y){
+        rectangle->Set_position(jetfuel::draw::Vector2d_int(x,y));
+    }
+
+    EXPORT int Rectangle_2d_shape_get_size_width(
+					jetfuel::draw::Rectangle_2d_shape
+                                          *rectangle){
+        return rectangle->Get_size().x;
+    }
+
+	EXPORT int Rectangle_2d_shape_get_size_height(
+					jetfuel::draw::Rectangle_2d_shape
+                                          *rectangle){
+        return rectangle->Get_size().y;
+    }
+
+	EXPORT void Rectangle_2d_shape_set_size(jetfuel::draw::Rectangle_2d_shape
+                                         *rectangle, int width, int height){
+        rectangle->Set_size(jetfuel::draw::Vector2d_int(width, height));
+    }
+
+    // jetfuel::draw::Circle_interface wrappers
+
+	EXPORT int Circle_interface_get_radius(jetfuel::draw::Circle_interface
+                                     *circleinterface){
+        return circleinterface->Get_circle_to_draw().radius;
+    }
+
+    // jetfuel::draw::Circle_2d_shape_characteristics_replacement wrappers
+
+	EXPORT jetfuel::draw::Circle_2d_shape_characteristics_replacement
+     *Circle_2d_shape_characteristics_replacement_new(){
+        return new jetfuel::draw::Circle_2d_shape_characteristics_replacement();
+    }
+
+	EXPORT int Circle_2d_shape_characteristics_replacement_get_position_x(
+            jetfuel::draw::Circle_2d_shape_characteristics_replacement 
+			*circlechars){
+        return circlechars->positionx;
+    }
+
+	EXPORT int Circle_2d_shape_characteristics_replacement_get_position_y(jetfuel::
+            draw::Circle_2d_shape_characteristics_replacement *circlechars){
+        return circlechars->positiony;
+    }
+
+	EXPORT void Circle_2d_shape_characteristics_replacement_set_position(jetfuel::
+		draw::Circle_2d_shape_characteristics_replacement *circlechars, int x,
+            int y){
+        circlechars->positionx = x;
+        circlechars->positiony = y;
+    }
+
+	EXPORT int Circle_2d_shape_characteristics_replacement_get_radius(jetfuel::
+            draw::Circle_2d_shape_characteristics_replacement *circlechars){
+        return circlechars->radius;
+    }
+
+	EXPORT void Circle_2d_shape_characteristics_replacement_set_radius(jetfuel::
+            draw::Circle_2d_shape_characteristics_replacement *circlechars,
+            int radius){
+        circlechars->radius = radius;
+    }
+
+	EXPORT bool Circle_2d_shape_characteristics_replacement_get_aa_status(jetfuel::
+            draw::Circle_2d_shape_characteristics_replacement *circlechars){
+        return circlechars->antialiasingstatus;
+    }
+
+	EXPORT void Circle_2d_shape_characteristics_replacement_set_aa_status(jetfuel::
+            draw::Circle_2d_shape_characteristics_replacement *circlechars,
+            bool aastatus){
+        circlechars->antialiasingstatus = aastatus;
+    }
+
+	EXPORT bool 
+	Circle_2d_shape_characteristics_replacement_get_filled_circle_status(
+            jetfuel::draw::
+            Circle_2d_shape_characteristics_replacement *circlechars){
+        return circlechars->filledcirclestatus;
+    }
+
+	EXPORT void 
+		Circle_2d_shape_characteristics_replacement_set_filled_circle_status(
+            jetfuel::draw::
+            Circle_2d_shape_characteristics_replacement *circlechars,
+            bool filledcirclestatus){
+        circlechars->filledcirclestatus = filledcirclestatus;
+    }
+
+	EXPORT jetfuel::draw::Color 
+		*Circle_2d_shape_characteristics_replacement_get_color(
+        jetfuel::draw::Circle_2d_shape_characteristics_replacement *circlechars){
+        jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+        *returnvalue = circlechars->color;
+
+        return returnvalue;
+    }
+
+	EXPORT void 
+	Circle_2d_shape_characteristics_replacement_set_color(jetfuel::draw::
+            Circle_2d_shape_characteristics_replacement *circlechars, jetfuel::
+            draw::Color *color){
+        circlechars->color = *color;
+    }
+
+    // jetfuel::draw::Circle_2d_shape wrappers
+
+	EXPORT jetfuel::draw::Circle_2d_shape *Circle_2d_shape_new(){
+        return new jetfuel::draw::Circle_2d_shape();
+    }
+
+	EXPORT jetfuel::draw::Circle_2d_shape *Circle_2d_shape_new_from_circle(int x, 
+																	int y,
+                                                                    int radius){
+        return new jetfuel::draw::Circle_2d_shape(jetfuel::draw::Circle2d_int(x,
+                                                     y, radius));
+    }
+
+	EXPORT void Circle_2d_shape_delete(jetfuel::draw::Circle_2d_shape *circle){
+        delete circle;
+    }
+
+	EXPORT int Circle_2d_shape_get_position_x(jetfuel::draw::
+										Circle_2d_shape *circle) {
+        return circle->Get_position().x;
+    }
+
+	EXPORT int Circle_2d_shape_get_position_y(jetfuel::draw::
+									Circle_2d_shape *circle) {
+        return circle->Get_position().y;
+    }
+
+	EXPORT void Circle_2d_shape_set_radius(jetfuel::draw::Circle_2d_shape *circle,
+                                    int radius){
+        circle->Set_radius(radius);
+    }
+
+	EXPORT bool Circle_2d_shape_get_anti_aliasing_status(jetfuel::draw::
+												Circle_2d_shape *circle){
+        return circle->Get_anti_aliasing_status();
+    }
+
+	EXPORT void Circle_2d_shape_set_anti_aliasing_status(jetfuel::draw::
+									Circle_2d_shape *circle, bool aastatus){
+        circle->Set_anti_aliasing_status(aastatus);
+    }
+
+	EXPORT bool Circle_2d_shape_get_filled_circle_status(jetfuel::draw::
+												Circle_2d_shape *circle){
+        return circle->Get_filled_circle_status();
+    }
+
+	EXPORT void Circle_2d_shape_set_filled_circle_status(jetfuel::draw::
+							Circle_2d_shape *circle, bool filledincircle){
+        circle->Set_filled_circle_status(filledincircle);
+    }
+
+	EXPORT jetfuel::draw::Color *Circle_2d_shape_get_color(
+                           jetfuel::draw::Circle_2d_shape *circle){
+        jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+        returnvalue->r = circle->Get_color().r;
+
+        returnvalue->g = circle->Get_color().g;
+
+        returnvalue->b = circle->Get_color().b;
+
+        returnvalue->a = circle->Get_color().a;
+
+        return returnvalue;
+    }
+
+	EXPORT void Circle_2d_shape_set_color(jetfuel::draw::Circle_2d_shape
+                                   *circle, jetfuel::draw::Color
+                                   *color){
+        circle->Set_color(*color);
+    }
+
+    // jetfuel::draw::Font wrappers
+
+	EXPORT jetfuel::draw::Font *Font_new(){
+        return new jetfuel::draw::Font();
+    }
+
+	EXPORT jetfuel::draw::Font *Font_new_from_file_name(wchar_t *fontfilename){
+        std::wstring fontfilenamewstring(fontfilename);
+
+        std::string fontfilenamestring(fontfilenamewstring.begin(),
+                                       fontfilenamewstring.end());
+
+        return new jetfuel::draw::Font(fontfilenamestring);
+    }
+
+	EXPORT jetfuel::draw::Font *Font_new_from_face_index(wchar_t *fontfilename,
+                                                 long faceindex){
+        const size_t charsize = wcslen(fontfilename)+1;
+
+        char *fontfilenamecstring = new char(charsize)+1;
+
+        wcstombs(fontfilenamecstring, fontfilename,
+                 charsize);
+
+        return new jetfuel::draw::Font(fontfilenamecstring, faceindex);
+    }
+
+	EXPORT void Font_delete(jetfuel::draw::Font *font){
+        delete font;
+    }
+
+	EXPORT bool Font_is_font_loaded(jetfuel::draw::Font *font){
+        return font->Is_font_loaded();
+    }
+
+	EXPORT wchar_t *Font_get_file_name(jetfuel::draw::Font *font){
+        char *fontfilename = new char[font->Get_file_name().size()
+                                            + 1];
+
+        strcpy(fontfilename, font->Get_file_name().c_str());
+
+        const size_t wcharsize = strlen(fontfilename)+1;
+
+        wchar_t *returnvalue = new wchar_t[wcharsize];
+
+        mbstowcs(returnvalue, fontfilename,
+                 wcharsize);
+
+        delete fontfilename;
+
+        return returnvalue;
+    }
+
+	EXPORT long Font_get_face_index(jetfuel::draw::Font *font){
+        return font->Get_face_index();
+    }
+
+	EXPORT void Font_load_font(jetfuel::draw::Font *font, wchar_t *fontfilename){
+        const size_t charsize = wcslen(fontfilename)+1;
+
+        char *fontfilenamecstring = new char(charsize)+1;
+
+        wcstombs(fontfilenamecstring, fontfilename,
+                 charsize);
+
+        font->Load_font(fontfilenamecstring);
+    }
+
+	EXPORT void Font_load_font_face_index(jetfuel::draw::Font *font,
+                      wchar_t *fontfilename, long faceindex){
+        const size_t charsize = wcslen(fontfilename)+1;
+
+        char *fontfilenamecstring = new char(charsize)+1;
+
+        wcstombs(fontfilenamecstring, fontfilename,
+                 charsize);
+
+        font->Load_font(fontfilenamecstring, faceindex);
+    }
+	
+	//
+
+	EXPORT jetfuel::draw::Text::Text_characteristics *Text_chars_new() {
+		return new jetfuel::draw::Text::Text_characteristics();
+	}
+
+	EXPORT void Text_chars_delete(jetfuel::draw::Text::Text_characteristics
+								  *textchars) {
+		delete textchars;
+	}
+
+	EXPORT int Text_chars_get_render_mode(jetfuel::draw::Text::
+										  Text_characteristics *textchars) {
+		return static_cast<typename std::underlying_type
+		<jetfuel::draw::Text::Render_mode>::type>(textchars->rendermode);
+	}
+
+	EXPORT void Text_chars_set_render_mode(jetfuel::draw::Text::
+		Text_characteristics *textchars, int rendermode) {
+		textchars->rendermode = static_cast<jetfuel::draw::Text::Render_mode>
+																(rendermode);
+	}
+
+	EXPORT wchar_t *Text_chars_get_text_string(jetfuel::draw::Text::
+								Text_characteristics *textchars) {
+		return String_conversions::Convert_narrow_char_to_wide_char(
+									textchars->textstring.c_str());
+	}
+
+	EXPORT void Text_chars_set_text_string(jetfuel::draw::Text::
+		Text_characteristics *textchars, wchar_t *textstring) {
+		textchars->textstring = std::string(String_conversions::
+					Convert_wide_char_to_narrow_char(textstring));
+	}
+
+	EXPORT jetfuel::draw::Color *Text_chars_get_text_color(
+		jetfuel::draw::Text::Text_characteristics *textchars) {
+		jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+		*returnvalue = textchars->textcolor;
+
+		return returnvalue;
+	}
+
+	EXPORT void Text_chars_set_text_color(
+		jetfuel::draw::Text::Text_characteristics *textchars,
+		jetfuel::draw::Color *color) {
+		textchars->textcolor = *color;
+	}
+
+	EXPORT jetfuel::draw::Color *Text_chars_get_background_color(
+		jetfuel::draw::Text::Text_characteristics *textchars) {
+		jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+		*returnvalue = textchars->backgroundcolor;
+
+		return returnvalue;
+	}
+
+	EXPORT void Text_chars_set_background_color(
+		jetfuel::draw::Text::Text_characteristics *textchars,
+		jetfuel::draw::Color *color) {
+		textchars->backgroundcolor = *color;
+	}
+
+	EXPORT int Text_chars_get_font_outline_width(
+		jetfuel::draw::Text::Text_characteristics *textchars) {
+		return textchars->fontoutlinewidth;
+	}
+
+	EXPORT void Text_chars_set_font_outline_width(
+		jetfuel::draw::Text::Text_characteristics *textchars,
+		unsigned int fontoutlinewidth) {
+		textchars->fontoutlinewidth = fontoutlinewidth;
+	}
+
+	EXPORT bool Text_chars_get_font_kerning_status(
+		jetfuel::draw::Text::Text_characteristics *textchars) {
+		return textchars->kerningstatus;
+	}
+
+	EXPORT void Text_chars_set_font_kerning_status(
+		jetfuel::draw::Text::Text_characteristics *textchars,
+		bool kerningstatus) {
+		textchars->kerningstatus = kerningstatus;
+	}
+
+	EXPORT int Text_chars_get_font_style(
+		jetfuel::draw::Text::Text_characteristics *textchars) {
+		return textchars->fontstyle;
+	}
+
+	EXPORT void Text_chars_set_font_style(
+		jetfuel::draw::Text::Text_characteristics *textchars,
+		int fontstyle) {
+		textchars->fontstyle = fontstyle;
+	}
+
+	EXPORT int Text_chars_get_font_size(
+		jetfuel::draw::Text::Text_characteristics *textchars) {
+		return textchars->fontsize;
+	}
+
+	EXPORT void Text_chars_set_font_size(
+		jetfuel::draw::Text::Text_characteristics *textchars,
+		int fontsize) {
+		textchars->fontsize = fontsize;
+	}
+
+	EXPORT int Text_chars_get_font_hinting(jetfuel::draw::Text::
+		Text_characteristics *textchars) {
+		return static_cast<typename std::underlying_type
+			<jetfuel::draw::Text::Font_hinting>::type>(textchars->fonthinting);
+	}
+
+	EXPORT void Text_chars_set_font_hinting(
+		jetfuel::draw::Text::Text_characteristics *textchars,
+		int fonthinting) {
+		textchars->fonthinting = 
+			static_cast<jetfuel::draw::Text::Font_hinting>(fonthinting);
+	}
+
+	EXPORT jetfuel::draw::Font *Text_chars_get_font(
+		jetfuel::draw::Text::Text_characteristics *textchars) {
+		jetfuel::draw::Font *font = new jetfuel::draw::Font();
+
+		*font = textchars->font;
+
+		return font;
+	}
+
+	EXPORT void Text_chars_set_font(
+		jetfuel::draw::Text::Text_characteristics *textchars, 
+		jetfuel::draw::Font *font) {
+		textchars->font = *font;
+	}
+
+    // jetfuel::draw::Text_characteristics_replacement wrappers
+
+	EXPORT jetfuel::draw::Text_characteristics_replacement 
+	*Text_characteristics_new(){
+       jetfuel::draw::Text_characteristics_replacement *returnvalue =
+               new jetfuel::draw::Text_characteristics_replacement();
+
+       returnvalue->previousfont = returnvalue->font;
+
+       return returnvalue;
+    }
+
+	EXPORT jetfuel::draw::Text_characteristics_replacement
+     *Text_characteristics_new_from_font(jetfuel::draw::Font *font){
+        jetfuel::draw::Text_characteristics_replacement *returnvalue =
+                new jetfuel::draw::Text_characteristics_replacement(font);
+
+        returnvalue->previousfont = returnvalue->font;
+
+        return returnvalue;
+    }
+
+	EXPORT void Text_characteristics_delete(
+			jetfuel::draw::Text_characteristics_replacement
+                                     *textcharsreplacement){
+        delete textcharsreplacement;
+    }
+
+	EXPORT int Text_characteristics_get_render_mode(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        return textcharsreplacement->rendermode;
+    }
+
+	EXPORT void Text_characteristics_set_render_mode(
+           jetfuel::draw::Text_characteristics_replacement *textcharsreplacement,
+           int textrendermode){
+        textcharsreplacement->rendermode = textrendermode;
+    }
+
+	EXPORT wchar_t *Text_characteristics_get_text_string(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        char *textstringname = new char[textcharsreplacement->textstring.size()
+                                        + 1];
+
+        strcpy(textstringname, textcharsreplacement->textstring.c_str());
+
+        const size_t wcharsize = strlen(textstringname)+1;
+
+        wchar_t *returnvalue = new wchar_t[wcharsize];
+
+        mbstowcs(returnvalue, textstringname,
+                 wcharsize);
+
+        return returnvalue;
+    }
+
+	EXPORT void Text_characteristics_set_text_string(
+           jetfuel::draw::Text_characteristics_replacement *textcharsreplacement,
+           wchar_t *textstring){
+        const size_t charsize = wcslen(textstring)+1;
+
+        char *textstringcstring = new char(charsize)+1;
+
+        wcstombs(textstringcstring, textstring,
+                 charsize);
+
+        textcharsreplacement->textstring = textstringcstring;
+    }
+
+	EXPORT jetfuel::draw::Color *Text_characteristics_get_text_color(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+        *returnvalue = textcharsreplacement->textcolor;
+
+        return returnvalue;
+    }
+
+	EXPORT void Text_characteristics_set_text_color(
+        jetfuel::draw::Text_characteristics_replacement *textcharsreplacement,
+        jetfuel::draw::Color *color){
+        textcharsreplacement->textcolor = *color;
+    }
+
+	EXPORT jetfuel::draw::Color *Text_characteristics_get_background_color(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+        *returnvalue = textcharsreplacement->backgroundcolor;
+
+        return returnvalue;
+    }
+
+	EXPORT void Text_characteristics_set_background_color(
+        jetfuel::draw::Text_characteristics_replacement *textcharsreplacement,
+        jetfuel::draw::Color *color){
+        textcharsreplacement->backgroundcolor = *color;
+    }
+
+	EXPORT int Text_characteristics_get_font_outline_width(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        return textcharsreplacement->fontoutlinewidth;
+    }
+
+	EXPORT void Text_characteristics_set_font_outline_width(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement,
+          unsigned int fontoutlinewidth){
+        textcharsreplacement->fontoutlinewidth = fontoutlinewidth;
+    }
+
+	EXPORT bool Text_characteristics_get_font_kerning_status(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        return textcharsreplacement->kerningstatus;
+    }
+
+	EXPORT void Text_characteristics_set_font_kerning_status(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement,
+          bool kerningstatus){
+        textcharsreplacement->kerningstatus = kerningstatus;
+    }
+
+	EXPORT int Text_characteristics_get_font_style(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        return textcharsreplacement->fontstyle;
+    }
+
+	EXPORT void Text_characteristics_set_font_style(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement,
+          int fontstyle){
+        textcharsreplacement->fontstyle = fontstyle;
+    }
+
+	EXPORT int Text_characteristics_get_font_size(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        return textcharsreplacement->fontsize;
+    }
+
+	EXPORT void Text_characteristics_set_font_size(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement,
+          int fontsize){
+        textcharsreplacement->fontsize = fontsize;
+    }
+
+	EXPORT int Text_characteristics_get_font_hinting(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        return textcharsreplacement->fonthinting;
+    }
+
+	EXPORT void Text_characteristics_set_font_hinting(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement,
+          int fonthinting){
+        textcharsreplacement->fonthinting = fonthinting;
+    }
+
+	EXPORT jetfuel::draw::Font *Text_characteristics_get_font(
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        jetfuel::draw::Font *font = new jetfuel::draw::Font();
+
+        textcharsreplacement->font = textcharsreplacement->previousfont;
+
+        *font = textcharsreplacement->font;
+
+        return font;
+    }
+
+    // jetfuel::draw::Text wrappers
+
+	EXPORT jetfuel::draw::Text *Text_new(){
+        return new jetfuel::draw::Text();
+    }
+
+	EXPORT jetfuel::draw::Text *Text_new_from_font(jetfuel::draw::Font *font){
+        return new jetfuel::draw::Text(*font);
+    }
+
+	EXPORT int Text_get_text_render_mode(jetfuel::draw::Text *text){
+        if(text->Get_render_mode() == jetfuel::draw::Text::Render_mode::Solid){
+            return 1;
+        }else if(text->Get_render_mode() ==
+                 jetfuel::draw::Text::Render_mode::Shaded){
+            return 2;
+        }else{
+            return 3;
+        }
+    }
+
+	EXPORT void Text_set_text_render_mode(jetfuel::draw::Text *text, 
+										  int rendermode){
+        if(rendermode == 1){
+            text->Set_render_mode(jetfuel::draw::Text::Render_mode::Solid);
+        }else if(rendermode == 2){
+            text->Set_render_mode(jetfuel::draw::Text::Render_mode::Shaded);
+        }else{
+            text->Set_render_mode(jetfuel::draw::Text::Render_mode::Blended);
+        }
+    }
+
+	EXPORT wchar_t *Text_get_string(jetfuel::draw::Text *text){
+        char *textstringname = new char[text->Get_string().size()
+                                        + 1];
+
+        strcpy(textstringname, text->Get_string().c_str());
+
+        const size_t wcharsize = strlen(textstringname)+1;
+
+        wchar_t *returnvalue = new wchar_t[wcharsize];
+
+        mbstowcs(returnvalue, textstringname,
+                 wcharsize);
+
+        return returnvalue;
+    }
+
+	EXPORT void Text_set_string(jetfuel::draw::Text *text, wchar_t *textstring){
+        const size_t charsize = wcslen(textstring)+1;
+
+        char *textstringcstring = new char(charsize)+1;
+
+        wcstombs(textstringcstring, textstring,
+                 charsize);
+
+        text->Set_string(textstringcstring);
+    }
+
+	EXPORT jetfuel::draw::Color *Text_get_text_color(
+                           jetfuel::draw::Text *text){
+        jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+        *returnvalue = text->Get_text_color();
+
+        return returnvalue;
+    }
+
+	EXPORT void Text_set_text_color(jetfuel::draw::Text *text,
+                             jetfuel::draw::Color *color){
+        text->Set_text_color(*color);
+    }
+
+	EXPORT jetfuel::draw::Color *Text_get_background_color(
+                           jetfuel::draw::Text *text){
+        jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+
+        *returnvalue = text->Get_background_color();
+
+        return returnvalue;
+    }
+
+	EXPORT void Text_set_background_color(jetfuel::draw::Text *text,
+                             jetfuel::draw::Color *color){
+        text->Set_background_color(*color);
+    }
+
+	EXPORT int Text_get_font_outline_width(jetfuel::draw::Text *text){
+        return text->Get_font_outline_width();
+    }
+
+	EXPORT void Text_set_font_outline_width(jetfuel::draw::Text *text, 
+		                                    int fontoutline){
+       text->Set_font_outline_width(fontoutline);
+    }
+
+	EXPORT bool Text_get_kerning_status(jetfuel::draw::Text *text){
+        return text->Get_kerning_status();
+    }
+
+	EXPORT void Text_set_kerning_status(jetfuel::draw::Text *text, 
+										bool kerningon){
+        return text->Set_kerning_status(kerningon);
+    }
+
+	EXPORT int Text_get_font_style(jetfuel::draw::Text *text){
+        return text->Get_font_style();
+    }
+
+	EXPORT void Text_set_font_style(jetfuel::draw::Text *text, int fontstyle){
+        text->Set_font_style(fontstyle);
+    }
+
+	EXPORT int Text_get_font_size(jetfuel::draw::Text *text){
+        return text->Get_font_size();
+    }
+
+	EXPORT void Text_set_font_size(jetfuel::draw::Text *text, int fontsize){
+        text->Set_font_size(fontsize);
+    }
+
+	EXPORT int Text_get_font_hinting(jetfuel::draw::Text *text){
+        if(text->Get_font_hinting() == jetfuel::draw::Text::Font_hinting::None){
+            return 1;
+        }else if(text->Get_font_hinting() ==
+                 jetfuel::draw::Text::Font_hinting::Light){
+            return 2;
+        }else if(text->Get_font_hinting() ==
+                jetfuel::draw::Text::Font_hinting::Normal){
+            return 3;
+        }else{
+            return 4;
+        }
+    }
+
+	EXPORT void Text_set_text_font_hinting(jetfuel::draw::Text *text, 
+											int fonthinting){
+        if(fonthinting == 1){
+            text->Set_font_hinting(jetfuel::draw::Text::Font_hinting::None);
+        }else if(fonthinting == 2){
+            text->Set_font_hinting(jetfuel::draw::Text::Font_hinting::Light);
+        }else if(fonthinting == 3){
+            text->Set_font_hinting(jetfuel::draw::Text::Font_hinting::Normal);
+        }else{
+            text->Set_font_hinting(jetfuel::draw::Text::Font_hinting::Mono);
+        }
+    }
+
+	EXPORT void Text_set_font(jetfuel::draw::Text *text,
+                       jetfuel::draw::Font *font){
+        text->Set_font(*font);
+    }
+}

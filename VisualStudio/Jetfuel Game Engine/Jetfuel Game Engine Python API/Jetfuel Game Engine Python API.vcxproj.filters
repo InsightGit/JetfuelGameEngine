@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\jetfuelcontrol">
+      <UniqueIdentifier>{ac5ef18f-1777-4705-ac5a-4ca72c6e0282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jetfueldraw">
+      <UniqueIdentifier>{f754cb31-0821-49de-8ac0-e93331d162b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jetfuelgui">
+      <UniqueIdentifier>{e1788767-c20f-43e5-98bd-fedf4e57d0d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ctypeswrappers">
+      <UniqueIdentifier>{5f6cc953-dd8a-4e86-b617-5e8c170eb907}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\PythonAPI\src\stringconversions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\PythonAPI\src\ctypeswrappers\jetfuelcontrolctypes.cpp">
+      <Filter>Source Files\ctypeswrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\PythonAPI\src\ctypeswrappers\jetfuelcorectypes.cpp">
+      <Filter>Source Files\ctypeswrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\PythonAPI\src\ctypeswrappers\jetfueldrawctypes.cpp">
+      <Filter>Source Files\ctypeswrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\PythonAPI\src\ctypeswrappers\jetfuelguictypes.cpp">
+      <Filter>Source Files\ctypeswrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\PythonAPI\src\ctypeswrappers\jetfuelinspirectypes.cpp">
+      <Filter>Source Files\ctypeswrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\PythonAPI\src\ctypeswrappers\jetfuellocalectypes.cpp">
+      <Filter>Source Files\ctypeswrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\PythonAPI\src\ctypeswrappers\jetfuelmediactypes.cpp">
+      <Filter>Source Files\ctypeswrappers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\PythonAPI\src\stringconversions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\PythonAPI\src\jetfueldraw\circle2dshapecharacteristicsreplacement.h">
+      <Filter>Source Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\PythonAPI\src\jetfueldraw\rectangle2dshapecharacteristicsreplacement.h">
+      <Filter>Source Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\PythonAPI\src\jetfueldraw\textcharacteristicsreplacement.h">
+      <Filter>Source Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\PythonAPI\src\jetfuelcontrol\uisinputactionsreplacement.h">
+      <Filter>Source Files\jetfuelcontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\PythonAPI\src\jetfuelgui\buttoncharacteristicsreplacement.h">
+      <Filter>Source Files\jetfuelgui</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

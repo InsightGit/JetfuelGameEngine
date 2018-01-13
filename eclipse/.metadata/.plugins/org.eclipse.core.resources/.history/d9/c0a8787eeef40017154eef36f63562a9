@@ -1,0 +1,358 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2017 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#ifndef JETFUELGUI_CHECKBOX_H_
+#define JETFUELGUI_CHECKBOX_H_
+
+#include <jetfuelgui/iclickable.h>
+
+#include "../jetfueldraw/text.h"
+#include "../jetfueldraw/sprite.h"
+
+
+namespace jetfuel {
+    namespace gui {
+        class Check_box: public jetfuel::draw::Drawable,
+                         public IClickable,
+                         public jetfuel::draw::Rectangle_interface{
+        public:
+            enum class Label_position{
+                Left,
+                Right
+            };
+            /// \enum jetfuel::gui::Check_box::Label_position
+            ///
+            /// A simple enum class that has two possible directions
+            /// where a Checkbox Label could go: Left or Right.
+
+            /// \brief Constructs a Check_box with a boolean whether it
+            /// should be checked or not.
+            ///
+            /// Constructs a Check_box with a boolean whether it
+            /// should be checked or not. By default, the Check_box
+            /// starts off not checked.
+            ///
+            /// \param bool checked
+            Check_box(const bool checked = false);
+
+            /// \brief Loads the images of a Check_box, one active
+            /// and one disabled.
+            ///
+            /// Loads the images of a Check_box, one active
+            /// and one disabled. The active image is used when the
+            /// checkbox is checked and the disabled image is used when
+            /// the checkbox is not checked.
+            ///
+            /// \param jetfuel::draw::Image activeimage
+            /// \param jetfuel::draw::Image disabledimage
+            void Load_check_box_images(const jetfuel::draw::Image activeimage,
+                                      const jetfuel::draw::Image disabledimage){
+                m_activecheckboximage = activeimage;
+                m_disabledcheckboximage = disabledimage;
+            }
+
+            /// \brief Dynamically load the images of a Check_box,
+            /// one active and one disabled.
+            ///
+            /// Dynamically load the images of a Check_box,
+            /// one active and one disabled. The active image is used
+            /// when the checkbox is checked and the disabled image is
+            /// used when the checkbox is not checked. The texture
+            /// objects are not created until right before they need
+            /// to be drawn.
+            ///
+            /// \param jetfuel::draw::Image activeimage
+            /// \param jetfuel::draw::Image disabledimage
+            void Dynamic_load_check_box_images(
+                                      const jetfuel::draw::Image activeimage,
+                                      const jetfuel::draw::Image disabledimage){
+                Load_check_box_images(activeimage, disabledimage);
+
+                m_imagedynamicloading = true;
+            }
+
+
+            /// \brief Assigns a renderer to this Check_box.
+            ///
+            /// Assigns a renderer to this Check_box. It is recommended
+            /// to let jetfuel::draw::Scene_manager and
+            /// jetfuel::draw::Scene call this rather than yourself.
+            ///
+            /// \param SDL_Renderer *renderer
+            void Assign_renderer(SDL_Renderer *renderer)override{
+                m_checkbox.Assign_renderer(renderer);
+                m_label.Assign_renderer(renderer);
+
+                Set_assigned_renderer(true);
+            }
+
+            /// \brief Returns whether this Check_box is checked.
+            ///
+            /// Returns whether this Check_box is checked.
+            bool Is_checked(){
+                return m_checkboxstatus;
+            }
+
+            /// \brief Returns this Check_box's position.
+            ///
+            /// Returns this Check_box's position.
+            ///
+            /// \warning This position corrlates to the Checkbox
+            /// itself, NOT the label.
+            jetfuel::draw::Vector2d_int Get_position()override{
+                m_positioningmutex.lock();
+
+                jetfuel::draw::Vector2d_int position = m_checkbox.Get_position();
+
+                m_positioningmutex.unlock();
+
+                return position;
+            }
+
+            /// \brief Sets this Check_box's position.
+            ///
+            /// Sets this Check_box's position.
+            ///
+            /// \param jetfuel::draw::Vector2d_int position
+            void Set_position(const jetfuel::draw::Vector2d_int position)override{
+                m_positioningmutex.lock();
+
+                m_checkbox.Set_position(position);
+
+                jetfuel::draw::Vector2d_int textposition;
+
+                textposition.y = m_checkbox.Get_position().y+
+                (Get_active_checkbox_image().Get_size_of_image().y/2);
+
+                if(m_labelposition == Label_position::Right){
+                    textposition.x = m_checkbox.Get_position().x+
+                    Get_active_checkbox_image().Get_size_of_image().x+m_labelgap;
+                }else{
+                    textposition.x = m_checkbox.Get_position().x-m_labelgap;
+                }
+                m_label.Set_position(textposition);
+
+                m_positioningmutex.unlock();
+            }
+
+            /// \brief Gets the current text label characteristics of
+            /// this Check_box.
+            ///
+            /// Gets the current text label characteristics of this
+            /// Check_box.
+            jetfuel::draw::Text::Text_characteristics Get_label_characteristics()
+            const{
+                return m_labelcharacteristics;
+            }
+
+            /// \brief Sets the current text label characteristics of
+            /// this Check_box.
+            ///
+            /// Sets the current text label characteristics of this
+            /// Check_box.
+            ///
+            /// \param jetfuel::draw::Text::Text_characteristics
+            /// labelcharacteristics
+            /// \param jetfuel::gui::Check_box::Label_position
+            /// labelposition
+            /// \param unsigned int labelgap
+            void Set_label_characteristics(jetfuel::draw::Text::
+                                           Text_characteristics
+                                           labelcharacteristics,
+                                           Label_position labelposition,
+                                           unsigned int labelgap){
+                m_label.Set_font(labelcharacteristics.font);
+                m_label.Set_font_size(labelcharacteristics.fontsize);
+                m_label.Set_font_style(labelcharacteristics.fontstyle);
+                m_label.Set_render_mode(labelcharacteristics.rendermode);
+                m_label.Set_string(labelcharacteristics.textstring);
+                m_label.Set_text_color(labelcharacteristics.textcolor);
+                m_label.Set_background_color(labelcharacteristics.
+                                             backgroundcolor);
+                if(labelcharacteristics.fontoutlinewidth != 0){
+                    m_label.Set_font_outline_width(labelcharacteristics.
+                                                   fontoutlinewidth);
+                }
+                m_label.Set_kerning_status(labelcharacteristics.kerningstatus);
+
+                m_label.Set_font_hinting(labelcharacteristics.fonthinting);
+
+                m_labelposition = labelposition;
+                m_labelgap = labelgap;
+                m_drawlabel = true;
+                Set_position(Get_position());
+            }
+
+            /// \brief Sets the Universal Input System action to watch
+            /// that trigger actions pertainging to this Check_box.
+            ///
+            /// Sets the Universal Input System action to watch
+            /// that trigger actions pertainging to this Check_box.
+            ///
+            /// \param std::string action
+            void Set_UIS_action_to_watch(const std::string action){
+                m_actiontolistenfor = action;
+            }
+
+            /// \brief Checks this Check_box for any clicks on it.
+            ///
+            /// Checks this Check_box for any clicks on it modifying
+            /// it's status.
+            ///
+            /// \param jetfuel::control::Action UISinterpreterdata
+            void Check_for_clicks(jetfuel::control::Action
+                                  UISinterpreterdata)override;
+
+            /// \brief Returns the Rect2d to be drawn.
+            ///
+            /// Returns the jetfuel::draw::Rect2d of this Check_box
+            /// (with label) to be drawn when Draw() is called.
+            /// This is a implementation of a pure virtual function
+            /// from jetfuel::draw::Rectangle_interface.
+            jetfuel::draw::Rect2d_int Get_rect_to_draw()override{
+                return m_checkbox.Get_rect_to_draw()+
+                       m_label.Get_rect_to_draw();
+            }
+
+            /// \brief Returns the Rect2d of just the checkbox sprite
+            /// (no label).
+            ///
+            /// Returns the Rect2d of just the checkbox sprite
+            /// (no label).
+            jetfuel::draw::Rect2d_int Get_checkbox_rect_to_draw(){
+                return m_checkbox.Get_rect_to_draw();
+            }
+
+            /// \brief Draws this Check_box.
+            ///
+            /// Draws this Check_box.
+            bool Draw()override;
+        protected:
+            /// \brief Gets the Universal Input System action to listen
+            /// for.
+            ///
+            /// Gets the Universal Input System action to listen
+            /// for.
+            std::string Get_action_to_listen_for(){
+                return m_actiontolistenfor;
+            }
+
+            /// \brief Sets whether this Check_box is checked.
+            ///
+            /// Sets whether this Check_box is checked.
+            ///
+            /// \param bool checked
+            void Set_checked(const bool checked){
+                m_checkboxstatus = checked;
+            }
+
+            /// \brief Sets the checkbox sprite's image.
+            ///
+            /// Sets the checkbox sprite's image.
+            ///
+            /// \param jetfuel::draw::Image image
+            bool Set_checkbox_sprite_image(const jetfuel::draw::Image
+                                           image){
+                bool returnvalue = true;
+
+                if(m_imagedynamicloading){
+                    m_checkbox.Dynamic_load_from_image(image);
+                }else{
+                    returnvalue = m_checkbox.Load_from_image(image);
+                }
+
+                if(image.Get_size_of_image() != m_pastimagesize){
+                    Set_position(Get_position());
+
+                    m_pastimagesize = image.Get_size_of_image();
+                }
+
+                return returnvalue;
+            }
+
+            /// \brief Gets the active (checked) checkbox image.
+            ///
+            /// Gets the active (checked) checkbox image.
+            jetfuel::draw::Image Get_active_checkbox_image() const{
+                return m_activecheckboximage;
+            }
+
+            /// \brief Gets the disabled (not checked) checkbox image.
+            ///
+            /// Gets the disabled (not checked) checkbox image.
+            jetfuel::draw::Image Get_disabled_checkbox_image() const{
+                return m_disabledcheckboximage;
+            }
+
+            /// \brief Draws all the drawables part of this class.
+            ///
+            /// Draws all the drawables part of this class
+            /// (i.e. checkbox sprite, label text).
+            bool Draw_drawables(){
+                if(!m_checkbox.Draw()){
+                    return false;
+                }else if(m_drawlabel){
+                    if(!m_label.Draw()){
+                        return false;
+                    }
+                }else{
+                    return true;
+                }
+            }
+        private:
+            std::mutex m_positioningmutex; ///< A positioning mutex
+            							   ///< preventing positions
+            							   ///< from being edited at
+										   ///< the same time.
+
+            jetfuel::draw::Vector2d_int m_pastimagesize; ///< The past
+            											 ///< loaded
+            											 ///< image
+            											 ///< size.
+
+            bool m_checkboxstatus; ///< Whether this Check_box is
+            					   ///< checked or not.
+            bool m_drawlabel = false; ///< Whether a label should be
+									  ///< drawn next to the checkbox
+									  ///< sprite.
+
+            bool m_imagedynamicloading = false; ///< Whether dynamic
+            									///< image loading is
+            									///< being used.
+
+            unsigned int m_labelgap; ///< The (x)size of the gap
+									 ///< between the checkbox sprite
+            						 ///< and the label text.
+
+            Label_position m_labelposition = Label_position::Right;
+								   ///< The label position relative to
+								   ///< the checkbox sprite.
+
+            std::string m_actiontolistenfor; ///< The UIS action to
+											 ///< listen for triggers.
+
+            jetfuel::draw::Image m_activecheckboximage; ///<
+            jetfuel::draw::Image m_disabledcheckboximage; ///<
+            jetfuel::draw::Sprite m_checkbox; ///<
+
+            jetfuel::draw::Text m_label; ///<
+            jetfuel::draw::Text::Text_characteristics m_labelcharacteristics;
+        };
+    } /* namespace gui */
+} /* namespace jetfuel */
+
+#endif /* JETFUELGUI_CHECKBOX_H_ */

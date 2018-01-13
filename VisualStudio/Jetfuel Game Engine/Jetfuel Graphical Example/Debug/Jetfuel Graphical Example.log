@@ -1,0 +1,26 @@
+﻿  Jetfuel Graphical Example.cpp
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelcore\messagebus.h(140): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelcore\messagebus.h(186): warning C4018: '<=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelinspire\pointerbridge.h(35): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelcontrol\uismanager.h(223): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelcontrol\uismanager.h(262): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\menu.h(98): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\menu.h(103): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\menu.h(125): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\menu.h(130): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\menu.h(144): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\menu.h(152): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\menu.h(205): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\menu.h(215): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\dropdownbox.h(175): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\dropdownbox.h(244): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuelgui\dropdownbox.h(283): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuellocale\stringlocalemanager.h(51): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\src\jetfuellocale\stringlocalemanager.h(69): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\examples\jetfuel graphical example\src\jetfuel graphical example.cpp(361): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\examples\jetfuel graphical example\src\jetfuel graphical example.cpp(403): warning C4700: uninitialized local variable 'pythonbuttonpointer' used
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\examples\jetfuel graphical example\src\jetfuel graphical example.cpp(412): warning C4700: uninitialized local variable 'pythoncheckboxpointer' used
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\examples\jetfuel graphical example\src\jetfuel graphical example.cpp(423): warning C4700: uninitialized local variable 'pythondropdownboxpointer' used
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\examples\jetfuel graphical example\src\jetfuel graphical example.cpp(433): warning C4700: uninitialized local variable 'pythonmenupointer' used
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\examples\jetfuel graphical example\src\jetfuel graphical example.cpp(444): warning C4700: uninitialized local variable 'pythonsliderpointer' used
+  Jetfuel Graphical Example.vcxproj -> Z:\CentralProjectStorage\eclipseworkspace\Jetfuel Game Engine Public Git\VisualStudio\Jetfuel Game Engine\Debug\Jetfuel Graphical Example.exe

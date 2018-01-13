@@ -1,0 +1,111 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2017 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#include "dropdownbox.h"
+
+namespace jetfuel {
+    namespace gui {
+        void Drop_down_box::Add_option(const std::string option){
+        	// If first option, then set it as the base box option.
+        	// If not, generate the option box and text to be shown
+        	// when active.
+
+            if(Get_size_of_dropdown_options_vector() <= 0 && !Is_base_box_set()){
+                Set_base_box_option(option);
+            }else{
+                Drop_down_option newoptiontoadd;
+
+                if(Get_renderer() != nullptr){
+                    newoptiontoadd.containerbox.Assign_renderer(Get_renderer());
+                    newoptiontoadd.text.Assign_renderer(Get_renderer());
+                }
+
+                newoptiontoadd.containerbox.Set_fill_color(Get_box_color());
+                newoptiontoadd.text.Set_string(option);
+
+                if(Is_text_chars_set()){
+                    Set_text_characteristics_to_text_object(&newoptiontoadd.text);
+                }
+
+                jetfuel::draw::Vector2d_int containerboxposition(Get_position());
+
+                containerboxposition.y += Get_size_of_base_box().y;
+                containerboxposition.y += Get_size_of_dropdown_options_vector()*
+                                          Get_size_of_base_box().y;
+
+                newoptiontoadd.containerbox.Set_position(containerboxposition);
+                newoptiontoadd.containerbox.Set_size(Get_size_of_base_box());
+                newoptiontoadd.text.Set_position(containerboxposition+10);
+
+                Add_drop_down_option_to_vector(newoptiontoadd);
+            }
+
+            // Stores option in m_options vector.
+
+            Add_option_to_vector(option);
+        }
+
+        void Drop_down_box::Check_for_clicks(jetfuel::control::Action
+                                             UISinterpreterdata){
+        	// If not active when clicked, then it becomes active.
+        	// If active when clicked, find option which was
+        	// clicked (if any), then
+
+            if(!Is_active()){
+                if(UISinterpreterdata.action ==
+                   Get_UIS_action_to_listen_for()
+                   && UISinterpreterdata.inputstate ==
+                   UISinterpreterdata.Down &&
+                   Get_rect_to_draw().Has_mouse_collided()){
+                    Set_active(true);
+                }
+            }else if(UISinterpreterdata.action ==
+                     Get_UIS_action_to_listen_for()
+                     && UISinterpreterdata.inputstate ==
+                     UISinterpreterdata.Down){
+                for(int i = 0; Get_size_of_dropdown_options_vector() > i;
+                    ++i){
+                    if(Get_dropdown_option_in_vector(i).
+                       containerbox.Get_rect_to_draw().Has_mouse_collided()){
+                         Set_active_drop_down(i);
+                         break;
+                    }
+                }
+                Set_active(false);
+            }
+        }
+
+        bool Drop_down_box::Draw(){
+            if(Is_image_dynamically_loaded()){
+                bool dynamicloadingreturnvalue = Load_dynamic_image();
+
+                if(!dynamicloadingreturnvalue){
+                    return dynamicloadingreturnvalue;
+                }
+            }
+
+            bool returnvalue = Draw_base_box();
+
+            if(Is_active() && returnvalue){
+                returnvalue = Draw_all_option_boxes();
+            }
+
+            return returnvalue;
+        }
+
+    } /* namespace gui */
+} /* namespace jetfuel */

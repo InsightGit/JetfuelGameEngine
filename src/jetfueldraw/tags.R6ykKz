@@ -1,0 +1,383 @@
+NEONDRAW_SCENEMANAGER_H_	scenemanager.h	20;"	d
+neon	scenemanager.h	/^namespace neon {$/;"	n
+draw	scenemanager.h	/^    namespace draw {$/;"	n	namespace:neon
+exceptions	scenemanager.h	/^        namespace exceptions{$/;"	n	namespace:neon::draw
+SDL_Init_exception	scenemanager.h	/^            class SDL_Init_exception : public std::runtime_error{$/;"	c	namespace:neon::draw::exceptions
+SDL_Init_exception	scenemanager.h	/^                SDL_Init_exception(const std::string sdl_initerror) : std::runtime_error("SDL_Init Exception:" +sdl_initerror){}$/;"	f	class:neon::draw::exceptions::SDL_Init_exception
+Scene	scenemanager.h	/^        class Scene;$/;"	x
+Scene_manager	scenemanager.h	/^        class Scene_manager {$/;"	c	namespace:neon::draw
+Scene_manager	scenemanager.h	/^            Scene_manager(bool initwindow = true);$/;"	p	class:neon::draw::Scene_manager
+~Scene_manager	scenemanager.h	/^            virtual ~Scene_manager();$/;"	p	class:neon::draw::Scene_manager
+Create_window	scenemanager.h	/^            bool Create_window(const std::string windowtitle,const Vector2d_int positiontocreatewindow,$/;"	p	class:neon::draw::Scene_manager
+Get_window_id	scenemanager.h	/^            Uint32 *Get_window_id() const{$/;"	f	class:neon::draw::Scene_manager
+Set_window	scenemanager.h	/^            bool Set_window(SDL_Window *windowtouse);$/;"	p	class:neon::draw::Scene_manager
+Create_renderer	scenemanager.h	/^            bool Create_renderer(const bool vsyncenabled = true, const bool usehardwareaccel = true,$/;"	p	class:neon::draw::Scene_manager
+Set_renderer	scenemanager.h	/^            bool Set_renderer(SDL_Renderer *renderertouse);$/;"	p	class:neon::draw::Scene_manager
+Get_renderer	scenemanager.h	/^            SDL_Renderer *Get_renderer(){$/;"	f	class:neon::draw::Scene_manager
+Set_universal_background_color	scenemanager.h	/^            void Set_universal_background_color(Color color){$/;"	f	class:neon::draw::Scene_manager
+Get_universal_background_color	scenemanager.h	/^            Color Get_universal_background_color() const{$/;"	f	class:neon::draw::Scene_manager
+Switch_current_scene	scenemanager.h	/^            void Switch_current_scene(Scene *scene);$/;"	p	class:neon::draw::Scene_manager
+Draw_current_scene	scenemanager.h	/^            void Draw_current_scene();$/;"	p	class:neon::draw::Scene_manager
+Get_current_scene	scenemanager.h	/^            Scene *Get_current_scene(){$/;"	f	class:neon::draw::Scene_manager
+Set_window_id	scenemanager.h	/^            void Set_window_id(Uint32 id){$/;"	f	class:neon::draw::Scene_manager
+Set_current_scene	scenemanager.h	/^            void Set_current_scene(Scene *scene) {$/;"	f	class:neon::draw::Scene_manager
+window	scenemanager.h	/^            SDL_Window *window; \/\/\/< Current window for renderer$/;"	m	class:neon::draw::Scene_manager
+renderer	scenemanager.h	/^            SDL_Renderer *renderer; \/\/\/< Current renderer$/;"	m	class:neon::draw::Scene_manager
+m_windowid	scenemanager.h	/^            Uint32 *m_windowid;$/;"	m	class:neon::draw::Scene_manager
+m_universalbackgroundcolor	scenemanager.h	/^            Color m_universalbackgroundcolor; \/\/\/< Universal$/;"	m	class:neon::draw::Scene_manager
+m_currentscene	scenemanager.h	/^            Scene *m_currentscene = nullptr; \/\/\/< Current active scene$/;"	m	class:neon::draw::Scene_manager
+neon	scenemanager.cpp	/^namespace neon {$/;"	n	file:
+draw	scenemanager.cpp	/^    namespace draw {$/;"	n	namespace:neon	file:
+Scene_manager	scenemanager.cpp	/^        Scene_manager::Scene_manager(bool initwindow) {$/;"	f	class:neon::draw::Scene_manager
+~Scene_manager	scenemanager.cpp	/^        Scene_manager::~Scene_manager(){$/;"	f	class:neon::draw::Scene_manager
+Create_window	scenemanager.cpp	/^        bool Scene_manager::Create_window(const std::string windowtitle,const Vector2d<int> positiontocreatewindow,$/;"	f	class:neon::draw::Scene_manager
+Set_window	scenemanager.cpp	/^        bool Scene_manager::Set_window(SDL_Window *windowtouse){$/;"	f	class:neon::draw::Scene_manager
+Create_renderer	scenemanager.cpp	/^        bool Scene_manager::Create_renderer(const bool vsyncenabled,$/;"	f	class:neon::draw::Scene_manager
+Set_renderer	scenemanager.cpp	/^        bool Scene_manager::Set_renderer(SDL_Renderer *renderertouse){$/;"	f	class:neon::draw::Scene_manager
+Switch_current_scene	scenemanager.cpp	/^        void Scene_manager::Switch_current_scene(Scene *scene){$/;"	f	class:neon::draw::Scene_manager
+Draw_current_scene	scenemanager.cpp	/^        void Scene_manager::Draw_current_scene(){$/;"	f	class:neon::draw::Scene_manager
+NEONDRAW_VECTOR2D_H_	vector2d.h	20;"	d
+neon	vector2d.h	/^namespace neon {$/;"	n
+draw	vector2d.h	/^    namespace draw {$/;"	n	namespace:neon
+Vector2d	vector2d.h	/^        class Vector2d {$/;"	c	namespace:neon::draw
+Vector2d	vector2d.h	/^            Vector2d(){}$/;"	f	class:neon::draw::Vector2d
+Vector2d	vector2d.h	/^            Vector2d(T X, T Y){$/;"	f	class:neon::draw::Vector2d
+x	vector2d.h	/^            T x;$/;"	m	class:neon::draw::Vector2d
+y	vector2d.h	/^            T y;$/;"	m	class:neon::draw::Vector2d
+operator +	vector2d.h	/^        Vector2d<T> operator +(const Vector2d<T> left,const Vector2d<T> right){$/;"	f	namespace:neon::draw
+operator +=	vector2d.h	/^        Vector2d<T> operator +=(Vector2d<T> &left,const Vector2d<T> right){$/;"	f	namespace:neon::draw
+operator -	vector2d.h	/^        Vector2d<T> operator -(const Vector2d<T> left,const Vector2d<T> right){$/;"	f	namespace:neon::draw
+operator -=	vector2d.h	/^        Vector2d<T> operator -=(Vector2d<T> &left,const Vector2d<T> right){$/;"	f	namespace:neon::draw
+operator *	vector2d.h	/^        Vector2d<T> operator *(T left, const Vector2d<T> right){$/;"	f	namespace:neon::draw
+operator *=	vector2d.h	/^        Vector2d<T> operator *=(Vector2d<T> &left, const T right){$/;"	f	namespace:neon::draw
+operator /	vector2d.h	/^        Vector2d<T> operator \/(const Vector2d<T> left, const T right){$/;"	f	namespace:neon::draw
+operator /=	vector2d.h	/^        Vector2d<T> operator \/=(Vector2d<T> &left, const T right){$/;"	f	namespace:neon::draw
+operator +	vector2d.h	/^        Vector2d<T> operator +(const Vector2d<T> left, const T right){$/;"	f	namespace:neon::draw
+operator +=	vector2d.h	/^        Vector2d<T> operator +=(Vector2d<T> &left, const T right){$/;"	f	namespace:neon::draw
+operator -	vector2d.h	/^        Vector2d<T> operator -(const Vector2d<T> left,const T right){$/;"	f	namespace:neon::draw
+operator -=	vector2d.h	/^        Vector2d<T> operator -=(Vector2d<T> &left,const T right){$/;"	f	namespace:neon::draw
+operator ==	vector2d.h	/^        bool operator ==(const Vector2d<T> left, const Vector2d<T> right){$/;"	f	namespace:neon::draw
+operator !=	vector2d.h	/^        bool operator !=(const Vector2d<T> left, const Vector2d<T> right){$/;"	f	namespace:neon::draw
+Vector2d_uint	vector2d.h	/^        typedef Vector2d<unsigned int> Vector2d_uint;$/;"	t	namespace:neon::draw
+Vector2d_int	vector2d.h	/^        typedef Vector2d<int> Vector2d_int;$/;"	t	namespace:neon::draw
+Vector2d_float	vector2d.h	/^        typedef Vector2d<float> Vector2d_float;$/;"	t	namespace:neon::draw
+NEONDRAW_SPRITE_H_	sprite.h	20;"	d
+neon	sprite.h	/^namespace neon {$/;"	n
+draw	sprite.h	/^    namespace draw {$/;"	n	namespace:neon
+Sprite	sprite.h	/^        class Sprite : public Drawable{$/;"	c	namespace:neon::draw
+Sprite	sprite.h	/^            Sprite();$/;"	p	class:neon::draw::Sprite
+~Sprite	sprite.h	/^            virtual ~Sprite();$/;"	p	class:neon::draw::Sprite
+Load_from_image	sprite.h	/^            bool Load_from_image(const Image image);$/;"	p	class:neon::draw::Sprite
+Get_size_of_sprite	sprite.h	/^            neon::draw::Vector2d_int Get_size_of_sprite(){$/;"	f	class:neon::draw::Sprite
+override	sprite.h	/^            bool Draw()override;$/;"	m	class:neon::draw::Sprite
+Set_dest_width_height	sprite.h	/^            void Set_dest_width_height(const Vector2d_int widthheight){$/;"	f	class:neon::draw::Sprite
+Set_dest_position	sprite.h	/^            void Set_dest_position(const Vector2d_int position){$/;"	f	class:neon::draw::Sprite
+Set_size_of_sprite	sprite.h	/^            void Set_size_of_sprite(const Vector2d_int size){$/;"	f	class:neon::draw::Sprite
+Set_image_view_rect	sprite.h	/^            void Set_image_view_rect(const Rect2d_int viewrectangle){$/;"	f	class:neon::draw::Sprite
+Get_dest_rect	sprite.h	/^            SDL_Rect Get_dest_rect() const {$/;"	f	class:neon::draw::Sprite
+Get_src_rect	sprite.h	/^            SDL_Rect Get_src_rect() const {$/;"	f	class:neon::draw::Sprite
+Get_texture	sprite.h	/^            SDL_Texture *Get_texture() const {$/;"	f	class:neon::draw::Sprite
+Set_texture	sprite.h	/^            void Set_texture(SDL_Texture *texture) {$/;"	f	class:neon::draw::Sprite
+Is_src_view_rect_set	sprite.h	/^            bool Is_src_view_rect_set() const {$/;"	f	class:neon::draw::Sprite
+m_srcviewrectset	sprite.h	/^            bool m_srcviewrectset = false;\/\/\/< Whether the source view$/;"	m	class:neon::draw::Sprite
+m_widthheight	sprite.h	/^            neon::draw::Vector2d_int m_widthheight;$/;"	m	class:neon::draw::Sprite
+m_texture	sprite.h	/^            SDL_Texture *m_texture; \/\/\/< This sprite's texture object.$/;"	m	class:neon::draw::Sprite
+m_dest	sprite.h	/^            SDL_Rect m_dest; \/\/\/< m_dest rectangle for positioning.$/;"	m	class:neon::draw::Sprite
+m_src	sprite.h	/^            SDL_Rect m_src; \/\/\/< source view rectangle.$/;"	m	class:neon::draw::Sprite
+neon	sprite.cpp	/^namespace neon {$/;"	n	file:
+draw	sprite.cpp	/^    namespace draw {$/;"	n	namespace:neon	file:
+Sprite	sprite.cpp	/^        Sprite::Sprite(){}$/;"	f	class:neon::draw::Sprite
+~Sprite	sprite.cpp	/^        Sprite::~Sprite(){$/;"	f	class:neon::draw::Sprite
+Load_from_image	sprite.cpp	/^        bool Sprite::Load_from_image(const Image image){$/;"	f	class:neon::draw::Sprite
+Draw	sprite.cpp	/^        bool Sprite::Draw(){$/;"	f	class:neon::draw::Sprite
+NEONDRAW_IMAGE_H_	image.h	20;"	d
+neon	image.h	/^namespace neon {$/;"	n
+draw	image.h	/^    namespace draw {$/;"	n	namespace:neon
+Image	image.h	/^        class Image {$/;"	c	namespace:neon::draw
+Image	image.h	/^            Image(){}$/;"	f	class:neon::draw::Image
+Image	image.h	/^            Image(const std::string imagepath, Scene_manager *scenemanager);$/;"	p	class:neon::draw::Image
+Image	image.h	/^            Image(const std::string imagepath, const Vector2d_int imagesize);$/;"	p	class:neon::draw::Image
+Set_image	image.h	/^            void Set_image(const std::string imagepath,$/;"	p	class:neon::draw::Image
+Set_image	image.h	/^            void Set_image(const std::string imagepath, $/;"	p	class:neon::draw::Image
+Get_image_location	image.h	/^            std::string Get_image_location() const {$/;"	f	class:neon::draw::Image
+Get_size_of_image	image.h	/^            neon::draw::Vector2d_int Get_size_of_image() const {$/;"	f	class:neon::draw::Image
+Get_error	image.h	/^            std::string Get_error(){$/;"	f	class:neon::draw::Image
+Set_image_location	image.h	/^            void Set_image_location(const std::string imagelocation) {$/;"	f	class:neon::draw::Image
+Set_size_of_image	image.h	/^            void Set_size_of_image(const Vector2d_int imagesize) {$/;"	f	class:neon::draw::Image
+m_imagepath	image.h	/^            std::string m_imagepath; \/\/\/< Image path (or location)$/;"	m	class:neon::draw::Image
+m_sizeofimage	image.h	/^            neon::draw::Vector2d_int m_sizeofimage; $/;"	m	class:neon::draw::Image
+NEONDRAW_SCENE_H_	scene.h	21;"	d
+neon	scene.h	/^namespace neon {$/;"	n
+draw	scene.h	/^    namespace draw {$/;"	n	namespace:neon
+Scene	scene.h	/^        class Scene {$/;"	c	namespace:neon::draw
+Scene	scene.h	/^            Scene(const int id);$/;"	p	class:neon::draw::Scene
+~Scene	scene.h	/^            virtual ~Scene();$/;"	p	class:neon::draw::Scene
+Attach_drawable	scene.h	/^            void Attach_drawable(Drawable *drawable,$/;"	p	class:neon::draw::Scene
+Disable_drawable	scene.h	/^            void Disable_drawable(Drawable *drawable);$/;"	p	class:neon::draw::Scene
+Get_scene_id	scene.h	/^            int Get_scene_id() const {$/;"	f	class:neon::draw::Scene
+Get_background_color	scene.h	/^            Color Get_background_color() const {$/;"	f	class:neon::draw::Scene
+Set_background_color	scene.h	/^            void Set_background_color(const Color backgroundcolor) {$/;"	f	class:neon::draw::Scene
+Reset_scene	scene.h	/^            void Reset_scene(){$/;"	f	class:neon::draw::Scene
+Assign_renderer	scene.h	/^            void Assign_renderer(SDL_Renderer *scenemanagerrenderer){$/;"	f	class:neon::draw::Scene
+Draw_scene	scene.h	/^            void Draw_scene();$/;"	p	class:neon::draw::Scene
+Get_scene_manager_renderer	scene.h	/^            SDL_Renderer* Get_scene_manager_renderer() const {$/;"	f	class:neon::draw::Scene
+Get_size_of_drawables_vector	scene.h	/^            size_t Get_size_of_drawables_vector() const{$/;"	f	class:neon::draw::Scene
+Get_drawable_in_vector	scene.h	/^            Drawable *Get_drawable_in_vector(size_t place){$/;"	f	class:neon::draw::Scene
+Get_drawable_placement_in_vector	scene.h	/^            unsigned int Get_drawable_placement_in_vector(size_t place){$/;"	f	class:neon::draw::Scene
+Add_drawable_placement_to_drawable_placement_vector	scene.h	/^            void Add_drawable_placement_to_drawable_placement_vector(const$/;"	f	class:neon::draw::Scene
+Get_highest_placement	scene.h	/^            unsigned int Get_highest_placement() const {$/;"	f	class:neon::draw::Scene
+Add_drawable_to_drawable_vector	scene.h	/^            void Add_drawable_to_drawable_vector(Drawable *drawable){$/;"	f	class:neon::draw::Scene
+Get_drawable_status	scene.h	/^            bool Get_drawable_status(size_t place){$/;"	f	class:neon::draw::Scene
+Enable_drawable_in_vector	scene.h	/^            void Enable_drawable_in_vector(size_t place){$/;"	f	class:neon::draw::Scene
+Disable_drawable_in_vector	scene.h	/^            void Disable_drawable_in_vector(size_t place){$/;"	f	class:neon::draw::Scene
+Is_background_color_set	scene.h	/^            bool Is_background_color_set() const {$/;"	f	class:neon::draw::Scene
+m_id	scene.h	/^            int m_id; \/\/\/< The Scene's id$/;"	m	class:neon::draw::Scene
+m_highestplacement	scene.h	/^            unsigned int m_highestplacement = 0; \/\/\/< highest$/;"	m	class:neon::draw::Scene
+m_backgroundcolorset	scene.h	/^            bool m_backgroundcolorset = false; \/\/\/< Whether the$/;"	m	class:neon::draw::Scene
+m_drawablesenabled	scene.h	/^            std::vector<bool> m_drawablesenabled;$/;"	m	class:neon::draw::Scene
+m_drawablesplacement	scene.h	/^            std::vector<unsigned int> m_drawablesplacement;$/;"	m	class:neon::draw::Scene
+m_drawables	scene.h	/^            boost::ptr_vector<Drawable> m_drawables; \/\/\/< A boost$/;"	m	class:neon::draw::Scene
+m_scenemanagerrenderer	scene.h	/^            SDL_Renderer *m_scenemanagerrenderer; \/\/\/< A reference$/;"	m	class:neon::draw::Scene
+m_backgroundcolor	scene.h	/^            Color m_backgroundcolor; \/\/\/< The background's color.$/;"	m	class:neon::draw::Scene
+neon	scene.cpp	/^namespace neon {$/;"	n	file:
+draw	scene.cpp	/^    namespace draw {$/;"	n	namespace:neon	file:
+Scene	scene.cpp	/^        Scene::Scene(const int id) {$/;"	f	class:neon::draw::Scene
+~Scene	scene.cpp	/^        Scene::~Scene(){$/;"	f	class:neon::draw::Scene
+Attach_drawable	scene.cpp	/^        void Scene::Attach_drawable(Drawable *drawable,$/;"	f	class:neon::draw::Scene
+Disable_drawable	scene.cpp	/^        void Scene::Disable_drawable(Drawable *drawable){$/;"	f	class:neon::draw::Scene
+Draw_scene	scene.cpp	/^        void Scene::Draw_scene(){$/;"	f	class:neon::draw::Scene
+NEONDRAW_RECTANGLE2DSHAPE_H_	rectangle2dshape.h	20;"	d
+neon	rectangle2dshape.h	/^namespace neon {$/;"	n
+draw	rectangle2dshape.h	/^    namespace draw {$/;"	n	namespace:neon
+Rectangle_2d_shape	rectangle2dshape.h	/^        class Rectangle_2d_shape : public Drawable{$/;"	c	namespace:neon::draw
+Rectangle_2d_shape	rectangle2dshape.h	/^            Rectangle_2d_shape(){}$/;"	f	class:neon::draw::Rectangle_2d_shape
+Rectangle_2d_shape	rectangle2dshape.h	/^            Rectangle_2d_shape(Vector2d_int position, Vector2d_int size);$/;"	p	class:neon::draw::Rectangle_2d_shape
+Rectangle_2d_shape	rectangle2dshape.h	/^            Rectangle_2d_shape(Rect2d_int rect);$/;"	p	class:neon::draw::Rectangle_2d_shape
+Get_fill_color	rectangle2dshape.h	/^            Color Get_fill_color() const {$/;"	f	class:neon::draw::Rectangle_2d_shape
+Set_fill_color	rectangle2dshape.h	/^            void Set_fill_color(const Color rectcolor) {$/;"	f	class:neon::draw::Rectangle_2d_shape
+Set_size	rectangle2dshape.h	/^            void Set_size(const Vector2d_int size){$/;"	f	class:neon::draw::Rectangle_2d_shape
+Get_outline_color	rectangle2dshape.h	/^            const Color& Get_outline_color() const {$/;"	f	class:neon::draw::Rectangle_2d_shape
+Set_outline_color	rectangle2dshape.h	/^            void Set_outline_color(const Color& rectcolor) {$/;"	f	class:neon::draw::Rectangle_2d_shape
+override	rectangle2dshape.h	/^            bool Draw()override;$/;"	m	class:neon::draw::Rectangle_2d_shape
+Is_draw_outline	rectangle2dshape.h	/^            bool Is_draw_outline() const {$/;"	f	class:neon::draw::Rectangle_2d_shape
+m_drawoutline	rectangle2dshape.h	/^            bool m_drawoutline = false; \/\/\/< drawing outline boolean$/;"	m	class:neon::draw::Rectangle_2d_shape
+m_recttodraw	rectangle2dshape.h	/^            Rect2d_int m_recttodraw; \/\/\/< rectangle to draw Rect2d_int$/;"	m	class:neon::draw::Rectangle_2d_shape
+m_rectfillcolor	rectangle2dshape.h	/^            Color m_rectfillcolor; \/\/\/< rectangle fill color$/;"	m	class:neon::draw::Rectangle_2d_shape
+m_rectoutlinecolor	rectangle2dshape.h	/^            Color m_rectoutlinecolor; \/\/\/< rectangle outline color$/;"	m	class:neon::draw::Rectangle_2d_shape
+neon	rectangle2dshape.cpp	/^namespace neon {$/;"	n	file:
+draw	rectangle2dshape.cpp	/^    namespace draw {$/;"	n	namespace:neon	file:
+Rectangle_2d_shape	rectangle2dshape.cpp	/^        Rectangle_2d_shape::Rectangle_2d_shape(Vector2d_int position, Vector2d_int size) {$/;"	f	class:neon::draw::Rectangle_2d_shape
+Rectangle_2d_shape	rectangle2dshape.cpp	/^        Rectangle_2d_shape::Rectangle_2d_shape(Rect2d_int rect){$/;"	f	class:neon::draw::Rectangle_2d_shape
+Draw	rectangle2dshape.cpp	/^        bool Rectangle_2d_shape::Draw(){$/;"	f	class:neon::draw::Rectangle_2d_shape
+NEONDRAW_DRAWABLE_H_	drawable.h	20;"	d
+neon	drawable.h	/^namespace neon {$/;"	n
+draw	drawable.h	/^    namespace draw {$/;"	n	namespace:neon
+Drawable	drawable.h	/^        class Drawable {$/;"	c	namespace:neon::draw
+Get_position	drawable.h	/^            virtual Vector2d_int Get_position(){$/;"	f	class:neon::draw::Drawable
+Set_position	drawable.h	/^            virtual void Set_position(const Vector2d_int position){$/;"	f	class:neon::draw::Drawable
+operator ==	drawable.h	/^            bool operator ==(Drawable &drawable){$/;"	f	class:neon::draw::Drawable
+Get_rect_to_draw	drawable.h	/^            virtual Rect2d_int Get_rect_to_draw() = 0;$/;"	p	class:neon::draw::Drawable
+Assign_renderer	drawable.h	/^            virtual void Assign_renderer(SDL_Renderer *renderer){$/;"	f	class:neon::draw::Drawable
+Draw	drawable.h	/^            virtual bool Draw() = 0;$/;"	p	class:neon::draw::Drawable
+Get_dest	drawable.h	/^            SDL_Rect Get_dest() const {$/;"	f	class:neon::draw::Drawable
+Set_dest	drawable.h	/^            void Set_dest(const SDL_Rect dest) {$/;"	f	class:neon::draw::Drawable
+Get_renderer	drawable.h	/^            virtual SDL_Renderer *Get_renderer(){$/;"	f	class:neon::draw::Drawable
+m_renderer	drawable.h	/^            SDL_Renderer *m_renderer;$/;"	m	class:neon::draw::Drawable
+m_dest	drawable.h	/^            SDL_Rect m_dest; $/;"	m	class:neon::draw::Drawable
+m_UUID	drawable.h	/^            boost::uuids::uuid m_UUID =$/;"	m	class:neon::draw::Drawable
+m_position	drawable.h	/^            Vector2d_int m_position;  $/;"	m	class:neon::draw::Drawable
+NEONDRAW_COLOR_H_	color.h	20;"	d
+neon	color.h	/^namespace neon {$/;"	n
+draw	color.h	/^    namespace draw {$/;"	n	namespace:neon
+Color	color.h	/^        class Color {$/;"	c	namespace:neon::draw
+Color	color.h	/^            Color();$/;"	p	class:neon::draw::Color
+Color	color.h	/^            Color(unsigned int red, unsigned int green, unsigned int blue, unsigned int alpha = 255);$/;"	p	class:neon::draw::Color
+Black	color.h	/^            static const Color Black;    \/\/\/< Black predefined color$/;"	m	class:neon::draw::Color
+White	color.h	/^            static const Color White;    \/\/\/< White predefined color$/;"	m	class:neon::draw::Color
+Red	color.h	/^            static const Color Red;      \/\/\/< Red predefined color$/;"	m	class:neon::draw::Color
+Green	color.h	/^            static const Color Green;    \/\/\/< Green predefined color$/;"	m	class:neon::draw::Color
+Blue	color.h	/^            static const Color Blue;     \/\/\/< Blue predefined color$/;"	m	class:neon::draw::Color
+Yellow	color.h	/^            static const Color Yellow;   \/\/\/< Yellow predefined color$/;"	m	class:neon::draw::Color
+Magenta	color.h	/^            static const Color Magenta;  \/\/\/< Magenta predefined color$/;"	m	class:neon::draw::Color
+Cyan	color.h	/^            static const Color Cyan;     \/\/\/< Cyan predefined color$/;"	m	class:neon::draw::Color
+r	color.h	/^            unsigned int r;   \/\/\/< Red value$/;"	m	class:neon::draw::Color
+g	color.h	/^            unsigned int g;   \/\/\/< Green value$/;"	m	class:neon::draw::Color
+b	color.h	/^            unsigned int b;   \/\/\/< Blue value$/;"	m	class:neon::draw::Color
+a	color.h	/^            unsigned int a;   \/\/\/< Alpha (transparency) value$/;"	m	class:neon::draw::Color
+operator ==	color.h	/^        bool operator ==(const Color left, const Color right);$/;"	p	namespace:neon::draw
+operator !=	color.h	/^        bool operator !=(const Color left, const Color right);$/;"	p	namespace:neon::draw
+operator +	color.h	/^        Color operator +(const Color left, const Color right);$/;"	p	namespace:neon::draw
+operator -	color.h	/^        Color operator -(const Color left, const Color right);$/;"	p	namespace:neon::draw
+operator +=	color.h	/^        Color operator +=(Color left,Color right);$/;"	p	namespace:neon::draw
+operator -=	color.h	/^        Color operator -=(Color left,Color right);$/;"	p	namespace:neon::draw
+NEONDRAW_FONT_H_	font.h	20;"	d
+neon	font.h	/^namespace neon {$/;"	n
+draw	font.h	/^    namespace draw {$/;"	n	namespace:neon
+exceptions	font.h	/^        namespace exceptions {$/;"	n	namespace:neon::draw
+SDL_ttf_exception	font.h	/^            class SDL_ttf_exception : public std::runtime_error{$/;"	c	namespace:neon::draw::exceptions
+SDL_ttf_exception	font.h	/^                SDL_ttf_exception(const std::string when) : std::runtime_error(whaterror$/;"	f	class:neon::draw::exceptions::SDL_ttf_exception
+whaterror	font.h	/^                std::string whaterror = "SDL_ttf error during "; \/\/\/< error message 1$/;"	m	class:neon::draw::exceptions::SDL_ttf_exception
+whaterror2	font.h	/^                std::string whaterror2 = ". Error was:"; \/\/\/< error message 2$/;"	m	class:neon::draw::exceptions::SDL_ttf_exception
+Font	font.h	/^        class Font{$/;"	c	namespace:neon::draw
+Font	font.h	/^            Font(){}$/;"	f	class:neon::draw::Font
+Font	font.h	/^            Font(const std::string filename);$/;"	p	class:neon::draw::Font
+Font	font.h	/^            Font(const std::string filename, const long faceindex);$/;"	p	class:neon::draw::Font
+~Font	font.h	/^            virtual ~Font();$/;"	p	class:neon::draw::Font
+Is_font_loaded	font.h	/^            bool Is_font_loaded() const {$/;"	f	class:neon::draw::Font
+Get_ttf_font	font.h	/^            TTF_Font *Get_ttf_font() const {$/;"	f	class:neon::draw::Font
+Get_file_name	font.h	/^            std::string Get_file_name() const {$/;"	f	class:neon::draw::Font
+Get_face_index	font.h	/^            long Get_face_index() const {$/;"	f	class:neon::draw::Font
+Load_font	font.h	/^            void Load_font(const std::string filename);$/;"	p	class:neon::draw::Font
+Load_font	font.h	/^            void Load_font(const std::string filename, const long faceindex);$/;"	p	class:neon::draw::Font
+Change_size	font.h	/^            void Change_size(const unsigned int size);$/;"	p	class:neon::draw::Font
+Set_is_font_loaded	font.h	/^            void Set_is_font_loaded(bool isfontloaded = false) {$/;"	f	class:neon::draw::Font
+Set_file_name	font.h	/^            void Set_file_name(const std::string filename) {$/;"	f	class:neon::draw::Font
+Set_face_index	font.h	/^            void Set_face_index(long faceindex = -1) {$/;"	f	class:neon::draw::Font
+Set_ttf_font	font.h	/^            void Set_ttf_font(TTF_Font *ttffont) {$/;"	f	class:neon::draw::Font
+m_isfontloaded	font.h	/^            bool m_isfontloaded = false; \/\/\/< is font loaded boolean$/;"	m	class:neon::draw::Font
+m_filename	font.h	/^            std::string m_filename; \/\/\/< filename string$/;"	m	class:neon::draw::Font
+m_faceindex	font.h	/^            long m_faceindex = -1; \/\/\/< face index long$/;"	m	class:neon::draw::Font
+m_ttffont	font.h	/^            TTF_Font *m_ttffont; \/\/\/< TTF_Font reference$/;"	m	class:neon::draw::Font
+neon	font.cpp	/^namespace neon {$/;"	n	file:
+draw	font.cpp	/^    namespace draw {$/;"	n	namespace:neon	file:
+Font	font.cpp	/^        Font::Font(const std::string filename) {$/;"	f	class:neon::draw::Font
+Font	font.cpp	/^        Font::Font(const std::string filename, const long faceindex) {$/;"	f	class:neon::draw::Font
+~Font	font.cpp	/^        Font::~Font(){$/;"	f	class:neon::draw::Font
+Load_font	font.cpp	/^        void Font::Load_font(const std::string filename){$/;"	f	class:neon::draw::Font
+Load_font	font.cpp	/^        void Font::Load_font(const std::string filename, const long faceindex)$/;"	f	class:neon::draw::Font
+Change_size	font.cpp	/^        void Font::Change_size(const unsigned int size){$/;"	f	class:neon::draw::Font
+neon	image.cpp	/^namespace neon {$/;"	n	file:
+draw	image.cpp	/^    namespace draw {$/;"	n	namespace:neon	file:
+Image	image.cpp	/^        Image::Image(const std::string imagepath, Scene_manager *scenemanager) {$/;"	f	class:neon::draw::Image
+Image	image.cpp	/^        Image::Image(const std::string imagepath, const Vector2d_int imagesize){$/;"	f	class:neon::draw::Image
+Set_image	image.cpp	/^        void Image::Set_image(const std::string imagepath, $/;"	f	class:neon::draw::Image
+Set_image	image.cpp	/^        void Image::Set_image(const std::string imagepath, $/;"	f	class:neon::draw::Image
+NEONDRAW_TEXT_H_	text.h	20;"	d
+FONTSTYLE_BOLD	text.h	22;"	d
+FONTSTYLE_ITALIC	text.h	23;"	d
+FONTSTYLE_NORMAL	text.h	24;"	d
+FONTSTYLE_STRIKETHROUGH	text.h	25;"	d
+FONTSTYLE_UNDERLINE	text.h	26;"	d
+neon	text.h	/^namespace neon {$/;"	n
+draw	text.h	/^    namespace draw {$/;"	n	namespace:neon
+exceptions	text.h	/^        namespace exceptions {$/;"	n	namespace:neon::draw
+Font_not_init_Exception	text.h	/^            class Font_not_init_Exception : public std::runtime_error{$/;"	c	namespace:neon::draw::exceptions
+Font_not_init_Exception	text.h	/^                Font_not_init_Exception() : std::runtime_error(std::string($/;"	f	class:neon::draw::exceptions::Font_not_init_Exception
+Nullptr_SDL_ttf_exception	text.h	/^            class Nullptr_SDL_ttf_exception : public std::runtime_error{$/;"	c	namespace:neon::draw::exceptions
+Nullptr_SDL_ttf_exception	text.h	/^                Nullptr_SDL_ttf_exception() : std::runtime_error(whaterror+$/;"	f	class:neon::draw::exceptions::Nullptr_SDL_ttf_exception
+whaterror	text.h	/^                const std::string whaterror = std::string("SDL_ttf object was equal to ")$/;"	m	class:neon::draw::exceptions::Nullptr_SDL_ttf_exception
+Text	text.h	/^        class Text: public Drawable {$/;"	c	namespace:neon::draw
+Render_mode	text.h	/^            enum class Render_mode : unsigned int{$/;"	c	class:neon::draw::Text
+Solid	text.h	/^                Solid,$/;"	m	class:neon::draw::Text::Render_mode
+Shaded	text.h	/^                Shaded,$/;"	m	class:neon::draw::Text::Render_mode
+Font_hinting	text.h	/^            enum class Font_hinting{$/;"	c	class:neon::draw::Text
+Normal	text.h	/^                Normal,$/;"	m	class:neon::draw::Text::Font_hinting
+Light	text.h	/^                Light,$/;"	m	class:neon::draw::Text::Font_hinting
+Mono	text.h	/^                Mono,$/;"	m	class:neon::draw::Text::Font_hinting
+Text_characteristics	text.h	/^            struct Text_characteristics{$/;"	s	class:neon::draw::Text
+rendermode	text.h	/^                Text::Render_mode rendermode = Text::Render_mode::Solid;$/;"	m	struct:neon::draw::Text::Text_characteristics
+textstring	text.h	/^                std::string textstring;$/;"	m	struct:neon::draw::Text::Text_characteristics
+textcolor	text.h	/^                Color textcolor;$/;"	m	struct:neon::draw::Text::Text_characteristics
+backgroundcolor	text.h	/^                Color backgroundcolor;$/;"	m	struct:neon::draw::Text::Text_characteristics
+fontoutlinewidth	text.h	/^                unsigned int fontoutlinewidth = 0;$/;"	m	struct:neon::draw::Text::Text_characteristics
+kerningstatus	text.h	/^                bool kerningstatus = true;$/;"	m	struct:neon::draw::Text::Text_characteristics
+fontstyle	text.h	/^                int fontstyle = FONTSTYLE_NORMAL;$/;"	m	struct:neon::draw::Text::Text_characteristics
+fontsize	text.h	/^                unsigned int fontsize = 20;$/;"	m	struct:neon::draw::Text::Text_characteristics
+fonthinting	text.h	/^                Text::Font_hinting fonthinting = Text::Font_hinting::None;$/;"	m	struct:neon::draw::Text::Text_characteristics
+font	text.h	/^                Font font;$/;"	m	struct:neon::draw::Text::Text_characteristics
+Text	text.h	/^            Text(){}$/;"	f	class:neon::draw::Text
+Text	text.h	/^            Text(Font font);$/;"	p	class:neon::draw::Text
+Get_render_mode	text.h	/^            Render_mode Get_render_mode() const {$/;"	f	class:neon::draw::Text
+Set_render_mode	text.h	/^            void Set_render_mode(Render_mode rendermode) {$/;"	f	class:neon::draw::Text
+Get_string	text.h	/^            std::string Get_string() const {$/;"	f	class:neon::draw::Text
+Set_string	text.h	/^            void Set_string(const std::string string) {$/;"	f	class:neon::draw::Text
+Get_text_color	text.h	/^            Color Get_text_color() const {$/;"	f	class:neon::draw::Text
+Set_text_color	text.h	/^            void Set_text_color(const Color textcolor) {$/;"	f	class:neon::draw::Text
+Get_background_color	text.h	/^            Color Get_background_color() const {$/;"	f	class:neon::draw::Text
+Set_background_color	text.h	/^            void Set_background_color(const Color backgroundcolor) {$/;"	f	class:neon::draw::Text
+Get_font_outline_width	text.h	/^            int Get_font_outline_width() const{$/;"	f	class:neon::draw::Text
+Set_font_outline_width	text.h	/^            void Set_font_outline_width(const int width){$/;"	f	class:neon::draw::Text
+Set_kerning_status	text.h	/^            void Set_kerning_status(const bool kerningon){$/;"	f	class:neon::draw::Text
+Get_kerning_status	text.h	/^            bool Get_kerning_status(){$/;"	f	class:neon::draw::Text
+Get_font_style	text.h	/^            int Get_font_style() const {$/;"	f	class:neon::draw::Text
+Set_font_style	text.h	/^            void Set_font_style(const int fontstyle) {$/;"	f	class:neon::draw::Text
+Get_font_size	text.h	/^            unsigned int Get_font_size() const {$/;"	f	class:neon::draw::Text
+Set_font_size	text.h	/^            void Set_font_size(const unsigned int fontsize) {$/;"	f	class:neon::draw::Text
+Get_font_hinting	text.h	/^            int Get_font_hinting() const{$/;"	f	class:neon::draw::Text
+Set_font_hinting	text.h	/^            void Set_font_hinting(Font *font, const int hinting){$/;"	f	class:neon::draw::Text
+Get_font_hinting	text.h	/^            Font_hinting Get_font_hinting(){$/;"	f	class:neon::draw::Text
+Set_font_hinting	text.h	/^            void Set_font_hinting(Font_hinting fonthinting = Font_hinting::None) {$/;"	f	class:neon::draw::Text
+Set_font	text.h	/^            void Set_font(Font font);$/;"	p	class:neon::draw::Text
+Force_pre_render_of_text	text.h	/^            void Force_pre_render_of_text(){$/;"	f	class:neon::draw::Text
+override	text.h	/^            bool Draw()override;$/;"	m	class:neon::draw::Text
+Is_ready_to_be_drawn	text.h	/^            bool Is_ready_to_be_drawn() const {$/;"	f	class:neon::draw::Text
+Set_is_ready_to_be_drawn	text.h	/^            void Set_is_ready_to_be_drawn(bool isreadytobedrawn = false) {$/;"	f	class:neon::draw::Text
+Is_ready_for_pre_rendering	text.h	/^            bool Is_ready_for_pre_rendering() const {$/;"	f	class:neon::draw::Text
+Is_font_created	text.h	/^            bool Is_font_created() const {$/;"	f	class:neon::draw::Text
+Set_is_font_created	text.h	/^            void Set_is_font_created(bool isfontcreated = false) {$/;"	f	class:neon::draw::Text
+Get_internal_font	text.h	/^            Font Get_internal_font() const {$/;"	f	class:neon::draw::Text
+Set_internal_font	text.h	/^            void Set_internal_font(Font font){$/;"	f	class:neon::draw::Text
+Get_past_font_size	text.h	/^            unsigned int Get_past_font_size() const {$/;"	f	class:neon::draw::Text
+Set_past_font_size	text.h	/^            void Set_past_font_size(unsigned int pastfontsize = 20) {$/;"	f	class:neon::draw::Text
+Convert_Color_to_SDL_Color	text.h	/^            SDL_Color Convert_Color_to_SDL_Color(Color color){$/;"	f	class:neon::draw::Text
+Get_text_surface	text.h	/^            SDL_Surface *Get_text_surface() const {$/;"	f	class:neon::draw::Text
+Set_text_surface	text.h	/^            void Set_text_surface(SDL_Surface* textsurface) {$/;"	f	class:neon::draw::Text
+Get_text_rendered	text.h	/^            SDL_Texture *Get_text_rendered() const {$/;"	f	class:neon::draw::Text
+Set_text_rendered	text.h	/^            void Set_text_rendered(SDL_Texture *textrendered) {$/;"	f	class:neon::draw::Text
+Is_surface_copied	text.h	/^            bool Is_surface_copied() const {$/;"	f	class:neon::draw::Text
+Set_is_surface_copied	text.h	/^            void Set_is_surface_copied(bool issurfacecopied = false) {$/;"	f	class:neon::draw::Text
+Set_rect_to_draw	text.h	/^            void Set_rect_to_draw(int x, int y, int width, int height) {$/;"	f	class:neon::draw::Text
+Pre_render_text	text.h	/^            void Pre_render_text();$/;"	p	class:neon::draw::Text
+Pre_render	text.h	/^            void Pre_render();$/;"	p	class:neon::draw::Text
+m_isfontcreated	text.h	/^            bool m_isfontcreated = false;$/;"	m	class:neon::draw::Text
+m_isreadytobedrawn	text.h	/^            bool m_isreadytobedrawn = false;$/;"	m	class:neon::draw::Text
+m_isreadyforprerendering	text.h	/^            bool m_isreadyforprerendering = false;$/;"	m	class:neon::draw::Text
+m_issurfacecopied	text.h	/^            bool m_issurfacecopied = false;$/;"	m	class:neon::draw::Text
+m_string	text.h	/^            std::string m_string;$/;"	m	class:neon::draw::Text
+m_fontsize	text.h	/^            unsigned int m_fontsize = 20;$/;"	m	class:neon::draw::Text
+m_pastfontsize	text.h	/^            unsigned int m_pastfontsize = 0;$/;"	m	class:neon::draw::Text
+m_textcolor	text.h	/^            Color m_textcolor;$/;"	m	class:neon::draw::Text
+m_backgroundcolor	text.h	/^            Color m_backgroundcolor;$/;"	m	class:neon::draw::Text
+m_textsurface	text.h	/^            SDL_Surface *m_textsurface;$/;"	m	class:neon::draw::Text
+m_textrendered	text.h	/^            SDL_Texture *m_textrendered;$/;"	m	class:neon::draw::Text
+m_recttodraw	text.h	/^            neon::draw::Rect2d_int m_recttodraw;$/;"	m	class:neon::draw::Text
+m_font	text.h	/^            Font m_font;$/;"	m	class:neon::draw::Text
+m_rendermode	text.h	/^            Render_mode m_rendermode = Render_mode::Solid;$/;"	m	class:neon::draw::Text
+m_fonthinting	text.h	/^            Font_hinting m_fonthinting = Font_hinting::None;$/;"	m	class:neon::draw::Text
+m_fontstyle	text.h	/^            int m_fontstyle = FONTSTYLE_NORMAL;$/;"	m	class:neon::draw::Text
+neon	text.cpp	/^namespace neon {$/;"	n	file:
+draw	text.cpp	/^    namespace draw {$/;"	n	namespace:neon	file:
+Pre_render_text	text.cpp	/^        void Text::Pre_render_text(){$/;"	f	class:neon::draw::Text
+Pre_render	text.cpp	/^        void Text::Pre_render(){$/;"	f	class:neon::draw::Text
+Text	text.cpp	/^        Text::Text(Font font) {$/;"	f	class:neon::draw::Text
+Set_font	text.cpp	/^        void Text::Set_font(Font font){$/;"	f	class:neon::draw::Text
+Draw	text.cpp	/^        bool Text::Draw(){$/;"	f	class:neon::draw::Text
+neon	color.cpp	/^namespace neon {$/;"	n	file:
+draw	color.cpp	/^    namespace draw {$/;"	n	namespace:neon	file:
+Color	color.cpp	/^        Color::Color() : Color(0,0,0,255){}$/;"	f	class:neon::draw::Color
+Color	color.cpp	/^        Color::Color(unsigned int red, unsigned int green, unsigned int blue, unsigned int alpha){$/;"	f	class:neon::draw::Color
+operator ==	color.cpp	/^        bool operator ==(const Color left, const Color right){$/;"	f	namespace:neon::draw
+operator !=	color.cpp	/^        bool operator !=(const Color left, const Color right){$/;"	f	namespace:neon::draw
+operator +	color.cpp	/^        Color operator +(const Color left, const Color right){$/;"	f	namespace:neon::draw
+operator -	color.cpp	/^        Color operator -(const Color left, const Color right){$/;"	f	namespace:neon::draw
+operator +=	color.cpp	/^        Color operator +=(Color left, Color right){$/;"	f	namespace:neon::draw
+operator -=	color.cpp	/^        Color operator -=(Color left, Color right){$/;"	f	namespace:neon::draw
+NEONDRAW_RECT2D_H_	rect2d.h	20;"	d
+neon	rect2d.h	/^namespace neon {$/;"	n
+draw	rect2d.h	/^    namespace draw {$/;"	n	namespace:neon
+Rect2d	rect2d.h	/^        class Rect2d {$/;"	c	namespace:neon::draw
+Rect2d	rect2d.h	/^            Rect2d() : Rect2d(0,0,0,0) {}$/;"	f	class:neon::draw::Rect2d
+Rect2d	rect2d.h	/^            Rect2d(const T X, const T Y, const T Width, const T Height){$/;"	f	class:neon::draw::Rect2d
+Rect2d	rect2d.h	/^            Rect2d(const Vector2d<T> position, const Vector2d<T> size){$/;"	f	class:neon::draw::Rect2d
+Get_position	rect2d.h	/^            neon::draw::Vector2d<T> Get_position(){$/;"	f	class:neon::draw::Rect2d
+Get_size	rect2d.h	/^            neon::draw::Vector2d<T> Get_size(){$/;"	f	class:neon::draw::Rect2d
+Has_collided_with_rect	rect2d.h	/^            bool Has_collided_with_rect(neon::draw::Rect2d<T> rect){$/;"	f	class:neon::draw::Rect2d
+Has_mouse_collided	rect2d.h	/^            bool Has_mouse_collided(){$/;"	f	class:neon::draw::Rect2d
+x	rect2d.h	/^            T x; \/\/\/< x coordinate$/;"	m	class:neon::draw::Rect2d
+y	rect2d.h	/^            T y; \/\/\/< y coordinate$/;"	m	class:neon::draw::Rect2d
+width	rect2d.h	/^            T width; \/\/\/< width of rectangle$/;"	m	class:neon::draw::Rect2d
+height	rect2d.h	/^            T height; \/\/\/< height of rectangle$/;"	m	class:neon::draw::Rect2d
+operator +	rect2d.h	/^        Rect2d<T> operator +(Rect2d<T> left,Rect2d<T> right){$/;"	f	namespace:neon::draw
+Rect2d_int	rect2d.h	/^        typedef Rect2d<int> Rect2d_int;$/;"	t	namespace:neon::draw
+Rect2d_uint	rect2d.h	/^        typedef Rect2d<unsigned int> Rect2d_uint;$/;"	t	namespace:neon::draw
+Rect2d_float	rect2d.h	/^        typedef Rect2d<float> Rect2d_float;$/;"	t	namespace:neon::draw

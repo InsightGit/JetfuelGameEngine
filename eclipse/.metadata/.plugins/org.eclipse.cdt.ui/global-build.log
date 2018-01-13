@@ -1,0 +1,36 @@
+15:57:13 **** Incremental Build of configuration Debug for project Jetfuel Python API ****
+make all 
+Building file: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -I"/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src" -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/ctypeswrappers/jetfueldrawctypes.d" -MT"src/ctypeswrappers/jetfueldrawctypes.o" -o "src/ctypeswrappers/jetfueldrawctypes.o" "/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp"
+In file included from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcore.h:24:0,
+                 from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfueldraw.h:22,
+                 from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp:22:
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcore/messagebus.h: In member function ‘SDL_Event jetfuel::core::Message_bus::Get_SDL_event(int)’:
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcore/messagebus.h:140:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_SDL_events_size()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcore/messagebus.h: In member function ‘std::__cxx11::string jetfuel::core::Message_bus::Get_message(int) const’:
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcore/messagebus.h:186:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(m_messages.size() <= whichqueuedmessage){
+                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcore.h:25:0,
+                 from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfueldraw.h:22,
+                 from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp:22:
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcore/timer.h: In member function ‘bool jetfuel::core::Timer::Start()’:
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcore/timer.h:80:32: warning: NULL used in arithmetic [-Wpointer-arith]
+                 if(m_duration==NULL || m_inuse){
+                                ^~~~
+In file included from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfueldraw.h:26:0,
+                 from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp:22:
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfueldraw/sprite.h: In member function ‘void jetfuel::draw::Sprite::Force_load_dynamic_image()’:
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfueldraw/sprite.h:108:41: warning: taking address of temporary [-fpermissive]
+      &m_dynamicimage.Get_image_location() != nullptr){
+                                         ^
+Finished building: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp
+ 
+Building target: libJetfuel Python API.so
+Invoking: GCC C++ Linker
+g++ -L"/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/eclipse/Jetfuel Game Engine/Debug" -shared -o "libJetfuel Python API.so"  ./src/ctypeswrappers/jetfuelcontrolctypes.o ./src/ctypeswrappers/jetfuelcorectypes.o ./src/ctypeswrappers/jetfueldrawctypes.o ./src/ctypeswrappers/jetfuelguictypes.o ./src/ctypeswrappers/jetfuelinspirectypes.o ./src/ctypeswrappers/jetfuellocalectypes.o ./src/ctypeswrappers/jetfuelmediactypes.o  ./src/stringconversions.o   -lJetfuel\ Game\ Engine -lSDL2 -lSDL2_mixer -lSDL2_image -lSDL2_ttf
+Finished building target: libJetfuel Python API.so
+ 

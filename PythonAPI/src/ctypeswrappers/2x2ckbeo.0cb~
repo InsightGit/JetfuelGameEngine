@@ -1,0 +1,114 @@
+/*
+ *   Project Neon- A moddable 2D RPG game engine
+ *   Copyright (C) 2017 InfernoStudios
+ *
+ *  Project Neon is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Project Neon is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Project Neon.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include <jetfuelgui.h>
+
+#include "../stringconversions.h"
+
+#include "../jetfuelcontrol/uisinputactionsreplacement.h"
+#include "../jetfueldraw/textcharacteristicsreplacement.h"
+#include "../jetfueldraw/rectangle2dshapecharacteristicsreplacement.h"
+#include "../jetfueldraw/circle2dshapecharacteristicsreplacement.h"
+#include "../jetfuelgui/buttoncharacteristicsreplacement.h"
+
+#if defined(_MSC_VER)
+	#define EXPORT __declspec(dllexport)
+#else
+	#define EXPORT 
+#endif
+
+extern "C" {
+	// jetfuel::gui::Button wrappers
+
+    EXPORT jetfuel::gui::Button *Button_new(){
+        return new jetfuel::gui::Button();
+    }
+
+	EXPORT void Button_load_base_button_image(jetfuel::gui::Button *button,
+                                       jetfuel::draw::Image *buttonbaseimage){
+        button->Dynamic_load_base_button_image(*buttonbaseimage);
+    }
+
+	EXPORT void Button_set_button_color(jetfuel::gui::Button *button,
+                                 jetfuel::draw::Color *color){
+        button->Set_button_color(*color);
+    }
+
+	EXPORT void Button_set_button_text_characteristics(jetfuel::gui::Button *button,
+          jetfuel::draw::Text_characteristics_replacement *textcharsreplacement){
+        button->Set_button_text_characteristics(
+                textcharsreplacement->Convert_to_text_chars_struct());
+    }
+
+	EXPORT void Button_set_clicked_message(jetfuel::gui::Button *button,
+                                    wchar_t *clickedmessage,
+                                    jetfuel::core::Message_bus *messagebus){
+        button->Set_clicked_message(
+			String_conversions::Convert_wide_char_to_narrow_char(clickedmessage), 
+																	messagebus);
+    }
+
+	EXPORT void Button_set_UIS_action_to_watch(jetfuel::gui::Button *button,
+                                        wchar_t *uisaction){
+        button->Set_UIS_action_to_watch(
+			String_conversions::Convert_wide_char_to_narrow_char(uisaction));
+    }
+
+	EXPORT int Button_get_position_x(jetfuel::gui::Button *button){
+        return button->Get_position().x;
+    }
+
+	EXPORT int Button_get_position_y(jetfuel::gui::Button *button){
+        return button->Get_position().y;
+    }
+
+	EXPORT void Button_set_position(jetfuel::gui::Button *button, int x, int y){
+        button->Set_position(jetfuel::draw::Vector2d_int(x,y));
+    }
+
+    // jetfuel::gui::Check_box wrappers
+
+	EXPORT jetfuel::gui::Check_box *Check_box_new(){
+        return new jetfuel::gui::Check_box();
+    }
+
+	EXPORT void Check_box_load_check_box_images(
+										jetfuel::gui::Check_box *checkbox,
+                                         jetfuel::draw::Image *activeimage,
+                                         jetfuel::draw::Image *disabledimage){
+        checkbox->Dynamic_load_check_box_images(*activeimage, *disabledimage);
+    }
+
+	EXPORT bool Check_box_is_checked(jetfuel::gui::Check_box *checkbox){
+        return checkbox->Is_checked();
+    }
+
+	EXPORT int Check_box_get_position_x(jetfuel::gui::Check_box *checkbox){
+        return checkbox->Get_position().x;
+    }
+
+	EXPORT int Check_box_get_position_y(jetfuel::gui::Check_box *checkbox){
+        return checkbox->Get_position().y;
+    }
+
+	EXPORT void Check_box_set_position(jetfuel::gui::Check_box *checkbox, int x, 
+										int y){
+        checkbox->Set_position(jetfuel::draw::Vector2d_int(x,y));
+    }
+
+	EXPORT jetfuel::draw::Text_chharacterist

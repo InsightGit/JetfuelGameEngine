@@ -1,0 +1,217 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/eclipse/.metadata/.plugins/org.eclipse.core.resources/.projects/Jetfuel Game Engine/com.python.pydev.analysis/v2_indexcache
+jetfuel.control.uisinputactionsreplacement|1510455763287062000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/control/uisinputactionsreplacement.py
+jetfuel.core.messagebus|1510458200988342000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/core/messagebus.py
+jetfuel.draw.circle2dshapecharacteristicsreplacement|1510458231567613000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/circle2dshapecharacteristicsreplacement.py
+displaydrawables|1515368110617142000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/displaydrawables.py
+jetfuel.media.sound_effect|1510458448216460000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/media/sound_effect.py
+jetfuel.draw.font|1510458258053198000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/font.py
+jetfuel.draw.rectangleinterface|1510458849036357000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/rectangleinterface.py
+jetfuel.locale.__init__|1508368837506896000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/locale/__init__.py
+jetfuel.gui.slider|1510458397394379000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/gui/slider.py
+jetfuel.locale.stringlocalefile|1509929037133593000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/locale/stringlocalefile.py
+playsfx|1510458612447377000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/playsfx.py
+jetfuel.__init__|1510458455957700000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/__init__.py
+jetfuel.draw.color|1510458246471114000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/color.py
+jetfuel.locale.localestring|1508372851868926000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/locale/localestring.py
+jetfuel.gui.dropdownbox|1510458380889686000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/gui/dropdownbox.py
+jetfuel.jetfuelsoloader|1510458468726523000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/jetfuelsoloader.py
+jetfuel.draw.circle2dshape|1510458223032946000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/circle2dshape.py
+jetfuel.gui.__init__|1510458342813809000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/gui/__init__.py
+jetfuel.draw.drawable|1510458251187955000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/drawable.py
+jetfuel.draw.rectangle2dshapecharacteristicsreplacement|1510458295315458000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/rectangle2dshapecharacteristicsreplacement.py
+backgroundhandler|1510540433689591000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/backgroundhandler.py
+jetfuel.inspire.__init__|1510458406856753000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/inspire/__init__.py
+jetfuel.gui.progressbar|1510458391143187000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/gui/progressbar.py
+jetfuel.draw.textchars|1510363446690124000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/textchars.py
+messagebustest|1510458623919707000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/messagebustest.py
+jetfuel.draw.sprite|1510458316745638000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/sprite.py
+jetfuel.draw.scenemanager|1510458310641993000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/scenemanager.py
+jetfuel.draw.textcharacteristicsreplacement|1510458327554299000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/textcharacteristicsreplacement.py
+jetfuel.gui.menu|1510458386138729000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/gui/menu.py
+jetfuel.draw.text|1510458321928628000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/text.py
+jetfuel.inspire.pointerbridge|1510458420211302000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/inspire/pointerbridge.py
+playmusic|1510458618305688000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/playmusic.py
+jetfuel.locale.stringlocalemanager|1508374281754157000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/locale/stringlocalemanager.py
+jetfuel.gui.buttoncharacteristicsreplacement|1510458369458253000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/gui/buttoncharacteristicsreplacement.py
+jetfuel.media.__init__|1510458428965811000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/media/__init__.py
+jetfuel.draw.__init__|1510458214024550000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/__init__.py
+jetfuel.control.__init__|1510455755220969000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/control/__init__.py
+jetfuel.media.music|1510458442454723000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/media/music.py
+jetfuel.draw.image|1510458267724175000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/image.py
+jetfuel.gui.checkbox|1510458375265218000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/gui/checkbox.py
+jetfuel.draw.rectangle2dshape|1510458281856960000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/rectangle2dshape.py
+jetfuel.core.__init__|1510458188323452000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/core/__init__.py
+jetfuel.gui.button|1510458354821221000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/gui/button.py
+jetfuel.draw.circleinterface|1510458238530920000|/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts/jetfuel/draw/circleinterface.py
+-- END DISKCACHE
+-- START DICTIONARY
+96
+5=jetfuel.draw.circle2dshapecharacteristicsreplacement
+17=jetfuel.core.messagebus
+36=jetfuel.control.uisinputactionsreplacement
+56=slider
+8=displaydrawables
+28=jetfuel.media.sound_effect
+11=jetfuel.draw.font
+27=jetfuel.gui.slider
+30=jetfuel.locale.stringlocalefile
+7=jetfuel.draw.color
+43=textchars
+76=pointer_bridge.__init__
+9=jetfuel.draw.drawable
+89=menu.__init__
+38=music
+32=messagebustest
+35=jetfuel.draw.textchars
+45=text
+59=locale_string
+75=button_characteristics_replacement.__init__
+88=check_box.__init__
+53=image
+26=jetfuel.draw.scenemanager
+67=string_locale_manager.__init__
+77=drawable
+50=circle_2d_shape_characteristics_replacement
+82=button.__init__
+94=rectangle_interface
+20=playmusic
+31=jetfuel.locale.stringlocalemanager
+41=message_bus
+95=circle_interface
+3=jetfuel.gui.checkbox
+13=jetfuel.draw.image
+46=rectangle_2d_shape_characteristics_replacement
+37=sound_effect
+79=progress_bar.__init__
+2=jetfuel.gui.button
+86=rectangle_2d_shape.__init__
+4=jetfuel.draw.circleinterface
+25=jetfuel.draw.rectangleinterface
+57=color
+19=playsfx
+65=image.__init__
+15=jetfuel.locale.localestring
+73=drop_down_box.__init__
+47=scene_manager
+92=locale_string.__init__
+51=progress_bar
+68=sound_effect.__init__
+90=string_locale_file.__init__
+10=jetfuel.gui.dropdownbox
+14=jetfuel.jetfuelsoloader
+6=jetfuel.draw.circle2dshape
+49=button
+60=jetfuelsoloader
+24=jetfuel.draw.rectangle2dshapecharacteristicsreplacement
+54=check_box
+12=backgroundhandler
+93=progress_bar.set_progress_bar
+22=jetfuel.gui.progressbar
+70=message_bus.__init__
+78=slider.__init__
+48=sprite
+74=text.__init__
+29=jetfuel.draw.sprite
+42=uis_input_actions_replacement
+64=string_locale_manager
+72=uis_input_actions_replacement.__init__
+55=circle_2d_shape
+52=rectangle_2d_shape
+81=text_characteristics_replacement.__init__
+62=pointer_bridge
+33=jetfuel.draw.textcharacteristicsreplacement
+71=rectangle_2d_shape_characteristics_replacement.__init__
+91=circle_2d_shape_characteristics_replacement.__init__
+16=jetfuel.gui.menu
+34=jetfuel.draw.text
+80=color.__init__
+21=jetfuel.inspire.pointerbridge
+85=textchars.__init__
+58=menu
+1=jetfuel.gui.buttoncharacteristicsreplacement
+66=font.__init__
+63=drop_down_box
+18=jetfuel.media.music
+69=music.__init__
+84=circle_2d_shape.__init__
+44=string_locale_file
+83=scene_manager.__init__
+96=jetfuelsoloader.__init__
+23=jetfuel.draw.rectangle2dshape
+39=text_characteristics_replacement
+87=sprite.__init__
+61=button_characteristics_replacement
+40=font
+-- END DICTIONARY
+-- START TREE 1
+27
+but|2|button_characteristics_replacement!9@button!17@
+che|1|check_box!25@
+cir|3|circle_interface!33@circle_2d_shape_characteristics_replacement!41@circle_2d_shape!49@
+col|1|color!57@
+cre|6|create_check_box!66@create_drop_down_box!66@create_menu!66@create_slider!66@create_quit_button!66@create_progress_bar!66@
+dra|2|drawabledisplay!66@drawable!73@
+dro|1|drop_down_box!81@
+fon|1|font!89@
+get|1|getlocation!98@
+ima|1|image!105@
+jet|1|jetfuelsoloader!113@
+loc|1|locale_string!121@
+men|1|menu!129@
+mes|1|message_bus!137@
+mus|1|music!145@
+pla|2|playsfx!154@playmusic!162@
+poi|1|pointer_bridge!169@
+pro|1|progress_bar!177@
+rec|3|rectangle_2d_shape!185@rectangle_2d_shape_characteristics_replacement!193@rectangle_interface!201@
+sce|1|scene_manager!209@
+sli|1|slider!217@
+sou|1|sound_effect!225@
+spr|1|sprite!233@
+str|2|string_locale_file!241@string_locale_manager!249@
+tes|1|testmessagebus!258@
+tex|3|text_characteristics_replacement!265@text!273@textchars!281@
+uis|1|uis_input_actions_replacement!289@
+-- END TREE
+-- START TREE 2
+37
+__e|4|__enter__!37&226@__enter__!38&146@__exit__!37&226@__exit__!38&146@
+__i|28|__init__!39&266@__init__!37&226@__init__!40&90@__init__!41&138@__init__!42&290@__init__!43&282@__init__!44&242@__init__!45&274@__init__!46&194@__init__!47&210@__init__!48&234@__init__!49&18@__init__!50&42@__init__!51&178@__init__!52&186@__init__!53&106@__init__!54&26@__init__!55&50@__init__!56&218@__init__!57&58@__init__!58&130@__init__!59&122@__init__!60&114@__init__!61&10@__init__!38&146@__init__!62&170@__init__!63&82@__init__!64&250@
+_je|46|_jetfuel!53&107@_jetfuel!65&107@_jetfuel!40&91@_jetfuel!66&91@_jetfuel!64&251@_jetfuel!67&251@_jetfuel!37&227@_jetfuel!68&227@_jetfuel!38&147@_jetfuel!69&147@_jetfuel!41&139@_jetfuel!70&139@_jetfuel!46&195@_jetfuel!71&195@_jetfuel!42&291@_jetfuel!72&291@_jetfuel!73&83@_jetfuel!74&275@_jetfuel!61&11@_jetfuel!75&11@_jetfuel!62&171@_jetfuel!76&171@_jetfuel!77&75@_jetfuel!78&219@_jetfuel!79&179@_jetfuel!57&59@_jetfuel!80&59@_jetfuel!39&267@_jetfuel!81&267@_jetfuel!82&19@_jetfuel!47&211@_jetfuel!83&211@_jetfuel!84&51@_jetfuel!43&283@_jetfuel!85&283@_jetfuel!86&187@_jetfuel!87&235@_jetfuel!54&27@_jetfuel!88&27@_jetfuel!89&131@_jetfuel!44&243@_jetfuel!90&243@_jetfuel!50&43@_jetfuel!91&43@_jetfuel!59&123@_jetfuel!92&123@
+_mu|2|_musicref!38&147@_musicref!69&147@
+_po|2|_pointerbridgeref!62&171@_pointerbridgeref!76&171@
+_so|2|_soundeffectref!37&227@_soundeffectref!68&227@
+_st|2|_stringlocalemanagerref!64&251@_stringlocalemanagerref!67&251@
+add|2|add_option!63&82@add_button!58&130@
+att|1|attach_drawable!47&210@
+but|2|buttoncharsref!61&11@buttoncharsref!75&11@
+cir|2|circle2dshapecharsref!50&43@circle2dshapecharsref!91&43@
+col|2|colorref!57&59@colorref!80&59@
+del|7|delete_ref!61&10@delete_ref!77&74@delete_ref!53&106@delete_ref!43&282@delete_ref!40&90@delete_ref!39&266@delete_ref!57&58@
+dis|2|disable_drawable!47&210@disable_drawing_outline_color!52&186@
+doe|1|does_message_exist!41&138@
+dra|13|drawableref!82&19@drawableref!86&187@drawableref!87&235@draw!77&74@drawableref!77&75@drawableref!74&275@drawableref!73&83@drawableref!89&131@drawableref!84&51@drawableref!79&179@drawableref!93&179@drawableref!88&27@drawableref!78&219@
+fon|2|fontref!40&91@fontref!66&91@
+get|130|get_red_color!57&58@get_size_width!94&202@get_blue_color!57&58@get_position_x!46&194@get_kerning_status!45&274@get_green_color!57&58@get_font_kerning_status!43&282@get_option_text_characteristics!63&82@get_position_y!46&194@get_font_style!45&274@get_outline_color!52&186@get_font_hinting!45&274@get_font_outline_width!39&266@get_sound_effect_error!37&226@get_filled_ciricle_status!50&42@get_message_to_send_upon_click!42&290@get_fill_color!46&194@get_string_from_id!64&250@get_size_width!46&194@get_background_color!39&266@get_checkbox_rect_to_draw_width!54&26@get_string_locale_file_name!44&242@get_container_box_border_height!58&130@get_file_name!40&90@get_font_size!39&266@get_position_x!63&82@get_radius!95&34@get_text_color!43&282@get_size_height!56&218@get_current_status!56&218@get_checkbox_rect_to_draw_y!54&26@get_font!39&266@get_locale_string!59&122@get_position_x!49&18@get_image_size_y!53&106@get_active_option!63&82@get_text_chars!61&10@get_position_y!49&18@get_times_to_repeat!37&226@get_aa_status!50&42@get_image_size_x!53&106@get_image_location!53&106@get_rect_to_draw_width!58&130@get_max_height!58&130@get_position_y!51&178@get_button_gap!58&130@get_position_x!51&178@get_active_string_locale_file!64&250@get_touch_message_to_watch!42&290@get_position_y!55&50@get_container_box_border_width!58&130@get_size_width!51&178@get_size_width!52&186@get_font_size!45&274@get_font_style!43&282@get_position_x!50&42@get_position_x!55&50@get_position_y!50&42@get_size_height!52&186@get_slider_rail_characteristics!56&218@get_alpha_layer!57&58@get_column_gap!58&130@get_font!43&282@get_text_render_mode!45&274@get_checkbox_rect_to_draw_height!54&26@get_font_kerning_status!39&266@get_progress_bar_progress!51&178@get_position_x!77&74@get_rect_to_draw_width!63&82@get_background_color!45&274@get_font_size!43&282@get_position_x!54&26@get_sdl_error!38&146@get_slider_button_characteristics!56&218@get_string!45&274@get_number_of_statuses!56&218@get_font_outline_width!43&282@get_position_y!54&26@get_size_height!51&178@get_font_hinting!39&266@get_face_index!40&90@get_string_locale_file_locale_name!44&242@get_position_y!58&130@get_rect_to_draw_height!58&130@get_text_string!39&266@get_locale_string_vector_size!44&242@get_font_style!39&266@get_position_y!52&186@get_outline_color!46&194@get_locale_string_id!59&122@get_size_height!94&202@get_locale_string_vector_element!44&242@get_joystick_message_to_watch!42&290@get_filled_circle_status!55&50@get_position_x!52&186@get_label_characteristics!54&26@get_control_scheme!56&218@get_render_mode!39&266@get_position_x!58&130@get_uis_action_to_listen_for!63&82@get_font_outline_width!45&274@get_max_progress_bar!51&178@get_size_width!56&218@get_render_mode!43&282@get_container_box_image!58&130@get_text_color!39&266@get_color!61&10@get_position_y!63&82@get_text_string!43&282@get_checkbox_rect_to_draw_x!54&26@get_rect_to_draw_height!63&82@get_size_height!46&194@get_sdl_error!60&114@get_color!55&50@get_text_color!45&274@get_loaded_sound_effect_file!37&226@get_position_x!56&218@get_keyboard_message_to_watch!42&290@get_color!50&42@get_background_color!43&282@get_position_y!56&218@get_fill_color!52&186@get_message_bus_to_send_message_to!42&290@get_anti_aliasing_status!55&50@get_image!61&10@get_mouse_message_to_watch!42&290@get_font_hinting!43&282@get_position_y!77&74@get_radius!50&42@get_active_locale!64&250@
+has|1|has_progress_bar_completed!51&178@
+ima|2|imageref!53&107@imageref!65&107@
+is_|6|is_locale_file_set!44&242@is_sound_effect_or_music_playing!37&226@is_music_playing!38&146@is_checked!54&26@is_font_loaded!40&90@is_music_paused!38&146@
+jet|2|jetfuelso!60&115@jetfuelso!96&115@
+loa|9|load_string_locale_file!44&242@load_font!40&90@load_string_locale_file!64&250@load_audio_file!38&146@load_audio_file!37&226@load_from_image!48&234@load_base_box_image!63&82@load_base_button_image!49&18@load_check_box_images!54&26@
+loc|2|localestringref!59&123@localestringref!92&123@
+mes|2|messagebusref!41&139@messagebusref!70&139@
+pau|2|pause!37&226@pause!38&146@
+pla|2|play!37&226@play!38&146@
+pos|1|post_message!41&138@
+pri|1|print_debug!38&146@
+rec|3|recieve_pointer!62&170@rect2dshapecharsref!46&195@rect2dshapecharsref!71&195@
+res|2|resume!38&146@resume!37&226@
+sce|2|scenemanagerref!47&211@scenemanagerref!83&211@
+sen|1|send_pointer!62&170@
+set|90|set_keyboard_message_to_watch!42&290@set_font_style!43&282@set_progress_bar_progress!51&178@set_position!51&178@set_slider_button_characteristics!56&218@set_position!52&186@set_font_hinting!43&282@set_fill_color!46&194@set_render_mode!39&266@set_message_bus_to_send_message_to!42&290@set_text_string!43&282@set_image_location!53&106@set_max_height!58&130@set_string!45&274@set_font_style!45&274@set_text_string!39&266@set_outline_color!52&186@set_current_status!56&218@set_position!63&82@set_text_render_mode!45&274@set_button_color!49&18@set_blue_color!57&58@set_color!61&10@set_font_kerning_status!43&282@set_anti_aliasing_status!55&50@set_joystick_message_to_watch!42&290@set_render_mode!43&282@set_alpha_layer!57&58@set_position!49&18@set_font_size!45&274@set_font_hinting!39&266@set_text_chars!61&10@set_button_text_characteristics!49&18@set_position!58&130@set_aa_status!50&42@set_font_style!39&266@set_radius!50&42@set_clicked_message!49&18@set_image!61&10@set_slider_rail_characteristics!56&218@set_option_text_characteristics!63&82@set_fill_color!52&186@set_radius!55&50@set_label_characteristics!54&26@set_locale_string_id!59&122@set_touch_message_to_watch!42&290@set_position!54&26@set_outline_color!46&194@set_mouse_message_to_watch!42&290@set_font_outline_width!45&274@set_position!46&194@set_filled_circle_status!50&42@set_kerning_status!45&274@set_control_scheme!56&218@set_locale_string!59&122@set_color!50&42@set_times_to_repeat!37&226@set_background_color!43&282@set_filled_circle_status!55&50@set_background_color!39&266@set_text_color!43&282@set_progress_bar!51&178@set_text_color!39&266@set_number_of_statuses!56&218@set_red_color!57&58@set_size!52&186@set_font_outline_width!39&266@set_font_size!43&282@set_green_color!57&58@set_font_size!39&266@set_container_box_image!58&130@set_uis_action_to_watch!54&26@set_font_hinting!45&274@set_background_color!45&274@set_column_gap!58&130@set_font_outline_width!43&282@set_position!50&42@set_message_to_send_upon_click!42&290@set_text_color!45&274@set_font!43&282@set_position!56&218@set_active_locale!64&250@set_button_gap!58&130@set_color!55&50@set_font_kerning_status!39&266@set_uis_action_to_watch!49&18@set_size!46&194@set_font!45&274@set_position!77&74@set_uis_action_to_listen_for!63&82@
+str|2|stringlocalefileref!44&243@stringlocalefileref!90&243@
+tex|4|textcharsref!43&283@textcharsref!85&283@textcharsreplacementref!39&267@textcharsreplacementref!81&267@
+uis|2|uisinputactionsref!42&291@uisinputactionsref!72&291@
+-- END TREE

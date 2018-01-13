@@ -1,0 +1,293 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2017 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#ifndef JETFUELGUI_MENU_H_
+#define JETFUELGUI_MENU_H_
+#include <jetfuelgui/button.h>
+
+namespace jetfuel {
+    namespace gui {
+        class Menu : public jetfuel::draw::Drawable,
+                     public jetfuel::draw::Rectangle_interface,
+                     public IClickable {
+        public:
+
+            struct Button_characteristics{
+                jetfuel::draw::Image image;
+
+                jetfuel::draw::Color color;
+
+                jetfuel::draw::Text::Text_characteristics buttontextchars;
+            };
+            /// \struct jetfuel::gui::Menu::Button_characteristics
+            ///
+            /// A simple struct with the characteristics of a
+            /// jetfuel::gui::Button.
+
+            /// \brief Default constructor.
+            ///
+            /// Default constructor.
+            Menu(){}
+
+            /// \brief Constructs a Menu with a max height, column gap,
+            /// and button gap numbers.
+            ///
+            /// Constructs a Menu with a max height, column gap,
+            /// and button gap numbers.
+            Menu(const unsigned int maxheight,
+                 const unsigned int columngap,
+                 const unsigned int buttongap){
+                m_maxheight = maxheight;
+                m_columngap = columngap;
+                m_buttongap = buttongap;
+            }
+
+            /// \brief Gets this Menu's max height for it's buttons.
+            ///
+            /// Gets this Menu's max height for it's buttons.
+            unsigned int Get_max_height() const{
+                return m_maxheight;
+            }
+
+            /// \brief Sets this Menu's max height for it's buttons.
+            ///
+            /// Sets this Menu's max height for it's buttons.
+            ///
+            /// \param unsigned int maxheight
+            void Set_max_height(const unsigned int maxheight){
+                m_maxheight = maxheight;
+            }
+
+            /// \brief Gets this Menu's column gap for it's buttons.
+            ///
+            /// Gets this Menu's column gap for it's buttons.
+            unsigned int Get_column_gap() const {
+                return m_columngap;
+            }
+
+            /// \brief Sets this Menu's column gap for it's buttons.
+            ///
+            /// Sets this Menu's column gap for it's buttons.
+            ///
+            /// \param unsigned int columngap
+            void Set_column_gap(const unsigned int columngap) {
+                m_columngap = columngap;
+            }
+
+            /// \brief Sets this Menu's column gap for it's buttons.
+            ///
+            /// Sets this Menu's column gap for it's buttons.
+            ///
+            /// \param unsigned int columngap
+            unsigned int Get_button_gap() const {
+                return m_buttongap;
+            }
+
+            void Set_button_gap(const unsigned int buttongap) {
+                m_buttongap = buttongap;
+            }
+
+            jetfuel::draw::Image Get_container_box_image() const {
+                return m_containerboximage;
+            }
+
+            void Set_container_box_image(const jetfuel::draw::Image
+                                      containerboximage,
+                                      const jetfuel::draw::Vector2d_uint
+                                      containerboxborder) {
+                m_containerboximage = containerboximage;
+                m_containerboxborder = containerboxborder;
+                m_usecontainerboxes = true;
+
+                Create_container_boxes();
+
+                m_buttons.clear();
+            }
+
+            jetfuel::draw::Vector2d_uint Get_container_box_border() const{
+                return m_containerboxborder;
+            }
+
+            bool Add_button(Button_characteristics buttonchars,
+                            const std::string UISactiontowatchfor,
+                            const std::string messagetosenduponclick,
+                            jetfuel::core::Message_bus *bus,
+                            bool dynamicallyloadimage = false);
+
+            void Assign_renderer(SDL_Renderer *renderer)override{
+                for(int i = 0; Get_size_of_container_boxes_vector() > i; ++i){
+                    Get_box_in_container_boxes_vector(i)->Assign_renderer(
+                                                               renderer);
+                }
+
+                for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                    Get_button_in_buttons_vector(i)->Assign_renderer(renderer);
+                }
+
+                m_internalrenderer = renderer;
+
+                Set_assigned_renderer(true);
+            }
+
+            SDL_Renderer *Get_renderer()override {
+                return m_internalrenderer;
+            }
+
+            jetfuel::draw::Vector2d_int Get_position()override{
+                return m_internalposition;
+            }
+
+            void Set_position(jetfuel::draw::Vector2d_int position)override{
+
+                const jetfuel::draw::Vector2d_int difference = Get_position()
+                                                               -position;
+
+                for(int i = 0; Get_size_of_container_boxes_vector() > i; ++i){
+                    Get_box_in_container_boxes_vector(i)->
+                               Set_position(Get_position()-difference);
+                }
+
+                for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                    Get_button_in_buttons_vector(i)->
+                    Set_position(Get_position()-difference);
+                }
+
+                m_internalposition = position;
+            }
+
+            jetfuel::draw::Rect2d_int Get_rect_to_draw()override{
+                int width;
+                int height = m_maxheight;
+
+                if(Use_container_boxes()){
+                    height = m_containerboxes[0].Get_rect_to_draw().height;
+                    for(int i = 0; Get_size_of_container_boxes_vector() > i;
+                        ++i){
+                        if(i != 0){
+                            width += m_columngap;
+                        }
+                        width += m_containerboxes[i].Get_rect_to_draw().width;
+                    }
+                }else{
+                    for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                        if(i != 0){
+                            width += m_columngap;
+                        }
+                        width += m_buttons[i].Get_rect_to_draw().width;
+                    }
+                }
+                return jetfuel::draw::Rect2d_int(Get_position(),
+                                              jetfuel::draw::Vector2d_int(width,
+                                                                       height));
+            }
+
+            void Check_for_clicks(jetfuel::control::Action
+                                  UISinterpreterdata)override;
+
+            bool Draw()override;
+        protected:
+            unsigned int Get_size_of_buttons_vector() const{
+                return m_buttons.size();
+            }
+
+            Button *Get_button_in_buttons_vector(const
+                                                 size_t whichbutton){
+                if(whichbutton >= m_buttons.size()){
+                    throw jetfuel::core::exceptions::
+                          Out_of_vector_range_exception();
+                }else{
+                    return &m_buttons[whichbutton];
+                }
+            }
+
+            bool Use_container_boxes() const {
+                return m_usecontainerboxes;
+            }
+
+            size_t Get_size_of_container_boxes_vector() const{
+                return m_containerboxes.size();
+            }
+
+            jetfuel::draw::Sprite *Get_box_in_container_boxes_vector(const
+                                                                 size_t
+                                                                 whichbox){
+                if(whichbox >= m_containerboxes.size()){
+                    throw jetfuel::core::exceptions::
+                          Out_of_vector_range_exception();
+                }else{
+                    return &m_containerboxes[whichbox];
+                }
+            }
+
+            bool Does_container_box_exist_inside_vector(const
+                                                     jetfuel::draw::Vector2d_int
+                                                        withwhatposition){
+                for(int i = 0;Get_size_of_container_boxes_vector() > i; ++i){
+                    if(withwhatposition ==
+                       Get_box_in_container_boxes_vector(i)->Get_position()){
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            jetfuel::draw::Image Get_button_image_in_vector(int whichimage) const{
+                if(whichimage >= m_buttonimages.size()){
+                    throw jetfuel::core::exceptions::
+                          Out_of_vector_range_exception();
+                }else{
+                    return m_buttonimages[whichimage];
+                }
+            }
+
+            void Push_back_into_button_image_vector(jetfuel::draw::Image image){
+                m_buttonimages.push_back(image);
+            }
+
+            void Push_back_container_box(jetfuel::draw::Sprite box){
+                m_containerboxes.push_back(box);
+            }
+
+            void Create_container_box(jetfuel::draw::Vector2d_int position);
+
+            jetfuel::draw::Vector2d_int Determine_button_position(unsigned int
+                                                               whichbutton);
+        private:
+            unsigned int m_maxheight = 500;
+            unsigned int m_columngap = 100;
+            unsigned int m_buttongap = 0;
+
+            SDL_Renderer *m_internalrenderer;
+
+            jetfuel::draw::Vector2d_uint m_containerboxborder =
+            jetfuel::draw::Vector2d_uint(100,100);
+            jetfuel::draw::Vector2d_int m_internalposition;
+            bool m_usecontainerboxes = false;
+
+            jetfuel::draw::Image m_containerboximage;
+
+            std::vector<jetfuel::draw::Sprite> m_containerboxes;
+            std::vector<Button> m_buttons;
+            std::vector<jetfuel::draw::Image> m_buttonimages;
+
+            void Create_container_boxes();
+        };
+
+    } /* namespace gui */
+} /* namespace jetfuel */
+
+#endif /* JETFUELGUI_MENU_H_ */

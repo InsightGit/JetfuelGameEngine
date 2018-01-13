@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C58E4A9520006C4200A01558 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58E4A9420006C4200A01558 /* SDL2_ttf.framework */; };
+		C58E4A9720006CBB00A01558 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58E4A9620006CBB00A01558 /* SDL2_mixer.framework */; };
+		C58E4A9920006CE000A01558 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58E4A9820006CE000A01558 /* SDL2_image.framework */; };
+		C58E4A9B20006FCD00A01558 /* libxg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C58E4A9A20006FCD00A01558 /* libxg.a */; };
+		C5ACA9A31FBA8BC500093157 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ACA9A21FBA8BC500093157 /* SDL2.framework */; };
+		C5ACA9B21FBA8C9900093157 /* UISinterpreter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9AE1FBA8C9900093157 /* UISinterpreter.cpp */; };
+		C5ACA9B31FBA8C9900093157 /* UISmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9B01FBA8C9900093157 /* UISmanager.cpp */; };
+		C5ACA9B91FBA8CF900093157 /* messagebus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9B61FBA8CF900093157 /* messagebus.cpp */; };
+		C5ACA9D41FBA8D3500093157 /* circle2dshape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9BD1FBA8D3500093157 /* circle2dshape.cpp */; };
+		C5ACA9D51FBA8D3500093157 /* color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9C01FBA8D3500093157 /* color.cpp */; };
+		C5ACA9D61FBA8D3500093157 /* font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9C31FBA8D3500093157 /* font.cpp */; };
+		C5ACA9D71FBA8D3500093157 /* image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9C51FBA8D3500093157 /* image.cpp */; };
+		C5ACA9D81FBA8D3500093157 /* rectangle2dshape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9C81FBA8D3500093157 /* rectangle2dshape.cpp */; };
+		C5ACA9D91FBA8D3500093157 /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9CB1FBA8D3500093157 /* scene.cpp */; };
+		C5ACA9DA1FBA8D3500093157 /* scenemanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9CD1FBA8D3500093157 /* scenemanager.cpp */; };
+		C5ACA9DB1FBA8D3500093157 /* sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9CF1FBA8D3500093157 /* sprite.cpp */; };
+		C5ACA9DC1FBA8D3500093157 /* text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9D11FBA8D3500093157 /* text.cpp */; };
+		C5ACA9EB1FBA8DA200093157 /* button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9DE1FBA8DA200093157 /* button.cpp */; };
+		C5ACA9EC1FBA8DA200093157 /* checkbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9E01FBA8DA200093157 /* checkbox.cpp */; };
+		C5ACA9ED1FBA8DA300093157 /* dropdownbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9E21FBA8DA200093157 /* dropdownbox.cpp */; };
+		C5ACA9EE1FBA8DA300093157 /* menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9E51FBA8DA200093157 /* menu.cpp */; };
+		C5ACA9EF1FBA8DA300093157 /* progressbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9E71FBA8DA200093157 /* progressbar.cpp */; };
+		C5ACA9F01FBA8DA300093157 /* slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9E91FBA8DA200093157 /* slider.cpp */; };
+		C5ACA9F71FBA8DF700093157 /* pythonclassloader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9F31FBA8DF700093157 /* pythonclassloader.cpp */; };
+		C5ACA9F81FBA8DF700093157 /* pythonmoduleloader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9F51FBA8DF700093157 /* pythonmoduleloader.cpp */; };
+		C5ACA9FD1FBA8E4400093157 /* stringlocalefile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9FA1FBA8E4400093157 /* stringlocalefile.cpp */; };
+		C5ACAA041FBA8E8B00093157 /* music.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACA9FF1FBA8E8B00093157 /* music.cpp */; };
+		C5ACAA051FBA8E8B00093157 /* soundeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5ACAA021FBA8E8B00093157 /* soundeffect.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C5ACA9951FBA860000093157 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C54F572E20007B9500F753E2 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = ../macosdependencies/Python.framework; sourceTree = "<group>"; };
+		C54F573020007C2E00F753E2 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = ../../../../../../../Library/Frameworks/Python.framework; sourceTree = "<group>"; };
+		C58E4A9420006C4200A01558 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = "../macosdependencies/SDL2_ttf-2.0.14/SDL2_ttf.framework"; sourceTree = "<group>"; };
+		C58E4A9620006CBB00A01558 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = "../macosdependencies/SDL2_mixer-2.0.2/SDL2_mixer.framework"; sourceTree = "<group>"; };
+		C58E4A9820006CE000A01558 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = "../macosdependencies/SDL2_image-2.0.2/SDL2_image.framework"; sourceTree = "<group>"; };
+		C58E4A9A20006FCD00A01558 /* libxg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxg.a; path = "../macosdependencies/crossguid-0.2.2/build/Debug/libxg.a"; sourceTree = "<group>"; };
+		C5ACA9971FBA860000093157 /* Jetfuel Game Engine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Jetfuel Game Engine"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5ACA9A21FBA8BC500093157 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = "../macosdependencies/SDL2-2.0.7/Xcode/SDL/build/SDL2.framework"; sourceTree = "<group>"; };
+		C5ACA9A51FBA8C2B00093157 /* jetfuellocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jetfuellocale.h; path = ../../../src/jetfuellocale.h; sourceTree = "<group>"; };
+		C5ACA9A61FBA8C2B00093157 /* jetfuelmedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jetfuelmedia.h; path = ../../../src/jetfuelmedia.h; sourceTree = "<group>"; };
+		C5ACA9A71FBA8C5E00093157 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../../src/config.h; sourceTree = "<group>"; };
+		C5ACA9A81FBA8C5E00093157 /* jetfuelcontrol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jetfuelcontrol.h; path = ../../../src/jetfuelcontrol.h; sourceTree = "<group>"; };
+		C5ACA9A91FBA8C5E00093157 /* jetfuelcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jetfuelcore.h; path = ../../../src/jetfuelcore.h; sourceTree = "<group>"; };
+		C5ACA9AA1FBA8C5E00093157 /* jetfueldraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jetfueldraw.h; path = ../../../src/jetfueldraw.h; sourceTree = "<group>"; };
+		C5ACA9AB1FBA8C5E00093157 /* jetfuelgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jetfuelgui.h; path = ../../../src/jetfuelgui.h; sourceTree = "<group>"; };
+		C5ACA9AC1FBA8C5E00093157 /* jetfuelinspire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jetfuelinspire.h; path = ../../../src/jetfuelinspire.h; sourceTree = "<group>"; };
+		C5ACA9AE1FBA8C9900093157 /* UISinterpreter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UISinterpreter.cpp; path = ../../../src/jetfuelcontrol/UISinterpreter.cpp; sourceTree = "<group>"; };
+		C5ACA9AF1FBA8C9900093157 /* UISinterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UISinterpreter.h; path = ../../../src/jetfuelcontrol/UISinterpreter.h; sourceTree = "<group>"; };
+		C5ACA9B01FBA8C9900093157 /* UISmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UISmanager.cpp; path = ../../../src/jetfuelcontrol/UISmanager.cpp; sourceTree = "<group>"; };
+		C5ACA9B11FBA8C9900093157 /* UISmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UISmanager.h; path = ../../../src/jetfuelcontrol/UISmanager.h; sourceTree = "<group>"; };
+		C5ACA9B61FBA8CF900093157 /* messagebus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = messagebus.cpp; path = ../../../src/jetfuelcore/messagebus.cpp; sourceTree = "<group>"; };
+		C5ACA9B71FBA8CF900093157 /* messagebus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messagebus.h; path = ../../../src/jetfuelcore/messagebus.h; sourceTree = "<group>"; };
+		C5ACA9B81FBA8CF900093157 /* timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timer.h; path = ../../../src/jetfuelcore/timer.h; sourceTree = "<group>"; };
+		C5ACA9BB1FBA8D3500093157 /* circle2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = circle2d.h; path = ../../../src/jetfueldraw/circle2d.h; sourceTree = "<group>"; };
+		C5ACA9BC1FBA8D3500093157 /* circle2d.tpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = circle2d.tpp; path = ../../../src/jetfueldraw/circle2d.tpp; sourceTree = "<group>"; };
+		C5ACA9BD1FBA8D3500093157 /* circle2dshape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = circle2dshape.cpp; path = ../../../src/jetfueldraw/circle2dshape.cpp; sourceTree = "<group>"; };
+		C5ACA9BE1FBA8D3500093157 /* circle2dshape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = circle2dshape.h; path = ../../../src/jetfueldraw/circle2dshape.h; sourceTree = "<group>"; };
+		C5ACA9BF1FBA8D3500093157 /* circleinterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = circleinterface.h; path = ../../../src/jetfueldraw/circleinterface.h; sourceTree = "<group>"; };
+		C5ACA9C01FBA8D3500093157 /* color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = color.cpp; path = ../../../src/jetfueldraw/color.cpp; sourceTree = "<group>"; };
+		C5ACA9C11FBA8D3500093157 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = color.h; path = ../../../src/jetfueldraw/color.h; sourceTree = "<group>"; };
+		C5ACA9C21FBA8D3500093157 /* drawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = drawable.h; path = ../../../src/jetfueldraw/drawable.h; sourceTree = "<group>"; };
+		C5ACA9C31FBA8D3500093157 /* font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = font.cpp; path = ../../../src/jetfueldraw/font.cpp; sourceTree = "<group>"; };
+		C5ACA9C41FBA8D3500093157 /* font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = font.h; path = ../../../src/jetfueldraw/font.h; sourceTree = "<group>"; };
+		C5ACA9C51FBA8D3500093157 /* image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = image.cpp; path = ../../../src/jetfueldraw/image.cpp; sourceTree = "<group>"; };
+		C5ACA9C61FBA8D3500093157 /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = image.h; path = ../../../src/jetfueldraw/image.h; sourceTree = "<group>"; };
+		C5ACA9C71FBA8D3500093157 /* rect2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rect2d.h; path = ../../../src/jetfueldraw/rect2d.h; sourceTree = "<group>"; };
+		C5ACA9C81FBA8D3500093157 /* rectangle2dshape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rectangle2dshape.cpp; path = ../../../src/jetfueldraw/rectangle2dshape.cpp; sourceTree = "<group>"; };
+		C5ACA9C91FBA8D3500093157 /* rectangle2dshape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rectangle2dshape.h; path = ../../../src/jetfueldraw/rectangle2dshape.h; sourceTree = "<group>"; };
+		C5ACA9CA1FBA8D3500093157 /* rectangleinterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rectangleinterface.h; path = ../../../src/jetfueldraw/rectangleinterface.h; sourceTree = "<group>"; };
+		C5ACA9CB1FBA8D3500093157 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scene.cpp; path = ../../../src/jetfueldraw/scene.cpp; sourceTree = "<group>"; };
+		C5ACA9CC1FBA8D3500093157 /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scene.h; path = ../../../src/jetfueldraw/scene.h; sourceTree = "<group>"; };
+		C5ACA9CD1FBA8D3500093157 /* scenemanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scenemanager.cpp; path = ../../../src/jetfueldraw/scenemanager.cpp; sourceTree = "<group>"; };
+		C5ACA9CE1FBA8D3500093157 /* scenemanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scenemanager.h; path = ../../../src/jetfueldraw/scenemanager.h; sourceTree = "<group>"; };
+		C5ACA9CF1FBA8D3500093157 /* sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sprite.cpp; path = ../../../src/jetfueldraw/sprite.cpp; sourceTree = "<group>"; };
+		C5ACA9D01FBA8D3500093157 /* sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sprite.h; path = ../../../src/jetfueldraw/sprite.h; sourceTree = "<group>"; };
+		C5ACA9D11FBA8D3500093157 /* text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = text.cpp; path = ../../../src/jetfueldraw/text.cpp; sourceTree = "<group>"; };
+		C5ACA9D21FBA8D3500093157 /* text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = text.h; path = ../../../src/jetfueldraw/text.h; sourceTree = "<group>"; };
+		C5ACA9D31FBA8D3500093157 /* vector2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vector2d.h; path = ../../../src/jetfueldraw/vector2d.h; sourceTree = "<group>"; };
+		C5ACA9DE1FBA8DA200093157 /* button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = button.cpp; path = ../../../src/jetfuelgui/button.cpp; sourceTree = "<group>"; };
+		C5ACA9DF1FBA8DA200093157 /* button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = button.h; path = ../../../src/jetfuelgui/button.h; sourceTree = "<group>"; };
+		C5ACA9E01FBA8DA200093157 /* checkbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = checkbox.cpp; path = ../../../src/jetfuelgui/checkbox.cpp; sourceTree = "<group>"; };
+		C5ACA9E11FBA8DA200093157 /* checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = checkbox.h; path = ../../../src/jetfuelgui/checkbox.h; sourceTree = "<group>"; };
+		C5ACA9E21FBA8DA200093157 /* dropdownbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dropdownbox.cpp; path = ../../../src/jetfuelgui/dropdownbox.cpp; sourceTree = "<group>"; };
+		C5ACA9E31FBA8DA200093157 /* dropdownbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dropdownbox.h; path = ../../../src/jetfuelgui/dropdownbox.h; sourceTree = "<group>"; };
+		C5ACA9E41FBA8DA200093157 /* iclickable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iclickable.h; path = ../../../src/jetfuelgui/iclickable.h; sourceTree = "<group>"; };
+		C5ACA9E51FBA8DA200093157 /* menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = menu.cpp; path = ../../../src/jetfuelgui/menu.cpp; sourceTree = "<group>"; };
+		C5ACA9E61FBA8DA200093157 /* menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = menu.h; path = ../../../src/jetfuelgui/menu.h; sourceTree = "<group>"; };
+		C5ACA9E71FBA8DA200093157 /* progressbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = progressbar.cpp; path = ../../../src/jetfuelgui/progressbar.cpp; sourceTree = "<group>"; };
+		C5ACA9E81FBA8DA200093157 /* progressbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = progressbar.h; path = ../../../src/jetfuelgui/progressbar.h; sourceTree = "<group>"; };
+		C5ACA9E91FBA8DA200093157 /* slider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slider.cpp; path = ../../../src/jetfuelgui/slider.cpp; sourceTree = "<group>"; };
+		C5ACA9EA1FBA8DA200093157 /* slider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slider.h; path = ../../../src/jetfuelgui/slider.h; sourceTree = "<group>"; };
+		C5ACA9F21FBA8DF700093157 /* pointerbridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pointerbridge.h; path = ../../../src/jetfuelinspire/pointerbridge.h; sourceTree = "<group>"; };
+		C5ACA9F31FBA8DF700093157 /* pythonclassloader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pythonclassloader.cpp; path = ../../../src/jetfuelinspire/pythonclassloader.cpp; sourceTree = "<group>"; };
+		C5ACA9F41FBA8DF700093157 /* pythonclassloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pythonclassloader.h; path = ../../../src/jetfuelinspire/pythonclassloader.h; sourceTree = "<group>"; };
+		C5ACA9F51FBA8DF700093157 /* pythonmoduleloader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pythonmoduleloader.cpp; path = ../../../src/jetfuelinspire/pythonmoduleloader.cpp; sourceTree = "<group>"; };
+		C5ACA9F61FBA8DF700093157 /* pythonmoduleloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pythonmoduleloader.h; path = ../../../src/jetfuelinspire/pythonmoduleloader.h; sourceTree = "<group>"; };
+		C5ACA9FA1FBA8E4400093157 /* stringlocalefile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stringlocalefile.cpp; path = ../../../src/jetfuellocale/stringlocalefile.cpp; sourceTree = "<group>"; };
+		C5ACA9FB1FBA8E4400093157 /* stringlocalefile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stringlocalefile.h; path = ../../../src/jetfuellocale/stringlocalefile.h; sourceTree = "<group>"; };
+		C5ACA9FC1FBA8E4400093157 /* stringlocalemanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stringlocalemanager.h; path = ../../../src/jetfuellocale/stringlocalemanager.h; sourceTree = "<group>"; };
+		C5ACA9FF1FBA8E8B00093157 /* music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = music.cpp; path = ../../../src/jetfuelmedia/music.cpp; sourceTree = "<group>"; };
+		C5ACAA001FBA8E8B00093157 /* music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = music.h; path = ../../../src/jetfuelmedia/music.h; sourceTree = "<group>"; };
+		C5ACAA011FBA8E8B00093157 /* sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sound.h; path = ../../../src/jetfuelmedia/sound.h; sourceTree = "<group>"; };
+		C5ACAA021FBA8E8B00093157 /* soundeffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = soundeffect.cpp; path = ../../../src/jetfuelmedia/soundeffect.cpp; sourceTree = "<group>"; };
+		C5ACAA031FBA8E8B00093157 /* soundeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = soundeffect.h; path = ../../../src/jetfuelmedia/soundeffect.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5ACA9941FBA860000093157 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58E4A9B20006FCD00A01558 /* libxg.a in Frameworks */,
+				C58E4A9920006CE000A01558 /* SDL2_image.framework in Frameworks */,
+				C58E4A9720006CBB00A01558 /* SDL2_mixer.framework in Frameworks */,
+				C58E4A9520006C4200A01558 /* SDL2_ttf.framework in Frameworks */,
+				C5ACA9A31FBA8BC500093157 /* SDL2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5ACA98E1FBA860000093157 = {
+			isa = PBXGroup;
+			children = (
+				C5ACA9991FBA860000093157 /* Jetfuel Game Engine */,
+				C5ACA9981FBA860000093157 /* Products */,
+				C5ACA9A11FBA8BC500093157 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C5ACA9981FBA860000093157 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACA9971FBA860000093157 /* Jetfuel Game Engine */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5ACA9991FBA860000093157 /* Jetfuel Game Engine */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACA9AD1FBA8C7300093157 /* jetfuelcontrol */,
+				C5ACA9B41FBA8C9F00093157 /* jetfuelcore */,
+				C5ACA9BA1FBA8D0700093157 /* jetfueldraw */,
+				C5ACA9DD1FBA8D8200093157 /* jetfuelgui */,
+				C5ACA9F11FBA8DB000093157 /* jetfuelinspire */,
+				C5ACA9F91FBA8E0D00093157 /* jetfuellocale */,
+				C5ACA9FE1FBA8E4E00093157 /* jetfuelmedia */,
+				C5ACA9A71FBA8C5E00093157 /* config.h */,
+				C5ACA9A81FBA8C5E00093157 /* jetfuelcontrol.h */,
+				C5ACA9A91FBA8C5E00093157 /* jetfuelcore.h */,
+				C5ACA9AA1FBA8C5E00093157 /* jetfueldraw.h */,
+				C5ACA9AB1FBA8C5E00093157 /* jetfuelgui.h */,
+				C5ACA9AC1FBA8C5E00093157 /* jetfuelinspire.h */,
+				C5ACA9A51FBA8C2B00093157 /* jetfuellocale.h */,
+				C5ACA9A61FBA8C2B00093157 /* jetfuelmedia.h */,
+			);
+			path = "Jetfuel Game Engine";
+			sourceTree = "<group>";
+		};
+		C5ACA9A11FBA8BC500093157 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C54F573020007C2E00F753E2 /* Python.framework */,
+				C54F572E20007B9500F753E2 /* Python.framework */,
+				C58E4A9A20006FCD00A01558 /* libxg.a */,
+				C58E4A9820006CE000A01558 /* SDL2_image.framework */,
+				C58E4A9620006CBB00A01558 /* SDL2_mixer.framework */,
+				C58E4A9420006C4200A01558 /* SDL2_ttf.framework */,
+				C5ACA9A21FBA8BC500093157 /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5ACA9AD1FBA8C7300093157 /* jetfuelcontrol */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACA9AE1FBA8C9900093157 /* UISinterpreter.cpp */,
+				C5ACA9AF1FBA8C9900093157 /* UISinterpreter.h */,
+				C5ACA9B01FBA8C9900093157 /* UISmanager.cpp */,
+				C5ACA9B11FBA8C9900093157 /* UISmanager.h */,
+			);
+			name = jetfuelcontrol;
+			sourceTree = "<group>";
+		};
+		C5ACA9B41FBA8C9F00093157 /* jetfuelcore */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACA9B61FBA8CF900093157 /* messagebus.cpp */,
+				C5ACA9B71FBA8CF900093157 /* messagebus.h */,
+				C5ACA9B81FBA8CF900093157 /* timer.h */,
+			);
+			name = jetfuelcore;
+			sourceTree = "<group>";
+		};
+		C5ACA9BA1FBA8D0700093157 /* jetfueldraw */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACA9BB1FBA8D3500093157 /* circle2d.h */,
+				C5ACA9BC1FBA8D3500093157 /* circle2d.tpp */,
+				C5ACA9BD1FBA8D3500093157 /* circle2dshape.cpp */,
+				C5ACA9BE1FBA8D3500093157 /* circle2dshape.h */,
+				C5ACA9BF1FBA8D3500093157 /* circleinterface.h */,
+				C5ACA9C01FBA8D3500093157 /* color.cpp */,
+				C5ACA9C11FBA8D3500093157 /* color.h */,
+				C5ACA9C21FBA8D3500093157 /* drawable.h */,
+				C5ACA9C31FBA8D3500093157 /* font.cpp */,
+				C5ACA9C41FBA8D3500093157 /* font.h */,
+				C5ACA9C51FBA8D3500093157 /* image.cpp */,
+				C5ACA9C61FBA8D3500093157 /* image.h */,
+				C5ACA9C71FBA8D3500093157 /* rect2d.h */,
+				C5ACA9C81FBA8D3500093157 /* rectangle2dshape.cpp */,
+				C5ACA9C91FBA8D3500093157 /* rectangle2dshape.h */,
+				C5ACA9CA1FBA8D3500093157 /* rectangleinterface.h */,
+				C5ACA9CB1FBA8D3500093157 /* scene.cpp */,
+				C5ACA9CC1FBA8D3500093157 /* scene.h */,
+				C5ACA9CD1FBA8D3500093157 /* scenemanager.cpp */,
+				C5ACA9CE1FBA8D3500093157 /* scenemanager.h */,
+				C5ACA9CF1FBA8D3500093157 /* sprite.cpp */,
+				C5ACA9D01FBA8D3500093157 /* sprite.h */,
+				C5ACA9D11FBA8D3500093157 /* text.cpp */,
+				C5ACA9D21FBA8D3500093157 /* text.h */,
+				C5ACA9D31FBA8D3500093157 /* vector2d.h */,
+			);
+			name = jetfueldraw;
+			sourceTree = "<group>";
+		};
+		C5ACA9DD1FBA8D8200093157 /* jetfuelgui */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACA9DE1FBA8DA200093157 /* button.cpp */,
+				C5ACA9DF1FBA8DA200093157 /* button.h */,
+				C5ACA9E01FBA8DA200093157 /* checkbox.cpp */,
+				C5ACA9E11FBA8DA200093157 /* checkbox.h */,
+				C5ACA9E21FBA8DA200093157 /* dropdownbox.cpp */,
+				C5ACA9E31FBA8DA200093157 /* dropdownbox.h */,
+				C5ACA9E41FBA8DA200093157 /* iclickable.h */,
+				C5ACA9E51FBA8DA200093157 /* menu.cpp */,
+				C5ACA9E61FBA8DA200093157 /* menu.h */,
+				C5ACA9E71FBA8DA200093157 /* progressbar.cpp */,
+				C5ACA9E81FBA8DA200093157 /* progressbar.h */,
+				C5ACA9E91FBA8DA200093157 /* slider.cpp */,
+				C5ACA9EA1FBA8DA200093157 /* slider.h */,
+			);
+			name = jetfuelgui;
+			sourceTree = "<group>";
+		};
+		C5ACA9F11FBA8DB000093157 /* jetfuelinspire */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACA9F21FBA8DF700093157 /* pointerbridge.h */,
+				C5ACA9F31FBA8DF700093157 /* pythonclassloader.cpp */,
+				C5ACA9F41FBA8DF700093157 /* pythonclassloader.h */,
+				C5ACA9F51FBA8DF700093157 /* pythonmoduleloader.cpp */,
+				C5ACA9F61FBA8DF700093157 /* pythonmoduleloader.h */,
+			);
+			name = jetfuelinspire;
+			sourceTree = "<group>";
+		};
+		C5ACA9F91FBA8E0D00093157 /* jetfuellocale */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACA9FA1FBA8E4400093157 /* stringlocalefile.cpp */,
+				C5ACA9FB1FBA8E4400093157 /* stringlocalefile.h */,
+				C5ACA9FC1FBA8E4400093157 /* stringlocalemanager.h */,
+			);
+			name = jetfuellocale;
+			sourceTree = "<group>";
+		};
+		C5ACA9FE1FBA8E4E00093157 /* jetfuelmedia */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACA9FF1FBA8E8B00093157 /* music.cpp */,
+				C5ACAA001FBA8E8B00093157 /* music.h */,
+				C5ACAA011FBA8E8B00093157 /* sound.h */,
+				C5ACAA021FBA8E8B00093157 /* soundeffect.cpp */,
+				C5ACAA031FBA8E8B00093157 /* soundeffect.h */,
+			);
+			name = jetfuelmedia;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5ACA9961FBA860000093157 /* Jetfuel Game Engine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5ACA99E1FBA860000093157 /* Build configuration list for PBXNativeTarget "Jetfuel Game Engine" */;
+			buildPhases = (
+				C5ACA9931FBA860000093157 /* Sources */,
+				C5ACA9941FBA860000093157 /* Frameworks */,
+				C5ACA9951FBA860000093157 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jetfuel Game Engine";
+			productName = "Jetfuel Game Engine";
+			productReference = C5ACA9971FBA860000093157 /* Jetfuel Game Engine */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5ACA98F1FBA860000093157 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = InfernoStudios;
+				TargetAttributes = {
+					C5ACA9961FBA860000093157 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C5ACA9921FBA860000093157 /* Build configuration list for PBXProject "Jetfuel Game Engine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C5ACA98E1FBA860000093157;
+			productRefGroup = C5ACA9981FBA860000093157 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5ACA9961FBA860000093157 /* Jetfuel Game Engine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5ACA9931FBA860000093157 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5ACA9DA1FBA8D3500093157 /* scenemanager.cpp in Sources */,
+				C5ACA9D51FBA8D3500093157 /* color.cpp in Sources */,
+				C5ACA9F81FBA8DF700093157 /* pythonmoduleloader.cpp in Sources */,
+				C5ACA9DC1FBA8D3500093157 /* text.cpp in Sources */,
+				C5ACA9D91FBA8D3500093157 /* scene.cpp in Sources */,
+				C5ACA9D81FBA8D3500093157 /* rectangle2dshape.cpp in Sources */,
+				C5ACA9EB1FBA8DA200093157 /* button.cpp in Sources */,
+				C5ACA9D71FBA8D3500093157 /* image.cpp in Sources */,
+				C5ACA9DB1FBA8D3500093157 /* sprite.cpp in Sources */,
+				C5ACA9ED1FBA8DA300093157 /* dropdownbox.cpp in Sources */,
+				C5ACA9B91FBA8CF900093157 /* messagebus.cpp in Sources */,
+				C5ACA9D61FBA8D3500093157 /* font.cpp in Sources */,
+				C5ACA9EC1FBA8DA200093157 /* checkbox.cpp in Sources */,
+				C5ACA9FD1FBA8E4400093157 /* stringlocalefile.cpp in Sources */,
+				C5ACAA051FBA8E8B00093157 /* soundeffect.cpp in Sources */,
+				C5ACA9F71FBA8DF700093157 /* pythonclassloader.cpp in Sources */,
+				C5ACA9B21FBA8C9900093157 /* UISinterpreter.cpp in Sources */,
+				C5ACA9EF1FBA8DA300093157 /* progressbar.cpp in Sources */,
+				C5ACA9B31FBA8C9900093157 /* UISmanager.cpp in Sources */,
+				C5ACA9EE1FBA8DA300093157 /* menu.cpp in Sources */,
+				C5ACA9F01FBA8DA300093157 /* slider.cpp in Sources */,
+				C5ACA9D41FBA8D3500093157 /* circle2dshape.cpp in Sources */,
+				C5ACAA041FBA8E8B00093157 /* music.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C5ACA99C1FBA860000093157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C5ACA99D1FBA860000093157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C5ACA99F1FBA860000093157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				OTHER_CFLAGS = (
+					"-I../../src",
+					"-I\"../macosdependencies/Python 3.6/include\"",
+					"-I\"../macosdependencies/SDL2-2.0.7/include\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C5ACA9A01FBA860000093157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				OTHER_CFLAGS = (
+					"-I../../src",
+					"-I\"../macosdependencies/Python 3.6/include\"",
+					"-I\"../macosdependencies/SDL2-2.0.7/include\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5ACA9921FBA860000093157 /* Build configuration list for PBXProject "Jetfuel Game Engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5ACA99C1FBA860000093157 /* Debug */,
+				C5ACA99D1FBA860000093157 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5ACA99E1FBA860000093157 /* Build configuration list for PBXNativeTarget "Jetfuel Game Engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5ACA99F1FBA860000093157 /* Debug */,
+				C5ACA9A01FBA860000093157 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5ACA98F1FBA860000093157 /* Project object */;
+}
