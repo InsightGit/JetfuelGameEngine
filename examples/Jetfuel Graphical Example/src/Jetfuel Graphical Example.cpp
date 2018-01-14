@@ -1,6 +1,6 @@
 /*
  *   Project Neon Graphical Example - An example of Project Neon, the moddable 2D RPG game engine
- *   Copyright (C) 2017 InfernoStudios
+ *   Copyright (C) 2018 InfernoStudios
  *
  *  Project Neon Graphical Example is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by

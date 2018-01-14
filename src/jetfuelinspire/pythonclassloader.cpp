@@ -1,6 +1,6 @@
 /*
 * Jetfuel Game Engine- A SDL-based 2D game-engine
-* Copyright (C) 2017 InfernoStudios
+* Copyright (C) 2018 InfernoStudios
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -19,40 +19,63 @@
 
 namespace jetfuel {
     namespace inspire {
-        void Python_class_loader::Base_execute_py_function(PyObject *pythonfunction, PyObject *args, bool *executed,
+        void Python_class_loader::Base_execute_py_function(
+													PyObject *pythonfunction, 
+														   PyObject *args, 
+														   bool *executed,
                                                            std::string *error){
-            if(pythonfunction==NULL){
-                PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
-                PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, &pythonerrortraceback);
+			// Checks that the function does not equal nullptr,
+			// tries to find the function, then marks this function as 
+			// executed if no error. Otherwise, marks it as not
+			// executed.
 
-                *error = Python_module_loader::Py_err_to_cstring(pythonerrortype,pythonerrorvalue,pythonerrortraceback);
+			PyObject *pythonerrortype;
+			PyObject *pythonerrorvalue;
+			PyObject *pythonerrortraceback;
+
+            if(pythonfunction==nullptr){
+                PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, 
+							&pythonerrortraceback);
+
+                *error = Python_module_loader::Py_err_to_cstring(pythonerrortype,
+										pythonerrorvalue,pythonerrortraceback);
                 *executed = false;
                 return;
             }
             if(!PyCallable_Check(pythonfunction)){
-                PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
-                PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, &pythonerrortraceback);
+                PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, 
+							&pythonerrortraceback);
 
                 *executed = false;
-                *error = Python_module_loader::Py_err_to_cstring(pythonerrortype,pythonerrorvalue,pythonerrortraceback);
+				*error = Python_module_loader::Py_err_to_cstring(pythonerrortype,
+					pythonerrorvalue, pythonerrortraceback);
                 return;
             }
             *executed=true;
         }
 
-        Python_class_loader::Python_class_loader(PyObject *constructorargs, std::string *filename,
-                                                std::string *classname, bool *executed, std::string *error,
-                                                std::string *directoryoffilename) {
+        Python_class_loader::Python_class_loader(PyObject *constructorargs,
+												std::string *filename, 
+												std::string *classname, 
+												bool *executed, 
+												std::string *error,
+                                              std::string *directoryoffilename) {
+			// Initialize Python, Add the python file directory to the
+			// python path, runs the function through some error 
+			// checking, then tries to call the constuctor, and checks 
+			// for any errors.
+
             Py_Initialize();
 
             Python_module_loader::Add_to_py_path(*directoryoffilename);
 
-            PyObject *pythonfile, *pythonmodule, *pythonfunction;
-            pythonfile = PyUnicode_DecodeFSDefault(filename->c_str());
-            pythonmodule = PyImport_Import(pythonfile);
-            pythonfunction = PyObject_GetAttrString(pythonmodule,classname->c_str());
+			PyObject *pythonfile = PyUnicode_DecodeFSDefault(filename->c_str());
+			PyObject *pythonmodule = PyImport_Import(pythonfile);
+			PyObject *pythonfunction = PyObject_GetAttrString(pythonmodule,
+															classname->c_str());
 
-            Base_execute_py_function(pythonfunction,constructorargs,executed,error);
+            Base_execute_py_function(pythonfunction,constructorargs,executed,
+									 error);
 
             if(!*executed){
                 return;
@@ -61,30 +84,39 @@ namespace jetfuel {
             pythonclass = PyObject_CallObject(pythonfunction,constructorargs);
 
             PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
-            PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, &pythonerrortraceback);
+            PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, 
+						&pythonerrortraceback);
 
             if(pythonerrortype==NULL){
                 *executed = true;
             }else{
-                *error = Python_module_loader::Py_err_to_cstring(pythonerrortype,pythonerrorvalue,pythonerrortraceback);
+                *error = Python_module_loader::Py_err_to_cstring(pythonerrortype,
+										pythonerrorvalue,pythonerrortraceback);
                 *executed = false;
             }
         }
 
-        Python_class_loader::Python_class_loader(Python_class pythonclasstouse
-                                                 , bool *executed,
+        Python_class_loader::Python_class_loader(Python_class pythonclasstouse,
+                                                 bool *executed,
                                                  std::string *error){
+			// Initialize Python, Add the python file directory to the
+			// python path, runs the function through some error 
+			// checking, then tries to call the constuctor, and checks 
+			// for any errors.
+
             Py_Initialize();
 
-            Python_module_loader::Add_to_py_path(pythonclasstouse.directoryoffilename);
+            Python_module_loader::Add_to_py_path(
+								pythonclasstouse.directoryoffilename);
 
-            PyObject *pythonfile, *pythonmodule, *pythonfunction;
-            pythonfile = PyUnicode_DecodeFSDefault(pythonclasstouse.filename.c_str());
-            pythonmodule = PyImport_Import(pythonfile);
-            pythonfunction = PyObject_GetAttrString(pythonmodule,
-                                                    pythonclasstouse.classname.c_str());
+			PyObject *pythonfile = PyUnicode_DecodeFSDefault(
+								pythonclasstouse.filename.c_str());
+			PyObject *pythonmodule = PyImport_Import(pythonfile);
+			PyObject *pythonfunction = PyObject_GetAttrString(pythonmodule,
+											pythonclasstouse.classname.c_str());
 
-            Base_execute_py_function(pythonfunction,pythonclasstouse.constructorargs,
+            Base_execute_py_function(pythonfunction,
+									 pythonclasstouse.constructorargs,
                                      executed,error);
 
             if(!*executed){
@@ -94,16 +126,20 @@ namespace jetfuel {
             pythonclass = PyObject_CallObject(pythonfunction,
                                               pythonclasstouse.constructorargs);
 
-            PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
+			PyObject *pythonerrortype;
+			PyObject *pythonerrorvalue;
+			PyObject *pythonerrortraceback;
+
             PyErr_Fetch(&pythonerrortype, &pythonerrorvalue,
                        &pythonerrortraceback);
 
             if(pythonerrortype==NULL){
                 *executed = true;
             }else{
-                *error = Python_module_loader::Py_err_to_cstring(pythonerrortype,
-                                                                 pythonerrorvalue,
-                                                                 pythonerrortraceback);
+                *error = Python_module_loader::Py_err_to_cstring(
+													pythonerrortype,
+                                                    pythonerrorvalue,
+                                                    pythonerrortraceback);
                 *executed = false;
             }
         }

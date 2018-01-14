@@ -1,6 +1,6 @@
 /*
 * Jetfuel Game Engine- A SDL-based 2D game-engine
-* Copyright (C) 2017 InfernoStudios
+* Copyright (C) 2018 InfernoStudios
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ namespace jetfuel {
             Input_state inputstate;
             Input_type inputtype;
         };    
-        /// jetfuel::control::Action
+        /// \struct jetfuel::control::Action
         ///
         /// An interpreted Action produced from an Universal Input
         /// System Interpreter(jetfuel::control::UIS_interpreter).
@@ -59,7 +59,7 @@ namespace jetfuel {
             std::string messagetosenduponclick;
             jetfuel::core::Message_bus *messagebustosendmessageto;
         };
-        /// jetfuel::control::UIS_input_actions
+        /// \struct jetfuel::control::UIS_input_actions
         ///
         /// A collection of messagess to watch from differing input
         /// methods, what message to send upon the message to watch
@@ -114,7 +114,7 @@ namespace jetfuel {
             ///^ interpret messages from.
         };
 
-        /// jetfuel::control::UIS_interpreter
+        /// \class jetfuel::control::UIS_interpreter
         ///
         /// An interpreter for the messages produced by the Universal
         /// Input System manager, or jetfuel::control::UIS_manager.

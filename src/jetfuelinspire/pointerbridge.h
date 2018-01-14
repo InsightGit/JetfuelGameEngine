@@ -1,6 +1,6 @@
 /*
 * Jetfuel Game Engine- A SDL-based 2D game-engine
-* Copyright (C) 2017 InfernoStudios
+* Copyright (C) 2018 InfernoStudios
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -27,8 +27,23 @@ namespace jetfuel {
     namespace inspire {
         class Pointer_bridge {
         public:
+			/// \brief Default constructor.
+			///
+			/// Default constructor.
             Pointer_bridge() {}
 
+			/// \brief Recieves a pointer sent with an id
+			/// (of the pointer) and a pointer pointing to a 
+			/// boolean variable whether the
+			/// pointer has been recieved.
+			///
+			/// Recieves a pointer sent with an id
+			/// (of the pointer) and a pointer pointing to a 
+			/// boolean variable whether the
+			/// pointer has been recieved.
+			///
+			/// \param std::string id
+			/// \param bool *found
             void *Recieve_pointer(std::string id, bool *found){
                 m_vectormutex.lock();
 
@@ -54,6 +69,14 @@ namespace jetfuel {
                 return nullptr;
             }
 
+			/// \brief Sends a pointer with an id identifying that
+			/// pointer.
+			///
+			/// Sends a pointer with an id identifying that
+			/// pointer.
+			///
+			/// \param std::string id
+			/// \param void *pointer
             void Send_pointer(std::string id, void *pointer){
                 m_vectormutex.lock();
 
@@ -63,12 +86,63 @@ namespace jetfuel {
                 m_vectormutex.unlock();
             }
         private:
-            std::mutex m_vectormutex;
+            std::mutex m_vectormutex; ///< The mutex that makes sure
+									  ///< that the pointer vector is 
+									  ///< not being written and read
+									  ///< at the same time.
 
-            std::vector<std::string> m_pointerids;
+            std::vector<std::string> m_pointerids; ///< The ids of the 
+												   ///< pointers.
 
-            std::vector<void*> m_pointers;
+            std::vector<void*> m_pointers; ///< The pointers.
         };
+		/// \class jetfuel::inspire::Pointer_bridge
+		///
+		/// A simple pointer bridge meant for sending pointers between
+		/// Python and C++ for object mainuplations.
+		///
+		/// Code Example:
+		///		
+	    /// Python(main.py):
+		///
+		/// def main(pointerbridgeref):
+		///     if(system() == "Windows"):
+		///			jetfuelpythonapiso = abspath("PythonAPI.dll");
+	    ///		else:
+		///			jetfuelpythonapiso = abspath(
+		///				"libJetfuel Game Engine Python API.so");
+		///		jetfuelso = jetfuelsoloader(jetfuelpythonapiso);
+		///     pointerbridge = pointer_bridge(jetfuelpythonapiso, 
+		///										pointerbridgeref);
+		///     found = True;
+		///		scenemanager = pointerbridge.recieve_pointer("scenemanager", 
+		///                                                  found);
+		///     if(found):
+		///			print("Got scenemanager pointer! It is:"+
+		///               hex(scenemanager.scenemanagerref));
+		///     else:
+		///			print("Could not get scenemanager pointer!");
+		///
+		///
+		///
+		/// C++:
+		///   jetfuel::draw::Scene_manager scenemanager;
+		///   jetfuel::inspire::Python_module_loader module("main.py", "main");
+		///	  jetfuel::inspire::Pointer_bridge *bridge = new 
+		///                                 jetfuel::inspire::Pointer_bridge();
+		///   std::string error;
+		///   bool executed = true;
+		///
+		///   bridge.send_pointer("scenemanager", &scenemanager);
+		///
+		///   PyObject *args = PyTuple_Pack(1, PyLong_FromLong(
+		///							reinterpret_cast<long int>(scenemanager)));
+		///
+		///	  module.Execute(&executed, &error, args);
+		///
+		///  if(!executed){
+		///		std::cout << "Python Error occured! Error was:" << error << 
+		///		std::endl;
     } /* namespace inspire */
 } /* namespace jetfuel */
 

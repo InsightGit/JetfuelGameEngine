@@ -1,6 +1,6 @@
 /*
 * Jetfuel Game Engine- A SDL-based 2D game-engine
-* Copyright (C) 2017 InfernoStudios
+* Copyright (C) 2018 InfernoStudios
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -24,6 +24,9 @@ namespace jetfuel {
                 const std::string messagetosenduponclick,
                 jetfuel::core::Message_bus* bus,
                 bool dynamicallyloadimage) {
+			// Uses arguments to create the Button and add it to the 
+			// vector.
+
             Button buttontopush;
 
             m_buttons.push_back(Button());
@@ -53,6 +56,8 @@ namespace jetfuel {
         }
 
         void Menu::Create_container_box(jetfuel::draw::Vector2d_int position){
+			// Creates a container box in it's vector and generates it.
+
             Push_back_container_box(jetfuel::draw::Sprite());
             jetfuel::draw::Sprite *box = Get_box_in_container_boxes_vector(
                                               Get_size_of_container_boxes_vector
@@ -68,6 +73,9 @@ namespace jetfuel {
 
         jetfuel::draw::Vector2d_int Menu::Determine_button_position(unsigned int
                                                                  whichbutton){
+			// Using the size of the buttons vector and whichbutton,
+			// this generates the position for the given button.
+
             jetfuel::draw::Vector2d_int returnvalue = Get_position();
 
             unsigned int height = 0;
@@ -118,6 +126,9 @@ namespace jetfuel {
         }
 
         void Menu::Create_container_boxes(){
+			// Creates the container box in the vector, then 
+			// generates it.
+
             Create_container_box(Get_position());
 
             unsigned int height = 0;
@@ -135,6 +146,15 @@ namespace jetfuel {
         }
 
         bool Menu::Draw(){
+			// Draws all the Menu container boxes(if any), and then
+			// draws the menu buttons (if any).
+
+			for (int i = 0; Get_size_of_container_boxes_vector() > i; ++i) {
+				if (!Get_box_in_container_boxes_vector(i)->Draw()) {
+					return false;
+				}
+			}
+
             for(int i = 0;Get_size_of_buttons_vector() > i; ++i){
                 if(!Get_button_in_buttons_vector(i)->Draw()){
                     return false;
@@ -148,11 +168,6 @@ namespace jetfuel {
                     != Get_button_image_in_vector(i).Get_size_of_image()){
                     Get_button_in_buttons_vector(i)->Load_base_button_image(
                                                   Get_button_image_in_vector(i));
-                }
-            }
-            for(int i = 0;Get_size_of_container_boxes_vector() > i; ++i){
-                if(!Get_box_in_container_boxes_vector(i)->Draw()){
-                    return false;
                 }
             }
 

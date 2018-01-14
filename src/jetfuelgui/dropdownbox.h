@@ -1,6 +1,6 @@
 /*
 * Jetfuel Game Engine- A SDL-based 2D game-engine
-* Copyright (C) 2017 InfernoStudios
+* Copyright (C) 2018 InfernoStudios
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -546,6 +546,7 @@ namespace jetfuel {
         ///
         ///     textchars.textstring = "hello";
         ///     textchars.font = font;
+		///    
         ///
         ///     dropdownbox.Set_option_text_characteristics(textchars);
         ///

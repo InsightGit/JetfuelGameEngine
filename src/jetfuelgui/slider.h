@@ -1,6 +1,6 @@
 /*
 * Jetfuel Game Engine- A SDL-based 2D game-engine
-* Copyright (C) 2017 InfernoStudios
+* Copyright (C) 2018 InfernoStudios
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -29,16 +29,33 @@ namespace jetfuel{
         class Slider : public jetfuel::draw::Drawable, public IClickable,
                        public jetfuel::draw::Rectangle_interface{
         public:
+			/// \brief Default constructor.
+			///
+			/// Default constructor.
             Slider(){}
 
+			/// \brief Gets the slider rail's rectangular 
+			/// characteristics.
+			///
+			/// Gets the slider rail's rectangular 
+			/// characteristics.
             jetfuel::draw::Rectangle_2d_shape::
             Rectangle_2d_shape_characteristics
             Get_slider_rail_characteristics() const{
                 return m_sliderrailchars;
             }
 
-            void Set_slider_rail_characteristics(jetfuel::draw::Rectangle_2d_shape::
-                   Rectangle_2d_shape_characteristics sliderrailcharacteristics){
+			/// \brief Sets the slider rail's rectangular 
+			/// characteristics.
+			///
+			/// Sets the slider rail's rectangular 
+			/// characteristics.
+			///
+			/// \param jetfuel::draw::Rectangle_2d_shape::
+			/// Rectangle_2d_shape_characteristics sliderrailcharacteristics
+            void Set_slider_rail_characteristics(jetfuel::draw::
+				Rectangle_2d_shape::Rectangle_2d_shape_characteristics 
+				sliderrailcharacteristics){
                 m_sliderrailchars = sliderrailcharacteristics;
 
                 m_sliderrail.Set_size(m_sliderrailchars.size);
@@ -46,14 +63,27 @@ namespace jetfuel{
                 m_sliderrail.Set_outline_color(m_sliderrailchars.outlinecolor);
             }
 
-
+			/// \brief Gets the slider button's circular button 
+			/// characteristics.
+			///
+			/// Gets the slider button's circular button 
+			/// scharacteristics.
             jetfuel::draw::Circle_2d_shape::
             Circle_2d_shape_characteristics Get_slider_button_characteristics(){
                 return m_sliderbuttonchars;
             }
 
-            void Set_slider_button_characteristics(jetfuel::draw::Circle_2d_shape::
-                                  Circle_2d_shape_characteristics
+			/// \brief Sets the slider button's circular button 
+			/// characteristics.
+			///
+			/// Sets the slider button's circular button 
+			/// characteristics.
+			///
+			/// \param jetfuel::draw::Circle_2d_shape::
+			/// Circle_2d_shape_characteristics 
+			/// sliderbuttoncharacteristics
+            void Set_slider_button_characteristics(jetfuel::draw::
+				Circle_2d_shape::Circle_2d_shape_characteristics
                                   sliderbuttoncharacteristics){
                 m_sliderbuttonchars = sliderbuttoncharacteristics;
 
@@ -65,32 +95,63 @@ namespace jetfuel{
                 m_sliderbutton.Set_radius(m_sliderbuttonchars.radius);
             }
 
+			/// \brief Gets the current number of possible statuses.
+			///
+			/// Gets the current number of possible statuses.
             unsigned int Get_number_of_statuses() const{
                 return m_statusnumber;
             }
             
+			/// \brief Sets the current number of possible statuses.
+			///
+			/// Sets the current number of possible statuses.
+			///
+			/// \param unsigned int statusnumber
             void Set_number_of_statuses(const unsigned int statusnumber){
                 m_statusnumber = statusnumber;
             }
             
+			/// \brief Gets the current status of this Slider.
+			///
+			/// Gets the current status of this Slider.
             unsigned int Get_current_status() const{
                 return m_currentstatus;
             }
             
+			/// \brief Sets the current status of this Slider.
+			///
+			/// Sets the current status of this Slider. If this number
+			/// is greater than the total number of statuses, it will
+			/// be capped at that number.
+			///
+			/// \param unsigned int currentstatus
             void Set_current_status(const unsigned int currentstatus){
                 m_currentstatus = std::min<unsigned int>(m_statusnumber,
                                                         currentstatus);
             }
 
+			/// \brief Gets the current control scheme of this Slider.
+			///
+			/// Gets the current control scheme of this Slider.
             jetfuel::control::UIS_input_actions Get_control_scheme() const{
                 return m_UIScontrols;
             }
             
+			/// \brief Sets the current control scheme of this Slider.
+			///
+			/// Sets the current control scheme of this Slider.
+			///
+			/// \param jetfuel::control::UIS_input_actions
             void Set_control_scheme(jetfuel::control::UIS_input_actions 
                                     UIScontrols){
                 m_UIScontrols = UIScontrols;                       
             }
             
+			/// \brief Assigns a renderer to this Slider.
+			///
+			/// Assigns a renderer to this Slider.
+			///
+			/// \param SDL_Renderer *renderer
             void Assign_renderer(SDL_Renderer *renderer)override{
                 m_sliderrail.Assign_renderer(renderer);
                 m_sliderbutton.Assign_renderer(renderer);
@@ -98,14 +159,27 @@ namespace jetfuel{
                 Set_assigned_renderer(true);
             }
 
+			/// \brief Gets this Slider's position.
+			///
+			/// Gets this Slider's position.
             jetfuel::draw::Vector2d_int Get_position()override{
                 return m_sliderrail.Get_position();
             }
 
+			/// \brief Sets this Slider's position.
+			///
+			/// Sets this Slider's position.
+			///
+			/// \brief jetfuel::draw::Vector2d_int position
             void Set_position(jetfuel::draw::Vector2d_int position)override{
                 m_sliderrail.Set_position(position);
             }
 
+			/// \brief Gets this Slider's rect to draw when
+			/// the Draw function is called.
+			///
+			/// Gets this Slider's rect to draw when
+			/// the Draw function is called.
             jetfuel::draw::Rect2d_int Get_rect_to_draw()override{
                 return jetfuel::draw::Rect2d_int(Get_position(),
                                               jetfuel::draw::Vector2d_int(
@@ -113,15 +187,32 @@ namespace jetfuel{
                            m_sliderbutton.Get_circle_to_draw().radius*2));
             }
 
+			/// \brief Checks for clicks on this Slider.
+			///
+			/// Checks for clicks on this Slider.
+			///
+			/// \param jetfuel::control::Action UISinterpreterdata
             void Check_for_clicks(jetfuel::control::Action
                                   UISinterpreterdata)override;
             
+			/// \brief Draws this Slider onto the screen.
+			///
+			/// Draws this Slider onto the screen.
             bool Draw()override;
         protected:
+			/// \brief Sets the slider button's position.
+			///
+			/// Sets the slider button's position.
+			///
+			/// \param jetfuel::draw::Vector2d_int position
             void Set_slider_button_position(jetfuel::draw::Vector2d_int position){
                 m_sliderbutton.Set_position(position);
             }
             
+			/// \brief Draws this slider's member objects.
+			///
+			/// Draws this slider's member objects
+			/// (i.e. the slider rail, the slider button).
             bool Draw_slider_member_objects(){
                 if(!m_sliderrail.Draw()){
                     return false;
@@ -132,25 +223,88 @@ namespace jetfuel{
                 }
             }
 
+			/// \brief Gets the width of the slider rail.
+			///
+			/// Gets the width of the slider rail.
             int Get_width_of_slider_rail(){
                 return m_sliderrail.Get_size().x;
             }
         private:
-            unsigned int m_statusnumber = 1;
-            unsigned int m_currentstatus = 0;
+            unsigned int m_statusnumber = 1; ///< The number of 
+											 ///< statuses.
+            unsigned int m_currentstatus = 0; ///< The current status
+											  ///< number
             
-            jetfuel::control::UIS_input_actions m_UIScontrols;
+            jetfuel::control::UIS_input_actions m_UIScontrols; ///< The 
+															   ///< UIS 
+															   ///< control 
+															   ///< scheme
 
             jetfuel::draw::Rectangle_2d_shape::
-            Rectangle_2d_shape_characteristics m_sliderrailchars;
+            Rectangle_2d_shape_characteristics m_sliderrailchars; ///< The 
+																  ///< slider
+																  ///< rail
+																  ///< rectangular
+																  ///< characteristics.
 
             jetfuel::draw::Circle_2d_shape::
-            Circle_2d_shape_characteristics m_sliderbuttonchars;
+            Circle_2d_shape_characteristics m_sliderbuttonchars; ///< The 
+																 ///< slider
+																 ///< button
+																 ///< circular
+																 ///< characteristics.
         
-            jetfuel::draw::Circle_2d_shape m_sliderbutton;
-            jetfuel::draw::Rectangle_2d_shape m_sliderrail;
+            jetfuel::draw::Circle_2d_shape m_sliderbutton; ///< The 
+														   ///< circular 
+														   ///< slider 
+														   ///< button.
+            jetfuel::draw::Rectangle_2d_shape m_sliderrail; ///< The 
+														    ///< rectangular 
+														    ///< slider 
+														    ///< rail.
         };
-    
+
+		/// \class jetfuel::gui::Slider
+		///
+		/// A simple slider GUI class that allows the user to pick 
+		/// different spots on a line represesenting different 
+		/// statuses(or, potentially, actions).
+		///
+		/// Code Example:
+		/// 	jetfuel::draw::Scene_manager scenemanager;
+		///     jetfuel::draw::Scene scene1(1);
+		///     jetfuel::core::Message_bus messagebus;
+		///     jetfuel::gui::Slider slider;
+		///     jetfuel::control::UIS_manager UISmanager(&messagebus,
+		///                                       scenemanager.Get_window_id());
+		///     jetfuel::control::UIS_interpreter UISinterpreter(&messagebus);
+		///     jetfuel::control::UIS_input_actions UISinputactions;
+		///     jetfuel::draw::Font font("default.ttf");
+		///
+		///     if(!scenemanager.Create_window("Hello Sliders!",
+		///                                    jetfuel::draw::Vector2d_int(0,0),
+		///                               jetfuel::draw::Vector2d_int(640,480))){
+		///         std::cout << "[!]ERROR with creating sdl window! Error is:"
+		///         << SDL_GetError() << "\n";
+		///     }
+		///
+		///     if(!scenemanager.Create_renderer()){
+		///         std::cout << "[!]ERROR with creating sdl renderer! Error is:"
+		///         << SDL_GetError() << "\n";
+		///     }
+		///     scenemanager.Switch_current_scene(&scene1);
+		///     scene1.Attach_drawable(&slider,1);
+		///
+		///     slider.Set_position(jetfuel::draw::Vector2d_int(0,0));
+		///
+		///     slider.Set_current_status_number(0); // zero-indexed
+		///     slider.Set_max_number_of_statuses(4);
+		///
+		///     UISinputactions.mousemessagetowatch = &messagebus;
+		///
+		///     slider.Set_control_scheme(UISinputactions);
+		///
+		///     scenemanager.Draw_current_scene();
     }
 }
 

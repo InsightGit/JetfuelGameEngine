@@ -1,6 +1,6 @@
 /*
 * Jetfuel Game Engine- A SDL-based 2D game-engine
-* Copyright (C) 2017 InfernoStudios
+* Copyright (C) 2018 InfernoStudios
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -23,6 +23,12 @@ namespace jetfuel{
     
         void Slider::Check_for_clicks(jetfuel::control::Action
                                           UISinterpreterdata){
+			// If the input is a mouse, the action is the
+			// message to watch, and the mouse has collided with 
+			// this object, get where it collided and set the slider
+			// to the closest status to there.
+
+			// TODO(Bobby): Add other input types support.
             if(UISinterpreterdata.inputtype ==
                UISinterpreterdata.Mouse){
                 if(UISinterpreterdata.action == Get_control_scheme().
@@ -44,6 +50,9 @@ namespace jetfuel{
         }
     
         bool Slider::Draw(){
+			// Set where the slider button should be based on the past
+			// button position, then draw this Slider's member objects.
+
             jetfuel::draw::Vector2d_int sliderbuttonposition = Get_position();
             
             sliderbuttonposition.x += (Get_width_of_slider_rail()/

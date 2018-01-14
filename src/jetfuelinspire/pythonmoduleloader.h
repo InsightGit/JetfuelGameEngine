@@ -1,6 +1,6 @@
 /*
 * Jetfuel Game Engine- A SDL-based 2D game-engine
-* Copyright (C) 2017 InfernoStudios
+* Copyright (C) 2018 InfernoStudios
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -38,30 +38,47 @@
 namespace jetfuel {
     namespace inspire {
         namespace exceptions{
-            class Python_returnvalue_ASCII_encoding_exception : public std::runtime_error {
+            class Python_returnvalue_ASCII_encoding_exception : 
+			public std::runtime_error {
             public:
-                Python_returnvalue_ASCII_encoding_exception(const std::string filename,const std::string functionname)
-                                                            : std::runtime_error("Error encoding return value ASCII in"
-                                                                                 "python module "+filename+" in function "+
-                                                                                 functionname){}
+                Python_returnvalue_ASCII_encoding_exception(
+									const std::string filename,
+									const std::string functionname)
+                                    : std::runtime_error("Error encoding return "
+									 + "value ASCII in python module "+ filename+
+									   " in function "+ functionname){}
             };
+			/// \class jetfuel::inspire::exceptions::
+			/// Python_returnvalue_ASCII_encoding_exception
+			///
+			/// An exception thrown by Python_module_loader if the 
+			/// return value from a Python function is not ASCII 
+			/// encoded. Jetfuel does not currently support non-ASCII 
+			/// Python function return values.
+			///
+			/// \see jetfuel::inspire::Python_module_loader
         }
 
         class Python_class_loader;
 
         class Python_module_loader {
         public:
-            /// \brief Constructs a Python_module_loader using a file-name, a functionname,
-            /// the directory, and, optionally a file to replace the former.
+            /// \brief Constructs a Python_module_loader using 
+            /// a file-name, a functionname, the directory, and, 
+			/// optionally a file to replace the former.
             ///
-            /// Constructs a Python_module_loader using a file-name, a functionname,
-            /// the directory(set to "." by default), and, optionally a file to replace the former.
-            /// If you chose to use the file to replace functionality, the default file
-            /// will be run first, and then the file to replace will be run second,
-            /// overriding the first file return value and any Python variables or assignments.
+            /// Constructs a Python_module_loader using a file-name, a
+			/// functionname, the directory(set to "." by default),
+            /// and, optionally a file to replace the former.
+            /// If you chose to use the file to replace functionality,
+            /// the default file will be run first, and then the file
+			/// to replace will be run second, overriding the first
+            /// file return value and any Python variables or 
+			/// assignments.
             ///
-            /// This is handy as a failsafe for a mod system, because if the mod file fails,
-            /// the game can continue normally, using the internal one function as a failsafe.
+            /// This is handy as a failsafe for a mod system, because 
+			/// if the mod file fails, the game can continue normally,
+            /// using the internal one function as a failsafe.
             ///
             /// \param std::string filename
             /// \param std::string functionname

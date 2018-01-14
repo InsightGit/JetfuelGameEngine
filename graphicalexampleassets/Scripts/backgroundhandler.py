@@ -1,6 +1,6 @@
 #     Jetfuel Game Engine Graphical Example - An example of Jetfuel,
 #     the SDL-based 2D game-engine
-#     Copyright (C) 2017 InfernoStudios
+#     Copyright (C) 2018 InfernoStudios
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

@@ -1,6 +1,6 @@
 /*
 * Jetfuel Game Engine- A SDL-based 2D game-engine
-* Copyright (C) 2017 InfernoStudios
+* Copyright (C) 2018 InfernoStudios
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -24,6 +24,10 @@ namespace jetfuel {
                          const jetfuel::draw::Color progressbarcolor,
                         const jetfuel::draw::Rect2d_int progressbarholderborders,
                          const unsigned int progressbarmax){
+			// Dynamically loads a progress bar holder image,
+			// sets all the data from the arguments,
+			// and then force refreshes the positioning system.
+
             m_progressbarholder.Dynamic_load_from_image(
                                              progressbarholderimage);
 
@@ -41,6 +45,10 @@ namespace jetfuel {
                          const jetfuel::draw::Color progressbarcolor,
                         const jetfuel::draw::Rect2d_int progressbarholderborders,
                          const unsigned int progressbarmax){
+			// Dynamically loads a progress bar holder image,
+			// sets all the data from the arguments,
+			// and then force refreshes the positioning system.
+
             m_progressbarholder.Dynamic_load_from_image(
                                          progressbarholderimage);
             m_progressbar.Set_fill_color(progressbarcolor);
@@ -53,6 +61,11 @@ namespace jetfuel {
         }
         
         bool Progress_bar::Draw(){
+			// Draws the progress bar holder,
+			// sets the width of the progress bar
+			// to reflect Get_progress_bar_progress, and then draws the
+			// progress bar.
+
             if(!Draw_progress_bar_holder()){
                 return false;
             }else{
