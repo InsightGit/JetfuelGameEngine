@@ -19,12 +19,12 @@
 #ifndef JETFUELGUI_H_
 #define JETFUELGUI_H_
 
-#include "jetfuelcore.h"
+#include "jetfuelcore.h>
 
-#include "jetfuelgui/menu.h"
-#include "jetfuelgui/checkbox.h"
-#include "jetfuelgui/dropdownbox.h"
-#include "jetfuelgui/progressbar.h"
-#include "jetfuelgui/slider.h"
+#include <jetfuelgui/menu.h>
+#include <jetfuelgui/checkbox.h>
+#include <jetfuelgui/dropdownbox.h>
+#include <jetfuelgui/progressbar.h>
+#include <jetfuelgui/slider.h>
 
 #endif /* JETFUELGUI_H_ */

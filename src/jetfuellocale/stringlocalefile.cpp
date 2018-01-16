@@ -90,7 +90,7 @@ namespace jetfuel {
 
 		char *String_locale_file::Load_string_locale_file(
 		const std::string filename, const std::string localename) {
-			std::string error;
+			std::string error = "None";
 
 			Load_string_locale_file(filename, localename, &error);
 

@@ -21,8 +21,12 @@ namespace jetfuel{
 
     namespace media{
         Sound_effect::Sound_effect(){
+			// Initializes SDL audio subsystem, and then starts up
+			// SDL_mixer via Set_frequency.
+
             if(SDL_Init(SDL_INIT_AUDIO) != 0){
-                throw jetfuel::draw::exceptions::SDL_Init_exception(Mix_GetError());
+                throw jetfuel::draw::exceptions::SDL_Init_exception(
+														Mix_GetError());
             }
 
             Set_frequency(Get_frequency());

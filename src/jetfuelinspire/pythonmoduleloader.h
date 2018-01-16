@@ -85,49 +85,197 @@ namespace jetfuel {
             /// \param std::string directoryoffilename
             /// \param std::string filetoreplace
             /// \param std::string directoryoffiletoreplace
-            Python_module_loader(const std::string filename, const std::string functionname,
+            Python_module_loader(const std::string filename, 
+								 const std::string functionname,
                                  const std::string directoryoffilename = ".",
                                  const std::string filetoreplace = "",
-                                 const std::string directoryoffiletoreplace = ".");
+                            const std::string directoryoffiletoreplace = ".");
 
-            /// \brief Constructs a Python_module_loader that will load a function from a class.
+            /// \brief Constructs a Python_module_loader that will load
+			///  a function from a class.
             ///
-            /// Constructs a Python_module_loader that will load a function from a class. This
-            /// acts like any other Python_module_loader, despite the function being from a class.
+            /// Constructs a Python_module_loader that will load a 
+			/// function from a class. This acts like any other 
+			/// Python_module_loader, despite the function being from a
+			/// class.
             ///
-            /// \param jetfuel::inspire::Python_class_loader *pythonclasstouse
+            /// \param jetfuel::inspire::Python_class_loader 
+			///  *pythonclasstouse
             /// \param std::string functionname
-            Python_module_loader(jetfuel::inspire::Python_class_loader *pythonclasstouse, const std::string functionname);
+            Python_module_loader(
+			  jetfuel::inspire::Python_class_loader *pythonclasstouse, 
+			  const std::string functionname);
 
-            /// \brief virtual destructor
+            /// \brief Virtual destructor
             ///
-            ///
+            /// Destroys this Python_module_loader.
 			virtual ~Python_module_loader();
 
-            void Execute(bool *executed, std::string *error, PyObject *args);
+			/// \brief Executes this Python module without any return
+			/// type.
+			///
+			/// Executes this Python module without any return
+			/// type. If there are no Python arguments, you can just
+			/// pass NULL/nullptr to the last argument of this 
+			/// function.
+			///
+			/// \param bool *executed
+			/// \param std::string *error
+			/// \param PyObject *args
+            void Execute(bool *executed, std::string *error, 
+						PyObject *args);
 
-            bool Execute_bool(bool *executed, std::string *error, PyObject *args);
-            long Execute_long(bool *executed, std::string *error, PyObject *args);
-            double Execute_double(bool *executed, std::string *error, PyObject *args);
-			char *Execute_cstring(bool *executed, std::string *error, PyObject *args);
+			/// \brief Executes this Python module with a boolean 
+			/// return type.
+			///
+			/// Executes this Python module with a boolean return 
+			/// type. If there are no Python arguments, you can just
+			/// pass NULL/nullptr to the last argument of this 
+			/// function.
+			///
+			/// \param bool *executed
+			/// \param std::string *error
+			/// \param PyObject *args
+            bool Execute_bool(bool *executed, std::string *error, 
+				              PyObject *args);
+			
+			/// \brief Executes this Python module with a long return 
+			/// type. 
+			///
+			/// Executes this Python module with a long return 
+			/// type. If there are no Python arguments, you can just
+			/// pass NULL/nullptr to the last argument of this 
+			/// function. This serves as the way to also get an int 
+			/// return type. After you get the long, just convert it to
+			/// an int.
+			///
+			/// \param bool *executed
+			/// \param std::string *error
+			/// \param PyObject *args
+            long Execute_long(bool *executed, std::string *error, 
+							  PyObject *args);
 
-            static std::string Py_err_to_cstring(PyObject *pythonerrortype, PyObject *pythonerrorvalue, PyObject *pythonerrortraceback);
+			/// \brief Executes this Python module with a double return 
+			/// type. 
+			///
+			/// Executes this Python module with a double return 
+			/// type. If there are no Python arguments, you can just
+			/// pass NULL/nullptr to the last argument of this 
+			/// function. This serves as the way to also get an float
+			/// return type. After you get the double, just convert it
+			/// to a float.
+			///
+			/// \param bool *executed
+			/// \param std::string *error
+			/// \param PyObject *args
+            double Execute_double(bool *executed, std::string *error, 
+								  PyObject *args);
+
+			/// \brief Executes this Python module with a cstring return 
+			/// type. 
+			///
+			/// Executes this Python module with a cstring return 
+			/// type. If there are no Python arguments, you can just
+			/// pass NULL/nullptr to the last argument of this 
+			/// function. This serves as the way to also get an 
+			/// std::string return type. After you get the long, just
+			/// convert it to a std::string.
+			///
+			/// \param bool *executed
+			/// \param std::string *error
+			/// \param PyObject *args
+			char *Execute_cstring(bool *executed, std::string *error, 
+								 PyObject *args);
+
+			/// \brief Converts a Python error message to a 
+			/// std::string.
+			///
+			/// Converts a Python error message to a 
+			/// std::string.
+			///
+			/// \param PyObject *pythonerrortype
+			/// \param PyObject *pythonerrorvalue
+			/// \param PyObject *pythonerrortraceback
+            static std::string Py_err_to_string(PyObject *pythonerrortype, 
+				PyObject *pythonerrorvalue, PyObject *pythonerrortraceback);
+
+
+			/// \brief Adds a given directory path to the python path.
+			///
+			/// Adds a given directory path to the python path.
+			///
+			/// \param std::string pathlocationtoadd
             static void Add_to_py_path(const std::string pathlocationtoadd);
         protected:
-            PyObject *pythonclass;
+            PyObject *pythonclass; ///< A Python class object used to 
+								   ///< call Python class methods.
 
-            void Base_execute_py_object(PyObject *pythonfunction, PyObject *args, bool *executed,
-                                        std::string *error);
+			/// \brief Sets up Python function objects for execution.
+			///
+			/// Sets up Python function objects for execution.
+			///
+			/// \param PyObject *pythonfunction
+			/// \param PyObject *args
+			/// \param bool *executed
+			/// \param std::string *error
+            void Base_execute_py_object(PyObject *pythonfunction, 
+				                        PyObject *args, bool *executed,
+										std::string *error);
 
-            void Execute_py_object(PyObject *args,bool *executed, std::string *error);
+			/// \brief Executes a python function without a return
+			/// type.
+			///
+			/// Executes a python function without a return type.
+			///
+			/// \param PyObject *args
+			/// \param bool *executed
+			/// \param std::string *error
+            void Execute_py_object(PyObject *args,bool *executed, 
+									std::string *error);
 
-            bool Execute_py_object_bool(PyObject *args, bool *executed, std::string *error);
+			/// \brief Executes a python function with a boolean return
+			/// type.
+			///
+			/// Executes a python function with a boolean return type.
+			///
+			/// \param PyObject *args
+			/// \param bool *executed
+			/// \param std::string *error
+            bool Execute_py_object_bool(PyObject *args, bool *executed, 
+										std::string *error);
 
-            long Execute_py_object_long(PyObject *args, bool *executed, std::string *error);
+			/// \brief Executes a python function with a long return
+			/// type.
+			///
+			/// Executes a python function with a long return type.
+			///
+			/// \param PyObject *args
+			/// \param bool *executed
+			/// \param std::string *error
+            long Execute_py_object_long(PyObject *args, bool *executed, 
+										std::string *error);
 
-            double Execute_py_object_double(PyObject *args,bool *executed, std::string *error);
+			/// \brief Executes a python function with a double return
+			/// type.
+			///
+			/// Executes a python function with a double return type.
+			///
+			/// \param PyObject *args
+			/// \param bool *executed
+			/// \param std::string *error
+            double Execute_py_object_double(PyObject *args,bool *executed, 
+											std::string *error);
 
-            char* Execute_py_object_cstring(PyObject *args, bool *executed, std::string *error);
+			/// \brief Executes a python function with a cstring return
+			/// type.
+			///
+			/// Executes a python function with a cstring return type.
+			///
+			/// \param PyObject *args
+			/// \param bool *executed
+			/// \param std::string *error
+            char* Execute_py_object_cstring(PyObject *args, bool *executed, 
+											std::string *error);
 
             /*static void Lock_python_operations_mutex(){
                 m_pythonoperationsmutex.lock();
@@ -137,18 +285,34 @@ namespace jetfuel {
                 m_pythonoperationsmutex.unlock();
             }*/
 
-            const std::string& Get_file_name() const {
+			/// \brief Gets this Python file name.
+			///
+			/// Gets this Python file name.
+            std::string Get_file_name() const {
                 return m_filename;
             }
 
-            const std::string& Get_file_to_replace() const {
+			/// \brief Gets this Python file name of the file to 
+			/// replace.
+			///
+			/// Gets this Python file name of the file to 
+			/// replace.
+            std::string Get_file_to_replace() const {
                 return m_filetoreplace;
             }
 
-            const std::string& Get_function_name() const {
+			/// \brief Gets this Python function name.
+			///
+			/// Gets this Python function name.
+            std::string Get_function_name() const {
                 return m_functionname;
             }
 
+			/// \brief Converts a const char * to a wchar_t *.
+			///
+			/// Converts a const char * to a wchar_t *.
+			///
+			/// \param const char *chartouse
             static wchar_t *Get_wchar(const char *chartouse)
             {
                 const size_t charsize = strlen(chartouse)+1;
@@ -158,36 +322,67 @@ namespace jetfuel {
                 return widechar;
             }
 
-            const std::string& Get_directory_of_file_name() const {
+			/// \brief Gets this directory name of the Python files.
+			///
+			/// Gets this directory name of the Python files.
+            std::string Get_directory_of_file_name() const {
                 return m_directoryoffilename;
             }
 
-            const std::string& Get_directory_of_file_to_replace() const {
+			/// \brief Gets this directory name of the Python files
+			/// to replace.
+			///
+			/// Gets this directory name of the Python files to 
+			/// replace.
+            std::string Get_directory_of_file_to_replace() const {
                 return m_directoryoffiletoreplace;
             }
 
+			/// \brief Returns a boolean whether this 
+			/// Python_module_loader is invoking class methods.
+			///
+			/// Returns a boolean whether this 
+			/// Python_module_loader is invoking class methods.
             bool Using_classes() const {
                 return m_usingclasses;
             }
 
+			/// \brief Converts an ASCII wchar_t * to an ASCII 
+			/// std::string.
+			///
+			/// Converts an ASCII wchar_t * to an ASCII 
+			/// std::string.
+			///
+			/// \param wchar_t* widechar
             static const std::string Get_string(const wchar_t *widechar){
                 std::wstring widestring = widechar;
                 return std::string(widestring.begin(),widestring.end());
             }
+
+			static std::string Get_py_error(PyObject *errorobject);
         private:
             //static std::mutex m_pythonoperationsmutex;
-            static bool m_pythoninited;
 
-            bool m_usingclasses;
+            static bool m_pythoninited; ///< Whether Python has been 
+										///< initialized.
 
-            std::string m_filename;
-            std::string m_functionname;
-            std::string m_filetoreplace;
-            std::string m_directoryoffilename;
-            std::string m_directoryoffiletoreplace;
+            bool m_usingclasses; ///< Whether this 
+								 ///< Python_module_loader is invoking
+								 ///< class methods.
+
+            std::string m_filename; ///< Python file name.
+            std::string m_functionname; ///< Python function name.
+            std::string m_filetoreplace; ///< Python file to replace 
+										 ///< name.
+            std::string m_directoryoffilename; ///< Directory name of 
+											   ///< Python files.
+            std::string m_directoryoffiletoreplace; ///< Directory name
+													///< of Python 
+													///< files to 
+													///< replace.
         };
 
-        /// jetfuel::inspire::Python_module_loader
+        /// \class sjetfuel::inspire::Python_module_loader
         ///
         /// Loads a Python 3.6 function(Not a class) to be executed.
         /// This function can be executed, and can have

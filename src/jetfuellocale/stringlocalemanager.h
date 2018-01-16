@@ -25,8 +25,18 @@ namespace jetfuel {
 
         class String_locale_manager {
         public:
+			/// \brief Default constructor.
+			///
+			/// Default constructor.
             String_locale_manager(){}
 
+			/// \brief Loads a String_locale_file into this 
+			/// String_locale_manager as an available locale.
+			///
+			/// Loads a String_locale_file into this 
+			/// String_locale_manager as an available locale.
+			///
+			/// \param jetfuel::locale::String_locale_file localefile
             bool Load_string_locale_file(String_locale_file localefile){
                 if(localefile.Is_locale_file_set()){
                     m_localefiles.push_back(localefile);
@@ -37,14 +47,29 @@ namespace jetfuel {
                 return false;
             }
 
+			/// \brief Gets the active locale name.
+			///
+			/// Gets the active locale name.
             std::string Get_active_locale(){
                 return m_activelocale;
             }
 
+			/// \brief Gets the active String_locale_file.
+			///
+			/// Gets the active String_locale_file.
             String_locale_file Get_active_string_locale_file() const{
                 return *m_currentlocalefile;
             }
 
+			/// \brief Sets the active locale from a the loaded vector
+			/// of String_locale_files and returns whether the locale
+			/// was set to be the active locale.
+			///
+			/// Sets the active locale from a the loaded vector
+			/// of String_locale_files and returns whether the locale
+			/// was set to be the active locale.
+			///
+			/// \param std::string localename
             bool Set_active_locale(const std::string localename){
                 bool foundlocale = false;
 
@@ -63,6 +88,13 @@ namespace jetfuel {
                 return foundlocale;
             }
 
+			/// \brief Gets a string with a (hopefully universal) 
+			/// stringid from the active String_locale_file.
+			///
+			/// Gets a string with a (hopefully universal) 
+			/// stringid from the active String_locale_file.
+			///
+			/// \param std::string stringid
             std::string Get_string_from_id(const std::string stringid) const{
                 std::vector<Locale_string> stringidindex = m_currentlocalefile->
                                                       Get_locale_string_vector();
@@ -75,12 +107,56 @@ namespace jetfuel {
                 return "";
             }
         private:
-            std::string m_activelocale = "NoLocale";
+            std::string m_activelocale = "NoLocale"; ///< The active 
+													 ///< locale name
 
-            std::vector<String_locale_file> m_localefiles;
+            std::vector<String_locale_file> m_localefiles; ///< The 
+														///< String_locale_file
+														   ///< vector 
+														   ///< containing
+														  ///< all the 
+														///< loaded locales.
 
-            String_locale_file *m_currentlocalefile;
+            String_locale_file *m_currentlocalefile; 
+											///< The active locale.
         };
+		/// \class jetfuel::locale::String_locale_,amager
+		///
+		/// A localization manager using a collection of 
+		/// String_locale_files.
+		///
+		/// Code Example:
+		///
+		/// JSON(EnglishLocale.json):
+		///
+		/// {
+		///		"strings": [
+		///			{
+		///				"stringid": "checkboxlabel",
+		///				"string" : "click it i guess"
+		///			}
+		///		]
+		///	}
+		///
+		/// C++:
+		///
+		/// jetfuel::locale::String_locale_file englishlocalefile;
+		/// jetfuel::locale::String_locale_manager localemanager;
+		/// std::string error;
+		///
+		/// if(!englishlocalefile.Load_string_locale_file("EnglishLocale.json",
+		///		"english", &error)){
+		///		std::cerr << "Could not load EnglishLocale JSON file! " <<
+		///		"Error was: " << error << "\n";
+		///		return 1;
+		///	}
+		///
+		/// localemanager.Load_string_locale_file(englishlocalefile);
+		///
+		///	localemanager.Set_active_locale("english");
+		///
+		/// std::cout << "Hello in" << localemanager.Get_active_locale() <<  
+		///				" is " << localemanager.Get_string_from_id("hello");
 
     } /* namespace locale */
 } /* namespace jetfuel */

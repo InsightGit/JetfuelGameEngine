@@ -23,36 +23,36 @@
 // the Operating System, and whether the program was compiled in Debug mode.
 
 // Version number definitions
-#define NEON_VERSION_MAJOR 0
-#define NEON_VERSION_MINOR 1
-#define NEON_VERSION_PATCH 0
+#define JETFUEL_VERSION_MAJOR 0
+#define JETFUEL_VERSION_MINOR 1
+#define JETFUEL_VERSION_PATCH 0
 
 // Operating System definitions
 
 #if defined(_WIN32)
-    #define NEON_COMPILED_OS "Windows"
+    #define JETFUEL_COMPILED_OS "Windows"
 	#undef main
 #elif defined(unix) || defined(__unix__) || defined(__unix)
   #if defined(__APPLE__) || defined(__MACH__)
     #include "TargetConditionals.h"
     #if defined(TARGET_IPHONE_SIMULATOR)
-         #define NEON_COMPILED_OS "iOS Simulator"
+         #define JETFUEL_COMPILED_OS "iOS Simulator"
     #elif defined(TARGET_OS_IPHONE)
-        #define NEON_COMPILED_OS "iOS"
+        #define JETFUEL_COMPILED_OS "iOS"
     #elif defined(TARGET_OS_MAC)
-          #define NEON_COMPILED_OS "macOS"
+          #define JETFUEL_COMPILED_OS "macOS"
     #else
         #error "Unknown Apple platform"
     #endif
 
   #elif defined(__linux__) || defined(linux) || defined(__linux)
     #if defined(__ANDROID__)
-        #define NEON_COMPILED_OS "Android"
+        #define JETFUEL_COMPILED_OS "Android"
     #else
-        #define NEON_COMPILED_OS "Linux"
+        #define JETFUEL_COMPILED_OS "Linux"
     #endif
   #elif defined(__FreeBSD__)
-    #define NEON_COMPILED_OS "FreeBSD"
+    #define JETFUEL_COMPILED_OS "FreeBSD"
   #endif
 #else
     #error "Unknown platform"

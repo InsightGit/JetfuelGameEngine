@@ -21,12 +21,12 @@
 
 #include <jetfuelcore.h>
 
-#include "jetfueldraw/scenemanager.h"
-#include "jetfueldraw/scene.h"
-#include "jetfueldraw/sprite.h"
-#include "jetfueldraw/image.h"
-#include "jetfueldraw/text.h"
-#include "jetfueldraw/circle2dshape.h"
-#include "jetfueldraw/rectangle2dshape.h"
+#include <jetfueldraw/scenemanager.h>
+#include <jetfueldraw/scene.h>
+#include <jetfueldraw/sprite.h>
+#include <jetfueldraw/image.h>
+#include <jetfueldraw/text.h>
+#include <jetfueldraw/circle2dshape.h>
+#include <jetfueldraw/rectangle2dshape.h>
 
 #endif /* JETFUELDRAW_H_ */

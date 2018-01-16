@@ -28,18 +28,35 @@ namespace jetfuel{
    
        class Sound_effect : public Sound{
        public:
+		   /// \brief Default constructor.
+		   ///
+		   /// Default constructor.
            Sound_effect();
            
+		   /// \brief Virtual destructor.
+		   ///
+		   /// Virtual destructor.
            virtual ~Sound_effect();
 
+		   /// \brief Returns whether ANY sound is playing.
+		   ///
+		   /// Returns whether ANY sound is playing.
            static bool Is_sound_effect_or_music_playing(){
                return Mix_Playing(-1) > 0;
            }
 
+		   /// \brief Gets the loaded audio's file path.
+		   ///
+		   /// Gets the loaded audio's file path.
            std::string Get_loaded_audio_file_path() const{
                return m_musicfilepath;
            }
 
+		   /// \brief Loads a sound effect file from a given file path.
+		   ///
+		   /// Loads a sound effect file from a given file path.
+		   ///
+		   /// \param std::string musicfilepath
            bool Load_audio_file(const std::string musicfilepath)override{
                m_soundfx = Mix_LoadWAV(musicfilepath.c_str());
                if(m_soundfx == NULL){
@@ -50,24 +67,47 @@ namespace jetfuel{
                }
            }
 
+		   /// \brief Gets the times to repeat this Sound_effect.
+		   ///
+		   /// Gets the times to repeat this Sound_effect.
            unsigned int Get_times_to_repeat() const{
                return m_repeattimes;
            }
 
+		   /// \brief Sets the times to repeat this Sound_effect.
+		   ///
+		   /// Sets the times to repeat this Sound_effect.
+		   ///
+		   /// \param unsigned int repeattimes
            void Set_times_to_repeat(const unsigned int repeattimes){
                m_repeattimes = repeattimes;
            }
 
+		   /// \brief Plays this Sound_effect.
+		   ///
+		   /// Plays this Sound_effect.
            bool Play()override;
            
+		   /// \brief Pauses this Sound_effect.
+		   ///
+		   /// Pauses this Sound_effect.
            void Pause()override;
            
+		   /// \brief Resumes this Sound_effect.
+		   ///
+		   /// Resumes this Sound_effect.
            void Resume()override;
        protected:
+		   /// \brief Returns whether this Sound_effect is loaded.
+		   ///
+		   /// Returns whether this Sound_effect is loaded.
            bool Is_sound_effect_loaded()const{
                return m_soundfx != NULL;
            }
 
+		   /// \brief Plays this Sound_effect using SDL_mixer.
+		   ///
+		   /// Plays this Sound_effect using SDL_mixer.
            bool Play_sound_effect(){
                if(m_soundfx != NULL){
                    Mix_PlayChannel(Get_active_channel_num(), m_soundfx,
@@ -78,21 +118,48 @@ namespace jetfuel{
                }
            }
 
+		   /// \brief Pauses this Sound_effect using SDL_mixer.
+		   ///
+		   /// Pauses this Sound_effect using SDL_mixer.
            void Pause_sound_effect(){
                Mix_Pause(Get_active_channel_num());
            }
 
+		   /// \brief Resumes this Sound_effect using SDL_mixer.
+		   ///
+		   /// Resumes this Sound_effect using SDL_mixer.
            void Resume_sound_effect(){
                Mix_Resume(Get_active_channel_num());
            }
        private:
-           Mix_Chunk *m_soundfx;
+           Mix_Chunk *m_soundfx; ///< The sound effect SDL_mixer 
+								 ///< object.
 
-           unsigned int m_repeattimes = 0;
+           unsigned int m_repeattimes = 0; ///< How many times to 
+										   ///< repeat this 
+										   ///<	Sound_effect.
 
-           std::string m_musicfilepath;
+           std::string m_musicfilepath; ///< This Sound_effect's file
+										///< path.
        };
-
+	   /// \class jetfuel::media::Sound_effect
+	   ///
+	   /// A sound playback class for short(and sweet) audio files,
+	   /// which supports WAV(.wav), AIFF(.aiff), VOC(.voc), 
+	   /// MOD(.mod, .xm, .s3m, and more), MIDI(.mid), 
+	   /// OggVorbis(.ogg), MP3(.mp3), and FLAC(.flac).
+	   ///
+	   /// Code Example:
+	   ///
+	   /// jetfuel::media::Sound_effect sfx;
+	   ///
+	   /// if(sfx.load_audio_file("SFX.ogg")){
+	   ///		std::cout << "Unable to load SFX.ogg Error:" << Mix_GetError() 
+	   ///		<< std:endl;
+	   ///		return 1;
+	   ///	}
+	   ///
+	   /// sfx.Play();
    }
    
 }

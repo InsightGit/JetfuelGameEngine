@@ -23,9 +23,7 @@
 
 #include <jetfuelcore/messagebus.h>
 #include <jetfuelcore/timer.h>
-#include "config.h"
-//#include "../stagingsrc/sdlerrortranslator.h"
+#include <config.h>
+
 
 #endif /* JETFUELCORE_H_ */
-
-// Neon Core, Neon System stuff: Message Bus, Timer, etc.

@@ -29,10 +29,11 @@ namespace jetfuel {
 				static bool Python_module_loader::m_pythoninited = false;
 		#endif
 
-        Python_module_loader::Python_module_loader(const std::string filename, const std::string functionname,
-                                                   const std::string directoryoffilename,
-                                                   const std::string filetoreplace,
-                                                   const std::string directoryoffiletoreplace) {
+        Python_module_loader::Python_module_loader(const std::string filename, 
+									const std::string functionname,
+                                    const std::string directoryoffilename,
+                                    const std::string filetoreplace,
+                                    const std::string directoryoffiletoreplace) {
             m_filename = filename;
             m_functionname = functionname;
             m_directoryoffilename = directoryoffilename;
@@ -43,8 +44,9 @@ namespace jetfuel {
             Py_Initialize();
         }
 
-        Python_module_loader::Python_module_loader(jetfuel::inspire::Python_class_loader *pythonclasstouse,
-                                                   const std::string functionname){
+        Python_module_loader::Python_module_loader(
+						jetfuel::inspire::Python_class_loader *pythonclasstouse,
+                                                const std::string functionname) {
             pythonclass = pythonclasstouse->pythonclass;
             m_functionname = functionname;
             m_usingclasses = true;
@@ -57,60 +59,57 @@ namespace jetfuel {
 			Py_Finalize();
 		}
 
-        std::string Python_module_loader::Py_err_to_cstring(PyObject *pythonerrortype, PyObject *pythonerrorvalue,
-                                                            PyObject *pythonerrortraceback){
+		std::string Python_module_loader::Get_py_error(PyObject *errorobject) {
+			std::string returnvalue;
+
+			if (PyUnicode_Check(errorobject)) {
+				PyObject * temp_bytes = PyUnicode_AsEncodedString(
+					errorobject, "ASCII", "strict");
+				if (temp_bytes != NULL) {
+					returnvalue = PyBytes_AS_STRING(temp_bytes);
+					returnvalue = strdup(returnvalue.c_str());
+					Py_DECREF(temp_bytes);
+				}
+				else {
+					throw exceptions::
+						Python_returnvalue_ASCII_encoding_exception(
+							"Jetfuel Game Engine",
+							"Python_module_loader::Py_err_to_cstring()");
+				}
+			}
+
+			return returnvalue;
+		}
+
+        std::string Python_module_loader::Py_err_to_string(
+									PyObject *pythonerrortype, 
+									PyObject *pythonerrorvalue,
+                                    PyObject *pythonerrortraceback){
             std::string returnvalue;
 
             if(pythonerrorvalue != nullptr){
-                if (PyUnicode_Check(pythonerrorvalue)) {
-                    PyObject * temp_bytes = PyUnicode_AsEncodedString(pythonerrorvalue, "ASCII", "strict"); // Owned reference
-                    if (temp_bytes != NULL) {
-                        returnvalue = PyBytes_AS_STRING(temp_bytes); // Borrowed pointer
-                        returnvalue = strdup(returnvalue.c_str());
-                        Py_DECREF(temp_bytes);
-                    } else {
-                        throw exceptions::Python_returnvalue_ASCII_encoding_exception("Jetfuel Game Engine","Python_module_loader::Py_err_to_cstring()");
-                    }
-                }
+				returnvalue = Get_py_error(pythonerrorvalue);
             }
 
             if(pythonerrortype != nullptr){
-                if (PyUnicode_Check(pythonerrortype)) {
-                    PyObject * temp_bytes = PyUnicode_AsEncodedString(pythonerrortype, "ASCII", "strict"); // Owned reference
-                    if (temp_bytes != NULL) {
-                        char *tempstring;
-                        tempstring = PyBytes_AS_STRING(temp_bytes); // Borrowed pointer
-                        tempstring = strdup(tempstring);
-                        Py_DECREF(temp_bytes);
-                        returnvalue.append("\nType:");
-                        returnvalue.append(tempstring);
-                    } else {
-                        throw exceptions::Python_returnvalue_ASCII_encoding_exception("Jetfuel Game Engine","Python_module_loader::Py_err_to_cstring()");
-                    }
-                }
+                returnvalue.append("\nType:");
+                returnvalue.append(Get_py_error(pythonerrortype));
             }
 
             if(pythonerrortraceback != nullptr){
-                if (PyUnicode_Check(pythonerrortraceback)) {
-                    PyObject * temp_bytes = PyUnicode_AsEncodedString(pythonerrortraceback, "ASCII", "strict"); // Owned reference
-                    if (temp_bytes != NULL) {
-                        char *tempstring;
-                        tempstring = PyBytes_AS_STRING(temp_bytes); // Borrowed pointer
-                        tempstring = strdup(tempstring);
-                        Py_DECREF(temp_bytes);
-                        returnvalue.append("\nTraceback:");
-                        returnvalue.append(tempstring);
-                    } else {
-                        throw exceptions::Python_returnvalue_ASCII_encoding_exception("Jetfuel Game Engine","Python_module_loader::Py_err_to_cstring()");
-                    }
-                }
+                returnvalue.append("\nTraceback:");
+                returnvalue.append(Get_py_error(pythonerrortraceback);
             }
 
 
             return returnvalue;
         }
 
-        void Python_module_loader::Add_to_py_path(const std::string pathlocationtoadd){
+        void Python_module_loader::Add_to_py_path(
+								const std::string pathlocationtoadd){
+			// Get python path, append the path location to add,
+			// and set it as the new path.
+
             //Lock_python_operations_mutex();
 
             std::string pythonpathtouse = Get_string(Py_GetPath());
@@ -130,32 +129,53 @@ namespace jetfuel {
             //Unlock_python_operations_mutex();
         }
 
-        void Python_module_loader::Base_execute_py_object(PyObject *pythonfunction,
-                                                          PyObject *args, bool *executed, std::string *error){
+        void Python_module_loader::Base_execute_py_object(
+														PyObject *pythonfunction,
+                                                          PyObject *args, 
+														  bool *executed, 
+														  std::string *error){
+			// Checks if the function object is not nullptr, and check
+			// that it is callable.
 
-            if(pythonfunction==NULL){
-                PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
-                PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, &pythonerrortraceback);
+			PyObject *pythonerrortype;
+			PyObject *pythonerrorvalue;
+			PyObject *pythonerrortraceback;
 
-                *error = Py_err_to_cstring(pythonerrortype,pythonerrorvalue,pythonerrortraceback);
+            if(pythonfunction==nullptr){
+                PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, 
+							&pythonerrortraceback);
+
+                *error = Py_err_to_string(pythonerrortype,pythonerrorvalue,
+											pythonerrortraceback);
                 *executed = false;
                 return;
             }
             if(!PyCallable_Check(pythonfunction)){
-                PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
-                PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, &pythonerrortraceback);
+                PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, 
+							&pythonerrortraceback);
 
                 *executed = false;
-                *error = Py_err_to_cstring(pythonerrortype,pythonerrorvalue,pythonerrortraceback);
+                *error = Py_err_to_string(pythonerrortype,pythonerrorvalue,
+										   pythonerrortraceback);
                 return;
             }
             *executed=true;
         }
 
-        void Python_module_loader::Execute_py_object(PyObject *args,bool *executed, std::string *error){
-            PyObject *pythonfunction, *pythonfile, *pythonmodule;
+        void Python_module_loader::Execute_py_object(PyObject *args,
+									bool *executed, std::string *error){
+			// Sets up the Python objects, calls the function, 
+			// gets any error, and if there were any, mark this 
+			// function as not executed. Otherwise, mark it as 
+			// executed.
 
-            PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
+			PyObject *pythonfunction;
+			PyObject *pythonfile;
+			PyObject *pythonmodule;
+
+			PyObject *pythonerrortype;
+			PyObject *pythonerrorvalue;
+			PyObject *pythonerrortraceback;
 
             //Lock_python_operations_mutex();
 
@@ -192,12 +212,13 @@ namespace jetfuel {
             PyErr_Fetch(&pythonerrortype, &pythonerrorvalue,
                                           &pythonerrortraceback);
 
-            if(pythonerrorvalue==NULL){
+            if(pythonerrorvalue==nullptr){
                 *executed = true;
             }else{
                 *executed = false;
 
-                *error = Py_err_to_cstring(pythonerrortype,pythonerrorvalue,pythonerrortraceback);
+                *error = Py_err_to_string(pythonerrortype,pythonerrorvalue,
+										   pythonerrortraceback);
 
                 if(*error == ""){
                     *error = std::string()+
@@ -217,16 +238,24 @@ namespace jetfuel {
             //Unlock_python_operations_mutex();
         }
 
-        bool Python_module_loader::Execute_py_object_bool(PyObject *args,bool *executed, std::string *error){
+        bool Python_module_loader::Execute_py_object_bool(PyObject *args,
+											bool *executed, std::string *error){
+			// Sets up the Python objects, calls the function
+			// (making sure to get a return type), gets any error, and 
+			// if there were any, mark this function as not executed. 
+			// Otherwise, mark it as executed.
+
             //Lock_python_operations_mutex();
 
             PyObject *pythonfile, *pythonmodule, *pythonfunction;
             if(!Using_classes()){
                 pythonfile = PyUnicode_DecodeFSDefault(Get_file_name().c_str());
                 pythonmodule = PyImport_Import(pythonfile);
-                pythonfunction = PyObject_GetAttrString(pythonmodule,Get_function_name().c_str());
+                pythonfunction = PyObject_GetAttrString(pythonmodule,
+													Get_function_name().c_str());
             }else{
-                pythonfunction = PyObject_GetAttrString(pythonclass,Get_function_name().c_str());
+                pythonfunction = PyObject_GetAttrString(pythonclass,
+													Get_function_name().c_str());
             }
 
             Base_execute_py_object(pythonfunction,args,executed,error);
@@ -235,14 +264,19 @@ namespace jetfuel {
                 return NULL;
             }
 
-            PyObject *pythonreturnvalue = PyObject_CallObject(pythonfunction,args);
+            PyObject *pythonreturnvalue = PyObject_CallObject(pythonfunction,
+															  args);
 
-            PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
-            PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, &pythonerrortraceback);
+			PyObject *pythonerrortype;
+			PyObject *pythonerrorvalue;
+			PyObject *pythonerrortraceback;
+
+            PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, 
+						&pythonerrortraceback);
 
             bool returnvalue;
 
-            if(pythonerrorvalue==NULL){
+            if(pythonerrorvalue==nullptr){
                 *executed = true;
                 if(pythonreturnvalue == Py_True){
                     returnvalue = true;
@@ -251,11 +285,12 @@ namespace jetfuel {
                 }
             }else{
                 *executed = false;
-                *error = Py_err_to_cstring(pythonerrortype,pythonerrorvalue,pythonerrortraceback);
-                return NULL;
+                *error = Py_err_to_string(pythonerrortype,pythonerrorvalue,
+										   pythonerrortraceback);
+                return nullptr;
             }
 
-            if(pythonclass==NULL){
+            if(pythonclass==nullptr){
                 Py_DECREF(pythonfile);
                 Py_DECREF(pythonmodule);
             }
@@ -267,16 +302,24 @@ namespace jetfuel {
             return returnvalue;
         }
 
-        long Python_module_loader::Execute_py_object_long(PyObject *args,bool *executed, std::string *error){
+        long Python_module_loader::Execute_py_object_long(PyObject *args,
+										bool *executed, std::string *error){
+			// Sets up the Python objects, calls the function
+			// (making sure to get a return type), gets any error, and 
+			// if there were any, mark this function as not executed. 
+			// Otherwise, mark it as executed.
+
             //Lock_python_operations_mutex();
 
             PyObject *pythonfile, *pythonmodule, *pythonfunction;
             if(!Using_classes()){
                 pythonfile = PyUnicode_DecodeFSDefault(Get_file_name().c_str());
                 pythonmodule = PyImport_Import(pythonfile);
-                pythonfunction = PyObject_GetAttrString(pythonmodule,Get_function_name().c_str());
+                pythonfunction = PyObject_GetAttrString(pythonmodule,
+												Get_function_name().c_str());
             }else{
-                pythonfunction = PyObject_GetAttrString(pythonclass,Get_function_name().c_str());
+                pythonfunction = PyObject_GetAttrString(pythonclass,
+												Get_function_name().c_str());
             }
 
 
@@ -286,9 +329,13 @@ namespace jetfuel {
                 return NULL;
             }
 
-            PyObject *pythonreturnvalue = PyObject_CallObject(pythonfunction,args);
+            PyObject *pythonreturnvalue = PyObject_CallObject(pythonfunction,
+															  args);
 
-            PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
+			PyObject *pythonerrortype;
+			PyObject *pythonerrorvalue;
+			PyObject *pythonerrortraceback;
+
             PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, &pythonerrortraceback);
 
             long returnvalue;
@@ -298,7 +345,8 @@ namespace jetfuel {
                 returnvalue = PyLong_AsLong(pythonreturnvalue);
             }else{
                 *executed = false;
-                *error = Py_err_to_cstring(pythonerrortype,pythonerrorvalue,pythonerrortraceback);
+                *error = Py_err_to_string(pythonerrortype,pythonerrorvalue,
+										   pythonerrortraceback);
                 return NULL;
             }
 
@@ -315,16 +363,24 @@ namespace jetfuel {
             return returnvalue;
         }
 
-        double Python_module_loader::Execute_py_object_double(PyObject *args,bool *executed, std::string *error){
+        double Python_module_loader::Execute_py_object_double(PyObject *args,
+											bool *executed, std::string *error){
+			// Sets up the Python objects, calls the function
+			// (making sure to get a return type), gets any error, and 
+			// if there were any, mark this function as not executed. 
+			// Otherwise, mark it as executed.
+
             //Lock_python_operations_mutex();
 
             PyObject *pythonfile, *pythonmodule, *pythonfunction;
             if(!Using_classes()){
                 pythonfile = PyUnicode_DecodeFSDefault(Get_file_name().c_str());
                 pythonmodule = PyImport_Import(pythonfile);
-                pythonfunction = PyObject_GetAttrString(pythonmodule,Get_function_name().c_str());
+                pythonfunction = PyObject_GetAttrString(pythonmodule,
+													Get_function_name().c_str());
             }else{
-                pythonfunction = PyObject_GetAttrString(pythonclass,Get_function_name().c_str());
+                pythonfunction = PyObject_GetAttrString(pythonclass,
+													Get_function_name().c_str());
             }
 
             Base_execute_py_object(pythonfunction,args,executed,error);
@@ -333,10 +389,15 @@ namespace jetfuel {
                 return NULL;
             }
 
-            PyObject *pythonreturnvalue = PyObject_CallObject(pythonfunction,args);
+            PyObject *pythonreturnvalue = PyObject_CallObject(pythonfunction,
+															  args);
 
-            PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
-            PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, &pythonerrortraceback);
+			PyObject *pythonerrortype;
+			PyObject *pythonerrorvalue;
+			PyObject *pythonerrortraceback;
+
+            PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, 
+						&pythonerrortraceback);
 
             double returnvalue;
 
@@ -345,7 +406,8 @@ namespace jetfuel {
                 returnvalue = PyFloat_AsDouble(pythonreturnvalue);
             }else{
                 *executed = false;
-                *error = Py_err_to_cstring(pythonerrortype,pythonerrorvalue,pythonerrortraceback);
+                *error = Py_err_to_string(pythonerrortype,pythonerrorvalue,
+											pythonerrortraceback);
                 return NULL;
             }
 
@@ -362,7 +424,13 @@ namespace jetfuel {
             return returnvalue;
         }
 
-        char *Python_module_loader::Execute_py_object_cstring(PyObject *args,bool *executed, std::string *error){
+        char *Python_module_loader::Execute_py_object_cstring(PyObject *args,
+											bool *executed, std::string *error){
+			// Sets up the Python objects, calls the function
+			// (making sure to get a return type), gets any error, and 
+			// if there were any, mark this function as not executed. 
+			// Otherwise, mark it as executed.s
+
             //Lock_python_operations_mutex();
 
             PyObject *pythonfile, *pythonmodule, *pythonfunction;
@@ -370,14 +438,17 @@ namespace jetfuel {
                 pythonfile = PyUnicode_DecodeFSDefault(Get_file_name().c_str());
 				pythonmodule = PyImport_Import(pythonfile);
 				if (pythonmodule != nullptr) {
-					pythonfunction = PyObject_GetAttrString(pythonmodule, Get_function_name().c_str());
+					pythonfunction = PyObject_GetAttrString(pythonmodule, 
+													Get_function_name().c_str());
 				}else{
-					*error = "I was unable to import the python file. Does it exist? Does it have no import errors?";
+					*error = "I was unable to import the python file. "+
+						"Does it exist? Does it have no import errors?";
 					*executed = false;
 					return "";
 				}
             }else{
-                pythonfunction = PyObject_GetAttrString(pythonclass,Get_function_name().c_str());
+                pythonfunction = PyObject_GetAttrString(pythonclass,
+											Get_function_name().c_str());
             }
 
             Base_execute_py_object(pythonfunction,args,executed,error);
@@ -386,32 +457,42 @@ namespace jetfuel {
                 return "";
             }
 
-            PyObject *pythonreturnvalue = PyObject_CallObject(pythonfunction,args);
+            PyObject *pythonreturnvalue = PyObject_CallObject(pythonfunction,
+															  args);
 
-            PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
-            PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, &pythonerrortraceback);
+			PyObject *pythonerrortype;
+			PyObject *pythonerrorvalue;
+			PyObject *pythonerrortraceback;
+
+            PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, 
+						&pythonerrortraceback);
 
             char *returnvalue;
 
             if(pythonerrorvalue==NULL){
                 *executed = true;
                 if (PyUnicode_Check(pythonreturnvalue)) {
-                    PyObject * temp_bytes = PyUnicode_AsEncodedString(pythonreturnvalue, "ASCII", "strict"); // Owned reference
+                    PyObject * temp_bytes = PyUnicode_AsEncodedString(
+													pythonreturnvalue, "ASCII",
+													"strict");
                     if (temp_bytes != NULL) {
-                        returnvalue = PyBytes_AS_STRING(temp_bytes); // Borrowed pointer
+                        returnvalue = PyBytes_AS_STRING(temp_bytes);
                         returnvalue = strdup(returnvalue);
                         Py_DECREF(temp_bytes);
                     } else {
-                        throw exceptions::Python_returnvalue_ASCII_encoding_exception(Get_file_name(),Get_function_name());
+                        throw exceptions::
+						Python_returnvalue_ASCII_encoding_exception(
+										Get_file_name(), Get_function_name());
                     }
                 }
             }else{
                 *executed = false;
-                *error = Py_err_to_cstring(pythonerrortype,pythonerrorvalue,pythonerrortraceback);
+                *error = Py_err_to_string(pythonerrortype,
+									pythonerrorvalue,pythonerrortraceback);
                 return "";
             }
 
-            if(pythonclass==NULL){
+            if(pythonclass==nullptr){
                 Py_DECREF(pythonfile);
                 Py_DECREF(pythonmodule);
             }
@@ -424,7 +505,13 @@ namespace jetfuel {
             return returnvalue;
         }
 
-        void Python_module_loader::Execute(bool *executed, std::string *error, PyObject *args){
+        void Python_module_loader::Execute(bool *executed, std::string *error, 
+										   PyObject *args){
+			// Adds the directory of the Python files to the Python
+			// path, executes the Python object, and then
+			// (if successful), repeats the previous steps for the
+			// files to replace.
+
             Add_to_py_path(Get_directory_of_file_name());
 
             Execute_py_object(args,executed,error);
@@ -442,7 +529,15 @@ namespace jetfuel {
             }
         }
 
-        bool Python_module_loader::Execute_bool(bool *executed, std::string *error, PyObject *args){
+        bool Python_module_loader::Execute_bool(bool *executed, 
+											std::string *error, PyObject *args){
+			// Adds the directory of the Python files to the Python
+			// path, executes the Python object(getting the return 
+			/// value), and then (if successful), repeats the previous
+			// steps for the files to replace.
+			// The file to replace return value takes precendence over
+			// the first file's return value.
+
             Add_to_py_path(Get_directory_of_file_name());
 
             bool returnvalue = Execute_py_object_bool(args,executed,error);
@@ -456,7 +551,8 @@ namespace jetfuel {
 
                 bool tempexecuted;
                 std::string temperror;
-                bool potentialreturnvalue = Execute_py_object_bool(args,&tempexecuted,&temperror);
+                bool potentialreturnvalue = Execute_py_object_bool(args,
+													&tempexecuted,&temperror);
                 if(tempexecuted){
                     returnvalue=potentialreturnvalue;
                 }
@@ -466,7 +562,15 @@ namespace jetfuel {
             return returnvalue;
         }
 
-        long Python_module_loader::Execute_long(bool *executed, std::string *error, PyObject *args){
+        long Python_module_loader::Execute_long(bool *executed, 
+										std::string *error, PyObject *args){
+			// Adds the directory of the Python files to the Python
+			// path, executes the Python object(getting the return 
+			/// value), and then (if successful), repeats the previous
+			// steps for the files to replace.
+			// The file to replace return value takes precendence over
+			// the first file's return value.
+
             Add_to_py_path(Get_directory_of_file_name());
 
             long returnvalue = Execute_py_object_long(args,executed,error);
@@ -480,7 +584,8 @@ namespace jetfuel {
 
                 bool tempexecuted;
                 std::string temperror;
-                long potentialreturnvalue = Execute_py_object_long(args,&tempexecuted,&temperror);
+                long potentialreturnvalue = Execute_py_object_long(args,
+													&tempexecuted,&temperror);
                 if(tempexecuted){
                     returnvalue=potentialreturnvalue;
                 }
@@ -489,7 +594,15 @@ namespace jetfuel {
             return returnvalue;
         }
 
-        double Python_module_loader::Execute_double(bool *executed, std::string *error, PyObject *args){
+        double Python_module_loader::Execute_double(bool *executed, 
+											std::string *error, PyObject *args){
+			// Adds the directory of the Python files to the Python
+			// path, executes the Python object(getting the return 
+			/// value), and then (if successful), repeats the previous
+			// steps for the files to replace.
+			// The file to replace return value takes precendence over
+			// the first file's return value.
+
             Add_to_py_path(Get_directory_of_file_name());
 
             double returnvalue = Execute_py_object_double(args,executed,error);
@@ -503,7 +616,8 @@ namespace jetfuel {
 
                 bool tempexecuted;
                 std::string temperror;
-                double potentialreturnvalue = Execute_py_object_double(args,&tempexecuted,&temperror);
+                double potentialreturnvalue = Execute_py_object_double(args,
+													&tempexecuted,&temperror);
                 if(tempexecuted){
                     returnvalue=potentialreturnvalue;
                 }
@@ -512,7 +626,15 @@ namespace jetfuel {
             return returnvalue;
         }
 
-        char* Python_module_loader::Execute_cstring(bool *executed, std::string *error, PyObject *args){
+        char* Python_module_loader::Execute_cstring(bool *executed, 
+									std::string *error, PyObject *args){
+			// Adds the directory of the Python files to the Python
+			// path, executes the Python object(getting the return 
+			/// value), and then (if successful), repeats the previous
+			// steps for the files to replace.
+			// The file to replace return value takes precendence over
+			// the first file's return value.
+
             Add_to_py_path(Get_directory_of_file_name());
 
             char *returnvalue = Execute_py_object_cstring(args,executed,error);
@@ -526,7 +648,8 @@ namespace jetfuel {
 
                 bool tempexecuted;
                 std::string temperror;
-                char *potentialreturnvalue = Execute_py_object_cstring(args,&tempexecuted,&temperror);
+                char *potentialreturnvalue = Execute_py_object_cstring(args,
+													&tempexecuted,&temperror);
                 if(tempexecuted){
                     returnvalue=potentialreturnvalue;
                 }

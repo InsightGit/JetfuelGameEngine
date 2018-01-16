@@ -83,7 +83,10 @@ namespace jetfuel {
 
             pythonclass = PyObject_CallObject(pythonfunction,constructorargs);
 
-            PyObject *pythonerrortype, *pythonerrorvalue, *pythonerrortraceback;
+			PyObject *pythonerrortype;
+			PyObject *pythonerrorvalue;
+			PyObject *pythonerrortraceback;
+
             PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, 
 						&pythonerrortraceback);
 

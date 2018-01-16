@@ -43,33 +43,85 @@ namespace jetfuel {
             std::string stringid;
             std::string string;
         };
+		/// \struct jetfuel::locale::Locale_string
+		///
+		/// A simple struct representing a localized string, with 
+		/// an id and the actual string.
+		///
+		/// \see jetfuel::locale::String_locale_file
+		/// \see jetfuel::locale::String_locale_manager
 
         class String_locale_file {
         public:
+			/// \brief Default constructor.
+			///
+			/// Default constructor.
             String_locale_file() {}
 
+			/// \brief Loads a string locale file, with a boolean 
+			/// telling whether the loading has succeeded.
+			///
+			/// Loads a string locale file, with a boolean 
+			/// telling whether the loading has succeeded.
+			///
+			/// \param std::string filename
+			/// \param std::string localename
+			/// \param std::string *error
             bool Load_string_locale_file(const std::string filename,
                                          const std::string localename,
                                          std::string *error);
+
+			/// \brief Loads a string locale file, with a cstring
+			/// returning "None" if successful, otherwise returning
+			/// an error.
+			///
+			/// Loads a string locale file, with a cstring
+			/// returning "None" if successful, otherwise returning
+			/// an error.
+			///
+			/// \param std::string filename
+			/// \param std::string localename
 			char *Load_string_locale_file(const std::string filename,
 										  const std::string localename);
 
+			/// \brief Returns whether this String_locale_file object
+			/// has been successfully loaded.
+			///
+			/// Returns whether this String_locale_file object
+			/// has been successfully loaded.
             bool Is_locale_file_set() const{
                 return m_localefileset;
             }
 
+			/// \brief Gets the locale string vector from the loading of 
+			/// this String_locale_file.
+			///
+			/// Gets the locale string vector from the loading of 
+			/// this String_locale_file.
             std::vector<Locale_string> Get_locale_string_vector() const{
                 return m_localestrings;
             }
 
+			/// \brief Gets this String_locale_file's loaded file name.
+			///
+			/// Gets this String_locale_file's loaded file name.
             std::string Get_string_locale_file_name() const{
                 return m_filename;
             }
 
+			/// \brief Gets this String_locale_file's loaded locale 
+			/// name.
+			///
+			/// Gets this String_locale_file's loaded locale name.
             std::string Get_string_locale_file_locale_name() const{
                 return m_localename;
             }
         protected:
+			/// \brief Converts a JSON file to a std::string.
+			///
+			/// Converts a JSON file to a std::string.
+			///
+			/// \param std::string filepath
             std::string Convert_json_file_to_string(const std::string filepath){
                 std::ifstream file(filepath);
 
@@ -80,27 +132,81 @@ namespace jetfuel {
                 return buffer.str();
             }
 
+			/// \brief Sets whether this String_locale_file has been set.
+			///
+			/// Sets whether this String_locale_file has been set.
+			///
+			/// \param bool localefileset
             void Set_locale_file_set(const bool localefileset){
                 m_localefileset = localefileset;
             }
 
+			/// \brief Clears the locale string vector.
+			///
+			/// Clears the locale string vector.
             void Clear_locale_string_vector(){
                 m_localestrings.clear();
             }
 
+			/// \brief Pushes back a Locale_string into the locale 
+			/// string vector.
+			///
+			/// Pushes back a Locale_string into the locale 
+			/// string vector.
+			///
+			/// \param Locale_string localestring
             void Push_back_locale_string_into_vector(Locale_string localestring){
                 m_localestrings.push_back(localestring);
             }
 
         private:
-            bool m_localefileset;
+            bool m_localefileset; ///< Whether the locale file has
+								  ///< been set.
 
-            std::vector<Locale_string> m_localestrings;
+            std::vector<Locale_string> m_localestrings; ///< The locale 
+														///< strings 
+														///< vector.
 
-            std::string m_localename;
-            std::string m_filename;
+            std::string m_localename; ///< The locale name.
+            std::string m_filename; ///< The file name.
         };
-
+		/// \class jetfuel::locale::String_locale_file
+		///
+		/// A string locale file object representing a single 
+		/// localization JSON file for a single language.
+		///
+		/// Code Example:
+		///
+		/// JSON(EnglishLocale.json):
+		///
+		/// {
+		///		"strings": [
+		///			{
+		///				"stringid": "checkboxlabel",
+		///				"string" : "click it i guess"
+		///			}
+		///		]
+		///	}
+		///
+		/// C++:
+		///
+		/// jetfuel::locale::String_locale_file englishlocalefile;
+		/// jetfuel::locale::String_locale_manager localemanager;
+		/// std::string error;
+		///
+		/// if(!englishlocalefile.Load_string_locale_file("EnglishLocale.json",
+		///		"english", &error)){
+		///		std::cerr << "Could not load EnglishLocale JSON file! " <<
+		///		"Error was: " << error << "\n";
+		///		return 1;
+		///	}
+		///
+		/// localemanager.Load_string_locale_file(englishlocalefile);
+		///
+		///	localemanager.Set_active_locale("english");
+		///
+		/// std::cout << "Hello in" << localemanager.Get_active_locale() <<  
+		///				" is " << localemanager.Get_string_from_id("hello");
     } /* namespace locale */
 } /* namespace jetfuel */
 

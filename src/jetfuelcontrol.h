@@ -19,9 +19,9 @@
 #ifndef JETFUELCONTROL_H_
 #define JETFUELCONTROL_H_
 
-#include "jetfuelcore.h"
+#include <jetfuelcore.h>
 
-#include "jetfuelcontrol/UISinterpreter.h"
-#include "jetfuelcontrol/UISmanager.h"
+#include <jetfuelcontrol/UISinterpreter.h>
+#include <jetfuelcontrol/UISmanager.h>
 
 #endif /* JETFUELCONTROL_H_ */
