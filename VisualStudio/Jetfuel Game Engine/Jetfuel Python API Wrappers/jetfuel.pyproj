@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2738d61c-1e6c-44e7-91c1-f769aba01e78}</ProjectGuid>
-    <ProjectHome>..\..\..\PythonAPI\pythonwrappers\jetfuel\</ProjectHome>
+    <ProjectHome>Z:\CentralProjectStorage\eclipseworkspace\Jetfuel Game Engine Public Git\PythonAPI\pythonwrappers\jetfuel\</ProjectHome>
     <StartupFile>__init__.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,6 +12,7 @@
     <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <InterpreterId />
+    <Name>jetfuel</Name>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />

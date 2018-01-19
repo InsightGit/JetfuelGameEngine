@@ -21,17 +21,39 @@ import tkinter
 
 from tkinter import filedialog
 from tkinter import messagebox
-import tkinterbuttoncallbacks
 
 import pickle
 
+import PIL.Image
+import PIL.ImageTk
+
+from projecthandler import tkinterbuttoncallbacks
+from projecthandler import jetfueldetectors
+
+def createBaseLayout(windowparent):
+    welcometext = tkinter.Label(windowparent,
+                                text="Jetfuel Game Engine project helper",
+                                font="-weight bold");
+    jetfueliconimage = PIL.ImageTk.PhotoImage(PIL.Image.\
+                                              open("jetfuellogosmall.png"));
+    jetfuelicon = tkinter.Label(windowparent, image=jetfueliconimage);
+    jetfuelicon.image = jetfueliconimage;
+
+    welcometext.grid(row=0, column=2);
+    jetfuelicon.grid(row=0, column=0);
+
 def createButtons(tkinterwindow):
-    projectButton = tkinter.Button(tkinterwindow, text="Create new Project",
+    projectbutton = tkinter.Button(tkinterwindow, text="Create new Project",
                                    bg='green',
                                    command=tkinterbuttoncallbacks.\
                                    createProjectCallback);
+    quitbutton = tkinter.Button(tkinterwindow, text="Quit", bg='red',
+                                command= lambda:
+                                tkinterbuttoncallbacks.quitWindowCallback(
+                                                                tkinterwindow));
 
-    projectButton.pack();
+    projectbutton.grid(row=3, column=0, columnspan=2);
+    quitbutton.grid(row=3, column=3)
 
 def retrieveJetfuelDir():
     done = False;
@@ -59,15 +81,18 @@ def retrieveJetfuelDir():
 
 def main():
     window = tkinter.Tk();
+    window.wm_title("Jetfuel Game Engine Project Helper")
+    window.iconbitmap("icon.ico");
+
     doesrefsexist = os.path.exists("prefs");
     if(doesrefsexist):
         picklereadfile = open("prefs", "rb");
     picklefile = open("prefs", "wb");
 
+    createBaseLayout(window);
     createButtons(window);
 
-    if(not os.path.isdir("../../../PythonAPI/pythonwrappers") or
-       not os.path.isdir("../../../src")):
+    if(not jetfueldetectors.isJetfuel("../../../")):
        if(not doesrefsexist):
            jetfueldir = retrieveJetfuelDir();
 
