@@ -75,7 +75,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\src;$(SolutionDir)\..\..\windowsdependencies\SDL2-2.0.6\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_ttf-2.0.14\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_mixer-2.0.1\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_gfx-1.0.3;$(SolutionDir)\..\..\windowsdependencies\rapidjson-master\include;$(SolutionDir)\..\..\windowsdependencies\Python32-36\include;$(SolutionDir)\..\..\windowsdependencies\crossguid-0.2.2;$(SolutionDir)\..\..\windowsdependencies\SDL2_image-2.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\include;$(SolutionDir)\..\..\windowsdependencies\SDL2-2.0.6\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_ttf-2.0.14\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_mixer-2.0.1\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_gfx-1.0.3;$(SolutionDir)\..\..\windowsdependencies\rapidjson-master\include;$(SolutionDir)\..\..\windowsdependencies\Python32-36\include;$(SolutionDir)\..\..\windowsdependencies\crossguid-0.2.2;$(SolutionDir)\..\..\windowsdependencies\SDL2_image-2.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>

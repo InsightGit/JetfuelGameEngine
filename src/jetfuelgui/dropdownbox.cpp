@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "dropdownbox.h"
+#include <jetfuelgui/dropdownbox.h>
 
 namespace jetfuel {
     namespace gui {

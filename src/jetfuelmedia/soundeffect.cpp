@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "soundeffect.h"
+#include <jetfuelmedia/soundeffect.h>
 
 namespace jetfuel{
 

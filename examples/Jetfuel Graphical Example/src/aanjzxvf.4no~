@@ -1,0 +1,104 @@
+/*
+ *   Project Neon Graphical Example - An example of Project Neon, the moddable 2D RPG game engine
+ *   Copyright (C) 2018 InfernoStudios
+ *
+ *  Project Neon Graphical Example is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Project Neon Graphical Example is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Project Neon Graphical Example.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include <iostream>
+
+#include <thread>
+
+#ifdef _WIN32
+	#define getcwd _getcwd
+	#define _CRTDBG_MAP_ALLOC  
+    #include <stdlib.h>  
+    #include <crtdbg.h>  
+#endif
+#define winnull 0xcccccccc
+
+#include <jetfueldraw.h>
+#include <jetfuelinspire.h>
+#include <jetfuelcontrol.h>
+#include <jetfuelgui.h>
+#include <jetfuelmedia.h>
+#include <jetfuellocale.h>
+
+void Scene_manager_python_tests_thread(
+                         jetfuel::draw::Scene_manager *scenemanager,
+                         jetfuel::core::Message_bus *messagebus,
+                         jetfuel::inspire::Pointer_bridge *pointerbridge){
+    jetfuel::inspire::Python_module_loader
+     scenemanagertests("displaydrawables","drawabledisplay",
+                       "Scripts");
+
+    bool executedstatus;
+    std::string error;
+
+    PyObject *scenemanagerpypointer = PyTuple_Pack(3,
+                                       PyLong_FromLong(reinterpret_cast<long int>
+                                        (scenemanager)),
+                                       PyLong_FromLong(reinterpret_cast<long int>
+                                        (messagebus)),
+                                       PyLong_FromLong(reinterpret_cast<long int>
+                                        (pointerbridge)));
+
+	int holdingGIL = PyGILState_Check(); // for debugging purposes
+
+    scenemanagertests.Execute(&executedstatus, &error,
+                            scenemanagerpypointer);
+
+    if(!executedstatus){
+        std::cerr << "Python Interpreter ERROR! Error is:" <<
+                      error << "\n";
+    }
+}
+
+int main(){
+    #ifdef _WIN32
+	    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	#endif
+    const std::string windowlabel = "Jetfuel Game Engine Graphical Example";
+    const jetfuel::draw::Vector2d_int windowposition(50,50);
+    const jetfuel::draw::Vector2d_int windowsize(1920,1080);
+    const jetfuel::draw::Image windowicon("exampleicon.png",
+                        jetfuel::draw::Vector2d_int(16, 16));
+
+    jetfuel::core::Message_bus messagebus(true);
+    jetfuel::draw::Scene_manager scenemanager;
+	jetfuel::draw::Scene scene2(2);
+
+    jetfuel::draw::Sprite background;
+    jetfuel::draw::Image backgroundimage;
+    jetfuel::draw::Circle_2d_shape circle(jetfuel::draw::Circle2d_int(300,300,30));
+    jetfuel::draw::Font globalfont("default.ttf");
+
+    jetfuel::control::UIS_manager UISmanager(&messagebus,
+                                          scenemanager.Get_window_id());
+    jetfuel::control::UIS_interpreter UISinterpreter(&messagebus);
+    jetfuel::gui::Menu menu(500,100,50);
+    jetfuel::gui::Check_box checkbox;
+    jetfuel::gui::Drop_down_box dropdownbox;
+    jetfuel::gui::Progress_bar progressbar;
+    jetfuel::gui::Slider slider;
+
+    jetfuel::gui::Menu::Button_characteristics resumebutton;
+    jetfuel::gui::Menu::Button_characteristics quitbutton;
+    jetfuel::draw::Text::Text_characteristics checkboxlabelchars;
+    jetfuel::draw::Text::Text_characteristics dropdownboxchars;
+    jetfuel::draw::Rectangle_2d_shape::Rectangle_2d_shape_characteristics
+     sliderrailchars;
+    jetfuel::draw::Circle_2d_shape::Circle_2d_shape_characteristics
+     sliderbuttonchars;
+    jetfuel::control::UIS_input_actions sliderinputaction

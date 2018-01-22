@@ -16,9 +16,9 @@
 */
 
 
-#include "scene.h"
+#include <jetfueldraw/scene.h>
 
-#include "scenemanager.h"
+#include <jetfueldraw/scenemanager.h>
 
 namespace jetfuel {
     namespace draw {

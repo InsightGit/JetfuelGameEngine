@@ -15,7 +15,7 @@
 * limitations under the License.
 */
  
-#include "circle2dshape.h"
+#include <jetfueldraw/circle2dshape.h>
 
 namespace jetfuel{
     namespace draw{

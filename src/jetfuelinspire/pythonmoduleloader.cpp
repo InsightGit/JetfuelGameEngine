@@ -15,9 +15,9 @@
 * limitations under the License.
 */
 
-#include "pythonmoduleloader.h"
+#include <jetfuelinspire/pythonmoduleloader.h>
 
-#include "pythonclassloader.h"
+#include <jetfuelinspire/pythonclassloader.h>
 
 namespace jetfuel {
     namespace inspire {
@@ -98,7 +98,7 @@ namespace jetfuel {
 
             if(pythonerrortraceback != nullptr){
                 returnvalue.append("\nTraceback:");
-                returnvalue.append(Get_py_error(pythonerrortraceback);
+                returnvalue.append(Get_py_error(pythonerrortraceback));
             }
 
 
@@ -441,7 +441,7 @@ namespace jetfuel {
 					pythonfunction = PyObject_GetAttrString(pythonmodule, 
 													Get_function_name().c_str());
 				}else{
-					*error = "I was unable to import the python file. "+
+					*error = std::string("I was unable to import the python file. ")+
 						"Does it exist? Does it have no import errors?";
 					*executed = false;
 					return "";

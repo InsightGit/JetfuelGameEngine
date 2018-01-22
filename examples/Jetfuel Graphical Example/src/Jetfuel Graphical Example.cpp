@@ -77,7 +77,7 @@ int main(){
 
     jetfuel::core::Message_bus messagebus(true);
     jetfuel::draw::Scene_manager scenemanager;
-    jetfuel::draw::Scene scene1(1);
+	jetfuel::draw::Scene scene2(2);
 
     jetfuel::draw::Sprite background;
     jetfuel::draw::Image backgroundimage;
@@ -177,6 +177,7 @@ int main(){
 				char *backgroundlocation =
                 getbackgroundlocation.Execute_cstring(&executedstatus,
                                                       &error, nullptr);
+				jetfuel::draw::Scene scene1(1);
                 if(!executedstatus){
                     std::cerr << "Python Interpreter ERROR! Error is:" <<
                                   error << "\n";
@@ -199,6 +200,8 @@ int main(){
                 circle.Set_anti_aliasing_status(true);
                 circle.Set_filled_circle_status(true);
                 circle.Set_color(jetfuel::draw::Color::Green);
+
+				scenemanager.Switch_current_scene(&scene2);
 
                 if(!soundeffect.Load_audio_file("sfx.ogg")){
                     std::cerr << "Could not load sfx.ogg! SDL error is:"
@@ -243,7 +246,7 @@ int main(){
 
                 messagebus.Post_message("menudraw");
             }else if(messagebus.Does_message_exist("menudraw")){
-                scene1.Attach_drawable(&menu,3);
+                scene2.Attach_drawable(&menu,3);
                 menu.Set_position(jetfuel::draw::Vector2d_int(460,340));
 
                 buttonimage.Set_image("button.png",&scenemanager);
@@ -272,7 +275,7 @@ int main(){
                     return 1;
                 }
             }else if(messagebus.Does_message_exist("spawncheckbox")){
-                scene1.Attach_drawable(&checkbox,2);
+                scene2.Attach_drawable(&checkbox,2);
                 checkbox.Load_check_box_images(checkboxactiveimage,
                                                checkboxdisabledimage);
                 checkbox.Set_UIS_action_to_watch("Mouse_click");
@@ -291,7 +294,7 @@ int main(){
                                                    50);
                 messagebus.Post_message("dropdownboxspawn");
             }else if(messagebus.Does_message_exist("dropdownboxspawn")){
-                scene1.Attach_drawable(&dropdownbox,2);
+                scene2.Attach_drawable(&dropdownbox,2);
                 if(!dropdownbox.Load_base_box_image(dropdownboximage,
                                                     jetfuel::draw::Color::White,
                                                     jetfuel::draw::Vector2d_uint(
@@ -315,7 +318,7 @@ int main(){
 
                 messagebus.Post_message("progressbarspawn");
             }else if(messagebus.Does_message_exist("progressbarspawn")){
-                scene1.Attach_drawable(&progressbar,2);
+                scene2.Attach_drawable(&progressbar,2);
 
                 progressbar.Set_progress_bar(progressbarholderimage,
                                              jetfuel::draw::Color::Magenta,
@@ -325,7 +328,7 @@ int main(){
 
                 messagebus.Post_message("sliderspawn");
             }else if(messagebus.Does_message_exist("sliderspawn")){
-                scene1.Attach_drawable(&slider, 6);
+                scene2.Attach_drawable(&slider, 6);
 
                 slider.Set_position(jetfuel::draw::Vector2d_int(600,500));
                 slider.Set_number_of_statuses(5);
@@ -343,7 +346,7 @@ int main(){
                 slider.Set_control_scheme(sliderinputactions);
             }else if(messagebus.Does_message_exist("resume")){
                 if(!limitclickstimerset){
-                    scene1.Disable_drawable(&menu);
+                    scene2.Disable_drawable(&menu);
                     messagebus.Post_message("spawncheckbox");
 
                     limitclickstimer.Start();

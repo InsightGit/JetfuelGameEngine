@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "menu.h"
+#include <jetfuelgui/menu.h>
 
 namespace jetfuel {
     namespace gui {

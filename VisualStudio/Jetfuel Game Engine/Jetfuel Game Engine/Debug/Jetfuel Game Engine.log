@@ -1,1 +1,4 @@
-﻿  Jetfuel Game Engine.vcxproj -> Z:\CentralProjectStorage\eclipseworkspace\Jetfuel Game Engine Public Git\VisualStudio\Jetfuel Game Engine\Debug\Jetfuel Game Engine.lib
+﻿  scenemanager.cpp
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(140): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(186): warning C4018: '<=': signed/unsigned mismatch
+  Jetfuel Game Engine.vcxproj -> Z:\CentralProjectStorage\eclipseworkspace\Jetfuel Game Engine Public Git\VisualStudio\Jetfuel Game Engine\Debug\Jetfuel Game Engine.lib

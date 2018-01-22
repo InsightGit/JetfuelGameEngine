@@ -107,7 +107,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\src;$(SolutionDir)\..\..\windowsdependencies\SDL2-2.0.6\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_ttf-2.0.14\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_mixer-2.0.1\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_gfx-1.0.3;$(SolutionDir)\..\..\windowsdependencies\rapidjson-master\include;$(SolutionDir)\..\..\windowsdependencies\Python32-36\include;$(SolutionDir)\..\..\windowsdependencies\crossguid-0.2.2;$(SolutionDir)\..\..\windowsdependencies\SDL2_image-2.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\include;$(SolutionDir)\..\..\windowsdependencies\SDL2-2.0.6\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_ttf-2.0.14\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_mixer-2.0.1\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_gfx-1.0.3;$(SolutionDir)\..\..\windowsdependencies\rapidjson-master\include;$(SolutionDir)\..\..\windowsdependencies\Python32-36\include;$(SolutionDir)\..\..\windowsdependencies\crossguid-0.2.2;$(SolutionDir)\..\..\windowsdependencies\SDL2_image-2.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

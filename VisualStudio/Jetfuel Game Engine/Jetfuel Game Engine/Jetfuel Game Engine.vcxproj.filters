@@ -34,134 +34,27 @@
     <Filter Include="Source Files\jetfuelmedia">
       <UniqueIdentifier>{60d43854-00f1-46bf-9dd9-895f5777739f}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\src\config.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelcontrol.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelcore.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelgui.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelinspire.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuellocale.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelmedia.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelcontrol\UISinterpreter.h">
-      <Filter>Source Files\jetfuelcontrol</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelcontrol\UISmanager.h">
-      <Filter>Source Files\jetfuelcontrol</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelcore\messagebus.h">
-      <Filter>Source Files\jetfuelcore</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelcore\timer.h">
-      <Filter>Source Files\jetfuelcore</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\circle2d.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\circle2dshape.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\circleinterface.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\color.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\drawable.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\font.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\image.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\rect2d.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\rectangle2dshape.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\rectangleinterface.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\scene.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\scenemanager.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\sprite.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\text.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfueldraw\vector2d.h">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelgui\button.h">
-      <Filter>Source Files\jetfuelgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelgui\checkbox.h">
-      <Filter>Source Files\jetfuelgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelgui\dropdownbox.h">
-      <Filter>Source Files\jetfuelgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelgui\iclickable.h">
-      <Filter>Source Files\jetfuelgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelgui\menu.h">
-      <Filter>Source Files\jetfuelgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelgui\progressbar.h">
-      <Filter>Source Files\jetfuelgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelgui\slider.h">
-      <Filter>Source Files\jetfuelgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelinspire\pointerbridge.h">
-      <Filter>Source Files\jetfuelinspire</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelinspire\pythonclassloader.h">
-      <Filter>Source Files\jetfuelinspire</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelinspire\pythonmoduleloader.h">
-      <Filter>Source Files\jetfuelinspire</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuellocale\stringlocalefile.h">
-      <Filter>Source Files\jetfuellocale</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuellocale\stringlocalemanager.h">
-      <Filter>Source Files\jetfuellocale</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelmedia\music.h">
-      <Filter>Source Files\jetfuelmedia</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelmedia\sound.h">
-      <Filter>Source Files\jetfuelmedia</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\jetfuelmedia\soundeffect.h">
-      <Filter>Source Files\jetfuelmedia</Filter>
-    </ClInclude>
+    <Filter Include="Header Files\jetfuelcontrol">
+      <UniqueIdentifier>{ed43dfdb-2ec2-4436-9c39-df21bc761124}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jetfuelcore">
+      <UniqueIdentifier>{83686646-391d-497b-acc5-8192ec75a743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jetfueldraw">
+      <UniqueIdentifier>{088bc5f1-21f3-445d-8e1b-344f460bad41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jetfuelgui">
+      <UniqueIdentifier>{869675ea-9012-4486-bf64-1ebeef2f6ae0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jetfuelinspire">
+      <UniqueIdentifier>{0444ff0e-a504-44b4-b454-7236ee023814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jetfuellocale">
+      <UniqueIdentifier>{a8090060-066c-4866-8a54-6ec276fefe4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jetfuelmedia">
+      <UniqueIdentifier>{a8c47f34-0801-450f-a3dd-ae92ad90a5f2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\jetfuelcontrol\UISinterpreter.cpp">
@@ -235,8 +128,131 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\src\jetfueldraw\circle2d.tpp">
-      <Filter>Source Files\jetfueldraw</Filter>
-    </None>
+    <ClInclude Include="..\..\..\include\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelcontrol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelcore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelgui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelinspire.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuellocale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelmedia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelcontrol\UISinterpreter.h">
+      <Filter>Header Files\jetfuelcontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelcontrol\UISmanager.h">
+      <Filter>Header Files\jetfuelcontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelcore\messagebus.h">
+      <Filter>Header Files\jetfuelcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelcore\timer.h">
+      <Filter>Header Files\jetfuelcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelgui\button.h">
+      <Filter>Header Files\jetfuelgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelgui\checkbox.h">
+      <Filter>Header Files\jetfuelgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelgui\dropdownbox.h">
+      <Filter>Header Files\jetfuelgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelgui\iclickable.h">
+      <Filter>Header Files\jetfuelgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelgui\menu.h">
+      <Filter>Header Files\jetfuelgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelgui\progressbar.h">
+      <Filter>Header Files\jetfuelgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelgui\slider.h">
+      <Filter>Header Files\jetfuelgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\circle2d.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\circle2dshape.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\circleinterface.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\color.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\drawable.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\font.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\image.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\rect2d.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\rectangle2dshape.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\rectangleinterface.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\scene.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\scenemanager.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\sprite.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\text.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfueldraw\vector2d.h">
+      <Filter>Header Files\jetfueldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelinspire\pointerbridge.h">
+      <Filter>Header Files\jetfuelinspire</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelinspire\pythonclassloader.h">
+      <Filter>Header Files\jetfuelinspire</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelinspire\pythonmoduleloader.h">
+      <Filter>Header Files\jetfuelinspire</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuellocale\stringlocalefile.h">
+      <Filter>Header Files\jetfuellocale</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuellocale\stringlocalemanager.h">
+      <Filter>Header Files\jetfuellocale</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelmedia\music.h">
+      <Filter>Header Files\jetfuelmedia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelmedia\sound.h">
+      <Filter>Header Files\jetfuelmedia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\jetfuelmedia\soundeffect.h">
+      <Filter>Header Files\jetfuelmedia</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

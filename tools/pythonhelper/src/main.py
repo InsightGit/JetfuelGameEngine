@@ -47,13 +47,21 @@ def createButtons(tkinterwindow):
                                    bg='green',
                                    command=tkinterbuttoncallbacks.\
                                    createProjectCallback);
+
+    selectprojectbutton = tkinter.Button(tkinterwindow,
+                                        text="Select an existing project",
+                                        command=tkinterbuttoncallbacks.\
+                                        selectProjectCallback);
+
     quitbutton = tkinter.Button(tkinterwindow, text="Quit", bg='red',
                                 command= lambda:
                                 tkinterbuttoncallbacks.quitWindowCallback(
                                                                 tkinterwindow));
 
+
     projectbutton.grid(row=3, column=0, columnspan=2);
-    quitbutton.grid(row=3, column=3)
+    selectprojectbutton.grid(row=3, column=2, columnspan=2)
+    quitbutton.grid(row=3, column=4);
 
 def retrieveJetfuelDir():
     done = False;

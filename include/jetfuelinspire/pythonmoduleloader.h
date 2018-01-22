@@ -44,7 +44,8 @@ namespace jetfuel {
                 Python_returnvalue_ASCII_encoding_exception(
 									const std::string filename,
 									const std::string functionname)
-                                    : std::runtime_error("Error encoding return "
+                                    : std::runtime_error(
+									std::string("Error encoding return ")
 									 + "value ASCII in python module "+ filename+
 									   " in function "+ functionname){}
             };

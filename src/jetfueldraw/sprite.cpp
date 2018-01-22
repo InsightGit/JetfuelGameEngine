@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "sprite.h"
+#include <jetfueldraw/sprite.h>
 
 #include <iostream>
 

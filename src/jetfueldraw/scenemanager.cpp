@@ -15,10 +15,10 @@
 * limitations under the License.
 */
 
-#include "scenemanager.h"
+#include <jetfueldraw/scenemanager.h>
 
-#include "scene.h"
-#include "image.h"
+#include <jetfueldraw/scene.h>
+#include <jetfueldraw/image.h>
 
 namespace jetfuel {
     namespace draw {
@@ -150,13 +150,8 @@ namespace jetfuel {
         }
 
         void Scene_manager::Switch_current_scene(Scene *scene){
-            // Destroys current scene (if necessary), then switches
-            // scene.
+            // Switches the scene.
 
-            Scene *currentscene = Get_current_scene();
-            if(currentscene != nullptr){
-                delete currentscene;
-            }
             Set_current_scene(scene);
             Get_current_scene()->Assign_renderer(renderer);
         }

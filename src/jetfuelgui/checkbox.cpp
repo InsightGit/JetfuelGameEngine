@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "checkbox.h"
+#include <jetfuelgui/checkbox.h>
 
 namespace jetfuel {
     namespace gui {

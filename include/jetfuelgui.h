@@ -19,7 +19,7 @@
 #ifndef JETFUELGUI_H_
 #define JETFUELGUI_H_
 
-#include "jetfuelcore.h>
+#include <jetfuelcore.h>
 
 #include <jetfuelgui/menu.h>
 #include <jetfuelgui/checkbox.h>

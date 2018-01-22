@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "button.h"
+#include <jetfuelgui/button.h>
 
 namespace jetfuel {
     namespace gui {

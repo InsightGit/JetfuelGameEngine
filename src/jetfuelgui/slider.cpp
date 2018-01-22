@@ -15,7 +15,7 @@
 * limitations under the License.
 */
  
-#include "slider.h"
+#include <jetfuelgui/slider.h>
 
 namespace jetfuel{
 

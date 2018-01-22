@@ -5,9 +5,8 @@ from cx_Freeze import setup, Executable
 
 # Dependencies are automatically detected, but it might need fine tuning.
 build_exe_options = {"includes": ["tkinter","PIL"], "include_files":
-                                                ["dependencies/tcl86t.dll",
-                                                "dependencies/tk86t.dll"]};
-packages = ['projecthandler'];
+                    ["dependencies/tcl86t.dll","dependencies/tk86t.dll"],
+                     "packages": ["projecthandler"]};
 
 os.environ['TCL_LIBRARY'] = "dependencies/tcl8.6";
 os.environ['TK_LIBRARY'] = "dependencies/tk8.6";

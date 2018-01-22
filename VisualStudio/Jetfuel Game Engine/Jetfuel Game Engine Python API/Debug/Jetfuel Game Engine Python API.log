@@ -1,2 +1,56 @@
-﻿     Creating library Z:\CentralProjectStorage\eclipseworkspace\Jetfuel Game Engine Public Git\VisualStudio\Jetfuel Game Engine\Debug\Jetfuel Game Engine Python API.lib and object Z:\CentralProjectStorage\eclipseworkspace\Jetfuel Game Engine Public Git\VisualStudio\Jetfuel Game Engine\Debug\Jetfuel Game Engine Python API.exp
+﻿  stringconversions.cpp
+  jetfuelmediactypes.cpp
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(140): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(186): warning C4018: '<=': signed/unsigned mismatch
+  jetfuellocalectypes.cpp
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(140): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(186): warning C4018: '<=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuellocale\stringlocalemanager.h(76): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuellocale\stringlocalemanager.h(101): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfuellocalectypes.cpp(103): warning C4018: '<=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfuellocalectypes.cpp(104): warning C4297: 'String_locale_file_get_locale_string_vector_element': function assumed not to throw an exception but does
+  z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfuellocalectypes.cpp(104): note: The function is extern "C" and /EHc was specified
+  jetfuelinspirectypes.cpp
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelinspire\pointerbridge.h(50): warning C4018: '>': signed/unsigned mismatch
+  jetfuelguictypes.cpp
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(140): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(186): warning C4018: '<=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelinspire\pointerbridge.h(50): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelgui\menu.h(173): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelgui\menu.h(178): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelgui\menu.h(211): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelgui\menu.h(216): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelgui\menu.h(235): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelgui\menu.h(243): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelgui\menu.h(336): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelgui\dropdownbox.h(318): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelgui\dropdownbox.h(423): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelgui\dropdownbox.h(497): warning C4018: '>': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcontrol\uismanager.h(223): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcontrol\uismanager.h(262): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfuelguictypes.cpp(481): warning C4190: 'Slider_get_slider_rail_characteristics' has C-linkage specified, but returns UDT 'jetfuel::draw::Rectangle_2d_shape_characteristics_replacement' which is incompatible with C
+  z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\jetfueldraw\rectangle2dshapecharacteristicsreplacement.h(26): note: see declaration of 'jetfuel::draw::Rectangle_2d_shape_characteristics_replacement'
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfuelguictypes.cpp(495): warning C4190: 'Slider_get_slider_button_characteristics' has C-linkage specified, but returns UDT 'jetfuel::draw::Circle_2d_shape_characteristics_replacement' which is incompatible with C
+  z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\jetfueldraw\circle2dshapecharacteristicsreplacement.h(25): note: see declaration of 'jetfuel::draw::Circle_2d_shape_characteristics_replacement'
+  jetfueldrawctypes.cpp
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(140): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(186): warning C4018: '<=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfueldrawctypes.cpp(90): warning C4267: 'initializing': conversion from 'size_t' to 'char', possible loss of data
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfueldrawctypes.cpp(578): warning C4267: 'initializing': conversion from 'size_t' to 'char', possible loss of data
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfueldrawctypes.cpp(619): warning C4267: 'initializing': conversion from 'size_t' to 'char', possible loss of data
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfueldrawctypes.cpp(631): warning C4267: 'initializing': conversion from 'size_t' to 'char', possible loss of data
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfueldrawctypes.cpp(837): warning C4267: 'initializing': conversion from 'size_t' to 'char', possible loss of data
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfueldrawctypes.cpp(992): warning C4267: 'initializing': conversion from 'size_t' to 'char', possible loss of data
+  jetfuelcorectypes.cpp
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(140): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(186): warning C4018: '<=': signed/unsigned mismatch
+  jetfuelcontrolctypes.cpp
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(140): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcore\messagebus.h(186): warning C4018: '<=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcontrol\uismanager.h(223): warning C4018: '>=': signed/unsigned mismatch
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\include\jetfuelcontrol\uismanager.h(262): warning C4018: '>=': signed/unsigned mismatch
+  Generating Code...
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfuelmediactypes.cpp(80): warning C4172: returning address of local variable or temporary: returnvalue
+z:\centralprojectstorage\eclipseworkspace\jetfuel game engine public git\pythonapi\src\ctypeswrappers\jetfuelmediactypes.cpp(104): warning C4172: returning address of local variable or temporary: returnvalue
+     Creating library Z:\CentralProjectStorage\eclipseworkspace\Jetfuel Game Engine Public Git\VisualStudio\Jetfuel Game Engine\Debug\Jetfuel Game Engine Python API.lib and object Z:\CentralProjectStorage\eclipseworkspace\Jetfuel Game Engine Public Git\VisualStudio\Jetfuel Game Engine\Debug\Jetfuel Game Engine Python API.exp
   Jetfuel Game Engine Python API.vcxproj -> Z:\CentralProjectStorage\eclipseworkspace\Jetfuel Game Engine Public Git\VisualStudio\Jetfuel Game Engine\Debug\Jetfuel Game Engine Python API.dll

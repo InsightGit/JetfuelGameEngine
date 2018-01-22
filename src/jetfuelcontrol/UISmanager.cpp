@@ -223,8 +223,8 @@ namespace jetfuel {
 
             // Detect platform event function invokation
 
-            if(NEON_COMPILED_OS!="Android" && NEON_COMPILED_OS!="iOS"
-                               && NEON_COMPILED_OS != "iOS Simulator"){
+            if(JETFUEL_COMPILED_OS!="Android" && JETFUEL_COMPILED_OS!="iOS"
+                               && JETFUEL_COMPILED_OS != "iOS Simulator"){
                 Detect_desktop_event(event);
             }else{
                 Detect_mobile_event(event);

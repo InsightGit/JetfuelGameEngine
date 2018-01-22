@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "music.h"
+#include <jetfuelmedia/music.h>
 
 namespace jetfuel {
     namespace media {

@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "UISinterpreter.h"
+#include <jetfuelcontrol/UISinterpreter.h>
 
 namespace jetfuel {
     namespace control {

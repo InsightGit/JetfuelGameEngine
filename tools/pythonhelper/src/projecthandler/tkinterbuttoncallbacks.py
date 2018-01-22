@@ -35,9 +35,10 @@ from tkinter import StringVar
 
 import pickle
 
-import jetfueldetectors
+from projecthandler import jetfueldetectors
+from projecthandler.propertieswindow import PropertiesWindow
 
-def disable_event():
+def disableEvent():
     pass;
 
 def copyGameEngineFiles(location, jetfueldir):
@@ -78,6 +79,11 @@ def createProject(windowparent, location):
 
     windowparent.destroy();
 
+def askProperties(windowparent, location):
+    propertyaskingwindow = PropertiesWindow(location, windowparent);
+
+    propertyaskingwindow.gridAndLoop();
+
 def startCreatingProject(projectlocation):
     barwindow = Tk();
     progressbar = ttk.Progressbar(barwindow, orient="horizontal", length=100,
@@ -89,16 +95,28 @@ def startCreatingProject(projectlocation):
                             text="Creating project...");
     barupdatetext.pack();
 
-    thread = Thread(target = createProject, args = (barwindow,
+    thread = Thread(target = askProperties, args = (barwindow,
                                                     projectlocation));
     thread.start();
 
-    barwindow.protocol("WM_DELETE_WINDOW", disable_event);
+    barwindow.protocol("WM_DELETE_WINDOW", disableEvent);
     barwindow.mainloop();
+
+
+def selectProjectCallback():
+    projectlocation = filedialog.askdirectory(initialdir=getcwd(),
+                                              title="Select an existing "+
+                                                    "project's location");
+    if(projectlocation is not None):
+        if(jetfueldetectors.isProject(projectlocation)):
+            None;
+        else:
+            messagebox.showinfo(message="No project files were found in this "+
+                                        "directory!", icon="error");
 
 def createProjectCallback():
     projectlocation = filedialog.askdirectory(initialdir=getcwd(),
-                                            title="Select a Project location");
+                                            title="Select a project location");
     if(projectlocation==""):
         messagebox.showinfo(message="Cancel button was hit, "+
                             "no project will be made.");

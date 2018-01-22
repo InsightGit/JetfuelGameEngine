@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "image.h"
+#include <jetfueldraw/image.h>
 
 namespace jetfuel {
     namespace draw {

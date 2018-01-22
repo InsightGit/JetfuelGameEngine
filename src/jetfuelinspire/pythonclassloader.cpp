@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "pythonclassloader.h"
+#include <jetfuelinspire/pythonclassloader.h>
 
 namespace jetfuel {
     namespace inspire {
@@ -37,7 +37,7 @@ namespace jetfuel {
                 PyErr_Fetch(&pythonerrortype, &pythonerrorvalue, 
 							&pythonerrortraceback);
 
-                *error = Python_module_loader::Py_err_to_cstring(pythonerrortype,
+                *error = Python_module_loader::Py_err_to_string(pythonerrortype,
 										pythonerrorvalue,pythonerrortraceback);
                 *executed = false;
                 return;
@@ -47,7 +47,7 @@ namespace jetfuel {
 							&pythonerrortraceback);
 
                 *executed = false;
-				*error = Python_module_loader::Py_err_to_cstring(pythonerrortype,
+				*error = Python_module_loader::Py_err_to_string(pythonerrortype,
 					pythonerrorvalue, pythonerrortraceback);
                 return;
             }
@@ -93,7 +93,7 @@ namespace jetfuel {
             if(pythonerrortype==NULL){
                 *executed = true;
             }else{
-                *error = Python_module_loader::Py_err_to_cstring(pythonerrortype,
+                *error = Python_module_loader::Py_err_to_string(pythonerrortype,
 										pythonerrorvalue,pythonerrortraceback);
                 *executed = false;
             }
@@ -139,7 +139,7 @@ namespace jetfuel {
             if(pythonerrortype==NULL){
                 *executed = true;
             }else{
-                *error = Python_module_loader::Py_err_to_cstring(
+                *error = Python_module_loader::Py_err_to_string(
 													pythonerrortype,
                                                     pythonerrorvalue,
                                                     pythonerrortraceback);

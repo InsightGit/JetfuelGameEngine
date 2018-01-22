@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "messagebus.h"
+#include <jetfuelcore/messagebus.h>
 
 namespace jetfuel {
     namespace core {

@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "color.h"
+#include <jetfueldraw/color.h>
 
 namespace jetfuel {
     namespace draw {

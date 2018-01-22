@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-#include "rectangle2dshape.h"
+#include <jetfueldraw/rectangle2dshape.h>
 
 namespace jetfuel {
     namespace draw {

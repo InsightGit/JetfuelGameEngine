@@ -19,50 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\src\config.h" />
-    <ClInclude Include="..\..\..\src\jetfuelcontrol.h" />
-    <ClInclude Include="..\..\..\src\jetfuelcontrol\UISinterpreter.h" />
-    <ClInclude Include="..\..\..\src\jetfuelcontrol\UISmanager.h" />
-    <ClInclude Include="..\..\..\src\jetfuelcore.h" />
-    <ClInclude Include="..\..\..\src\jetfuelcore\messagebus.h" />
-    <ClInclude Include="..\..\..\src\jetfuelcore\timer.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\circle2d.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\circle2dshape.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\circleinterface.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\color.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\drawable.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\font.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\image.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\rect2d.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\rectangle2dshape.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\rectangleinterface.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\scene.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\scenemanager.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\sprite.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\text.h" />
-    <ClInclude Include="..\..\..\src\jetfueldraw\vector2d.h" />
-    <ClInclude Include="..\..\..\src\jetfuelgui.h" />
-    <ClInclude Include="..\..\..\src\jetfuelgui\button.h" />
-    <ClInclude Include="..\..\..\src\jetfuelgui\checkbox.h" />
-    <ClInclude Include="..\..\..\src\jetfuelgui\dropdownbox.h" />
-    <ClInclude Include="..\..\..\src\jetfuelgui\iclickable.h" />
-    <ClInclude Include="..\..\..\src\jetfuelgui\menu.h" />
-    <ClInclude Include="..\..\..\src\jetfuelgui\progressbar.h" />
-    <ClInclude Include="..\..\..\src\jetfuelgui\slider.h" />
-    <ClInclude Include="..\..\..\src\jetfuelinspire.h" />
-    <ClInclude Include="..\..\..\src\jetfuelinspire\pointerbridge.h" />
-    <ClInclude Include="..\..\..\src\jetfuelinspire\pythonclassloader.h" />
-    <ClInclude Include="..\..\..\src\jetfuelinspire\pythonmoduleloader.h" />
-    <ClInclude Include="..\..\..\src\jetfuellocale.h" />
-    <ClInclude Include="..\..\..\src\jetfuellocale\stringlocalefile.h" />
-    <ClInclude Include="..\..\..\src\jetfuellocale\stringlocalemanager.h" />
-    <ClInclude Include="..\..\..\src\jetfuelmedia.h" />
-    <ClInclude Include="..\..\..\src\jetfuelmedia\music.h" />
-    <ClInclude Include="..\..\..\src\jetfuelmedia\sound.h" />
-    <ClInclude Include="..\..\..\src\jetfuelmedia\soundeffect.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\..\src\jetfuelcontrol\UISinterpreter.cpp" />
     <ClCompile Include="..\..\..\src\jetfuelcontrol\UISmanager.cpp" />
     <ClCompile Include="..\..\..\src\jetfuelcore\messagebus.cpp" />
@@ -88,7 +44,48 @@
     <ClCompile Include="..\..\..\src\jetfuelmedia\soundeffect.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\src\jetfueldraw\circle2d.tpp" />
+    <ClInclude Include="..\..\..\include\config.h" />
+    <ClInclude Include="..\..\..\include\jetfuelcontrol.h" />
+    <ClInclude Include="..\..\..\include\jetfuelcontrol\UISinterpreter.h" />
+    <ClInclude Include="..\..\..\include\jetfuelcontrol\UISmanager.h" />
+    <ClInclude Include="..\..\..\include\jetfuelcore.h" />
+    <ClInclude Include="..\..\..\include\jetfuelcore\messagebus.h" />
+    <ClInclude Include="..\..\..\include\jetfuelcore\timer.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\circle2d.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\circle2dshape.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\circleinterface.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\color.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\drawable.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\font.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\image.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\rect2d.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\rectangle2dshape.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\rectangleinterface.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\scene.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\scenemanager.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\sprite.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\text.h" />
+    <ClInclude Include="..\..\..\include\jetfueldraw\vector2d.h" />
+    <ClInclude Include="..\..\..\include\jetfuelgui.h" />
+    <ClInclude Include="..\..\..\include\jetfuelgui\button.h" />
+    <ClInclude Include="..\..\..\include\jetfuelgui\checkbox.h" />
+    <ClInclude Include="..\..\..\include\jetfuelgui\dropdownbox.h" />
+    <ClInclude Include="..\..\..\include\jetfuelgui\iclickable.h" />
+    <ClInclude Include="..\..\..\include\jetfuelgui\menu.h" />
+    <ClInclude Include="..\..\..\include\jetfuelgui\progressbar.h" />
+    <ClInclude Include="..\..\..\include\jetfuelgui\slider.h" />
+    <ClInclude Include="..\..\..\include\jetfuelinspire.h" />
+    <ClInclude Include="..\..\..\include\jetfuelinspire\pointerbridge.h" />
+    <ClInclude Include="..\..\..\include\jetfuelinspire\pythonclassloader.h" />
+    <ClInclude Include="..\..\..\include\jetfuelinspire\pythonmoduleloader.h" />
+    <ClInclude Include="..\..\..\include\jetfuellocale.h" />
+    <ClInclude Include="..\..\..\include\jetfuellocale\stringlocalefile.h" />
+    <ClInclude Include="..\..\..\include\jetfuellocale\stringlocalemanager.h" />
+    <ClInclude Include="..\..\..\include\jetfuelmedia.h" />
+    <ClInclude Include="..\..\..\include\jetfuelmedia\music.h" />
+    <ClInclude Include="..\..\..\include\jetfuelmedia\sound.h" />
+    <ClInclude Include="..\..\..\include\jetfuelmedia\soundeffect.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -161,7 +158,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\src;$(SolutionDir)\..\..\windowsdependencies\SDL2-2.0.6\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_ttf-2.0.14\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_mixer-2.0.1\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_gfx-1.0.3;$(SolutionDir)\..\..\windowsdependencies\rapidjson-master\include;$(SolutionDir)\..\..\windowsdependencies\Python32-36\include;$(SolutionDir)\..\..\windowsdependencies\crossguid-0.2.2;$(SolutionDir)\..\..\windowsdependencies\SDL2_image-2.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../include;$(SolutionDir)\..\..\windowsdependencies\SDL2-2.0.6\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_ttf-2.0.14\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_mixer-2.0.1\include;$(SolutionDir)\..\..\windowsdependencies\SDL2_gfx-1.0.3;$(SolutionDir)\..\..\windowsdependencies\rapidjson-master\include;$(SolutionDir)\..\..\windowsdependencies\Python32-36\include;$(SolutionDir)\..\..\windowsdependencies\crossguid-0.2.2;$(SolutionDir)\..\..\windowsdependencies\SDL2_image-2.0.1\include;$(SolutionDir)/../../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>
       </DisableSpecificWarnings>
     </ClCompile>

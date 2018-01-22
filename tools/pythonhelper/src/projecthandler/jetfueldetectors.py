@@ -15,4 +15,5 @@ def isProject(location):
            path.isdir(location+"/src/") and
            path.isdir(location+"/Scripts") and
            path.isdir(location+"/Scripts/jetfuel") and
-           path.isdir(location+"/runtimelibs/DLLs,SOs,etc"));
+           path.isdir(location+"/runtimelibs/DLLs,SOs,etc") and
+           path.isfile(location+"/.properties.json"));
