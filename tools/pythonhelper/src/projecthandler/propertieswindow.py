@@ -1,12 +1,16 @@
+from platform import system
+
 from tkinter import Tk
 from tkinter import Text
 from tkinter import Button
 from tkinter import Label
 
 from json import dumps
+from json import load
+
 from projecthandler import tkinterbuttoncallbacks
 
-from platform import system
+import projecthandler
 
 class PropertiesWindow:
     _propertywindow = None;
@@ -23,7 +27,11 @@ class PropertiesWindow:
     _submitbutton = None;
     _cancelbutton = None;
 
+    _existingproperties = None;
+
     _projectlocation = None;
+    _triggerprojectcreation = None;
+    _projectdisplayer = None;
 
     def _windowsMakePropertiesFileHidden(self):
         import win32api
@@ -36,8 +44,8 @@ class PropertiesWindow:
         projectauthor = self._authortext.get('1.0', "end");
         projectdescription = self._authortext.get('1.0', "end");
 
-        if(projectname is not None and projectauthor is not None and
-           projectdescription is not None):
+        if(projectname != "\n" and projectauthor != "\n" and
+           projectdescription != "\n"):
             jsonpropertiesfile = open(self._projectlocation+"/.properties.json",
                                       "w");
 
@@ -50,20 +58,48 @@ class PropertiesWindow:
             jsonpropertiesfile.close();
 
             if(system() == "Windows"):
-                self._windowsMakePropertiesFileHidden();
+                #TODO(Bobby): Implement making properties file hidden
+                # on Windows.
+                #self._windowsMakePropertiesFileHidden();
+                None;
 
             self._propertywindow.destroy();
 
-            tkinterbuttoncallbacks.createProject(self._progressbarwindow,
-                                                 self._projectlocation);
+            if(self._triggerprojectcreation):
+                tkinterbuttoncallbacks.createProject(self._progressbarwindow,
+                                                     self._projectlocation);
+            else:
+                self._projectdisplayer.destroyWindow();
+
+                self._projectdisplayer = ProjectDisplayer(self._projectlocation);
+
+                self._projectdisplayer.gridAndLoop();
 
     def _cancelCommand(self):
         self._propertywindow.destroy();
-        self._progressbarwindow.destroy();
+        if(self._triggerprojectcreation):
+            self._progressbarwindow.destroy();
 
-    def __init__(self, projectlocation, progressbarwindow):
+    def _fillTextsWithExistingProperties(self):
+        self._projectnametext.insert(1.0,
+                                    self._existingproperties["projectname"]);
+        self._authortext.insert(1.0, self._existingproperties["author"]);
+        self._descriptiontext.insert(1.0,
+                                    self._existingproperties["description"]);
+
+    def __init__(self, projectlocation, progressbarwindow,
+                 triggerprojectcreation=True, projectdisplayer=None):
         self._projectlocation = projectlocation;
         self._progressbarwindow = progressbarwindow;
+        self._triggerprojectcreation = triggerprojectcreation;
+        self._projectdisplayer = projectdisplayer;
+
+        if(self._triggerprojectcreation):
+            positivebuttonstring = "Create project";
+        else:
+            positivebuttonstring = "Change project properties";
+            self._existingproperties = load(open(self._projectlocation+
+                                                 "/.properties.json"));
 
         self._propertywindow = Tk();
 
@@ -82,9 +118,12 @@ class PropertiesWindow:
         self._descriptiontext = Text(self._propertywindow, width=35,
                                      height=8);
 
+        if(not self._triggerprojectcreation):
+            self._fillTextsWithExistingProperties();
+
         self._submitbutton = Button(self._propertywindow,
                                   bg='green',
-                                  text="Create Project",
+                                  text=positivebuttonstring,
                                   command=self._createProjectPropertiesCommand);
         self._cancelbutton = Button(self._propertywindow,
                                   bg='red',

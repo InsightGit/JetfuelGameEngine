@@ -37,6 +37,7 @@ import pickle
 
 from projecthandler import jetfueldetectors
 from projecthandler.propertieswindow import PropertiesWindow
+from projecthandler.projectdisplayer import ProjectDisplayer
 
 def disableEvent():
     pass;
@@ -107,9 +108,11 @@ def selectProjectCallback():
     projectlocation = filedialog.askdirectory(initialdir=getcwd(),
                                               title="Select an existing "+
                                                     "project's location");
-    if(projectlocation is not None):
+    if(projectlocation):
         if(jetfueldetectors.isProject(projectlocation)):
-            None;
+            projectDisplayer = ProjectDisplayer(projectlocation);
+
+            projectDisplayer.gridAndLoop();
         else:
             messagebox.showinfo(message="No project files were found in this "+
                                         "directory!", icon="error");

@@ -4,9 +4,16 @@ import os
 from cx_Freeze import setup, Executable
 
 # Dependencies are automatically detected, but it might need fine tuning.
-build_exe_options = {"includes": ["tkinter","PIL"], "include_files":
-                    ["dependencies/tcl86t.dll","dependencies/tk86t.dll"],
-                     "packages": ["projecthandler"]};
+if sys.platform == "win32":
+    build_exe_options = {"includes": ["tkinter","PIL", "win32api","win32con"],
+                         "include_files": ["dependencies/tcl86t.dll",
+                         "dependencies/tk86t.dll"],
+                         "packages": ["projecthandler"]};
+else:
+    build_exe_options = {"includes": ["tkinter","PIL"],
+                         "include_files": ["dependencies/tcl86t.dll",
+                         "dependencies/tk86t.dll"],
+                         "packages": ["projecthandler"]};
 
 os.environ['TCL_LIBRARY'] = "dependencies/tcl8.6";
 os.environ['TK_LIBRARY'] = "dependencies/tk8.6";
