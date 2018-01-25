@@ -39,8 +39,8 @@ def createBaseLayout(windowparent):
     jetfuelicon = tkinter.Label(windowparent, image=jetfueliconimage);
     jetfuelicon.image = jetfueliconimage;
 
-    welcometext.grid(row=0, column=2);
-    jetfuelicon.grid(row=0, column=0);
+    welcometext.grid(row=0, column=1);
+    jetfuelicon.grid(row=0, column=0, pady=20);
 
 def createButtons(tkinterwindow):
     projectbutton = tkinter.Button(tkinterwindow, text="Create new Project",
@@ -59,9 +59,9 @@ def createButtons(tkinterwindow):
                                                                 tkinterwindow));
 
 
-    projectbutton.grid(row=3, column=0, columnspan=2);
-    selectprojectbutton.grid(row=3, column=2, columnspan=2)
-    quitbutton.grid(row=3, column=4);
+    projectbutton.grid(row=3, column=0);
+    selectprojectbutton.grid(row=3, column=1);
+    quitbutton.grid(row=3, column=3);
 
 def retrieveJetfuelDir():
     done = False;
@@ -89,13 +89,15 @@ def retrieveJetfuelDir():
 
 def main():
     window = tkinter.Tk();
+    window.resizable(0,0);
     window.wm_title("Jetfuel Game Engine Project Helper")
     window.iconbitmap("icon.ico");
 
     doesrefsexist = os.path.exists("prefs");
     if(doesrefsexist):
         picklereadfile = open("prefs", "rb");
-    picklefile = open("prefs", "wb");
+    else:
+        picklefile = open("prefs", "wb");
 
     createBaseLayout(window);
     createButtons(window);
@@ -113,8 +115,12 @@ def main():
                sys.exit(0);
 
            pickle.dump(jetfueldir, picklefile);
+
+           picklefile.close();
        else:
            jetfueldir = pickle.load(picklereadfile);
+
+           picklereadfile.close();
 
     window.mainloop();
 

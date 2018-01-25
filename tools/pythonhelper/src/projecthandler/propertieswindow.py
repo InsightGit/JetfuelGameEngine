@@ -10,7 +10,8 @@ from json import load
 
 from projecthandler import tkinterbuttoncallbacks
 
-import projecthandler
+# from projecthandler.projectdisplayer import ProjectDisplayer
+# Actual import statement down in _createProjectPropertiesCommand()
 
 class PropertiesWindow:
     _propertywindow = None;
@@ -33,16 +34,16 @@ class PropertiesWindow:
     _triggerprojectcreation = None;
     _projectdisplayer = None;
 
-    def _windowsMakePropertiesFileHidden(self):
+    def __windowsMakePropertiesFileHidden(self):
         import win32api
         import win32con
         win32api.SetFileAttributes('.properties.json',
                                     win32con.FILE_ATTRIBUTE_HIDDEN);
 
-    def _createProjectPropertiesCommand(self):
+    def __createProjectPropertiesCommand(self):
         projectname = self._projectnametext.get('1.0', "end");
         projectauthor = self._authortext.get('1.0', "end");
-        projectdescription = self._authortext.get('1.0', "end");
+        projectdescription = self._descriptiontext.get('1.0', "end");
 
         if(projectname != "\n" and projectauthor != "\n" and
            projectdescription != "\n"):
@@ -69,18 +70,20 @@ class PropertiesWindow:
                 tkinterbuttoncallbacks.createProject(self._progressbarwindow,
                                                      self._projectlocation);
             else:
+                from projecthandler.projectdisplayer import ProjectDisplayer
+
                 self._projectdisplayer.destroyWindow();
 
                 self._projectdisplayer = ProjectDisplayer(self._projectlocation);
 
                 self._projectdisplayer.gridAndLoop();
 
-    def _cancelCommand(self):
+    def __cancelCommand(self):
         self._propertywindow.destroy();
         if(self._triggerprojectcreation):
             self._progressbarwindow.destroy();
 
-    def _fillTextsWithExistingProperties(self):
+    def __fillTextsWithExistingProperties(self):
         self._projectnametext.insert(1.0,
                                     self._existingproperties["projectname"]);
         self._authortext.insert(1.0, self._existingproperties["author"]);
@@ -102,6 +105,9 @@ class PropertiesWindow:
                                                  "/.properties.json"));
 
         self._propertywindow = Tk();
+        self._propertywindow.wm_title("Jetfuel Game Engine Project Helper");
+        self._propertywindow.iconbitmap("icon.ico");
+        self._propertywindow.resizable(0,0);
 
         self._projectnamelabel = Label(self._propertywindow,
                                        text="Project name");
@@ -119,16 +125,16 @@ class PropertiesWindow:
                                      height=8);
 
         if(not self._triggerprojectcreation):
-            self._fillTextsWithExistingProperties();
+            self.__fillTextsWithExistingProperties();
 
         self._submitbutton = Button(self._propertywindow,
                                   bg='green',
                                   text=positivebuttonstring,
-                                  command=self._createProjectPropertiesCommand);
+                                  command=self.__createProjectPropertiesCommand);
         self._cancelbutton = Button(self._propertywindow,
                                   bg='red',
                                   text="Cancel",
-                                  command=self._cancelCommand);
+                                  command=self.__cancelCommand);
 
 
         self._propertywindow.protocol("WM_DELETE_WINDOW",
