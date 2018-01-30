@@ -1,0 +1,21 @@
+INSTUPgui.checkbox
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/pythonwrappers/jetfuel/gui/checkbox.py
+INFOS:&&1|1|2|0&&3|3|2|1&&2|4|2|1&&3|3|2|5&&3|6|2|5&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1&&2|13|2|1&&2|14|2|1&&2|15|2|1&&2|16|2|1&&2|17|2|1&&2|18|2|1
+_jetfuel=3
+set_position=11
+set_label_characteristics=13
+load_check_box_images=7
+get_checkbox_rect_to_draw_y=16
+get_checkbox_rect_to_draw_x=15
+get_checkbox_rect_to_draw_height=18
+drawableref=6
+get_label_characteristics=12
+get_checkbox_rect_to_draw_width=17
+get_position_x=9
+check_box=1
+gui.checkbox=2
+set_uis_action_to_watch=14
+get_position_y=10
+is_checked=8
+__init__=4
+check_box.__init__=5

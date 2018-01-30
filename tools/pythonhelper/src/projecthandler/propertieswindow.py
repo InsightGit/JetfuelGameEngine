@@ -106,7 +106,9 @@ class PropertiesWindow:
 
         self._propertywindow = Tk();
         self._propertywindow.wm_title("Jetfuel Game Engine Project Helper");
-        self._propertywindow.iconbitmap("icon.ico");
+        if(system() != "Linux"):
+            self._propertywindow.iconbitmap("icon.ico");
+
         self._propertywindow.resizable(0,0);
 
         self._projectnamelabel = Label(self._propertywindow,

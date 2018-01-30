@@ -2772,4 +2772,1676 @@ X    <?xml version="1.0"?>
 <modelURL>ht    <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetTotalPacketsReceivedResponse xmlns:u="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1"><NewTotalPacketsReceived>261936160</NewTotalPacketsReceived></u:GetTotalPacketsReceivedResponse></s:Body></s:Envelope>
 ownstreamMaxBitRate>10000000</NewLayer1DownstreamMaxBitRate><New32319 (kworker/1:1) S 2 0 0 0 -1 69238880 0 0 0 0 0 10 0 0 20 0 1 0 137339305 0 0 18446744073709551615 0 0 0 0 0 0 0 2147483647 0 18446744071579194649 0 0 17 1 0 0 0 0 0 0 0 0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                !SESSION 2018-01-25 18:34:52.698 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=9-Ubuntu
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.launchbar.core 4 0 2018-01-25 18:34:53.512
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.launchbar.core [1063]
+  Another singleton bundle selected: osgi.identity; type="osgi.bundle"; version:Version="2.1.1.201706131403"; osgi.identity="org.eclipse.launchbar.core"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1634)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1613)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1585)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1528)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.launchbar.ui 4 0 2018-01-25 18:34:53.514
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.launchbar.ui [1064]
+  Another singleton bundle selected: osgi.identity; type="osgi.bundle"; version:Version="2.1.1.201706131403"; osgi.identity="org.eclipse.launchbar.ui"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1634)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1613)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1585)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1528)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-01-25 18:34:56.035
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2018-01-25 18:35:04.181
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:761)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.remove(AbstractTreeViewer.java:2181)
+	at org.eclipse.ui.navigator.CommonViewer.remove(CommonViewer.java:323)
+	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider$3.run(ResourceExtensionContentProvider.java:287)
+	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider.runUpdates(ResourceExtensionContentProvider.java:323)
+	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider.processDelta(ResourceExtensionContentProvider.java:130)
+	at org.eclipse.ui.model.WorkbenchContentProvider.resourceChanged(WorkbenchContentProvider.java:100)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1565)
+	at org.python.pydev.plugin.nature.PythonNature.getConfigErrorsAndInfo(PythonNature.java:1414)
+	at org.python.pydev.navigator.ProjectInfoForPackageExplorer.getConfigErrorsAndInfo(ProjectInfoForPackageExplorer.java:234)
+	at org.python.pydev.navigator.ProjectInfoForPackageExplorer.recreateInfo(ProjectInfoForPackageExplorer.java:110)
+	at org.python.pydev.navigator.ProjectInfoForPackageExplorer.<init>(ProjectInfoForPackageExplorer.java:101)
+	at org.python.pydev.navigator.ProjectInfoForPackageExplorer.getProjectInfo(ProjectInfoForPackageExplorer.java:64)
+	at org.python.pydev.navigator.PythonBaseModelProvider.getProjectSourceFolders(PythonBaseModelProvider.java:420)
+	at org.python.pydev.navigator.PythonBaseModelProvider.getResourceInPythonModel(PythonBaseModelProvider.java:385)
+	at org.python.pydev.navigator.PythonBaseModelProvider.getResourceInPythonModel(PythonBaseModelProvider.java:370)
+	at org.python.pydev.navigator.PythonModelProvider.wrapChildren(PythonModelProvider.java:468)
+	at org.python.pydev.navigator.PythonModelProvider.convertToPythonElementsAddOrRemove(PythonModelProvider.java:374)
+	at org.python.pydev.navigator.PythonModelProvider.getPipelinedChildren(PythonModelProvider.java:140)
+	at org.python.pydev.navigator.PythonModelProvider.getPipelinedElements(PythonModelProvider.java:170)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getPipelinedElements(SafeDelegateTreeContentProvider.java:181)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.pipelineChildren(NavigatorContentServiceContentProvider.java:208)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.access$1(NavigatorContentServiceContentProvider.java:198)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:166)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:143)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getElements(NavigatorContentServiceContentProvider.java:116)
+	at org.eclipse.jface.viewers.StructuredViewer.getRawChildren(StructuredViewer.java:995)
+	at org.eclipse.jface.viewers.ColumnViewer.getRawChildren(ColumnViewer.java:701)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1340)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:341)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:901)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:618)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.lambda$0(AbstractTreeViewer.java:814)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:792)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:595)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:763)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalInitializeTree(AbstractTreeViewer.java:1527)
+	at org.eclipse.jface.viewers.TreeViewer.internalInitializeTree(TreeViewer.java:771)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.lambda$1(AbstractTreeViewer.java:1512)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1447)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:354)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1408)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.inputChanged(AbstractTreeViewer.java:1506)
+	at org.eclipse.jface.viewers.ContentViewer.setInput(ContentViewer.java:286)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1685)
+	at org.eclipse.ui.navigator.CommonNavigator.createPartControl(CommonNavigator.java:206)
+	at org.eclipse.ui.navigator.resources.ProjectExplorer.createPartControl(ProjectExplorer.java:88)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:151)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityView.createPartControl(CompatibilityView.java:147)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:355)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:955)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:399)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:318)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:546)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:530)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:70)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1293)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:49)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:79)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:61)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:704)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1076)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY org.python.pydev.shared_core 1 1 2018-01-25 18:35:05.864
+!MESSAGE Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/PILcompat
+!STACK 0
+java.lang.RuntimeException: Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/PILcompat
+	at org.python.pydev.shared_core.log.Log.logInfo(Log.java:52)
+	at org.python.pydev.shared_core.path_watch.PathWatch.track(PathWatch.java:316)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:463)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:444)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.registerInterpreterManager(SyncSystemModulesManagerScheduler.java:67)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.start(SyncSystemModulesManagerScheduler.java:89)
+	at org.python.pydev.plugin.PydevPlugin$1.run(PydevPlugin.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.python.pydev.shared_core 1 1 2018-01-25 18:35:05.870
+!MESSAGE Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/gtk-2.0
+!STACK 0
+java.lang.RuntimeException: Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/gtk-2.0
+	at org.python.pydev.shared_core.log.Log.logInfo(Log.java:52)
+	at org.python.pydev.shared_core.path_watch.PathWatch.track(PathWatch.java:316)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:463)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:444)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.registerInterpreterManager(SyncSystemModulesManagerScheduler.java:67)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.start(SyncSystemModulesManagerScheduler.java:89)
+	at org.python.pydev.plugin.PydevPlugin$1.run(PydevPlugin.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.python.pydev.shared_core 1 1 2018-01-25 18:35:05.881
+!MESSAGE Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/wx-3.0-gtk2
+!STACK 0
+java.lang.RuntimeException: Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/wx-3.0-gtk2
+	at org.python.pydev.shared_core.log.Log.logInfo(Log.java:52)
+	at org.python.pydev.shared_core.path_watch.PathWatch.track(PathWatch.java:316)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:463)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:444)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.registerInterpreterManager(SyncSystemModulesManagerScheduler.java:67)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.start(SyncSystemModulesManagerScheduler.java:89)
+	at org.python.pydev.plugin.PydevPlugin$1.run(PydevPlugin.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.wakatime.eclipse.plugin 2 0 2018-01-25 18:35:06.919
+!MESSAGE Warning
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:567)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1563)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1491)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:236)
+	at java.base/java.net.URL.openStream(URL.java:1117)
+	at com.wakatime.eclipse.plugin.Dependencies.getUrlAsString(Dependencies.java:278)
+	at com.wakatime.eclipse.plugin.Dependencies.latestCliVersion(Dependencies.java:144)
+	at com.wakatime.eclipse.plugin.Dependencies.isCLIOld(Dependencies.java:130)
+	at com.wakatime.eclipse.plugin.WakaTime.checkCore(WakaTime.java:195)
+	at com.wakatime.eclipse.plugin.WakaTime.access$0(WakaTime.java:190)
+	at com.wakatime.eclipse.plugin.WakaTime$1.run(WakaTime.java:133)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4577)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4186)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 39 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 54 more
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2018-01-25 18:35:06.928
+!MESSAGE Upgrading wakatime-cli ...
+
+!ENTRY com.wakatime.eclipse.plugin 2 0 2018-01-25 18:35:07.088
+!MESSAGE Warning
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:567)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1563)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1491)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:236)
+	at java.base/java.net.URL.openStream(URL.java:1117)
+	at com.wakatime.eclipse.plugin.Dependencies.downloadFile(Dependencies.java:232)
+	at com.wakatime.eclipse.plugin.Dependencies.installCLI(Dependencies.java:170)
+	at com.wakatime.eclipse.plugin.Dependencies.upgradeCLI(Dependencies.java:189)
+	at com.wakatime.eclipse.plugin.WakaTime.checkCore(WakaTime.java:197)
+	at com.wakatime.eclipse.plugin.WakaTime.access$0(WakaTime.java:190)
+	at com.wakatime.eclipse.plugin.WakaTime$1.run(WakaTime.java:133)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4577)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4186)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1655)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:260)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 39 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 54 more
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2018-01-25 18:35:07.106
+!MESSAGE Finished upgrading wakatime-cli.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2018-01-25 18:35:08.885
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. ; version: 2.0.6.v20170906-1226
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:394)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:353)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.http.client.fluent.Request.internalExecute(Request.java:173)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:262)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:170)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:64)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1655)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:260)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 21 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 36 more
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-01-25 18:37:30.267
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-01-25 18:37:30.271
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-01-25 18:37:30.275
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-01-25 18:39:13.909
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://dl.bintray.com/fabioz/pydev/6.2.0/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:243)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+Caused by: javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:553)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:64)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:412)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1655)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:260)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 13 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 28 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2018-01-25 18:39:13.911
+!MESSAGE Unable to read repository at https://dl.bintray.com/fabioz/pydev/6.2.0/content.xml.
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:553)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:64)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:412)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1655)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:260)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 13 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 28 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-25 18:39:14.016
+!MESSAGE Connection to https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/site.xml failed on java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1830)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:157)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:164)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:270)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:275)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:207)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:733)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:67)
+	... 16 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 32 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2018-01-25 18:39:14.295
+!MESSAGE Unable to read repository at https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/site.xml.
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1830)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:157)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:164)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:270)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:275)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:207)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:733)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:67)
+	... 16 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 32 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-25 18:39:18.148
+!MESSAGE Connection to https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/site.xml failed on java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1830)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:157)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:164)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:270)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:275)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:207)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:733)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:67)
+	... 16 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 32 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-25 18:39:18.448
+!MESSAGE Connection to https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/site.xml failed on java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1830)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:157)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:164)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:270)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:275)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:207)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:733)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:67)
+	... 16 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 32 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-25 18:39:18.779
+!MESSAGE Connection to https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/site.xml failed on java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1830)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:157)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:164)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:270)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:275)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:207)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:733)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:67)
+	... 16 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 32 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-25 18:39:19.101
+!MESSAGE Connection to https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/site.xml failed on java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1830)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:157)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:164)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:270)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:275)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:207)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:733)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:67)
+	... 16 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 32 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-25 18:39:19.436
+!MESSAGE Connection to https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/site.xml failed on java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1830)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:157)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:164)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:270)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:275)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:207)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:733)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:67)
+	... 16 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 32 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-25 18:39:19.777
+!MESSAGE Connection to https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/site.xml failed on java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1830)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:157)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:164)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:270)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:275)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:207)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:733)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:67)
+	... 16 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 32 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-25 18:39:20.110
+!MESSAGE Connection to https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/site.xml failed on java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1830)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:157)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:164)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:270)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:275)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:207)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:733)
+	at java.base/sun.security.ssl.AppOutputStream.write(AppOutputStream.java:67)
+	... 16 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 32 more
+!SESSION 2018-01-28 15:20:32.594 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=9-Ubuntu
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.launchbar.core 4 0 2018-01-28 15:20:33.558
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.launchbar.core [1063]
+  Another singleton bundle selected: osgi.identity; type="osgi.bundle"; version:Version="2.1.1.201706131403"; osgi.identity="org.eclipse.launchbar.core"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1634)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1613)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1585)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1528)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.launchbar.ui 4 0 2018-01-28 15:20:33.559
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.launchbar.ui [1064]
+  Another singleton bundle selected: osgi.identity; type="osgi.bundle"; version:Version="2.1.1.201706131403"; osgi.identity="org.eclipse.launchbar.ui"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1634)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1613)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1585)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1528)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.shared_core 1 1 2018-01-28 15:20:47.727
+!MESSAGE Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/PILcompat
+!STACK 0
+java.lang.RuntimeException: Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/PILcompat
+	at org.python.pydev.shared_core.log.Log.logInfo(Log.java:52)
+	at org.python.pydev.shared_core.path_watch.PathWatch.track(PathWatch.java:316)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:463)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:444)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.registerInterpreterManager(SyncSystemModulesManagerScheduler.java:67)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.start(SyncSystemModulesManagerScheduler.java:89)
+	at org.python.pydev.plugin.PydevPlugin$1.run(PydevPlugin.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.python.pydev.shared_core 1 1 2018-01-28 15:20:47.747
+!MESSAGE Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/gtk-2.0
+!STACK 0
+java.lang.RuntimeException: Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/gtk-2.0
+	at org.python.pydev.shared_core.log.Log.logInfo(Log.java:52)
+	at org.python.pydev.shared_core.path_watch.PathWatch.track(PathWatch.java:316)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:463)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:444)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.registerInterpreterManager(SyncSystemModulesManagerScheduler.java:67)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.start(SyncSystemModulesManagerScheduler.java:89)
+	at org.python.pydev.plugin.PydevPlugin$1.run(PydevPlugin.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.python.pydev.shared_core 1 1 2018-01-28 15:20:47.752
+!MESSAGE Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/wx-3.0-gtk2
+!STACK 0
+java.lang.RuntimeException: Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/wx-3.0-gtk2
+	at org.python.pydev.shared_core.log.Log.logInfo(Log.java:52)
+	at org.python.pydev.shared_core.path_watch.PathWatch.track(PathWatch.java:316)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:463)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:444)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.registerInterpreterManager(SyncSystemModulesManagerScheduler.java:67)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.start(SyncSystemModulesManagerScheduler.java:89)
+	at org.python.pydev.plugin.PydevPlugin$1.run(PydevPlugin.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.wakatime.eclipse.plugin 2 0 2018-01-28 15:20:49.430
+!MESSAGE Warning
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:567)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1563)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1491)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:236)
+	at java.base/java.net.URL.openStream(URL.java:1117)
+	at com.wakatime.eclipse.plugin.Dependencies.getUrlAsString(Dependencies.java:278)
+	at com.wakatime.eclipse.plugin.Dependencies.latestCliVersion(Dependencies.java:144)
+	at com.wakatime.eclipse.plugin.Dependencies.isCLIOld(Dependencies.java:130)
+	at com.wakatime.eclipse.plugin.WakaTime.checkCore(WakaTime.java:195)
+	at com.wakatime.eclipse.plugin.WakaTime.access$0(WakaTime.java:190)
+	at com.wakatime.eclipse.plugin.WakaTime$1.run(WakaTime.java:133)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4577)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4186)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 39 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 54 more
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2018-01-28 15:20:49.494
+!MESSAGE Upgrading wakatime-cli ...
+
+!ENTRY com.wakatime.eclipse.plugin 2 0 2018-01-28 15:20:49.799
+!MESSAGE Warning
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:567)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1563)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1491)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:236)
+	at java.base/java.net.URL.openStream(URL.java:1117)
+	at com.wakatime.eclipse.plugin.Dependencies.downloadFile(Dependencies.java:232)
+	at com.wakatime.eclipse.plugin.Dependencies.installCLI(Dependencies.java:170)
+	at com.wakatime.eclipse.plugin.Dependencies.upgradeCLI(Dependencies.java:189)
+	at com.wakatime.eclipse.plugin.WakaTime.checkCore(WakaTime.java:197)
+	at com.wakatime.eclipse.plugin.WakaTime.access$0(WakaTime.java:190)
+	at com.wakatime.eclipse.plugin.WakaTime$1.run(WakaTime.java:133)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4577)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4186)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1655)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:260)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 39 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 54 more
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2018-01-28 15:20:49.809
+!MESSAGE Finished upgrading wakatime-cli.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2018-01-28 15:20:50.926
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. ; version: 2.0.6.v20170906-1226
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:394)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:353)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.http.client.fluent.Request.internalExecute(Request.java:173)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:262)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:170)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:64)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1655)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:260)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 21 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 36 more
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-01-28 15:21:45.777
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-01-28 15:21:45.781
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-01-28 15:21:45.785
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 15:23:06.525
+!MESSAGE Indexed 'Jetfuel Game Engine' (23 sources, 917 headers) in 15.5 sec: 55,226 declarations; 100,401 references; 3 unresolved inclusions; 0 syntax errors; 37 unresolved names (0.024%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 15:24:14.366
+!MESSAGE Indexed 'Jetfuel Game Engine' (23 sources, 917 headers) in 10.4 sec: 55,226 declarations; 100,401 references; 3 unresolved inclusions; 0 syntax errors; 37 unresolved names (0.024%)
+!SESSION 2018-01-28 15:24:54.342 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=9-Ubuntu
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.launchbar.core 4 0 2018-01-28 15:24:55.205
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.launchbar.core [1063]
+  Another singleton bundle selected: osgi.identity; type="osgi.bundle"; version:Version="2.1.1.201706131403"; osgi.identity="org.eclipse.launchbar.core"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1634)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1613)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1585)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1528)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.launchbar.ui 4 0 2018-01-28 15:24:55.206
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.launchbar.ui [1064]
+  Another singleton bundle selected: osgi.identity; type="osgi.bundle"; version:Version="2.1.1.201706131403"; osgi.identity="org.eclipse.launchbar.ui"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1634)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1613)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1585)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1528)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.shared_core 1 1 2018-01-28 15:25:04.988
+!MESSAGE Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/PILcompat
+!STACK 0
+java.lang.RuntimeException: Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/PILcompat
+	at org.python.pydev.shared_core.log.Log.logInfo(Log.java:52)
+	at org.python.pydev.shared_core.path_watch.PathWatch.track(PathWatch.java:316)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:463)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:444)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.registerInterpreterManager(SyncSystemModulesManagerScheduler.java:67)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.start(SyncSystemModulesManagerScheduler.java:89)
+	at org.python.pydev.plugin.PydevPlugin$1.run(PydevPlugin.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.python.pydev.shared_core 1 1 2018-01-28 15:25:04.997
+!MESSAGE Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/gtk-2.0
+!STACK 0
+java.lang.RuntimeException: Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/gtk-2.0
+	at org.python.pydev.shared_core.log.Log.logInfo(Log.java:52)
+	at org.python.pydev.shared_core.path_watch.PathWatch.track(PathWatch.java:316)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:463)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:444)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.registerInterpreterManager(SyncSystemModulesManagerScheduler.java:67)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.start(SyncSystemModulesManagerScheduler.java:89)
+	at org.python.pydev.plugin.PydevPlugin$1.run(PydevPlugin.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.python.pydev.shared_core 1 1 2018-01-28 15:25:05.007
+!MESSAGE Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/wx-3.0-gtk2
+!STACK 0
+java.lang.RuntimeException: Unable to track file that does not exist: /usr/lib/python2.7/dist-packages/wx-3.0-gtk2
+	at org.python.pydev.shared_core.log.Log.logInfo(Log.java:52)
+	at org.python.pydev.shared_core.path_watch.PathWatch.track(PathWatch.java:316)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:463)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.afterSetInfos(SyncSystemModulesManagerScheduler.java:444)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.registerInterpreterManager(SyncSystemModulesManagerScheduler.java:67)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler.start(SyncSystemModulesManagerScheduler.java:89)
+	at org.python.pydev.plugin.PydevPlugin$1.run(PydevPlugin.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.wakatime.eclipse.plugin 2 0 2018-01-28 15:25:06.268
+!MESSAGE Warning
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:567)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1563)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1491)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:236)
+	at java.base/java.net.URL.openStream(URL.java:1117)
+	at com.wakatime.eclipse.plugin.Dependencies.getUrlAsString(Dependencies.java:278)
+	at com.wakatime.eclipse.plugin.Dependencies.latestCliVersion(Dependencies.java:144)
+	at com.wakatime.eclipse.plugin.Dependencies.isCLIOld(Dependencies.java:130)
+	at com.wakatime.eclipse.plugin.WakaTime.checkCore(WakaTime.java:195)
+	at com.wakatime.eclipse.plugin.WakaTime.access$0(WakaTime.java:190)
+	at com.wakatime.eclipse.plugin.WakaTime$1.run(WakaTime.java:133)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4577)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4186)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.certificateStatus(ClientHandshaker.java:1676)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:272)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 39 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 54 more
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2018-01-28 15:25:06.275
+!MESSAGE Upgrading wakatime-cli ...
+
+!ENTRY com.wakatime.eclipse.plugin 2 0 2018-01-28 15:25:06.368
+!MESSAGE Warning
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:567)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1563)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1491)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:236)
+	at java.base/java.net.URL.openStream(URL.java:1117)
+	at com.wakatime.eclipse.plugin.Dependencies.downloadFile(Dependencies.java:232)
+	at com.wakatime.eclipse.plugin.Dependencies.installCLI(Dependencies.java:170)
+	at com.wakatime.eclipse.plugin.Dependencies.upgradeCLI(Dependencies.java:189)
+	at com.wakatime.eclipse.plugin.WakaTime.checkCore(WakaTime.java:197)
+	at com.wakatime.eclipse.plugin.WakaTime.access$0(WakaTime.java:190)
+	at com.wakatime.eclipse.plugin.WakaTime$1.run(WakaTime.java:133)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4577)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4186)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1655)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:260)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 39 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 54 more
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2018-01-28 15:25:06.374
+!MESSAGE Finished upgrading wakatime-cli.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2018-01-28 15:25:07.464
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty. ; version: 2.0.6.v20170906-1226
+!STACK 0
+javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.ssl.Alerts.getSSLException(Alerts.java:214)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1969)
+	at java.base/sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1921)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1904)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1436)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:394)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:353)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.http.client.fluent.Request.internalExecute(Request.java:173)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:262)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:170)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:64)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:89)
+	at java.base/sun.security.validator.Validator.getInstance(Validator.java:181)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.getValidator(X509TrustManagerImpl.java:330)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrustedInit(X509TrustManagerImpl.java:180)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:192)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:133)
+	at java.base/sun.security.ssl.ClientHandshaker.checkServerCerts(ClientHandshaker.java:1825)
+	at java.base/sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1655)
+	at java.base/sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:260)
+	at java.base/sun.security.ssl.Handshaker.processLoop(Handshaker.java:1086)
+	at java.base/sun.security.ssl.Handshaker.processRecord(Handshaker.java:1020)
+	at java.base/sun.security.ssl.SSLSocketImpl.processInputRecord(SSLSocketImpl.java:1137)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1074)
+	at java.base/sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at java.base/sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1402)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1429)
+	... 21 more
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:120)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:104)
+	at java.base/sun.security.validator.PKIXValidator.<init>(PKIXValidator.java:86)
+	... 36 more
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-01-28 15:25:14.576
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-01-28 15:25:14.584
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-01-28 15:25:14.591
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 15:28:21.567
+!MESSAGE Indexed 'Jetfuel Game Engine' (23 sources, 917 headers) in 12.5 sec: 55,226 declarations; 100,401 references; 3 unresolved inclusions; 0 syntax errors; 37 unresolved names (0.024%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 15:29:37.488
+!MESSAGE Indexed 'Jetfuel Game Engine' (23 sources, 936 headers) in 10.6 sec: 57,826 declarations; 110,826 references; 1 unresolved inclusions; 0 syntax errors; 9 unresolved names (0.0053%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 15:32:40.519
+!MESSAGE Indexed 'Jetfuel Python API' (8 sources, 940 headers) in 7.63 sec: 57,020 declarations; 104,053 references; 2 unresolved inclusions; 0 syntax errors; 18 unresolved names (0.011%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 15:33:01.662
+!MESSAGE Indexed 'Jetfuel Game Engine' (23 sources, 939 headers) in 7.61 sec: 59,275 declarations; 113,123 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.0035%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 15:33:20.927
+!MESSAGE Indexed 'Jetfuel Python API' (8 sources, 959 headers) in 7.23 sec: 59,620 declarations; 114,407 references; 0 unresolved inclusions; 0 syntax errors; 15 unresolved names (0.0086%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 15:34:37.728
+!MESSAGE Indexed 'Jetfuel Graphical Example' (1 sources, 942 headers) in 9.13 sec: 56,602 declarations; 107,252 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.0037%)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-01-28 16:39:37.003
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@61cc008f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Given context: (gdb[4].proc[29540].threadGroup[i1],gdb[4].proc[29540].OSthread[1]).thread[1], is already running. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-01-28 16:39:37.003
+!MESSAGE Given context: (gdb[4].proc[29540].threadGroup[i1],gdb[4].proc[29540].OSthread[1]).thread[1], is already running.
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 16:53:46.034
+!MESSAGE Indexed 'Jetfuel Game Engine' (23 sources, 939 headers) in 7.69 sec: 59,099 declarations; 112,881 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.0035%)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-01-28 18:24:50.239
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@2094fd63): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Given context: (gdb[15].proc[6633].threadGroup[i1],gdb[15].proc[6633].OSthread[1]).thread[1], is already running. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-01-28 18:24:50.239
+!MESSAGE Given context: (gdb[15].proc[6633].threadGroup[i1],gdb[15].proc[6633].OSthread[1]).thread[1], is already running.

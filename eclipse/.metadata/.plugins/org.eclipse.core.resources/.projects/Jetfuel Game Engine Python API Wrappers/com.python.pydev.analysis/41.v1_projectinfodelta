@@ -1,0 +1,20 @@
+INSTUPmedia.sound_effect
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/pythonwrappers/jetfuel/media/sound_effect.py
+INFOS:&&1|1|2|0&&3|3|2|1&&3|4|2|1&&2|5|2|1&&3|3|2|6&&3|4|2|6&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1&&2|13|2|1&&2|14|2|1&&2|15|2|1&&2|16|2|1&&2|17|2|1
+media.sound_effect=2
+_jetfuel=3
+play=14
+resume=16
+load_audio_file=11
+get_sound_effect_error=17
+__enter__=7
+get_times_to_repeat=12
+_soundeffectref=4
+sound_effect.__init__=6
+pause=15
+is_sound_effect_or_music_playing=9
+sound_effect=1
+__exit__=8
+__init__=5
+set_times_to_repeat=13
+get_loaded_sound_effect_file=10

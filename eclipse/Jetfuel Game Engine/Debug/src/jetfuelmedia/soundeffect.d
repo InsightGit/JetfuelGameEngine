@@ -1,17 +1,17 @@
 src/jetfuelmedia/soundeffect.o: \
  /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelmedia/soundeffect.cpp \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelmedia/soundeffect.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelmedia/sound.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/scenemanager.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/color.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/vector2d.h
+ ../../../include/jetfuelmedia/soundeffect.h \
+ ../../../include/jetfuelmedia/sound.h \
+ ../../../include/jetfueldraw/scenemanager.h \
+ ../../../include/jetfueldraw/color.h \
+ ../../../include/jetfueldraw/vector2d.h
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelmedia/soundeffect.h:
+../../../include/jetfuelmedia/soundeffect.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelmedia/sound.h:
+../../../include/jetfuelmedia/sound.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/scenemanager.h:
+../../../include/jetfueldraw/scenemanager.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/color.h:
+../../../include/jetfueldraw/color.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/vector2d.h:
+../../../include/jetfueldraw/vector2d.h:

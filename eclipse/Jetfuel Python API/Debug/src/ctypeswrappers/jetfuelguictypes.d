@@ -1,163 +1,215 @@
 src/ctypeswrappers/jetfuelguictypes.o: \
  /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore/messagebus.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore/timer.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/config.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/menu.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/button.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/scenemanager.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/color.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/vector2d.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/scene.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/drawable.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rect2d.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/../jetfuelcore/messagebus.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/sprite.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/image.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/scenemanager.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rectangleinterface.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/image.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/text.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/font.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2dshape.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circleinterface.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.tpp \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rectangle2dshape.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/iclickable.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfuelcontrol/UISinterpreter.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire/pythonclassloader.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire/pythonmoduleloader.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire/pointerbridge.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/UISinterpreter.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/checkbox.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/text.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/sprite.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/dropdownbox.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/progressbar.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/drawable.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/rectangle2dshape.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/slider.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/circle2dshape.h \
+ ../../../include/jetfuelgui.h ../../../include/jetfuelcore.h \
+ ../../../include/jetfuelcore/messagebus.h \
+ ../../../include/jetfuelcore/timer.h ../../../include/config.h \
+ ../../../include/jetfuelgui/menu.h ../../../include/jetfuelgui/button.h \
+ ../../../include/jetfueldraw.h \
+ ../../../include/jetfueldraw/scenemanager.h \
+ ../../../include/jetfueldraw/color.h \
+ ../../../include/jetfueldraw/vector2d.h \
+ ../../../include/jetfueldraw/scene.h \
+ ../../../include/jetfueldraw/drawable.h \
+ ../../../include/jetfueldraw/rect2d.h \
+ ../../../include/jetfueldraw/../jetfuelcore/messagebus.h \
+ ../../../include/jetfueldraw/sprite.h \
+ ../../../include/jetfueldraw/image.h \
+ ../../../include/jetfueldraw/rectangleinterface.h \
+ ../../../include/jetfueldraw/text.h ../../../include/jetfueldraw/font.h \
+ ../../../include/jetfueldraw/circle2dshape.h \
+ ../../../include/jetfueldraw/circleinterface.h \
+ ../../../include/jetfueldraw/circle2d.h \
+ ../../../include/jetfueldraw/circle2d.tpp \
+ ../../../include/jetfueldraw/circle2d.h \
+ ../../../include/jetfueldraw/rectangle2dshape.h \
+ ../../../include/jetfuelgui/iclickable.h \
+ ../../../include/jetfuelgui/../jetfuelcontrol/UISinterpreter.h \
+ ../../../include/jetfuelinspire.h \
+ ../../../include/jetfuelinspire/pythonclassloader.h \
+ ../../../include/jetfuelinspire/pythonmoduleloader.h \
+ ../../../include/jetfuelinspire/pointerbridge.h \
+ ../../../include/jetfuelcontrol/UISinterpreter.h \
+ ../../../include/jetfuelgui/checkbox.h \
+ ../../../include/jetfuelgui/../jetfueldraw/text.h \
+ ../../../include/jetfuelgui/../jetfueldraw/sprite.h \
+ ../../../include/jetfuelgui/dropdownbox.h \
+ ../../../include/jetfuelgui/progressbar.h \
+ ../../../include/jetfuelgui/../jetfueldraw/drawable.h \
+ ../../../include/jetfuelgui/../jetfueldraw/rectangle2dshape.h \
+ ../../../include/jetfuelgui/slider.h \
+ ../../../include/jetfuelgui/../jetfueldraw/circle2dshape.h \
  /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../stringconversions.h \
  /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/UISinterpreter.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/UISmanager.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/../config.h \
+ ../../../include/jetfuelcontrol.h \
+ ../../../include/jetfuelcontrol/UISmanager.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/document.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/reader.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/allocators.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/rapidjson.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/stream.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/encodings.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/encodedstream.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/memorystream.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/meta.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../rapidjson.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/stack.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../allocators.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/swap.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/strtod.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/ieee754.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/biginteger.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/diyfp.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/pow10.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/error/error.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/error/../rapidjson.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/strfunc.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../stream.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../rapidjson.h \
+ ../../../include/jetfuelcontrol/../config.h \
  /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfueldraw/rectangle2dshapecharacteristicsreplacement.h \
  /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfueldraw/circle2dshapecharacteristicsreplacement.h \
  /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelgui/buttoncharacteristicsreplacement.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelgui/../jetfueldraw/textcharacteristicsreplacement.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/text.h
+ /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelgui/../jetfueldraw/textcharacteristicsreplacement.h
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui.h:
+../../../include/jetfuelgui.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore.h:
+../../../include/jetfuelcore.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore/messagebus.h:
+../../../include/jetfuelcore/messagebus.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore/timer.h:
+../../../include/jetfuelcore/timer.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/config.h:
+../../../include/config.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/menu.h:
+../../../include/jetfuelgui/menu.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/button.h:
+../../../include/jetfuelgui/button.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw.h:
+../../../include/jetfueldraw.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore.h:
+../../../include/jetfueldraw/scenemanager.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/scenemanager.h:
+../../../include/jetfueldraw/color.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/color.h:
+../../../include/jetfueldraw/vector2d.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/vector2d.h:
+../../../include/jetfueldraw/scene.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/scene.h:
+../../../include/jetfueldraw/drawable.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/drawable.h:
+../../../include/jetfueldraw/rect2d.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rect2d.h:
+../../../include/jetfueldraw/../jetfuelcore/messagebus.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/../jetfuelcore/messagebus.h:
+../../../include/jetfueldraw/sprite.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/sprite.h:
+../../../include/jetfueldraw/image.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/image.h:
+../../../include/jetfueldraw/rectangleinterface.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/scenemanager.h:
+../../../include/jetfueldraw/text.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rectangleinterface.h:
+../../../include/jetfueldraw/font.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/image.h:
+../../../include/jetfueldraw/circle2dshape.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/text.h:
+../../../include/jetfueldraw/circleinterface.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/font.h:
+../../../include/jetfueldraw/circle2d.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2dshape.h:
+../../../include/jetfueldraw/circle2d.tpp:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circleinterface.h:
+../../../include/jetfueldraw/circle2d.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.h:
+../../../include/jetfueldraw/rectangle2dshape.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.tpp:
+../../../include/jetfuelgui/iclickable.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.h:
+../../../include/jetfuelgui/../jetfuelcontrol/UISinterpreter.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rectangle2dshape.h:
+../../../include/jetfuelinspire.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/iclickable.h:
+../../../include/jetfuelinspire/pythonclassloader.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfuelcontrol/UISinterpreter.h:
+../../../include/jetfuelinspire/pythonmoduleloader.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire.h:
+../../../include/jetfuelinspire/pointerbridge.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire/pythonclassloader.h:
+../../../include/jetfuelcontrol/UISinterpreter.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire/pythonmoduleloader.h:
+../../../include/jetfuelgui/checkbox.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire/pointerbridge.h:
+../../../include/jetfuelgui/../jetfueldraw/text.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/UISinterpreter.h:
+../../../include/jetfuelgui/../jetfueldraw/sprite.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/checkbox.h:
+../../../include/jetfuelgui/dropdownbox.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/text.h:
+../../../include/jetfuelgui/progressbar.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/sprite.h:
+../../../include/jetfuelgui/../jetfueldraw/drawable.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/dropdownbox.h:
+../../../include/jetfuelgui/../jetfueldraw/rectangle2dshape.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/progressbar.h:
+../../../include/jetfuelgui/slider.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/drawable.h:
-
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/rectangle2dshape.h:
-
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/slider.h:
-
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/circle2dshape.h:
+../../../include/jetfuelgui/../jetfueldraw/circle2dshape.h:
 
 /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../stringconversions.h:
 
 /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol.h:
+../../../include/jetfuelcontrol.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/UISinterpreter.h:
+../../../include/jetfuelcontrol/UISmanager.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/UISmanager.h:
+../../../windowsdependencies/rapidjson-master/include/rapidjson/document.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/../config.h:
+../../../windowsdependencies/rapidjson-master/include/rapidjson/reader.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/allocators.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/rapidjson.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/stream.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/encodings.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/encodedstream.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/memorystream.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/meta.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../rapidjson.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/stack.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../allocators.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/swap.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/strtod.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/ieee754.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/biginteger.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/diyfp.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/pow10.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/error/error.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/error/../rapidjson.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/strfunc.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../stream.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../rapidjson.h:
+
+../../../include/jetfuelcontrol/../config.h:
 
 /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfueldraw/rectangle2dshapecharacteristicsreplacement.h:
 
@@ -166,5 +218,3 @@ src/ctypeswrappers/jetfuelguictypes.o: \
 /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelgui/buttoncharacteristicsreplacement.h:
 
 /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelgui/../jetfueldraw/textcharacteristicsreplacement.h:
-
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/text.h:

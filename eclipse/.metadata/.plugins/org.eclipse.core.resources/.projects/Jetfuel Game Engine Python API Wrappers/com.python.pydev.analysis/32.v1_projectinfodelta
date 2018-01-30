@@ -1,0 +1,13 @@
+INSTUPlocale.localestring
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/pythonwrappers/jetfuel/locale/localestring.py
+INFOS:&&1|1|2|0&&3|3|2|1&&3|4|2|1&&2|5|2|1&&3|3|2|6&&3|4|2|6&&3|4|2|6&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1
+_jetfuel=3
+locale.localestring=2
+get_locale_string=9
+get_locale_string_id=7
+locale_string.__init__=6
+set_locale_string_id=8
+locale_string=1
+localestringref=4
+set_locale_string=10
+__init__=5

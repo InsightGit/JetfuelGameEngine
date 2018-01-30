@@ -1,26 +1,93 @@
 src/jetfuelcontrol/UISmanager.o: \
  /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/UISmanager.cpp \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/UISmanager.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/../config.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore/messagebus.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore/timer.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/config.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rect2d.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/vector2d.h
+ ../../../include/jetfuelcontrol/UISmanager.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/document.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/reader.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/allocators.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/rapidjson.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/stream.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/encodings.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/encodedstream.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/memorystream.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/meta.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../rapidjson.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/stack.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../allocators.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/swap.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/strtod.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/ieee754.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/biginteger.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/diyfp.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/pow10.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/error/error.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/error/../rapidjson.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/strfunc.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../stream.h \
+ ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../rapidjson.h \
+ ../../../include/jetfuelcontrol/../config.h \
+ ../../../include/jetfuelcore.h ../../../include/jetfuelcore/messagebus.h \
+ ../../../include/jetfuelcore/timer.h ../../../include/config.h \
+ ../../../include/jetfueldraw/rect2d.h \
+ ../../../include/jetfueldraw/vector2d.h
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/UISmanager.h:
+../../../include/jetfuelcontrol/UISmanager.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcontrol/../config.h:
+../../../windowsdependencies/rapidjson-master/include/rapidjson/document.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore.h:
+../../../windowsdependencies/rapidjson-master/include/rapidjson/reader.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore/messagebus.h:
+../../../windowsdependencies/rapidjson-master/include/rapidjson/allocators.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore/timer.h:
+../../../windowsdependencies/rapidjson-master/include/rapidjson/rapidjson.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/config.h:
+../../../windowsdependencies/rapidjson-master/include/rapidjson/stream.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rect2d.h:
+../../../windowsdependencies/rapidjson-master/include/rapidjson/encodings.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/vector2d.h:
+../../../windowsdependencies/rapidjson-master/include/rapidjson/encodedstream.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/memorystream.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/meta.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../rapidjson.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/stack.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../allocators.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/swap.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/strtod.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/ieee754.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/biginteger.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/diyfp.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/pow10.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/error/error.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/error/../rapidjson.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/strfunc.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../stream.h:
+
+../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../rapidjson.h:
+
+../../../include/jetfuelcontrol/../config.h:
+
+../../../include/jetfuelcore.h:
+
+../../../include/jetfuelcore/messagebus.h:
+
+../../../include/jetfuelcore/timer.h:
+
+../../../include/config.h:
+
+../../../include/jetfueldraw/rect2d.h:
+
+../../../include/jetfueldraw/vector2d.h:

@@ -321,7 +321,7 @@ def drawabledisplay(scenemanagerpointer, messagebuspointer,
     if(system() == "Windows"):
         jetfuelpythonapiso = abspath("PythonAPI.dll");
     else:
-        jetfuelpythonapiso = abspath("libJetfuel Game Engine Python API.so");
+        jetfuelpythonapiso = abspath("libJetfuel Python API.so");
     imagefilepath = abspath("button.png");
     fontfilepath = abspath("default.ttf");
 
@@ -417,7 +417,10 @@ def drawabledisplay(scenemanagerpointer, messagebuspointer,
                         pointerbridge);
     create_check_box(jetfuelso, scenemanager, pointerbridge);
     create_drop_down_box(jetfuelso, scenemanager, pointerbridge);
-    create_menu(jetfuelso, scenemanager, pointerbridge, messagebus);
+    
+    if(system() == "Windows"):
+        create_menu(jetfuelso, scenemanager, pointerbridge, messagebus);
+
     create_slider(jetfuelso, scenemanager, pointerbridge, messagebus);
     create_progress_bar(jetfuelso, scenemanager);
 

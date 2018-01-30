@@ -1,0 +1,14 @@
+INSTUPlocale.stringlocalemanager
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/pythonwrappers/jetfuel/locale/stringlocalemanager.py
+INFOS:&&1|1|2|0&&3|3|2|1&&3|4|2|1&&2|5|2|1&&3|3|2|6&&3|4|2|6&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1
+_jetfuel=3
+locale.stringlocalemanager=2
+_stringlocalemanagerref=4
+string_locale_manager.__init__=6
+set_active_locale=9
+get_string_from_id=11
+get_active_locale=8
+get_active_string_locale_file=10
+load_string_locale_file=7
+string_locale_manager=1
+__init__=5

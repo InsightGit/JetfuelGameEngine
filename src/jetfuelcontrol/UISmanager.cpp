@@ -51,7 +51,7 @@ namespace jetfuel {
                     ["key"].GetString());
                 }
 
-                if(*key == *jsonkey){
+                if(std::string(key) == std::string(jsonkey)){
                     // Key was pressed, notify message bus
 
                     Post_message_to_message_bus(std::string("[UIS Action]")+

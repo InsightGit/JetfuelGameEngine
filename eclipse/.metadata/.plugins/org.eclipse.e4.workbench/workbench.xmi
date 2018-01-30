@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmlns:ui="http://www.eclipse.org/ui/2010/UIModel/application/ui" xmi:id="_KlwdsPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_KlwdsfXCEeerLL9Gwtb5Eg" bindingContexts="_KlxHOPXCEeerLL9Gwtb5Eg">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;menu.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/menu.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/menu.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;iclickable.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/iclickable.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/iclickable.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;dropdownbox.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/dropdownbox.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/dropdownbox.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Jetfuel Graphical Example.cpp&quot; tooltip=&quot;Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;dropdownbox.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/dropdownbox.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/dropdownbox.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;button.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/button.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/button.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;checkbox.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/checkbox.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/checkbox.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;checkbox.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/checkbox.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/checkbox.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;rectangleinterface.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfueldraw/rectangleinterface.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfueldraw/rectangleinterface.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;scene.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfueldraw/scene.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfueldraw/scene.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;displaydrawables.py&quot; tooltip=&quot;Jetfuel Game Engine/Scripts/displaydrawables.py&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/Scripts/displaydrawables.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;jetfueldrawctypes.cpp&quot; tooltip=&quot;Jetfuel Python API/src/ctypeswrappers/jetfueldrawctypes.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Python API/src/ctypeswrappers/jetfueldrawctypes.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;stringconversions.cpp&quot; tooltip=&quot;Jetfuel Python API/src/stringconversions.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Python API/src/stringconversions.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;jetfueldrawctypes.cpp&quot; tooltip=&quot;/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp&quot;>&#xA;&lt;persistable uri=&quot;file:/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel%20Game%20Engine/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;jetfuelcore.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelcore.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelcore.h&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_KlwdsPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_KlwdsfXCEeerLL9Gwtb5Eg" bindingContexts="_KlxHOPXCEeerLL9Gwtb5Eg">
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Jetfuel Graphical Example.cpp&quot; tooltip=&quot;Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;UISmanager.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelcontrol/UISmanager.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelcontrol/UISmanager.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;rectangle2dshape.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfueldraw/rectangle2dshape.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfueldraw/rectangle2dshape.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;button.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfuelgui/button.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/include/jetfuelgui/button.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;button.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/button.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/button.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;menu.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/menu.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/menu.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;rectangle2dshape.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfueldraw/rectangle2dshape.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/include/jetfueldraw/rectangle2dshape.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;menu.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfuelgui/menu.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/include/jetfuelgui/menu.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;drawable.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfueldraw/drawable.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/include/jetfueldraw/drawable.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;dropdownbox.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfuelgui/dropdownbox.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/include/jetfuelgui/dropdownbox.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;dropdownbox.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/dropdownbox.cpp&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/dropdownbox.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;circle2dshape.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfueldraw/circle2dshape.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/include/jetfueldraw/circle2dshape.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;stringlocalefile.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfuellocale/stringlocalefile.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/include/jetfuellocale/stringlocalefile.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;sound.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfuelmedia/sound.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/include/jetfuelmedia/sound.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;menu.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/menu.h&quot;>&#xA;&lt;persistable path=&quot;/Jetfuel Game Engine/src/jetfuelgui/menu.h&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_KlwdsfXCEeerLL9Gwtb5Eg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_KlwdsvXCEeerLL9Gwtb5Eg" label="%trimmedwindow.label.eclipseSDK" x="2530" y="119" width="1024" height="593">
@@ -9,7 +9,7 @@
     <persistedState key="isRestored" value="true"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;show_in_time/>"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workingSets/>"/>
-    <persistedState key="aggregateWorkingSetId"/>
+    <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1516934959634"/>
     <tags>topLevel</tags>
     <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_KlwdsvXCEeerLL9Gwtb5Eg" selectedElement="_Klwds_XCEeerLL9Gwtb5Eg" horizontal="true">
@@ -81,7 +81,7 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_KlwdufXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.views.ResourceNavigator" toBeRendered="false" ref="_KlwgA_XCEeerLL9Gwtb5Eg"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_KlwduvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.views.BookmarkView" toBeRendered="false" ref="_KlwgBPXCEeerLL9Gwtb5Eg"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_Klwdu_XCEeerLL9Gwtb5Eg" containerData="7500" selectedElement="_KlwdvPXCEeerLL9Gwtb5Eg">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_Klwdu_XCEeerLL9Gwtb5Eg" containerData="7500" selectedElement="_KlwdwvXCEeerLL9Gwtb5Eg">
               <children xsi:type="basic:PartSashContainer" xmi:id="_KlwdvPXCEeerLL9Gwtb5Eg" containerData="7500" selectedElement="_KlwdvfXCEeerLL9Gwtb5Eg" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_KlwdvfXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_KlwfSvXCEeerLL9Gwtb5Eg"/>
                 <children xsi:type="basic:PartStack" xmi:id="_KlwdvvXCEeerLL9Gwtb5Eg" elementId="topRight" containerData="2500" selectedElement="_Klwdv_XCEeerLL9Gwtb5Eg">
@@ -93,7 +93,6 @@
               <children xsi:type="basic:PartStack" xmi:id="_KlwdwvXCEeerLL9Gwtb5Eg" elementId="bottom" containerData="2500" selectedElement="_KlwdxfXCEeerLL9Gwtb5Eg">
                 <tags>General</tags>
                 <tags>Debug</tags>
-                <tags>noFocus</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_Klwdw_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.views.ProblemView" ref="_KlwgBfXCEeerLL9Gwtb5Eg"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_KlwdxPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.views.TaskList" ref="_KlwgDfXCEeerLL9Gwtb5Eg"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_KlwdxfXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.console.ConsoleView" ref="_KlwgDvXCEeerLL9Gwtb5Eg"/>
@@ -230,13 +229,13 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_KlwfSvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.editorss" selectedElement="_KlwfS_XCEeerLL9Gwtb5Eg">
-      <children xsi:type="basic:PartStack" xmi:id="_KlwfS_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_Klwf4PXCEeerLL9Gwtb5Eg">
+      <children xsi:type="basic:PartStack" xmi:id="_KlwfS_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_KlwfUPXCEeerLL9Gwtb5Eg">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
         <tags>noFocus</tags>
         <children xsi:type="basic:Part" xmi:id="_KlwfTPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="jetfuelcore.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;jetfuelcore.h&quot; partName=&quot;jetfuelcore.h&quot; title=&quot;jetfuelcore.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelcore.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/src/jetfuelcore.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;327&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;jetfuelcore.h&quot; partName=&quot;jetfuelcore.h&quot; title=&quot;jetfuelcore.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelcore.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/src/jetfuelcore.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
@@ -258,10 +257,12 @@
           </menus>
         </children>
         <children xsi:type="basic:Part" xmi:id="_KlwfUPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Jetfuel Graphical Example.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Jetfuel Graphical Example.cpp&quot; partName=&quot;Jetfuel Graphical Example.cpp&quot; title=&quot;Jetfuel Graphical Example.cpp&quot; tooltip=&quot;Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;88&quot; selectionOffset=&quot;13057&quot; selectionTopPixel=&quot;4146&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Jetfuel Graphical Example.cpp&quot; partName=&quot;Jetfuel Graphical Example.cpp&quot; title=&quot;Jetfuel Graphical Example.cpp&quot; tooltip=&quot;Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;17423&quot; selectionTopPixel=&quot;5481&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
           <menus xsi:type="menu:PopupMenu" xmi:id="_KlwfUfXCEeerLL9Gwtb5Eg" elementId="#CEditorContext">
             <tags>menuContribution:popup</tags>
             <tags>popup:#CEditorContext</tags>
@@ -568,7 +569,7 @@
           </menus>
         </children>
         <children xsi:type="basic:Part" xmi:id="_Klwf2PXCEeerLL9Gwtb5Eg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="dropdownbox.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;dropdownbox.cpp&quot; partName=&quot;dropdownbox.cpp&quot; title=&quot;dropdownbox.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/dropdownbox.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/src/jetfuelgui/dropdownbox.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3816&quot; selectionTopPixel=&quot;1069&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;dropdownbox.cpp&quot; partName=&quot;dropdownbox.cpp&quot; title=&quot;dropdownbox.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/dropdownbox.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/src/jetfuelgui/dropdownbox.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;30&quot; selectionOffset=&quot;2182&quot; selectionTopPixel=&quot;276&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
@@ -611,28 +612,71 @@
             <tags>popup:#OverviewRulerContext</tags>
           </menus>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_Klwf4PXCEeerLL9Gwtb5Eg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="menu.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;menu.h&quot; partName=&quot;menu.h&quot; title=&quot;menu.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/menu.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/src/jetfuelgui/menu.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3220&quot; selectionTopPixel=&quot;1049&quot;/>&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_M0XYwAJDEeigm_hY4godmQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="menu.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;menu.h&quot; partName=&quot;menu.h&quot; title=&quot;menu.h&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/menu.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/src/jetfuelgui/menu.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_Klwf4fXCEeerLL9Gwtb5Eg" elementId="#CEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_Klwf4vXCEeerLL9Gwtb5Eg" elementId="#CEditorRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorRulerContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_Klwf4_XCEeerLL9Gwtb5Eg" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_gOTB4AJDEeigm_hY4godmQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="sound.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;sound.h&quot; partName=&quot;sound.h&quot; title=&quot;sound.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfuelmedia/sound.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/include/jetfuelmedia/sound.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;94&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_FYiWoASDEeixQ9NOeDcdlw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="stringlocalefile.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;stringlocalefile.h&quot; partName=&quot;stringlocalefile.h&quot; title=&quot;stringlocalefile.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfuellocale/stringlocalefile.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/include/jetfuellocale/stringlocalefile.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;31&quot; selectionOffset=&quot;798&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_HRT2IASDEeixQ9NOeDcdlw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="circle2dshape.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;circle2dshape.h&quot; partName=&quot;circle2dshape.h&quot; title=&quot;circle2dshape.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfueldraw/circle2dshape.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/include/jetfueldraw/circle2dshape.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;748&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_w7n7oASEEeixQ9NOeDcdlw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="rectangle2dshape.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;rectangle2dshape.cpp&quot; partName=&quot;rectangle2dshape.cpp&quot; title=&quot;rectangle2dshape.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfueldraw/rectangle2dshape.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/src/jetfueldraw/rectangle2dshape.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1348&quot; selectionTopPixel=&quot;477&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_DHTB4ASFEeixQ9NOeDcdlw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="rectangle2dshape.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;rectangle2dshape.h&quot; partName=&quot;rectangle2dshape.h&quot; title=&quot;rectangle2dshape.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfueldraw/rectangle2dshape.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/include/jetfueldraw/rectangle2dshape.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;7920&quot; selectionTopPixel=&quot;2565&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_jh81sASNEeixQ9NOeDcdlw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="menu.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;menu.cpp&quot; partName=&quot;menu.cpp&quot; title=&quot;menu.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/menu.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/src/jetfuelgui/menu.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2098&quot; selectionTopPixel=&quot;203&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_w1BcAASSEeixQ9NOeDcdlw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="dropdownbox.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;dropdownbox.h&quot; partName=&quot;dropdownbox.h&quot; title=&quot;dropdownbox.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfuelgui/dropdownbox.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/include/jetfuelgui/dropdownbox.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1086&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_TiL-oASTEeixQ9NOeDcdlw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="button.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;button.cpp&quot; partName=&quot;button.cpp&quot; title=&quot;button.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelgui/button.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/src/jetfuelgui/button.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2222&quot; selectionTopPixel=&quot;735&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="___1cgASWEeixQ9NOeDcdlw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="button.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;button.h&quot; partName=&quot;button.h&quot; title=&quot;button.h&quot; tooltip=&quot;Jetfuel Game Engine/include/jetfuelgui/button.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/include/jetfuelgui/button.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;11504&quot; selectionTopPixel=&quot;4050&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_yKfZIASdEeixQ9NOeDcdlw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="UISmanager.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;UISmanager.cpp&quot; partName=&quot;UISmanager.cpp&quot; title=&quot;UISmanager.cpp&quot; tooltip=&quot;Jetfuel Game Engine/src/jetfuelcontrol/UISmanager.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Jetfuel Game Engine/src/jetfuelcontrol/UISmanager.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2121&quot; selectionTopPixel=&quot;555&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
         </children>
       </children>
     </sharedElements>
@@ -685,7 +729,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_KlwgBfXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.ProblemsView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;157&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;expanded>&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xA;&lt;category IMemento.internal.id=&quot;Infos&quot;/>&#xA;&lt;category IMemento.internal.id=&quot;Warnings&quot;/>&#xA;&lt;/expanded>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;650&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_KlwgBvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.views.ProblemView">
@@ -887,7 +931,7 @@
         <tags>menuContribution:popup</tags>
         <tags>popup:org.eclipse.debug.ui.DebugView</tags>
       </menus>
-      <toolbar xmi:id="_KlwgdPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.debug.ui.DebugView" visible="false"/>
+      <toolbar xmi:id="_KlwgdPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.debug.ui.DebugView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_KlwgdfXCEeerLL9Gwtb5Eg" elementId="org.eclipse.debug.ui.VariableView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Variables" iconURI="platform:/plugin/org.eclipse.debug.ui/icons/full/eview16/variable_view.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.debug.internal.ui.views.variables.VariablesView"/>
@@ -1019,7 +1063,7 @@
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_KlxEzvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.debug.ui.MemoryView"/>
+      <toolbar xmi:id="_KlxEzvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.debug.ui.MemoryView" visible="false"/>
     </sharedElements>
     <trimBars xmi:id="_KlxEz_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.main.toolbar">
       <children xsi:type="menu:ToolBar" xmi:id="_KlxE0PXCEeerLL9Gwtb5Eg" elementId="group.file" toBeRendered="false">
@@ -1028,53 +1072,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxE0vXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE0_XCEeerLL9Gwtb5Eg" elementId="new.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE1PXCEeerLL9Gwtb5Eg" elementId="newWizardDropDown">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE1fXCEeerLL9Gwtb5Eg" elementId="new.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE1vXCEeerLL9Gwtb5Eg" elementId="save.group" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_KlxE1_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.linuxtools.internal.systemtap.ui.ide.OpenFileCommand" visible="false" iconURI="platform:/plugin/org.eclipse.linuxtools.systemtap.ui.ide/icons/actions/file/open_wiz.gif" command="_Kly8KPXCEeerLL9Gwtb5Eg">
-          <persistedState key="IIdentifier" value="org.eclipse.linuxtools.systemtap.ui.ide/org.eclipse.linuxtools.internal.systemtap.ui.ide.OpenFileCommand"/>
-          <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_KlxE2PXCEeerLL9Gwtb5Eg" coreExpressionId="programmatic.value"/>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE2fXCEeerLL9Gwtb5Eg" elementId="save">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE2vXCEeerLL9Gwtb5Eg" elementId="saveAll">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE2_XCEeerLL9Gwtb5Eg" elementId="save.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_KlxE3PXCEeerLL9Gwtb5Eg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_Kly81_XCEeerLL9Gwtb5Eg"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE3fXCEeerLL9Gwtb5Eg" elementId="print.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE3vXCEeerLL9Gwtb5Eg" elementId="build.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE3_XCEeerLL9Gwtb5Eg" elementId="build">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE4PXCEeerLL9Gwtb5Eg" elementId="build.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE4fXCEeerLL9Gwtb5Eg" elementId="additions">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE4vXCEeerLL9Gwtb5Eg" elementId="org.eclipse.cdt.ui.buildConfigToolbarAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxE4_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.cdt.ui.buildActiveConfigToolbarAction">
-          <tags>Opaque</tags>
-        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_diufMASCEeixQ9NOeDcdlw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_Kly81_XCEeerLL9Gwtb5Eg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxE5PXCEeerLL9Gwtb5Eg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1088,78 +1086,15 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxFOPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.cdt.ui.CElementCreationActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFOfXCEeerLL9Gwtb5Eg" elementId="CCWizards">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFOvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.cdt.ui.actions.NewProjectDropDown">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFO_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.cdt.ui.actions.NewFolderDropDown">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFPPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.cdt.ui.actions.NewFileDropDown">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFPfXCEeerLL9Gwtb5Eg" elementId="org.eclipse.cdt.ui.actions.NewTypeDropDown">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxFPvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.debug.ui.launchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFP_XCEeerLL9Gwtb5Eg" elementId="debug">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFQPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.debug.internal.ui.actions.DebugDropDownAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFQfXCEeerLL9Gwtb5Eg" elementId="org.eclipse.debug.internal.ui.actions.RunDropDownAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFQvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.debug.internal.ui.actions.ProfileDropDownAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFQ_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxFRPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.search.searchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFRfXCEeerLL9Gwtb5Eg" elementId="Search">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFRvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.cdt.ui.actions.OpenType">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFR_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.mylyn.tasks.ui.openTask">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFSPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.search.OpenSearchDialogPage">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxFSfXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.edit.text.actionSet.presentation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFSvXCEeerLL9Gwtb5Eg" elementId="Presentation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFS_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.edit.text.toggleWordWrap">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFTPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFTfXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFTvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFT_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.cdt.ui.edit.text.c.toggleMarkOccurrences">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFUPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.mylyn.cdt.ui.editor.folding.auto">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxFUfXCEeerLL9Gwtb5Eg" elementId="group.nav" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1167,36 +1102,9 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxFU_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFVPXCEeerLL9Gwtb5Eg" elementId="history.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFVfXCEeerLL9Gwtb5Eg" elementId="group.application" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFVvXCEeerLL9Gwtb5Eg" elementId="backardHistory">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFV_XCEeerLL9Gwtb5Eg" elementId="forwardHistory">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFWPXCEeerLL9Gwtb5Eg" elementId="pin.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_KlxFWfXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_Kly8hPXCEeerLL9Gwtb5Eg"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFWvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFW_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFXPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
-          <tags>Opaque</tags>
-        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_diyJkASCEeixQ9NOeDcdlw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_Kly8hPXCEeerLL9Gwtb5Eg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxFXfXCEeerLL9Gwtb5Eg" elementId="org.python.pydev.editor.PythonEditor" visible="false">
-        <tags>Draggable</tags>
-      </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_KlxFXvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.cdt.ui.editor.CEditor" visible="false">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxFX_XCEeerLL9Gwtb5Eg" elementId="group.editor" toBeRendered="false">
@@ -1209,12 +1117,6 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KlxFY_XCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.workbench.help" visible="false">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFZPXCEeerLL9Gwtb5Eg" elementId="group.help">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_KlxFZfXCEeerLL9Gwtb5Eg" elementId="group.application" visible="false">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolControl" xmi:id="_KlxFZvXCEeerLL9Gwtb5Eg" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
         <tags>stretch</tags>
@@ -2003,7 +1905,7 @@
     <tags>View</tags>
     <tags>categoryTag:Man pages</tags>
   </descriptors>
-  <descriptors xmi:id="_KlxHtPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.pde.runtime.LogView" label="Error Log" iconURI="platform:/plugin/org.eclipse.ui.views.log/icons/eview16/error_log.png" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+  <descriptors xmi:id="_KlxHtPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.pde.runtime.LogView" label="Error Log" iconURI="platform:/plugin/org.eclipse.ui.views.log/icons/eview16/error_log.gif" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.log.LogView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views.log"/>
     <tags>View</tags>
@@ -2573,6 +2475,23 @@
     <tags>View</tags>
     <tags>categoryTag:PyDev</tags>
   </descriptors>
+  <trimContributions xmi:id="_2r10UF9tEeO-yojH_y4TJA" elementId="org.eclipse.ui.ide.application.trimcontribution.QuickAccess" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" toBeRendered="false" parentId="org.eclipse.ui.main.toolbar" positionInParent="last">
+    <children xsi:type="menu:ToolControl" xmi:id="_76uUAF9tEeO-yojH_y4TJA" elementId="Spacer Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+      <tags>glue</tags>
+      <tags>move_after:PerspectiveSpacer</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+    <children xsi:type="menu:ToolControl" xmi:id="_8tJPcF9tEeO-yojH_y4TJA" elementId="SearchField" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.quickaccess.SearchField">
+      <tags>move_after:Spacer Glue</tags>
+      <tags>HIDEABLE</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+    <children xsi:type="menu:ToolControl" xmi:id="_9LgmcF9tEeO-yojH_y4TJA" elementId="Search-PS Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+      <tags>glue</tags>
+      <tags>move_after:SearchField</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+  </trimContributions>
   <commands xmi:id="_Kly6HPXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.window.customizePerspective" contributorURI="platform:/plugin/org.eclipse.platform"/>
   <commands xmi:id="_Kly6HfXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.edit.text.select.pageUp" commandName="Select Page Up" description="Select to the top of the page" category="_KlzhiPXCEeerLL9Gwtb5Eg"/>
   <commands xmi:id="_Kly6HvXCEeerLL9Gwtb5Eg" elementId="org.eclipse.ui.edit.text.toggleWordWrap" commandName="Toggle Word Wrap" description="Toggle word wrap in the current text editor" category="_KlzhhvXCEeerLL9Gwtb5Eg"/>

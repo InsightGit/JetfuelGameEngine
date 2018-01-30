@@ -1,50 +1,50 @@
 src/jetfuelgui/slider.o: \
  /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/slider.cpp \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/slider.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/iclickable.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfuelcontrol/UISinterpreter.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore/messagebus.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/vector2d.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/drawable.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rect2d.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/circle2dshape.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circleinterface.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.tpp \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/color.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/drawable.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/rectangle2dshape.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rectangleinterface.h
+ ../../../include/jetfuelgui/slider.h \
+ ../../../include/jetfuelgui/iclickable.h \
+ ../../../include/jetfuelgui/../jetfuelcontrol/UISinterpreter.h \
+ ../../../include/jetfuelcore/messagebus.h \
+ ../../../include/jetfueldraw/vector2d.h \
+ ../../../include/jetfuelgui/../jetfueldraw/drawable.h \
+ ../../../include/jetfueldraw/rect2d.h \
+ ../../../include/jetfuelgui/../jetfueldraw/circle2dshape.h \
+ ../../../include/jetfueldraw/circleinterface.h \
+ ../../../include/jetfueldraw/circle2d.h \
+ ../../../include/jetfueldraw/circle2d.tpp \
+ ../../../include/jetfueldraw/circle2d.h \
+ ../../../include/jetfueldraw/color.h \
+ ../../../include/jetfueldraw/drawable.h \
+ ../../../include/jetfuelgui/../jetfueldraw/rectangle2dshape.h \
+ ../../../include/jetfueldraw/rectangleinterface.h
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/slider.h:
+../../../include/jetfuelgui/slider.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/iclickable.h:
+../../../include/jetfuelgui/iclickable.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfuelcontrol/UISinterpreter.h:
+../../../include/jetfuelgui/../jetfuelcontrol/UISinterpreter.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelcore/messagebus.h:
+../../../include/jetfuelcore/messagebus.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/vector2d.h:
+../../../include/jetfueldraw/vector2d.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/drawable.h:
+../../../include/jetfuelgui/../jetfueldraw/drawable.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rect2d.h:
+../../../include/jetfueldraw/rect2d.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/circle2dshape.h:
+../../../include/jetfuelgui/../jetfueldraw/circle2dshape.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circleinterface.h:
+../../../include/jetfueldraw/circleinterface.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.h:
+../../../include/jetfueldraw/circle2d.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.tpp:
+../../../include/jetfueldraw/circle2d.tpp:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/circle2d.h:
+../../../include/jetfueldraw/circle2d.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/color.h:
+../../../include/jetfueldraw/color.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/drawable.h:
+../../../include/jetfueldraw/drawable.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/../jetfueldraw/rectangle2dshape.h:
+../../../include/jetfuelgui/../jetfueldraw/rectangle2dshape.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/rectangleinterface.h:
+../../../include/jetfueldraw/rectangleinterface.h:

@@ -1,0 +1,24 @@
+INSTUPgui.slider
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/pythonwrappers/jetfuel/gui/slider.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1&&2|13|2|1&&2|14|2|1&&2|15|2|1&&2|16|2|1&&2|17|2|1&&2|18|2|1&&2|19|2|1&&2|20|2|1&&2|21|2|1
+_jetfuel=4
+get_slider_button_characteristics=9
+set_position=19
+slider=1
+set_current_status=14
+get_control_scheme=15
+drawableref=6
+get_number_of_statuses=11
+get_size_width=20
+set_control_scheme=16
+get_slider_rail_characteristics=7
+get_position_x=17
+set_slider_button_characteristics=10
+set_slider_rail_characteristics=8
+slider.__init__=5
+set_number_of_statuses=12
+get_position_y=18
+get_size_height=21
+gui.slider=2
+__init__=3
+get_current_status=13

@@ -1,6 +1,61 @@
-14:49:34 **** Incremental Build of configuration Debug for project Jetfuel Game Engine ****
+18:48:59 **** Incremental Build of configuration Debug for project Jetfuel Game Engine ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++14 -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/jetfuelcontrol/UISmanager.d" -MT"src/jetfuelcontrol/UISmanager.o" -o "src/jetfuelcontrol/UISmanager.o" "/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp"
+In file included from ../../../include/jetfuelcore.h:24:0,
+                 from ../../../include/jetfuelcontrol/UISmanager.h:35,
+                 from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp:18:
+../../../include/jetfuelcore/messagebus.h: In member function ‘SDL_Event jetfuel::core::Message_bus::Get_SDL_event(int)’:
+../../../include/jetfuelcore/messagebus.h:140:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_SDL_events_size()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcore/messagebus.h: In member function ‘std::__cxx11::string jetfuel::core::Message_bus::Get_message(int) const’:
+../../../include/jetfuelcore/messagebus.h:186:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(m_messages.size() <= whichqueuedmessage){
+                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/jetfuelcore.h:25:0,
+                 from ../../../include/jetfuelcontrol/UISmanager.h:35,
+                 from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp:18:
+../../../include/jetfuelcore/timer.h: In member function ‘bool jetfuel::core::Timer::Start()’:
+../../../include/jetfuelcore/timer.h:80:32: warning: NULL used in arithmetic [-Wpointer-arith]
+                 if(m_duration==NULL || m_inuse){
+                                ^~~~
+In file included from /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp:18:0:
+../../../include/jetfuelcontrol/UISmanager.h: In member function ‘jetfuel::control::UIS_previous_key jetfuel::control::UIS_manager::Get_past_key_in_vector(int)’:
+../../../include/jetfuelcontrol/UISmanager.h:223:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_size_of_past_keys_entered_vector()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcontrol/UISmanager.h: In member function ‘void jetfuel::control::UIS_manager::Erase_place_in_past_keys_vector(int)’:
+../../../include/jetfuelcontrol/UISmanager.h:262:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place >= m_pastkeysentered.size()){
+                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp: In member function ‘void jetfuel::control::UIS_manager::Process_key_up_event(SDL_Event*)’:
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp:79:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for(int i = 0; Get_size_of_past_keys_entered_vector() > i; ++i){
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp: In member function ‘void jetfuel::control::UIS_manager::Process_input_event(SDL_Event*)’:
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp:226:37: warning: comparison with string literal results in unspecified behavior [-Waddress]
+             if(JETFUEL_COMPILED_OS!="Android" && JETFUEL_COMPILED_OS!="iOS"
+                                     ^~~~~~~~~
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp:226:71: warning: comparison with string literal results in unspecified behavior [-Waddress]
+             if(JETFUEL_COMPILED_OS!="Android" && JETFUEL_COMPILED_OS!="iOS"
+                                                                       ^~~~~
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp:227:58: warning: comparison with string literal results in unspecified behavior [-Waddress]
+                                && JETFUEL_COMPILED_OS != "iOS Simulator"){
+                                                          ^~~~~~~~~~~~~~~
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp: In member function ‘void jetfuel::control::UIS_manager::Detect_desktop_event(SDL_Event*)’:
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp:140:36: warning: statement will never be executed [-Wswitch-unreachable]
+                 if(Is_window_active()){
+                    ~~~~~~~~~~~~~~~~^~
+Finished building: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src/jetfuelcontrol/UISmanager.cpp
+ 
+Building target: libJetfuel Game Engine.a
+Invoking: GCC Archiver
+ar: creating libJetfuel Game Engine.a
+ar -r  "libJetfuel Game Engine.a"  ./src/jetfuelmedia/music.o ./src/jetfuelmedia/soundeffect.o  ./src/jetfuellocale/stringlocalefile.o  ./src/jetfuelinspire/pythonclassloader.o ./src/jetfuelinspire/pythonmoduleloader.o  ./src/jetfuelgui/button.o ./src/jetfuelgui/checkbox.o ./src/jetfuelgui/dropdownbox.o ./src/jetfuelgui/menu.o ./src/jetfuelgui/progressbar.o ./src/jetfuelgui/slider.o  ./src/jetfueldraw/circle2dshape.o ./src/jetfueldraw/color.o ./src/jetfueldraw/font.o ./src/jetfueldraw/image.o ./src/jetfueldraw/rectangle2dshape.o ./src/jetfueldraw/scene.o ./src/jetfueldraw/scenemanager.o ./src/jetfueldraw/sprite.o ./src/jetfueldraw/text.o  ./src/jetfuelcore/messagebus.o  ./src/jetfuelcontrol/UISinterpreter.o ./src/jetfuelcontrol/UISmanager.o   
+Finished building target: libJetfuel Game Engine.a
+ 
 
-14:49:34 Build Finished (took 317ms)
+18:49:03 Build Finished (took 4s.64ms)
 

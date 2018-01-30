@@ -1,0 +1,17 @@
+INSTUPgui.button
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/pythonwrappers/jetfuel/gui/button.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1&&2|13|2|1&&2|14|2|1
+_jetfuel=4
+set_position=14
+button.__init__=5
+set_clicked_message=9
+drawableref=6
+set_button_color=10
+gui.button=2
+button=1
+get_position_x=12
+set_uis_action_to_watch=11
+load_base_button_image=7
+get_position_y=13
+__init__=3
+set_button_text_characteristics=8

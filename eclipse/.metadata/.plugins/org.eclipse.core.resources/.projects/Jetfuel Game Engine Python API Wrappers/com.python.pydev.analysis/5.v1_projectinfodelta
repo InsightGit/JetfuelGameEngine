@@ -1,0 +1,10 @@
+INSTUPdraw.sprite
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/pythonwrappers/jetfuel/draw/sprite.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&2|7|2|1
+draw.sprite=2
+_jetfuel=4
+sprite=1
+sprite.__init__=5
+drawableref=6
+__init__=3
+load_from_image=7

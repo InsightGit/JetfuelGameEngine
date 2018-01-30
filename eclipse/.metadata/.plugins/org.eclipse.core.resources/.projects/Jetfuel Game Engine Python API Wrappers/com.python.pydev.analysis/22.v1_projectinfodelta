@@ -1,0 +1,20 @@
+INSTUPgui.progressbar
+/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/pythonwrappers/jetfuel/gui/progressbar.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&3|6|2|5&&2|7|2|1&&3|6|2|8&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1&&2|13|2|1&&2|14|2|1&&2|15|2|1&&2|16|2|1&&2|17|2|1
+_jetfuel=4
+set_position=15
+drawableref=6
+get_size_width=16
+progress_bar=1
+get_progress_bar_progress=9
+has_progress_bar_completed=12
+get_position_x=13
+gui.progressbar=2
+progress_bar.set_progress_bar=8
+get_position_y=14
+get_size_height=17
+progress_bar.__init__=5
+__init__=3
+set_progress_bar_progress=10
+get_max_progress_bar=11
+set_progress_bar=7

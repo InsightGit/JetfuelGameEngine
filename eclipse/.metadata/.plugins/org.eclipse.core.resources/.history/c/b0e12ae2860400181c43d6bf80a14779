@@ -1,0 +1,220 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2018 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#ifndef JETFUELDRAW_RECTANGLE2DSHAPE_H_
+#define JETFUELDRAW_RECTANGLE2DSHAPE_H_
+
+#include <memory>
+
+#include <jetfueldraw/color.h>
+#include <jetfueldraw/drawable.h>
+#include <jetfueldraw/rect2d.h>
+#include <jetfueldraw/rectangleinterface.h>
+
+namespace jetfuel {
+    namespace draw {
+        class Rectangle_2d_shape : public Drawable,
+                                   public Rectangle_interface{
+        public:
+            struct Rectangle_2d_shape_characteristics{
+                Vector2d_int position;
+                Vector2d_int size;
+                Color fillcolor;
+                Color outlinecolor;
+            };
+
+            Rectangle_2d_shape(){}
+
+            /// \brief Constructs the Rectangle_2d_shape with a
+            /// position Vector2d
+            /// and a size Vector2d.
+            ///
+            /// Constructs the Rectangle_2d_shape object with a
+            /// position Vector2d and a size Vector2d
+            /// of the rectangle.
+            ///
+            /// \param jetfuel::draw::Vector2d_int position
+            /// \param jetfuel::draw::Vector2d_int size
+            Rectangle_2d_shape(Vector2d_int position, Vector2d_int size);
+
+            /// \brief Constructs the Rectangle_2d_shape with a
+            /// Rect2d.
+            ///
+            /// Constructs the Rectangle_2d_shape object with a
+            /// Rect2d.
+            ///
+            /// \param jetfuel::draw::Rect2d_int rect
+            Rectangle_2d_shape(Rect2d_int rect);
+
+            /// \brief Returns the fill color of the rectangle.
+            ///
+            /// Returns the fill color of the rectangle.
+            Color Get_fill_color() const {
+                return m_rectfillcolor;
+            }
+
+            /// \brief Sets the fill color of the rectangle.
+            ///
+            /// Sets the fill color of the rectangle.
+            ///
+            /// \param jetfuel::draw::Color rectcolor
+            void Set_fill_color(const Color rectcolor) {
+                m_rectfillcolor = rectcolor;
+            }
+            
+            /// \brief Gets the size Vector2d of the
+            /// Rectangle_2d_shape.
+            ///
+	        /// Gets the size Vector2d of the Rectangle_2d_shape.
+            jetfuel::draw::Vector2d_int Get_size(){
+                return m_recttodraw.get()->Get_size();
+            }
+
+            /// \brief Sets the size Vector2d of the
+            /// Rectangle_2d_shape.
+            ///
+	        /// Sets the size Vector2d of the Rectangle_2d_shape.
+	        ///
+	        /// \param Vector2d_int size
+            void Set_size(const Vector2d_int size){
+                m_recttodraw = new Rect2d_int(m_recttodraw.get()->x,
+										  	  m_recttodraw.get()->y,
+											  size.x,size.y);
+            }
+
+	        /// \brief Gets the position Vector2d of the
+	        /// Rectangle_2d_shape.
+	        ///
+	        /// Gets the position Vector2d of the
+	        /// Rectangle_2d_shape.
+            jetfuel::draw::Vector2d_int Get_position() override{
+                return m_recttodraw.Get_position();
+            }
+
+            /// \brief Sets the position Vector2d of the
+            /// Rectangle_2d_shape.
+            ///
+	        /// Sets the position Vector2d of the 
+	        /// Rectangle_2d_shape.
+	        ///
+	        /// \param Vector2d_int position
+            void Set_position(const Vector2d_int position)override{
+                m_recttodraw = Rect2d_int(position.x,position.y,
+                                          m_recttodraw.get()->width,
+                                          m_recttodraw.get()->height);
+            }
+
+            /// \brief Returns the outline color of the rectangle.
+            ///
+            /// Returns the outline color of the rectangle.
+            Color Get_outline_color() const {
+                return m_rectfillcolor;
+            }
+
+            /// \brief Sets the outline color of the rectangle.
+            ///
+            /// Sets the outline color of the rectangle. Upon the
+            /// first time this function is called, it will enable
+            /// drawing the outline automatically, as it is disabled
+            /// by default.
+            ///
+            /// \param jetfuel::draw::Color rectcolor
+            void Set_outline_color(const Color rectcolor) {
+                m_rectfillcolor = rectcolor;
+                m_drawoutline = true;
+            }
+
+            /// \brief Disables drawing the outline color enabled by
+            /// Set_outline_color.
+            ///
+            /// Disables drawing the outline color enabled by
+            /// the Set_outline_color function.
+            void Disable_drawing_outline_color(){
+                m_drawoutline = false;
+            }
+
+            /// \brief Returns the Rect2d to be drawn.
+            ///
+            /// Returns the jetfuel::draw::Rect2d to be drawn when
+            /// the function Draw() is called.
+            Rect2d_int *Get_rect_to_draw()override {
+                return m_recttodraw.get();
+            }
+
+            /// \brief Draws the rectangle.
+            ///
+            /// Draws the rectangle. It is recommended to let
+            /// jetfuel::draw::Scene and jetfuel::draw::Scene_manager
+            /// call this, and not by yourself.
+            bool Draw()override;
+        protected:
+            /// \brief Returns whether this class is drawing an
+            /// outline.
+            ///
+            /// Returns whether this class is drawing a rectangle
+            /// outline.
+            bool Is_draw_outline() const {
+                return m_drawoutline;
+            }
+        private:
+            ///////////////////
+            /// member data ///
+            ///////////////////
+
+            bool m_drawoutline = false; ///< drawing outline boolean
+
+            std::shared_ptr<Rect2d_int> m_recttodraw; ///< rectangle
+													  ///< to draw
+													  ///< Rect2d_int
+
+            Color m_rectfillcolor; ///< rectangle fill color
+            Color m_rectoutlinecolor; ///< rectangle outline color
+        };
+
+        /// \class jetfuel::draw::Rectangle_2d_shape
+        ///
+        /// A 2d rectangle that can be drawn to the player.
+        ///
+        /// Code Example:
+        ///     jetfuel::draw::Scene_manager scenemanager;
+        ///     jetfuel::draw::Scene scene1(1);
+        ///     jetfuel::draw::Rectangle_2d_shape rect(
+        ///      jetfuel::draw::Rect2d_int(100,100,400,400));
+        ///
+        ///   if(!scenemanager.Create_window("example",
+        ///                            jetfuel::draw::Vector2d_int(0,0),
+        ///                            jetfuel::draw::Vector2d_int(500,500))){
+        ///      std::cerr << "[!]ERROR with creating sdl renderer!" <<
+        ///      "Error is:" << SDL_GetError() << "\n";
+        ///   }
+        ///
+        ///     if(!scenemanager.Create_renderer()){
+        ///          std::cerr << "[!]ERROR with creating sdl renderer!" <<
+        ///         "Error is:" << SDL_GetError() << "\n";
+        ///     }
+        ///
+        ///     scenemanager.Switch_current_scene(&scene1);
+        ///
+        ///     rect.Set_fill_color(jetfuel::draw::Color::Magenta);
+        ///     scene1.Attach_drawable(&rect,2);
+        ///
+        ///     scenemanager.Draw_current_scene();
+
+    } /* namespace draw */
+} /* namespace jetfuel */
+
+#endif /* JETFUELDRAW_RECTANGLE2DSHAPE_H_ */

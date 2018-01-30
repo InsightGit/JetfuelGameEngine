@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from platform import system
+
 import os
 import sys
 
@@ -90,8 +92,10 @@ def retrieveJetfuelDir():
 def main():
     window = tkinter.Tk();
     window.resizable(0,0);
-    window.wm_title("Jetfuel Game Engine Project Helper")
-    window.iconbitmap("icon.ico");
+    window.wm_title("Jetfuel Game Engine Project Helper");
+
+    if(system() != "Linux"):
+        window.iconbitmap("icon.ico");
 
     doesrefsexist = os.path.exists("prefs");
     if(doesrefsexist):

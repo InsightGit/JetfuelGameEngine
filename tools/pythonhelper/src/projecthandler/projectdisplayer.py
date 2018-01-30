@@ -1,5 +1,7 @@
 from time import sleep
 
+from platform import system
+
 from threading import Thread
 
 from shutil import rmtree
@@ -59,7 +61,8 @@ class ProjectDisplayer:
         self._projectdisplaywindow.resizable(0,0);
         self._projectdisplaywindow.wm_title("Jetfuel Game Engine Project "+
                                             "Helper");
-        self._projectdisplaywindow.iconbitmap("icon.ico");
+        if(system() != "Linux"):
+            self._projectdisplaywindow.iconbitmap("icon.ico");
 
         self._projectnamelabel = Label(self._projectdisplaywindow,
                                       text="Project name: "+
@@ -76,7 +79,8 @@ class ProjectDisplayer:
                                                  bg='yellow', command=self.\
                                                 __editProjectPropertiesCallback);
         self._projectadditonsbutton = Button(self._projectdisplaywindow,
-                                             text="Project Additions",
+                                             text="Project Additions"+
+                                                  "(To Be Implemented)",
                                              bg='green');
         self._deleteprojectbutton = Button(self._projectdisplaywindow,
                                            text="Delete Project", bg='red',

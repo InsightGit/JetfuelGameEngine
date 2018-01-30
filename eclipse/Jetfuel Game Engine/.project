@@ -37,6 +37,11 @@
 			<location>/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts</location>
 		</link>
 		<link>
+			<name>include</name>
+			<type>2</type>
+			<location>/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/include</location>
+		</link>
+		<link>
 			<name>src</name>
 			<type>2</type>
 			<location>/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src</location>
