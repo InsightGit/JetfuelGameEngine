@@ -1,0 +1,26 @@
+\hypertarget{classsjetfuel_1_1inspire_1_1Python__module__loader}{}\section{sjetfuel\+:\+:inspire\+:\+:Python\+\_\+module\+\_\+loader Class Reference}
+\label{classsjetfuel_1_1inspire_1_1Python__module__loader}\index{sjetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{sjetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+
+
+{\ttfamily \#include $<$pythonmoduleloader.\+h$>$}
+
+
+
+\subsection{Detailed Description}
+Loads a Python 3.\+6 function(\+Not a class) to be executed. This function can be executed, and can have arguments passed through it via a tuple in a Py\+Object$\ast$.
+
+The python function can return nothing, a bool, a int(to be converted to a long), a float(to be converted to double), or a String (to be converted to a Cstring(or a char$\ast$), which can be implicitly be converted to a std\+::string).
+
+Note that the filename cannot have a .py extension, it can only have it\textquotesingle{}s own name.
+
+Code Example\+: \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader} sumof1plus1loader = \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}( \char`\"{}adder\char`\"{},\char`\"{}whatdoes1+1equal\char`\"{}, \char`\"{}./\+Scripts\char`\"{});
+
+bool executionstatus; std\+::string error;
+
+long sumof1plus1 = sumof1plus1loader.\+Execute\+\_\+long(\&executionstatus,\&error,\+N\+U\+L\+L); // N\+U\+LL = No arguments to pass
+
+if(!executionstatus)\{ // Not executed... See what\textquotesingle{}s wrong. std\+::cout $<$$<$ \char`\"{}\+Python execution error! Error was\+:\char`\"{} $<$$<$ error $<$$<$ std\+::endl; \}else\{ std\+::cout $<$$<$ \char`\"{}\+Sum was\+:\char`\"{} $<$$<$ std\+::to\+\_\+string(sumof1plus1) $<$$<$ std\+::endl; \} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelinspire/pythonmoduleloader.\+h\end{DoxyCompactItemize}

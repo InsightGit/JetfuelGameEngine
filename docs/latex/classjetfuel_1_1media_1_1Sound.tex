@@ -1,0 +1,299 @@
+\hypertarget{classjetfuel_1_1media_1_1Sound}{}\section{jetfuel\+:\+:media\+:\+:Sound Class Reference}
+\label{classjetfuel_1_1media_1_1Sound}\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+
+
+{\ttfamily \#include $<$sound.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:media\+:\+:Sound\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classjetfuel_1_1media_1_1Sound__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classjetfuel_1_1media_1_1Sound_a9b588c3a8749ce496f19cf499e5d98bb}{$\sim$\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classjetfuel_1_1media_1_1Sound_ab18ff9b8dd2001fa11b17649a6a3defb}{Load\+\_\+audio\+\_\+file} (const std\+::string musicfilepath)=0
+\begin{DoxyCompactList}\small\item\em Loads an audio file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classjetfuel_1_1media_1_1Sound_a4dec23a59c74ddbdf10386205e68cb29}{Set\+\_\+global\+\_\+volume} (const unsigned int channel, const int volume)
+\begin{DoxyCompactList}\small\item\em Sets the G\+L\+O\+B\+A\+L(affects A\+L\+L sound objects) volume. \end{DoxyCompactList}\item 
+int \hyperlink{classjetfuel_1_1media_1_1Sound_adf11e3f1005cbad8ffe746e83978200d}{Get\+\_\+frequency} () const
+\begin{DoxyCompactList}\small\item\em Gets the current audio frequency(44100 by default). \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Sound_af67e7d4f9d1509b1a8dcea3e3a7860c8}{Set\+\_\+frequency} (const int frequency)
+\begin{DoxyCompactList}\small\item\em Sets the current audio frequency. \end{DoxyCompactList}\item 
+Uint16 \hyperlink{classjetfuel_1_1media_1_1Sound_a91d355730fe004228942d38b2e2264b9}{Get\+\_\+format} () const
+\begin{DoxyCompactList}\small\item\em Gets the current audio frequency( M\+I\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+M\+AT by default). \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Sound_ac764c3156841b6bd2970d912292ac1ca}{Set\+\_\+format} (Uint16 format)
+\begin{DoxyCompactList}\small\item\em Sets the current audio format. \end{DoxyCompactList}\item 
+int \hyperlink{classjetfuel_1_1media_1_1Sound_a8f1cbbaaf31a106938968f256e77bad7}{Get\+\_\+chunk\+\_\+size} () const
+\begin{DoxyCompactList}\small\item\em Gets the current audio chunk size( 2048 by default). \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Sound_ad84439e1a101e298b2e5186851ebe0d3}{Set\+\_\+chunk\+\_\+size} (const int chunksize)
+\begin{DoxyCompactList}\small\item\em Sets the current audio chunk size. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1media_1_1Sound_a0fe4e0c72224935e14a5481435e855af}{Get\+\_\+number\+\_\+of\+\_\+channels} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of audio channels(2 by default). \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Sound_ac0bb67c175f71ab5977af3f5781cedd7}{Set\+\_\+number\+\_\+of\+\_\+channels} (const unsigned int numofchannels)
+\begin{DoxyCompactList}\small\item\em Sets the number of audio channels. \end{DoxyCompactList}\item 
+int \hyperlink{classjetfuel_1_1media_1_1Sound_afcef9fca1204403d6f3d52fc4b494463}{Get\+\_\+active\+\_\+channel\+\_\+num} () const
+\begin{DoxyCompactList}\small\item\em Gets the current active channel number(-\/1(or automatically choose active channel) by default). \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Sound_addaea461cf050aa23501882b2c76b39b}{Set\+\_\+active\+\_\+channel\+\_\+num} (const int activechannelnum)
+\begin{DoxyCompactList}\small\item\em Sets the current active channel number. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classjetfuel_1_1media_1_1Sound_a8861a6671ce039522179d61085f240c8}{Play} ()=0
+\begin{DoxyCompactList}\small\item\em Starts audio playback. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classjetfuel_1_1media_1_1Sound_adb9cd45e23e6224760051e579aeefa7f}{Pause} ()=0
+\begin{DoxyCompactList}\small\item\em Pauses audio playback. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classjetfuel_1_1media_1_1Sound_af781fccd8ebb1305e97dc8f6b7c828dc}{Resume} ()=0
+\begin{DoxyCompactList}\small\item\em Resumes audio playback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple base \hyperlink{classjetfuel_1_1media_1_1Sound}{Sound} class that, when inherited, simplifies the process of building an audio playback class significantly.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classjetfuel_1_1media_1_1Sound__effect}{jetfuel\+::media\+::\+Sound\+\_\+effect} 
+
+\hyperlink{classjetfuel_1_1media_1_1Music}{jetfuel\+::media\+::\+Music} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_a9b588c3a8749ce496f19cf499e5d98bb}\label{classjetfuel_1_1media_1_1Sound_a9b588c3a8749ce496f19cf499e5d98bb}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!````~Sound@{$\sim$\+Sound}}
+\index{````~Sound@{$\sim$\+Sound}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{$\sim$\+Sound()}{~Sound()}}
+{\footnotesize\ttfamily virtual jetfuel\+::media\+::\+Sound\+::$\sim$\+Sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor. 
+
+Virtual destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_afcef9fca1204403d6f3d52fc4b494463}\label{classjetfuel_1_1media_1_1Sound_afcef9fca1204403d6f3d52fc4b494463}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Get\+\_\+active\+\_\+channel\+\_\+num@{Get\+\_\+active\+\_\+channel\+\_\+num}}
+\index{Get\+\_\+active\+\_\+channel\+\_\+num@{Get\+\_\+active\+\_\+channel\+\_\+num}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Get\+\_\+active\+\_\+channel\+\_\+num()}{Get\_active\_channel\_num()}}
+{\footnotesize\ttfamily int jetfuel\+::media\+::\+Sound\+::\+Get\+\_\+active\+\_\+channel\+\_\+num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current active channel number(-\/1(or automatically choose active channel) by default). 
+
+Gets the current active channel number(-\/1(or automatically choose active channel) by default). \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_a8f1cbbaaf31a106938968f256e77bad7}\label{classjetfuel_1_1media_1_1Sound_a8f1cbbaaf31a106938968f256e77bad7}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Get\+\_\+chunk\+\_\+size@{Get\+\_\+chunk\+\_\+size}}
+\index{Get\+\_\+chunk\+\_\+size@{Get\+\_\+chunk\+\_\+size}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Get\+\_\+chunk\+\_\+size()}{Get\_chunk\_size()}}
+{\footnotesize\ttfamily int jetfuel\+::media\+::\+Sound\+::\+Get\+\_\+chunk\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current audio chunk size( 2048 by default). 
+
+Gets the current audio frequency(2048 by default). \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_a91d355730fe004228942d38b2e2264b9}\label{classjetfuel_1_1media_1_1Sound_a91d355730fe004228942d38b2e2264b9}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Get\+\_\+format@{Get\+\_\+format}}
+\index{Get\+\_\+format@{Get\+\_\+format}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Get\+\_\+format()}{Get\_format()}}
+{\footnotesize\ttfamily Uint16 jetfuel\+::media\+::\+Sound\+::\+Get\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current audio frequency( M\+I\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+M\+AT by default). 
+
+Gets the current audio frequency(M\+I\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+M\+AT by default). \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_adf11e3f1005cbad8ffe746e83978200d}\label{classjetfuel_1_1media_1_1Sound_adf11e3f1005cbad8ffe746e83978200d}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Get\+\_\+frequency@{Get\+\_\+frequency}}
+\index{Get\+\_\+frequency@{Get\+\_\+frequency}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Get\+\_\+frequency()}{Get\_frequency()}}
+{\footnotesize\ttfamily int jetfuel\+::media\+::\+Sound\+::\+Get\+\_\+frequency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current audio frequency(44100 by default). 
+
+Gets the current audio frequency(44100 by default). \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_a0fe4e0c72224935e14a5481435e855af}\label{classjetfuel_1_1media_1_1Sound_a0fe4e0c72224935e14a5481435e855af}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Get\+\_\+number\+\_\+of\+\_\+channels@{Get\+\_\+number\+\_\+of\+\_\+channels}}
+\index{Get\+\_\+number\+\_\+of\+\_\+channels@{Get\+\_\+number\+\_\+of\+\_\+channels}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Get\+\_\+number\+\_\+of\+\_\+channels()}{Get\_number\_of\_channels()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::media\+::\+Sound\+::\+Get\+\_\+number\+\_\+of\+\_\+channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the number of audio channels(2 by default). 
+
+Gets the number of audio channels(2 by default). \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_ab18ff9b8dd2001fa11b17649a6a3defb}\label{classjetfuel_1_1media_1_1Sound_ab18ff9b8dd2001fa11b17649a6a3defb}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Load\+\_\+audio\+\_\+file@{Load\+\_\+audio\+\_\+file}}
+\index{Load\+\_\+audio\+\_\+file@{Load\+\_\+audio\+\_\+file}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Load\+\_\+audio\+\_\+file()}{Load\_audio\_file()}}
+{\footnotesize\ttfamily virtual bool jetfuel\+::media\+::\+Sound\+::\+Load\+\_\+audio\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string}]{musicfilepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Loads an audio file. 
+
+Loads an audio file. This is a pure virtual function that any children M\+U\+ST implement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & musicfilepath \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classjetfuel_1_1media_1_1Music_ae24079b0301f5cf845d094e32ed22da1}{jetfuel\+::media\+::\+Music}, and \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a1ad701cd2318e960bde2ab063aeabb75}{jetfuel\+::media\+::\+Sound\+\_\+effect}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_adb9cd45e23e6224760051e579aeefa7f}\label{classjetfuel_1_1media_1_1Sound_adb9cd45e23e6224760051e579aeefa7f}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Pause@{Pause}}
+\index{Pause@{Pause}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily virtual void jetfuel\+::media\+::\+Sound\+::\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pauses audio playback. 
+
+Pauses audio playback. This is a pure virtual function that any children M\+U\+ST implement. 
+
+Implemented in \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a5fa5bb67a349bac545f233a6aa8a030d}{jetfuel\+::media\+::\+Sound\+\_\+effect}, and \hyperlink{classjetfuel_1_1media_1_1Music_a002f31a60671c229bd054539caf537c5}{jetfuel\+::media\+::\+Music}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_a8861a6671ce039522179d61085f240c8}\label{classjetfuel_1_1media_1_1Sound_a8861a6671ce039522179d61085f240c8}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Play@{Play}}
+\index{Play@{Play}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily virtual bool jetfuel\+::media\+::\+Sound\+::\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Starts audio playback. 
+
+Starts audio playback. This is a pure virtual function that any children M\+U\+ST implement. 
+
+Implemented in \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a206d3653259cc854fd80fa44a9d333c4}{jetfuel\+::media\+::\+Sound\+\_\+effect}, and \hyperlink{classjetfuel_1_1media_1_1Music_afe9abee662a68ea9391e94e37c79945e}{jetfuel\+::media\+::\+Music}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_af781fccd8ebb1305e97dc8f6b7c828dc}\label{classjetfuel_1_1media_1_1Sound_af781fccd8ebb1305e97dc8f6b7c828dc}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Resume@{Resume}}
+\index{Resume@{Resume}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Resume()}{Resume()}}
+{\footnotesize\ttfamily virtual void jetfuel\+::media\+::\+Sound\+::\+Resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Resumes audio playback. 
+
+Resumes audio playback. This is a pure virtual function that any children M\+U\+ST implement. 
+
+Implemented in \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a8849f5324b2c049c63ed3a0bbbd88467}{jetfuel\+::media\+::\+Sound\+\_\+effect}, and \hyperlink{classjetfuel_1_1media_1_1Music_a0c8e12634e29cfe37138349776b6d9a8}{jetfuel\+::media\+::\+Music}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_addaea461cf050aa23501882b2c76b39b}\label{classjetfuel_1_1media_1_1Sound_addaea461cf050aa23501882b2c76b39b}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Set\+\_\+active\+\_\+channel\+\_\+num@{Set\+\_\+active\+\_\+channel\+\_\+num}}
+\index{Set\+\_\+active\+\_\+channel\+\_\+num@{Set\+\_\+active\+\_\+channel\+\_\+num}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Set\+\_\+active\+\_\+channel\+\_\+num()}{Set\_active\_channel\_num()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Sound\+::\+Set\+\_\+active\+\_\+channel\+\_\+num (\begin{DoxyParamCaption}\item[{const int}]{activechannelnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the current active channel number. 
+
+Sets the current active channel number. At the risk of sounding obvious\+: Don\textquotesingle{}t mess with this unless you know what you are doing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & activechannelnum \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_ad84439e1a101e298b2e5186851ebe0d3}\label{classjetfuel_1_1media_1_1Sound_ad84439e1a101e298b2e5186851ebe0d3}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Set\+\_\+chunk\+\_\+size@{Set\+\_\+chunk\+\_\+size}}
+\index{Set\+\_\+chunk\+\_\+size@{Set\+\_\+chunk\+\_\+size}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Set\+\_\+chunk\+\_\+size()}{Set\_chunk\_size()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Sound\+::\+Set\+\_\+chunk\+\_\+size (\begin{DoxyParamCaption}\item[{const int}]{chunksize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the current audio chunk size. 
+
+Sets the current audio chunk size. At the risk of sounding obvious\+: Don\textquotesingle{}t mess with this unless you know what you are doing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & chunksize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_ac764c3156841b6bd2970d912292ac1ca}\label{classjetfuel_1_1media_1_1Sound_ac764c3156841b6bd2970d912292ac1ca}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Set\+\_\+format@{Set\+\_\+format}}
+\index{Set\+\_\+format@{Set\+\_\+format}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Set\+\_\+format()}{Set\_format()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Sound\+::\+Set\+\_\+format (\begin{DoxyParamCaption}\item[{Uint16}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the current audio format. 
+
+Sets the current audio format. At the risk of sounding obvious\+: Don\textquotesingle{}t mess with this unless you know what you are doing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Uint16} & format \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_af67e7d4f9d1509b1a8dcea3e3a7860c8}\label{classjetfuel_1_1media_1_1Sound_af67e7d4f9d1509b1a8dcea3e3a7860c8}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Set\+\_\+frequency@{Set\+\_\+frequency}}
+\index{Set\+\_\+frequency@{Set\+\_\+frequency}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Set\+\_\+frequency()}{Set\_frequency()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Sound\+::\+Set\+\_\+frequency (\begin{DoxyParamCaption}\item[{const int}]{frequency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the current audio frequency. 
+
+Sets the current audio frequency. At the risk of sounding obvious\+: Don\textquotesingle{}t mess with this unless you know what you are doing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & frequency \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_a4dec23a59c74ddbdf10386205e68cb29}\label{classjetfuel_1_1media_1_1Sound_a4dec23a59c74ddbdf10386205e68cb29}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Set\+\_\+global\+\_\+volume@{Set\+\_\+global\+\_\+volume}}
+\index{Set\+\_\+global\+\_\+volume@{Set\+\_\+global\+\_\+volume}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Set\+\_\+global\+\_\+volume()}{Set\_global\_volume()}}
+{\footnotesize\ttfamily virtual void jetfuel\+::media\+::\+Sound\+::\+Set\+\_\+global\+\_\+volume (\begin{DoxyParamCaption}\item[{const unsigned int}]{channel,  }\item[{const int}]{volume }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the G\+L\+O\+B\+A\+L(affects A\+L\+L sound objects) volume. 
+
+Sets the G\+L\+O\+B\+A\+L(affects A\+L\+L sound objects) volume.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int channel \\
+\hline
+{\em int} & volume \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound_ac0bb67c175f71ab5977af3f5781cedd7}\label{classjetfuel_1_1media_1_1Sound_ac0bb67c175f71ab5977af3f5781cedd7}} 
+\index{jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}!Set\+\_\+number\+\_\+of\+\_\+channels@{Set\+\_\+number\+\_\+of\+\_\+channels}}
+\index{Set\+\_\+number\+\_\+of\+\_\+channels@{Set\+\_\+number\+\_\+of\+\_\+channels}!jetfuel\+::media\+::\+Sound@{jetfuel\+::media\+::\+Sound}}
+\subsubsection{\texorpdfstring{Set\+\_\+number\+\_\+of\+\_\+channels()}{Set\_number\_of\_channels()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Sound\+::\+Set\+\_\+number\+\_\+of\+\_\+channels (\begin{DoxyParamCaption}\item[{const unsigned int}]{numofchannels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the number of audio channels. 
+
+Sets the number of audio channels.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int numofchannels \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelmedia/sound.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,511 @@
+\hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader}{}\section{jetfuel\+:\+:inspire\+:\+:Python\+\_\+module\+\_\+loader Class Reference}
+\label{classjetfuel_1_1inspire_1_1Python__module__loader}\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a30ab85906d5365ca34ca47b456460353}{Python\+\_\+module\+\_\+loader} (const std\+::string filename, const std\+::string functionname, const std\+::string directoryoffilename=\char`\"{}.\char`\"{}, const std\+::string filetoreplace=\char`\"{}\char`\"{}, const std\+::string directoryoffiletoreplace=\char`\"{}.\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader} using a file-\/name, a functionname, the directory, and, optionally a file to replace the former. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_addb900473108ecea10d36eceb9917920}{Python\+\_\+module\+\_\+loader} (\hyperlink{classjetfuel_1_1inspire_1_1Python__class__loader}{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader} $\ast$pythonclasstouse, const std\+::string functionname)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader} that will load a function from a class. \end{DoxyCompactList}\item 
+virtual \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a87c6c13c50ca78e59e19d291355a8bc5}{$\sim$\+Python\+\_\+module\+\_\+loader} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a99f8d8ee9f65c15b10b91ba7e59033c0}{Execute} (bool $\ast$executed, std\+::string $\ast$error, Py\+Object $\ast$args)
+\begin{DoxyCompactList}\small\item\em Executes this Python module without any return type. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a3c51521e298f05b5fbb702327aa102b3}{Execute\+\_\+bool} (bool $\ast$executed, std\+::string $\ast$error, Py\+Object $\ast$args)
+\begin{DoxyCompactList}\small\item\em Executes this Python module with a boolean return type. \end{DoxyCompactList}\item 
+long \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a7f1608c46e4d3c9f7a019f80a78c6756}{Execute\+\_\+long} (bool $\ast$executed, std\+::string $\ast$error, Py\+Object $\ast$args)
+\begin{DoxyCompactList}\small\item\em Executes this Python module with a long return type. \end{DoxyCompactList}\item 
+double \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a058df0a03f3477bb7d576d5873246aa7}{Execute\+\_\+double} (bool $\ast$executed, std\+::string $\ast$error, Py\+Object $\ast$args)
+\begin{DoxyCompactList}\small\item\em Executes this Python module with a double return type. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a83af544f1b515c3606ed91e9c8ba9494}{Execute\+\_\+cstring} (bool $\ast$executed, std\+::string $\ast$error, Py\+Object $\ast$args)
+\begin{DoxyCompactList}\small\item\em Executes this Python module with a cstring return type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a50d20a6fcd26caf7aa1ece5c479bbc01}{Py\+\_\+err\+\_\+to\+\_\+string} (Py\+Object $\ast$pythonerrortype, Py\+Object $\ast$pythonerrorvalue, Py\+Object $\ast$pythonerrortraceback)
+\begin{DoxyCompactList}\small\item\em Converts a Python error message to a std\+::string. \end{DoxyCompactList}\item 
+static void \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_ad8cf860545d85af78f7cc82d4e889840}{Add\+\_\+to\+\_\+py\+\_\+path} (const std\+::string pathlocationtoadd)
+\begin{DoxyCompactList}\small\item\em Adds a given directory path to the python path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a54677f790da88ca5ff397555449efafc}{Base\+\_\+execute\+\_\+py\+\_\+object} (Py\+Object $\ast$pythonfunction, Py\+Object $\ast$args, bool $\ast$executed, std\+::string $\ast$error)
+\begin{DoxyCompactList}\small\item\em Sets up Python function objects for execution. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a0df6c4f0f9b7fb8fcd97483e6eb841a8}{Execute\+\_\+py\+\_\+object} (Py\+Object $\ast$args, bool $\ast$executed, std\+::string $\ast$error)
+\begin{DoxyCompactList}\small\item\em Executes a python function without a return type. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a97bac700d3f89eb294f438802c82667f}{Execute\+\_\+py\+\_\+object\+\_\+bool} (Py\+Object $\ast$args, bool $\ast$executed, std\+::string $\ast$error)
+\begin{DoxyCompactList}\small\item\em Executes a python function with a boolean return type. \end{DoxyCompactList}\item 
+long \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a05e19263c55ee6d5acc5e22b00e03e55}{Execute\+\_\+py\+\_\+object\+\_\+long} (Py\+Object $\ast$args, bool $\ast$executed, std\+::string $\ast$error)
+\begin{DoxyCompactList}\small\item\em Executes a python function with a long return type. \end{DoxyCompactList}\item 
+double \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a0fca60192c29e3f7db689c366fd73437}{Execute\+\_\+py\+\_\+object\+\_\+double} (Py\+Object $\ast$args, bool $\ast$executed, std\+::string $\ast$error)
+\begin{DoxyCompactList}\small\item\em Executes a python function with a double return type. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a6dcb9763f793360e89da5f3377a945b9}{Execute\+\_\+py\+\_\+object\+\_\+cstring} (Py\+Object $\ast$args, bool $\ast$executed, std\+::string $\ast$error)
+\begin{DoxyCompactList}\small\item\em Executes a python function with a cstring return type. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a2629d9d235cf65a7fe6f44a2554d317c}{Get\+\_\+file\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Gets this Python file name. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_af687d8cd4118ea0d4449d00161f00043}{Get\+\_\+file\+\_\+to\+\_\+replace} () const
+\begin{DoxyCompactList}\small\item\em Gets this Python file name of the file to replace. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_ad2034cdd073b263cecca65e5bb286745}{Get\+\_\+function\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Gets this Python function name. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a11defce7f1f1ae5926744d8e0f01243c}{Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Gets this directory name of the Python files. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_ae908aab386db9d4d5c20c350d1743b5e}{Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+to\+\_\+replace} () const
+\begin{DoxyCompactList}\small\item\em Gets this directory name of the Python files to replace. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a48f19613015ba3e143827a9946e436cd}{Using\+\_\+classes} () const
+\begin{DoxyCompactList}\small\item\em Returns a boolean whether this \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader} is invoking class methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static wchar\+\_\+t $\ast$ \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_ad4fb50f7f68749decfeef1204fe06acb}{Get\+\_\+wchar} (const char $\ast$chartouse)
+\begin{DoxyCompactList}\small\item\em Converts a const char $\ast$ to a wchar\+\_\+t $\ast$. \end{DoxyCompactList}\item 
+static const std\+::string \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a88da3316adbe919080ad1c92045b4ad3}{Get\+\_\+string} (const wchar\+\_\+t $\ast$widechar)
+\begin{DoxyCompactList}\small\item\em Converts an A\+S\+C\+II wchar\+\_\+t $\ast$ to an A\+S\+C\+II std\+::string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_adb872547c2aec3b27e5845fedb7a3f42}\label{classjetfuel_1_1inspire_1_1Python__module__loader_adb872547c2aec3b27e5845fedb7a3f42}} 
+static std\+::string {\bfseries Get\+\_\+py\+\_\+error} (Py\+Object $\ast$errorobject)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Py\+Object $\ast$ \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader_a973a8f86d446820b38b18f87fe51465a}{pythonclass}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a30ab85906d5365ca34ca47b456460353}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a30ab85906d5365ca34ca47b456460353}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Python\+\_\+module\+\_\+loader@{Python\+\_\+module\+\_\+loader}}
+\index{Python\+\_\+module\+\_\+loader@{Python\+\_\+module\+\_\+loader}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Python\+\_\+module\+\_\+loader()}{Python\_module\_loader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Python\+\_\+module\+\_\+loader (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{const std\+::string}]{functionname,  }\item[{const std\+::string}]{directoryoffilename = {\ttfamily \char`\"{}.\char`\"{}},  }\item[{const std\+::string}]{filetoreplace = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string}]{directoryoffiletoreplace = {\ttfamily \char`\"{}.\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader} using a file-\/name, a functionname, the directory, and, optionally a file to replace the former. 
+
+Constructs a \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader} using a file-\/name, a functionname, the directory(set to \char`\"{}.\char`\"{} by default), and, optionally a file to replace the former. If you chose to use the file to replace functionality, the default file will be run first, and then the file to replace will be run second, overriding the first file return value and any Python variables or assignments.
+
+This is handy as a failsafe for a mod system, because if the mod file fails, the game can continue normally, using the internal one function as a failsafe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filename \\
+\hline
+{\em std\+::string} & functionname \\
+\hline
+{\em std\+::string} & directoryoffilename \\
+\hline
+{\em std\+::string} & filetoreplace \\
+\hline
+{\em std\+::string} & directoryoffiletoreplace \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_addb900473108ecea10d36eceb9917920}\label{classjetfuel_1_1inspire_1_1Python__module__loader_addb900473108ecea10d36eceb9917920}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Python\+\_\+module\+\_\+loader@{Python\+\_\+module\+\_\+loader}}
+\index{Python\+\_\+module\+\_\+loader@{Python\+\_\+module\+\_\+loader}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Python\+\_\+module\+\_\+loader()}{Python\_module\_loader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Python\+\_\+module\+\_\+loader (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1inspire_1_1Python__class__loader}{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader} $\ast$}]{pythonclasstouse,  }\item[{const std\+::string}]{functionname }\end{DoxyParamCaption})}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader} that will load a function from a class. 
+
+Constructs a \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader} that will load a function from a class. This acts like any other \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader}, despite the function being from a class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1inspire_1_1Python__class__loader}{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader}} & $\ast$pythonclasstouse \\
+\hline
+{\em std\+::string} & functionname \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a87c6c13c50ca78e59e19d291355a8bc5}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a87c6c13c50ca78e59e19d291355a8bc5}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!````~Python\+\_\+module\+\_\+loader@{$\sim$\+Python\+\_\+module\+\_\+loader}}
+\index{````~Python\+\_\+module\+\_\+loader@{$\sim$\+Python\+\_\+module\+\_\+loader}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{$\sim$\+Python\+\_\+module\+\_\+loader()}{~Python\_module\_loader()}}
+{\footnotesize\ttfamily virtual jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::$\sim$\+Python\+\_\+module\+\_\+loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor. 
+
+Destroys this \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_ad8cf860545d85af78f7cc82d4e889840}\label{classjetfuel_1_1inspire_1_1Python__module__loader_ad8cf860545d85af78f7cc82d4e889840}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Add\+\_\+to\+\_\+py\+\_\+path@{Add\+\_\+to\+\_\+py\+\_\+path}}
+\index{Add\+\_\+to\+\_\+py\+\_\+path@{Add\+\_\+to\+\_\+py\+\_\+path}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Add\+\_\+to\+\_\+py\+\_\+path()}{Add\_to\_py\_path()}}
+{\footnotesize\ttfamily static void jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Add\+\_\+to\+\_\+py\+\_\+path (\begin{DoxyParamCaption}\item[{const std\+::string}]{pathlocationtoadd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adds a given directory path to the python path. 
+
+Adds a given directory path to the python path.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & pathlocationtoadd \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a54677f790da88ca5ff397555449efafc}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a54677f790da88ca5ff397555449efafc}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Base\+\_\+execute\+\_\+py\+\_\+object@{Base\+\_\+execute\+\_\+py\+\_\+object}}
+\index{Base\+\_\+execute\+\_\+py\+\_\+object@{Base\+\_\+execute\+\_\+py\+\_\+object}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Base\+\_\+execute\+\_\+py\+\_\+object()}{Base\_execute\_py\_object()}}
+{\footnotesize\ttfamily void jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Base\+\_\+execute\+\_\+py\+\_\+object (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{pythonfunction,  }\item[{Py\+Object $\ast$}]{args,  }\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets up Python function objects for execution. 
+
+Sets up Python function objects for execution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Py\+Object} & $\ast$pythonfunction \\
+\hline
+{\em Py\+Object} & $\ast$args \\
+\hline
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a99f8d8ee9f65c15b10b91ba7e59033c0}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a99f8d8ee9f65c15b10b91ba7e59033c0}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Execute@{Execute}}
+\index{Execute@{Execute}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily void jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Execute (\begin{DoxyParamCaption}\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error,  }\item[{Py\+Object $\ast$}]{args }\end{DoxyParamCaption})}
+
+
+
+Executes this Python module without any return type. 
+
+Executes this Python module without any return type. If there are no Python arguments, you can just pass N\+U\+L\+L/nullptr to the last argument of this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+{\em Py\+Object} & $\ast$args \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a3c51521e298f05b5fbb702327aa102b3}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a3c51521e298f05b5fbb702327aa102b3}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Execute\+\_\+bool@{Execute\+\_\+bool}}
+\index{Execute\+\_\+bool@{Execute\+\_\+bool}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Execute\+\_\+bool()}{Execute\_bool()}}
+{\footnotesize\ttfamily bool jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Execute\+\_\+bool (\begin{DoxyParamCaption}\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error,  }\item[{Py\+Object $\ast$}]{args }\end{DoxyParamCaption})}
+
+
+
+Executes this Python module with a boolean return type. 
+
+Executes this Python module with a boolean return type. If there are no Python arguments, you can just pass N\+U\+L\+L/nullptr to the last argument of this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+{\em Py\+Object} & $\ast$args \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a83af544f1b515c3606ed91e9c8ba9494}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a83af544f1b515c3606ed91e9c8ba9494}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Execute\+\_\+cstring@{Execute\+\_\+cstring}}
+\index{Execute\+\_\+cstring@{Execute\+\_\+cstring}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Execute\+\_\+cstring()}{Execute\_cstring()}}
+{\footnotesize\ttfamily char$\ast$ jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Execute\+\_\+cstring (\begin{DoxyParamCaption}\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error,  }\item[{Py\+Object $\ast$}]{args }\end{DoxyParamCaption})}
+
+
+
+Executes this Python module with a cstring return type. 
+
+Executes this Python module with a cstring return type. If there are no Python arguments, you can just pass N\+U\+L\+L/nullptr to the last argument of this function. This serves as the way to also get an std\+::string return type. After you get the long, just convert it to a std\+::string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+{\em Py\+Object} & $\ast$args \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a058df0a03f3477bb7d576d5873246aa7}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a058df0a03f3477bb7d576d5873246aa7}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Execute\+\_\+double@{Execute\+\_\+double}}
+\index{Execute\+\_\+double@{Execute\+\_\+double}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Execute\+\_\+double()}{Execute\_double()}}
+{\footnotesize\ttfamily double jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Execute\+\_\+double (\begin{DoxyParamCaption}\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error,  }\item[{Py\+Object $\ast$}]{args }\end{DoxyParamCaption})}
+
+
+
+Executes this Python module with a double return type. 
+
+Executes this Python module with a double return type. If there are no Python arguments, you can just pass N\+U\+L\+L/nullptr to the last argument of this function. This serves as the way to also get an float return type. After you get the double, just convert it to a float.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+{\em Py\+Object} & $\ast$args \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a7f1608c46e4d3c9f7a019f80a78c6756}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a7f1608c46e4d3c9f7a019f80a78c6756}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Execute\+\_\+long@{Execute\+\_\+long}}
+\index{Execute\+\_\+long@{Execute\+\_\+long}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Execute\+\_\+long()}{Execute\_long()}}
+{\footnotesize\ttfamily long jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Execute\+\_\+long (\begin{DoxyParamCaption}\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error,  }\item[{Py\+Object $\ast$}]{args }\end{DoxyParamCaption})}
+
+
+
+Executes this Python module with a long return type. 
+
+Executes this Python module with a long return type. If there are no Python arguments, you can just pass N\+U\+L\+L/nullptr to the last argument of this function. This serves as the way to also get an int return type. After you get the long, just convert it to an int.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+{\em Py\+Object} & $\ast$args \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a0df6c4f0f9b7fb8fcd97483e6eb841a8}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a0df6c4f0f9b7fb8fcd97483e6eb841a8}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Execute\+\_\+py\+\_\+object@{Execute\+\_\+py\+\_\+object}}
+\index{Execute\+\_\+py\+\_\+object@{Execute\+\_\+py\+\_\+object}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Execute\+\_\+py\+\_\+object()}{Execute\_py\_object()}}
+{\footnotesize\ttfamily void jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Execute\+\_\+py\+\_\+object (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{args,  }\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Executes a python function without a return type. 
+
+Executes a python function without a return type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Py\+Object} & $\ast$args \\
+\hline
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a97bac700d3f89eb294f438802c82667f}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a97bac700d3f89eb294f438802c82667f}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Execute\+\_\+py\+\_\+object\+\_\+bool@{Execute\+\_\+py\+\_\+object\+\_\+bool}}
+\index{Execute\+\_\+py\+\_\+object\+\_\+bool@{Execute\+\_\+py\+\_\+object\+\_\+bool}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Execute\+\_\+py\+\_\+object\+\_\+bool()}{Execute\_py\_object\_bool()}}
+{\footnotesize\ttfamily bool jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Execute\+\_\+py\+\_\+object\+\_\+bool (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{args,  }\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Executes a python function with a boolean return type. 
+
+Executes a python function with a boolean return type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Py\+Object} & $\ast$args \\
+\hline
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a6dcb9763f793360e89da5f3377a945b9}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a6dcb9763f793360e89da5f3377a945b9}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Execute\+\_\+py\+\_\+object\+\_\+cstring@{Execute\+\_\+py\+\_\+object\+\_\+cstring}}
+\index{Execute\+\_\+py\+\_\+object\+\_\+cstring@{Execute\+\_\+py\+\_\+object\+\_\+cstring}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Execute\+\_\+py\+\_\+object\+\_\+cstring()}{Execute\_py\_object\_cstring()}}
+{\footnotesize\ttfamily char$\ast$ jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Execute\+\_\+py\+\_\+object\+\_\+cstring (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{args,  }\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Executes a python function with a cstring return type. 
+
+Executes a python function with a cstring return type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Py\+Object} & $\ast$args \\
+\hline
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a0fca60192c29e3f7db689c366fd73437}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a0fca60192c29e3f7db689c366fd73437}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Execute\+\_\+py\+\_\+object\+\_\+double@{Execute\+\_\+py\+\_\+object\+\_\+double}}
+\index{Execute\+\_\+py\+\_\+object\+\_\+double@{Execute\+\_\+py\+\_\+object\+\_\+double}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Execute\+\_\+py\+\_\+object\+\_\+double()}{Execute\_py\_object\_double()}}
+{\footnotesize\ttfamily double jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Execute\+\_\+py\+\_\+object\+\_\+double (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{args,  }\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Executes a python function with a double return type. 
+
+Executes a python function with a double return type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Py\+Object} & $\ast$args \\
+\hline
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a05e19263c55ee6d5acc5e22b00e03e55}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a05e19263c55ee6d5acc5e22b00e03e55}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Execute\+\_\+py\+\_\+object\+\_\+long@{Execute\+\_\+py\+\_\+object\+\_\+long}}
+\index{Execute\+\_\+py\+\_\+object\+\_\+long@{Execute\+\_\+py\+\_\+object\+\_\+long}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Execute\+\_\+py\+\_\+object\+\_\+long()}{Execute\_py\_object\_long()}}
+{\footnotesize\ttfamily long jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Execute\+\_\+py\+\_\+object\+\_\+long (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{args,  }\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Executes a python function with a long return type. 
+
+Executes a python function with a long return type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Py\+Object} & $\ast$args \\
+\hline
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a11defce7f1f1ae5926744d8e0f01243c}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a11defce7f1f1ae5926744d8e0f01243c}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+name@{Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+name}}
+\index{Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+name@{Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+name}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+name()}{Get\_directory\_of\_file\_name()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets this directory name of the Python files. 
+
+Gets this directory name of the Python files. \mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_ae908aab386db9d4d5c20c350d1743b5e}\label{classjetfuel_1_1inspire_1_1Python__module__loader_ae908aab386db9d4d5c20c350d1743b5e}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+to\+\_\+replace@{Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+to\+\_\+replace}}
+\index{Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+to\+\_\+replace@{Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+to\+\_\+replace}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+to\+\_\+replace()}{Get\_directory\_of\_file\_to\_replace()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Get\+\_\+directory\+\_\+of\+\_\+file\+\_\+to\+\_\+replace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets this directory name of the Python files to replace. 
+
+Gets this directory name of the Python files to replace. \mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a2629d9d235cf65a7fe6f44a2554d317c}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a2629d9d235cf65a7fe6f44a2554d317c}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Get\+\_\+file\+\_\+name@{Get\+\_\+file\+\_\+name}}
+\index{Get\+\_\+file\+\_\+name@{Get\+\_\+file\+\_\+name}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Get\+\_\+file\+\_\+name()}{Get\_file\_name()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Get\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets this Python file name. 
+
+Gets this Python file name. \mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_af687d8cd4118ea0d4449d00161f00043}\label{classjetfuel_1_1inspire_1_1Python__module__loader_af687d8cd4118ea0d4449d00161f00043}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Get\+\_\+file\+\_\+to\+\_\+replace@{Get\+\_\+file\+\_\+to\+\_\+replace}}
+\index{Get\+\_\+file\+\_\+to\+\_\+replace@{Get\+\_\+file\+\_\+to\+\_\+replace}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Get\+\_\+file\+\_\+to\+\_\+replace()}{Get\_file\_to\_replace()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Get\+\_\+file\+\_\+to\+\_\+replace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets this Python file name of the file to replace. 
+
+Gets this Python file name of the file to replace. \mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_ad2034cdd073b263cecca65e5bb286745}\label{classjetfuel_1_1inspire_1_1Python__module__loader_ad2034cdd073b263cecca65e5bb286745}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Get\+\_\+function\+\_\+name@{Get\+\_\+function\+\_\+name}}
+\index{Get\+\_\+function\+\_\+name@{Get\+\_\+function\+\_\+name}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Get\+\_\+function\+\_\+name()}{Get\_function\_name()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Get\+\_\+function\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets this Python function name. 
+
+Gets this Python function name. \mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a88da3316adbe919080ad1c92045b4ad3}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a88da3316adbe919080ad1c92045b4ad3}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Get\+\_\+string@{Get\+\_\+string}}
+\index{Get\+\_\+string@{Get\+\_\+string}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Get\+\_\+string()}{Get\_string()}}
+{\footnotesize\ttfamily static const std\+::string jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Get\+\_\+string (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{widechar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Converts an A\+S\+C\+II wchar\+\_\+t $\ast$ to an A\+S\+C\+II std\+::string. 
+
+Converts an A\+S\+C\+II wchar\+\_\+t $\ast$ to an A\+S\+C\+II std\+::string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wchar\+\_\+t$\ast$} & widechar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_ad4fb50f7f68749decfeef1204fe06acb}\label{classjetfuel_1_1inspire_1_1Python__module__loader_ad4fb50f7f68749decfeef1204fe06acb}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Get\+\_\+wchar@{Get\+\_\+wchar}}
+\index{Get\+\_\+wchar@{Get\+\_\+wchar}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Get\+\_\+wchar()}{Get\_wchar()}}
+{\footnotesize\ttfamily static wchar\+\_\+t$\ast$ jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Get\+\_\+wchar (\begin{DoxyParamCaption}\item[{const char $\ast$}]{chartouse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Converts a const char $\ast$ to a wchar\+\_\+t $\ast$. 
+
+Converts a const char $\ast$ to a wchar\+\_\+t $\ast$.
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & char $\ast$chartouse \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a50d20a6fcd26caf7aa1ece5c479bbc01}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a50d20a6fcd26caf7aa1ece5c479bbc01}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Py\+\_\+err\+\_\+to\+\_\+string@{Py\+\_\+err\+\_\+to\+\_\+string}}
+\index{Py\+\_\+err\+\_\+to\+\_\+string@{Py\+\_\+err\+\_\+to\+\_\+string}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Py\+\_\+err\+\_\+to\+\_\+string()}{Py\_err\_to\_string()}}
+{\footnotesize\ttfamily static std\+::string jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Py\+\_\+err\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{pythonerrortype,  }\item[{Py\+Object $\ast$}]{pythonerrorvalue,  }\item[{Py\+Object $\ast$}]{pythonerrortraceback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a Python error message to a std\+::string. 
+
+Converts a Python error message to a std\+::string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Py\+Object} & $\ast$pythonerrortype \\
+\hline
+{\em Py\+Object} & $\ast$pythonerrorvalue \\
+\hline
+{\em Py\+Object} & $\ast$pythonerrortraceback \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a48f19613015ba3e143827a9946e436cd}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a48f19613015ba3e143827a9946e436cd}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!Using\+\_\+classes@{Using\+\_\+classes}}
+\index{Using\+\_\+classes@{Using\+\_\+classes}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{Using\+\_\+classes()}{Using\_classes()}}
+{\footnotesize\ttfamily bool jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::\+Using\+\_\+classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns a boolean whether this \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader} is invoking class methods. 
+
+Returns a boolean whether this \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{Python\+\_\+module\+\_\+loader} is invoking class methods. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__module__loader_a973a8f86d446820b38b18f87fe51465a}\label{classjetfuel_1_1inspire_1_1Python__module__loader_a973a8f86d446820b38b18f87fe51465a}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}!pythonclass@{pythonclass}}
+\index{pythonclass@{pythonclass}!jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader}}
+\subsubsection{\texorpdfstring{pythonclass}{pythonclass}}
+{\footnotesize\ttfamily Py\+Object$\ast$ jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader\+::pythonclass\hspace{0.3cm}{\ttfamily [protected]}}
+
+A Python class object used to call Python class methods. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelinspire/pythonmoduleloader.\+h\end{DoxyCompactItemize}

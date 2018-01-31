@@ -1,0 +1,7 @@
+<map id="jetfuel::gui::IClickable" name="jetfuel::gui::IClickable">
+<area shape="rect" id="node2" href="$classjetfuel_1_1gui_1_1Button.html" title="jetfuel::gui::Button" alt="" coords="215,5,343,32"/>
+<area shape="rect" id="node3" href="$classjetfuel_1_1gui_1_1Check__box.html" title="jetfuel::gui::Check_box" alt="" coords="201,56,357,83"/>
+<area shape="rect" id="node4" href="$classjetfuel_1_1gui_1_1Drop__down__box.html" title="jetfuel::gui::Drop\l_down_box" alt="" coords="220,107,339,149"/>
+<area shape="rect" id="node5" href="$classjetfuel_1_1gui_1_1Menu.html" title="jetfuel::gui::Menu" alt="" coords="218,173,341,200"/>
+<area shape="rect" id="node6" href="$classjetfuel_1_1gui_1_1Slider.html" title="jetfuel::gui::Slider" alt="" coords="218,224,341,251"/>
+</map>

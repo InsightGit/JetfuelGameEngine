@@ -1,0 +1,344 @@
+\hypertarget{classjetfuel_1_1gui_1_1Progress__bar}{}\section{jetfuel\+:\+:gui\+:\+:Progress\+\_\+bar Class Reference}
+\label{classjetfuel_1_1gui_1_1Progress__bar}\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+
+
+{\ttfamily \#include $<$progressbar.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:gui\+:\+:Progress\+\_\+bar\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classjetfuel_1_1gui_1_1Progress__bar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jetfuel\+:\+:gui\+:\+:Progress\+\_\+bar\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classjetfuel_1_1gui_1_1Progress__bar__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a82ff3b06366efe839c6031281db9b9ac}{Progress\+\_\+bar} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a77c734bd7d04bd5f8a0f9bf6d2c600e5}{Progress\+\_\+bar} (const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} progressbarholderimage, const \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color} progressbarcolor, const \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} progressbarholderborders, const unsigned int progressbarmax=100)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar} with a holder image, a color (for the bar), the borders of the holder image, and the max number of this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_aef1b768b22c17ce9dab2fd12a9370262}{Set\+\_\+progress\+\_\+bar} (const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} progressbarholderimage, const \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color} progressbarcolor, const \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} progressbarholderborders, const unsigned int progressbarmax=100)
+\begin{DoxyCompactList}\small\item\em Sets a \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar} with a holder image, a color (for the bar), the borders of the holder image, and the max number of this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_ae1fc30f6eacefc0fcca909d7d3f52225}{Get\+\_\+progress\+\_\+bar\+\_\+progress} () const
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a53343a5c7313be548245b9bac150b223}{Set\+\_\+progress\+\_\+bar\+\_\+progress} (const unsigned int progressbarprogress)
+\begin{DoxyCompactList}\small\item\em Sets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a6c9fdfbed3600490da1a9f1fb4a76003}{Get\+\_\+max\+\_\+progress\+\_\+bar} () const
+\begin{DoxyCompactList}\small\item\em Gets the max progress bar progress. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_ab21545ddc2fbd947f1fbe9bdf11b959f}{Has\+\_\+progress\+\_\+bar\+\_\+completed} ()
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar} has been completed. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a34797d42cedf5ff096eafb58c2e76128}{Assign\+\_\+renderer} (S\+D\+L\+\_\+\+Renderer $\ast$renderer) override
+\begin{DoxyCompactList}\small\item\em Assigns a S\+DL Renderer to this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s objects. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a5771ea71b321c173383e89537cea0ae1}{Get\+\_\+position} () override
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a5f52369cccd805274805abf5913535df}{Set\+\_\+position} (\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} position) override
+\begin{DoxyCompactList}\small\item\em Sets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a4a09c3d515c9754b8295a4b5d83291ff}{Get\+\_\+rect\+\_\+to\+\_\+draw} () override
+\begin{DoxyCompactList}\small\item\em Gets the rect to be drawn when the function Draw is called. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a91a7ffe82738105be9b36a48dca1cdec}{Draw} () override
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a97bc9fab7b77a271db47f91c95af8672}{Draw\+\_\+progress\+\_\+bar\+\_\+holder} ()
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s holder sprite. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_ad27c8ac735ad8698fce255b642cc6944}{Draw\+\_\+progress\+\_\+bar} ()
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s colored rectangle (the actual progress bar). \end{DoxyCompactList}\item 
+int \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_ac8399712a5a25311f8f618ed33f730dc}{Get\+\_\+max\+\_\+progress\+\_\+bar\+\_\+width} () const
+\begin{DoxyCompactList}\small\item\em Gets the max size of the progress bar (in width). \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a5975a20358c54bc05d87d4285cefe990}{Set\+\_\+width\+\_\+of\+\_\+progress\+\_\+bar} (const int width)
+\begin{DoxyCompactList}\small\item\em Sets the width of the progress bar. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a4871a444df390b3a4996ce8bb67f90c8}{Mark\+\_\+progress\+\_\+bar\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Forces a refresh of the max size of the progress bar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple progress bar with a holder sprite and a colored rectangle representing the progress bar.
+
+Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} messagebus; \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} progressbarholderimage( \char`\"{}progressbarholder.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{jetfuel\+::gui\+::\+Progress\+\_\+bar} progressbar(progressbarholderimage, \hyperlink{classjetfuel_1_1draw_1_1Color_a529fbdf4a2a9915e3986278715a5daa8}{jetfuel\+::draw\+::\+Color\+::\+Green}, jetfuel\+::draw\+::\+Rect2d\+\_\+int(20, 20,20,20),400);
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}\+Hello Progressbars!\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(640,480)))\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl window! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \} scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&progressbar,1);
+
+progressbar.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+
+progressbar.\+Set\+\_\+progress\+\_\+bar\+\_\+progress(200);
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a82ff3b06366efe839c6031281db9b9ac}\label{classjetfuel_1_1gui_1_1Progress__bar_a82ff3b06366efe839c6031281db9b9ac}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Progress\+\_\+bar@{Progress\+\_\+bar}}
+\index{Progress\+\_\+bar@{Progress\+\_\+bar}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Progress\+\_\+bar()}{Progress\_bar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Progress\+\_\+bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor. 
+
+Default Constructor. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a77c734bd7d04bd5f8a0f9bf6d2c600e5}\label{classjetfuel_1_1gui_1_1Progress__bar_a77c734bd7d04bd5f8a0f9bf6d2c600e5}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Progress\+\_\+bar@{Progress\+\_\+bar}}
+\index{Progress\+\_\+bar@{Progress\+\_\+bar}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Progress\+\_\+bar()}{Progress\_bar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Progress\+\_\+bar (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{progressbarholderimage,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}}]{progressbarcolor,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int}}]{progressbarholderborders,  }\item[{const unsigned int}]{progressbarmax = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar} with a holder image, a color (for the bar), the borders of the holder image, and the max number of this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress. 
+
+Sets a \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar} with a holder image, a color (for the bar), the borders of the holder image, and the max number of this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress (optional set to 100 by default).
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & progressbarholderimage \\
+\hline
+{\em \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}} & progressbarcolor \\
+\hline
+{\em jetfuel\+::draw\+::\+Rect2d\+\_\+int} & progressbarholderborders \\
+\hline
+{\em unsigned} & int progressbarmax \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a34797d42cedf5ff096eafb58c2e76128}\label{classjetfuel_1_1gui_1_1Progress__bar_a34797d42cedf5ff096eafb58c2e76128}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Assign\+\_\+renderer@{Assign\+\_\+renderer}}
+\index{Assign\+\_\+renderer@{Assign\+\_\+renderer}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Assign\+\_\+renderer()}{Assign\_renderer()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Assign\+\_\+renderer (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Assigns a S\+DL Renderer to this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s objects. 
+
+Assigns a S\+DL Renderer to this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s objects.
+
+It is recommmended to let \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} and \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} call this rather than yourself unless you are not using either of them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Renderer} & $\ast$renderer \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_a0d7257f197d6ffcdd89c3a99c93d1400}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a91a7ffe82738105be9b36a48dca1cdec}\label{classjetfuel_1_1gui_1_1Progress__bar_a91a7ffe82738105be9b36a48dca1cdec}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Draw@{Draw}}
+\index{Draw@{Draw}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}. 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Drawable_a1a072070322965ce9411ee6e7c311c56}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_ad27c8ac735ad8698fce255b642cc6944}\label{classjetfuel_1_1gui_1_1Progress__bar_ad27c8ac735ad8698fce255b642cc6944}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Draw\+\_\+progress\+\_\+bar@{Draw\+\_\+progress\+\_\+bar}}
+\index{Draw\+\_\+progress\+\_\+bar@{Draw\+\_\+progress\+\_\+bar}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Draw\+\_\+progress\+\_\+bar()}{Draw\_progress\_bar()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Draw\+\_\+progress\+\_\+bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s colored rectangle (the actual progress bar). 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s colored rectangle (the actual progress bar). \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a97bc9fab7b77a271db47f91c95af8672}\label{classjetfuel_1_1gui_1_1Progress__bar_a97bc9fab7b77a271db47f91c95af8672}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Draw\+\_\+progress\+\_\+bar\+\_\+holder@{Draw\+\_\+progress\+\_\+bar\+\_\+holder}}
+\index{Draw\+\_\+progress\+\_\+bar\+\_\+holder@{Draw\+\_\+progress\+\_\+bar\+\_\+holder}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Draw\+\_\+progress\+\_\+bar\+\_\+holder()}{Draw\_progress\_bar\_holder()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Draw\+\_\+progress\+\_\+bar\+\_\+holder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s holder sprite. 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s holder sprite. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a6c9fdfbed3600490da1a9f1fb4a76003}\label{classjetfuel_1_1gui_1_1Progress__bar_a6c9fdfbed3600490da1a9f1fb4a76003}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Get\+\_\+max\+\_\+progress\+\_\+bar@{Get\+\_\+max\+\_\+progress\+\_\+bar}}
+\index{Get\+\_\+max\+\_\+progress\+\_\+bar@{Get\+\_\+max\+\_\+progress\+\_\+bar}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Get\+\_\+max\+\_\+progress\+\_\+bar()}{Get\_max\_progress\_bar()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Get\+\_\+max\+\_\+progress\+\_\+bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the max progress bar progress. 
+
+Gets the max progress bar progress.
+
+Any value given past this number will be capped at this value. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_ac8399712a5a25311f8f618ed33f730dc}\label{classjetfuel_1_1gui_1_1Progress__bar_ac8399712a5a25311f8f618ed33f730dc}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Get\+\_\+max\+\_\+progress\+\_\+bar\+\_\+width@{Get\+\_\+max\+\_\+progress\+\_\+bar\+\_\+width}}
+\index{Get\+\_\+max\+\_\+progress\+\_\+bar\+\_\+width@{Get\+\_\+max\+\_\+progress\+\_\+bar\+\_\+width}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Get\+\_\+max\+\_\+progress\+\_\+bar\+\_\+width()}{Get\_max\_progress\_bar\_width()}}
+{\footnotesize\ttfamily int jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Get\+\_\+max\+\_\+progress\+\_\+bar\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the max size of the progress bar (in width). 
+
+Gets the max size of a progress bar (in width). \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a5771ea71b321c173383e89537cea0ae1}\label{classjetfuel_1_1gui_1_1Progress__bar_a5771ea71b321c173383e89537cea0ae1}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Get\+\_\+position@{Get\+\_\+position}}
+\index{Get\+\_\+position@{Get\+\_\+position}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Get\+\_\+position()}{Get\_position()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s position. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s position. 
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_ae7ebd30d66db2c8a5d5371cbcf0023fc}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_ae1fc30f6eacefc0fcca909d7d3f52225}\label{classjetfuel_1_1gui_1_1Progress__bar_ae1fc30f6eacefc0fcca909d7d3f52225}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Get\+\_\+progress\+\_\+bar\+\_\+progress@{Get\+\_\+progress\+\_\+bar\+\_\+progress}}
+\index{Get\+\_\+progress\+\_\+bar\+\_\+progress@{Get\+\_\+progress\+\_\+bar\+\_\+progress}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Get\+\_\+progress\+\_\+bar\+\_\+progress()}{Get\_progress\_bar\_progress()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Get\+\_\+progress\+\_\+bar\+\_\+progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress. This progress is shown to the user via a colored rectangle inside the progress bar holder sprite. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a4a09c3d515c9754b8295a4b5d83291ff}\label{classjetfuel_1_1gui_1_1Progress__bar_a4a09c3d515c9754b8295a4b5d83291ff}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}}
+\index{Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Get\+\_\+rect\+\_\+to\+\_\+draw()}{Get\_rect\_to\_draw()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Get\+\_\+rect\+\_\+to\+\_\+draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the rect to be drawn when the function Draw is called. 
+
+Gets the rect to be drawn when the function Draw is called. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Rectangle__interface_a03fd3b6842ab7b3065379caec407296f}{jetfuel\+::draw\+::\+Rectangle\+\_\+interface}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_ab21545ddc2fbd947f1fbe9bdf11b959f}\label{classjetfuel_1_1gui_1_1Progress__bar_ab21545ddc2fbd947f1fbe9bdf11b959f}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Has\+\_\+progress\+\_\+bar\+\_\+completed@{Has\+\_\+progress\+\_\+bar\+\_\+completed}}
+\index{Has\+\_\+progress\+\_\+bar\+\_\+completed@{Has\+\_\+progress\+\_\+bar\+\_\+completed}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Has\+\_\+progress\+\_\+bar\+\_\+completed()}{Has\_progress\_bar\_completed()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Has\+\_\+progress\+\_\+bar\+\_\+completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar} has been completed. 
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar} has been completed (the progress is greater than or equal to the max progress). \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a4871a444df390b3a4996ce8bb67f90c8}\label{classjetfuel_1_1gui_1_1Progress__bar_a4871a444df390b3a4996ce8bb67f90c8}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Mark\+\_\+progress\+\_\+bar\+\_\+size@{Mark\+\_\+progress\+\_\+bar\+\_\+size}}
+\index{Mark\+\_\+progress\+\_\+bar\+\_\+size@{Mark\+\_\+progress\+\_\+bar\+\_\+size}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Mark\+\_\+progress\+\_\+bar\+\_\+size()}{Mark\_progress\_bar\_size()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Mark\+\_\+progress\+\_\+bar\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Forces a refresh of the max size of the progress bar. 
+
+Forces a refresh of the max size of the progress bar. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a5f52369cccd805274805abf5913535df}\label{classjetfuel_1_1gui_1_1Progress__bar_a5f52369cccd805274805abf5913535df}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Set\+\_\+position@{Set\+\_\+position}}
+\index{Set\+\_\+position@{Set\+\_\+position}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Set\+\_\+position()}{Set\_position()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Set\+\_\+position (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s position. 
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_afdd035afe40c706459a6c9df813bcce6}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_aef1b768b22c17ce9dab2fd12a9370262}\label{classjetfuel_1_1gui_1_1Progress__bar_aef1b768b22c17ce9dab2fd12a9370262}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Set\+\_\+progress\+\_\+bar@{Set\+\_\+progress\+\_\+bar}}
+\index{Set\+\_\+progress\+\_\+bar@{Set\+\_\+progress\+\_\+bar}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Set\+\_\+progress\+\_\+bar()}{Set\_progress\_bar()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Set\+\_\+progress\+\_\+bar (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{progressbarholderimage,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}}]{progressbarcolor,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int}}]{progressbarholderborders,  }\item[{const unsigned int}]{progressbarmax = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+
+
+Sets a \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar} with a holder image, a color (for the bar), the borders of the holder image, and the max number of this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress. 
+
+Sets a \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar} with a holder image, a color (for the bar), the borders of the holder image, and the max number of this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress (optional set to 100 by default).
+
+This function is useful when you used the default constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & progressbarholderimage \\
+\hline
+{\em \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}} & progressbarcolor \\
+\hline
+{\em jetfuel\+::draw\+::\+Rect2d\+\_\+int} & progressbarholderborders \\
+\hline
+{\em unsigned} & int progressbarmax \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a53343a5c7313be548245b9bac150b223}\label{classjetfuel_1_1gui_1_1Progress__bar_a53343a5c7313be548245b9bac150b223}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Set\+\_\+progress\+\_\+bar\+\_\+progress@{Set\+\_\+progress\+\_\+bar\+\_\+progress}}
+\index{Set\+\_\+progress\+\_\+bar\+\_\+progress@{Set\+\_\+progress\+\_\+bar\+\_\+progress}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Set\+\_\+progress\+\_\+bar\+\_\+progress()}{Set\_progress\_bar\_progress()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Set\+\_\+progress\+\_\+bar\+\_\+progress (\begin{DoxyParamCaption}\item[{const unsigned int}]{progressbarprogress }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress. 
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{Progress\+\_\+bar}\textquotesingle{}s progress. This progress is shown to the user via a colored rectangle inside the progress bar holder sprite.
+
+If a number is given beyond the max number, it will take cap the value at the max value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int progressbarprogress \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a5975a20358c54bc05d87d4285cefe990}\label{classjetfuel_1_1gui_1_1Progress__bar_a5975a20358c54bc05d87d4285cefe990}} 
+\index{jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}!Set\+\_\+width\+\_\+of\+\_\+progress\+\_\+bar@{Set\+\_\+width\+\_\+of\+\_\+progress\+\_\+bar}}
+\index{Set\+\_\+width\+\_\+of\+\_\+progress\+\_\+bar@{Set\+\_\+width\+\_\+of\+\_\+progress\+\_\+bar}!jetfuel\+::gui\+::\+Progress\+\_\+bar@{jetfuel\+::gui\+::\+Progress\+\_\+bar}}
+\subsubsection{\texorpdfstring{Set\+\_\+width\+\_\+of\+\_\+progress\+\_\+bar()}{Set\_width\_of\_progress\_bar()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Progress\+\_\+bar\+::\+Set\+\_\+width\+\_\+of\+\_\+progress\+\_\+bar (\begin{DoxyParamCaption}\item[{const int}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the width of the progress bar. 
+
+Sets the width of the progress bar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & width \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelgui/progressbar.\+h\end{DoxyCompactItemize}

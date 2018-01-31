@@ -1,0 +1,26 @@
+\hypertarget{classjetfuel_1_1draw_1_1Curcle2d}{}\section{jetfuel\+:\+:draw\+:\+:Curcle2d Class Reference}
+\label{classjetfuel_1_1draw_1_1Curcle2d}\index{jetfuel\+::draw\+::\+Curcle2d@{jetfuel\+::draw\+::\+Curcle2d}}
+
+
+{\ttfamily \#include $<$circle2d.\+h$>$}
+
+
+
+\subsection{Detailed Description}
+A simple 2d circle manipulation class.
+
+Code Example\+: jetfuel\+::draw\+::\+Circle2d\+\_\+int mycircle(0,0,50); \hyperlink{classjetfuel_1_1draw_1_1Circle__2d__shape}{jetfuel\+::draw\+::\+Circle\+\_\+2d\+\_\+shape} mydrawablecircle(mycircle); \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1);
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}example\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(500,500)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1);
+
+mydrawablecircle.\+Set\+\_\+color(jetfuel\+::draw\+::\+Color\+::\+Cyan); scene1.\+Attach\+\_\+drawable(\&mydrawablecircle,1\+S);
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfueldraw/circle2d.\+h\end{DoxyCompactItemize}

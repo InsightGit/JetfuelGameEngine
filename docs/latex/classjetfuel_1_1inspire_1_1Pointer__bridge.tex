@@ -1,0 +1,93 @@
+\hypertarget{classjetfuel_1_1inspire_1_1Pointer__bridge}{}\section{jetfuel\+:\+:inspire\+:\+:Pointer\+\_\+bridge Class Reference}
+\label{classjetfuel_1_1inspire_1_1Pointer__bridge}\index{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge@{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge}}
+
+
+{\ttfamily \#include $<$pointerbridge.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1inspire_1_1Pointer__bridge_a8b799f891596d70d98ee577ef87a6781}{Pointer\+\_\+bridge} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{classjetfuel_1_1inspire_1_1Pointer__bridge_a031c7d904e4e86096e2c399f8db8a1f8}{Recieve\+\_\+pointer} (std\+::string id, bool $\ast$found)
+\begin{DoxyCompactList}\small\item\em Recieves a pointer sent with an id (of the pointer) and a pointer pointing to a boolean variable whether the pointer has been recieved. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1inspire_1_1Pointer__bridge_a805c0fa469cca7d6acdfd285b92aa9c8}{Send\+\_\+pointer} (std\+::string id, void $\ast$pointer)
+\begin{DoxyCompactList}\small\item\em Sends a pointer with an id identifying that pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple pointer bridge meant for sending pointers between Python and C++ for object mainuplations.
+
+Code Example\+:
+
+Python(main.\+py)\+:
+
+def main(pointerbridgeref)\+: if(system() == \char`\"{}\+Windows\char`\"{})\+: jetfuelpythonapiso = abspath(\char`\"{}\+Python\+A\+P\+I.\+dll\char`\"{}); else\+: jetfuelpythonapiso = abspath( \char`\"{}lib\+Jetfuel Game Engine Python A\+P\+I.\+so\char`\"{}); jetfuelso = jetfuelsoloader(jetfuelpythonapiso); pointerbridge = pointer\+\_\+bridge(jetfuelpythonapiso, pointerbridgeref); found = True; scenemanager = pointerbridge.\+recieve\+\_\+pointer(\char`\"{}scenemanager\char`\"{}, found); if(found)\+: print(\char`\"{}\+Got scenemanager pointer! It is\+:\char`\"{}+ hex(scenemanager.\+scenemanagerref)); else\+: print(\char`\"{}\+Could not get scenemanager pointer!\char`\"{});
+
+C++\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader} module(\char`\"{}main.\+py\char`\"{}, \char`\"{}main\char`\"{}); \hyperlink{classjetfuel_1_1inspire_1_1Pointer__bridge}{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge} $\ast$bridge = new \hyperlink{classjetfuel_1_1inspire_1_1Pointer__bridge}{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge()}; std\+::string error; bool executed = true;
+
+bridge.\+send\+\_\+pointer(\char`\"{}scenemanager\char`\"{}, \&scenemanager);
+
+Py\+Object $\ast$args = Py\+Tuple\+\_\+\+Pack(1, Py\+Long\+\_\+\+From\+Long( reinterpret\+\_\+cast$<$long int$>$(scenemanager)));
+
+module.\+Execute(\&executed, \&error, args);
+
+if(!executed)\{ std\+::cout $<$$<$ \char`\"{}\+Python Error occured! Error was\+:\char`\"{} $<$$<$ error $<$$<$ std\+::endl; 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Pointer__bridge_a8b799f891596d70d98ee577ef87a6781}\label{classjetfuel_1_1inspire_1_1Pointer__bridge_a8b799f891596d70d98ee577ef87a6781}} 
+\index{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge@{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge}!Pointer\+\_\+bridge@{Pointer\+\_\+bridge}}
+\index{Pointer\+\_\+bridge@{Pointer\+\_\+bridge}!jetfuel\+::inspire\+::\+Pointer\+\_\+bridge@{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge}}
+\subsubsection{\texorpdfstring{Pointer\+\_\+bridge()}{Pointer\_bridge()}}
+{\footnotesize\ttfamily jetfuel\+::inspire\+::\+Pointer\+\_\+bridge\+::\+Pointer\+\_\+bridge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Default constructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Pointer__bridge_a031c7d904e4e86096e2c399f8db8a1f8}\label{classjetfuel_1_1inspire_1_1Pointer__bridge_a031c7d904e4e86096e2c399f8db8a1f8}} 
+\index{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge@{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge}!Recieve\+\_\+pointer@{Recieve\+\_\+pointer}}
+\index{Recieve\+\_\+pointer@{Recieve\+\_\+pointer}!jetfuel\+::inspire\+::\+Pointer\+\_\+bridge@{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge}}
+\subsubsection{\texorpdfstring{Recieve\+\_\+pointer()}{Recieve\_pointer()}}
+{\footnotesize\ttfamily void$\ast$ jetfuel\+::inspire\+::\+Pointer\+\_\+bridge\+::\+Recieve\+\_\+pointer (\begin{DoxyParamCaption}\item[{std\+::string}]{id,  }\item[{bool $\ast$}]{found }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recieves a pointer sent with an id (of the pointer) and a pointer pointing to a boolean variable whether the pointer has been recieved. 
+
+Recieves a pointer sent with an id (of the pointer) and a pointer pointing to a boolean variable whether the pointer has been recieved.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & id \\
+\hline
+{\em bool} & $\ast$found \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Pointer__bridge_a805c0fa469cca7d6acdfd285b92aa9c8}\label{classjetfuel_1_1inspire_1_1Pointer__bridge_a805c0fa469cca7d6acdfd285b92aa9c8}} 
+\index{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge@{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge}!Send\+\_\+pointer@{Send\+\_\+pointer}}
+\index{Send\+\_\+pointer@{Send\+\_\+pointer}!jetfuel\+::inspire\+::\+Pointer\+\_\+bridge@{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge}}
+\subsubsection{\texorpdfstring{Send\+\_\+pointer()}{Send\_pointer()}}
+{\footnotesize\ttfamily void jetfuel\+::inspire\+::\+Pointer\+\_\+bridge\+::\+Send\+\_\+pointer (\begin{DoxyParamCaption}\item[{std\+::string}]{id,  }\item[{void $\ast$}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sends a pointer with an id identifying that pointer. 
+
+Sends a pointer with an id identifying that pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & id \\
+\hline
+{\em void} & $\ast$pointer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelinspire/pointerbridge.\+h\end{DoxyCompactItemize}

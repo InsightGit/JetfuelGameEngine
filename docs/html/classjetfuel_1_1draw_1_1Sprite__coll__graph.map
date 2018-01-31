@@ -1,0 +1,4 @@
+<map id="jetfuel::draw::Sprite" name="jetfuel::draw::Sprite">
+<area shape="rect" id="node2" href="$classjetfuel_1_1draw_1_1Drawable.html" title="jetfuel::draw::Drawable" alt="" coords="5,13,161,39"/>
+<area shape="rect" id="node3" href="$classjetfuel_1_1draw_1_1Rectangle__interface.html" title="jetfuel::draw::Rectangle\l_interface" alt="" coords="186,5,346,47"/>
+</map>

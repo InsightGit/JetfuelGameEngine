@@ -1,0 +1,417 @@
+\hypertarget{classjetfuel_1_1gui_1_1Check__box}{}\section{jetfuel\+:\+:gui\+:\+:Check\+\_\+box Class Reference}
+\label{classjetfuel_1_1gui_1_1Check__box}\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+
+
+{\ttfamily \#include $<$checkbox.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:gui\+:\+:Check\+\_\+box\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjetfuel_1_1gui_1_1Check__box__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jetfuel\+:\+:gui\+:\+:Check\+\_\+box\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjetfuel_1_1gui_1_1Check__box__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_ad5ad16e0235bc83f4025df31fc554cc0}\label{classjetfuel_1_1gui_1_1Check__box_ad5ad16e0235bc83f4025df31fc554cc0}} 
+enum {\bfseries Label\+\_\+position} \{ {\bfseries Left}, 
+{\bfseries Right}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1gui_1_1Check__box_a1e0e07940cfa643c1f019830042553bd}{Check\+\_\+box} (const bool checked=false)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} with a boolean whether it should be checked or not. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Check__box_adadc280e5d14f08e64f974ba9156cd16}{Load\+\_\+check\+\_\+box\+\_\+images} (const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} activeimage, const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} disabledimage)
+\begin{DoxyCompactList}\small\item\em Loads the images of a \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}, one active and one disabled. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Check__box_a9fd8ee85ef4f17195fbb7bcf53e061dc}{Dynamic\+\_\+load\+\_\+check\+\_\+box\+\_\+images} (const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} activeimage, const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} disabledimage)
+\begin{DoxyCompactList}\small\item\em Dynamically load the images of a \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}, one active and one disabled. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Check__box_a544261fc2f2d182b73c7ea629fa35e78}{Assign\+\_\+renderer} (S\+D\+L\+\_\+\+Renderer $\ast$renderer) override
+\begin{DoxyCompactList}\small\item\em Assigns a renderer to this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Check__box_a906b159264ffa88cab5d9d467331f229}{Is\+\_\+checked} ()
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} is checked. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Check__box_a7f14e8be560d0be5a05839442de1f18f}{Get\+\_\+position} () override
+\begin{DoxyCompactList}\small\item\em Returns this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Check__box_aca11db17630485a2c44b19780d10cce6}{Set\+\_\+position} (const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} position) override
+\begin{DoxyCompactList}\small\item\em Sets this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} \hyperlink{classjetfuel_1_1gui_1_1Check__box_a67e0befe8a0919bf28b5090cddac397e}{Get\+\_\+label\+\_\+characteristics} () const
+\begin{DoxyCompactList}\small\item\em Gets the current text label characteristics of this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Check__box_aa7dbb21f37090d3a595d0111acc721b3}{Set\+\_\+label\+\_\+characteristics} (\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} labelcharacteristics, Label\+\_\+position labelposition, unsigned int labelgap)
+\begin{DoxyCompactList}\small\item\em Sets the current text label characteristics of this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Check__box_a92a70756f7b7d37c3b40a08bc251ff8b}{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch} (const std\+::string action)
+\begin{DoxyCompactList}\small\item\em Sets the Universal Input System action to watch that trigger actions pertainging to this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Check__box_a0e50420591dbd64f07f02f9ee7cec637}{Check\+\_\+for\+\_\+clicks} (\hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action} U\+I\+Sinterpreterdata) override
+\begin{DoxyCompactList}\small\item\em Checks this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} for any clicks on it. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Check__box_a09feae5781a788df462be6276e2d1c54}{Get\+\_\+rect\+\_\+to\+\_\+draw} () override
+\begin{DoxyCompactList}\small\item\em Returns the Rect2d to be drawn. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Check__box_a83b3fc8469caf6c33e41fc1b4fe7295c}{Get\+\_\+checkbox\+\_\+rect\+\_\+to\+\_\+draw} ()
+\begin{DoxyCompactList}\small\item\em Returns the Rect2d of just the checkbox sprite (no label). \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Check__box_ad2ce6d4af8d950a4ef76b0688541c29a}{Draw} () override
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classjetfuel_1_1gui_1_1Check__box_a6dbbadfa0e40212fd0d133ecd2924fa8}{Get\+\_\+action\+\_\+to\+\_\+listen\+\_\+for} ()
+\begin{DoxyCompactList}\small\item\em Gets the Universal Input System action to listen for. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Check__box_ac422c99da29eab41b4849d6d0a55ff70}{Set\+\_\+checked} (const bool checked)
+\begin{DoxyCompactList}\small\item\em Sets whether this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} is checked. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Check__box_a276fb1567260c41b07079c600143ce3d}{Set\+\_\+checkbox\+\_\+sprite\+\_\+image} (const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} image)
+\begin{DoxyCompactList}\small\item\em Sets the checkbox sprite\textquotesingle{}s image. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} \hyperlink{classjetfuel_1_1gui_1_1Check__box_a0771bcece30b82b65fad29ee66a28f27}{Get\+\_\+active\+\_\+checkbox\+\_\+image} () const
+\begin{DoxyCompactList}\small\item\em Gets the active (checked) checkbox image. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} \hyperlink{classjetfuel_1_1gui_1_1Check__box_ae2f2067e485168d7e8794baa1890e9a6}{Get\+\_\+disabled\+\_\+checkbox\+\_\+image} () const
+\begin{DoxyCompactList}\small\item\em Gets the disabled (not checked) checkbox image. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Check__box_a481eeb0f2c5c6f1165da4243ab5b636a}{Draw\+\_\+drawables} ()
+\begin{DoxyCompactList}\small\item\em Draws all the drawables part of this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A checkbox object that is exactly what it sounds like. A box that can or cannot be checked from mouse clicks. (What did you expect?)
+
+Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} messagebus; \hyperlink{classjetfuel_1_1gui_1_1Check__box}{jetfuel\+::gui\+::\+Check\+\_\+box} checkbox; \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} activecheckboximage(\char`\"{}checkboxchecked.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} disabledcheckboximage(\char`\"{}checkbox.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager} U\+I\+Smanager(\&messagebus, scenemanager.\+Get\+\_\+window\+\_\+id()); \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter} U\+I\+Sinterpreter(\&messagebus); \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} textchars; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{});
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}\+Hello Checkboxes!\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(640,480)))\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl window! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \} scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&checkbox,1);
+
+if(!checkbox.Load\+\_\+check\+\_\+box\+\_\+images(backgroundimage))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ I\+M\+G\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+checkbox.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+
+textchars.\+textstring = \char`\"{}hello\char`\"{}; textchars.\+font = font;
+
+checkbox.\+Set\+\_\+label\+\_\+characteristics(textchars);
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a1e0e07940cfa643c1f019830042553bd}\label{classjetfuel_1_1gui_1_1Check__box_a1e0e07940cfa643c1f019830042553bd}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Check\+\_\+box@{Check\+\_\+box}}
+\index{Check\+\_\+box@{Check\+\_\+box}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Check\+\_\+box()}{Check\_box()}}
+{\footnotesize\ttfamily jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Check\+\_\+box (\begin{DoxyParamCaption}\item[{const bool}]{checked = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} with a boolean whether it should be checked or not. 
+
+Constructs a \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} with a boolean whether it should be checked or not. By default, the \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} starts off not checked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & checked \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a544261fc2f2d182b73c7ea629fa35e78}\label{classjetfuel_1_1gui_1_1Check__box_a544261fc2f2d182b73c7ea629fa35e78}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Assign\+\_\+renderer@{Assign\+\_\+renderer}}
+\index{Assign\+\_\+renderer@{Assign\+\_\+renderer}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Assign\+\_\+renderer()}{Assign\_renderer()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Assign\+\_\+renderer (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Assigns a renderer to this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. 
+
+Assigns a renderer to this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. It is recommended to let \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} and \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} call this rather than yourself.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Renderer} & $\ast$renderer \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_a0d7257f197d6ffcdd89c3a99c93d1400}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a0e50420591dbd64f07f02f9ee7cec637}\label{classjetfuel_1_1gui_1_1Check__box_a0e50420591dbd64f07f02f9ee7cec637}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Check\+\_\+for\+\_\+clicks@{Check\+\_\+for\+\_\+clicks}}
+\index{Check\+\_\+for\+\_\+clicks@{Check\+\_\+for\+\_\+clicks}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Check\+\_\+for\+\_\+clicks()}{Check\_for\_clicks()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Check\+\_\+for\+\_\+clicks (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action}}]{U\+I\+Sinterpreterdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} for any clicks on it. 
+
+Checks this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} for any clicks on it modifying it\textquotesingle{}s status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action}} & U\+I\+Sinterpreterdata \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classjetfuel_1_1gui_1_1IClickable_aea45de37bd3beb7eb7e2e3056e4e37b3}{jetfuel\+::gui\+::\+I\+Clickable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_ad2ce6d4af8d950a4ef76b0688541c29a}\label{classjetfuel_1_1gui_1_1Check__box_ad2ce6d4af8d950a4ef76b0688541c29a}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Draw@{Draw}}
+\index{Draw@{Draw}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Drawable_a1a072070322965ce9411ee6e7c311c56}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a481eeb0f2c5c6f1165da4243ab5b636a}\label{classjetfuel_1_1gui_1_1Check__box_a481eeb0f2c5c6f1165da4243ab5b636a}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Draw\+\_\+drawables@{Draw\+\_\+drawables}}
+\index{Draw\+\_\+drawables@{Draw\+\_\+drawables}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Draw\+\_\+drawables()}{Draw\_drawables()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Draw\+\_\+drawables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Draws all the drawables part of this class. 
+
+Draws all the drawables part of this class (i.\+e. checkbox sprite, label text). \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a9fd8ee85ef4f17195fbb7bcf53e061dc}\label{classjetfuel_1_1gui_1_1Check__box_a9fd8ee85ef4f17195fbb7bcf53e061dc}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Dynamic\+\_\+load\+\_\+check\+\_\+box\+\_\+images@{Dynamic\+\_\+load\+\_\+check\+\_\+box\+\_\+images}}
+\index{Dynamic\+\_\+load\+\_\+check\+\_\+box\+\_\+images@{Dynamic\+\_\+load\+\_\+check\+\_\+box\+\_\+images}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Dynamic\+\_\+load\+\_\+check\+\_\+box\+\_\+images()}{Dynamic\_load\_check\_box\_images()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Dynamic\+\_\+load\+\_\+check\+\_\+box\+\_\+images (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{activeimage,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{disabledimage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dynamically load the images of a \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}, one active and one disabled. 
+
+Dynamically load the images of a \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}, one active and one disabled. The active image is used when the checkbox is checked and the disabled image is used when the checkbox is not checked. The texture objects are not created until right before they need to be drawn.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & activeimage \\
+\hline
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & disabledimage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a6dbbadfa0e40212fd0d133ecd2924fa8}\label{classjetfuel_1_1gui_1_1Check__box_a6dbbadfa0e40212fd0d133ecd2924fa8}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Get\+\_\+action\+\_\+to\+\_\+listen\+\_\+for@{Get\+\_\+action\+\_\+to\+\_\+listen\+\_\+for}}
+\index{Get\+\_\+action\+\_\+to\+\_\+listen\+\_\+for@{Get\+\_\+action\+\_\+to\+\_\+listen\+\_\+for}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+action\+\_\+to\+\_\+listen\+\_\+for()}{Get\_action\_to\_listen\_for()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Get\+\_\+action\+\_\+to\+\_\+listen\+\_\+for (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the Universal Input System action to listen for. 
+
+Gets the Universal Input System action to listen for. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a0771bcece30b82b65fad29ee66a28f27}\label{classjetfuel_1_1gui_1_1Check__box_a0771bcece30b82b65fad29ee66a28f27}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Get\+\_\+active\+\_\+checkbox\+\_\+image@{Get\+\_\+active\+\_\+checkbox\+\_\+image}}
+\index{Get\+\_\+active\+\_\+checkbox\+\_\+image@{Get\+\_\+active\+\_\+checkbox\+\_\+image}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+active\+\_\+checkbox\+\_\+image()}{Get\_active\_checkbox\_image()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Get\+\_\+active\+\_\+checkbox\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the active (checked) checkbox image. 
+
+Gets the active (checked) checkbox image. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a83b3fc8469caf6c33e41fc1b4fe7295c}\label{classjetfuel_1_1gui_1_1Check__box_a83b3fc8469caf6c33e41fc1b4fe7295c}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Get\+\_\+checkbox\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+checkbox\+\_\+rect\+\_\+to\+\_\+draw}}
+\index{Get\+\_\+checkbox\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+checkbox\+\_\+rect\+\_\+to\+\_\+draw}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+checkbox\+\_\+rect\+\_\+to\+\_\+draw()}{Get\_checkbox\_rect\_to\_draw()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Get\+\_\+checkbox\+\_\+rect\+\_\+to\+\_\+draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Rect2d of just the checkbox sprite (no label). 
+
+Returns the Rect2d of just the checkbox sprite (no label). \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_ae2f2067e485168d7e8794baa1890e9a6}\label{classjetfuel_1_1gui_1_1Check__box_ae2f2067e485168d7e8794baa1890e9a6}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Get\+\_\+disabled\+\_\+checkbox\+\_\+image@{Get\+\_\+disabled\+\_\+checkbox\+\_\+image}}
+\index{Get\+\_\+disabled\+\_\+checkbox\+\_\+image@{Get\+\_\+disabled\+\_\+checkbox\+\_\+image}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+disabled\+\_\+checkbox\+\_\+image()}{Get\_disabled\_checkbox\_image()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Get\+\_\+disabled\+\_\+checkbox\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the disabled (not checked) checkbox image. 
+
+Gets the disabled (not checked) checkbox image. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a67e0befe8a0919bf28b5090cddac397e}\label{classjetfuel_1_1gui_1_1Check__box_a67e0befe8a0919bf28b5090cddac397e}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Get\+\_\+label\+\_\+characteristics@{Get\+\_\+label\+\_\+characteristics}}
+\index{Get\+\_\+label\+\_\+characteristics@{Get\+\_\+label\+\_\+characteristics}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+label\+\_\+characteristics()}{Get\_label\_characteristics()}}
+{\footnotesize\ttfamily \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Get\+\_\+label\+\_\+characteristics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current text label characteristics of this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. 
+
+Gets the current text label characteristics of this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a7f14e8be560d0be5a05839442de1f18f}\label{classjetfuel_1_1gui_1_1Check__box_a7f14e8be560d0be5a05839442de1f18f}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Get\+\_\+position@{Get\+\_\+position}}
+\index{Get\+\_\+position@{Get\+\_\+position}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+position()}{Get\_position()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}\textquotesingle{}s position. 
+
+Returns this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}\textquotesingle{}s position.
+
+\begin{DoxyWarning}{Warning}
+This position corrlates to the Checkbox itself, N\+OT the label. 
+\end{DoxyWarning}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_ae7ebd30d66db2c8a5d5371cbcf0023fc}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a09feae5781a788df462be6276e2d1c54}\label{classjetfuel_1_1gui_1_1Check__box_a09feae5781a788df462be6276e2d1c54}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}}
+\index{Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+rect\+\_\+to\+\_\+draw()}{Get\_rect\_to\_draw()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Get\+\_\+rect\+\_\+to\+\_\+draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the Rect2d to be drawn. 
+
+Returns the \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d} of this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} (with label) to be drawn when \hyperlink{classjetfuel_1_1gui_1_1Check__box_ad2ce6d4af8d950a4ef76b0688541c29a}{Draw()} is called. This is a implementation of a pure virtual function from \hyperlink{classjetfuel_1_1draw_1_1Rectangle__interface}{jetfuel\+::draw\+::\+Rectangle\+\_\+interface}. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Rectangle__interface_a03fd3b6842ab7b3065379caec407296f}{jetfuel\+::draw\+::\+Rectangle\+\_\+interface}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a906b159264ffa88cab5d9d467331f229}\label{classjetfuel_1_1gui_1_1Check__box_a906b159264ffa88cab5d9d467331f229}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Is\+\_\+checked@{Is\+\_\+checked}}
+\index{Is\+\_\+checked@{Is\+\_\+checked}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Is\+\_\+checked()}{Is\_checked()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Is\+\_\+checked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} is checked. 
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} is checked. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_adadc280e5d14f08e64f974ba9156cd16}\label{classjetfuel_1_1gui_1_1Check__box_adadc280e5d14f08e64f974ba9156cd16}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Load\+\_\+check\+\_\+box\+\_\+images@{Load\+\_\+check\+\_\+box\+\_\+images}}
+\index{Load\+\_\+check\+\_\+box\+\_\+images@{Load\+\_\+check\+\_\+box\+\_\+images}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Load\+\_\+check\+\_\+box\+\_\+images()}{Load\_check\_box\_images()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Load\+\_\+check\+\_\+box\+\_\+images (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{activeimage,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{disabledimage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads the images of a \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}, one active and one disabled. 
+
+Loads the images of a \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}, one active and one disabled. The active image is used when the checkbox is checked and the disabled image is used when the checkbox is not checked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & activeimage \\
+\hline
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & disabledimage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a276fb1567260c41b07079c600143ce3d}\label{classjetfuel_1_1gui_1_1Check__box_a276fb1567260c41b07079c600143ce3d}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Set\+\_\+checkbox\+\_\+sprite\+\_\+image@{Set\+\_\+checkbox\+\_\+sprite\+\_\+image}}
+\index{Set\+\_\+checkbox\+\_\+sprite\+\_\+image@{Set\+\_\+checkbox\+\_\+sprite\+\_\+image}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+checkbox\+\_\+sprite\+\_\+image()}{Set\_checkbox\_sprite\_image()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Set\+\_\+checkbox\+\_\+sprite\+\_\+image (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the checkbox sprite\textquotesingle{}s image. 
+
+Sets the checkbox sprite\textquotesingle{}s image.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_ac422c99da29eab41b4849d6d0a55ff70}\label{classjetfuel_1_1gui_1_1Check__box_ac422c99da29eab41b4849d6d0a55ff70}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Set\+\_\+checked@{Set\+\_\+checked}}
+\index{Set\+\_\+checked@{Set\+\_\+checked}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+checked()}{Set\_checked()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Set\+\_\+checked (\begin{DoxyParamCaption}\item[{const bool}]{checked }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets whether this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} is checked. 
+
+Sets whether this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box} is checked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & checked \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_aa7dbb21f37090d3a595d0111acc721b3}\label{classjetfuel_1_1gui_1_1Check__box_aa7dbb21f37090d3a595d0111acc721b3}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Set\+\_\+label\+\_\+characteristics@{Set\+\_\+label\+\_\+characteristics}}
+\index{Set\+\_\+label\+\_\+characteristics@{Set\+\_\+label\+\_\+characteristics}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+label\+\_\+characteristics()}{Set\_label\_characteristics()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Set\+\_\+label\+\_\+characteristics (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics}}]{labelcharacteristics,  }\item[{Label\+\_\+position}]{labelposition,  }\item[{unsigned int}]{labelgap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the current text label characteristics of this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. 
+
+Sets the current text label characteristics of this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics}} & labelcharacteristics \\
+\hline
+{\em jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Label\+\_\+position} & labelposition \\
+\hline
+{\em unsigned} & int labelgap \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_aca11db17630485a2c44b19780d10cce6}\label{classjetfuel_1_1gui_1_1Check__box_aca11db17630485a2c44b19780d10cce6}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Set\+\_\+position@{Set\+\_\+position}}
+\index{Set\+\_\+position@{Set\+\_\+position}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+position()}{Set\_position()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Set\+\_\+position (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}\textquotesingle{}s position. 
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}\textquotesingle{}s position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_afdd035afe40c706459a6c9df813bcce6}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a92a70756f7b7d37c3b40a08bc251ff8b}\label{classjetfuel_1_1gui_1_1Check__box_a92a70756f7b7d37c3b40a08bc251ff8b}} 
+\index{jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}!Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch@{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch}}
+\index{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch@{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch}!jetfuel\+::gui\+::\+Check\+\_\+box@{jetfuel\+::gui\+::\+Check\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch()}{Set\_UIS\_action\_to\_watch()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Check\+\_\+box\+::\+Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch (\begin{DoxyParamCaption}\item[{const std\+::string}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the Universal Input System action to watch that trigger actions pertainging to this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}. 
+
+Sets the Universal Input System action to watch that trigger actions pertainging to this \hyperlink{classjetfuel_1_1gui_1_1Check__box}{Check\+\_\+box}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & action \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelgui/checkbox.\+h\end{DoxyCompactItemize}

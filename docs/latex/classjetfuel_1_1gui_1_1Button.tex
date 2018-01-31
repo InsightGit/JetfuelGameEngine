@@ -1,0 +1,391 @@
+\hypertarget{classjetfuel_1_1gui_1_1Button}{}\section{jetfuel\+:\+:gui\+:\+:Button Class Reference}
+\label{classjetfuel_1_1gui_1_1Button}\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+
+
+{\ttfamily \#include $<$button.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:gui\+:\+:Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classjetfuel_1_1gui_1_1Button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jetfuel\+:\+:gui\+:\+:Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classjetfuel_1_1gui_1_1Button__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1gui_1_1Button_ad9fc0a1426f1fe03563ebac1c4ffcd92}{Button} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Button_a2c9b05aeec9661440c2bde16c6bdd791}{Load\+\_\+base\+\_\+button\+\_\+image} (\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} image)
+\begin{DoxyCompactList}\small\item\em Loads a base button image to serve as the button\textquotesingle{}s background. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Button_a452110801fca1b3274d574ebc671e8db}{Dynamic\+\_\+load\+\_\+base\+\_\+button\+\_\+image} (\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} image)
+\begin{DoxyCompactList}\small\item\em Dynamically load a base button to serve as the button\textquotesingle{}s background. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Button_a1d40cbd21c0c64b0a9c59b598536cce1}{Set\+\_\+button\+\_\+color} (\hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color} color)
+\begin{DoxyCompactList}\small\item\em Sets the button\textquotesingle{}s color overlay to be overlaid over the background\textquotesingle{}s image. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Button_ab2cf5dbf928df48a55118652e003519a}{Set\+\_\+button\+\_\+text\+\_\+characteristics} (\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} buttontextchars)
+\begin{DoxyCompactList}\small\item\em Sets the button\textquotesingle{}s text characteristics when displaying text. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Button_a4b256fdcf0ae28d8fb258b0f89d19536}{Set\+\_\+clicked\+\_\+message} (const std\+::string message, \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} $\ast$bus)
+\begin{DoxyCompactList}\small\item\em Sets the message to send to the message bus passed into this function when this button is clicked. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Button_a174b285f6271813e83fe277402ea3b8b}{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch} (const std\+::string action)
+\begin{DoxyCompactList}\small\item\em Sets the Universal Input System(\+U\+I\+S) action to watch for clicks. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Button_ab80239583f2e515370a90771976c5265}{Check\+\_\+for\+\_\+clicks} (\hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action} U\+I\+Sinterpreterdata) override
+\begin{DoxyCompactList}\small\item\em Checks for clicks. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Button_aa566a1d59623fde8d062c3d02b6fd5f4}{Assign\+\_\+renderer} (S\+D\+L\+\_\+\+Renderer $\ast$renderer) override
+\begin{DoxyCompactList}\small\item\em Assigns renderer to this button\textquotesingle{}s Drawables. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Button_a52c175819af166cda4c000fc2e32fb25}{Has\+\_\+been\+\_\+assigned\+\_\+renderer} ()
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button} has been assigned a renderer. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Button_aadcceacaabaa40bceb293d1f91231d22}{Get\+\_\+position} () override
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s position on the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Button_a642d3f1412339c826458b80dce76ef34}{Set\+\_\+position} (\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} position) override
+\begin{DoxyCompactList}\small\item\em Sets this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s position on the screen. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Button_a99615af8c169d2274b1593a29fdaf7ca}{Get\+\_\+rect\+\_\+to\+\_\+draw} () override
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s rectangle that will be drawn on the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Button_a4269075522becce58d220d3aa4bbd6ec}{Force\+\_\+load\+\_\+dynamic\+\_\+image} ()
+\begin{DoxyCompactList}\small\item\em Force loads the \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s dynamic image, if any. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Button_a1c8ec68b90dc461b1603c47fb8c509c4}{Draw} () override
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button} to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Button_a1572eec073adf699c280ffa784fa7459}{Is\+\_\+ready\+\_\+to\+\_\+draw} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s Drawables are ready to be drawn. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Button_a548ffd5860aced3206da4c210b5496c9}{Draw\+\_\+button\+\_\+sprite} ()
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s Sprite object and returns the result. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Button_ae1e89337652fc30fb7c4997f5b887da3}{Draw\+\_\+button\+\_\+overlay} ()
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s color overlay object and returns the result. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Button_ae001860ae9ce670073a4608811e70cfe}{Draw\+\_\+button\+\_\+text} ()
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s text object and returns the result. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Button_ac6e616b98179911dd626b018e54b08d7}{Is\+\_\+render\+\_\+ready} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the renderer is ready. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A clickable button with a Sprite background displaying an image, a color overlay, and text.
+
+Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} messagebus; \hyperlink{classjetfuel_1_1gui_1_1Button}{jetfuel\+::gui\+::\+Button} button; \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} buttonimage(\char`\"{}button.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager} U\+I\+Smanager(\&messagebus, scenemanager.\+Get\+\_\+window\+\_\+id()); \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter} U\+I\+Sinterpreter(\&messagebus); \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} textchars; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{});
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}\+Hello Buttons!\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(640,480)))\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl window! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \} scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&button,1);
+
+if(!button.Load\+\_\+base\+\_\+button\+\_\+image(backgroundimage))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ I\+M\+G\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+button.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+
+textchars.\+textstring = \char`\"{}hello\char`\"{}; textchars.\+font = font;
+
+button.\+Set\+\_\+button\+\_\+text\+\_\+characteristics(textchars);
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_ad9fc0a1426f1fe03563ebac1c4ffcd92}\label{classjetfuel_1_1gui_1_1Button_ad9fc0a1426f1fe03563ebac1c4ffcd92}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Button@{Button}}
+\index{Button@{Button}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily jetfuel\+::gui\+::\+Button\+::\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Constructs an empty \hyperlink{classjetfuel_1_1gui_1_1Button}{Button} object. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_aa566a1d59623fde8d062c3d02b6fd5f4}\label{classjetfuel_1_1gui_1_1Button_aa566a1d59623fde8d062c3d02b6fd5f4}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Assign\+\_\+renderer@{Assign\+\_\+renderer}}
+\index{Assign\+\_\+renderer@{Assign\+\_\+renderer}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Assign\+\_\+renderer()}{Assign\_renderer()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Button\+::\+Assign\+\_\+renderer (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Assigns renderer to this button\textquotesingle{}s Drawables. 
+
+Assigns renderer to this button\textquotesingle{}s Drawables, including the \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s text, rectangle, and sprite Drawables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Renderer} & $\ast$renderer \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_a0d7257f197d6ffcdd89c3a99c93d1400}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_ab80239583f2e515370a90771976c5265}\label{classjetfuel_1_1gui_1_1Button_ab80239583f2e515370a90771976c5265}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Check\+\_\+for\+\_\+clicks@{Check\+\_\+for\+\_\+clicks}}
+\index{Check\+\_\+for\+\_\+clicks@{Check\+\_\+for\+\_\+clicks}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Check\+\_\+for\+\_\+clicks()}{Check\_for\_clicks()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Button\+::\+Check\+\_\+for\+\_\+clicks (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action}}]{U\+I\+Sinterpreterdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks for clicks. 
+
+Checks for clicks. If click is detected, the specified message specified in the Set\+\_\+clicked\+\_\+message function will be sent to the specified message bus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action}} & U\+I\+Sinterpreterdata \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classjetfuel_1_1gui_1_1IClickable_aea45de37bd3beb7eb7e2e3056e4e37b3}{jetfuel\+::gui\+::\+I\+Clickable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a1c8ec68b90dc461b1603c47fb8c509c4}\label{classjetfuel_1_1gui_1_1Button_a1c8ec68b90dc461b1603c47fb8c509c4}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Draw@{Draw}}
+\index{Draw@{Draw}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Button\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button} to the screen. 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button} to the screen. This W\+I\+LL fail if either the renderer has not been assigned(which happens when you attach a \hyperlink{classjetfuel_1_1gui_1_1Button}{Button} to a \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene}), or the image has not been loaded. If it does, this function will return a boolean of false. Otherwise, it will return a boolean of true. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Drawable_a1a072070322965ce9411ee6e7c311c56}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_ae1e89337652fc30fb7c4997f5b887da3}\label{classjetfuel_1_1gui_1_1Button_ae1e89337652fc30fb7c4997f5b887da3}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Draw\+\_\+button\+\_\+overlay@{Draw\+\_\+button\+\_\+overlay}}
+\index{Draw\+\_\+button\+\_\+overlay@{Draw\+\_\+button\+\_\+overlay}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Draw\+\_\+button\+\_\+overlay()}{Draw\_button\_overlay()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Button\+::\+Draw\+\_\+button\+\_\+overlay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s color overlay object and returns the result. 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s color overlay object and returns the result. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a548ffd5860aced3206da4c210b5496c9}\label{classjetfuel_1_1gui_1_1Button_a548ffd5860aced3206da4c210b5496c9}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Draw\+\_\+button\+\_\+sprite@{Draw\+\_\+button\+\_\+sprite}}
+\index{Draw\+\_\+button\+\_\+sprite@{Draw\+\_\+button\+\_\+sprite}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Draw\+\_\+button\+\_\+sprite()}{Draw\_button\_sprite()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Button\+::\+Draw\+\_\+button\+\_\+sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s Sprite object and returns the result. 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s Sprite object and returns the result. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_ae001860ae9ce670073a4608811e70cfe}\label{classjetfuel_1_1gui_1_1Button_ae001860ae9ce670073a4608811e70cfe}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Draw\+\_\+button\+\_\+text@{Draw\+\_\+button\+\_\+text}}
+\index{Draw\+\_\+button\+\_\+text@{Draw\+\_\+button\+\_\+text}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Draw\+\_\+button\+\_\+text()}{Draw\_button\_text()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Button\+::\+Draw\+\_\+button\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s text object and returns the result. 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s text object and returns the result. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a452110801fca1b3274d574ebc671e8db}\label{classjetfuel_1_1gui_1_1Button_a452110801fca1b3274d574ebc671e8db}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Dynamic\+\_\+load\+\_\+base\+\_\+button\+\_\+image@{Dynamic\+\_\+load\+\_\+base\+\_\+button\+\_\+image}}
+\index{Dynamic\+\_\+load\+\_\+base\+\_\+button\+\_\+image@{Dynamic\+\_\+load\+\_\+base\+\_\+button\+\_\+image}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Dynamic\+\_\+load\+\_\+base\+\_\+button\+\_\+image()}{Dynamic\_load\_base\_button\_image()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Button\+::\+Dynamic\+\_\+load\+\_\+base\+\_\+button\+\_\+image (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dynamically load a base button to serve as the button\textquotesingle{}s background. 
+
+Dynamically load a base button to serve as the button\textquotesingle{}s background placed underneath the button\textquotesingle{}s text and color overlay.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a4269075522becce58d220d3aa4bbd6ec}\label{classjetfuel_1_1gui_1_1Button_a4269075522becce58d220d3aa4bbd6ec}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Force\+\_\+load\+\_\+dynamic\+\_\+image@{Force\+\_\+load\+\_\+dynamic\+\_\+image}}
+\index{Force\+\_\+load\+\_\+dynamic\+\_\+image@{Force\+\_\+load\+\_\+dynamic\+\_\+image}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Force\+\_\+load\+\_\+dynamic\+\_\+image()}{Force\_load\_dynamic\_image()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Button\+::\+Force\+\_\+load\+\_\+dynamic\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Force loads the \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s dynamic image, if any. 
+
+Force loads the \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s dynamic image, if any. It will re-\/load the image also when the Draw function is called even if you call this function. This function is mainly to find out the height and width of the sprite\textquotesingle{}s image and not much else. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_aadcceacaabaa40bceb293d1f91231d22}\label{classjetfuel_1_1gui_1_1Button_aadcceacaabaa40bceb293d1f91231d22}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Get\+\_\+position@{Get\+\_\+position}}
+\index{Get\+\_\+position@{Get\+\_\+position}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Get\+\_\+position()}{Get\_position()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} jetfuel\+::gui\+::\+Button\+::\+Get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s position on the screen. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s position on the screen. 
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_ae7ebd30d66db2c8a5d5371cbcf0023fc}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a99615af8c169d2274b1593a29fdaf7ca}\label{classjetfuel_1_1gui_1_1Button_a99615af8c169d2274b1593a29fdaf7ca}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}}
+\index{Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Get\+\_\+rect\+\_\+to\+\_\+draw()}{Get\_rect\_to\_draw()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} jetfuel\+::gui\+::\+Button\+::\+Get\+\_\+rect\+\_\+to\+\_\+draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s rectangle that will be drawn on the screen. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s rectangle that will be drawn on the Draw function being called. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Rectangle__interface_a03fd3b6842ab7b3065379caec407296f}{jetfuel\+::draw\+::\+Rectangle\+\_\+interface}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a52c175819af166cda4c000fc2e32fb25}\label{classjetfuel_1_1gui_1_1Button_a52c175819af166cda4c000fc2e32fb25}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Has\+\_\+been\+\_\+assigned\+\_\+renderer@{Has\+\_\+been\+\_\+assigned\+\_\+renderer}}
+\index{Has\+\_\+been\+\_\+assigned\+\_\+renderer@{Has\+\_\+been\+\_\+assigned\+\_\+renderer}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Has\+\_\+been\+\_\+assigned\+\_\+renderer()}{Has\_been\_assigned\_renderer()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Button\+::\+Has\+\_\+been\+\_\+assigned\+\_\+renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button} has been assigned a renderer. 
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button} has been assigned a renderer. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a1572eec073adf699c280ffa784fa7459}\label{classjetfuel_1_1gui_1_1Button_a1572eec073adf699c280ffa784fa7459}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Is\+\_\+ready\+\_\+to\+\_\+draw@{Is\+\_\+ready\+\_\+to\+\_\+draw}}
+\index{Is\+\_\+ready\+\_\+to\+\_\+draw@{Is\+\_\+ready\+\_\+to\+\_\+draw}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Is\+\_\+ready\+\_\+to\+\_\+draw()}{Is\_ready\_to\_draw()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Button\+::\+Is\+\_\+ready\+\_\+to\+\_\+draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s Drawables are ready to be drawn. 
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s Drawables are ready to be drawn. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_ac6e616b98179911dd626b018e54b08d7}\label{classjetfuel_1_1gui_1_1Button_ac6e616b98179911dd626b018e54b08d7}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Is\+\_\+render\+\_\+ready@{Is\+\_\+render\+\_\+ready}}
+\index{Is\+\_\+render\+\_\+ready@{Is\+\_\+render\+\_\+ready}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Is\+\_\+render\+\_\+ready()}{Is\_render\_ready()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Button\+::\+Is\+\_\+render\+\_\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether the renderer is ready. 
+
+Returns whether the renderer is ready. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a2c9b05aeec9661440c2bde16c6bdd791}\label{classjetfuel_1_1gui_1_1Button_a2c9b05aeec9661440c2bde16c6bdd791}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Load\+\_\+base\+\_\+button\+\_\+image@{Load\+\_\+base\+\_\+button\+\_\+image}}
+\index{Load\+\_\+base\+\_\+button\+\_\+image@{Load\+\_\+base\+\_\+button\+\_\+image}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Load\+\_\+base\+\_\+button\+\_\+image()}{Load\_base\_button\_image()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Button\+::\+Load\+\_\+base\+\_\+button\+\_\+image (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads a base button image to serve as the button\textquotesingle{}s background. 
+
+Loads a base button image to serve as the button\textquotesingle{}s background placed underneath the button\textquotesingle{}s text and color overlay.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a1d40cbd21c0c64b0a9c59b598536cce1}\label{classjetfuel_1_1gui_1_1Button_a1d40cbd21c0c64b0a9c59b598536cce1}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Set\+\_\+button\+\_\+color@{Set\+\_\+button\+\_\+color}}
+\index{Set\+\_\+button\+\_\+color@{Set\+\_\+button\+\_\+color}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Set\+\_\+button\+\_\+color()}{Set\_button\_color()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Button\+::\+Set\+\_\+button\+\_\+color (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}}]{color }\end{DoxyParamCaption})}
+
+
+
+Sets the button\textquotesingle{}s color overlay to be overlaid over the background\textquotesingle{}s image. 
+
+Sets the button\textquotesingle{}s color overlay to be overlaid over the background\textquotesingle{}s image.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}} & color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_ab2cf5dbf928df48a55118652e003519a}\label{classjetfuel_1_1gui_1_1Button_ab2cf5dbf928df48a55118652e003519a}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Set\+\_\+button\+\_\+text\+\_\+characteristics@{Set\+\_\+button\+\_\+text\+\_\+characteristics}}
+\index{Set\+\_\+button\+\_\+text\+\_\+characteristics@{Set\+\_\+button\+\_\+text\+\_\+characteristics}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Set\+\_\+button\+\_\+text\+\_\+characteristics()}{Set\_button\_text\_characteristics()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Button\+::\+Set\+\_\+button\+\_\+text\+\_\+characteristics (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics}}]{buttontextchars }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the button\textquotesingle{}s text characteristics when displaying text. 
+
+Sets the button\textquotesingle{}s text characteristics when displaying text. Text characteristics are text options like Font, font hinting, text size, and text color that can easily be set via this one function!
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics}} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a4b256fdcf0ae28d8fb258b0f89d19536}\label{classjetfuel_1_1gui_1_1Button_a4b256fdcf0ae28d8fb258b0f89d19536}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Set\+\_\+clicked\+\_\+message@{Set\+\_\+clicked\+\_\+message}}
+\index{Set\+\_\+clicked\+\_\+message@{Set\+\_\+clicked\+\_\+message}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Set\+\_\+clicked\+\_\+message()}{Set\_clicked\_message()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Button\+::\+Set\+\_\+clicked\+\_\+message (\begin{DoxyParamCaption}\item[{const std\+::string}]{message,  }\item[{\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} $\ast$}]{bus }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the message to send to the message bus passed into this function when this button is clicked. 
+
+Sets the message to send to the message bus passed into this function when this button is clicked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & message \\
+\hline
+{\em \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus}} & $\ast$bus \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a642d3f1412339c826458b80dce76ef34}\label{classjetfuel_1_1gui_1_1Button_a642d3f1412339c826458b80dce76ef34}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Set\+\_\+position@{Set\+\_\+position}}
+\index{Set\+\_\+position@{Set\+\_\+position}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Set\+\_\+position()}{Set\_position()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Button\+::\+Set\+\_\+position (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s position on the screen. 
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s position on the screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_afdd035afe40c706459a6c9df813bcce6}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_a174b285f6271813e83fe277402ea3b8b}\label{classjetfuel_1_1gui_1_1Button_a174b285f6271813e83fe277402ea3b8b}} 
+\index{jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}!Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch@{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch}}
+\index{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch@{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch}!jetfuel\+::gui\+::\+Button@{jetfuel\+::gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch()}{Set\_UIS\_action\_to\_watch()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Button\+::\+Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+watch (\begin{DoxyParamCaption}\item[{const std\+::string}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the Universal Input System(\+U\+I\+S) action to watch for clicks. 
+
+Sets the Universal Input System(\+U\+I\+S) action to watch for clicks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & action \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelgui/button.\+h\end{DoxyCompactItemize}

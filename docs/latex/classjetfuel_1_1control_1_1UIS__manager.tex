@@ -1,0 +1,474 @@
+\hypertarget{classjetfuel_1_1control_1_1UIS__manager}{}\section{jetfuel\+:\+:control\+:\+:U\+I\+S\+\_\+manager Class Reference}
+\label{classjetfuel_1_1control_1_1UIS__manager}\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+
+
+{\ttfamily \#include $<$U\+I\+Smanager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1control_1_1UIS__manager_a04d1feda567af305a4495b189ef9bc8f}{U\+I\+S\+\_\+manager} (\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} $\ast$bus, Uint32 $\ast$currentwindowid)
+\begin{DoxyCompactList}\small\item\em Constructs an Universal Input System manager with a message bus and the current window\textquotesingle{}s id. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a8a15d34ba4ae580ef4d39250695a16e3}{Open\+\_\+controller\+\_\+config\+\_\+file} (const std\+::string configfilepath)
+\begin{DoxyCompactList}\small\item\em Opens a J\+S\+ON controller configuration file. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a389d615922d1d3f408e46ae05c37d125}{Process\+\_\+input\+\_\+event} (S\+D\+L\+\_\+\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Processes an input event passed from S\+DL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_ac24dcfc57f2b9464571ce15b40fafa2c}{Load\+\_\+json\+\_\+file} (const std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Loads a J\+S\+ON file from a J\+S\+ON file\textquotesingle{}s path into the internal rapidjson value. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_aed8de35f5209e88eda4dbb87c313420c}{Detect\+\_\+desktop\+\_\+event} (S\+D\+L\+\_\+\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Detects a desktop S\+DL event. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a6de02ffd734406ff5187937cf951e297}{Detect\+\_\+mobile\+\_\+event} (S\+D\+L\+\_\+\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Detects a mobile S\+DL event. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a1550f61f5aabf96baa3ea4dc9ccb0988}{Post\+\_\+message\+\_\+to\+\_\+message\+\_\+bus} (const std\+::string message)
+\begin{DoxyCompactList}\small\item\em Posts a message to the assigned message bus. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1control_1_1UIS__manager_af905f08ba629b3556966f655f24b0b0f}{Get\+\_\+file\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Gets the J\+S\+ON controller configuration file name. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_aa68c473946c11071c3222d63affcfbd4}{Set\+\_\+file\+\_\+name} (const std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Sets the J\+S\+ON controller configuration file name. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1control_1_1UIS__manager_aa793909d552073e59d9c3cdefe9e6618}{Get\+\_\+past\+\_\+file\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Gets the past file name for identifying a change in file names. \end{DoxyCompactList}\item 
+Uint32 $\ast$ \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a31b973b02f3a17afed1de151db5704ed}{Get\+\_\+window\+\_\+id} () const
+\begin{DoxyCompactList}\small\item\em Gets the assigned window id pointer for identifying mouse state. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a993f8dbe8b39656a426bbd7aa5568c14}{Is\+\_\+window\+\_\+active} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the game window is active. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_aadc46749d1ea102cf957bcc6da98654e}{Set\+\_\+window\+\_\+active} (const bool windowactive)
+\begin{DoxyCompactList}\small\item\em Sets the game window active boolean. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a5fff180a335246d905531a00bc34fbe8}{Set\+\_\+past\+\_\+file\+\_\+name} (const std\+::string pastfilename)
+\begin{DoxyCompactList}\small\item\em Sets the past file name string variable. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_afb60b0c7ac07dbe3657eb8a203c4bd45}{Push\+\_\+key\+\_\+to\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector} (\hyperlink{structjetfuel_1_1control_1_1UIS__previous__key}{U\+I\+S\+\_\+previous\+\_\+key} key)
+\begin{DoxyCompactList}\small\item\em Pushes a key to the past keys entered vector. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classjetfuel_1_1control_1_1UIS__manager_ab16fc0fc549296bdf8de3964ec933fb8}{Get\+\_\+size\+\_\+of\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the past keys entered vector. \end{DoxyCompactList}\item 
+\hyperlink{structjetfuel_1_1control_1_1UIS__previous__key}{U\+I\+S\+\_\+previous\+\_\+key} \hyperlink{classjetfuel_1_1control_1_1UIS__manager_ac7dc1ae00609d95ba770813d7cbe6846}{Get\+\_\+past\+\_\+key\+\_\+in\+\_\+vector} (const int place)
+\begin{DoxyCompactList}\small\item\em Gets a past key in the past keys entered vector. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1control_1_1UIS__manager_aea5102734384250b5c4c45a4a9109a62}{Get\+\_\+last\+\_\+mouse\+\_\+action} () const
+\begin{DoxyCompactList}\small\item\em Gets the last mouse action processed by this Universal Input System manager. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_aa9fc7545ca5bcc229567f86945e981cd}{Set\+\_\+last\+\_\+mouse\+\_\+action} (const std\+::string lastmouseaction)
+\begin{DoxyCompactList}\small\item\em Sets the last mouse action processed by this Universal Input System manager. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_ac2df113cedc2e78b29426edcb23c5f24}{Erase\+\_\+place\+\_\+in\+\_\+past\+\_\+keys\+\_\+vector} (const int place)
+\begin{DoxyCompactList}\small\item\em Erases an object in the past keys entered vector by place. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a93f728a261ed7f901aad2f5707b46ca8}{Process\+\_\+key\+\_\+down\+\_\+event} (S\+D\+L\+\_\+\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Processes a keyboard key down S\+DL event. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a43156fbe06f42df6cdeef4f3c5baa253}{Process\+\_\+key\+\_\+up\+\_\+event} (S\+D\+L\+\_\+\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Processes a keyboard key up S\+DL event. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_ac2bf8de30a754bdc0a2bd300a79d41bb}{Process\+\_\+mouse\+\_\+down\+\_\+event} (S\+D\+L\+\_\+\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Processes a mouse down S\+DL event. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a17413f559bb86a914c39b96c442e2422}{Process\+\_\+mouse\+\_\+up\+\_\+event} ()
+\begin{DoxyCompactList}\small\item\em Processes a mouse up S\+DL event. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1control_1_1UIS__manager_ab20315b3fd2a89c8f21058385a4ce672}{Process\+\_\+controller\+\_\+button\+\_\+down\+\_\+event} (S\+D\+L\+\_\+\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Processes a controller button down S\+DL event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+rapidjson\+::\+Document \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a83099ccbf9449bf3a3a27d7c7b9b1ff5}{jsondoc}
+\begin{DoxyCompactList}\small\item\em member data /// \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structjetfuel_1_1control_1_1UIS__previous__key}{jetfuel\+::control\+::\+U\+I\+S\+\_\+previous\+\_\+key}
+
+A struct used internally by the Universal Input System manager (or \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}) to track a key action. It should not be used outside of the Universal Input System manager. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a04d1feda567af305a4495b189ef9bc8f}\label{classjetfuel_1_1control_1_1UIS__manager_a04d1feda567af305a4495b189ef9bc8f}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!U\+I\+S\+\_\+manager@{U\+I\+S\+\_\+manager}}
+\index{U\+I\+S\+\_\+manager@{U\+I\+S\+\_\+manager}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{U\+I\+S\+\_\+manager()}{UIS\_manager()}}
+{\footnotesize\ttfamily jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+U\+I\+S\+\_\+manager (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} $\ast$}]{bus,  }\item[{Uint32 $\ast$}]{currentwindowid }\end{DoxyParamCaption})}
+
+
+
+Constructs an Universal Input System manager with a message bus and the current window\textquotesingle{}s id. 
+
+Constructs an Universal Input System manager with a message bus to post ingame actions in and the current window\textquotesingle{}s id for mouse input which can be obtained via a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus}} & $\ast$bus \\
+\hline
+{\em Uint32} & $\ast$currentwindowid \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_aed8de35f5209e88eda4dbb87c313420c}\label{classjetfuel_1_1control_1_1UIS__manager_aed8de35f5209e88eda4dbb87c313420c}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Detect\+\_\+desktop\+\_\+event@{Detect\+\_\+desktop\+\_\+event}}
+\index{Detect\+\_\+desktop\+\_\+event@{Detect\+\_\+desktop\+\_\+event}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Detect\+\_\+desktop\+\_\+event()}{Detect\_desktop\_event()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Detect\+\_\+desktop\+\_\+event (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Detects a desktop S\+DL event. 
+
+Detects a desktop S\+DL event for translation. This function will only run on desktop systems, and not on any mobile systems.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Event} & $\ast$event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a6de02ffd734406ff5187937cf951e297}\label{classjetfuel_1_1control_1_1UIS__manager_a6de02ffd734406ff5187937cf951e297}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Detect\+\_\+mobile\+\_\+event@{Detect\+\_\+mobile\+\_\+event}}
+\index{Detect\+\_\+mobile\+\_\+event@{Detect\+\_\+mobile\+\_\+event}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Detect\+\_\+mobile\+\_\+event()}{Detect\_mobile\_event()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Detect\+\_\+mobile\+\_\+event (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Detects a mobile S\+DL event. 
+
+Detects a mobile S\+DL event for translation. This function will only run on mobile systems, and not on any desktop systems.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Event} & $\ast$event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_ac2df113cedc2e78b29426edcb23c5f24}\label{classjetfuel_1_1control_1_1UIS__manager_ac2df113cedc2e78b29426edcb23c5f24}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Erase\+\_\+place\+\_\+in\+\_\+past\+\_\+keys\+\_\+vector@{Erase\+\_\+place\+\_\+in\+\_\+past\+\_\+keys\+\_\+vector}}
+\index{Erase\+\_\+place\+\_\+in\+\_\+past\+\_\+keys\+\_\+vector@{Erase\+\_\+place\+\_\+in\+\_\+past\+\_\+keys\+\_\+vector}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Erase\+\_\+place\+\_\+in\+\_\+past\+\_\+keys\+\_\+vector()}{Erase\_place\_in\_past\_keys\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Erase\+\_\+place\+\_\+in\+\_\+past\+\_\+keys\+\_\+vector (\begin{DoxyParamCaption}\item[{const int}]{place }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Erases an object in the past keys entered vector by place. 
+
+Erases an object in the past keys entered vector by place when a past key has been processed. This function will throw a \hyperlink{classjetfuel_1_1core_1_1exceptions_1_1Out__of__vector__range__exception}{jetfuel\+::core\+::exceptions\+::\+Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception} if the place provided is greater than or equal to the size of the past keys vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & place. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_af905f08ba629b3556966f655f24b0b0f}\label{classjetfuel_1_1control_1_1UIS__manager_af905f08ba629b3556966f655f24b0b0f}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Get\+\_\+file\+\_\+name@{Get\+\_\+file\+\_\+name}}
+\index{Get\+\_\+file\+\_\+name@{Get\+\_\+file\+\_\+name}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Get\+\_\+file\+\_\+name()}{Get\_file\_name()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Get\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the J\+S\+ON controller configuration file name. 
+
+Gets the J\+S\+ON controller configuration file name. \mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_aea5102734384250b5c4c45a4a9109a62}\label{classjetfuel_1_1control_1_1UIS__manager_aea5102734384250b5c4c45a4a9109a62}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Get\+\_\+last\+\_\+mouse\+\_\+action@{Get\+\_\+last\+\_\+mouse\+\_\+action}}
+\index{Get\+\_\+last\+\_\+mouse\+\_\+action@{Get\+\_\+last\+\_\+mouse\+\_\+action}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Get\+\_\+last\+\_\+mouse\+\_\+action()}{Get\_last\_mouse\_action()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Get\+\_\+last\+\_\+mouse\+\_\+action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the last mouse action processed by this Universal Input System manager. 
+
+Gets the last mouse action processed by this Universal Input System manager. \mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_aa793909d552073e59d9c3cdefe9e6618}\label{classjetfuel_1_1control_1_1UIS__manager_aa793909d552073e59d9c3cdefe9e6618}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Get\+\_\+past\+\_\+file\+\_\+name@{Get\+\_\+past\+\_\+file\+\_\+name}}
+\index{Get\+\_\+past\+\_\+file\+\_\+name@{Get\+\_\+past\+\_\+file\+\_\+name}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Get\+\_\+past\+\_\+file\+\_\+name()}{Get\_past\_file\_name()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Get\+\_\+past\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the past file name for identifying a change in file names. 
+
+Gets the past file name for identifying a change in file names. \mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_ac7dc1ae00609d95ba770813d7cbe6846}\label{classjetfuel_1_1control_1_1UIS__manager_ac7dc1ae00609d95ba770813d7cbe6846}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Get\+\_\+past\+\_\+key\+\_\+in\+\_\+vector@{Get\+\_\+past\+\_\+key\+\_\+in\+\_\+vector}}
+\index{Get\+\_\+past\+\_\+key\+\_\+in\+\_\+vector@{Get\+\_\+past\+\_\+key\+\_\+in\+\_\+vector}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Get\+\_\+past\+\_\+key\+\_\+in\+\_\+vector()}{Get\_past\_key\_in\_vector()}}
+{\footnotesize\ttfamily \hyperlink{structjetfuel_1_1control_1_1UIS__previous__key}{U\+I\+S\+\_\+previous\+\_\+key} jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Get\+\_\+past\+\_\+key\+\_\+in\+\_\+vector (\begin{DoxyParamCaption}\item[{const int}]{place }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets a past key in the past keys entered vector. 
+
+Gets a past key in the past keys entered vector. If the place argument is set above the size of the past keys entered vector, the function will throw a \hyperlink{classjetfuel_1_1core_1_1exceptions_1_1Out__of__vector__range__exception}{jetfuel\+::core\+::exceptions\+::\+Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception}. Otherwise, it will return the \hyperlink{structjetfuel_1_1control_1_1UIS__previous__key}{U\+I\+S\+\_\+previous\+\_\+key} for that place in the vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & place \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_ab16fc0fc549296bdf8de3964ec933fb8}\label{classjetfuel_1_1control_1_1UIS__manager_ab16fc0fc549296bdf8de3964ec933fb8}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Get\+\_\+size\+\_\+of\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector@{Get\+\_\+size\+\_\+of\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector}}
+\index{Get\+\_\+size\+\_\+of\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector@{Get\+\_\+size\+\_\+of\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Get\+\_\+size\+\_\+of\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector()}{Get\_size\_of\_past\_keys\_entered\_vector()}}
+{\footnotesize\ttfamily size\+\_\+t jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Get\+\_\+size\+\_\+of\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the size of the past keys entered vector. 
+
+Gets the size of the past keys entered vector. \mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a31b973b02f3a17afed1de151db5704ed}\label{classjetfuel_1_1control_1_1UIS__manager_a31b973b02f3a17afed1de151db5704ed}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Get\+\_\+window\+\_\+id@{Get\+\_\+window\+\_\+id}}
+\index{Get\+\_\+window\+\_\+id@{Get\+\_\+window\+\_\+id}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Get\+\_\+window\+\_\+id()}{Get\_window\_id()}}
+{\footnotesize\ttfamily Uint32$\ast$ jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Get\+\_\+window\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the assigned window id pointer for identifying mouse state. 
+
+Gets the assigned window id pointer for identifying mouse state. \mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a993f8dbe8b39656a426bbd7aa5568c14}\label{classjetfuel_1_1control_1_1UIS__manager_a993f8dbe8b39656a426bbd7aa5568c14}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Is\+\_\+window\+\_\+active@{Is\+\_\+window\+\_\+active}}
+\index{Is\+\_\+window\+\_\+active@{Is\+\_\+window\+\_\+active}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Is\+\_\+window\+\_\+active()}{Is\_window\_active()}}
+{\footnotesize\ttfamily bool jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Is\+\_\+window\+\_\+active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks whether the game window is active. 
+
+Checks whether the game window is active. \mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_ac24dcfc57f2b9464571ce15b40fafa2c}\label{classjetfuel_1_1control_1_1UIS__manager_ac24dcfc57f2b9464571ce15b40fafa2c}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Load\+\_\+json\+\_\+file@{Load\+\_\+json\+\_\+file}}
+\index{Load\+\_\+json\+\_\+file@{Load\+\_\+json\+\_\+file}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Load\+\_\+json\+\_\+file()}{Load\_json\_file()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Load\+\_\+json\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Loads a J\+S\+ON file from a J\+S\+ON file\textquotesingle{}s path into the internal rapidjson value. 
+
+Loads a J\+S\+ON file from a J\+S\+ON file\textquotesingle{}s path into the internal rapidjson value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filepath \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a8a15d34ba4ae580ef4d39250695a16e3}\label{classjetfuel_1_1control_1_1UIS__manager_a8a15d34ba4ae580ef4d39250695a16e3}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Open\+\_\+controller\+\_\+config\+\_\+file@{Open\+\_\+controller\+\_\+config\+\_\+file}}
+\index{Open\+\_\+controller\+\_\+config\+\_\+file@{Open\+\_\+controller\+\_\+config\+\_\+file}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Open\+\_\+controller\+\_\+config\+\_\+file()}{Open\_controller\_config\_file()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Open\+\_\+controller\+\_\+config\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string}]{configfilepath }\end{DoxyParamCaption})}
+
+
+
+Opens a J\+S\+ON controller configuration file. 
+
+Opens a J\+S\+ON controller configuration file. This J\+S\+ON controller configuration file details what keys equal to what actions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & configfilepath \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a1550f61f5aabf96baa3ea4dc9ccb0988}\label{classjetfuel_1_1control_1_1UIS__manager_a1550f61f5aabf96baa3ea4dc9ccb0988}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Post\+\_\+message\+\_\+to\+\_\+message\+\_\+bus@{Post\+\_\+message\+\_\+to\+\_\+message\+\_\+bus}}
+\index{Post\+\_\+message\+\_\+to\+\_\+message\+\_\+bus@{Post\+\_\+message\+\_\+to\+\_\+message\+\_\+bus}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Post\+\_\+message\+\_\+to\+\_\+message\+\_\+bus()}{Post\_message\_to\_message\_bus()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Post\+\_\+message\+\_\+to\+\_\+message\+\_\+bus (\begin{DoxyParamCaption}\item[{const std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Posts a message to the assigned message bus. 
+
+Posts a message to the assigned message bus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_ab20315b3fd2a89c8f21058385a4ce672}\label{classjetfuel_1_1control_1_1UIS__manager_ab20315b3fd2a89c8f21058385a4ce672}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Process\+\_\+controller\+\_\+button\+\_\+down\+\_\+event@{Process\+\_\+controller\+\_\+button\+\_\+down\+\_\+event}}
+\index{Process\+\_\+controller\+\_\+button\+\_\+down\+\_\+event@{Process\+\_\+controller\+\_\+button\+\_\+down\+\_\+event}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Process\+\_\+controller\+\_\+button\+\_\+down\+\_\+event()}{Process\_controller\_button\_down\_event()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Process\+\_\+controller\+\_\+button\+\_\+down\+\_\+event (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Processes a controller button down S\+DL event. 
+
+Processes a controller button down S\+DL event. This function is the only process input-\/specific function that will be executed on any system, regardless whether it is a mobile or desktop system.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Event} & $\ast$event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a389d615922d1d3f408e46ae05c37d125}\label{classjetfuel_1_1control_1_1UIS__manager_a389d615922d1d3f408e46ae05c37d125}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Process\+\_\+input\+\_\+event@{Process\+\_\+input\+\_\+event}}
+\index{Process\+\_\+input\+\_\+event@{Process\+\_\+input\+\_\+event}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Process\+\_\+input\+\_\+event()}{Process\_input\_event()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Process\+\_\+input\+\_\+event (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Processes an input event passed from S\+DL. 
+
+Processes an input event passed from S\+DL. This function does the actual translation from a S\+D\+L\+\_\+\+Event to a message in a message bus which is then picked up by the Universal Input System interpreter (or \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Event} & $\ast$event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a93f728a261ed7f901aad2f5707b46ca8}\label{classjetfuel_1_1control_1_1UIS__manager_a93f728a261ed7f901aad2f5707b46ca8}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Process\+\_\+key\+\_\+down\+\_\+event@{Process\+\_\+key\+\_\+down\+\_\+event}}
+\index{Process\+\_\+key\+\_\+down\+\_\+event@{Process\+\_\+key\+\_\+down\+\_\+event}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Process\+\_\+key\+\_\+down\+\_\+event()}{Process\_key\_down\_event()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Process\+\_\+key\+\_\+down\+\_\+event (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Processes a keyboard key down S\+DL event. 
+
+Processes a keyboard key down S\+DL event. This function will only be called on desktop systems, N\+OT on any mobile systems.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Event} & $\ast$event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a43156fbe06f42df6cdeef4f3c5baa253}\label{classjetfuel_1_1control_1_1UIS__manager_a43156fbe06f42df6cdeef4f3c5baa253}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Process\+\_\+key\+\_\+up\+\_\+event@{Process\+\_\+key\+\_\+up\+\_\+event}}
+\index{Process\+\_\+key\+\_\+up\+\_\+event@{Process\+\_\+key\+\_\+up\+\_\+event}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Process\+\_\+key\+\_\+up\+\_\+event()}{Process\_key\_up\_event()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Process\+\_\+key\+\_\+up\+\_\+event (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Processes a keyboard key up S\+DL event. 
+
+Processes a keyboard key up S\+DL event. This function will only be called on desktop systems, N\+OT on any mobile systems.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Event} & $\ast$event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_ac2bf8de30a754bdc0a2bd300a79d41bb}\label{classjetfuel_1_1control_1_1UIS__manager_ac2bf8de30a754bdc0a2bd300a79d41bb}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Process\+\_\+mouse\+\_\+down\+\_\+event@{Process\+\_\+mouse\+\_\+down\+\_\+event}}
+\index{Process\+\_\+mouse\+\_\+down\+\_\+event@{Process\+\_\+mouse\+\_\+down\+\_\+event}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Process\+\_\+mouse\+\_\+down\+\_\+event()}{Process\_mouse\_down\_event()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Process\+\_\+mouse\+\_\+down\+\_\+event (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Processes a mouse down S\+DL event. 
+
+Processes a mouse down S\+DL event. This function will only be called on desktop systems, N\+OT on any mobile systems.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Event} & $\ast$event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a17413f559bb86a914c39b96c442e2422}\label{classjetfuel_1_1control_1_1UIS__manager_a17413f559bb86a914c39b96c442e2422}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Process\+\_\+mouse\+\_\+up\+\_\+event@{Process\+\_\+mouse\+\_\+up\+\_\+event}}
+\index{Process\+\_\+mouse\+\_\+up\+\_\+event@{Process\+\_\+mouse\+\_\+up\+\_\+event}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Process\+\_\+mouse\+\_\+up\+\_\+event()}{Process\_mouse\_up\_event()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Process\+\_\+mouse\+\_\+up\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Processes a mouse up S\+DL event. 
+
+Processes a mouse up S\+DL event. This function will only be called on desktop systems, N\+OT on any mobile systems. \mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_afb60b0c7ac07dbe3657eb8a203c4bd45}\label{classjetfuel_1_1control_1_1UIS__manager_afb60b0c7ac07dbe3657eb8a203c4bd45}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Push\+\_\+key\+\_\+to\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector@{Push\+\_\+key\+\_\+to\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector}}
+\index{Push\+\_\+key\+\_\+to\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector@{Push\+\_\+key\+\_\+to\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Push\+\_\+key\+\_\+to\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector()}{Push\_key\_to\_past\_keys\_entered\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Push\+\_\+key\+\_\+to\+\_\+past\+\_\+keys\+\_\+entered\+\_\+vector (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1control_1_1UIS__previous__key}{U\+I\+S\+\_\+previous\+\_\+key}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Pushes a key to the past keys entered vector. 
+
+Pushes a key to the past keys entered vector to be examined later when checking if that key has changed it\textquotesingle{}s input state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1control_1_1UIS__previous__key}{U\+I\+S\+\_\+previous\+\_\+key}} & key \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_aa68c473946c11071c3222d63affcfbd4}\label{classjetfuel_1_1control_1_1UIS__manager_aa68c473946c11071c3222d63affcfbd4}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Set\+\_\+file\+\_\+name@{Set\+\_\+file\+\_\+name}}
+\index{Set\+\_\+file\+\_\+name@{Set\+\_\+file\+\_\+name}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Set\+\_\+file\+\_\+name()}{Set\_file\_name()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Set\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the J\+S\+ON controller configuration file name. 
+
+Sets the J\+S\+ON controller configuration file name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filename \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_aa9fc7545ca5bcc229567f86945e981cd}\label{classjetfuel_1_1control_1_1UIS__manager_aa9fc7545ca5bcc229567f86945e981cd}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Set\+\_\+last\+\_\+mouse\+\_\+action@{Set\+\_\+last\+\_\+mouse\+\_\+action}}
+\index{Set\+\_\+last\+\_\+mouse\+\_\+action@{Set\+\_\+last\+\_\+mouse\+\_\+action}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Set\+\_\+last\+\_\+mouse\+\_\+action()}{Set\_last\_mouse\_action()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Set\+\_\+last\+\_\+mouse\+\_\+action (\begin{DoxyParamCaption}\item[{const std\+::string}]{lastmouseaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the last mouse action processed by this Universal Input System manager. 
+
+Sets the last mouse action processed by this Universal Input System manager.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & lastmouseaction \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a5fff180a335246d905531a00bc34fbe8}\label{classjetfuel_1_1control_1_1UIS__manager_a5fff180a335246d905531a00bc34fbe8}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Set\+\_\+past\+\_\+file\+\_\+name@{Set\+\_\+past\+\_\+file\+\_\+name}}
+\index{Set\+\_\+past\+\_\+file\+\_\+name@{Set\+\_\+past\+\_\+file\+\_\+name}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Set\+\_\+past\+\_\+file\+\_\+name()}{Set\_past\_file\_name()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Set\+\_\+past\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string}]{pastfilename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the past file name string variable. 
+
+Sets the past file name string variable for identifying file name changes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & pastfilename \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_aadc46749d1ea102cf957bcc6da98654e}\label{classjetfuel_1_1control_1_1UIS__manager_aadc46749d1ea102cf957bcc6da98654e}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!Set\+\_\+window\+\_\+active@{Set\+\_\+window\+\_\+active}}
+\index{Set\+\_\+window\+\_\+active@{Set\+\_\+window\+\_\+active}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{Set\+\_\+window\+\_\+active()}{Set\_window\_active()}}
+{\footnotesize\ttfamily void jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::\+Set\+\_\+window\+\_\+active (\begin{DoxyParamCaption}\item[{const bool}]{windowactive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the game window active boolean. 
+
+Sets the game window active boolean.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & windowactive \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a83099ccbf9449bf3a3a27d7c7b9b1ff5}\label{classjetfuel_1_1control_1_1UIS__manager_a83099ccbf9449bf3a3a27d7c7b9b1ff5}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}!jsondoc@{jsondoc}}
+\index{jsondoc@{jsondoc}!jetfuel\+::control\+::\+U\+I\+S\+\_\+manager@{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}}
+\subsubsection{\texorpdfstring{jsondoc}{jsondoc}}
+{\footnotesize\ttfamily rapidjson\+::\+Document jetfuel\+::control\+::\+U\+I\+S\+\_\+manager\+::jsondoc\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+member data /// 
+
+rapidjson J\+S\+ON document 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelcontrol/U\+I\+Smanager.\+h\end{DoxyCompactItemize}

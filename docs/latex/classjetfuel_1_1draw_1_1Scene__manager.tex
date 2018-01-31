@@ -1,0 +1,335 @@
+\hypertarget{classjetfuel_1_1draw_1_1Scene__manager}{}\section{jetfuel\+:\+:draw\+:\+:Scene\+\_\+manager Class Reference}
+\label{classjetfuel_1_1draw_1_1Scene__manager}\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+
+
+{\ttfamily \#include $<$scenemanager.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a010b9d9f4b59df95885f6c298d752956}\label{classjetfuel_1_1draw_1_1Scene__manager_a010b9d9f4b59df95885f6c298d752956}} 
+enum {\bfseries Window\+\_\+mode} \{ {\bfseries Windowed}, 
+{\bfseries Windowed\+\_\+fullscreen}, 
+{\bfseries Fullscreen}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_ae2b2c07e8d9a7d2fa34b03f4c117e0c9}{Scene\+\_\+manager} (bool initwindow=true)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} with the option of not initializing S\+DL within the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a7467d1c52f4185a19a9168fdc6bf6e57}{$\sim$\+Scene\+\_\+manager} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\+\_\+window} (const std\+::string windowtitle, const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d\+\_\+int} positiontocreatewindow, const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d\+\_\+int} windowsize, Window\+\_\+mode windowmode=Window\+\_\+mode\+::\+Windowed)
+\begin{DoxyCompactList}\small\item\em Creates a window to draw objects on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_aa0d9dfb72077a16099f3b5cb7cf5d27d}\label{classjetfuel_1_1draw_1_1Scene__manager_aa0d9dfb72077a16099f3b5cb7cf5d27d}} 
+void {\bfseries Set\+\_\+window\+\_\+icon} (\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} icon)
+\item 
+Uint32 $\ast$ \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a1758a86d40dcfaface8958fcd33676bf}{Get\+\_\+window\+\_\+id} () const
+\begin{DoxyCompactList}\small\item\em Gets the current window\textquotesingle{}s id for differentiating this window and other windows. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a57b2faedff201343364002b29cb8e3cb}\label{classjetfuel_1_1draw_1_1Scene__manager_a57b2faedff201343364002b29cb8e3cb}} 
+bool {\bfseries Is\+\_\+window\+\_\+full\+\_\+screen} ()
+\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a3a13d30af1a38eddd47c4959062b3d9b}{Set\+\_\+window} (S\+D\+L\+\_\+\+Window $\ast$windowtouse)
+\begin{DoxyCompactList}\small\item\em Sets a pre-\/constructed window to be used to draw objects on. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\+\_\+renderer} (const bool vsyncenabled=true, const bool usehardwareaccel=true, const int gpuindex=-\/1)
+\begin{DoxyCompactList}\small\item\em Creates a renderer binded to the previously created window for drawing. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_ac74ac2f84b41a181fe1c3814ee9a602f}{Set\+\_\+renderer} (S\+D\+L\+\_\+\+Renderer $\ast$renderertouse)
+\begin{DoxyCompactList}\small\item\em Sets a pre-\/constructed renderer to the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} to be used for drawing. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_af8356086304df2aff630e09f07d57ca7}{Get\+\_\+renderer} ()
+\begin{DoxyCompactList}\small\item\em Gets the currently used renderer from the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} to draw and render objects. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afb917b4617be734b81c66c3618eb16dd}{Set\+\_\+universal\+\_\+background\+\_\+color} (\hyperlink{classjetfuel_1_1draw_1_1Color}{Color} color)
+\begin{DoxyCompactList}\small\item\em Sets the universal background color to be used with all jetfuel\+::draw\+::\+Scenes who don\textquotesingle{}t have their own background color. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Color}{Color} \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a1f8e3144806b276df030ab9db20fa185}{Get\+\_\+universal\+\_\+background\+\_\+color} () const
+\begin{DoxyCompactList}\small\item\em Gets the universal background color. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} $\ast$ \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_aee85c52970c33205355ee0b6086373ba}{Get\+\_\+current\+\_\+scene} ()
+\begin{DoxyCompactList}\small\item\em Gets the current active scene. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\+\_\+current\+\_\+scene} (\hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Switches the current active scene. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\+\_\+current\+\_\+scene} ()
+\begin{DoxyCompactList}\small\item\em Draws the current active scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a1205e2dd88e98603c4fad97bb1febf99}{Set\+\_\+window\+\_\+id} (Uint32 id)
+\begin{DoxyCompactList}\small\item\em Sets the window\textquotesingle{}s id number. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a3c2b083844adc254edfba9278222dac8}{Set\+\_\+current\+\_\+scene} (\hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Sets the current active scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a84ab1b6f378d312f537d2d26ef2c15ab}\label{classjetfuel_1_1draw_1_1Scene__manager_a84ab1b6f378d312f537d2d26ef2c15ab}} 
+void {\bfseries Set\+\_\+window\+\_\+window\+\_\+mode} (jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Window\+\_\+mode windowmode)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Window $\ast$ \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a7613c251e515e82f62b87126a92b33b4}{window}
+\begin{DoxyCompactList}\small\item\em member data /// \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a34a22a19dd956074c9101f25414e3e1c}{renderer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A scene manager to be in used in conjunction with a \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} to draw objects in a Scene-\/oriented fashion.
+
+Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} image = \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}(\char`\"{}test.\+png\char`\"{}); \hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel\+::draw\+::\+Sprite} background;
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}example\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(500,500)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\+\_\+renderer()})\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&background);
+
+if(!background.Load\+\_\+from\+\_\+image(backgroundimage))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ I\+M\+G\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; return 1; \}
+
+background.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_ae2b2c07e8d9a7d2fa34b03f4c117e0c9}\label{classjetfuel_1_1draw_1_1Scene__manager_ae2b2c07e8d9a7d2fa34b03f4c117e0c9}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Scene\+\_\+manager@{Scene\+\_\+manager}}
+\index{Scene\+\_\+manager@{Scene\+\_\+manager}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Scene\+\_\+manager()}{Scene\_manager()}}
+{\footnotesize\ttfamily jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Scene\+\_\+manager (\begin{DoxyParamCaption}\item[{bool}]{initwindow = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} with the option of not initializing S\+DL within the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}. 
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} with the option of not initializing S\+DL within the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}. By default, the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} initializes S\+DL. If you pass in false to initwindow, you must initialize S\+DL yourself if you want to use a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & initwindow \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a7467d1c52f4185a19a9168fdc6bf6e57}\label{classjetfuel_1_1draw_1_1Scene__manager_a7467d1c52f4185a19a9168fdc6bf6e57}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!````~Scene\+\_\+manager@{$\sim$\+Scene\+\_\+manager}}
+\index{````~Scene\+\_\+manager@{$\sim$\+Scene\+\_\+manager}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Scene\+\_\+manager()}{~Scene\_manager()}}
+{\footnotesize\ttfamily virtual jetfuel\+::draw\+::\+Scene\+\_\+manager\+::$\sim$\+Scene\+\_\+manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor. 
+
+Cleans up the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}\textquotesingle{}s resources. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}\label{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Create\+\_\+renderer@{Create\+\_\+renderer}}
+\index{Create\+\_\+renderer@{Create\+\_\+renderer}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Create\+\_\+renderer()}{Create\_renderer()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Create\+\_\+renderer (\begin{DoxyParamCaption}\item[{const bool}]{vsyncenabled = {\ttfamily true},  }\item[{const bool}]{usehardwareaccel = {\ttfamily true},  }\item[{const int}]{gpuindex = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Creates a renderer binded to the previously created window for drawing. 
+
+Creates a renderer (by default using vsync, hardware acceleration, and the first G\+PU for rendering) for drawing \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene}\textquotesingle{}s drawables. If the renderer could not be created, this function will return false. Otherwise, it will return true.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & vsyncenabled \\
+\hline
+{\em bool} & usehardwareaccel \\
+\hline
+{\em int} & gpuindex \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}\label{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Create\+\_\+window@{Create\+\_\+window}}
+\index{Create\+\_\+window@{Create\+\_\+window}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Create\+\_\+window()}{Create\_window()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Create\+\_\+window (\begin{DoxyParamCaption}\item[{const std\+::string}]{windowtitle,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d\+\_\+int}}]{positiontocreatewindow,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d\+\_\+int}}]{windowsize,  }\item[{Window\+\_\+mode}]{windowmode = {\ttfamily Window\+\_\+mode\+:\+:Windowed} }\end{DoxyParamCaption})}
+
+
+
+Creates a window to draw objects on. 
+
+Creates a window to draw objects on. The windowtitle is the title that is shown on the top of the window. The position to create a window specifies where the window should appear on the player\textquotesingle{}s display. The window\textquotesingle{}s size is how big the window should be. This will then return a boolean whether the window was created or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & windowtitle \\
+\hline
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & positiontocreatewindow \\
+\hline
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & windowsize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}\label{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Draw\+\_\+current\+\_\+scene@{Draw\+\_\+current\+\_\+scene}}
+\index{Draw\+\_\+current\+\_\+scene@{Draw\+\_\+current\+\_\+scene}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Draw\+\_\+current\+\_\+scene()}{Draw\_current\_scene()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Draw\+\_\+current\+\_\+scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the current active scene. 
+
+Draws the current active scene. This function also draws the universal background color and the current scene\textquotesingle{}s background color(if any). If there is no current active scene, nothing will be drawn except for the universal background color. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_aee85c52970c33205355ee0b6086373ba}\label{classjetfuel_1_1draw_1_1Scene__manager_aee85c52970c33205355ee0b6086373ba}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Get\+\_\+current\+\_\+scene@{Get\+\_\+current\+\_\+scene}}
+\index{Get\+\_\+current\+\_\+scene@{Get\+\_\+current\+\_\+scene}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Get\+\_\+current\+\_\+scene()}{Get\_current\_scene()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}$\ast$ jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Get\+\_\+current\+\_\+scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current active scene. 
+
+Gets the current active scene in this \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_af8356086304df2aff630e09f07d57ca7}\label{classjetfuel_1_1draw_1_1Scene__manager_af8356086304df2aff630e09f07d57ca7}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Get\+\_\+renderer@{Get\+\_\+renderer}}
+\index{Get\+\_\+renderer@{Get\+\_\+renderer}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Get\+\_\+renderer()}{Get\_renderer()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Get\+\_\+renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the currently used renderer from the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} to draw and render objects. 
+
+Gets the currently used renderer from the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} to draw and render objects. This function is meant to be used inside the \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} object, however it can be called by itself if you want to do S\+DL rendering by yourself. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a1f8e3144806b276df030ab9db20fa185}\label{classjetfuel_1_1draw_1_1Scene__manager_a1f8e3144806b276df030ab9db20fa185}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Get\+\_\+universal\+\_\+background\+\_\+color@{Get\+\_\+universal\+\_\+background\+\_\+color}}
+\index{Get\+\_\+universal\+\_\+background\+\_\+color@{Get\+\_\+universal\+\_\+background\+\_\+color}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Get\+\_\+universal\+\_\+background\+\_\+color()}{Get\_universal\_background\_color()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Get\+\_\+universal\+\_\+background\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the universal background color. 
+
+Gets the universal background color. This color will be black by default if no color was set. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a1758a86d40dcfaface8958fcd33676bf}\label{classjetfuel_1_1draw_1_1Scene__manager_a1758a86d40dcfaface8958fcd33676bf}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Get\+\_\+window\+\_\+id@{Get\+\_\+window\+\_\+id}}
+\index{Get\+\_\+window\+\_\+id@{Get\+\_\+window\+\_\+id}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Get\+\_\+window\+\_\+id()}{Get\_window\_id()}}
+{\footnotesize\ttfamily Uint32$\ast$ jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Get\+\_\+window\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current window\textquotesingle{}s id for differentiating this window and other windows. 
+
+Gets the current window\textquotesingle{}s id for differentiating this window and other windows. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a3c2b083844adc254edfba9278222dac8}\label{classjetfuel_1_1draw_1_1Scene__manager_a3c2b083844adc254edfba9278222dac8}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Set\+\_\+current\+\_\+scene@{Set\+\_\+current\+\_\+scene}}
+\index{Set\+\_\+current\+\_\+scene@{Set\+\_\+current\+\_\+scene}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Set\+\_\+current\+\_\+scene()}{Set\_current\_scene()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Set\+\_\+current\+\_\+scene (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the current active scene. 
+
+Sets the current active scene to be used with drawing objects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene}} & $\ast$scene \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_ac74ac2f84b41a181fe1c3814ee9a602f}\label{classjetfuel_1_1draw_1_1Scene__manager_ac74ac2f84b41a181fe1c3814ee9a602f}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Set\+\_\+renderer@{Set\+\_\+renderer}}
+\index{Set\+\_\+renderer@{Set\+\_\+renderer}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Set\+\_\+renderer()}{Set\_renderer()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Set\+\_\+renderer (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderertouse }\end{DoxyParamCaption})}
+
+
+
+Sets a pre-\/constructed renderer to the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} to be used for drawing. 
+
+Sets a pre-\/constructed renderer to the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} to be used for drawing. This function will return false if the renderer pointer given equates to N\+U\+LL, and will not set the renderer. Otherwise, it will return true and will set the renderer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Renderer} & $\ast$renderertouse \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_afb917b4617be734b81c66c3618eb16dd}\label{classjetfuel_1_1draw_1_1Scene__manager_afb917b4617be734b81c66c3618eb16dd}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Set\+\_\+universal\+\_\+background\+\_\+color@{Set\+\_\+universal\+\_\+background\+\_\+color}}
+\index{Set\+\_\+universal\+\_\+background\+\_\+color@{Set\+\_\+universal\+\_\+background\+\_\+color}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Set\+\_\+universal\+\_\+background\+\_\+color()}{Set\_universal\_background\_color()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Set\+\_\+universal\+\_\+background\+\_\+color (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Color}{Color}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the universal background color to be used with all jetfuel\+::draw\+::\+Scenes who don\textquotesingle{}t have their own background color. 
+
+Sets the universal background color to be used with all jetfuel\+::draw\+::\+Scenes who don\textquotesingle{}t have their own background color. jetfuel\+::draw\+::\+Scenes which do have their own background color override this background color and display their background color.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}} & color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a3a13d30af1a38eddd47c4959062b3d9b}\label{classjetfuel_1_1draw_1_1Scene__manager_a3a13d30af1a38eddd47c4959062b3d9b}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Set\+\_\+window@{Set\+\_\+window}}
+\index{Set\+\_\+window@{Set\+\_\+window}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Set\+\_\+window()}{Set\_window()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Set\+\_\+window (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Window $\ast$}]{windowtouse }\end{DoxyParamCaption})}
+
+
+
+Sets a pre-\/constructed window to be used to draw objects on. 
+
+Sets a pre-\/constructed window to be used to draw objects on. This function will return a boolean of whether the window was set(true), or whether the window pointer equals N\+U\+L\+L(false).
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Window} & $\ast$windowtouse \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a1205e2dd88e98603c4fad97bb1febf99}\label{classjetfuel_1_1draw_1_1Scene__manager_a1205e2dd88e98603c4fad97bb1febf99}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Set\+\_\+window\+\_\+id@{Set\+\_\+window\+\_\+id}}
+\index{Set\+\_\+window\+\_\+id@{Set\+\_\+window\+\_\+id}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Set\+\_\+window\+\_\+id()}{Set\_window\_id()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Set\+\_\+window\+\_\+id (\begin{DoxyParamCaption}\item[{Uint32}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the window\textquotesingle{}s id number. 
+
+Sets the window\textquotesingle{}s id number for differentiating this window and other windows.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Uint32} & id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}\label{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!Switch\+\_\+current\+\_\+scene@{Switch\+\_\+current\+\_\+scene}}
+\index{Switch\+\_\+current\+\_\+scene@{Switch\+\_\+current\+\_\+scene}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{Switch\+\_\+current\+\_\+scene()}{Switch\_current\_scene()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Switch\+\_\+current\+\_\+scene (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} $\ast$}]{scene }\end{DoxyParamCaption})}
+
+
+
+Switches the current active scene. 
+
+Switches the current active \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. This allows the \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} to attach Drawables, render, and draw stuff to the window.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene}} & $\ast$scene \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a34a22a19dd956074c9101f25414e3e1c}\label{classjetfuel_1_1draw_1_1Scene__manager_a34a22a19dd956074c9101f25414e3e1c}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!renderer@{renderer}}
+\index{renderer@{renderer}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{renderer}{renderer}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ jetfuel\+::draw\+::\+Scene\+\_\+manager\+::renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+Current renderer for rendering objects \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene__manager_a7613c251e515e82f62b87126a92b33b4}\label{classjetfuel_1_1draw_1_1Scene__manager_a7613c251e515e82f62b87126a92b33b4}} 
+\index{jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}!window@{window}}
+\index{window@{window}!jetfuel\+::draw\+::\+Scene\+\_\+manager@{jetfuel\+::draw\+::\+Scene\+\_\+manager}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Window$\ast$ jetfuel\+::draw\+::\+Scene\+\_\+manager\+::window\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+member data /// 
+
+Current window for renderer 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfueldraw/scenemanager.\+h\end{DoxyCompactItemize}

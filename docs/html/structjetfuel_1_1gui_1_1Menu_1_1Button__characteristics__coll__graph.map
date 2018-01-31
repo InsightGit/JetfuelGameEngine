@@ -1,0 +1,8 @@
+<map id="jetfuel::gui::Menu::Button_characteristics" name="jetfuel::gui::Menu::Button_characteristics">
+<area shape="rect" id="node2" href="$classjetfuel_1_1draw_1_1Image.html" title="jetfuel::draw::Image" alt="" coords="467,72,604,99"/>
+<area shape="rect" id="node3" href="$classjetfuel_1_1draw_1_1Color.html" title="jetfuel::draw::Color" alt="" coords="181,147,313,173"/>
+<area shape="rect" id="node4" href="$structjetfuel_1_1draw_1_1Text_1_1Text__characteristics.html" title="jetfuel::draw::Text\l::Text_characteristics" alt="" coords="461,199,609,241"/>
+<area shape="rect" id="node5" href="$classjetfuel_1_1draw_1_1Font.html" title="jetfuel::draw::Font" alt="" coords="184,219,311,245"/>
+<area shape="rect" id="node6" title="STL class. " alt="" coords="207,269,287,296"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="5,262,132,303"/>
+</map>

@@ -1,0 +1,128 @@
+\hypertarget{classjetfuel_1_1inspire_1_1Python__class__loader}{}\section{jetfuel\+:\+:inspire\+:\+:Python\+\_\+class\+\_\+loader Class Reference}
+\label{classjetfuel_1_1inspire_1_1Python__class__loader}\index{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader}}
+
+
+{\ttfamily \#include $<$pythonclassloader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1inspire_1_1Python__class__loader_ae8e3d2e3e2b95a5463f5735f2c0f6be2}{Python\+\_\+class\+\_\+loader} (Py\+Object $\ast$constructorargs, std\+::string $\ast$filename, std\+::string $\ast$classname, bool $\ast$executed, std\+::string $\ast$error, std\+::string $\ast$directoryoffilename)
+\begin{DoxyCompactList}\small\item\em Constructs a simple Python class by constructing a Python object given to this function(without using the \hyperlink{structjetfuel_1_1inspire_1_1Python__class}{Python\+\_\+class} struct. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1inspire_1_1Python__class__loader_a5c52b32bf4e0d5692a20dc652d872da8}{Python\+\_\+class\+\_\+loader} (\hyperlink{structjetfuel_1_1inspire_1_1Python__class}{Python\+\_\+class} \hyperlink{classjetfuel_1_1inspire_1_1Python__class__loader_adbcf46681199db320a6b09aec18a2ca8}{pythonclass}, bool $\ast$executed, std\+::string $\ast$error)
+\begin{DoxyCompactList}\small\item\em Constructs a simple Python class by constructing a Python object given to this function(using the \hyperlink{structjetfuel_1_1inspire_1_1Python__class}{Python\+\_\+class} struct). \end{DoxyCompactList}\item 
+virtual \hyperlink{classjetfuel_1_1inspire_1_1Python__class__loader_af211621190c98b14234cd23f7f34aeb9}{$\sim$\+Python\+\_\+class\+\_\+loader} ()
+\begin{DoxyCompactList}\small\item\em Virtual Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Py\+Object $\ast$ \hyperlink{classjetfuel_1_1inspire_1_1Python__class__loader_adbcf46681199db320a6b09aec18a2ca8}{pythonclass}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Python class loader that allows you to mainuplate Python class from C++.
+
+Code Example\+:
+
+Python(classexample.\+py)\+:
+
+class classexample\+: def {\bfseries init}(self) \+: print(\char`\"{}classexample inited!\char`\"{}); def sayhello(self, name) \+: print(\char`\"{}\+Hello\char`\"{} + name);
+
+C++\+: bool executedstatus; std\+::string fileandclassname = \char`\"{}classexample\char`\"{}; std\+::string directory = \char`\"{}./\+Scripts\char`\"{};
+
+\begin{DoxyVerb}jetfuel::inspire::Python_class_loader classloader(nullptr, 
+                        &fileandclassname,&fileandclassname,
+                        &executedstatus, &error, &directory);
+
+if(!executedstatus){
+    std::cout << "Python Interpreter ERROR! Error is:" << error
+    << std::endl;
+}
+
+jetfuel::inspire::Python_module_loader classfunction(
+                        &classloader,std::string("sayhello"));
+executedstatus = bool();
+
+bool returnvalue = classfunctiontester.Execute_bool(
+                                    &executedstatus, &error, 
+                PyTuple_Pack(1, PyUnicode_FromString("G'day")));
+if (!executedstatus) {
+    std::cout << "Python Interpreter ERROR! Error is:" << 
+    error << std::endl;
+}  \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__class__loader_ae8e3d2e3e2b95a5463f5735f2c0f6be2}\label{classjetfuel_1_1inspire_1_1Python__class__loader_ae8e3d2e3e2b95a5463f5735f2c0f6be2}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader}!Python\+\_\+class\+\_\+loader@{Python\+\_\+class\+\_\+loader}}
+\index{Python\+\_\+class\+\_\+loader@{Python\+\_\+class\+\_\+loader}!jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader}}
+\subsubsection{\texorpdfstring{Python\+\_\+class\+\_\+loader()}{Python\_class\_loader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader\+::\+Python\+\_\+class\+\_\+loader (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{constructorargs,  }\item[{std\+::string $\ast$}]{filename,  }\item[{std\+::string $\ast$}]{classname,  }\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error,  }\item[{std\+::string $\ast$}]{directoryoffilename }\end{DoxyParamCaption})}
+
+
+
+Constructs a simple Python class by constructing a Python object given to this function(without using the \hyperlink{structjetfuel_1_1inspire_1_1Python__class}{Python\+\_\+class} struct. 
+
+Constructs a simple Python class by constructing a Python object given to this function(without using the \hyperlink{structjetfuel_1_1inspire_1_1Python__class}{Python\+\_\+class} struct).
+
+
+\begin{DoxyParams}{Parameters}
+{\em Py\+Object} & $\ast$constructorargs \\
+\hline
+{\em std\+::string} & $\ast$filename \\
+\hline
+{\em std\+::string} & $\ast$classname \\
+\hline
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+{\em std\+::string} & $\ast$directoryoffilename \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__class__loader_a5c52b32bf4e0d5692a20dc652d872da8}\label{classjetfuel_1_1inspire_1_1Python__class__loader_a5c52b32bf4e0d5692a20dc652d872da8}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader}!Python\+\_\+class\+\_\+loader@{Python\+\_\+class\+\_\+loader}}
+\index{Python\+\_\+class\+\_\+loader@{Python\+\_\+class\+\_\+loader}!jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader}}
+\subsubsection{\texorpdfstring{Python\+\_\+class\+\_\+loader()}{Python\_class\_loader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader\+::\+Python\+\_\+class\+\_\+loader (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1inspire_1_1Python__class}{Python\+\_\+class}}]{pythonclass,  }\item[{bool $\ast$}]{executed,  }\item[{std\+::string $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Constructs a simple Python class by constructing a Python object given to this function(using the \hyperlink{structjetfuel_1_1inspire_1_1Python__class}{Python\+\_\+class} struct). 
+
+Constructs a simple Python class by constructing a Python object given to this function(using \hyperlink{structjetfuel_1_1inspire_1_1Python__class}{Python\+\_\+class} struct).
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1inspire_1_1Python__class}{Python\+\_\+class}} & pythonclass \\
+\hline
+{\em bool} & $\ast$executed \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__class__loader_af211621190c98b14234cd23f7f34aeb9}\label{classjetfuel_1_1inspire_1_1Python__class__loader_af211621190c98b14234cd23f7f34aeb9}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader}!````~Python\+\_\+class\+\_\+loader@{$\sim$\+Python\+\_\+class\+\_\+loader}}
+\index{````~Python\+\_\+class\+\_\+loader@{$\sim$\+Python\+\_\+class\+\_\+loader}!jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader}}
+\subsubsection{\texorpdfstring{$\sim$\+Python\+\_\+class\+\_\+loader()}{~Python\_class\_loader()}}
+{\footnotesize\ttfamily virtual jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader\+::$\sim$\+Python\+\_\+class\+\_\+loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual Destructor. 
+
+Destroys this \hyperlink{classjetfuel_1_1inspire_1_1Python__class__loader}{Python\+\_\+class\+\_\+loader} object. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Python__class__loader_adbcf46681199db320a6b09aec18a2ca8}\label{classjetfuel_1_1inspire_1_1Python__class__loader_adbcf46681199db320a6b09aec18a2ca8}} 
+\index{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader}!pythonclass@{pythonclass}}
+\index{pythonclass@{pythonclass}!jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader@{jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader}}
+\subsubsection{\texorpdfstring{pythonclass}{pythonclass}}
+{\footnotesize\ttfamily Py\+Object$\ast$ jetfuel\+::inspire\+::\+Python\+\_\+class\+\_\+loader\+::pythonclass}
+
+The object representing the Python class. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelinspire/pythonclassloader.\+h\end{DoxyCompactItemize}

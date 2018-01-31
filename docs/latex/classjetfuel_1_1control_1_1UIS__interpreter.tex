@@ -1,0 +1,152 @@
+\hypertarget{classjetfuel_1_1control_1_1UIS__interpreter}{}\section{jetfuel\+:\+:control\+:\+:U\+I\+S\+\_\+interpreter Class Reference}
+\label{classjetfuel_1_1control_1_1UIS__interpreter}\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter@{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter}}
+
+
+{\ttfamily \#include $<$U\+I\+Sinterpreter.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1control_1_1UIS__interpreter_acd4a4c57e4f2413d68d494f8786fea64}{U\+I\+S\+\_\+interpreter} (\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} $\ast$bus)
+\begin{DoxyCompactList}\small\item\em Constructs an Universal Input System interpreter with a Message\+\_\+bus pointer. \end{DoxyCompactList}\item 
+\hyperlink{structjetfuel_1_1control_1_1Action}{Action} \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter_ab298d59fded69955c059fb33e4ddb3ee}{Interpret} ()
+\begin{DoxyCompactList}\small\item\em Interprets Universal Input System manager messages from the assigned message bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter_a78d705a1fa28b4ee0ff168f70707f1ee}{Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist} (std\+::string $\ast$firstmessage)
+\begin{DoxyCompactList}\small\item\em Checks whether a message exists in the assigned message bus. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter_ac385462d25e7be509fad46874dcb40e0}{Get\+\_\+next\+\_\+message} ()
+\begin{DoxyCompactList}\small\item\em Gets the next message in the assigned message bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An interpreter for the messages produced by the Universal Input System manager, or \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}. When used in tandem with the Universal Input System (or U\+IS) manager, it allows your players to modify the bindings for certain in-\/game actions via a simple J\+S\+ON file, makes implementing a control binding option in-\/game easier, and allows your program to perform the same action regardless if the player is playing with a Keyboard \& Mouse, a controller, or even a touch-\/screen.
+
+Code example\+: \begin{DoxyVerb}C++ Code File:
+       jetfuel::core::Message_bus messagebus;
+       jetfuel::draw::Scene_manager scenemanager;
+       jetfuel::draw::Scene scene1(1);
+       jetfuel::control::UIS_manager UISmanager(&messagebus,
+                                             scenemanager.
+                                             Get_window_id());
+       jetfuel::control::UIS_interpreter UISinterpreter(&messagebus
+                                                              );
+
+       if(!scenemanager.Create_window(windowlabel,
+                                      windowposition,
+                                      windowsize)){
+            std::cerr << "[!]ERROR with creating sdl window!"
+            << "Error is:" << SDL_GetError() << "\n";
+            // Quit the application
+       }
+
+       if(!scenemanager.Create_renderer()){
+            std::cerr << "[!]ERROR with creating sdl renderer!"
+            << "Error is:" << SDL_GetError() << "\n";
+            // Quit the application
+       }
+
+       UISmanager.Open_controller_config_file("UISConfig.json");
+
+       while(true){
+           jetfuel::control::Action UISactions =
+           UISinterpreter.Interpret();
+           if(UISactions.action != "Nothing to interpret."
+              ){
+                   if(UISactions.action == "Say_hello"){
+                       if(UISactions.inputstate ==
+                         UISactions.Down){
+                          std::cout << "Why hello there!\n";
+                       }else if(UISactions.inputstate ==
+                                UISactions.Up){
+                           std::cout
+                           << "Why goodbye there!\n";
+                       }
+                   }
+               }
+       }
+       for(int i = 0; messagebus.Get_SDL_events_size() > i; ++i){
+           SDL_Event event = messagebus.Get_SDL_event(i);
+           if(event.type = SDL_QUIT){
+               // Quit the application
+           }else{
+               UISmanager.Process_input_event(&event);
+           }
+       }
+
+JSON file(UISConfig.json):
+    {
+        "keyidnumber": 1,
+        "Keys": [
+          {
+            "key": "A",
+            "action": "Say_hello"
+          }
+        ]
+    }  \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__interpreter_acd4a4c57e4f2413d68d494f8786fea64}\label{classjetfuel_1_1control_1_1UIS__interpreter_acd4a4c57e4f2413d68d494f8786fea64}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter@{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter}!U\+I\+S\+\_\+interpreter@{U\+I\+S\+\_\+interpreter}}
+\index{U\+I\+S\+\_\+interpreter@{U\+I\+S\+\_\+interpreter}!jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter@{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter}}
+\subsubsection{\texorpdfstring{U\+I\+S\+\_\+interpreter()}{UIS\_interpreter()}}
+{\footnotesize\ttfamily jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter\+::\+U\+I\+S\+\_\+interpreter (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} $\ast$}]{bus }\end{DoxyParamCaption})}
+
+
+
+Constructs an Universal Input System interpreter with a Message\+\_\+bus pointer. 
+
+Constructs an Universal Input System interpreter with a Message\+\_\+bus pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus}} & $\ast$bus \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__interpreter_a78d705a1fa28b4ee0ff168f70707f1ee}\label{classjetfuel_1_1control_1_1UIS__interpreter_a78d705a1fa28b4ee0ff168f70707f1ee}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter@{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter}!Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist@{Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist}}
+\index{Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist@{Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist}!jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter@{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter}}
+\subsubsection{\texorpdfstring{Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist()}{Does\_a\_UIS\_message\_exist()}}
+{\footnotesize\ttfamily bool jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter\+::\+Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{firstmessage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks whether a message exists in the assigned message bus. 
+
+Checks whether a message exists in the assigned message bus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__interpreter_ac385462d25e7be509fad46874dcb40e0}\label{classjetfuel_1_1control_1_1UIS__interpreter_ac385462d25e7be509fad46874dcb40e0}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter@{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter}!Get\+\_\+next\+\_\+message@{Get\+\_\+next\+\_\+message}}
+\index{Get\+\_\+next\+\_\+message@{Get\+\_\+next\+\_\+message}!jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter@{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter}}
+\subsubsection{\texorpdfstring{Get\+\_\+next\+\_\+message()}{Get\_next\_message()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter\+::\+Get\+\_\+next\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the next message in the assigned message bus. 
+
+Gets the next message in the assigned message bus. \mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__interpreter_ab298d59fded69955c059fb33e4ddb3ee}\label{classjetfuel_1_1control_1_1UIS__interpreter_ab298d59fded69955c059fb33e4ddb3ee}} 
+\index{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter@{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter}!Interpret@{Interpret}}
+\index{Interpret@{Interpret}!jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter@{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter}}
+\subsubsection{\texorpdfstring{Interpret()}{Interpret()}}
+{\footnotesize\ttfamily \hyperlink{structjetfuel_1_1control_1_1Action}{Action} jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter\+::\+Interpret (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Interprets Universal Input System manager messages from the assigned message bus. 
+
+Interprets Universal Input System manager messages from the assigned message bus and returns the first interpreted action. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelcontrol/U\+I\+Sinterpreter.\+h\end{DoxyCompactItemize}

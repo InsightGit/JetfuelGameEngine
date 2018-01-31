@@ -1,0 +1,221 @@
+\hypertarget{classjetfuel_1_1media_1_1Music}{}\section{jetfuel\+:\+:media\+:\+:Music Class Reference}
+\label{classjetfuel_1_1media_1_1Music}\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+
+
+{\ttfamily \#include $<$music.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:media\+:\+:Music\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classjetfuel_1_1media_1_1Music__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jetfuel\+:\+:media\+:\+:Music\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classjetfuel_1_1media_1_1Music__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1media_1_1Music_aa3adce621c89ea9915bd6d13648ac5de}{Music} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1media_1_1Music_ad19f7983782f39f70e354796c2ba0bd1}{Is\+\_\+music\+\_\+playing} ()
+\begin{DoxyCompactList}\small\item\em Returns whether A\+NY music is playing, does not have to be this \hyperlink{classjetfuel_1_1media_1_1Music}{Music} object playing. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1media_1_1Music_a7ed42b22f467dbcdd8d09da9cff5b034}{Is\+\_\+music\+\_\+paused} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this music is paused. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1media_1_1Music_a157b382df9640e2df504de9ed1beb031}{Get\+\_\+loaded\+\_\+music\+\_\+file\+\_\+path} () const
+\begin{DoxyCompactList}\small\item\em Gets the loaded music\textquotesingle{}s file path. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1media_1_1Music_ae24079b0301f5cf845d094e32ed22da1}{Load\+\_\+audio\+\_\+file} (const std\+::string musicfilepath) override
+\begin{DoxyCompactList}\small\item\em Loads an audio music file. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1media_1_1Music_afe9abee662a68ea9391e94e37c79945e}{Play} () override
+\begin{DoxyCompactList}\small\item\em Plays the music from the loaded audio file and returns if it succeeded starting playback. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Music_a002f31a60671c229bd054539caf537c5}{Pause} () override
+\begin{DoxyCompactList}\small\item\em Pauses the music playback. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Music_a0c8e12634e29cfe37138349776b6d9a8}{Resume} () override
+\begin{DoxyCompactList}\small\item\em Resumes the music playback after it was paused. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classjetfuel_1_1media_1_1Music_ac665232356b8b316790e46a3423c158a}{Is\+\_\+music\+\_\+loaded} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1media_1_1Music}{Music}\textquotesingle{}s audio file is loaded. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1media_1_1Music_a298ce99e6d22e199d1642c21fd18a672}{Play\+\_\+music} ()
+\begin{DoxyCompactList}\small\item\em Plays this \hyperlink{classjetfuel_1_1media_1_1Music}{Music}\textquotesingle{}s audio file. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Music_a16f346ddd22ce93c347f53f2f930d3fe}{Pause\+\_\+music} ()
+\begin{DoxyCompactList}\small\item\em Pauses the music. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Music_a390925626dcd2531d1b287f0bfb401fd}{Resume\+\_\+music} ()
+\begin{DoxyCompactList}\small\item\em Resumes the music. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A sound playback class for long audio files (example\+: B\+GM), which supports W\+AV(.wav), A\+I\+FF(.aiff), V\+OC(.voc), M\+OD(.mod, .xm, .s3m, and more), M\+I\+DI(.mid), Ogg\+Vorbis(.ogg), M\+P3(.mp3), and F\+L\+AC(.flac).
+
+Code Example\+:
+
+\hyperlink{classjetfuel_1_1media_1_1Music}{jetfuel\+::media\+::\+Music} music;
+
+if(music.\+load\+\_\+audio\+\_\+file(\char`\"{}\+B\+G\+M.\+ogg\char`\"{}))\{ std\+::cout $<$$<$ \char`\"{}\+Unable to load B\+G\+M.\+ogg Error\+:\char`\"{} $<$$<$ Mix\+\_\+\+Get\+Error() $<$$<$ std\+:endl; return 1; \}
+
+music.\+Play(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_aa3adce621c89ea9915bd6d13648ac5de}\label{classjetfuel_1_1media_1_1Music_aa3adce621c89ea9915bd6d13648ac5de}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Music@{Music}}
+\index{Music@{Music}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Music()}{Music()}}
+{\footnotesize\ttfamily jetfuel\+::media\+::\+Music\+::\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Default constructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_a157b382df9640e2df504de9ed1beb031}\label{classjetfuel_1_1media_1_1Music_a157b382df9640e2df504de9ed1beb031}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Get\+\_\+loaded\+\_\+music\+\_\+file\+\_\+path@{Get\+\_\+loaded\+\_\+music\+\_\+file\+\_\+path}}
+\index{Get\+\_\+loaded\+\_\+music\+\_\+file\+\_\+path@{Get\+\_\+loaded\+\_\+music\+\_\+file\+\_\+path}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Get\+\_\+loaded\+\_\+music\+\_\+file\+\_\+path()}{Get\_loaded\_music\_file\_path()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::media\+::\+Music\+::\+Get\+\_\+loaded\+\_\+music\+\_\+file\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the loaded music\textquotesingle{}s file path. 
+
+Gets the loaded music\textquotesingle{}s file path. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_ac665232356b8b316790e46a3423c158a}\label{classjetfuel_1_1media_1_1Music_ac665232356b8b316790e46a3423c158a}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Is\+\_\+music\+\_\+loaded@{Is\+\_\+music\+\_\+loaded}}
+\index{Is\+\_\+music\+\_\+loaded@{Is\+\_\+music\+\_\+loaded}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Is\+\_\+music\+\_\+loaded()}{Is\_music\_loaded()}}
+{\footnotesize\ttfamily bool jetfuel\+::media\+::\+Music\+::\+Is\+\_\+music\+\_\+loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1media_1_1Music}{Music}\textquotesingle{}s audio file is loaded. 
+
+Returns whether this \hyperlink{classjetfuel_1_1media_1_1Music}{Music}\textquotesingle{}s audio file is loaded. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_a7ed42b22f467dbcdd8d09da9cff5b034}\label{classjetfuel_1_1media_1_1Music_a7ed42b22f467dbcdd8d09da9cff5b034}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Is\+\_\+music\+\_\+paused@{Is\+\_\+music\+\_\+paused}}
+\index{Is\+\_\+music\+\_\+paused@{Is\+\_\+music\+\_\+paused}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Is\+\_\+music\+\_\+paused()}{Is\_music\_paused()}}
+{\footnotesize\ttfamily bool jetfuel\+::media\+::\+Music\+::\+Is\+\_\+music\+\_\+paused (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this music is paused. 
+
+Returns whether this music is paused. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_ad19f7983782f39f70e354796c2ba0bd1}\label{classjetfuel_1_1media_1_1Music_ad19f7983782f39f70e354796c2ba0bd1}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Is\+\_\+music\+\_\+playing@{Is\+\_\+music\+\_\+playing}}
+\index{Is\+\_\+music\+\_\+playing@{Is\+\_\+music\+\_\+playing}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Is\+\_\+music\+\_\+playing()}{Is\_music\_playing()}}
+{\footnotesize\ttfamily bool jetfuel\+::media\+::\+Music\+::\+Is\+\_\+music\+\_\+playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether A\+NY music is playing, does not have to be this \hyperlink{classjetfuel_1_1media_1_1Music}{Music} object playing. 
+
+Returns whether A\+NY music is playing, does not have to be this \hyperlink{classjetfuel_1_1media_1_1Music}{Music} object playing. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_ae24079b0301f5cf845d094e32ed22da1}\label{classjetfuel_1_1media_1_1Music_ae24079b0301f5cf845d094e32ed22da1}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Load\+\_\+audio\+\_\+file@{Load\+\_\+audio\+\_\+file}}
+\index{Load\+\_\+audio\+\_\+file@{Load\+\_\+audio\+\_\+file}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Load\+\_\+audio\+\_\+file()}{Load\_audio\_file()}}
+{\footnotesize\ttfamily bool jetfuel\+::media\+::\+Music\+::\+Load\+\_\+audio\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string}]{musicfilepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Loads an audio music file. 
+
+Loads an audio music file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & musicfilepath \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classjetfuel_1_1media_1_1Sound_ab18ff9b8dd2001fa11b17649a6a3defb}{jetfuel\+::media\+::\+Sound}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_a002f31a60671c229bd054539caf537c5}\label{classjetfuel_1_1media_1_1Music_a002f31a60671c229bd054539caf537c5}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Pause@{Pause}}
+\index{Pause@{Pause}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Music\+::\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pauses the music playback. 
+
+Pauses the music playback. 
+
+Implements \hyperlink{classjetfuel_1_1media_1_1Sound_adb9cd45e23e6224760051e579aeefa7f}{jetfuel\+::media\+::\+Sound}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_a16f346ddd22ce93c347f53f2f930d3fe}\label{classjetfuel_1_1media_1_1Music_a16f346ddd22ce93c347f53f2f930d3fe}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Pause\+\_\+music@{Pause\+\_\+music}}
+\index{Pause\+\_\+music@{Pause\+\_\+music}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Pause\+\_\+music()}{Pause\_music()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Music\+::\+Pause\+\_\+music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Pauses the music. 
+
+Pauses the music. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_afe9abee662a68ea9391e94e37c79945e}\label{classjetfuel_1_1media_1_1Music_afe9abee662a68ea9391e94e37c79945e}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Play@{Play}}
+\index{Play@{Play}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily bool jetfuel\+::media\+::\+Music\+::\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Plays the music from the loaded audio file and returns if it succeeded starting playback. 
+
+Plays the music from the loaded audio file and returns if it succeeded starting playback. 
+
+Implements \hyperlink{classjetfuel_1_1media_1_1Sound_a8861a6671ce039522179d61085f240c8}{jetfuel\+::media\+::\+Sound}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_a298ce99e6d22e199d1642c21fd18a672}\label{classjetfuel_1_1media_1_1Music_a298ce99e6d22e199d1642c21fd18a672}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Play\+\_\+music@{Play\+\_\+music}}
+\index{Play\+\_\+music@{Play\+\_\+music}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Play\+\_\+music()}{Play\_music()}}
+{\footnotesize\ttfamily bool jetfuel\+::media\+::\+Music\+::\+Play\+\_\+music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Plays this \hyperlink{classjetfuel_1_1media_1_1Music}{Music}\textquotesingle{}s audio file. 
+
+Plays this \hyperlink{classjetfuel_1_1media_1_1Music}{Music}\textquotesingle{}s audio file. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_a0c8e12634e29cfe37138349776b6d9a8}\label{classjetfuel_1_1media_1_1Music_a0c8e12634e29cfe37138349776b6d9a8}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Resume@{Resume}}
+\index{Resume@{Resume}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Resume()}{Resume()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Music\+::\+Resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resumes the music playback after it was paused. 
+
+Resumes the music playback after it was paused. 
+
+Implements \hyperlink{classjetfuel_1_1media_1_1Sound_af781fccd8ebb1305e97dc8f6b7c828dc}{jetfuel\+::media\+::\+Sound}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_a390925626dcd2531d1b287f0bfb401fd}\label{classjetfuel_1_1media_1_1Music_a390925626dcd2531d1b287f0bfb401fd}} 
+\index{jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}!Resume\+\_\+music@{Resume\+\_\+music}}
+\index{Resume\+\_\+music@{Resume\+\_\+music}!jetfuel\+::media\+::\+Music@{jetfuel\+::media\+::\+Music}}
+\subsubsection{\texorpdfstring{Resume\+\_\+music()}{Resume\_music()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Music\+::\+Resume\+\_\+music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Resumes the music. 
+
+Resumes the music. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelmedia/music.\+h\end{DoxyCompactItemize}

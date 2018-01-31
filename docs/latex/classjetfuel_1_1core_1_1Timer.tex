@@ -1,0 +1,106 @@
+\hypertarget{classjetfuel_1_1core_1_1Timer}{}\section{jetfuel\+:\+:core\+:\+:Timer Class Reference}
+\label{classjetfuel_1_1core_1_1Timer}\index{jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1core_1_1Timer_ac27fee7c9a0acbdbe7650b087ec26a7b}{Timer} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1core_1_1Timer_ad856b1bc0f24893dafd8c608831adcf9}{Timer} (double duration, bool starttimer=false)
+\begin{DoxyCompactList}\small\item\em Constructs a timer with a duration and optionally starts that timer. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1core_1_1Timer_ae2ab6506258494eb67eed42b04931cde}{Set\+\_\+duration} (double duration)
+\begin{DoxyCompactList}\small\item\em Sets the duration of the timer if it is not in use. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1core_1_1Timer_a4f41614b70ab87a40ecd5ce55f2fc224}{Start} ()
+\begin{DoxyCompactList}\small\item\em Starts the timer if it is not already in use or has no duration set. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1core_1_1Timer_a8d6efef6a9e6aae8156fd1f8dce5f403}{Has\+\_\+timer\+\_\+finished} ()
+\begin{DoxyCompactList}\small\item\em Checks if the timer has finished. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1core_1_1Timer_a6442806833e30cc94d6c17dd91243c57}{Has\+\_\+timer\+\_\+been\+\_\+started} ()
+\begin{DoxyCompactList}\small\item\em Checks if the timer has been started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Timer_ac27fee7c9a0acbdbe7650b087ec26a7b}\label{classjetfuel_1_1core_1_1Timer_ac27fee7c9a0acbdbe7650b087ec26a7b}} 
+\index{jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}}
+\subsubsection{\texorpdfstring{Timer()}{Timer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily jetfuel\+::core\+::\+Timer\+::\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Initializes a timer with a duration that will be set later. \mbox{\Hypertarget{classjetfuel_1_1core_1_1Timer_ad856b1bc0f24893dafd8c608831adcf9}\label{classjetfuel_1_1core_1_1Timer_ad856b1bc0f24893dafd8c608831adcf9}} 
+\index{jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}}
+\subsubsection{\texorpdfstring{Timer()}{Timer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily jetfuel\+::core\+::\+Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{double}]{duration,  }\item[{bool}]{starttimer = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a timer with a duration and optionally starts that timer. 
+
+Constructs a timer with a duration that can be changed later before/after it is in use and optionally starts the timer if starttimer is set to true.
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & duration \\
+\hline
+{\em bool} & starttimer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Timer_a6442806833e30cc94d6c17dd91243c57}\label{classjetfuel_1_1core_1_1Timer_a6442806833e30cc94d6c17dd91243c57}} 
+\index{jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}!Has\+\_\+timer\+\_\+been\+\_\+started@{Has\+\_\+timer\+\_\+been\+\_\+started}}
+\index{Has\+\_\+timer\+\_\+been\+\_\+started@{Has\+\_\+timer\+\_\+been\+\_\+started}!jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}}
+\subsubsection{\texorpdfstring{Has\+\_\+timer\+\_\+been\+\_\+started()}{Has\_timer\_been\_started()}}
+{\footnotesize\ttfamily bool jetfuel\+::core\+::\+Timer\+::\+Has\+\_\+timer\+\_\+been\+\_\+started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the timer has been started. 
+
+Checks if the timer has been started. This function will return a boolean of true if the timer has been started (N\+OT F\+I\+N\+I\+S\+H\+ED) and false otherwise. \mbox{\Hypertarget{classjetfuel_1_1core_1_1Timer_a8d6efef6a9e6aae8156fd1f8dce5f403}\label{classjetfuel_1_1core_1_1Timer_a8d6efef6a9e6aae8156fd1f8dce5f403}} 
+\index{jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}!Has\+\_\+timer\+\_\+finished@{Has\+\_\+timer\+\_\+finished}}
+\index{Has\+\_\+timer\+\_\+finished@{Has\+\_\+timer\+\_\+finished}!jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}}
+\subsubsection{\texorpdfstring{Has\+\_\+timer\+\_\+finished()}{Has\_timer\_finished()}}
+{\footnotesize\ttfamily bool jetfuel\+::core\+::\+Timer\+::\+Has\+\_\+timer\+\_\+finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the timer has finished. 
+
+Checks if the timer has finished. If the timer has finished, the function will mark the timer as no longer in use to be reused. This function will return a boolean of true if the timer was in use and has finished, and a boolean of false otherwise. \mbox{\Hypertarget{classjetfuel_1_1core_1_1Timer_ae2ab6506258494eb67eed42b04931cde}\label{classjetfuel_1_1core_1_1Timer_ae2ab6506258494eb67eed42b04931cde}} 
+\index{jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}!Set\+\_\+duration@{Set\+\_\+duration}}
+\index{Set\+\_\+duration@{Set\+\_\+duration}!jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}}
+\subsubsection{\texorpdfstring{Set\+\_\+duration()}{Set\_duration()}}
+{\footnotesize\ttfamily bool jetfuel\+::core\+::\+Timer\+::\+Set\+\_\+duration (\begin{DoxyParamCaption}\item[{double}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the duration of the timer if it is not in use. 
+
+Sets the duration of the timer if it is not in use. If it is in use, the function will not set the duration and return a boolean of false. Otherwise, this function will set the duration of and return a boolean of true.
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & duration \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Timer_a4f41614b70ab87a40ecd5ce55f2fc224}\label{classjetfuel_1_1core_1_1Timer_a4f41614b70ab87a40ecd5ce55f2fc224}} 
+\index{jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}!Start@{Start}}
+\index{Start@{Start}!jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily bool jetfuel\+::core\+::\+Timer\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts the timer if it is not already in use or has no duration set. 
+
+Starts the timer and marks the timer as in use if it not already in use or it has no duration set. If it is in use or has no duration, then it will not start the timer and will return a boolean of false.
+
+Otherwise, it will start the timer, returning a boolean of true. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelcore/timer.\+h\end{DoxyCompactItemize}

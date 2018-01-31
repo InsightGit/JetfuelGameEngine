@@ -1,0 +1,217 @@
+\hypertarget{classjetfuel_1_1locale_1_1String__locale__file}{}\section{jetfuel\+:\+:locale\+:\+:String\+\_\+locale\+\_\+file Class Reference}
+\label{classjetfuel_1_1locale_1_1String__locale__file}\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+
+
+{\ttfamily \#include $<$stringlocalefile.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a98b4ccb05ae738101ec1c4af582aa0d8}{String\+\_\+locale\+\_\+file} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a904609e7cde4eb624cb940cbba642ea0}{Load\+\_\+string\+\_\+locale\+\_\+file} (const std\+::string filename, const std\+::string localename, std\+::string $\ast$error)
+\begin{DoxyCompactList}\small\item\em Loads a string locale file, with a boolean telling whether the loading has succeeded. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a7d689db0ff9e9883ee8a5714311742bf}{Load\+\_\+string\+\_\+locale\+\_\+file} (const std\+::string filename, const std\+::string localename)
+\begin{DoxyCompactList}\small\item\em Loads a string locale file, with a cstring returning \char`\"{}\+None\char`\"{} if successful, otherwise returning an error. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a66f25007449bac68d94e0cea2c13b313}{Is\+\_\+locale\+\_\+file\+\_\+set} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file} object has been successfully loaded. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structjetfuel_1_1locale_1_1Locale__string}{Locale\+\_\+string} $>$ \hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a381a3de2e2b590fcbd6835fa7f214b11}{Get\+\_\+locale\+\_\+string\+\_\+vector} () const
+\begin{DoxyCompactList}\small\item\em Gets the locale string vector from the loading of this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a5f632b2d522da339f8a21e1bf808339e}{Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file}\textquotesingle{}s loaded file name. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a009cba27cfdd2cf3d0eb3dbefdfb9e37}{Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+locale\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file}\textquotesingle{}s loaded locale name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classjetfuel_1_1locale_1_1String__locale__file_af2719ec2b341bf7d7b052f509a996b91}{Convert\+\_\+json\+\_\+file\+\_\+to\+\_\+string} (const std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Converts a J\+S\+ON file to a std\+::string. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a5ca20a4480bcd4b328d58c46fc2fae46}{Set\+\_\+locale\+\_\+file\+\_\+set} (const bool localefileset)
+\begin{DoxyCompactList}\small\item\em Sets whether this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file} has been set. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a5948bd943df61fee3426f385a1e3b24e}{Clear\+\_\+locale\+\_\+string\+\_\+vector} ()
+\begin{DoxyCompactList}\small\item\em Clears the locale string vector. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1locale_1_1String__locale__file_ab784fd48c26d8e7658c20a18b07a599e}{Push\+\_\+back\+\_\+locale\+\_\+string\+\_\+into\+\_\+vector} (\hyperlink{structjetfuel_1_1locale_1_1Locale__string}{Locale\+\_\+string} localestring)
+\begin{DoxyCompactList}\small\item\em Pushes back a \hyperlink{structjetfuel_1_1locale_1_1Locale__string}{Locale\+\_\+string} into the locale string vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A string locale file object representing a single localization J\+S\+ON file for a single language.
+
+Code Example\+:
+
+J\+S\+ON(English\+Locale.\+json)\+:
+
+\{ \char`\"{}strings\char`\"{}\+: \mbox{[} \{ \char`\"{}stringid\char`\"{}\+: \char`\"{}checkboxlabel\char`\"{}, \char`\"{}string\char`\"{} \+: \char`\"{}click it i guess\char`\"{} \} \mbox{]} \}
+
+C++\+:
+
+\hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file} englishlocalefile; \hyperlink{classjetfuel_1_1locale_1_1String__locale__manager}{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+manager} localemanager; std\+::string error;
+
+if(!englishlocalefile.Load\+\_\+string\+\_\+locale\+\_\+file(\char`\"{}\+English\+Locale.\+json\char`\"{}, \char`\"{}english\char`\"{}, \&error))\{ std\+::cerr $<$$<$ \char`\"{}\+Could not load English\+Locale J\+S\+O\+N file! \char`\"{} $<$$<$ \char`\"{}\+Error was\+: \char`\"{} $<$$<$ error $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; return 1; \}
+
+localemanager.\+Load\+\_\+string\+\_\+locale\+\_\+file(englishlocalefile);
+
+localemanager.\+Set\+\_\+active\+\_\+locale(\char`\"{}english\char`\"{});
+
+std\+::cout $<$$<$ \char`\"{}\+Hello in\char`\"{} $<$$<$ localemanager.\+Get\+\_\+active\+\_\+locale() $<$$<$ \char`\"{} is \char`\"{} $<$$<$ localemanager.\+Get\+\_\+string\+\_\+from\+\_\+id(\char`\"{}hello\char`\"{}); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_a98b4ccb05ae738101ec1c4af582aa0d8}\label{classjetfuel_1_1locale_1_1String__locale__file_a98b4ccb05ae738101ec1c4af582aa0d8}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!String\+\_\+locale\+\_\+file@{String\+\_\+locale\+\_\+file}}
+\index{String\+\_\+locale\+\_\+file@{String\+\_\+locale\+\_\+file}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{String\+\_\+locale\+\_\+file()}{String\_locale\_file()}}
+{\footnotesize\ttfamily jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+String\+\_\+locale\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Default constructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_a5948bd943df61fee3426f385a1e3b24e}\label{classjetfuel_1_1locale_1_1String__locale__file_a5948bd943df61fee3426f385a1e3b24e}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!Clear\+\_\+locale\+\_\+string\+\_\+vector@{Clear\+\_\+locale\+\_\+string\+\_\+vector}}
+\index{Clear\+\_\+locale\+\_\+string\+\_\+vector@{Clear\+\_\+locale\+\_\+string\+\_\+vector}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{Clear\+\_\+locale\+\_\+string\+\_\+vector()}{Clear\_locale\_string\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+Clear\+\_\+locale\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Clears the locale string vector. 
+
+Clears the locale string vector. \mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_af2719ec2b341bf7d7b052f509a996b91}\label{classjetfuel_1_1locale_1_1String__locale__file_af2719ec2b341bf7d7b052f509a996b91}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!Convert\+\_\+json\+\_\+file\+\_\+to\+\_\+string@{Convert\+\_\+json\+\_\+file\+\_\+to\+\_\+string}}
+\index{Convert\+\_\+json\+\_\+file\+\_\+to\+\_\+string@{Convert\+\_\+json\+\_\+file\+\_\+to\+\_\+string}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{Convert\+\_\+json\+\_\+file\+\_\+to\+\_\+string()}{Convert\_json\_file\_to\_string()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+Convert\+\_\+json\+\_\+file\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Converts a J\+S\+ON file to a std\+::string. 
+
+Converts a J\+S\+ON file to a std\+::string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filepath \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_a381a3de2e2b590fcbd6835fa7f214b11}\label{classjetfuel_1_1locale_1_1String__locale__file_a381a3de2e2b590fcbd6835fa7f214b11}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!Get\+\_\+locale\+\_\+string\+\_\+vector@{Get\+\_\+locale\+\_\+string\+\_\+vector}}
+\index{Get\+\_\+locale\+\_\+string\+\_\+vector@{Get\+\_\+locale\+\_\+string\+\_\+vector}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{Get\+\_\+locale\+\_\+string\+\_\+vector()}{Get\_locale\_string\_vector()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structjetfuel_1_1locale_1_1Locale__string}{Locale\+\_\+string}$>$ jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+Get\+\_\+locale\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the locale string vector from the loading of this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file}. 
+
+Gets the locale string vector from the loading of this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file}. \mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_a009cba27cfdd2cf3d0eb3dbefdfb9e37}\label{classjetfuel_1_1locale_1_1String__locale__file_a009cba27cfdd2cf3d0eb3dbefdfb9e37}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+locale\+\_\+name@{Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+locale\+\_\+name}}
+\index{Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+locale\+\_\+name@{Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+locale\+\_\+name}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+locale\+\_\+name()}{Get\_string\_locale\_file\_locale\_name()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+locale\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file}\textquotesingle{}s loaded locale name. 
+
+Gets this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file}\textquotesingle{}s loaded locale name. \mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_a5f632b2d522da339f8a21e1bf808339e}\label{classjetfuel_1_1locale_1_1String__locale__file_a5f632b2d522da339f8a21e1bf808339e}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+name@{Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+name}}
+\index{Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+name@{Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+name}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+name()}{Get\_string\_locale\_file\_name()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+Get\+\_\+string\+\_\+locale\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file}\textquotesingle{}s loaded file name. 
+
+Gets this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file}\textquotesingle{}s loaded file name. \mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_a66f25007449bac68d94e0cea2c13b313}\label{classjetfuel_1_1locale_1_1String__locale__file_a66f25007449bac68d94e0cea2c13b313}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!Is\+\_\+locale\+\_\+file\+\_\+set@{Is\+\_\+locale\+\_\+file\+\_\+set}}
+\index{Is\+\_\+locale\+\_\+file\+\_\+set@{Is\+\_\+locale\+\_\+file\+\_\+set}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{Is\+\_\+locale\+\_\+file\+\_\+set()}{Is\_locale\_file\_set()}}
+{\footnotesize\ttfamily bool jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+Is\+\_\+locale\+\_\+file\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file} object has been successfully loaded. 
+
+Returns whether this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file} object has been successfully loaded. \mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_a904609e7cde4eb624cb940cbba642ea0}\label{classjetfuel_1_1locale_1_1String__locale__file_a904609e7cde4eb624cb940cbba642ea0}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!Load\+\_\+string\+\_\+locale\+\_\+file@{Load\+\_\+string\+\_\+locale\+\_\+file}}
+\index{Load\+\_\+string\+\_\+locale\+\_\+file@{Load\+\_\+string\+\_\+locale\+\_\+file}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{Load\+\_\+string\+\_\+locale\+\_\+file()}{Load\_string\_locale\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+Load\+\_\+string\+\_\+locale\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{const std\+::string}]{localename,  }\item[{std\+::string $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Loads a string locale file, with a boolean telling whether the loading has succeeded. 
+
+Loads a string locale file, with a boolean telling whether the loading has succeeded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filename \\
+\hline
+{\em std\+::string} & localename \\
+\hline
+{\em std\+::string} & $\ast$error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_a7d689db0ff9e9883ee8a5714311742bf}\label{classjetfuel_1_1locale_1_1String__locale__file_a7d689db0ff9e9883ee8a5714311742bf}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!Load\+\_\+string\+\_\+locale\+\_\+file@{Load\+\_\+string\+\_\+locale\+\_\+file}}
+\index{Load\+\_\+string\+\_\+locale\+\_\+file@{Load\+\_\+string\+\_\+locale\+\_\+file}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{Load\+\_\+string\+\_\+locale\+\_\+file()}{Load\_string\_locale\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily char$\ast$ jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+Load\+\_\+string\+\_\+locale\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{const std\+::string}]{localename }\end{DoxyParamCaption})}
+
+
+
+Loads a string locale file, with a cstring returning \char`\"{}\+None\char`\"{} if successful, otherwise returning an error. 
+
+Loads a string locale file, with a cstring returning \char`\"{}\+None\char`\"{} if successful, otherwise returning an error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filename \\
+\hline
+{\em std\+::string} & localename \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_ab784fd48c26d8e7658c20a18b07a599e}\label{classjetfuel_1_1locale_1_1String__locale__file_ab784fd48c26d8e7658c20a18b07a599e}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!Push\+\_\+back\+\_\+locale\+\_\+string\+\_\+into\+\_\+vector@{Push\+\_\+back\+\_\+locale\+\_\+string\+\_\+into\+\_\+vector}}
+\index{Push\+\_\+back\+\_\+locale\+\_\+string\+\_\+into\+\_\+vector@{Push\+\_\+back\+\_\+locale\+\_\+string\+\_\+into\+\_\+vector}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{Push\+\_\+back\+\_\+locale\+\_\+string\+\_\+into\+\_\+vector()}{Push\_back\_locale\_string\_into\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+Push\+\_\+back\+\_\+locale\+\_\+string\+\_\+into\+\_\+vector (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1locale_1_1Locale__string}{Locale\+\_\+string}}]{localestring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Pushes back a \hyperlink{structjetfuel_1_1locale_1_1Locale__string}{Locale\+\_\+string} into the locale string vector. 
+
+Pushes back a \hyperlink{structjetfuel_1_1locale_1_1Locale__string}{Locale\+\_\+string} into the locale string vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1locale_1_1Locale__string}{Locale\+\_\+string}} & localestring \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_a5ca20a4480bcd4b328d58c46fc2fae46}\label{classjetfuel_1_1locale_1_1String__locale__file_a5ca20a4480bcd4b328d58c46fc2fae46}} 
+\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}!Set\+\_\+locale\+\_\+file\+\_\+set@{Set\+\_\+locale\+\_\+file\+\_\+set}}
+\index{Set\+\_\+locale\+\_\+file\+\_\+set@{Set\+\_\+locale\+\_\+file\+\_\+set}!jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file}}
+\subsubsection{\texorpdfstring{Set\+\_\+locale\+\_\+file\+\_\+set()}{Set\_locale\_file\_set()}}
+{\footnotesize\ttfamily void jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file\+::\+Set\+\_\+locale\+\_\+file\+\_\+set (\begin{DoxyParamCaption}\item[{const bool}]{localefileset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets whether this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file} has been set. 
+
+Sets whether this \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file} has been set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & localefileset \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuellocale/stringlocalefile.\+h\end{DoxyCompactItemize}

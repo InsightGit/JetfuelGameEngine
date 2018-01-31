@@ -1,0 +1,610 @@
+\hypertarget{classjetfuel_1_1gui_1_1Drop__down__box}{}\section{jetfuel\+:\+:gui\+:\+:Drop\+\_\+down\+\_\+box Class Reference}
+\label{classjetfuel_1_1gui_1_1Drop__down__box}\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+
+
+{\ttfamily \#include $<$dropdownbox.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:gui\+:\+:Drop\+\_\+down\+\_\+box\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classjetfuel_1_1gui_1_1Drop__down__box__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jetfuel\+:\+:gui\+:\+:Drop\+\_\+down\+\_\+box\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classjetfuel_1_1gui_1_1Drop__down__box__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_af518d68503aa67f76e70fd4e2d9c3cb3}{Drop\+\_\+down\+\_\+box} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a9624ef3b9af6d1e3e6fcebb7ef7aa17c}{Load\+\_\+base\+\_\+box\+\_\+image} (\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} baseboximage, const \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color} baseboxcolor, const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+uint} bordersizes)
+\begin{DoxyCompactList}\small\item\em Loads the base box image of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a64b807d21f55a85ab9600cfd6369d7dc}{Dynamic\+\_\+load\+\_\+base\+\_\+box\+\_\+image} (\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} baseboximage, const \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color} baseboxcolor, const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+uint} bordersizes)
+\begin{DoxyCompactList}\small\item\em Dynamically loads the base box image of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_ae53f93bddf6764775454246efa7d7e57}{Get\+\_\+active\+\_\+option} () const
+\begin{DoxyCompactList}\small\item\em Gets the active option of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. \end{DoxyCompactList}\item 
+\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a8f8bd91ea279110cab98b78854207ae7}{Get\+\_\+option\+\_\+text\+\_\+characteristics} () const
+\begin{DoxyCompactList}\small\item\em Gets the text characteristics of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s options. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a051d83177f8fa26325dcbdc504ccb0a9}{Set\+\_\+option\+\_\+text\+\_\+characteristics} (\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} textcharacteristics)
+\begin{DoxyCompactList}\small\item\em Sets the text characteristics of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s options. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a8de320a3db8d94d9b0846e6ae33e261c}{Get\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for} () const
+\begin{DoxyCompactList}\small\item\em Gets the U\+IS action to listen for triggers. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_acb6540d9d5230dae1a9e3ecaf6949708}{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for} (const std\+::string U\+I\+Saction)
+\begin{DoxyCompactList}\small\item\em Sets the U\+IS action to listen for triggers. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a9160249744bdd278e20a77f470421d3e}{Assign\+\_\+renderer} (S\+D\+L\+\_\+\+Renderer $\ast$renderer) override
+\begin{DoxyCompactList}\small\item\em Assigns a renderer to this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a2dd70d6c3982232965ecc9b7079b6144}{Add\+\_\+option} (const std\+::string option)
+\begin{DoxyCompactList}\small\item\em Adds an option to this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_af92cccd010b21e1ce64af9a3c58ba086}{Get\+\_\+position} () override
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_acba86706261397994c96727a0184a78c}{Set\+\_\+position} (const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} position) override
+\begin{DoxyCompactList}\small\item\em Sets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_ab07ac526f3c2e9930398d78c7cad2d52}{Get\+\_\+rect\+\_\+to\+\_\+draw} () override
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s rect to draw. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_ae3607405b7e3fe981da75f0529e0a7a1}{Check\+\_\+for\+\_\+clicks} (\hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action} U\+I\+Sinterpreterdata) override
+\begin{DoxyCompactList}\small\item\em Checks for clicks on this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a1b62cab3674f45700ad9afd6076a8cb1}{Draw} () override
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} onto the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_ab64b631bab270d3dac14affb4b777fd4}{Is\+\_\+active} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} has been clicked on recently and option boxes have been shown. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_aae9fb50bc6ad4ac4b8cf5570570d6f95}{Is\+\_\+base\+\_\+box\+\_\+set} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} has had it\textquotesingle{}s base drop down box option set. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a0a52de8d01db19c0600f3060ad3c444d}{Set\+\_\+active} (const bool active)
+\begin{DoxyCompactList}\small\item\em Sets whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} has been clicked on recently and option boxes have been shown. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+uint} \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a2164954ae3befe20f57d4fde86e13f15}{Get\+\_\+border\+\_\+sizes} () const
+\begin{DoxyCompactList}\small\item\em Gets the border sizes of this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a50162434604bbee6278a00067c1f114b}{Is\+\_\+text\+\_\+chars\+\_\+set} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s option text characteristics been set. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_ad8df2088af8ede79c0747e89647b060d}{Set\+\_\+text\+\_\+characteristics\+\_\+to\+\_\+text\+\_\+object} (\hyperlink{classjetfuel_1_1draw_1_1Text}{jetfuel\+::draw\+::\+Text} $\ast$textobject)
+\begin{DoxyCompactList}\small\item\em Sets the option text characteristics on a Text object. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color} \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a2635b1bb1d02c27bafbb91c03d312d91}{Get\+\_\+box\+\_\+color} ()
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s color. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_afc436e723fe796f9d85a6332252e35c4}{Get\+\_\+size\+\_\+of\+\_\+base\+\_\+box} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s size of it\textquotesingle{}s base box. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a7b1288e66e0276829df981a4c7a07081}{Add\+\_\+drop\+\_\+down\+\_\+option\+\_\+to\+\_\+vector} (\hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} option)
+\begin{DoxyCompactList}\small\item\em Adds a \hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} to this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s private m\+\_\+dropdownoptions vector. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a5ed3ca41e8d6147e3af3afc94c8b8f1a}{Add\+\_\+option\+\_\+to\+\_\+vector} (const std\+::string option)
+\begin{DoxyCompactList}\small\item\em Adds an std\+::string option to the private m\+\_\+options vector. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a72f957e19c3ce5f3da61ef3d47d09b2f}{Get\+\_\+size\+\_\+of\+\_\+dropdown\+\_\+options\+\_\+vector} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the private m\+\_\+dropdownoptions vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_af6ac565eb238a27b8c988143c82cafe4}\label{classjetfuel_1_1gui_1_1Drop__down__box_af6ac565eb238a27b8c988143c82cafe4}} 
+\hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} {\bfseries Get\+\_\+dropdown\+\_\+option\+\_\+in\+\_\+vector} (const size\+\_\+t which)
+\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_af9d4d77418cc67a85dc98519224458f4}{Set\+\_\+active\+\_\+drop\+\_\+down} (const size\+\_\+t which)
+\begin{DoxyCompactList}\small\item\em Sets which option to be first and displayed in this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s base box. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a2fac141eb75af5c59b208753634f2e75}{Set\+\_\+base\+\_\+box\+\_\+option} (std\+::string option)
+\begin{DoxyCompactList}\small\item\em Sets the base box\textquotesingle{}s option. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a66969f93183947614501055bc9e73510}{Is\+\_\+image\+\_\+dynamically\+\_\+loaded} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the base box\textquotesingle{}s image has been dynamically loaded or not. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a115a8142c37ed537d765302fcbf7d3fd}{Load\+\_\+dynamic\+\_\+image} ()
+\begin{DoxyCompactList}\small\item\em Loads the base box\textquotesingle{}s dynamic image. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_ab8beac8ed8b442d96723f72a2fe9edb6}{Get\+\_\+renderer} () override
+\begin{DoxyCompactList}\small\item\em Gets the S\+DL renderer. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a7bc0f38e40897db13797e4937a50c334}{Draw\+\_\+base\+\_\+box} ()
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s base box. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_ae29b89b98fa3211ead2fffc712ce264f}{Draw\+\_\+all\+\_\+option\+\_\+boxes} ()
+\begin{DoxyCompactList}\small\item\em Draws all of this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s option boxes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple Drop down box with user-\/specified options.
+
+Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} messagebus; \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box} dropdownbox; \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} dropdownbaseboximage(\char`\"{}basebox.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager} U\+I\+Smanager(\&messagebus, scenemanager.\+Get\+\_\+window\+\_\+id()); \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter} U\+I\+Sinterpreter(\&messagebus); \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} textchars; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{});
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}\+Hello Dropdownboxes!\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(640,480)))\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl window! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \} scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&dropdownbox,1);
+
+if(!dropdownbox.Load\+\_\+base\+\_\+box\+\_\+image(dropdownbaseboximage, \hyperlink{classjetfuel_1_1draw_1_1Color_ab75797c1cb6e4dd952037916db39b5e8}{jetfuel\+::draw\+::\+Color\+::\+White}, jetfuel\+::draw\+::\+Vector2d\+\_\+uint( 45,20)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ I\+M\+G\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+dropdownbox.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+
+textchars.\+textstring = \char`\"{}hello\char`\"{}; textchars.\+font = font;
+
+\begin{DoxyVerb}dropdownbox.Set_option_text_characteristics(textchars);
+
+dropdownbox.Add_option("A");
+dropdownbox.Add_option("B");
+dropdownbox.Add_option("C");
+
+scenemanager.Draw_current_scene();  \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_af518d68503aa67f76e70fd4e2d9c3cb3}\label{classjetfuel_1_1gui_1_1Drop__down__box_af518d68503aa67f76e70fd4e2d9c3cb3}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Drop\+\_\+down\+\_\+box@{Drop\+\_\+down\+\_\+box}}
+\index{Drop\+\_\+down\+\_\+box@{Drop\+\_\+down\+\_\+box}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Drop\+\_\+down\+\_\+box()}{Drop\_down\_box()}}
+{\footnotesize\ttfamily jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Drop\+\_\+down\+\_\+box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Constructs an empty \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a7b1288e66e0276829df981a4c7a07081}\label{classjetfuel_1_1gui_1_1Drop__down__box_a7b1288e66e0276829df981a4c7a07081}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Add\+\_\+drop\+\_\+down\+\_\+option\+\_\+to\+\_\+vector@{Add\+\_\+drop\+\_\+down\+\_\+option\+\_\+to\+\_\+vector}}
+\index{Add\+\_\+drop\+\_\+down\+\_\+option\+\_\+to\+\_\+vector@{Add\+\_\+drop\+\_\+down\+\_\+option\+\_\+to\+\_\+vector}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Add\+\_\+drop\+\_\+down\+\_\+option\+\_\+to\+\_\+vector()}{Add\_drop\_down\_option\_to\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Add\+\_\+drop\+\_\+down\+\_\+option\+\_\+to\+\_\+vector (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option}}]{option }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Adds a \hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} to this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s private m\+\_\+dropdownoptions vector. 
+
+Adds a \hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} to this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s private m\+\_\+dropdownoptions vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Drop\+\_\+down\+\_\+option}} & option \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a2dd70d6c3982232965ecc9b7079b6144}\label{classjetfuel_1_1gui_1_1Drop__down__box_a2dd70d6c3982232965ecc9b7079b6144}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Add\+\_\+option@{Add\+\_\+option}}
+\index{Add\+\_\+option@{Add\+\_\+option}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Add\+\_\+option()}{Add\_option()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Add\+\_\+option (\begin{DoxyParamCaption}\item[{const std\+::string}]{option }\end{DoxyParamCaption})}
+
+
+
+Adds an option to this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. 
+
+Adds an option to this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & option \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a5ed3ca41e8d6147e3af3afc94c8b8f1a}\label{classjetfuel_1_1gui_1_1Drop__down__box_a5ed3ca41e8d6147e3af3afc94c8b8f1a}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Add\+\_\+option\+\_\+to\+\_\+vector@{Add\+\_\+option\+\_\+to\+\_\+vector}}
+\index{Add\+\_\+option\+\_\+to\+\_\+vector@{Add\+\_\+option\+\_\+to\+\_\+vector}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Add\+\_\+option\+\_\+to\+\_\+vector()}{Add\_option\_to\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Add\+\_\+option\+\_\+to\+\_\+vector (\begin{DoxyParamCaption}\item[{const std\+::string}]{option }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Adds an std\+::string option to the private m\+\_\+options vector. 
+
+Adds an std\+::string option to the private m\+\_\+options vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & option \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a9160249744bdd278e20a77f470421d3e}\label{classjetfuel_1_1gui_1_1Drop__down__box_a9160249744bdd278e20a77f470421d3e}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Assign\+\_\+renderer@{Assign\+\_\+renderer}}
+\index{Assign\+\_\+renderer@{Assign\+\_\+renderer}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Assign\+\_\+renderer()}{Assign\_renderer()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Assign\+\_\+renderer (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Assigns a renderer to this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. 
+
+Assigns a renderer to this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. It is recommended that you let \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} and \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} call this unless you are not using either of them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Renderer} & $\ast$renderer \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_a0d7257f197d6ffcdd89c3a99c93d1400}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_ae3607405b7e3fe981da75f0529e0a7a1}\label{classjetfuel_1_1gui_1_1Drop__down__box_ae3607405b7e3fe981da75f0529e0a7a1}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Check\+\_\+for\+\_\+clicks@{Check\+\_\+for\+\_\+clicks}}
+\index{Check\+\_\+for\+\_\+clicks@{Check\+\_\+for\+\_\+clicks}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Check\+\_\+for\+\_\+clicks()}{Check\_for\_clicks()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Check\+\_\+for\+\_\+clicks (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action}}]{U\+I\+Sinterpreterdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks for clicks on this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. 
+
+Checks for clicks on this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action}} & U\+I\+Sinterpreterdata \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classjetfuel_1_1gui_1_1IClickable_aea45de37bd3beb7eb7e2e3056e4e37b3}{jetfuel\+::gui\+::\+I\+Clickable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a1b62cab3674f45700ad9afd6076a8cb1}\label{classjetfuel_1_1gui_1_1Drop__down__box_a1b62cab3674f45700ad9afd6076a8cb1}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Draw@{Draw}}
+\index{Draw@{Draw}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} onto the screen. 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} onto the screen. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Drawable_a1a072070322965ce9411ee6e7c311c56}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_ae29b89b98fa3211ead2fffc712ce264f}\label{classjetfuel_1_1gui_1_1Drop__down__box_ae29b89b98fa3211ead2fffc712ce264f}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Draw\+\_\+all\+\_\+option\+\_\+boxes@{Draw\+\_\+all\+\_\+option\+\_\+boxes}}
+\index{Draw\+\_\+all\+\_\+option\+\_\+boxes@{Draw\+\_\+all\+\_\+option\+\_\+boxes}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Draw\+\_\+all\+\_\+option\+\_\+boxes()}{Draw\_all\_option\_boxes()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Draw\+\_\+all\+\_\+option\+\_\+boxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Draws all of this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s option boxes. 
+
+Draws all of this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s option boxes. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a7bc0f38e40897db13797e4937a50c334}\label{classjetfuel_1_1gui_1_1Drop__down__box_a7bc0f38e40897db13797e4937a50c334}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Draw\+\_\+base\+\_\+box@{Draw\+\_\+base\+\_\+box}}
+\index{Draw\+\_\+base\+\_\+box@{Draw\+\_\+base\+\_\+box}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Draw\+\_\+base\+\_\+box()}{Draw\_base\_box()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Draw\+\_\+base\+\_\+box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s base box. 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s base box. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a64b807d21f55a85ab9600cfd6369d7dc}\label{classjetfuel_1_1gui_1_1Drop__down__box_a64b807d21f55a85ab9600cfd6369d7dc}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Dynamic\+\_\+load\+\_\+base\+\_\+box\+\_\+image@{Dynamic\+\_\+load\+\_\+base\+\_\+box\+\_\+image}}
+\index{Dynamic\+\_\+load\+\_\+base\+\_\+box\+\_\+image@{Dynamic\+\_\+load\+\_\+base\+\_\+box\+\_\+image}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Dynamic\+\_\+load\+\_\+base\+\_\+box\+\_\+image()}{Dynamic\_load\_base\_box\_image()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Dynamic\+\_\+load\+\_\+base\+\_\+box\+\_\+image (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{baseboximage,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}}]{baseboxcolor,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+uint}}]{bordersizes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dynamically loads the base box image of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. 
+
+Dynamically loads the base box image of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}, including the color of the image and the border sizes of the base box image. The image are not loaded until right before it is needed in the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a1b62cab3674f45700ad9afd6076a8cb1}{Draw()} function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & baseboximage \\
+\hline
+{\em \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}} & baseboxcolor \\
+\hline
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+uint} & bordersizes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_ae53f93bddf6764775454246efa7d7e57}\label{classjetfuel_1_1gui_1_1Drop__down__box_ae53f93bddf6764775454246efa7d7e57}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+active\+\_\+option@{Get\+\_\+active\+\_\+option}}
+\index{Get\+\_\+active\+\_\+option@{Get\+\_\+active\+\_\+option}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+active\+\_\+option()}{Get\_active\_option()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+active\+\_\+option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the active option of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. 
+
+Gets the active option of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a2164954ae3befe20f57d4fde86e13f15}\label{classjetfuel_1_1gui_1_1Drop__down__box_a2164954ae3befe20f57d4fde86e13f15}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+border\+\_\+sizes@{Get\+\_\+border\+\_\+sizes}}
+\index{Get\+\_\+border\+\_\+sizes@{Get\+\_\+border\+\_\+sizes}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+border\+\_\+sizes()}{Get\_border\_sizes()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+uint} jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+border\+\_\+sizes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the border sizes of this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. 
+
+Gets the border sizes of this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a2635b1bb1d02c27bafbb91c03d312d91}\label{classjetfuel_1_1gui_1_1Drop__down__box_a2635b1bb1d02c27bafbb91c03d312d91}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+box\+\_\+color@{Get\+\_\+box\+\_\+color}}
+\index{Get\+\_\+box\+\_\+color@{Get\+\_\+box\+\_\+color}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+box\+\_\+color()}{Get\_box\_color()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color} jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+box\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s color. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s color (from the base box color). \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a8f8bd91ea279110cab98b78854207ae7}\label{classjetfuel_1_1gui_1_1Drop__down__box_a8f8bd91ea279110cab98b78854207ae7}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+option\+\_\+text\+\_\+characteristics@{Get\+\_\+option\+\_\+text\+\_\+characteristics}}
+\index{Get\+\_\+option\+\_\+text\+\_\+characteristics@{Get\+\_\+option\+\_\+text\+\_\+characteristics}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+option\+\_\+text\+\_\+characteristics()}{Get\_option\_text\_characteristics()}}
+{\footnotesize\ttfamily \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+option\+\_\+text\+\_\+characteristics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the text characteristics of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s options. 
+
+Gets the text characteristics of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s options. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_af92cccd010b21e1ce64af9a3c58ba086}\label{classjetfuel_1_1gui_1_1Drop__down__box_af92cccd010b21e1ce64af9a3c58ba086}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+position@{Get\+\_\+position}}
+\index{Get\+\_\+position@{Get\+\_\+position}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+position()}{Get\_position()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s position. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s position. 
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_ae7ebd30d66db2c8a5d5371cbcf0023fc}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_ab07ac526f3c2e9930398d78c7cad2d52}\label{classjetfuel_1_1gui_1_1Drop__down__box_ab07ac526f3c2e9930398d78c7cad2d52}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}}
+\index{Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+rect\+\_\+to\+\_\+draw()}{Get\_rect\_to\_draw()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+rect\+\_\+to\+\_\+draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s rect to draw. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s rect to draw.
+
+\begin{DoxyWarning}{Warning}
+T\+H\+IS D\+O\+ES N\+OT I\+N\+C\+L\+U\+DE O\+P\+T\+I\+O\+NS S\+H\+O\+WN IF IT IS C\+L\+I\+C\+K\+ED. 
+\end{DoxyWarning}
+
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Rectangle__interface_a03fd3b6842ab7b3065379caec407296f}{jetfuel\+::draw\+::\+Rectangle\+\_\+interface}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_ab8beac8ed8b442d96723f72a2fe9edb6}\label{classjetfuel_1_1gui_1_1Drop__down__box_ab8beac8ed8b442d96723f72a2fe9edb6}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+renderer@{Get\+\_\+renderer}}
+\index{Get\+\_\+renderer@{Get\+\_\+renderer}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+renderer()}{Get\_renderer()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the S\+DL renderer. 
+
+Gets the S\+DL renderer. 
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_a6bbda81a7fbd33c388039ecaeb53c278}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_afc436e723fe796f9d85a6332252e35c4}\label{classjetfuel_1_1gui_1_1Drop__down__box_afc436e723fe796f9d85a6332252e35c4}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+size\+\_\+of\+\_\+base\+\_\+box@{Get\+\_\+size\+\_\+of\+\_\+base\+\_\+box}}
+\index{Get\+\_\+size\+\_\+of\+\_\+base\+\_\+box@{Get\+\_\+size\+\_\+of\+\_\+base\+\_\+box}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+size\+\_\+of\+\_\+base\+\_\+box()}{Get\_size\_of\_base\_box()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+size\+\_\+of\+\_\+base\+\_\+box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the size of this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s size of it\textquotesingle{}s base box. 
+
+Gets the size of this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s size of it\textquotesingle{}s base box. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a72f957e19c3ce5f3da61ef3d47d09b2f}\label{classjetfuel_1_1gui_1_1Drop__down__box_a72f957e19c3ce5f3da61ef3d47d09b2f}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+size\+\_\+of\+\_\+dropdown\+\_\+options\+\_\+vector@{Get\+\_\+size\+\_\+of\+\_\+dropdown\+\_\+options\+\_\+vector}}
+\index{Get\+\_\+size\+\_\+of\+\_\+dropdown\+\_\+options\+\_\+vector@{Get\+\_\+size\+\_\+of\+\_\+dropdown\+\_\+options\+\_\+vector}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+size\+\_\+of\+\_\+dropdown\+\_\+options\+\_\+vector()}{Get\_size\_of\_dropdown\_options\_vector()}}
+{\footnotesize\ttfamily size\+\_\+t jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+size\+\_\+of\+\_\+dropdown\+\_\+options\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the size of the private m\+\_\+dropdownoptions vector. 
+
+Gets the size of the private m\+\_\+dropdownoptions vector. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a8de320a3db8d94d9b0846e6ae33e261c}\label{classjetfuel_1_1gui_1_1Drop__down__box_a8de320a3db8d94d9b0846e6ae33e261c}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for@{Get\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for}}
+\index{Get\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for@{Get\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for()}{Get\_UIS\_action\_to\_listen\_for()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the U\+IS action to listen for triggers. 
+
+Gets the Universal Input System action to listen for triggers. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_ab64b631bab270d3dac14affb4b777fd4}\label{classjetfuel_1_1gui_1_1Drop__down__box_ab64b631bab270d3dac14affb4b777fd4}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Is\+\_\+active@{Is\+\_\+active}}
+\index{Is\+\_\+active@{Is\+\_\+active}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Is\+\_\+active()}{Is\_active()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Is\+\_\+active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} has been clicked on recently and option boxes have been shown. 
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} has been clicked on recently and option boxes have been shown. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_aae9fb50bc6ad4ac4b8cf5570570d6f95}\label{classjetfuel_1_1gui_1_1Drop__down__box_aae9fb50bc6ad4ac4b8cf5570570d6f95}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Is\+\_\+base\+\_\+box\+\_\+set@{Is\+\_\+base\+\_\+box\+\_\+set}}
+\index{Is\+\_\+base\+\_\+box\+\_\+set@{Is\+\_\+base\+\_\+box\+\_\+set}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Is\+\_\+base\+\_\+box\+\_\+set()}{Is\_base\_box\_set()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Is\+\_\+base\+\_\+box\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} has had it\textquotesingle{}s base drop down box option set. 
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} has had it\textquotesingle{}s base drop down box option set. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a66969f93183947614501055bc9e73510}\label{classjetfuel_1_1gui_1_1Drop__down__box_a66969f93183947614501055bc9e73510}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Is\+\_\+image\+\_\+dynamically\+\_\+loaded@{Is\+\_\+image\+\_\+dynamically\+\_\+loaded}}
+\index{Is\+\_\+image\+\_\+dynamically\+\_\+loaded@{Is\+\_\+image\+\_\+dynamically\+\_\+loaded}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Is\+\_\+image\+\_\+dynamically\+\_\+loaded()}{Is\_image\_dynamically\_loaded()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Is\+\_\+image\+\_\+dynamically\+\_\+loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether the base box\textquotesingle{}s image has been dynamically loaded or not. 
+
+Returns whether the base box\textquotesingle{}s image has been dynamically loaded or not. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a50162434604bbee6278a00067c1f114b}\label{classjetfuel_1_1gui_1_1Drop__down__box_a50162434604bbee6278a00067c1f114b}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Is\+\_\+text\+\_\+chars\+\_\+set@{Is\+\_\+text\+\_\+chars\+\_\+set}}
+\index{Is\+\_\+text\+\_\+chars\+\_\+set@{Is\+\_\+text\+\_\+chars\+\_\+set}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Is\+\_\+text\+\_\+chars\+\_\+set()}{Is\_text\_chars\_set()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Is\+\_\+text\+\_\+chars\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s option text characteristics been set. 
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s option text characteristics been set. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a9624ef3b9af6d1e3e6fcebb7ef7aa17c}\label{classjetfuel_1_1gui_1_1Drop__down__box_a9624ef3b9af6d1e3e6fcebb7ef7aa17c}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Load\+\_\+base\+\_\+box\+\_\+image@{Load\+\_\+base\+\_\+box\+\_\+image}}
+\index{Load\+\_\+base\+\_\+box\+\_\+image@{Load\+\_\+base\+\_\+box\+\_\+image}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Load\+\_\+base\+\_\+box\+\_\+image()}{Load\_base\_box\_image()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Load\+\_\+base\+\_\+box\+\_\+image (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{baseboximage,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}}]{baseboxcolor,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+uint}}]{bordersizes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads the base box image of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}. 
+
+Loads the base box image of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}, including the color of the image and the border sizes of the base box image.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & baseboximage \\
+\hline
+{\em \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}} & baseboxcolor \\
+\hline
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+uint} & bordersizes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a115a8142c37ed537d765302fcbf7d3fd}\label{classjetfuel_1_1gui_1_1Drop__down__box_a115a8142c37ed537d765302fcbf7d3fd}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Load\+\_\+dynamic\+\_\+image@{Load\+\_\+dynamic\+\_\+image}}
+\index{Load\+\_\+dynamic\+\_\+image@{Load\+\_\+dynamic\+\_\+image}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Load\+\_\+dynamic\+\_\+image()}{Load\_dynamic\_image()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Load\+\_\+dynamic\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Loads the base box\textquotesingle{}s dynamic image. 
+
+Loads the base box\textquotesingle{}s dynamic image specified in m\+\_\+baseboxdynamicimage. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a0a52de8d01db19c0600f3060ad3c444d}\label{classjetfuel_1_1gui_1_1Drop__down__box_a0a52de8d01db19c0600f3060ad3c444d}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Set\+\_\+active@{Set\+\_\+active}}
+\index{Set\+\_\+active@{Set\+\_\+active}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+active()}{Set\_active()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Set\+\_\+active (\begin{DoxyParamCaption}\item[{const bool}]{active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} has been clicked on recently and option boxes have been shown. 
+
+Sets whether this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box} has been clicked on recently and option boxes have been shown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & active \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_af9d4d77418cc67a85dc98519224458f4}\label{classjetfuel_1_1gui_1_1Drop__down__box_af9d4d77418cc67a85dc98519224458f4}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Set\+\_\+active\+\_\+drop\+\_\+down@{Set\+\_\+active\+\_\+drop\+\_\+down}}
+\index{Set\+\_\+active\+\_\+drop\+\_\+down@{Set\+\_\+active\+\_\+drop\+\_\+down}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+active\+\_\+drop\+\_\+down()}{Set\_active\_drop\_down()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Set\+\_\+active\+\_\+drop\+\_\+down (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets which option to be first and displayed in this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s base box. 
+
+Sets which option to be first and displayed in this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s base box.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & which \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a2fac141eb75af5c59b208753634f2e75}\label{classjetfuel_1_1gui_1_1Drop__down__box_a2fac141eb75af5c59b208753634f2e75}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Set\+\_\+base\+\_\+box\+\_\+option@{Set\+\_\+base\+\_\+box\+\_\+option}}
+\index{Set\+\_\+base\+\_\+box\+\_\+option@{Set\+\_\+base\+\_\+box\+\_\+option}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+base\+\_\+box\+\_\+option()}{Set\_base\_box\_option()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Set\+\_\+base\+\_\+box\+\_\+option (\begin{DoxyParamCaption}\item[{std\+::string}]{option }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the base box\textquotesingle{}s option. 
+
+Sets the base box\textquotesingle{}s option, used for the first option given to this class via Add\+\_\+option.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & option \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a051d83177f8fa26325dcbdc504ccb0a9}\label{classjetfuel_1_1gui_1_1Drop__down__box_a051d83177f8fa26325dcbdc504ccb0a9}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Set\+\_\+option\+\_\+text\+\_\+characteristics@{Set\+\_\+option\+\_\+text\+\_\+characteristics}}
+\index{Set\+\_\+option\+\_\+text\+\_\+characteristics@{Set\+\_\+option\+\_\+text\+\_\+characteristics}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+option\+\_\+text\+\_\+characteristics()}{Set\_option\_text\_characteristics()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Set\+\_\+option\+\_\+text\+\_\+characteristics (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics}}]{textcharacteristics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the text characteristics of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s options. 
+
+Sets the text characteristics of the \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s options.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics}} & textcharacteristics \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_acba86706261397994c96727a0184a78c}\label{classjetfuel_1_1gui_1_1Drop__down__box_acba86706261397994c96727a0184a78c}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Set\+\_\+position@{Set\+\_\+position}}
+\index{Set\+\_\+position@{Set\+\_\+position}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+position()}{Set\_position()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Set\+\_\+position (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s position. 
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_afdd035afe40c706459a6c9df813bcce6}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_ad8df2088af8ede79c0747e89647b060d}\label{classjetfuel_1_1gui_1_1Drop__down__box_ad8df2088af8ede79c0747e89647b060d}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Set\+\_\+text\+\_\+characteristics\+\_\+to\+\_\+text\+\_\+object@{Set\+\_\+text\+\_\+characteristics\+\_\+to\+\_\+text\+\_\+object}}
+\index{Set\+\_\+text\+\_\+characteristics\+\_\+to\+\_\+text\+\_\+object@{Set\+\_\+text\+\_\+characteristics\+\_\+to\+\_\+text\+\_\+object}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+text\+\_\+characteristics\+\_\+to\+\_\+text\+\_\+object()}{Set\_text\_characteristics\_to\_text\_object()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Set\+\_\+text\+\_\+characteristics\+\_\+to\+\_\+text\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Text}{jetfuel\+::draw\+::\+Text} $\ast$}]{textobject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the option text characteristics on a Text object. 
+
+Sets the option text characteristics on a Text object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Text}{jetfuel\+::draw\+::\+Text}} & $\ast$textobject \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_acb6540d9d5230dae1a9e3ecaf6949708}\label{classjetfuel_1_1gui_1_1Drop__down__box_acb6540d9d5230dae1a9e3ecaf6949708}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for@{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for}}
+\index{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for@{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for()}{Set\_UIS\_action\_to\_listen\_for()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Set\+\_\+\+U\+I\+S\+\_\+action\+\_\+to\+\_\+listen\+\_\+for (\begin{DoxyParamCaption}\item[{const std\+::string}]{U\+I\+Saction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the U\+IS action to listen for triggers. 
+
+Sets the Universal Input System action to listen for triggers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & U\+I\+Saction \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelgui/dropdownbox.\+h\end{DoxyCompactItemize}

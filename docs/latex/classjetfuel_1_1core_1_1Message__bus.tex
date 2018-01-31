@@ -1,0 +1,260 @@
+\hypertarget{classjetfuel_1_1core_1_1Message__bus}{}\section{jetfuel\+:\+:core\+:\+:Message\+\_\+bus Class Reference}
+\label{classjetfuel_1_1core_1_1Message__bus}\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1core_1_1Message__bus_abf8b94890bd7223f9fa3f7d861ee96ab}{Message\+\_\+bus} (const bool disablelogging=false)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classjetfuel_1_1core_1_1Message__bus}{Message\+\_\+bus} with or without logging. Constructs a \hyperlink{classjetfuel_1_1core_1_1Message__bus}{Message\+\_\+bus} which enables logging by default. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1core_1_1Message__bus_a7a36c1ebc19327ddb554d6f8199a6965}{Post\+\_\+message} (const std\+::string message)
+\begin{DoxyCompactList}\small\item\em Posts a new unprocessed message to the message bus. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classjetfuel_1_1core_1_1Message__bus_aa363b50d4ba99ae86430b5f12610fd39}{Get\+\_\+\+S\+D\+L\+\_\+events\+\_\+size} () const
+\begin{DoxyCompactList}\small\item\em Returns the size of queued S\+D\+L\+\_\+\+Events. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1core_1_1Message__bus_a81015af8f393e028c4e9e670167aa013}{Do\+\_\+messages\+\_\+exist} ()
+\begin{DoxyCompactList}\small\item\em Checks if any queued messages exist. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1core_1_1Message__bus_a0b91a46865f5888bd1c3e2e3bdbc49ee}{Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist} (std\+::string $\ast$message)
+\begin{DoxyCompactList}\small\item\em Checks if at least one U\+IS message exists. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1core_1_1Message__bus_a9bbbbea3cd97a8f8253e08b700dbd05d}{Does\+\_\+message\+\_\+exist} (const std\+::string message)
+\begin{DoxyCompactList}\small\item\em Checks if a certain message exists in the message bus. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1core_1_1Message__bus_ae79fcd8945a1d72bbebc838be6d23a1f}{Get\+\_\+next\+\_\+message} ()
+\begin{DoxyCompactList}\small\item\em Gets the next message in the queued message vector. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Event \hyperlink{classjetfuel_1_1core_1_1Message__bus_ab80c8b51aca00ad4942ee2114fdf2fec}{Get\+\_\+\+S\+D\+L\+\_\+event} (const int place)
+\begin{DoxyCompactList}\small\item\em Gets a S\+D\+L\+\_\+\+Event in the S\+D\+L\+\_\+\+Event vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{classjetfuel_1_1core_1_1Message__bus_a784a11d711a1df93b66416c93b9fd494}{Get\+\_\+message\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of queued messages. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1core_1_1Message__bus_ad659ed1f593c8e57ec0308e8bb1f20cb}{Is\+\_\+logging\+\_\+disabled} () const
+\begin{DoxyCompactList}\small\item\em Check if logging is disabled. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1core_1_1Message__bus_a76c25f2b2e8aa7a9cf523b1965dd9953}{Queue\+\_\+message} (const std\+::string message)
+\begin{DoxyCompactList}\small\item\em Adds message to the m\+\_\+queuedmessages vector. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1core_1_1Message__bus_a36316ce1a4ddbd9a36c39f82e81a7f23}{Get\+\_\+message} (const int whichqueuedmessage) const
+\begin{DoxyCompactList}\small\item\em Returns a certain message from the internal message vector. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1core_1_1Message__bus_abf8cc3024d814c80935c3622a4532f7b}{Erase\+\_\+message} (const unsigned int whichmessage)
+\begin{DoxyCompactList}\small\item\em Erases a certain message from the internal message vector. \end{DoxyCompactList}\item 
+int \hyperlink{classjetfuel_1_1core_1_1Message__bus_a1703d66bdf3faac3dd7e90edec0962f4}{Get\+\_\+last\+\_\+message\+\_\+placement} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal m\+\_\+lastmessageplacement variable. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1core_1_1Message__bus_a12c40043878677d0dbb5e9897f48d08f}{Set\+\_\+last\+\_\+message\+\_\+placement} (const int lastmessageplacement)
+\begin{DoxyCompactList}\small\item\em Sets the internal m\+\_\+lastmessageplacement variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_abf8b94890bd7223f9fa3f7d861ee96ab}\label{classjetfuel_1_1core_1_1Message__bus_abf8b94890bd7223f9fa3f7d861ee96ab}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Message\+\_\+bus@{Message\+\_\+bus}}
+\index{Message\+\_\+bus@{Message\+\_\+bus}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Message\+\_\+bus()}{Message\_bus()}}
+{\footnotesize\ttfamily jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Message\+\_\+bus (\begin{DoxyParamCaption}\item[{const bool}]{disablelogging = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Construct a \hyperlink{classjetfuel_1_1core_1_1Message__bus}{Message\+\_\+bus} with or without logging. Constructs a \hyperlink{classjetfuel_1_1core_1_1Message__bus}{Message\+\_\+bus} which enables logging by default. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & disablelogging \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_a81015af8f393e028c4e9e670167aa013}\label{classjetfuel_1_1core_1_1Message__bus_a81015af8f393e028c4e9e670167aa013}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Do\+\_\+messages\+\_\+exist@{Do\+\_\+messages\+\_\+exist}}
+\index{Do\+\_\+messages\+\_\+exist@{Do\+\_\+messages\+\_\+exist}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Do\+\_\+messages\+\_\+exist()}{Do\_messages\_exist()}}
+{\footnotesize\ttfamily bool jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Do\+\_\+messages\+\_\+exist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if any queued messages exist. 
+
+Returns a boolean pertaining to whether any messages exist. N\+O\+TE\+: This R\+E\+F\+R\+E\+S\+H\+ES the S\+DL events vector, possibly deleting events that have not been processed! Make sure that U\+IS knows of all current S\+DL events in the vector before calling this function! \mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_a0b91a46865f5888bd1c3e2e3bdbc49ee}\label{classjetfuel_1_1core_1_1Message__bus_a0b91a46865f5888bd1c3e2e3bdbc49ee}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist@{Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist}}
+\index{Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist@{Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist()}{Does\_a\_UIS\_message\_exist()}}
+{\footnotesize\ttfamily bool jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Does\+\_\+a\+\_\+\+U\+I\+S\+\_\+message\+\_\+exist (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{message }\end{DoxyParamCaption})}
+
+
+
+Checks if at least one U\+IS message exists. 
+
+Checks if at least one U\+IS message exists. If so, this function will return true and the message std\+::string pointer\textquotesingle{}s value will be set to that U\+IS message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & $\ast$message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_a9bbbbea3cd97a8f8253e08b700dbd05d}\label{classjetfuel_1_1core_1_1Message__bus_a9bbbbea3cd97a8f8253e08b700dbd05d}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Does\+\_\+message\+\_\+exist@{Does\+\_\+message\+\_\+exist}}
+\index{Does\+\_\+message\+\_\+exist@{Does\+\_\+message\+\_\+exist}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Does\+\_\+message\+\_\+exist()}{Does\_message\_exist()}}
+{\footnotesize\ttfamily bool jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Does\+\_\+message\+\_\+exist (\begin{DoxyParamCaption}\item[{const std\+::string}]{message }\end{DoxyParamCaption})}
+
+
+
+Checks if a certain message exists in the message bus. 
+
+Returns a boolean pertaining to whether a message is in the message bus. If it is, it will mark the message as processed which means it can be deleted by calling Clear\+\_\+processed\+\_\+messages().
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_abf8cc3024d814c80935c3622a4532f7b}\label{classjetfuel_1_1core_1_1Message__bus_abf8cc3024d814c80935c3622a4532f7b}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Erase\+\_\+message@{Erase\+\_\+message}}
+\index{Erase\+\_\+message@{Erase\+\_\+message}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Erase\+\_\+message()}{Erase\_message()}}
+{\footnotesize\ttfamily void jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Erase\+\_\+message (\begin{DoxyParamCaption}\item[{const unsigned int}]{whichmessage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Erases a certain message from the internal message vector. 
+
+Erases a certain message from the internal message vector. If whichmessage is equal to or greater than the size of the internal message vector, then this function will throw a Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception. Otherwise, this function will erase the message specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int whichmessage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_a1703d66bdf3faac3dd7e90edec0962f4}\label{classjetfuel_1_1core_1_1Message__bus_a1703d66bdf3faac3dd7e90edec0962f4}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Get\+\_\+last\+\_\+message\+\_\+placement@{Get\+\_\+last\+\_\+message\+\_\+placement}}
+\index{Get\+\_\+last\+\_\+message\+\_\+placement@{Get\+\_\+last\+\_\+message\+\_\+placement}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Get\+\_\+last\+\_\+message\+\_\+placement()}{Get\_last\_message\_placement()}}
+{\footnotesize\ttfamily int jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Get\+\_\+last\+\_\+message\+\_\+placement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns the internal m\+\_\+lastmessageplacement variable. 
+
+Returns the internal private m\+\_\+lastmessageplacement variable, to be used for tracking the last message checked\textquotesingle{}s placement in the message vector. \mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_a36316ce1a4ddbd9a36c39f82e81a7f23}\label{classjetfuel_1_1core_1_1Message__bus_a36316ce1a4ddbd9a36c39f82e81a7f23}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Get\+\_\+message@{Get\+\_\+message}}
+\index{Get\+\_\+message@{Get\+\_\+message}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Get\+\_\+message()}{Get\_message()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Get\+\_\+message (\begin{DoxyParamCaption}\item[{const int}]{whichqueuedmessage }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns a certain message from the internal message vector. 
+
+Returns a message from the internal private message vector(m\+\_\+messages). If the int given is outside the vector\textquotesingle{}s range, this function will throw a jetfuel\+::core\+::exceptions\+:\+: Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception() exception.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & whichqueuedmessage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_a784a11d711a1df93b66416c93b9fd494}\label{classjetfuel_1_1core_1_1Message__bus_a784a11d711a1df93b66416c93b9fd494}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Get\+\_\+message\+\_\+size@{Get\+\_\+message\+\_\+size}}
+\index{Get\+\_\+message\+\_\+size@{Get\+\_\+message\+\_\+size}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Get\+\_\+message\+\_\+size()}{Get\_message\_size()}}
+{\footnotesize\ttfamily size\+\_\+t jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Get\+\_\+message\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns the size of queued messages. 
+
+This function takes the amount of messages that have not been checked via the \hyperlink{classjetfuel_1_1core_1_1Message__bus_a9bbbbea3cd97a8f8253e08b700dbd05d}{Does\+\_\+message\+\_\+exist()} function and returns the quantity of them. \mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_ae79fcd8945a1d72bbebc838be6d23a1f}\label{classjetfuel_1_1core_1_1Message__bus_ae79fcd8945a1d72bbebc838be6d23a1f}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Get\+\_\+next\+\_\+message@{Get\+\_\+next\+\_\+message}}
+\index{Get\+\_\+next\+\_\+message@{Get\+\_\+next\+\_\+message}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Get\+\_\+next\+\_\+message()}{Get\_next\_message()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Get\+\_\+next\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the next message in the queued message vector. 
+
+Gets the next message in the queued message vector. This function will return a string with the contents of \char`\"{}\+No next message\char`\"{}(without the quotes, of course) if the last message checked (both by this function and any other message checking function) is the last message in the message vector. \mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_ab80c8b51aca00ad4942ee2114fdf2fec}\label{classjetfuel_1_1core_1_1Message__bus_ab80c8b51aca00ad4942ee2114fdf2fec}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Get\+\_\+\+S\+D\+L\+\_\+event@{Get\+\_\+\+S\+D\+L\+\_\+event}}
+\index{Get\+\_\+\+S\+D\+L\+\_\+event@{Get\+\_\+\+S\+D\+L\+\_\+event}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+S\+D\+L\+\_\+event()}{Get\_SDL\_event()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Event jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Get\+\_\+\+S\+D\+L\+\_\+event (\begin{DoxyParamCaption}\item[{const int}]{place }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a S\+D\+L\+\_\+\+Event in the S\+D\+L\+\_\+\+Event vector. 
+
+Gets a S\+D\+L\+\_\+\+Event in the S\+D\+L\+\_\+\+Event vector. This will throw an Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception() if the place int given to the function is not in the S\+D\+L\+\_\+\+Event vector\textquotesingle{}s range.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & place \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_aa363b50d4ba99ae86430b5f12610fd39}\label{classjetfuel_1_1core_1_1Message__bus_aa363b50d4ba99ae86430b5f12610fd39}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Get\+\_\+\+S\+D\+L\+\_\+events\+\_\+size@{Get\+\_\+\+S\+D\+L\+\_\+events\+\_\+size}}
+\index{Get\+\_\+\+S\+D\+L\+\_\+events\+\_\+size@{Get\+\_\+\+S\+D\+L\+\_\+events\+\_\+size}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+S\+D\+L\+\_\+events\+\_\+size()}{Get\_SDL\_events\_size()}}
+{\footnotesize\ttfamily size\+\_\+t jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Get\+\_\+\+S\+D\+L\+\_\+events\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the size of queued S\+D\+L\+\_\+\+Events. 
+
+Returns the size of queued S\+D\+L\+\_\+\+Events. \mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_ad659ed1f593c8e57ec0308e8bb1f20cb}\label{classjetfuel_1_1core_1_1Message__bus_ad659ed1f593c8e57ec0308e8bb1f20cb}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Is\+\_\+logging\+\_\+disabled@{Is\+\_\+logging\+\_\+disabled}}
+\index{Is\+\_\+logging\+\_\+disabled@{Is\+\_\+logging\+\_\+disabled}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Is\+\_\+logging\+\_\+disabled()}{Is\_logging\_disabled()}}
+{\footnotesize\ttfamily bool jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Is\+\_\+logging\+\_\+disabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Check if logging is disabled. 
+
+Returns a bool pertaining to whether logging was enabled or disabled during initialization. \mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_a7a36c1ebc19327ddb554d6f8199a6965}\label{classjetfuel_1_1core_1_1Message__bus_a7a36c1ebc19327ddb554d6f8199a6965}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Post\+\_\+message@{Post\+\_\+message}}
+\index{Post\+\_\+message@{Post\+\_\+message}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Post\+\_\+message()}{Post\_message()}}
+{\footnotesize\ttfamily void jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Post\+\_\+message (\begin{DoxyParamCaption}\item[{const std\+::string}]{message }\end{DoxyParamCaption})}
+
+
+
+Posts a new unprocessed message to the message bus. 
+
+Posts a new unprocessed message from a std\+::string to the message bus to be processed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_a76c25f2b2e8aa7a9cf523b1965dd9953}\label{classjetfuel_1_1core_1_1Message__bus_a76c25f2b2e8aa7a9cf523b1965dd9953}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Queue\+\_\+message@{Queue\+\_\+message}}
+\index{Queue\+\_\+message@{Queue\+\_\+message}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Queue\+\_\+message()}{Queue\_message()}}
+{\footnotesize\ttfamily void jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Queue\+\_\+message (\begin{DoxyParamCaption}\item[{const std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Adds message to the m\+\_\+queuedmessages vector. 
+
+Adds a message to the internal private m\+\_\+queuedmessages vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_a12c40043878677d0dbb5e9897f48d08f}\label{classjetfuel_1_1core_1_1Message__bus_a12c40043878677d0dbb5e9897f48d08f}} 
+\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}!Set\+\_\+last\+\_\+message\+\_\+placement@{Set\+\_\+last\+\_\+message\+\_\+placement}}
+\index{Set\+\_\+last\+\_\+message\+\_\+placement@{Set\+\_\+last\+\_\+message\+\_\+placement}!jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+\subsubsection{\texorpdfstring{Set\+\_\+last\+\_\+message\+\_\+placement()}{Set\_last\_message\_placement()}}
+{\footnotesize\ttfamily void jetfuel\+::core\+::\+Message\+\_\+bus\+::\+Set\+\_\+last\+\_\+message\+\_\+placement (\begin{DoxyParamCaption}\item[{const int}]{lastmessageplacement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the internal m\+\_\+lastmessageplacement variable. 
+
+Sets the internal private m\+\_\+lastmessageplacement variable. This function should be used for marking the placement of the last message processed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & lastmessageplacement \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelcore/messagebus.\+h\end{DoxyCompactItemize}

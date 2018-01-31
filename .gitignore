@@ -3,3 +3,7 @@ macosdependencies/*
 itchiodeployment/windows/dependencies/*
 AndroidStudio/androiddependencies/*
 VisualStudio/"Jetfuel Game Engine"/.vs/"Jetfuel Game Engine"/v15/ipch/*
+tools/pythonhelper/build/exe.linux-x86_64-3.6/lib/*
+tools/pythonhelper/build/exe.win32-3.6/lib/*
+tools/pythonhelper/build/exe.win32-3.6/tcl/*
+tools/pythonhelper/build/exe.win32-3.6/tk/*

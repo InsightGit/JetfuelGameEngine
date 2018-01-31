@@ -1,0 +1,580 @@
+\hypertarget{classjetfuel_1_1gui_1_1Menu}{}\section{jetfuel\+:\+:gui\+:\+:Menu Class Reference}
+\label{classjetfuel_1_1gui_1_1Menu}\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+
+
+{\ttfamily \#include $<$menu.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:gui\+:\+:Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classjetfuel_1_1gui_1_1Menu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jetfuel\+:\+:gui\+:\+:Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classjetfuel_1_1gui_1_1Menu__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structjetfuel_1_1gui_1_1Menu_1_1Button__characteristics}{Button\+\_\+characteristics}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1gui_1_1Menu_a8cdd5967a5c57fd28924ac5f9c979398}{Menu} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1gui_1_1Menu_ae09bc951a919594033f94c5d827889d1}{Menu} (const unsigned int maxheight, const unsigned int columngap, const unsigned int buttongap)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} with a max height, column gap, and button gap numbers. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1gui_1_1Menu_a9610775609d7243a9b4ac0c6e57a7aa3}{Get\+\_\+max\+\_\+height} () const
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s max height for it\textquotesingle{}s buttons. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Menu_ad713403a103dc547c7ae968bb6d5e2cd}{Set\+\_\+max\+\_\+height} (const unsigned int maxheight)
+\begin{DoxyCompactList}\small\item\em Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s max height for it\textquotesingle{}s buttons. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1gui_1_1Menu_a52a091ea0c745c1e09752a1766a8f262}{Get\+\_\+column\+\_\+gap} () const
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s column gap for it\textquotesingle{}s buttons. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Menu_a584ce362f2efe836a9cfff9729eac913}{Set\+\_\+column\+\_\+gap} (const unsigned int columngap)
+\begin{DoxyCompactList}\small\item\em Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s column gap for it\textquotesingle{}s buttons. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1gui_1_1Menu_a6ce40fbb47e1d6f6602092a4f4520bee}{Get\+\_\+button\+\_\+gap} () const
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s button gap for it\textquotesingle{}s buttons. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Menu_a8b715d2e92f18b77eb78e7a8e4fc8208}{Set\+\_\+button\+\_\+gap} (const unsigned int buttongap)
+\begin{DoxyCompactList}\small\item\em Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s button gap for it\textquotesingle{}s buttons. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} \hyperlink{classjetfuel_1_1gui_1_1Menu_a6657e617308d99482c12f544fb88173c}{Get\+\_\+container\+\_\+box\+\_\+image} () const
+\begin{DoxyCompactList}\small\item\em Gets the Buttons\textquotesingle{} container box image of this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} (could be empty if not set). \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Menu_a3ddedd81c865929157751c7857716318}{Set\+\_\+container\+\_\+box\+\_\+image} (const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} containerboximage, const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+uint} containerboxborder)
+\begin{DoxyCompactList}\small\item\em Sets the Buttons\textquotesingle{} container box image of this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+uint} \hyperlink{classjetfuel_1_1gui_1_1Menu_aa8dbb384542c547ff90cdfeea1ff07eb}{Get\+\_\+container\+\_\+box\+\_\+border} () const
+\begin{DoxyCompactList}\small\item\em Gets the Buttons\textquotesingle{} contain box borders (could be empty if not set). \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Menu_a6f0162b01dbf0bd6bf65cfb3712499fc}{Add\+\_\+button} (\hyperlink{structjetfuel_1_1gui_1_1Menu_1_1Button__characteristics}{Button\+\_\+characteristics} buttonchars, const std\+::string U\+I\+Sactiontowatchfor, const std\+::string messagetosenduponclick, \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} $\ast$bus, bool dynamicallyloadimage=false)
+\begin{DoxyCompactList}\small\item\em Adds a button to this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Menu_acf4a69ccd0ee1490d02fa005c8eba1b4}{Assign\+\_\+renderer} (S\+D\+L\+\_\+\+Renderer $\ast$renderer) override
+\begin{DoxyCompactList}\small\item\em Assigns a S\+DL renderer to this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s objects. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classjetfuel_1_1gui_1_1Menu_a411940386454af4e44dc8c0c84c00215}{Get\+\_\+renderer} () override
+\begin{DoxyCompactList}\small\item\em Gets the S\+DL renderer previously assigned. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Menu_ac1aebb753feba17be808f2068ff17e74}{Get\+\_\+position} () override
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Menu_ab575d5e4ad9d86d6781012e7d1bebc9a}{Set\+\_\+position} (\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} position) override
+\begin{DoxyCompactList}\small\item\em Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Menu_a1d5c050dcad48008898eafe2d610eff6}{Get\+\_\+rect\+\_\+to\+\_\+draw} () override
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s rect to be drawn when the Draw function is called. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Menu_a17298e1cec290db84ab4e3b1b13bd614}{Check\+\_\+for\+\_\+clicks} (\hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action} U\+I\+Sinterpreterdata) override
+\begin{DoxyCompactList}\small\item\em Checks for clicks on this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s buttons. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Menu_a0355f5ee3060b1ae9d85a5c8cba3795b}{Draw} () override
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classjetfuel_1_1gui_1_1Menu_abb5c42472d2bcc1338d694ce6cb35a13}{Get\+\_\+size\+\_\+of\+\_\+buttons\+\_\+vector} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of private m\+\_\+buttons vector. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1gui_1_1Button}{Button} $\ast$ \hyperlink{classjetfuel_1_1gui_1_1Menu_a82ebabbd98cac6a1adf4ade59af57536}{Get\+\_\+button\+\_\+in\+\_\+buttons\+\_\+vector} (const size\+\_\+t whichbutton)
+\begin{DoxyCompactList}\small\item\em Gets a certain button in the private m\+\_\+buttons vector. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Menu_ac30478425fc7feea544bad7f4dbad560}{Use\+\_\+container\+\_\+boxes} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} uses container boxes. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classjetfuel_1_1gui_1_1Menu_a93d17a47970afa6375eb4d9913338481}{Get\+\_\+size\+\_\+of\+\_\+container\+\_\+boxes\+\_\+vector} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the private m\+\_\+containerboxes vector. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel\+::draw\+::\+Sprite} $\ast$ \hyperlink{classjetfuel_1_1gui_1_1Menu_a9f4a74b0103a6912e9236d1a66068aca}{Get\+\_\+box\+\_\+in\+\_\+container\+\_\+boxes\+\_\+vector} (const size\+\_\+t whichbox)
+\begin{DoxyCompactList}\small\item\em Gets a certain box in the private m\+\_\+containerboxes vector. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1gui_1_1Menu_a311940611ef799e82a1d412618c6206a}{Does\+\_\+container\+\_\+box\+\_\+exist\+\_\+inside\+\_\+vector} (const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} withwhatposition)
+\begin{DoxyCompactList}\small\item\em Checks whether a container box exists inside the private m\+\_\+containerboxes vector. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} \hyperlink{classjetfuel_1_1gui_1_1Menu_a0e59c1130398764ba7880ae38ba755e3}{Get\+\_\+button\+\_\+image\+\_\+in\+\_\+vector} (const size\+\_\+t whichimage) const
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s image from the private m\+\_\+buttonimages vector. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Menu_a265f704501aa00be0bc2059729896d55}{Push\+\_\+back\+\_\+into\+\_\+button\+\_\+image\+\_\+vector} (\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} image)
+\begin{DoxyCompactList}\small\item\em Pushes back an image into the private m\+\_\+buttonimages vector. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Menu_aa685f56941a8d70eafe30fb325abf38d}{Push\+\_\+back\+\_\+container\+\_\+box} (\hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel\+::draw\+::\+Sprite} box)
+\begin{DoxyCompactList}\small\item\em Pushes back a container box Sprite into the private m\+\_\+containerboxes vector. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1gui_1_1Menu_a1efd742a6622d24a3ed6ae6a05fcba63}{Create\+\_\+container\+\_\+box} (\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} position)
+\begin{DoxyCompactList}\small\item\em Creates a container box with a position. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} \hyperlink{classjetfuel_1_1gui_1_1Menu_a9432e513bdc7deefab9da0f596144dc5}{Determine\+\_\+button\+\_\+position} (unsigned int whichbutton)
+\begin{DoxyCompactList}\small\item\em Determines where a button should go based upon it\textquotesingle{}s button number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple collection of Buttons, with an option to have a container box image around it.
+
+Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} messagebus; \hyperlink{classjetfuel_1_1gui_1_1Menu}{jetfuel\+::gui\+::\+Menu} menu; \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} buttonimage; \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} menuboximage(\char`\"{}menubasebox.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager} U\+I\+Smanager(\&messagebus, scenemanager.\+Get\+\_\+window\+\_\+id()); \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter} U\+I\+Sinterpreter(\&messagebus); \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} textchars; \hyperlink{structjetfuel_1_1gui_1_1Menu_1_1Button__characteristics}{jetfuel\+::gui\+::\+Menu\+::\+Button\+\_\+characteristics} buttonchars; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{});
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}\+Hello Menus!\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(640,480)))\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl window! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \} scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&menu,1);
+
+if(!menu.Load\+\_\+base\+\_\+box\+\_\+image(menuboximage, \hyperlink{classjetfuel_1_1draw_1_1Color_ab75797c1cb6e4dd952037916db39b5e8}{jetfuel\+::draw\+::\+Color\+::\+White}, jetfuel\+::draw\+::\+Vector2d\+\_\+uint( 45,20)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ I\+M\+G\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+menu.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+
+textchars.\+textstring = \char`\"{}resume\char`\"{}; textchars.\+font = font;
+
+resumechars.\+buttontextchars = textchars;
+
+textchars.\+textstring = \char`\"{}quit\char`\"{};
+
+quitchars.\+buttontextchars = textchars;
+
+buttonimage.\+Set\+\_\+image(\char`\"{}button.\+png\char`\"{},\&scenemanager); resumechars.\+image = buttonimage; quitchars.\+image = buttonimage;
+
+resumebutton.\+color = \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color(0, 255, 0, 100)}; quitbutton.\+color = \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color(255, 0, 0, 100)};
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a8cdd5967a5c57fd28924ac5f9c979398}\label{classjetfuel_1_1gui_1_1Menu_a8cdd5967a5c57fd28924ac5f9c979398}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Menu()}{Menu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily jetfuel\+::gui\+::\+Menu\+::\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Default constructor. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_ae09bc951a919594033f94c5d827889d1}\label{classjetfuel_1_1gui_1_1Menu_ae09bc951a919594033f94c5d827889d1}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Menu()}{Menu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily jetfuel\+::gui\+::\+Menu\+::\+Menu (\begin{DoxyParamCaption}\item[{const unsigned int}]{maxheight,  }\item[{const unsigned int}]{columngap,  }\item[{const unsigned int}]{buttongap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} with a max height, column gap, and button gap numbers. 
+
+Constructs a \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} with a max height, column gap, and button gap numbers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a6f0162b01dbf0bd6bf65cfb3712499fc}\label{classjetfuel_1_1gui_1_1Menu_a6f0162b01dbf0bd6bf65cfb3712499fc}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Add\+\_\+button@{Add\+\_\+button}}
+\index{Add\+\_\+button@{Add\+\_\+button}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Add\+\_\+button()}{Add\_button()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Menu\+::\+Add\+\_\+button (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1gui_1_1Menu_1_1Button__characteristics}{Button\+\_\+characteristics}}]{buttonchars,  }\item[{const std\+::string}]{U\+I\+Sactiontowatchfor,  }\item[{const std\+::string}]{messagetosenduponclick,  }\item[{\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} $\ast$}]{bus,  }\item[{bool}]{dynamicallyloadimage = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Adds a button to this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}. 
+
+Adds a button, with button characteristics, an action to watch for, a meessage to send upon click, a message bus to send that message to, and finally, optionally, whether to dynamically load the button image to this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structjetfuel_1_1gui_1_1Menu_1_1Button__characteristics}{jetfuel\+::gui\+::\+Menu\+::\+Button\+\_\+characteristics}} & buttonchars \\
+\hline
+{\em std\+::string} & U\+I\+Sactiontowatchfor \\
+\hline
+{\em std\+::string} & messagetosenduponclick \\
+\hline
+{\em \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus}} & $\ast$bus \\
+\hline
+{\em bool} & dynamicallyloadimage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_acf4a69ccd0ee1490d02fa005c8eba1b4}\label{classjetfuel_1_1gui_1_1Menu_acf4a69ccd0ee1490d02fa005c8eba1b4}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Assign\+\_\+renderer@{Assign\+\_\+renderer}}
+\index{Assign\+\_\+renderer@{Assign\+\_\+renderer}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Assign\+\_\+renderer()}{Assign\_renderer()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Menu\+::\+Assign\+\_\+renderer (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Assigns a S\+DL renderer to this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s objects. 
+
+Assigns a S\+DL renderer to this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s objects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Renderer} & $\ast$renderer \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_a0d7257f197d6ffcdd89c3a99c93d1400}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a17298e1cec290db84ab4e3b1b13bd614}\label{classjetfuel_1_1gui_1_1Menu_a17298e1cec290db84ab4e3b1b13bd614}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Check\+\_\+for\+\_\+clicks@{Check\+\_\+for\+\_\+clicks}}
+\index{Check\+\_\+for\+\_\+clicks@{Check\+\_\+for\+\_\+clicks}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Check\+\_\+for\+\_\+clicks()}{Check\_for\_clicks()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Menu\+::\+Check\+\_\+for\+\_\+clicks (\begin{DoxyParamCaption}\item[{\hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action}}]{U\+I\+Sinterpreterdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks for clicks on this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s buttons. 
+
+Checks for clicks on this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s buttons.
+
+\hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel\+::control\+::\+Action} U\+I\+Sinterpreterdata 
+
+Implements \hyperlink{classjetfuel_1_1gui_1_1IClickable_aea45de37bd3beb7eb7e2e3056e4e37b3}{jetfuel\+::gui\+::\+I\+Clickable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a1efd742a6622d24a3ed6ae6a05fcba63}\label{classjetfuel_1_1gui_1_1Menu_a1efd742a6622d24a3ed6ae6a05fcba63}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Create\+\_\+container\+\_\+box@{Create\+\_\+container\+\_\+box}}
+\index{Create\+\_\+container\+\_\+box@{Create\+\_\+container\+\_\+box}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Create\+\_\+container\+\_\+box()}{Create\_container\_box()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Menu\+::\+Create\+\_\+container\+\_\+box (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Creates a container box with a position. 
+
+Creates a container box with a position. This uses the previously specified container box image to create it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a9432e513bdc7deefab9da0f596144dc5}\label{classjetfuel_1_1gui_1_1Menu_a9432e513bdc7deefab9da0f596144dc5}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Determine\+\_\+button\+\_\+position@{Determine\+\_\+button\+\_\+position}}
+\index{Determine\+\_\+button\+\_\+position@{Determine\+\_\+button\+\_\+position}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Determine\+\_\+button\+\_\+position()}{Determine\_button\_position()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} jetfuel\+::gui\+::\+Menu\+::\+Determine\+\_\+button\+\_\+position (\begin{DoxyParamCaption}\item[{unsigned int}]{whichbutton }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Determines where a button should go based upon it\textquotesingle{}s button number. 
+
+Determines where a button should go based upon it\textquotesingle{}s button number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int whichbutton \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a311940611ef799e82a1d412618c6206a}\label{classjetfuel_1_1gui_1_1Menu_a311940611ef799e82a1d412618c6206a}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Does\+\_\+container\+\_\+box\+\_\+exist\+\_\+inside\+\_\+vector@{Does\+\_\+container\+\_\+box\+\_\+exist\+\_\+inside\+\_\+vector}}
+\index{Does\+\_\+container\+\_\+box\+\_\+exist\+\_\+inside\+\_\+vector@{Does\+\_\+container\+\_\+box\+\_\+exist\+\_\+inside\+\_\+vector}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Does\+\_\+container\+\_\+box\+\_\+exist\+\_\+inside\+\_\+vector()}{Does\_container\_box\_exist\_inside\_vector()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Menu\+::\+Does\+\_\+container\+\_\+box\+\_\+exist\+\_\+inside\+\_\+vector (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int}}]{withwhatposition }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks whether a container box exists inside the private m\+\_\+containerboxes vector. 
+
+Checks whether a container box exists inside the private m\+\_\+containerboxes vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & withwhatposition \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a0355f5ee3060b1ae9d85a5c8cba3795b}\label{classjetfuel_1_1gui_1_1Menu_a0355f5ee3060b1ae9d85a5c8cba3795b}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Draw@{Draw}}
+\index{Draw@{Draw}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Menu\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} on the screen. 
+
+Draws this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} on the screen. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Drawable_a1a072070322965ce9411ee6e7c311c56}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a9f4a74b0103a6912e9236d1a66068aca}\label{classjetfuel_1_1gui_1_1Menu_a9f4a74b0103a6912e9236d1a66068aca}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+box\+\_\+in\+\_\+container\+\_\+boxes\+\_\+vector@{Get\+\_\+box\+\_\+in\+\_\+container\+\_\+boxes\+\_\+vector}}
+\index{Get\+\_\+box\+\_\+in\+\_\+container\+\_\+boxes\+\_\+vector@{Get\+\_\+box\+\_\+in\+\_\+container\+\_\+boxes\+\_\+vector}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+box\+\_\+in\+\_\+container\+\_\+boxes\+\_\+vector()}{Get\_box\_in\_container\_boxes\_vector()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel\+::draw\+::\+Sprite}$\ast$ jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+box\+\_\+in\+\_\+container\+\_\+boxes\+\_\+vector (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{whichbox }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets a certain box in the private m\+\_\+containerboxes vector. 
+
+Gets a certain box in the private m\+\_\+containerboxes vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & which \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a6ce40fbb47e1d6f6602092a4f4520bee}\label{classjetfuel_1_1gui_1_1Menu_a6ce40fbb47e1d6f6602092a4f4520bee}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+button\+\_\+gap@{Get\+\_\+button\+\_\+gap}}
+\index{Get\+\_\+button\+\_\+gap@{Get\+\_\+button\+\_\+gap}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+button\+\_\+gap()}{Get\_button\_gap()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+button\+\_\+gap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s button gap for it\textquotesingle{}s buttons. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s button gap for it\textquotesingle{}s buttons. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a0e59c1130398764ba7880ae38ba755e3}\label{classjetfuel_1_1gui_1_1Menu_a0e59c1130398764ba7880ae38ba755e3}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+button\+\_\+image\+\_\+in\+\_\+vector@{Get\+\_\+button\+\_\+image\+\_\+in\+\_\+vector}}
+\index{Get\+\_\+button\+\_\+image\+\_\+in\+\_\+vector@{Get\+\_\+button\+\_\+image\+\_\+in\+\_\+vector}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+button\+\_\+image\+\_\+in\+\_\+vector()}{Get\_button\_image\_in\_vector()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+button\+\_\+image\+\_\+in\+\_\+vector (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{whichimage }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets a \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s image from the private m\+\_\+buttonimages vector. 
+
+Gets a \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}\textquotesingle{}s image from the private m\+\_\+buttonimages vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & whichimage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a82ebabbd98cac6a1adf4ade59af57536}\label{classjetfuel_1_1gui_1_1Menu_a82ebabbd98cac6a1adf4ade59af57536}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+button\+\_\+in\+\_\+buttons\+\_\+vector@{Get\+\_\+button\+\_\+in\+\_\+buttons\+\_\+vector}}
+\index{Get\+\_\+button\+\_\+in\+\_\+buttons\+\_\+vector@{Get\+\_\+button\+\_\+in\+\_\+buttons\+\_\+vector}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+button\+\_\+in\+\_\+buttons\+\_\+vector()}{Get\_button\_in\_buttons\_vector()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1gui_1_1Button}{Button}$\ast$ jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+button\+\_\+in\+\_\+buttons\+\_\+vector (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{whichbutton }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets a certain button in the private m\+\_\+buttons vector. 
+
+Gets a certain button in the private m\+\_\+buttons vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & whichbutton \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a52a091ea0c745c1e09752a1766a8f262}\label{classjetfuel_1_1gui_1_1Menu_a52a091ea0c745c1e09752a1766a8f262}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+column\+\_\+gap@{Get\+\_\+column\+\_\+gap}}
+\index{Get\+\_\+column\+\_\+gap@{Get\+\_\+column\+\_\+gap}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+column\+\_\+gap()}{Get\_column\_gap()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+column\+\_\+gap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s column gap for it\textquotesingle{}s buttons. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s column gap for it\textquotesingle{}s buttons. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_aa8dbb384542c547ff90cdfeea1ff07eb}\label{classjetfuel_1_1gui_1_1Menu_aa8dbb384542c547ff90cdfeea1ff07eb}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+container\+\_\+box\+\_\+border@{Get\+\_\+container\+\_\+box\+\_\+border}}
+\index{Get\+\_\+container\+\_\+box\+\_\+border@{Get\+\_\+container\+\_\+box\+\_\+border}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+container\+\_\+box\+\_\+border()}{Get\_container\_box\_border()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+uint} jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+container\+\_\+box\+\_\+border (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Buttons\textquotesingle{} contain box borders (could be empty if not set). 
+
+Gets the Buttons\textquotesingle{} contain box borders (could be empty if not set). \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a6657e617308d99482c12f544fb88173c}\label{classjetfuel_1_1gui_1_1Menu_a6657e617308d99482c12f544fb88173c}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+container\+\_\+box\+\_\+image@{Get\+\_\+container\+\_\+box\+\_\+image}}
+\index{Get\+\_\+container\+\_\+box\+\_\+image@{Get\+\_\+container\+\_\+box\+\_\+image}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+container\+\_\+box\+\_\+image()}{Get\_container\_box\_image()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+container\+\_\+box\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Buttons\textquotesingle{} container box image of this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} (could be empty if not set). 
+
+Gets the Buttons\textquotesingle{} container box image of this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} (could be empty if not set). \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a9610775609d7243a9b4ac0c6e57a7aa3}\label{classjetfuel_1_1gui_1_1Menu_a9610775609d7243a9b4ac0c6e57a7aa3}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+max\+\_\+height@{Get\+\_\+max\+\_\+height}}
+\index{Get\+\_\+max\+\_\+height@{Get\+\_\+max\+\_\+height}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+max\+\_\+height()}{Get\_max\_height()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+max\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s max height for it\textquotesingle{}s buttons. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s max height for it\textquotesingle{}s buttons. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_ac1aebb753feba17be808f2068ff17e74}\label{classjetfuel_1_1gui_1_1Menu_ac1aebb753feba17be808f2068ff17e74}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+position@{Get\+\_\+position}}
+\index{Get\+\_\+position@{Get\+\_\+position}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+position()}{Get\_position()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s position. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s position. 
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_ae7ebd30d66db2c8a5d5371cbcf0023fc}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a1d5c050dcad48008898eafe2d610eff6}\label{classjetfuel_1_1gui_1_1Menu_a1d5c050dcad48008898eafe2d610eff6}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}}
+\index{Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+rect\+\_\+to\+\_\+draw()}{Get\_rect\_to\_draw()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d\+\_\+int} jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+rect\+\_\+to\+\_\+draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s rect to be drawn when the Draw function is called. 
+
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s rect to be drawn when the Draw function is called. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Rectangle__interface_a03fd3b6842ab7b3065379caec407296f}{jetfuel\+::draw\+::\+Rectangle\+\_\+interface}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a411940386454af4e44dc8c0c84c00215}\label{classjetfuel_1_1gui_1_1Menu_a411940386454af4e44dc8c0c84c00215}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+renderer@{Get\+\_\+renderer}}
+\index{Get\+\_\+renderer@{Get\+\_\+renderer}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+renderer()}{Get\_renderer()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the S\+DL renderer previously assigned. 
+
+Gets the S\+DL renderer previously assigned. 
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_a6bbda81a7fbd33c388039ecaeb53c278}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_abb5c42472d2bcc1338d694ce6cb35a13}\label{classjetfuel_1_1gui_1_1Menu_abb5c42472d2bcc1338d694ce6cb35a13}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+size\+\_\+of\+\_\+buttons\+\_\+vector@{Get\+\_\+size\+\_\+of\+\_\+buttons\+\_\+vector}}
+\index{Get\+\_\+size\+\_\+of\+\_\+buttons\+\_\+vector@{Get\+\_\+size\+\_\+of\+\_\+buttons\+\_\+vector}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+size\+\_\+of\+\_\+buttons\+\_\+vector()}{Get\_size\_of\_buttons\_vector()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+size\+\_\+of\+\_\+buttons\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the size of private m\+\_\+buttons vector. 
+
+Gets the size of private m\+\_\+buttons vector. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a93d17a47970afa6375eb4d9913338481}\label{classjetfuel_1_1gui_1_1Menu_a93d17a47970afa6375eb4d9913338481}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Get\+\_\+size\+\_\+of\+\_\+container\+\_\+boxes\+\_\+vector@{Get\+\_\+size\+\_\+of\+\_\+container\+\_\+boxes\+\_\+vector}}
+\index{Get\+\_\+size\+\_\+of\+\_\+container\+\_\+boxes\+\_\+vector@{Get\+\_\+size\+\_\+of\+\_\+container\+\_\+boxes\+\_\+vector}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Get\+\_\+size\+\_\+of\+\_\+container\+\_\+boxes\+\_\+vector()}{Get\_size\_of\_container\_boxes\_vector()}}
+{\footnotesize\ttfamily size\+\_\+t jetfuel\+::gui\+::\+Menu\+::\+Get\+\_\+size\+\_\+of\+\_\+container\+\_\+boxes\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the size of the private m\+\_\+containerboxes vector. 
+
+Gets the size of the private m\+\_\+containerboxes vector. \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_aa685f56941a8d70eafe30fb325abf38d}\label{classjetfuel_1_1gui_1_1Menu_aa685f56941a8d70eafe30fb325abf38d}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Push\+\_\+back\+\_\+container\+\_\+box@{Push\+\_\+back\+\_\+container\+\_\+box}}
+\index{Push\+\_\+back\+\_\+container\+\_\+box@{Push\+\_\+back\+\_\+container\+\_\+box}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Push\+\_\+back\+\_\+container\+\_\+box()}{Push\_back\_container\_box()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Menu\+::\+Push\+\_\+back\+\_\+container\+\_\+box (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel\+::draw\+::\+Sprite}}]{box }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Pushes back a container box Sprite into the private m\+\_\+containerboxes vector. 
+
+Pushes back a container box Sprite into the private m\+\_\+containerboxes vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel\+::draw\+::\+Sprite}} & box \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a265f704501aa00be0bc2059729896d55}\label{classjetfuel_1_1gui_1_1Menu_a265f704501aa00be0bc2059729896d55}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Push\+\_\+back\+\_\+into\+\_\+button\+\_\+image\+\_\+vector@{Push\+\_\+back\+\_\+into\+\_\+button\+\_\+image\+\_\+vector}}
+\index{Push\+\_\+back\+\_\+into\+\_\+button\+\_\+image\+\_\+vector@{Push\+\_\+back\+\_\+into\+\_\+button\+\_\+image\+\_\+vector}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Push\+\_\+back\+\_\+into\+\_\+button\+\_\+image\+\_\+vector()}{Push\_back\_into\_button\_image\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Menu\+::\+Push\+\_\+back\+\_\+into\+\_\+button\+\_\+image\+\_\+vector (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Pushes back an image into the private m\+\_\+buttonimages vector. 
+
+Pushes back an image into the private m\+\_\+buttonimages vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a8b715d2e92f18b77eb78e7a8e4fc8208}\label{classjetfuel_1_1gui_1_1Menu_a8b715d2e92f18b77eb78e7a8e4fc8208}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Set\+\_\+button\+\_\+gap@{Set\+\_\+button\+\_\+gap}}
+\index{Set\+\_\+button\+\_\+gap@{Set\+\_\+button\+\_\+gap}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Set\+\_\+button\+\_\+gap()}{Set\_button\_gap()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Menu\+::\+Set\+\_\+button\+\_\+gap (\begin{DoxyParamCaption}\item[{const unsigned int}]{buttongap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s button gap for it\textquotesingle{}s buttons. 
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s button gap for it\textquotesingle{}s buttons.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int buttongap \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a584ce362f2efe836a9cfff9729eac913}\label{classjetfuel_1_1gui_1_1Menu_a584ce362f2efe836a9cfff9729eac913}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Set\+\_\+column\+\_\+gap@{Set\+\_\+column\+\_\+gap}}
+\index{Set\+\_\+column\+\_\+gap@{Set\+\_\+column\+\_\+gap}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Set\+\_\+column\+\_\+gap()}{Set\_column\_gap()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Menu\+::\+Set\+\_\+column\+\_\+gap (\begin{DoxyParamCaption}\item[{const unsigned int}]{columngap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s column gap for it\textquotesingle{}s buttons. 
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s column gap for it\textquotesingle{}s buttons.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int columngap \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_a3ddedd81c865929157751c7857716318}\label{classjetfuel_1_1gui_1_1Menu_a3ddedd81c865929157751c7857716318}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Set\+\_\+container\+\_\+box\+\_\+image@{Set\+\_\+container\+\_\+box\+\_\+image}}
+\index{Set\+\_\+container\+\_\+box\+\_\+image@{Set\+\_\+container\+\_\+box\+\_\+image}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Set\+\_\+container\+\_\+box\+\_\+image()}{Set\_container\_box\_image()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Menu\+::\+Set\+\_\+container\+\_\+box\+\_\+image (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}}]{containerboximage,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+uint}}]{containerboxborder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the Buttons\textquotesingle{} container box image of this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}. 
+
+Sets the Buttons\textquotesingle{} container box image of this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} with the border sizes of that image passed in. This image would contain the Buttons and be rendered below them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}} & containerboximage \\
+\hline
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+uint} & containerboxborder \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_ad713403a103dc547c7ae968bb6d5e2cd}\label{classjetfuel_1_1gui_1_1Menu_ad713403a103dc547c7ae968bb6d5e2cd}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Set\+\_\+max\+\_\+height@{Set\+\_\+max\+\_\+height}}
+\index{Set\+\_\+max\+\_\+height@{Set\+\_\+max\+\_\+height}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Set\+\_\+max\+\_\+height()}{Set\_max\_height()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Menu\+::\+Set\+\_\+max\+\_\+height (\begin{DoxyParamCaption}\item[{const unsigned int}]{maxheight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s max height for it\textquotesingle{}s buttons. 
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s max height for it\textquotesingle{}s buttons.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int maxheight \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_ab575d5e4ad9d86d6781012e7d1bebc9a}\label{classjetfuel_1_1gui_1_1Menu_ab575d5e4ad9d86d6781012e7d1bebc9a}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Set\+\_\+position@{Set\+\_\+position}}
+\index{Set\+\_\+position@{Set\+\_\+position}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Set\+\_\+position()}{Set\_position()}}
+{\footnotesize\ttfamily void jetfuel\+::gui\+::\+Menu\+::\+Set\+\_\+position (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s position. 
+
+Sets this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu}\textquotesingle{}s position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classjetfuel_1_1draw_1_1Drawable_afdd035afe40c706459a6c9df813bcce6}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Menu_ac30478425fc7feea544bad7f4dbad560}\label{classjetfuel_1_1gui_1_1Menu_ac30478425fc7feea544bad7f4dbad560}} 
+\index{jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}!Use\+\_\+container\+\_\+boxes@{Use\+\_\+container\+\_\+boxes}}
+\index{Use\+\_\+container\+\_\+boxes@{Use\+\_\+container\+\_\+boxes}!jetfuel\+::gui\+::\+Menu@{jetfuel\+::gui\+::\+Menu}}
+\subsubsection{\texorpdfstring{Use\+\_\+container\+\_\+boxes()}{Use\_container\_boxes()}}
+{\footnotesize\ttfamily bool jetfuel\+::gui\+::\+Menu\+::\+Use\+\_\+container\+\_\+boxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} uses container boxes. 
+
+Returns whether this \hyperlink{classjetfuel_1_1gui_1_1Menu}{Menu} uses container boxes. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelgui/menu.\+h\end{DoxyCompactItemize}

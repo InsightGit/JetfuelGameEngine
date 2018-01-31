@@ -1,0 +1,28 @@
+\hypertarget{classjetfuel_1_1locale_1_1String__locale__}{}\section{jetfuel\+:\+:locale\+:\+:String\+\_\+locale\+\_\+ Class Reference}
+\label{classjetfuel_1_1locale_1_1String__locale__}\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+}}
+
+
+\subsection{Detailed Description}
+A localization manager using a collection of String\+\_\+locale\+\_\+files.
+
+Code Example\+:
+
+J\+S\+ON(English\+Locale.\+json)\+:
+
+\{ \char`\"{}strings\char`\"{}\+: \mbox{[} \{ \char`\"{}stringid\char`\"{}\+: \char`\"{}checkboxlabel\char`\"{}, \char`\"{}string\char`\"{} \+: \char`\"{}click it i guess\char`\"{} \} \mbox{]} \}
+
+C++\+:
+
+\hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file} englishlocalefile; \hyperlink{classjetfuel_1_1locale_1_1String__locale__manager}{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+manager} localemanager; std\+::string error;
+
+if(!englishlocalefile.Load\+\_\+string\+\_\+locale\+\_\+file(\char`\"{}\+English\+Locale.\+json\char`\"{}, \char`\"{}english\char`\"{}, \&error))\{ std\+::cerr $<$$<$ \char`\"{}\+Could not load English\+Locale J\+S\+O\+N file! \char`\"{} $<$$<$ \char`\"{}\+Error was\+: \char`\"{} $<$$<$ error $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; return 1; \}
+
+localemanager.\+Load\+\_\+string\+\_\+locale\+\_\+file(englishlocalefile);
+
+localemanager.\+Set\+\_\+active\+\_\+locale(\char`\"{}english\char`\"{});
+
+std\+::cout $<$$<$ \char`\"{}\+Hello in\char`\"{} $<$$<$ localemanager.\+Get\+\_\+active\+\_\+locale() $<$$<$ \char`\"{} is \char`\"{} $<$$<$ localemanager.\+Get\+\_\+string\+\_\+from\+\_\+id(\char`\"{}hello\char`\"{}); 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuellocale/stringlocalemanager.\+h\end{DoxyCompactItemize}

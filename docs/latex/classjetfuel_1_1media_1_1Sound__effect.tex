@@ -1,0 +1,255 @@
+\hypertarget{classjetfuel_1_1media_1_1Sound__effect}{}\section{jetfuel\+:\+:media\+:\+:Sound\+\_\+effect Class Reference}
+\label{classjetfuel_1_1media_1_1Sound__effect}\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+
+
+{\ttfamily \#include $<$soundeffect.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:media\+:\+:Sound\+\_\+effect\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classjetfuel_1_1media_1_1Sound__effect__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jetfuel\+:\+:media\+:\+:Sound\+\_\+effect\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classjetfuel_1_1media_1_1Sound__effect__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1media_1_1Sound__effect_a56c5c69d077a4cac1a062b391a9860fc}{Sound\+\_\+effect} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a105547b1d854a256e90a08fcd6098bdf}{$\sim$\+Sound\+\_\+effect} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1media_1_1Sound__effect_ab172a8c2a1057970e343dfe81aeb208f}{Get\+\_\+loaded\+\_\+audio\+\_\+file\+\_\+path} () const
+\begin{DoxyCompactList}\small\item\em Gets the loaded audio\textquotesingle{}s file path. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a1ad701cd2318e960bde2ab063aeabb75}{Load\+\_\+audio\+\_\+file} (const std\+::string musicfilepath) override
+\begin{DoxyCompactList}\small\item\em Loads a sound effect file from a given file path. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1media_1_1Sound__effect_aa0fcc463543949dfe45efb41b8df93db}{Get\+\_\+times\+\_\+to\+\_\+repeat} () const
+\begin{DoxyCompactList}\small\item\em Gets the times to repeat this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a79c40daad35fcce6cd7553747273f457}{Set\+\_\+times\+\_\+to\+\_\+repeat} (const unsigned int repeattimes)
+\begin{DoxyCompactList}\small\item\em Sets the times to repeat this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a206d3653259cc854fd80fa44a9d333c4}{Play} () override
+\begin{DoxyCompactList}\small\item\em Plays this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a5fa5bb67a349bac545f233a6aa8a030d}{Pause} () override
+\begin{DoxyCompactList}\small\item\em Pauses this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a8849f5324b2c049c63ed3a0bbbd88467}{Resume} () override
+\begin{DoxyCompactList}\small\item\em Resumes this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classjetfuel_1_1media_1_1Sound__effect_ae81630f796281931d9c2f1dc3a0e9319}{Is\+\_\+sound\+\_\+effect\+\_\+or\+\_\+music\+\_\+playing} ()
+\begin{DoxyCompactList}\small\item\em Returns whether A\+NY sound is playing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a6f646b304bc3617e027a4d503e4124db}{Is\+\_\+sound\+\_\+effect\+\_\+loaded} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} is loaded. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1media_1_1Sound__effect_abb1c6c0b2eba2d167b654af7cbcd6d24}{Play\+\_\+sound\+\_\+effect} ()
+\begin{DoxyCompactList}\small\item\em Plays this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} using S\+D\+L\+\_\+mixer. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Sound__effect_a76b2b58d4ca2c1fe9988a4cdc4f96a3d}{Pause\+\_\+sound\+\_\+effect} ()
+\begin{DoxyCompactList}\small\item\em Pauses this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} using S\+D\+L\+\_\+mixer. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1media_1_1Sound__effect_aa810e2cf5bd4f147b81755690c96f203}{Resume\+\_\+sound\+\_\+effect} ()
+\begin{DoxyCompactList}\small\item\em Resumes this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} using S\+D\+L\+\_\+mixer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A sound playback class for short(and sweet) audio files, which supports W\+AV(.wav), A\+I\+FF(.aiff), V\+OC(.voc), M\+OD(.mod, .xm, .s3m, and more), M\+I\+DI(.mid), Ogg\+Vorbis(.ogg), M\+P3(.mp3), and F\+L\+AC(.flac).
+
+Code Example\+:
+
+\hyperlink{classjetfuel_1_1media_1_1Sound__effect}{jetfuel\+::media\+::\+Sound\+\_\+effect} sfx;
+
+if(sfx.\+load\+\_\+audio\+\_\+file(\char`\"{}\+S\+F\+X.\+ogg\char`\"{}))\{ std\+::cout $<$$<$ \char`\"{}\+Unable to load S\+F\+X.\+ogg Error\+:\char`\"{} $<$$<$ Mix\+\_\+\+Get\+Error() $<$$<$ std\+:endl; return 1; \}
+
+sfx.\+Play(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_a56c5c69d077a4cac1a062b391a9860fc}\label{classjetfuel_1_1media_1_1Sound__effect_a56c5c69d077a4cac1a062b391a9860fc}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Sound\+\_\+effect@{Sound\+\_\+effect}}
+\index{Sound\+\_\+effect@{Sound\+\_\+effect}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Sound\+\_\+effect()}{Sound\_effect()}}
+{\footnotesize\ttfamily jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Sound\+\_\+effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Default constructor. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_a105547b1d854a256e90a08fcd6098bdf}\label{classjetfuel_1_1media_1_1Sound__effect_a105547b1d854a256e90a08fcd6098bdf}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!````~Sound\+\_\+effect@{$\sim$\+Sound\+\_\+effect}}
+\index{````~Sound\+\_\+effect@{$\sim$\+Sound\+\_\+effect}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{$\sim$\+Sound\+\_\+effect()}{~Sound\_effect()}}
+{\footnotesize\ttfamily virtual jetfuel\+::media\+::\+Sound\+\_\+effect\+::$\sim$\+Sound\+\_\+effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor. 
+
+Virtual destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_ab172a8c2a1057970e343dfe81aeb208f}\label{classjetfuel_1_1media_1_1Sound__effect_ab172a8c2a1057970e343dfe81aeb208f}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Get\+\_\+loaded\+\_\+audio\+\_\+file\+\_\+path@{Get\+\_\+loaded\+\_\+audio\+\_\+file\+\_\+path}}
+\index{Get\+\_\+loaded\+\_\+audio\+\_\+file\+\_\+path@{Get\+\_\+loaded\+\_\+audio\+\_\+file\+\_\+path}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Get\+\_\+loaded\+\_\+audio\+\_\+file\+\_\+path()}{Get\_loaded\_audio\_file\_path()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Get\+\_\+loaded\+\_\+audio\+\_\+file\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the loaded audio\textquotesingle{}s file path. 
+
+Gets the loaded audio\textquotesingle{}s file path. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_aa0fcc463543949dfe45efb41b8df93db}\label{classjetfuel_1_1media_1_1Sound__effect_aa0fcc463543949dfe45efb41b8df93db}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Get\+\_\+times\+\_\+to\+\_\+repeat@{Get\+\_\+times\+\_\+to\+\_\+repeat}}
+\index{Get\+\_\+times\+\_\+to\+\_\+repeat@{Get\+\_\+times\+\_\+to\+\_\+repeat}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Get\+\_\+times\+\_\+to\+\_\+repeat()}{Get\_times\_to\_repeat()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Get\+\_\+times\+\_\+to\+\_\+repeat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the times to repeat this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. 
+
+Gets the times to repeat this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_a6f646b304bc3617e027a4d503e4124db}\label{classjetfuel_1_1media_1_1Sound__effect_a6f646b304bc3617e027a4d503e4124db}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Is\+\_\+sound\+\_\+effect\+\_\+loaded@{Is\+\_\+sound\+\_\+effect\+\_\+loaded}}
+\index{Is\+\_\+sound\+\_\+effect\+\_\+loaded@{Is\+\_\+sound\+\_\+effect\+\_\+loaded}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Is\+\_\+sound\+\_\+effect\+\_\+loaded()}{Is\_sound\_effect\_loaded()}}
+{\footnotesize\ttfamily bool jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Is\+\_\+sound\+\_\+effect\+\_\+loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} is loaded. 
+
+Returns whether this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} is loaded. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_ae81630f796281931d9c2f1dc3a0e9319}\label{classjetfuel_1_1media_1_1Sound__effect_ae81630f796281931d9c2f1dc3a0e9319}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Is\+\_\+sound\+\_\+effect\+\_\+or\+\_\+music\+\_\+playing@{Is\+\_\+sound\+\_\+effect\+\_\+or\+\_\+music\+\_\+playing}}
+\index{Is\+\_\+sound\+\_\+effect\+\_\+or\+\_\+music\+\_\+playing@{Is\+\_\+sound\+\_\+effect\+\_\+or\+\_\+music\+\_\+playing}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Is\+\_\+sound\+\_\+effect\+\_\+or\+\_\+music\+\_\+playing()}{Is\_sound\_effect\_or\_music\_playing()}}
+{\footnotesize\ttfamily static bool jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Is\+\_\+sound\+\_\+effect\+\_\+or\+\_\+music\+\_\+playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns whether A\+NY sound is playing. 
+
+Returns whether A\+NY sound is playing. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_a1ad701cd2318e960bde2ab063aeabb75}\label{classjetfuel_1_1media_1_1Sound__effect_a1ad701cd2318e960bde2ab063aeabb75}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Load\+\_\+audio\+\_\+file@{Load\+\_\+audio\+\_\+file}}
+\index{Load\+\_\+audio\+\_\+file@{Load\+\_\+audio\+\_\+file}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Load\+\_\+audio\+\_\+file()}{Load\_audio\_file()}}
+{\footnotesize\ttfamily bool jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Load\+\_\+audio\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string}]{musicfilepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Loads a sound effect file from a given file path. 
+
+Loads a sound effect file from a given file path.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & musicfilepath \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classjetfuel_1_1media_1_1Sound_ab18ff9b8dd2001fa11b17649a6a3defb}{jetfuel\+::media\+::\+Sound}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_a5fa5bb67a349bac545f233a6aa8a030d}\label{classjetfuel_1_1media_1_1Sound__effect_a5fa5bb67a349bac545f233a6aa8a030d}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Pause@{Pause}}
+\index{Pause@{Pause}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pauses this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. 
+
+Pauses this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. 
+
+Implements \hyperlink{classjetfuel_1_1media_1_1Sound_adb9cd45e23e6224760051e579aeefa7f}{jetfuel\+::media\+::\+Sound}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_a76b2b58d4ca2c1fe9988a4cdc4f96a3d}\label{classjetfuel_1_1media_1_1Sound__effect_a76b2b58d4ca2c1fe9988a4cdc4f96a3d}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Pause\+\_\+sound\+\_\+effect@{Pause\+\_\+sound\+\_\+effect}}
+\index{Pause\+\_\+sound\+\_\+effect@{Pause\+\_\+sound\+\_\+effect}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Pause\+\_\+sound\+\_\+effect()}{Pause\_sound\_effect()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Pause\+\_\+sound\+\_\+effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Pauses this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} using S\+D\+L\+\_\+mixer. 
+
+Pauses this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} using S\+D\+L\+\_\+mixer. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_a206d3653259cc854fd80fa44a9d333c4}\label{classjetfuel_1_1media_1_1Sound__effect_a206d3653259cc854fd80fa44a9d333c4}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Play@{Play}}
+\index{Play@{Play}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily bool jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Plays this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. 
+
+Plays this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. 
+
+Implements \hyperlink{classjetfuel_1_1media_1_1Sound_a8861a6671ce039522179d61085f240c8}{jetfuel\+::media\+::\+Sound}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_abb1c6c0b2eba2d167b654af7cbcd6d24}\label{classjetfuel_1_1media_1_1Sound__effect_abb1c6c0b2eba2d167b654af7cbcd6d24}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Play\+\_\+sound\+\_\+effect@{Play\+\_\+sound\+\_\+effect}}
+\index{Play\+\_\+sound\+\_\+effect@{Play\+\_\+sound\+\_\+effect}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Play\+\_\+sound\+\_\+effect()}{Play\_sound\_effect()}}
+{\footnotesize\ttfamily bool jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Play\+\_\+sound\+\_\+effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Plays this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} using S\+D\+L\+\_\+mixer. 
+
+Plays this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} using S\+D\+L\+\_\+mixer. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_a8849f5324b2c049c63ed3a0bbbd88467}\label{classjetfuel_1_1media_1_1Sound__effect_a8849f5324b2c049c63ed3a0bbbd88467}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Resume@{Resume}}
+\index{Resume@{Resume}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Resume()}{Resume()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resumes this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. 
+
+Resumes this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. 
+
+Implements \hyperlink{classjetfuel_1_1media_1_1Sound_af781fccd8ebb1305e97dc8f6b7c828dc}{jetfuel\+::media\+::\+Sound}.
+
+\mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_aa810e2cf5bd4f147b81755690c96f203}\label{classjetfuel_1_1media_1_1Sound__effect_aa810e2cf5bd4f147b81755690c96f203}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Resume\+\_\+sound\+\_\+effect@{Resume\+\_\+sound\+\_\+effect}}
+\index{Resume\+\_\+sound\+\_\+effect@{Resume\+\_\+sound\+\_\+effect}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Resume\+\_\+sound\+\_\+effect()}{Resume\_sound\_effect()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Resume\+\_\+sound\+\_\+effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Resumes this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} using S\+D\+L\+\_\+mixer. 
+
+Resumes this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect} using S\+D\+L\+\_\+mixer. \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_a79c40daad35fcce6cd7553747273f457}\label{classjetfuel_1_1media_1_1Sound__effect_a79c40daad35fcce6cd7553747273f457}} 
+\index{jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}!Set\+\_\+times\+\_\+to\+\_\+repeat@{Set\+\_\+times\+\_\+to\+\_\+repeat}}
+\index{Set\+\_\+times\+\_\+to\+\_\+repeat@{Set\+\_\+times\+\_\+to\+\_\+repeat}!jetfuel\+::media\+::\+Sound\+\_\+effect@{jetfuel\+::media\+::\+Sound\+\_\+effect}}
+\subsubsection{\texorpdfstring{Set\+\_\+times\+\_\+to\+\_\+repeat()}{Set\_times\_to\_repeat()}}
+{\footnotesize\ttfamily void jetfuel\+::media\+::\+Sound\+\_\+effect\+::\+Set\+\_\+times\+\_\+to\+\_\+repeat (\begin{DoxyParamCaption}\item[{const unsigned int}]{repeattimes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the times to repeat this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}. 
+
+Sets the times to repeat this \hyperlink{classjetfuel_1_1media_1_1Sound__effect}{Sound\+\_\+effect}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int repeattimes \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfuelmedia/soundeffect.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,833 @@
+\hypertarget{classjetfuel_1_1draw_1_1Text}{}\section{jetfuel\+:\+:draw\+:\+:Text Class Reference}
+\label{classjetfuel_1_1draw_1_1Text}\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+
+
+{\ttfamily \#include $<$text.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:draw\+:\+:Text\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classjetfuel_1_1draw_1_1Text__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jetfuel\+:\+:draw\+:\+:Text\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classjetfuel_1_1draw_1_1Text__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{Text\+\_\+characteristics}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a1463ab136e7df19672fe6d6960c271c4}\label{classjetfuel_1_1draw_1_1Text_a1463ab136e7df19672fe6d6960c271c4}} 
+enum {\bfseries Render\+\_\+mode} \+: unsigned int \{ {\bfseries Solid}, 
+{\bfseries Shaded}, 
+{\bfseries Blended}
+ \}
+\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a8c292f81616c8749343c52f8568de77f}\label{classjetfuel_1_1draw_1_1Text_a8c292f81616c8749343c52f8568de77f}} 
+enum {\bfseries Font\+\_\+hinting} \{ {\bfseries Normal}, 
+{\bfseries Light}, 
+{\bfseries Mono}, 
+{\bfseries None}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1draw_1_1Text_a8b6aed199242a7c69fda591d8769ced9}{Text} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Text_a792d23b62a66af2558bc7165e5419992}{Text} (\hyperlink{classjetfuel_1_1draw_1_1Font}{Font} font)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object with a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}. \end{DoxyCompactList}\item 
+Render\+\_\+mode \hyperlink{classjetfuel_1_1draw_1_1Text_a35a5ad06ffaf6b6b2f18b0c1b02039ef}{Get\+\_\+render\+\_\+mode} () const
+\begin{DoxyCompactList}\small\item\em Gets the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} render mode. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a428e0511b13deed817144612b5c1f44a}{Set\+\_\+render\+\_\+mode} (Render\+\_\+mode rendermode)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} render mode. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1draw_1_1Text_aff24355889167e97455750066ff8ded0}{Get\+\_\+string} () const
+\begin{DoxyCompactList}\small\item\em Gets the text\textquotesingle{}s string to display to the user. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_aaf138731ac6e2ba388df2add9ea15a9a}{Set\+\_\+string} (const std\+::string string)
+\begin{DoxyCompactList}\small\item\em Sets the string to display to the user. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Color}{Color} \hyperlink{classjetfuel_1_1draw_1_1Text_a213dcf0fc15038eeaca73547d6c252db}{Get\+\_\+text\+\_\+color} () const
+\begin{DoxyCompactList}\small\item\em Gets the text\textquotesingle{}s color to display to the user. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a7d04c15abedfeb98a1154d7e34d4d630}{Set\+\_\+text\+\_\+color} (const \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} textcolor)
+\begin{DoxyCompactList}\small\item\em Sets the text\textquotesingle{}s color to display to the user. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Color}{Color} \hyperlink{classjetfuel_1_1draw_1_1Text_a47ce107c33da03675d39e7550f7c44fc}{Get\+\_\+background\+\_\+color} () const
+\begin{DoxyCompactList}\small\item\em Gets the background color of the text. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_af1eaae041e0f763a95ca6e87aa7c3d7e}{Set\+\_\+background\+\_\+color} (const \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} backgroundcolor)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the text. \end{DoxyCompactList}\item 
+int \hyperlink{classjetfuel_1_1draw_1_1Text_a7d5f85f555e61f47a5a418399ba8e72b}{Get\+\_\+font\+\_\+outline\+\_\+width} () const
+\begin{DoxyCompactList}\small\item\em Gets the font\textquotesingle{}s outline width. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_ab8b3959fd37cb3cf9fd919ccdcaa09f3}{Set\+\_\+font\+\_\+outline\+\_\+width} (const int width)
+\begin{DoxyCompactList}\small\item\em Sets the font\textquotesingle{}s outline width. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Text_a35deab301fc970a0f23e490156720776}{Get\+\_\+kerning\+\_\+status} ()
+\begin{DoxyCompactList}\small\item\em Gets the font\textquotesingle{}s kerning status. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_afdd2ce09d49b3df880939af1a5d5053c}{Set\+\_\+kerning\+\_\+status} (const bool kerningon)
+\begin{DoxyCompactList}\small\item\em Sets the font\textquotesingle{}s kerning status. \end{DoxyCompactList}\item 
+int \hyperlink{classjetfuel_1_1draw_1_1Text_ade8bf8912e12bfae87a47f15e312f3f0}{Get\+\_\+font\+\_\+style} () const
+\begin{DoxyCompactList}\small\item\em Gets the font\textquotesingle{}s style. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_aec048bedd8cacb8523c4b2a3121f4179}{Set\+\_\+font\+\_\+style} (const int fontstyle)
+\begin{DoxyCompactList}\small\item\em Sets the font\textquotesingle{}s style. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1draw_1_1Text_aeb691f0eb368473f5691895212daf431}{Get\+\_\+font\+\_\+size} () const
+\begin{DoxyCompactList}\small\item\em Gets the font\textquotesingle{}s size (in points). \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a488868c8aa0fcc692cd7a37b8abe13f2}{Set\+\_\+font\+\_\+size} (const unsigned int fontsize)
+\begin{DoxyCompactList}\small\item\em Sets the font\textquotesingle{}s size (in points). \end{DoxyCompactList}\item 
+Font\+\_\+hinting \hyperlink{classjetfuel_1_1draw_1_1Text_af9719fdfc0d04106843a69674df3d2c7}{Get\+\_\+font\+\_\+hinting} ()
+\begin{DoxyCompactList}\small\item\em Gets the font\textquotesingle{}s hinting. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_ada69de19f3ea2373120e37f9f61eeb6d}{Set\+\_\+font\+\_\+hinting} (Font\+\_\+hinting fonthinting)
+\begin{DoxyCompactList}\small\item\em Sets the font\textquotesingle{}s hinting. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a8b8f2cd4cda3d31098cc0f5535fb7f7a}{Set\+\_\+font} (\hyperlink{classjetfuel_1_1draw_1_1Font}{Font} font)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} of this \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object after construction. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d\+\_\+int} \hyperlink{classjetfuel_1_1draw_1_1Text_a362996e996d471729944eebdff1f7636}{Get\+\_\+rect\+\_\+to\+\_\+draw} () override
+\begin{DoxyCompactList}\small\item\em Gets the Rect2d\+\_\+int to draw upon Draw being called. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Text_ac0b8a614277d6b575c52d127e9a673f2}{Draw} () override
+\begin{DoxyCompactList}\small\item\em Draws this \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Text_a2626023a1aa6998147ea40670d0fab8d}{Is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object is ready to be drawn. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a9d7e2d4cd2ca03fa2ca03f91964b26f7}{Set\+\_\+is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn} (bool isreadytobedrawn)
+\begin{DoxyCompactList}\small\item\em Sets whether the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object is ready to be drawn. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Text_a3318092f2bf3d73b08c9e440b3e1e53c}{Is\+\_\+ready\+\_\+for\+\_\+pre\+\_\+rendering} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object is ready to have the Pre\+\_\+render function called. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Text_a179a3fb69ac28cba38a6fbfe541e175b}{Is\+\_\+font\+\_\+created} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the font was created or not. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a62bbae5ffafd2dbc327b79719c84d253}{Set\+\_\+is\+\_\+font\+\_\+created} (bool isfontcreated)
+\begin{DoxyCompactList}\small\item\em Sets the boolean m\+\_\+isfontcreated to indicate whether the font is created or not. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Font}{Font} \hyperlink{classjetfuel_1_1draw_1_1Text_a32e999790061eb568e3c71e23bee7be0}{Get\+\_\+internal\+\_\+font} () const
+\begin{DoxyCompactList}\small\item\em Gets the internal assigned font. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_ae52e5068a74da2daaa78fffeed5e4dc3}{Set\+\_\+internal\+\_\+font} (\hyperlink{classjetfuel_1_1draw_1_1Font}{Font} font)
+\begin{DoxyCompactList}\small\item\em Sets the internal assigned font. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1draw_1_1Text_ab24383675fab628744a31d8d95934d6f}{Get\+\_\+past\+\_\+font\+\_\+size} () const
+\begin{DoxyCompactList}\small\item\em Gets the past font size used in the last time a function was called. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a1d4519c1b6366a1be4a5168eadffd818}{Set\+\_\+past\+\_\+font\+\_\+size} (unsigned int pastfontsize)
+\begin{DoxyCompactList}\small\item\em Sets the past font size for future reference. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Color \hyperlink{classjetfuel_1_1draw_1_1Text_a86075093466a1a7feef9675694e5b014}{Convert\+\_\+\+Color\+\_\+to\+\_\+\+S\+D\+L\+\_\+\+Color} (\hyperlink{classjetfuel_1_1draw_1_1Color}{Color} color)
+\begin{DoxyCompactList}\small\item\em Converts a regular Jetfuel \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} to a S\+D\+L\+\_\+\+Color. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{classjetfuel_1_1draw_1_1Text_ab1b5195b8431f794aad7156583992dc9}{Get\+\_\+text\+\_\+surface} () const
+\begin{DoxyCompactList}\small\item\em Gets the text\textquotesingle{}s surface to draw when the Draw function is called. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a4d9c3cd635737cfde913f9b4015b181e}{Set\+\_\+text\+\_\+surface} (S\+D\+L\+\_\+\+Surface $\ast$textsurface)
+\begin{DoxyCompactList}\small\item\em Sets the text surface that will be converted to a S\+D\+L\+\_\+\+Texture upon the function Draw being called. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Texture $\ast$ \hyperlink{classjetfuel_1_1draw_1_1Text_a127d078edc906adec8183d825abb5b23}{Get\+\_\+text\+\_\+rendered} () const
+\begin{DoxyCompactList}\small\item\em Gets the text rendered S\+D\+L\+\_\+\+Texture that will be set and drawn upon the function Draw being called. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a49fbf3401fb8467bcc52345909e4bd27}{Set\+\_\+text\+\_\+rendered} (S\+D\+L\+\_\+\+Texture $\ast$textrendered)
+\begin{DoxyCompactList}\small\item\em Sets the text rendered S\+D\+L\+\_\+\+Texture that will be set and drawn upon the function Draw being called. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Text_a3095fe89cec6db7a6a38f722dc249ccb}{Is\+\_\+surface\+\_\+copied} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the surface was copied to indicate whether the textsurface exists any more. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_ab5b09d74d05260a4f903cb9d780c1948}{Set\+\_\+is\+\_\+surface\+\_\+copied} (bool issurfacecopied)
+\begin{DoxyCompactList}\small\item\em Sets whether the surface was copied to indicate whether the textsurface exists any more. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a7d4b482620c679410eee2687288f3992}{Set\+\_\+rect\+\_\+to\+\_\+draw} (int x, int y, int width, int height)
+\begin{DoxyCompactList}\small\item\em Sets the publicly available variable of the \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} to draw. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a98b604584ef64a98b148add202334c8b}{Set\+\_\+past\+\_\+kerning\+\_\+status} ()
+\begin{DoxyCompactList}\small\item\em Sets the past kerning status. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_af867aba4f3951b99bc23f3bf8d7cf201}{Set\+\_\+past\+\_\+font\+\_\+hinting} ()
+\begin{DoxyCompactList}\small\item\em Sets the past font hinting. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Text_a007454f20452791fe80f981e45fab1d7}{Is\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time} () const
+\begin{DoxyCompactList}\small\item\em Returns whether rendering the font for the first time. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_ac5bcf85ef9195b5bba77441eeddf2f6c}{Set\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time} (bool fontrenderingfirst)
+\begin{DoxyCompactList}\small\item\em Sets whether we are the font for the first time. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Text_ac3037b299f5e398da3c1bf52fdfa3d00}{Waiting\+\_\+to\+\_\+set\+\_\+kerning\+\_\+status} ()
+\begin{DoxyCompactList}\small\item\em Checks if kerning status is waiting to be set. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Text_a33158c6a5dfedf26cb0526388c347e93}{Waiting\+\_\+to\+\_\+set\+\_\+font\+\_\+hinting} ()
+\begin{DoxyCompactList}\small\item\em Checks if font hinting is waiting to be set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_acc627c1cda5f466255b1899cd9477a75}\label{classjetfuel_1_1draw_1_1Text_acc627c1cda5f466255b1899cd9477a75}} 
+void {\bfseries Set\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed} (bool textsurfacefreed)
+\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a0968c175395924bca3cc2e543adce3e9}\label{classjetfuel_1_1draw_1_1Text_a0968c175395924bca3cc2e543adce3e9}} 
+bool {\bfseries Has\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed} () const
+\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_a5ce2072f87c6e02dfbc363e1c489cc3b}{Pre\+\_\+render\+\_\+text} ()
+\begin{DoxyCompactList}\small\item\em Pre renders the text surface. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_ae25b3503ec6fcf36aaeebf4e08612394}{Pre\+\_\+render} ()
+\begin{DoxyCompactList}\small\item\em Pre renders and gets the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object ready to be drawn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A True\+Type text object that draws True\+Type text to the screen.
+
+Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{}); \hyperlink{classjetfuel_1_1draw_1_1Text}{jetfuel\+::draw\+::\+Text} hello(font);
+
+if(!scenemanager.Create\+\_\+window(windowlabel, windowposition, windowsize))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1);
+
+hello.\+Set\+\_\+string(\char`\"{}\+Why Hello There\char`\"{}); hello.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(100,100)); hello.\+Set\+\_\+text\+\_\+color(jetfuel\+::draw\+::\+Color\+::\+Cyan); hello.\+Set\+\_\+font\+\_\+size(50); hello.\+Set\+\_\+render\+\_\+mode(jetfuel\+::draw\+::\+Text\+::\+Render\+\_\+mode\+::\+Blended);
+
+scene1.\+Attach\+\_\+drawable(\&hello,1);
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a8b6aed199242a7c69fda591d8769ced9}\label{classjetfuel_1_1draw_1_1Text_a8b6aed199242a7c69fda591d8769ced9}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Text@{Text}}
+\index{Text@{Text}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Text()}{Text()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily jetfuel\+::draw\+::\+Text\+::\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics}
+
+All customizable characteristics of \hyperlink{classjetfuel_1_1draw_1_1Text}{jetfuel\+::draw\+::\+Text}, packed into one struct, other classes can ask for.
+
+\begin{DoxySeeAlso}{See also}
+jetfuel\+::gui\+::\+Button\+Constructs an empty \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a792d23b62a66af2558bc7165e5419992}\label{classjetfuel_1_1draw_1_1Text_a792d23b62a66af2558bc7165e5419992}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Text@{Text}}
+\index{Text@{Text}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Text()}{Text()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily jetfuel\+::draw\+::\+Text\+::\+Text (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Font}{Font}}]{font }\end{DoxyParamCaption})}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object with a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}. 
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object with a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font}} & font \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a86075093466a1a7feef9675694e5b014}\label{classjetfuel_1_1draw_1_1Text_a86075093466a1a7feef9675694e5b014}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Convert\+\_\+\+Color\+\_\+to\+\_\+\+S\+D\+L\+\_\+\+Color@{Convert\+\_\+\+Color\+\_\+to\+\_\+\+S\+D\+L\+\_\+\+Color}}
+\index{Convert\+\_\+\+Color\+\_\+to\+\_\+\+S\+D\+L\+\_\+\+Color@{Convert\+\_\+\+Color\+\_\+to\+\_\+\+S\+D\+L\+\_\+\+Color}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Convert\+\_\+\+Color\+\_\+to\+\_\+\+S\+D\+L\+\_\+\+Color()}{Convert\_Color\_to\_SDL\_Color()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Color jetfuel\+::draw\+::\+Text\+::\+Convert\+\_\+\+Color\+\_\+to\+\_\+\+S\+D\+L\+\_\+\+Color (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Color}{Color}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Converts a regular Jetfuel \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} to a S\+D\+L\+\_\+\+Color. 
+
+Converts a regular Jetfuel \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} to a S\+D\+L\+\_\+\+Color. The reason this is not an operator in \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color} is because this would be used in only this class in the entire Jetfuel game engine and we want to discourage developers from using S\+D\+L\+\_\+\+Color in favor of our own Jetfuel \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} which was designed in C++ utilizing some C++ organizational features such as namespaces.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}} & color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ac0b8a614277d6b575c52d127e9a673f2}\label{classjetfuel_1_1draw_1_1Text_ac0b8a614277d6b575c52d127e9a673f2}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Draw@{Draw}}
+\index{Draw@{Draw}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Text\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws this \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object. 
+
+Draws this \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object. This function should not be called by you, but rather indirectly using a \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} and a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager}. However, if you don\textquotesingle{}t wish to use one of these types, you can always just call this function. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Drawable_a1a072070322965ce9411ee6e7c311c56}{jetfuel\+::draw\+::\+Drawable}.
+
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a47ce107c33da03675d39e7550f7c44fc}\label{classjetfuel_1_1draw_1_1Text_a47ce107c33da03675d39e7550f7c44fc}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+background\+\_\+color@{Get\+\_\+background\+\_\+color}}
+\index{Get\+\_\+background\+\_\+color@{Get\+\_\+background\+\_\+color}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+background\+\_\+color()}{Get\_background\_color()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+background\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the background color of the text. 
+
+Gets the background color of the text. This color will only be drawn as the background if the render mode is set to Shaded. Otherwise, this color won\textquotesingle{}t be shown to the user at all. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_af9719fdfc0d04106843a69674df3d2c7}\label{classjetfuel_1_1draw_1_1Text_af9719fdfc0d04106843a69674df3d2c7}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+font\+\_\+hinting@{Get\+\_\+font\+\_\+hinting}}
+\index{Get\+\_\+font\+\_\+hinting@{Get\+\_\+font\+\_\+hinting}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+font\+\_\+hinting()}{Get\_font\_hinting()}}
+{\footnotesize\ttfamily Font\+\_\+hinting jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+font\+\_\+hinting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the font\textquotesingle{}s hinting. 
+
+Gets the font\textquotesingle{}s hinting. Try to call this function before Set\+\_\+font\+\_\+hinting, even if you want to set the font\textquotesingle{}s hinting. If you don\textquotesingle{}t this might cause an unnecessary flush of previously renderered text glyphs if you set the font hinting to the same font hinting it previously had. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a7d5f85f555e61f47a5a418399ba8e72b}\label{classjetfuel_1_1draw_1_1Text_a7d5f85f555e61f47a5a418399ba8e72b}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+font\+\_\+outline\+\_\+width@{Get\+\_\+font\+\_\+outline\+\_\+width}}
+\index{Get\+\_\+font\+\_\+outline\+\_\+width@{Get\+\_\+font\+\_\+outline\+\_\+width}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+font\+\_\+outline\+\_\+width()}{Get\_font\_outline\_width()}}
+{\footnotesize\ttfamily int jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+font\+\_\+outline\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the font\textquotesingle{}s outline width. 
+
+Gets the font\textquotesingle{}s outline width. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_aeb691f0eb368473f5691895212daf431}\label{classjetfuel_1_1draw_1_1Text_aeb691f0eb368473f5691895212daf431}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+font\+\_\+size@{Get\+\_\+font\+\_\+size}}
+\index{Get\+\_\+font\+\_\+size@{Get\+\_\+font\+\_\+size}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+font\+\_\+size()}{Get\_font\_size()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+font\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the font\textquotesingle{}s size (in points). 
+
+Gets the font\textquotesingle{}s size (in points). By default, this size is set to 20 points. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ade8bf8912e12bfae87a47f15e312f3f0}\label{classjetfuel_1_1draw_1_1Text_ade8bf8912e12bfae87a47f15e312f3f0}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+font\+\_\+style@{Get\+\_\+font\+\_\+style}}
+\index{Get\+\_\+font\+\_\+style@{Get\+\_\+font\+\_\+style}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+font\+\_\+style()}{Get\_font\_style()}}
+{\footnotesize\ttfamily int jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+font\+\_\+style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the font\textquotesingle{}s style. 
+
+Gets the font\textquotesingle{}s style. By default, the font style is F\+O\+N\+T\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL. The font style determines whether the text is bold, italic, normal, strikethrough, and/or underlined at the same time. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a32e999790061eb568e3c71e23bee7be0}\label{classjetfuel_1_1draw_1_1Text_a32e999790061eb568e3c71e23bee7be0}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+internal\+\_\+font@{Get\+\_\+internal\+\_\+font}}
+\index{Get\+\_\+internal\+\_\+font@{Get\+\_\+internal\+\_\+font}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+internal\+\_\+font()}{Get\_internal\_font()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+internal\+\_\+font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the internal assigned font. 
+
+Gets the internal assigned font. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a35deab301fc970a0f23e490156720776}\label{classjetfuel_1_1draw_1_1Text_a35deab301fc970a0f23e490156720776}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+kerning\+\_\+status@{Get\+\_\+kerning\+\_\+status}}
+\index{Get\+\_\+kerning\+\_\+status@{Get\+\_\+kerning\+\_\+status}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+kerning\+\_\+status()}{Get\_kerning\_status()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+kerning\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the font\textquotesingle{}s kerning status. 
+
+Gets the font\textquotesingle{}s kerning status. By default, font kerning is on. \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} kerning is "the process of adjusting the spacing between characters in a proportional font, usually to achieve a visually pleasing result\char`\"{}
+-\/ $<$a href=\char`\"{}\href{https://en.wikipedia.org/wiki/Kerning}{\tt https\+://en.\+wikipedia.\+org/wiki/\+Kerning}"$>$Wikipedia \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ab24383675fab628744a31d8d95934d6f}\label{classjetfuel_1_1draw_1_1Text_ab24383675fab628744a31d8d95934d6f}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+past\+\_\+font\+\_\+size@{Get\+\_\+past\+\_\+font\+\_\+size}}
+\index{Get\+\_\+past\+\_\+font\+\_\+size@{Get\+\_\+past\+\_\+font\+\_\+size}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+past\+\_\+font\+\_\+size()}{Get\_past\_font\_size()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+past\+\_\+font\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the past font size used in the last time a function was called. 
+
+Gets the past font size used in the last time a function was called. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a362996e996d471729944eebdff1f7636}\label{classjetfuel_1_1draw_1_1Text_a362996e996d471729944eebdff1f7636}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}}
+\index{Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+rect\+\_\+to\+\_\+draw()}{Get\_rect\_to\_draw()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d\+\_\+int} jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+rect\+\_\+to\+\_\+draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the Rect2d\+\_\+int to draw upon Draw being called. 
+
+Gets the Rect2d\+\_\+int to draw upon Draw being called. 
+
+Implements \hyperlink{classjetfuel_1_1draw_1_1Rectangle__interface_a03fd3b6842ab7b3065379caec407296f}{jetfuel\+::draw\+::\+Rectangle\+\_\+interface}.
+
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a35a5ad06ffaf6b6b2f18b0c1b02039ef}\label{classjetfuel_1_1draw_1_1Text_a35a5ad06ffaf6b6b2f18b0c1b02039ef}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+render\+\_\+mode@{Get\+\_\+render\+\_\+mode}}
+\index{Get\+\_\+render\+\_\+mode@{Get\+\_\+render\+\_\+mode}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+render\+\_\+mode()}{Get\_render\_mode()}}
+{\footnotesize\ttfamily Render\+\_\+mode jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+render\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} render mode. 
+
+Gets the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} render mode. There are 3 text modes in S\+D\+L\+\_\+ttf\+: Solid, Shaded, Blended. Basically, Solid is the quick and dirty way with no anti-\/aliasing. Shaded is slower and produces a background box around the text, but the text looks much nicer, with anti-\/aliasing. Finally, Blended looks the best, but is slow to render. It has anti-\/aliasing and does not need a background box like Shaded does. Click \href{http://bit.ly/2tvlJUk}{\tt here} to learn more. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_aff24355889167e97455750066ff8ded0}\label{classjetfuel_1_1draw_1_1Text_aff24355889167e97455750066ff8ded0}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+string@{Get\+\_\+string}}
+\index{Get\+\_\+string@{Get\+\_\+string}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+string()}{Get\_string()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the text\textquotesingle{}s string to display to the user. 
+
+Gets the text object\textquotesingle{}s string to display to the user. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a213dcf0fc15038eeaca73547d6c252db}\label{classjetfuel_1_1draw_1_1Text_a213dcf0fc15038eeaca73547d6c252db}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+text\+\_\+color@{Get\+\_\+text\+\_\+color}}
+\index{Get\+\_\+text\+\_\+color@{Get\+\_\+text\+\_\+color}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+text\+\_\+color()}{Get\_text\_color()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+text\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the text\textquotesingle{}s color to display to the user. 
+
+Gets the text\textquotesingle{}s color to display to the user. By default, the color is set to black. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a127d078edc906adec8183d825abb5b23}\label{classjetfuel_1_1draw_1_1Text_a127d078edc906adec8183d825abb5b23}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+text\+\_\+rendered@{Get\+\_\+text\+\_\+rendered}}
+\index{Get\+\_\+text\+\_\+rendered@{Get\+\_\+text\+\_\+rendered}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+text\+\_\+rendered()}{Get\_text\_rendered()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Texture$\ast$ jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+text\+\_\+rendered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the text rendered S\+D\+L\+\_\+\+Texture that will be set and drawn upon the function Draw being called. 
+
+Gets the text rendered S\+D\+L\+\_\+\+Texture that will be set and drawn upon the function Draw being called. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ab1b5195b8431f794aad7156583992dc9}\label{classjetfuel_1_1draw_1_1Text_ab1b5195b8431f794aad7156583992dc9}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Get\+\_\+text\+\_\+surface@{Get\+\_\+text\+\_\+surface}}
+\index{Get\+\_\+text\+\_\+surface@{Get\+\_\+text\+\_\+surface}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Get\+\_\+text\+\_\+surface()}{Get\_text\_surface()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Surface$\ast$ jetfuel\+::draw\+::\+Text\+::\+Get\+\_\+text\+\_\+surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the text\textquotesingle{}s surface to draw when the Draw function is called. 
+
+Gets the text\textquotesingle{}s surface to be converted to a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} S\+D\+L\+\_\+\+Texture when the Draw function is called. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a179a3fb69ac28cba38a6fbfe541e175b}\label{classjetfuel_1_1draw_1_1Text_a179a3fb69ac28cba38a6fbfe541e175b}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Is\+\_\+font\+\_\+created@{Is\+\_\+font\+\_\+created}}
+\index{Is\+\_\+font\+\_\+created@{Is\+\_\+font\+\_\+created}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Is\+\_\+font\+\_\+created()}{Is\_font\_created()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Text\+::\+Is\+\_\+font\+\_\+created (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether the font was created or not. 
+
+Returns whether the font was created or not based on the variables m\+\_\+isfontcreated and the return value of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}\textquotesingle{}s Is\+\_\+font\+\_\+loaded function. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a007454f20452791fe80f981e45fab1d7}\label{classjetfuel_1_1draw_1_1Text_a007454f20452791fe80f981e45fab1d7}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Is\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time@{Is\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time}}
+\index{Is\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time@{Is\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Is\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time()}{Is\_font\_rendering\_for\_first\_time()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Text\+::\+Is\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether rendering the font for the first time. 
+
+Returns whether rendering the font for the first time. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a3318092f2bf3d73b08c9e440b3e1e53c}\label{classjetfuel_1_1draw_1_1Text_a3318092f2bf3d73b08c9e440b3e1e53c}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Is\+\_\+ready\+\_\+for\+\_\+pre\+\_\+rendering@{Is\+\_\+ready\+\_\+for\+\_\+pre\+\_\+rendering}}
+\index{Is\+\_\+ready\+\_\+for\+\_\+pre\+\_\+rendering@{Is\+\_\+ready\+\_\+for\+\_\+pre\+\_\+rendering}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Is\+\_\+ready\+\_\+for\+\_\+pre\+\_\+rendering()}{Is\_ready\_for\_pre\_rendering()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Text\+::\+Is\+\_\+ready\+\_\+for\+\_\+pre\+\_\+rendering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object is ready to have the Pre\+\_\+render function called. 
+
+Returns whether the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object is ready to have the Pre\+\_\+render function called. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a2626023a1aa6998147ea40670d0fab8d}\label{classjetfuel_1_1draw_1_1Text_a2626023a1aa6998147ea40670d0fab8d}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn@{Is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn}}
+\index{Is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn@{Is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn()}{Is\_ready\_to\_be\_drawn()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Text\+::\+Is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object is ready to be drawn. 
+
+Returns whether this \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object is ready to be drawn. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a3095fe89cec6db7a6a38f722dc249ccb}\label{classjetfuel_1_1draw_1_1Text_a3095fe89cec6db7a6a38f722dc249ccb}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Is\+\_\+surface\+\_\+copied@{Is\+\_\+surface\+\_\+copied}}
+\index{Is\+\_\+surface\+\_\+copied@{Is\+\_\+surface\+\_\+copied}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Is\+\_\+surface\+\_\+copied()}{Is\_surface\_copied()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Text\+::\+Is\+\_\+surface\+\_\+copied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether the surface was copied to indicate whether the textsurface exists any more. 
+
+Returns whether the surface was copied to indicate whether the textsurface exists any more. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ae25b3503ec6fcf36aaeebf4e08612394}\label{classjetfuel_1_1draw_1_1Text_ae25b3503ec6fcf36aaeebf4e08612394}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Pre\+\_\+render@{Pre\+\_\+render}}
+\index{Pre\+\_\+render@{Pre\+\_\+render}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Pre\+\_\+render()}{Pre\_render()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Pre\+\_\+render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pre renders and gets the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object ready to be drawn. 
+
+Pre renders and gets the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object ready to be drawn. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a5ce2072f87c6e02dfbc363e1c489cc3b}\label{classjetfuel_1_1draw_1_1Text_a5ce2072f87c6e02dfbc363e1c489cc3b}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Pre\+\_\+render\+\_\+text@{Pre\+\_\+render\+\_\+text}}
+\index{Pre\+\_\+render\+\_\+text@{Pre\+\_\+render\+\_\+text}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Pre\+\_\+render\+\_\+text()}{Pre\_render\_text()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Pre\+\_\+render\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pre renders the text surface. 
+
+Pre renders the text surface. This function is called with the Pre\+\_\+render function, so you never should need to call this function directly. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_af1eaae041e0f763a95ca6e87aa7c3d7e}\label{classjetfuel_1_1draw_1_1Text_af1eaae041e0f763a95ca6e87aa7c3d7e}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+background\+\_\+color@{Set\+\_\+background\+\_\+color}}
+\index{Set\+\_\+background\+\_\+color@{Set\+\_\+background\+\_\+color}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+background\+\_\+color()}{Set\_background\_color()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+background\+\_\+color (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Color}{Color}}]{backgroundcolor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the background color of the text. 
+
+Sets the background color of the text. This color will only be drawn as the background if the render mode is set to Shaded. Otherwise, this color won\textquotesingle{}t be shown to the user at all.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}} & backgroundcolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a8b8f2cd4cda3d31098cc0f5535fb7f7a}\label{classjetfuel_1_1draw_1_1Text_a8b8f2cd4cda3d31098cc0f5535fb7f7a}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+font@{Set\+\_\+font}}
+\index{Set\+\_\+font@{Set\+\_\+font}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+font()}{Set\_font()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+font (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Font}{Font}}]{font }\end{DoxyParamCaption})}
+
+
+
+Sets the \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} of this \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object after construction. 
+
+Sets the \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} of this \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object after construction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font}} & font \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ada69de19f3ea2373120e37f9f61eeb6d}\label{classjetfuel_1_1draw_1_1Text_ada69de19f3ea2373120e37f9f61eeb6d}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+font\+\_\+hinting@{Set\+\_\+font\+\_\+hinting}}
+\index{Set\+\_\+font\+\_\+hinting@{Set\+\_\+font\+\_\+hinting}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+font\+\_\+hinting()}{Set\_font\_hinting()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+font\+\_\+hinting (\begin{DoxyParamCaption}\item[{Font\+\_\+hinting}]{fonthinting }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the font\textquotesingle{}s hinting. 
+
+Sets the font\textquotesingle{}s hinting. Try to call this function after Get\+\_\+font\+\_\+hinting. If you don\textquotesingle{}t this might cause an unnessary flush of previously renderered text glyphs if you set the font hinting to the same font hinting it previously had.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Font\+\_\+hinting} & fonthinting \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ab8b3959fd37cb3cf9fd919ccdcaa09f3}\label{classjetfuel_1_1draw_1_1Text_ab8b3959fd37cb3cf9fd919ccdcaa09f3}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+font\+\_\+outline\+\_\+width@{Set\+\_\+font\+\_\+outline\+\_\+width}}
+\index{Set\+\_\+font\+\_\+outline\+\_\+width@{Set\+\_\+font\+\_\+outline\+\_\+width}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+font\+\_\+outline\+\_\+width()}{Set\_font\_outline\_width()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+font\+\_\+outline\+\_\+width (\begin{DoxyParamCaption}\item[{const int}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the font\textquotesingle{}s outline width. 
+
+Sets the font\textquotesingle{}s outline width. This function is useful when you want to force a certain width on this text object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & width \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ac5bcf85ef9195b5bba77441eeddf2f6c}\label{classjetfuel_1_1draw_1_1Text_ac5bcf85ef9195b5bba77441eeddf2f6c}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time@{Set\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time}}
+\index{Set\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time@{Set\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time()}{Set\_font\_rendering\_for\_first\_time()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+font\+\_\+rendering\+\_\+for\+\_\+first\+\_\+time (\begin{DoxyParamCaption}\item[{bool}]{fontrenderingfirst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets whether we are the font for the first time. 
+
+Returns whether we are rendering the font for the first time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & fontrenderingfirst \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a488868c8aa0fcc692cd7a37b8abe13f2}\label{classjetfuel_1_1draw_1_1Text_a488868c8aa0fcc692cd7a37b8abe13f2}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+font\+\_\+size@{Set\+\_\+font\+\_\+size}}
+\index{Set\+\_\+font\+\_\+size@{Set\+\_\+font\+\_\+size}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+font\+\_\+size()}{Set\_font\_size()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+font\+\_\+size (\begin{DoxyParamCaption}\item[{const unsigned int}]{fontsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the font\textquotesingle{}s size (in points). 
+
+Gets the font\textquotesingle{}s size (in points). By default, this size is set to 20 points.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int fontsize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_aec048bedd8cacb8523c4b2a3121f4179}\label{classjetfuel_1_1draw_1_1Text_aec048bedd8cacb8523c4b2a3121f4179}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+font\+\_\+style@{Set\+\_\+font\+\_\+style}}
+\index{Set\+\_\+font\+\_\+style@{Set\+\_\+font\+\_\+style}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+font\+\_\+style()}{Set\_font\_style()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+font\+\_\+style (\begin{DoxyParamCaption}\item[{const int}]{fontstyle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the font\textquotesingle{}s style. 
+
+Sets the font\textquotesingle{}s style. By default, the font style is F\+O\+N\+T\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL. The font style determines whether the text is bold, italic, normal, strikethrough, and/or underlined at the same time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & fontstyle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ae52e5068a74da2daaa78fffeed5e4dc3}\label{classjetfuel_1_1draw_1_1Text_ae52e5068a74da2daaa78fffeed5e4dc3}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+internal\+\_\+font@{Set\+\_\+internal\+\_\+font}}
+\index{Set\+\_\+internal\+\_\+font@{Set\+\_\+internal\+\_\+font}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+internal\+\_\+font()}{Set\_internal\_font()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+internal\+\_\+font (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Font}{Font}}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the internal assigned font. 
+
+Sets the internal assigned font to be used when rendering and drawing text.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}} & font \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a62bbae5ffafd2dbc327b79719c84d253}\label{classjetfuel_1_1draw_1_1Text_a62bbae5ffafd2dbc327b79719c84d253}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+is\+\_\+font\+\_\+created@{Set\+\_\+is\+\_\+font\+\_\+created}}
+\index{Set\+\_\+is\+\_\+font\+\_\+created@{Set\+\_\+is\+\_\+font\+\_\+created}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+is\+\_\+font\+\_\+created()}{Set\_is\_font\_created()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+is\+\_\+font\+\_\+created (\begin{DoxyParamCaption}\item[{bool}]{isfontcreated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the boolean m\+\_\+isfontcreated to indicate whether the font is created or not. 
+
+Sets the boolean m\+\_\+isfontcreated to indicate whether the font is created or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & isfontcreated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a9d7e2d4cd2ca03fa2ca03f91964b26f7}\label{classjetfuel_1_1draw_1_1Text_a9d7e2d4cd2ca03fa2ca03f91964b26f7}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn@{Set\+\_\+is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn}}
+\index{Set\+\_\+is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn@{Set\+\_\+is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn()}{Set\_is\_ready\_to\_be\_drawn()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+is\+\_\+ready\+\_\+to\+\_\+be\+\_\+drawn (\begin{DoxyParamCaption}\item[{bool}]{isreadytobedrawn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets whether the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object is ready to be drawn. 
+
+Sets whether the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object is ready to be drawn.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & isreadytobedrawn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ab5b09d74d05260a4f903cb9d780c1948}\label{classjetfuel_1_1draw_1_1Text_ab5b09d74d05260a4f903cb9d780c1948}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+is\+\_\+surface\+\_\+copied@{Set\+\_\+is\+\_\+surface\+\_\+copied}}
+\index{Set\+\_\+is\+\_\+surface\+\_\+copied@{Set\+\_\+is\+\_\+surface\+\_\+copied}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+is\+\_\+surface\+\_\+copied()}{Set\_is\_surface\_copied()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+is\+\_\+surface\+\_\+copied (\begin{DoxyParamCaption}\item[{bool}]{issurfacecopied }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets whether the surface was copied to indicate whether the textsurface exists any more. 
+
+Sets whether the surface was copied to indicate whether the textsurface exists any more.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & issurfacecopied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_afdd2ce09d49b3df880939af1a5d5053c}\label{classjetfuel_1_1draw_1_1Text_afdd2ce09d49b3df880939af1a5d5053c}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+kerning\+\_\+status@{Set\+\_\+kerning\+\_\+status}}
+\index{Set\+\_\+kerning\+\_\+status@{Set\+\_\+kerning\+\_\+status}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+kerning\+\_\+status()}{Set\_kerning\_status()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+kerning\+\_\+status (\begin{DoxyParamCaption}\item[{const bool}]{kerningon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the font\textquotesingle{}s kerning status. 
+
+Sets the font\textquotesingle{}s kerning status. By default, font kerning is on. \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} kerning is "the process of adjusting the spacing between characters in a proportional font, usually to achieve a visually pleasing result\char`\"{}
+-\/ $<$a href=\char`\"{}\href{https://en.wikipedia.org/wiki/Kerning}{\tt https\+://en.\+wikipedia.\+org/wiki/\+Kerning}"$>$Wikipedia
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & kerningon \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_af867aba4f3951b99bc23f3bf8d7cf201}\label{classjetfuel_1_1draw_1_1Text_af867aba4f3951b99bc23f3bf8d7cf201}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+past\+\_\+font\+\_\+hinting@{Set\+\_\+past\+\_\+font\+\_\+hinting}}
+\index{Set\+\_\+past\+\_\+font\+\_\+hinting@{Set\+\_\+past\+\_\+font\+\_\+hinting}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+past\+\_\+font\+\_\+hinting()}{Set\_past\_font\_hinting()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+past\+\_\+font\+\_\+hinting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the past font hinting. 
+
+Sets the past font hinting when S\+D\+L\+\_\+\+T\+TF font is loaded. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a1d4519c1b6366a1be4a5168eadffd818}\label{classjetfuel_1_1draw_1_1Text_a1d4519c1b6366a1be4a5168eadffd818}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+past\+\_\+font\+\_\+size@{Set\+\_\+past\+\_\+font\+\_\+size}}
+\index{Set\+\_\+past\+\_\+font\+\_\+size@{Set\+\_\+past\+\_\+font\+\_\+size}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+past\+\_\+font\+\_\+size()}{Set\_past\_font\_size()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+past\+\_\+font\+\_\+size (\begin{DoxyParamCaption}\item[{unsigned int}]{pastfontsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the past font size for future reference. 
+
+Sets the past font size for future reference.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int pastfontsize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a98b604584ef64a98b148add202334c8b}\label{classjetfuel_1_1draw_1_1Text_a98b604584ef64a98b148add202334c8b}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+past\+\_\+kerning\+\_\+status@{Set\+\_\+past\+\_\+kerning\+\_\+status}}
+\index{Set\+\_\+past\+\_\+kerning\+\_\+status@{Set\+\_\+past\+\_\+kerning\+\_\+status}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+past\+\_\+kerning\+\_\+status()}{Set\_past\_kerning\_status()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+past\+\_\+kerning\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the past kerning status. 
+
+Sets the past kerning status when S\+D\+L\+\_\+\+T\+TF font is loaded. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a7d4b482620c679410eee2687288f3992}\label{classjetfuel_1_1draw_1_1Text_a7d4b482620c679410eee2687288f3992}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+rect\+\_\+to\+\_\+draw@{Set\+\_\+rect\+\_\+to\+\_\+draw}}
+\index{Set\+\_\+rect\+\_\+to\+\_\+draw@{Set\+\_\+rect\+\_\+to\+\_\+draw}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+rect\+\_\+to\+\_\+draw()}{Set\_rect\_to\_draw()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+rect\+\_\+to\+\_\+draw (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the publicly available variable of the \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} to draw. 
+
+Sets the publicly available variable of the \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} to draw.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & x \\
+\hline
+{\em int} & y \\
+\hline
+{\em int} & width \\
+\hline
+{\em int} & height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a428e0511b13deed817144612b5c1f44a}\label{classjetfuel_1_1draw_1_1Text_a428e0511b13deed817144612b5c1f44a}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+render\+\_\+mode@{Set\+\_\+render\+\_\+mode}}
+\index{Set\+\_\+render\+\_\+mode@{Set\+\_\+render\+\_\+mode}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+render\+\_\+mode()}{Set\_render\_mode()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+render\+\_\+mode (\begin{DoxyParamCaption}\item[{Render\+\_\+mode}]{rendermode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} render mode. 
+
+Sets the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} render mode. There are 3 text modes in S\+D\+L\+\_\+ttf\+: Solid, Shaded, Blended. Basically Solid is the quick and dirty way with no anti-\/aliasing. Shaded is slower and produces a background box around the text, but the text looks much nicer, with anti-\/aliasing. Finally, Blended looks the best, but is slow to render. It has anti-\/aliasing and does not need a background box like Shaded does. Click \href{http://bit.ly/2tvlJUk}{\tt here} to learn more.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jetfuel\+::draw\+::\+Text\+::\+Render\+\_\+mode} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_aaf138731ac6e2ba388df2add9ea15a9a}\label{classjetfuel_1_1draw_1_1Text_aaf138731ac6e2ba388df2add9ea15a9a}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+string@{Set\+\_\+string}}
+\index{Set\+\_\+string@{Set\+\_\+string}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+string()}{Set\_string()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the string to display to the user. 
+
+Sets the string to display to the user. This string M\+U\+ST be U\+T\+F-\/8 compliant.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a7d04c15abedfeb98a1154d7e34d4d630}\label{classjetfuel_1_1draw_1_1Text_a7d04c15abedfeb98a1154d7e34d4d630}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+text\+\_\+color@{Set\+\_\+text\+\_\+color}}
+\index{Set\+\_\+text\+\_\+color@{Set\+\_\+text\+\_\+color}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+text\+\_\+color()}{Set\_text\_color()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+text\+\_\+color (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Color}{Color}}]{textcolor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the text\textquotesingle{}s color to display to the user. 
+
+Sets the text object\textquotesingle{}s color to display to the user. By default, the color is set to black.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Color}{jetfuel\+::draw\+::\+Color}} & textcolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a49fbf3401fb8467bcc52345909e4bd27}\label{classjetfuel_1_1draw_1_1Text_a49fbf3401fb8467bcc52345909e4bd27}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+text\+\_\+rendered@{Set\+\_\+text\+\_\+rendered}}
+\index{Set\+\_\+text\+\_\+rendered@{Set\+\_\+text\+\_\+rendered}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+text\+\_\+rendered()}{Set\_text\_rendered()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+text\+\_\+rendered (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Texture $\ast$}]{textrendered }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the text rendered S\+D\+L\+\_\+\+Texture that will be set and drawn upon the function Draw being called. 
+
+Sets the text rendered S\+D\+L\+\_\+\+Texture that will be set and drawn upon the function Draw being called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Texture} & $\ast$textrendered \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a4d9c3cd635737cfde913f9b4015b181e}\label{classjetfuel_1_1draw_1_1Text_a4d9c3cd635737cfde913f9b4015b181e}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+text\+\_\+surface@{Set\+\_\+text\+\_\+surface}}
+\index{Set\+\_\+text\+\_\+surface@{Set\+\_\+text\+\_\+surface}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+text\+\_\+surface()}{Set\_text\_surface()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+text\+\_\+surface (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{textsurface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the text surface that will be converted to a S\+D\+L\+\_\+\+Texture upon the function Draw being called. 
+
+Sets the text surface that will be converted to a S\+D\+L\+\_\+\+Texture upon the function Draw being called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Surface} & $\ast$textsurface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a33158c6a5dfedf26cb0526388c347e93}\label{classjetfuel_1_1draw_1_1Text_a33158c6a5dfedf26cb0526388c347e93}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Waiting\+\_\+to\+\_\+set\+\_\+font\+\_\+hinting@{Waiting\+\_\+to\+\_\+set\+\_\+font\+\_\+hinting}}
+\index{Waiting\+\_\+to\+\_\+set\+\_\+font\+\_\+hinting@{Waiting\+\_\+to\+\_\+set\+\_\+font\+\_\+hinting}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Waiting\+\_\+to\+\_\+set\+\_\+font\+\_\+hinting()}{Waiting\_to\_set\_font\_hinting()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Text\+::\+Waiting\+\_\+to\+\_\+set\+\_\+font\+\_\+hinting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks if font hinting is waiting to be set. 
+
+Checks if font hinting is waiting to be set after S\+D\+L\+\_\+\+T\+TF font was not loaded. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_ac3037b299f5e398da3c1bf52fdfa3d00}\label{classjetfuel_1_1draw_1_1Text_ac3037b299f5e398da3c1bf52fdfa3d00}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Waiting\+\_\+to\+\_\+set\+\_\+kerning\+\_\+status@{Waiting\+\_\+to\+\_\+set\+\_\+kerning\+\_\+status}}
+\index{Waiting\+\_\+to\+\_\+set\+\_\+kerning\+\_\+status@{Waiting\+\_\+to\+\_\+set\+\_\+kerning\+\_\+status}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Waiting\+\_\+to\+\_\+set\+\_\+kerning\+\_\+status()}{Waiting\_to\_set\_kerning\_status()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Text\+::\+Waiting\+\_\+to\+\_\+set\+\_\+kerning\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks if kerning status is waiting to be set. 
+
+Checks if kerning status is waiting to be set after S\+D\+L\+\_\+\+T\+TF font was not loaded. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfueldraw/text.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,270 @@
+\hypertarget{classjetfuel_1_1draw_1_1Font}{}\section{jetfuel\+:\+:draw\+:\+:Font Class Reference}
+\label{classjetfuel_1_1draw_1_1Font}\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+
+
+{\ttfamily \#include $<$font.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1draw_1_1Font_a1054eb031ce0e8485f828f5ae7463770}{Font} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Font_a96db43b28c32511ff481502ec8d11fd7}{Font} (const std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object with a filename. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Font_a5907cc1ecc14725d642ef5c3c753ced9}{Font} (const std\+::string filename, const long faceindex)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object with a filename and a face index. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Font_a23a8e0aed90fac334f939d1b10864976}{Is\+\_\+font\+\_\+loaded} () const
+\begin{DoxyCompactList}\small\item\em Checks if the font is loaded. \end{DoxyCompactList}\item 
+T\+T\+F\+\_\+\+Font $\ast$ \hyperlink{classjetfuel_1_1draw_1_1Font_aa6583c70e9b801b16dc78ca3a156bc97}{Get\+\_\+ttf\+\_\+font} () const
+\begin{DoxyCompactList}\small\item\em Gets a reference to the T\+T\+F\+\_\+\+Font used by the library. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1draw_1_1Font_a497ce6fb60f71fdc8667c5a5ede81cca}{Get\+\_\+file\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Returns this \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}\textquotesingle{}s filename. \end{DoxyCompactList}\item 
+long \hyperlink{classjetfuel_1_1draw_1_1Font_ad0f24c27c3dcca9839e4ffc1603a1c54}{Get\+\_\+face\+\_\+index} () const
+\begin{DoxyCompactList}\small\item\em Returns this \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}\textquotesingle{}s face index. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Font_a5b6bec15a5220e34f5138fe9f1abf72e}{Load\+\_\+font} (const std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Loads the font with a filename. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Font_aac89368ac80b1dd5b7831f40af14ef2f}{Load\+\_\+font} (const std\+::string filename, const long faceindex)
+\begin{DoxyCompactList}\small\item\em Loads the font with a filename and a face index. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Font_a2a99e3273204f9dca27017c568f1eefe}{Change\+\_\+size} (const unsigned int size)
+\begin{DoxyCompactList}\small\item\em Changes the point size of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Font_ac30b41dcdbdb87d103f0b976ac785560}{Set\+\_\+is\+\_\+font\+\_\+loaded} (bool isfontloaded=false)
+\begin{DoxyCompactList}\small\item\em Set whether the font is loaded. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Font_a42161bfb7213d0a5cbfb9dc4ad66348d}{Set\+\_\+file\+\_\+name} (const std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Set the filename of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Font_a0a8f47fbecce1093557f4d2e4c6266bf}{Set\+\_\+face\+\_\+index} (long faceindex=-\/1)
+\begin{DoxyCompactList}\small\item\em Set the face index of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Font_a6238d89e07f1b9866c61ebd1ed26ef6a}{Set\+\_\+ttf\+\_\+font} (T\+T\+F\+\_\+\+Font $\ast$ttffont)
+\begin{DoxyCompactList}\small\item\em Set the T\+T\+F\+\_\+\+Font reference. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_af8d15fa128f23cec34841f06fb3ec911}\label{classjetfuel_1_1draw_1_1Font_af8d15fa128f23cec34841f06fb3ec911}} 
+void {\bfseries Set\+\_\+ttf\+\_\+init} (bool ttfinit)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a20a6307ecb4da7363a877ad8786b6ff9}\label{classjetfuel_1_1draw_1_1Font_a20a6307ecb4da7363a877ad8786b6ff9}} 
+static bool {\bfseries Get\+\_\+ttf\+\_\+init} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A True\+Type font object to be used in conjunction with a \hyperlink{classjetfuel_1_1draw_1_1Text}{jetfuel\+::draw\+::\+Text} object to display some text.
+
+Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{}); \hyperlink{classjetfuel_1_1draw_1_1Text}{jetfuel\+::draw\+::\+Text} hello(font);
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}example\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(500,500)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1);
+
+hello.\+Set\+\_\+string(\char`\"{}\+Why Hello There\char`\"{}); hello.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(100,100)); hello.\+Set\+\_\+text\+\_\+color(jetfuel\+::draw\+::\+Color\+::\+Cyan); hello.\+Set\+\_\+font\+\_\+size(50); hello.\+Set\+\_\+render\+\_\+mode(jetfuel\+::draw\+::\+Text\+::\+Render\+\_\+mode\+::\+Blended);
+
+scene1.\+Attach\+\_\+drawable(\&hello,1);
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a1054eb031ce0e8485f828f5ae7463770}\label{classjetfuel_1_1draw_1_1Font_a1054eb031ce0e8485f828f5ae7463770}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Font@{Font}}
+\index{Font@{Font}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Font()}{Font()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily jetfuel\+::draw\+::\+Font\+::\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Constructs an empty \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object with the filename and (optionally) the face index to be set later. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a96db43b28c32511ff481502ec8d11fd7}\label{classjetfuel_1_1draw_1_1Font_a96db43b28c32511ff481502ec8d11fd7}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Font@{Font}}
+\index{Font@{Font}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Font()}{Font()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily jetfuel\+::draw\+::\+Font\+::\+Font (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object with a filename. 
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object with a filename of where the True\+Type font file is located.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filename \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a5907cc1ecc14725d642ef5c3c753ced9}\label{classjetfuel_1_1draw_1_1Font_a5907cc1ecc14725d642ef5c3c753ced9}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Font@{Font}}
+\index{Font@{Font}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Font()}{Font()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily jetfuel\+::draw\+::\+Font\+::\+Font (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{const long}]{faceindex }\end{DoxyParamCaption})}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object with a filename and a face index. 
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object with a filename of where the True\+Type font file is located, and a face index for which face to open.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filename \\
+\hline
+{\em long} & faceindex \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a2a99e3273204f9dca27017c568f1eefe}\label{classjetfuel_1_1draw_1_1Font_a2a99e3273204f9dca27017c568f1eefe}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Change\+\_\+size@{Change\+\_\+size}}
+\index{Change\+\_\+size@{Change\+\_\+size}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Change\+\_\+size()}{Change\_size()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Font\+::\+Change\+\_\+size (\begin{DoxyParamCaption}\item[{const unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Changes the point size of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}. 
+
+Changes the point size of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}. You should not use this function with just a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}. Instead, use \hyperlink{classjetfuel_1_1draw_1_1Text}{jetfuel\+::draw\+::\+Text}\textquotesingle{}s Set\+\_\+font\+\_\+size function change the size which calls this function to function anyways.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_ad0f24c27c3dcca9839e4ffc1603a1c54}\label{classjetfuel_1_1draw_1_1Font_ad0f24c27c3dcca9839e4ffc1603a1c54}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Get\+\_\+face\+\_\+index@{Get\+\_\+face\+\_\+index}}
+\index{Get\+\_\+face\+\_\+index@{Get\+\_\+face\+\_\+index}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Get\+\_\+face\+\_\+index()}{Get\_face\_index()}}
+{\footnotesize\ttfamily long jetfuel\+::draw\+::\+Font\+::\+Get\+\_\+face\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns this \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}\textquotesingle{}s face index. 
+
+Returns this \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}\textquotesingle{}s face index that it was loaded with or constructed with. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a497ce6fb60f71fdc8667c5a5ede81cca}\label{classjetfuel_1_1draw_1_1Font_a497ce6fb60f71fdc8667c5a5ede81cca}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Get\+\_\+file\+\_\+name@{Get\+\_\+file\+\_\+name}}
+\index{Get\+\_\+file\+\_\+name@{Get\+\_\+file\+\_\+name}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Get\+\_\+file\+\_\+name()}{Get\_file\_name()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::draw\+::\+Font\+::\+Get\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns this \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}\textquotesingle{}s filename. 
+
+Returns this \hyperlink{classjetfuel_1_1draw_1_1Font}{Font}\textquotesingle{}s filename that it was loaded with or constructed with. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_aa6583c70e9b801b16dc78ca3a156bc97}\label{classjetfuel_1_1draw_1_1Font_aa6583c70e9b801b16dc78ca3a156bc97}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Get\+\_\+ttf\+\_\+font@{Get\+\_\+ttf\+\_\+font}}
+\index{Get\+\_\+ttf\+\_\+font@{Get\+\_\+ttf\+\_\+font}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Get\+\_\+ttf\+\_\+font()}{Get\_ttf\_font()}}
+{\footnotesize\ttfamily T\+T\+F\+\_\+\+Font$\ast$ jetfuel\+::draw\+::\+Font\+::\+Get\+\_\+ttf\+\_\+font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a reference to the T\+T\+F\+\_\+\+Font used by the library. 
+
+Get a reference to the T\+T\+F\+\_\+\+Font used by the engine. If you fully utilize this engine and do not modify it\textquotesingle{}s internals, you should not have to call this function. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a23a8e0aed90fac334f939d1b10864976}\label{classjetfuel_1_1draw_1_1Font_a23a8e0aed90fac334f939d1b10864976}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Is\+\_\+font\+\_\+loaded@{Is\+\_\+font\+\_\+loaded}}
+\index{Is\+\_\+font\+\_\+loaded@{Is\+\_\+font\+\_\+loaded}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Is\+\_\+font\+\_\+loaded()}{Is\_font\_loaded()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Font\+::\+Is\+\_\+font\+\_\+loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the font is loaded. 
+
+Checks if the font is loaded. In other words, Check if at least a filename, and, optionally, a face index have been set. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a5b6bec15a5220e34f5138fe9f1abf72e}\label{classjetfuel_1_1draw_1_1Font_a5b6bec15a5220e34f5138fe9f1abf72e}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Load\+\_\+font@{Load\+\_\+font}}
+\index{Load\+\_\+font@{Load\+\_\+font}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Load\+\_\+font()}{Load\_font()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Font\+::\+Load\+\_\+font (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Loads the font with a filename. 
+
+Loads the font with a filename locating the True\+Type font file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filename \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_aac89368ac80b1dd5b7831f40af14ef2f}\label{classjetfuel_1_1draw_1_1Font_aac89368ac80b1dd5b7831f40af14ef2f}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Load\+\_\+font@{Load\+\_\+font}}
+\index{Load\+\_\+font@{Load\+\_\+font}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Load\+\_\+font()}{Load\_font()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Font\+::\+Load\+\_\+font (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{const long}]{faceindex }\end{DoxyParamCaption})}
+
+
+
+Loads the font with a filename and a face index. 
+
+Loads the font with a filename locating the True\+Type font file and a face index to indicate which face to use.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filename \\
+\hline
+{\em long} & faceindex \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a0a8f47fbecce1093557f4d2e4c6266bf}\label{classjetfuel_1_1draw_1_1Font_a0a8f47fbecce1093557f4d2e4c6266bf}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Set\+\_\+face\+\_\+index@{Set\+\_\+face\+\_\+index}}
+\index{Set\+\_\+face\+\_\+index@{Set\+\_\+face\+\_\+index}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Set\+\_\+face\+\_\+index()}{Set\_face\_index()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Font\+::\+Set\+\_\+face\+\_\+index (\begin{DoxyParamCaption}\item[{long}]{faceindex = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set the face index of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object. 
+
+Set the face index of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object during construction or loading of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a42161bfb7213d0a5cbfb9dc4ad66348d}\label{classjetfuel_1_1draw_1_1Font_a42161bfb7213d0a5cbfb9dc4ad66348d}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Set\+\_\+file\+\_\+name@{Set\+\_\+file\+\_\+name}}
+\index{Set\+\_\+file\+\_\+name@{Set\+\_\+file\+\_\+name}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Set\+\_\+file\+\_\+name()}{Set\_file\_name()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Font\+::\+Set\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set the filename of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object. 
+
+Set the filename of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object during construction or loading of the \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & filename \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_ac30b41dcdbdb87d103f0b976ac785560}\label{classjetfuel_1_1draw_1_1Font_ac30b41dcdbdb87d103f0b976ac785560}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Set\+\_\+is\+\_\+font\+\_\+loaded@{Set\+\_\+is\+\_\+font\+\_\+loaded}}
+\index{Set\+\_\+is\+\_\+font\+\_\+loaded@{Set\+\_\+is\+\_\+font\+\_\+loaded}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Set\+\_\+is\+\_\+font\+\_\+loaded()}{Set\_is\_font\_loaded()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Font\+::\+Set\+\_\+is\+\_\+font\+\_\+loaded (\begin{DoxyParamCaption}\item[{bool}]{isfontloaded = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set whether the font is loaded. 
+
+Set whether the font is loaded when constructing or loading a font.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & isfontloaded \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Font_a6238d89e07f1b9866c61ebd1ed26ef6a}\label{classjetfuel_1_1draw_1_1Font_a6238d89e07f1b9866c61ebd1ed26ef6a}} 
+\index{jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}!Set\+\_\+ttf\+\_\+font@{Set\+\_\+ttf\+\_\+font}}
+\index{Set\+\_\+ttf\+\_\+font@{Set\+\_\+ttf\+\_\+font}!jetfuel\+::draw\+::\+Font@{jetfuel\+::draw\+::\+Font}}
+\subsubsection{\texorpdfstring{Set\+\_\+ttf\+\_\+font()}{Set\_ttf\_font()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Font\+::\+Set\+\_\+ttf\+\_\+font (\begin{DoxyParamCaption}\item[{T\+T\+F\+\_\+\+Font $\ast$}]{ttffont }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set the T\+T\+F\+\_\+\+Font reference. 
+
+Set the T\+T\+F\+\_\+\+Font reference used when creating text. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfueldraw/font.\+h\end{DoxyCompactItemize}

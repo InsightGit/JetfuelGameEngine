@@ -1,0 +1,214 @@
+\hypertarget{classjetfuel_1_1draw_1_1Image}{}\section{jetfuel\+:\+:draw\+:\+:Image Class Reference}
+\label{classjetfuel_1_1draw_1_1Image}\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+
+
+{\ttfamily \#include $<$image.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1draw_1_1Image_a63078fc295eb37ef549e17187d839574}{Image} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Image_a36c7a9de74ed515a90b5688d7efb040c}{Image} (const std\+::string imagepath, \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} $\ast$scenemanager)
+\begin{DoxyCompactList}\small\item\em Constructs an image with an image path and a scene manager. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Image_a80771f30728e311a58d7e0fa5844a6d5}{Image} (const std\+::string imagepath, const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d\+\_\+int} imagesize)
+\begin{DoxyCompactList}\small\item\em Constructs an image with an image path and an image size, without the need of a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Image_a2259992a6ae87fdebfe088f07a7bcc4e}{Set\+\_\+image} (const std\+::string imagepath, \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} $\ast$scenemanager)
+\begin{DoxyCompactList}\small\item\em Sets an image path and a scene manager. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Image_a4b445f5105eaed28d9a18d6bf3ed44bb}{Set\+\_\+image} (const std\+::string imagepath, const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d\+\_\+int} imagesize)
+\begin{DoxyCompactList}\small\item\em Sets an image with an image path and an image size, without the need of a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1draw_1_1Image_afe13a343f0ca098c2f258511fa6a2f2b}{Get\+\_\+image\+\_\+location} () const
+\begin{DoxyCompactList}\small\item\em Returns the image\textquotesingle{}s location. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} \hyperlink{classjetfuel_1_1draw_1_1Image_a69eb09128ebcbf427eac516d0c042ce5}{Get\+\_\+size\+\_\+of\+\_\+image} () const
+\begin{DoxyCompactList}\small\item\em Returns the image\textquotesingle{}s size (in pixels) \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classjetfuel_1_1draw_1_1Image_a4014f980cf67b0716b57b48f7a98020e}{Get\+\_\+error} ()
+\begin{DoxyCompactList}\small\item\em Gets S\+D\+L\+\_\+image error, if any. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Image_a0426e7dcc92eb1220cc8d1a508bdcca8}{Set\+\_\+image\+\_\+location} (const std\+::string imagelocation)
+\begin{DoxyCompactList}\small\item\em Sets the image location. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Image_a9252d59e532f26b94572f155c4d4b118}{Set\+\_\+size\+\_\+of\+\_\+image} (const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d\+\_\+int} imagesize)
+\begin{DoxyCompactList}\small\item\em Sets the size of the image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A image to be used with a \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite} to display images. This image is a simple wrapper to be used with a \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite} that stores the filepath of an image and the size of an image.
+
+Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} image = \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}(\char`\"{}test.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel\+::draw\+::\+Sprite} background;
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}example\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(500,500)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&background,1);
+
+if(!background.Load\+\_\+from\+\_\+image(backgroundimage))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ backgroundimage.\+Get\+\_\+error $<$$<$ \char`\"{}\textbackslash{}n\char`\"{};
+
+return 1; \}
+
+background.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Image_a63078fc295eb37ef549e17187d839574}\label{classjetfuel_1_1draw_1_1Image_a63078fc295eb37ef549e17187d839574}} 
+\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}!Image@{Image}}
+\index{Image@{Image}!jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily jetfuel\+::draw\+::\+Image\+::\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Initializes an \hyperlink{classjetfuel_1_1draw_1_1Image}{Image} with an image path and an image size to be set later. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Image_a36c7a9de74ed515a90b5688d7efb040c}\label{classjetfuel_1_1draw_1_1Image_a36c7a9de74ed515a90b5688d7efb040c}} 
+\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}!Image@{Image}}
+\index{Image@{Image}!jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily jetfuel\+::draw\+::\+Image\+::\+Image (\begin{DoxyParamCaption}\item[{const std\+::string}]{imagepath,  }\item[{\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} $\ast$}]{scenemanager }\end{DoxyParamCaption})}
+
+
+
+Constructs an image with an image path and a scene manager. 
+
+Initializes an \hyperlink{classjetfuel_1_1draw_1_1Image}{Image} with an image path and an scene manager, so that the image is ready to be used by a \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & imagepath \\
+\hline
+{\em \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager}} & $\ast$scenemanager \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Image_a80771f30728e311a58d7e0fa5844a6d5}\label{classjetfuel_1_1draw_1_1Image_a80771f30728e311a58d7e0fa5844a6d5}} 
+\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}!Image@{Image}}
+\index{Image@{Image}!jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily jetfuel\+::draw\+::\+Image\+::\+Image (\begin{DoxyParamCaption}\item[{const std\+::string}]{imagepath,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d\+\_\+int}}]{imagesize }\end{DoxyParamCaption})}
+
+
+
+Constructs an image with an image path and an image size, without the need of a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}. 
+
+Constructs an image with an image path and an image size, without the need of a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} so that an image is ready to be used by a \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & imagepath \\
+\hline
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & imagesize \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Image_a4014f980cf67b0716b57b48f7a98020e}\label{classjetfuel_1_1draw_1_1Image_a4014f980cf67b0716b57b48f7a98020e}} 
+\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}!Get\+\_\+error@{Get\+\_\+error}}
+\index{Get\+\_\+error@{Get\+\_\+error}!jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+\subsubsection{\texorpdfstring{Get\+\_\+error()}{Get\_error()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::draw\+::\+Image\+::\+Get\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets S\+D\+L\+\_\+image error, if any. 
+
+Gets S\+D\+L\+\_\+image error, if any. This function is useful to call when something goes wrong with this \hyperlink{classjetfuel_1_1draw_1_1Image}{Image} class. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Image_afe13a343f0ca098c2f258511fa6a2f2b}\label{classjetfuel_1_1draw_1_1Image_afe13a343f0ca098c2f258511fa6a2f2b}} 
+\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}!Get\+\_\+image\+\_\+location@{Get\+\_\+image\+\_\+location}}
+\index{Get\+\_\+image\+\_\+location@{Get\+\_\+image\+\_\+location}!jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+\subsubsection{\texorpdfstring{Get\+\_\+image\+\_\+location()}{Get\_image\_location()}}
+{\footnotesize\ttfamily std\+::string jetfuel\+::draw\+::\+Image\+::\+Get\+\_\+image\+\_\+location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the image\textquotesingle{}s location. 
+
+Returns the image\textquotesingle{}s location (or path) to load in a \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Image_a69eb09128ebcbf427eac516d0c042ce5}\label{classjetfuel_1_1draw_1_1Image_a69eb09128ebcbf427eac516d0c042ce5}} 
+\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}!Get\+\_\+size\+\_\+of\+\_\+image@{Get\+\_\+size\+\_\+of\+\_\+image}}
+\index{Get\+\_\+size\+\_\+of\+\_\+image@{Get\+\_\+size\+\_\+of\+\_\+image}!jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+\subsubsection{\texorpdfstring{Get\+\_\+size\+\_\+of\+\_\+image()}{Get\_size\_of\_image()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d\+\_\+int} jetfuel\+::draw\+::\+Image\+::\+Get\+\_\+size\+\_\+of\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the image\textquotesingle{}s size (in pixels) 
+
+Returns the image\textquotesingle{}s size as given as calculated with a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} or given to this class via an argument. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Image_a2259992a6ae87fdebfe088f07a7bcc4e}\label{classjetfuel_1_1draw_1_1Image_a2259992a6ae87fdebfe088f07a7bcc4e}} 
+\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}!Set\+\_\+image@{Set\+\_\+image}}
+\index{Set\+\_\+image@{Set\+\_\+image}!jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+\subsubsection{\texorpdfstring{Set\+\_\+image()}{Set\_image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Image\+::\+Set\+\_\+image (\begin{DoxyParamCaption}\item[{const std\+::string}]{imagepath,  }\item[{\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} $\ast$}]{scenemanager }\end{DoxyParamCaption})}
+
+
+
+Sets an image path and a scene manager. 
+
+Sets an image path and an scene manager after an \hyperlink{classjetfuel_1_1draw_1_1Image}{Image} has been constructed. This function is especially useful when using the default constructor, as you need to set the image path and a scene manager or image size later.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & imagepath \\
+\hline
+{\em \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager}} & $\ast$scenemanager \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Image_a4b445f5105eaed28d9a18d6bf3ed44bb}\label{classjetfuel_1_1draw_1_1Image_a4b445f5105eaed28d9a18d6bf3ed44bb}} 
+\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}!Set\+\_\+image@{Set\+\_\+image}}
+\index{Set\+\_\+image@{Set\+\_\+image}!jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+\subsubsection{\texorpdfstring{Set\+\_\+image()}{Set\_image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Image\+::\+Set\+\_\+image (\begin{DoxyParamCaption}\item[{const std\+::string}]{imagepath,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d\+\_\+int}}]{imagesize }\end{DoxyParamCaption})}
+
+
+
+Sets an image with an image path and an image size, without the need of a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}. 
+
+Sets an image with an image path and an image size, without the need of a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} so that an image is ready to be used by a \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}.
+
+This function is especially useful when using the default constructor, as you need to set the image path and a scene manager or image size later.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & imagepath \\
+\hline
+{\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & imagesize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Image_a0426e7dcc92eb1220cc8d1a508bdcca8}\label{classjetfuel_1_1draw_1_1Image_a0426e7dcc92eb1220cc8d1a508bdcca8}} 
+\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}!Set\+\_\+image\+\_\+location@{Set\+\_\+image\+\_\+location}}
+\index{Set\+\_\+image\+\_\+location@{Set\+\_\+image\+\_\+location}!jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+\subsubsection{\texorpdfstring{Set\+\_\+image\+\_\+location()}{Set\_image\_location()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Image\+::\+Set\+\_\+image\+\_\+location (\begin{DoxyParamCaption}\item[{const std\+::string}]{imagelocation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the image location. 
+
+Sets the image file location to be used when loading this image.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & imagelocation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Image_a9252d59e532f26b94572f155c4d4b118}\label{classjetfuel_1_1draw_1_1Image_a9252d59e532f26b94572f155c4d4b118}} 
+\index{jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}!Set\+\_\+size\+\_\+of\+\_\+image@{Set\+\_\+size\+\_\+of\+\_\+image}}
+\index{Set\+\_\+size\+\_\+of\+\_\+image@{Set\+\_\+size\+\_\+of\+\_\+image}!jetfuel\+::draw\+::\+Image@{jetfuel\+::draw\+::\+Image}}
+\subsubsection{\texorpdfstring{Set\+\_\+size\+\_\+of\+\_\+image()}{Set\_size\_of\_image()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Image\+::\+Set\+\_\+size\+\_\+of\+\_\+image (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d\+\_\+int}}]{imagesize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the size of the image. 
+
+Sets the size of the image to be used when drawing and positioning this image.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vector2d\+\_\+int} & imagesize \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfueldraw/image.\+h\end{DoxyCompactItemize}

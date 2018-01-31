@@ -1,0 +1,381 @@
+\hypertarget{classjetfuel_1_1draw_1_1Scene}{}\section{jetfuel\+:\+:draw\+:\+:Scene Class Reference}
+\label{classjetfuel_1_1draw_1_1Scene}\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+
+
+{\ttfamily \#include $<$scene.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1draw_1_1Scene_ad27192ba7e5f0cb23b55f5ba067cbe94}{Scene} (const int id=0, const std\+::string label=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} with a \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} id. \end{DoxyCompactList}\item 
+virtual \hyperlink{classjetfuel_1_1draw_1_1Scene_ac3e990c0deba1b5bb8d0552033a4ad81}{$\sim$\+Scene} ()
+\begin{DoxyCompactList}\small\item\em Cleans up \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} objects. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}{Attach\+\_\+drawable} (\hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} $\ast$drawable, const unsigned int drawingweight)
+\begin{DoxyCompactList}\small\item\em Attaches a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} to the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene_ab7bf5496c18d4a00e0b5ce02a203a4b4}{Disable\+\_\+drawable} (\hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} $\ast$drawable)
+\begin{DoxyCompactList}\small\item\em Disables a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} already attached to the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_ab84abd926680576fe264a23d732307e8}\label{classjetfuel_1_1draw_1_1Scene_ab84abd926680576fe264a23d732307e8}} 
+void {\bfseries Enable\+\_\+drawable} (\hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} $\ast$drawable)
+\item 
+int \hyperlink{classjetfuel_1_1draw_1_1Scene_a03433414bcb71d2001ecc717800b628b}{Get\+\_\+scene\+\_\+id} () const
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}\textquotesingle{}s id. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Color}{Color} \hyperlink{classjetfuel_1_1draw_1_1Scene_a212ff5b6cb07e2332b92ef72f5d67819}{Get\+\_\+background\+\_\+color} () const
+\begin{DoxyCompactList}\small\item\em Gets the scene\textquotesingle{}s background color. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene_aa3d099d358cd8ad9274d633805f3cc43}{Set\+\_\+background\+\_\+color} (const \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} backgroundcolor)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene_a6ee0359540800521294fda5d1d8b86b1}{Reset\+\_\+scene} ()
+\begin{DoxyCompactList}\small\item\em Clears the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} of any previously attached objects. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene_a0cd111e8863ab2e9e78cd3b6144c64a8}{Assign\+\_\+renderer} (S\+D\+L\+\_\+\+Renderer $\ast$scenemanagerrenderer)
+\begin{DoxyCompactList}\small\item\em Assigns a renderer to use when rendering a \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene_a80b9b5f38022b6c2af9921656f93056b}{Draw\+\_\+scene} ()
+\begin{DoxyCompactList}\small\item\em Draws the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classjetfuel_1_1draw_1_1Scene_abb0c1a20e3bb87167c75ada894acd60b}{Get\+\_\+scene\+\_\+manager\+\_\+renderer} () const
+\begin{DoxyCompactList}\small\item\em Returns the scene manager\textquotesingle{}s renderer. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classjetfuel_1_1draw_1_1Scene_a62423470cca53acd55ff174d6e37d730}{Get\+\_\+size\+\_\+of\+\_\+drawables\+\_\+vector} () const
+\begin{DoxyCompactList}\small\item\em Returns the size of the internal m\+\_\+drawables vector. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} $\ast$ \hyperlink{classjetfuel_1_1draw_1_1Scene_ad22707818e9de20b28d82646ca460141}{Get\+\_\+drawable\+\_\+in\+\_\+vector} (size\+\_\+t place)
+\begin{DoxyCompactList}\small\item\em Returns a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s reference in the internal m\+\_\+drawables vector. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1draw_1_1Scene_a92228a8f31c8e2e1fe1e3d0a12940b1a}{Get\+\_\+drawable\+\_\+placement\+\_\+in\+\_\+vector} (size\+\_\+t place)
+\begin{DoxyCompactList}\small\item\em Gets \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s placement (or drawingweight) in vector. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene_a4ab618141cf7e10c95cbe7b114688c1a}{Add\+\_\+drawable\+\_\+placement\+\_\+to\+\_\+drawable\+\_\+placement\+\_\+vector} (const unsigned int placement)
+\begin{DoxyCompactList}\small\item\em Adds a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement (or drawingweight) to the \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement vector. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classjetfuel_1_1draw_1_1Scene_a439de5e14d13f06db5acd2da708dc177}{Get\+\_\+highest\+\_\+placement} () const
+\begin{DoxyCompactList}\small\item\em Gets the highest \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement (or drawingweight) of the \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement vector. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene_a58984e589bd7ffa2940299fa88388765}{Add\+\_\+drawable\+\_\+to\+\_\+drawable\+\_\+vector} (\hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} $\ast$drawable)
+\begin{DoxyCompactList}\small\item\em Adds a drawable to the scene. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Scene_a7442f49028075ad2da9d3c2e450fbe4d}{Get\+\_\+drawable\+\_\+status} (size\+\_\+t place) const
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s status in the drawablesenabled vector. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene_a517687bb7b400a9e0b82c4c53e1939cc}{Enable\+\_\+drawable\+\_\+in\+\_\+vector} (size\+\_\+t place)
+\begin{DoxyCompactList}\small\item\em Enables a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} to be drawn when Draw\+\_\+scene is called. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Scene_a725618dfecbdb201fba44be02cc2bc13}{Disable\+\_\+drawable\+\_\+in\+\_\+vector} (size\+\_\+t place)
+\begin{DoxyCompactList}\small\item\em Disables a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} to not be drawn when Draw\+\_\+scene is called. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Scene_a1d8d53f33a18643e5ee7ea05e9906786}{Is\+\_\+background\+\_\+color\+\_\+set} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}\textquotesingle{}s background color is set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A scene to be used with \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} to produce a series of drawable scenes to be presented to the player.
+
+Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} image = \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}(\char`\"{}test.\+png\char`\"{}); \hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel\+::draw\+::\+Sprite} background;
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}example\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(500,500)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&background);
+
+if(!background.Load\+\_\+from\+\_\+image(backgroundimage))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ I\+M\+G\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; return 1; \}
+
+background.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_ad27192ba7e5f0cb23b55f5ba067cbe94}\label{classjetfuel_1_1draw_1_1Scene_ad27192ba7e5f0cb23b55f5ba067cbe94}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily jetfuel\+::draw\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{const int}]{id = {\ttfamily 0},  }\item[{const std\+::string}]{label = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} with a \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} id. 
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} with an optional \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} id and label for categorization.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_ac3e990c0deba1b5bb8d0552033a4ad81}\label{classjetfuel_1_1draw_1_1Scene_ac3e990c0deba1b5bb8d0552033a4ad81}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!````~Scene@{$\sim$\+Scene}}
+\index{````~Scene@{$\sim$\+Scene}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{$\sim$\+Scene()}{~Scene()}}
+{\footnotesize\ttfamily virtual jetfuel\+::draw\+::\+Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cleans up \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} objects. 
+
+Cleans up \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} objects. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a4ab618141cf7e10c95cbe7b114688c1a}\label{classjetfuel_1_1draw_1_1Scene_a4ab618141cf7e10c95cbe7b114688c1a}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Add\+\_\+drawable\+\_\+placement\+\_\+to\+\_\+drawable\+\_\+placement\+\_\+vector@{Add\+\_\+drawable\+\_\+placement\+\_\+to\+\_\+drawable\+\_\+placement\+\_\+vector}}
+\index{Add\+\_\+drawable\+\_\+placement\+\_\+to\+\_\+drawable\+\_\+placement\+\_\+vector@{Add\+\_\+drawable\+\_\+placement\+\_\+to\+\_\+drawable\+\_\+placement\+\_\+vector}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Add\+\_\+drawable\+\_\+placement\+\_\+to\+\_\+drawable\+\_\+placement\+\_\+vector()}{Add\_drawable\_placement\_to\_drawable\_placement\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+::\+Add\+\_\+drawable\+\_\+placement\+\_\+to\+\_\+drawable\+\_\+placement\+\_\+vector (\begin{DoxyParamCaption}\item[{const unsigned int}]{placement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Adds a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement (or drawingweight) to the \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement vector. 
+
+Adds a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement (or drawingweight) to the \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int placement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a58984e589bd7ffa2940299fa88388765}\label{classjetfuel_1_1draw_1_1Scene_a58984e589bd7ffa2940299fa88388765}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Add\+\_\+drawable\+\_\+to\+\_\+drawable\+\_\+vector@{Add\+\_\+drawable\+\_\+to\+\_\+drawable\+\_\+vector}}
+\index{Add\+\_\+drawable\+\_\+to\+\_\+drawable\+\_\+vector@{Add\+\_\+drawable\+\_\+to\+\_\+drawable\+\_\+vector}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Add\+\_\+drawable\+\_\+to\+\_\+drawable\+\_\+vector()}{Add\_drawable\_to\_drawable\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+::\+Add\+\_\+drawable\+\_\+to\+\_\+drawable\+\_\+vector (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} $\ast$}]{drawable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Adds a drawable to the scene. 
+
+Adds a drawable to the scene to be drawn upon the the function \hyperlink{classjetfuel_1_1draw_1_1Scene_a80b9b5f38022b6c2af9921656f93056b}{Draw\+\_\+scene()} being called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}} & $\ast$drawable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a0cd111e8863ab2e9e78cd3b6144c64a8}\label{classjetfuel_1_1draw_1_1Scene_a0cd111e8863ab2e9e78cd3b6144c64a8}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Assign\+\_\+renderer@{Assign\+\_\+renderer}}
+\index{Assign\+\_\+renderer@{Assign\+\_\+renderer}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Assign\+\_\+renderer()}{Assign\_renderer()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+::\+Assign\+\_\+renderer (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{scenemanagerrenderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assigns a renderer to use when rendering a \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}. 
+
+Assigns a renderer to use when rendering a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}. This function should be called by a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} upon switching scenes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Renderer} & $\ast$scenemanagerrenderer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}\label{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Attach\+\_\+drawable@{Attach\+\_\+drawable}}
+\index{Attach\+\_\+drawable@{Attach\+\_\+drawable}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Attach\+\_\+drawable()}{Attach\_drawable()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Scene\+::\+Attach\+\_\+drawable (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} $\ast$}]{drawable,  }\item[{const unsigned int}]{drawingweight }\end{DoxyParamCaption})}
+
+
+
+Attaches a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} to the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. 
+
+Attaches a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s reference and a drawingweight to the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} to be drawn upon the function \hyperlink{classjetfuel_1_1draw_1_1Scene_a80b9b5f38022b6c2af9921656f93056b}{Draw\+\_\+scene()} being called. Lower drawingweights are drawn lower, and might overlap with another higher weighted \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}. Sprites on the same drawingweight will be overlapped by Rectangle\+\_\+2d\+\_\+shapes and Texts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}} & $\ast$drawable \\
+\hline
+{\em unsigned} & int drawingweight \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_ab7bf5496c18d4a00e0b5ce02a203a4b4}\label{classjetfuel_1_1draw_1_1Scene_ab7bf5496c18d4a00e0b5ce02a203a4b4}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Disable\+\_\+drawable@{Disable\+\_\+drawable}}
+\index{Disable\+\_\+drawable@{Disable\+\_\+drawable}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Disable\+\_\+drawable()}{Disable\_drawable()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+::\+Disable\+\_\+drawable (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} $\ast$}]{drawable }\end{DoxyParamCaption})}
+
+
+
+Disables a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} already attached to the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. 
+
+Disables a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} already attached to the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. This associates that \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} with a bool of false in a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} status vector, which dictates whenever a certain \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} should be drawed. This allows you to re-\/enable this \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} any time by calling the Enable\+\_\+drawable function. If the drawable passed in is not found in this \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} object, this function will not do anything
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}} & $\ast$drawable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a725618dfecbdb201fba44be02cc2bc13}\label{classjetfuel_1_1draw_1_1Scene_a725618dfecbdb201fba44be02cc2bc13}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Disable\+\_\+drawable\+\_\+in\+\_\+vector@{Disable\+\_\+drawable\+\_\+in\+\_\+vector}}
+\index{Disable\+\_\+drawable\+\_\+in\+\_\+vector@{Disable\+\_\+drawable\+\_\+in\+\_\+vector}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Disable\+\_\+drawable\+\_\+in\+\_\+vector()}{Disable\_drawable\_in\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+::\+Disable\+\_\+drawable\+\_\+in\+\_\+vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{place }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Disables a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} to not be drawn when Draw\+\_\+scene is called. 
+
+Disables a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} to not be drawn when Draw\+\_\+scene is called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & place \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a80b9b5f38022b6c2af9921656f93056b}\label{classjetfuel_1_1draw_1_1Scene_a80b9b5f38022b6c2af9921656f93056b}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Draw\+\_\+scene@{Draw\+\_\+scene}}
+\index{Draw\+\_\+scene@{Draw\+\_\+scene}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Draw\+\_\+scene()}{Draw\_scene()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+::\+Draw\+\_\+scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. 
+
+Draws the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} by drawing all of the attached drawable objects. This function should be called by a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} upon the function \hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{jetfuel\+::draw\+::\+Scene\+\_\+manager\+::\+Draw\+\_\+current\+\_\+scene()} being called. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a517687bb7b400a9e0b82c4c53e1939cc}\label{classjetfuel_1_1draw_1_1Scene_a517687bb7b400a9e0b82c4c53e1939cc}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Enable\+\_\+drawable\+\_\+in\+\_\+vector@{Enable\+\_\+drawable\+\_\+in\+\_\+vector}}
+\index{Enable\+\_\+drawable\+\_\+in\+\_\+vector@{Enable\+\_\+drawable\+\_\+in\+\_\+vector}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Enable\+\_\+drawable\+\_\+in\+\_\+vector()}{Enable\_drawable\_in\_vector()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+::\+Enable\+\_\+drawable\+\_\+in\+\_\+vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{place }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Enables a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} to be drawn when Draw\+\_\+scene is called. 
+
+Enables a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} to be drawn when Draw\+\_\+scene is called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & place \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a212ff5b6cb07e2332b92ef72f5d67819}\label{classjetfuel_1_1draw_1_1Scene_a212ff5b6cb07e2332b92ef72f5d67819}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Get\+\_\+background\+\_\+color@{Get\+\_\+background\+\_\+color}}
+\index{Get\+\_\+background\+\_\+color@{Get\+\_\+background\+\_\+color}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Get\+\_\+background\+\_\+color()}{Get\_background\_color()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Color}{Color} jetfuel\+::draw\+::\+Scene\+::\+Get\+\_\+background\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the scene\textquotesingle{}s background color. 
+
+Gets the scene\textquotesingle{}s background color. This color will be black by default if it has not been set. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_ad22707818e9de20b28d82646ca460141}\label{classjetfuel_1_1draw_1_1Scene_ad22707818e9de20b28d82646ca460141}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Get\+\_\+drawable\+\_\+in\+\_\+vector@{Get\+\_\+drawable\+\_\+in\+\_\+vector}}
+\index{Get\+\_\+drawable\+\_\+in\+\_\+vector@{Get\+\_\+drawable\+\_\+in\+\_\+vector}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Get\+\_\+drawable\+\_\+in\+\_\+vector()}{Get\_drawable\_in\_vector()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}$\ast$ jetfuel\+::draw\+::\+Scene\+::\+Get\+\_\+drawable\+\_\+in\+\_\+vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{place }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s reference in the internal m\+\_\+drawables vector. 
+
+Returns a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s reference in the internal private m\+\_\+drawables vector. If place is not in the \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s vector range, this function will throw a jetfuel\+::core\+::exceptions \+::\+Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception(). Otherwise, it will return that \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s reference.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & place \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a92228a8f31c8e2e1fe1e3d0a12940b1a}\label{classjetfuel_1_1draw_1_1Scene_a92228a8f31c8e2e1fe1e3d0a12940b1a}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Get\+\_\+drawable\+\_\+placement\+\_\+in\+\_\+vector@{Get\+\_\+drawable\+\_\+placement\+\_\+in\+\_\+vector}}
+\index{Get\+\_\+drawable\+\_\+placement\+\_\+in\+\_\+vector@{Get\+\_\+drawable\+\_\+placement\+\_\+in\+\_\+vector}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Get\+\_\+drawable\+\_\+placement\+\_\+in\+\_\+vector()}{Get\_drawable\_placement\_in\_vector()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::draw\+::\+Scene\+::\+Get\+\_\+drawable\+\_\+placement\+\_\+in\+\_\+vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{place }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s placement (or drawingweight) in vector. 
+
+Gets \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s placement (or drawingweight) in vector. If this function is given a place that is bigger or equal to the vector\textquotesingle{}s size, this function will throw a jetfuel\+::core\+::exceptions \+::\+Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception() exception. Otherwise, this function will return that \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s placement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & place \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a7442f49028075ad2da9d3c2e450fbe4d}\label{classjetfuel_1_1draw_1_1Scene_a7442f49028075ad2da9d3c2e450fbe4d}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Get\+\_\+drawable\+\_\+status@{Get\+\_\+drawable\+\_\+status}}
+\index{Get\+\_\+drawable\+\_\+status@{Get\+\_\+drawable\+\_\+status}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Get\+\_\+drawable\+\_\+status()}{Get\_drawable\_status()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Scene\+::\+Get\+\_\+drawable\+\_\+status (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{place }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s status in the drawablesenabled vector. 
+
+Gets a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable}\textquotesingle{}s status in the drawablesenabled vector to determine whether the \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} should be drawn or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & place \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a439de5e14d13f06db5acd2da708dc177}\label{classjetfuel_1_1draw_1_1Scene_a439de5e14d13f06db5acd2da708dc177}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Get\+\_\+highest\+\_\+placement@{Get\+\_\+highest\+\_\+placement}}
+\index{Get\+\_\+highest\+\_\+placement@{Get\+\_\+highest\+\_\+placement}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Get\+\_\+highest\+\_\+placement()}{Get\_highest\_placement()}}
+{\footnotesize\ttfamily unsigned int jetfuel\+::draw\+::\+Scene\+::\+Get\+\_\+highest\+\_\+placement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the highest \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement (or drawingweight) of the \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement vector. 
+
+Gets the highest \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement (or drawingweight) of the \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} placement vector. This value is pre-\/calculated whenever a new placement is added. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a03433414bcb71d2001ecc717800b628b}\label{classjetfuel_1_1draw_1_1Scene_a03433414bcb71d2001ecc717800b628b}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Get\+\_\+scene\+\_\+id@{Get\+\_\+scene\+\_\+id}}
+\index{Get\+\_\+scene\+\_\+id@{Get\+\_\+scene\+\_\+id}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Get\+\_\+scene\+\_\+id()}{Get\_scene\_id()}}
+{\footnotesize\ttfamily int jetfuel\+::draw\+::\+Scene\+::\+Get\+\_\+scene\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}\textquotesingle{}s id. 
+
+Returns the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}\textquotesingle{}s id. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_abb0c1a20e3bb87167c75ada894acd60b}\label{classjetfuel_1_1draw_1_1Scene_abb0c1a20e3bb87167c75ada894acd60b}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Get\+\_\+scene\+\_\+manager\+\_\+renderer@{Get\+\_\+scene\+\_\+manager\+\_\+renderer}}
+\index{Get\+\_\+scene\+\_\+manager\+\_\+renderer@{Get\+\_\+scene\+\_\+manager\+\_\+renderer}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Get\+\_\+scene\+\_\+manager\+\_\+renderer()}{Get\_scene\_manager\_renderer()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ jetfuel\+::draw\+::\+Scene\+::\+Get\+\_\+scene\+\_\+manager\+\_\+renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns the scene manager\textquotesingle{}s renderer. 
+
+Returns the scene manager\textquotesingle{}s renderer. This function should be used after a scene is attached to a \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager}. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a62423470cca53acd55ff174d6e37d730}\label{classjetfuel_1_1draw_1_1Scene_a62423470cca53acd55ff174d6e37d730}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Get\+\_\+size\+\_\+of\+\_\+drawables\+\_\+vector@{Get\+\_\+size\+\_\+of\+\_\+drawables\+\_\+vector}}
+\index{Get\+\_\+size\+\_\+of\+\_\+drawables\+\_\+vector@{Get\+\_\+size\+\_\+of\+\_\+drawables\+\_\+vector}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Get\+\_\+size\+\_\+of\+\_\+drawables\+\_\+vector()}{Get\_size\_of\_drawables\_vector()}}
+{\footnotesize\ttfamily size\+\_\+t jetfuel\+::draw\+::\+Scene\+::\+Get\+\_\+size\+\_\+of\+\_\+drawables\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns the size of the internal m\+\_\+drawables vector. 
+
+Returns the size of the internal private m\+\_\+drawabless vector. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a1d8d53f33a18643e5ee7ea05e9906786}\label{classjetfuel_1_1draw_1_1Scene_a1d8d53f33a18643e5ee7ea05e9906786}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Is\+\_\+background\+\_\+color\+\_\+set@{Is\+\_\+background\+\_\+color\+\_\+set}}
+\index{Is\+\_\+background\+\_\+color\+\_\+set@{Is\+\_\+background\+\_\+color\+\_\+set}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Is\+\_\+background\+\_\+color\+\_\+set()}{Is\_background\_color\_set()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Scene\+::\+Is\+\_\+background\+\_\+color\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks whether the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}\textquotesingle{}s background color is set. 
+
+Checks whether the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}\textquotesingle{}s background color is set. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_a6ee0359540800521294fda5d1d8b86b1}\label{classjetfuel_1_1draw_1_1Scene_a6ee0359540800521294fda5d1d8b86b1}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Reset\+\_\+scene@{Reset\+\_\+scene}}
+\index{Reset\+\_\+scene@{Reset\+\_\+scene}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Reset\+\_\+scene()}{Reset\_scene()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+::\+Reset\+\_\+scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} of any previously attached objects. 
+
+Clears the scene of any previously attached drawable objects. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_aa3d099d358cd8ad9274d633805f3cc43}\label{classjetfuel_1_1draw_1_1Scene_aa3d099d358cd8ad9274d633805f3cc43}} 
+\index{jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}!Set\+\_\+background\+\_\+color@{Set\+\_\+background\+\_\+color}}
+\index{Set\+\_\+background\+\_\+color@{Set\+\_\+background\+\_\+color}!jetfuel\+::draw\+::\+Scene@{jetfuel\+::draw\+::\+Scene}}
+\subsubsection{\texorpdfstring{Set\+\_\+background\+\_\+color()}{Set\_background\_color()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Scene\+::\+Set\+\_\+background\+\_\+color (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Color}{Color}}]{backgroundcolor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the background color of the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. 
+
+Sets the background color of the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene}. If set, this background color will override the universal background color set by the \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} and will trigger a change of the background color during when the \hyperlink{classjetfuel_1_1draw_1_1Scene}{Scene} is displayed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Color}{Color}} & backgroundcolor \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfueldraw/scene.\+h\end{DoxyCompactItemize}

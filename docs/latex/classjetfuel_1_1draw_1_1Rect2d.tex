@@ -1,0 +1,179 @@
+\hypertarget{classjetfuel_1_1draw_1_1Rect2d}{}\section{jetfuel\+:\+:draw\+:\+:Rect2d$<$ T $>$ Class Template Reference}
+\label{classjetfuel_1_1draw_1_1Rect2d}\index{jetfuel\+::draw\+::\+Rect2d$<$ T $>$@{jetfuel\+::draw\+::\+Rect2d$<$ T $>$}}
+
+
+{\ttfamily \#include $<$rect2d.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d_af5a9c18dea4e196ec326f31ab63ad644}{Rect2d} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d_aeab9db448df3318ab83fe19f3844f498}{Rect2d} (const T X, const T Y, const T Width, const T Height)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} with a x coordinate, a y coordinate, width, and height. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d_ad2cf8c7744252e2202284a230c6d7652}{Rect2d} (const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d}$<$ T $>$ position, const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d}$<$ T $>$ size)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} with a position vector, and a size vector. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d}$<$ T $>$ \hyperlink{classjetfuel_1_1draw_1_1Rect2d_abcc7abd189cc592850484d1314f6220b}{Get\+\_\+position} ()
+\begin{DoxyCompactList}\small\item\em Gets the position \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d} of the \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d}. \end{DoxyCompactList}\item 
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d}$<$ T $>$ \hyperlink{classjetfuel_1_1draw_1_1Rect2d_a3e14b3f59200c452a08085c724950afb}{Get\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Gets the size \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d} of the \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d}. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Rect2d_ae29d8f3e8a6f522d6aacdd00b8d3f757}{Has\+\_\+collided\+\_\+with\+\_\+rect} (\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d}$<$ T $>$ rect)
+\begin{DoxyCompactList}\small\item\em Detects whether this \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} has collided with another \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} with the same type. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Rect2d_affa3a06a40154e71485b9676710f6d0d}{Has\+\_\+mouse\+\_\+collided} ()
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} has collided with the mouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \hyperlink{classjetfuel_1_1draw_1_1Rect2d_ade151e450d1cc5e7b158a28e7bd6d212}{x}
+\begin{DoxyCompactList}\small\item\em member data /// \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_a52d405128b7f28d5427737c3d39cd108}\label{classjetfuel_1_1draw_1_1Rect2d_a52d405128b7f28d5427737c3d39cd108}} 
+T \hyperlink{classjetfuel_1_1draw_1_1Rect2d_a52d405128b7f28d5427737c3d39cd108}{y}
+\begin{DoxyCompactList}\small\item\em y coordinate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_aa7e4446e059ed2d85ba66111b1d012f5}\label{classjetfuel_1_1draw_1_1Rect2d_aa7e4446e059ed2d85ba66111b1d012f5}} 
+T \hyperlink{classjetfuel_1_1draw_1_1Rect2d_aa7e4446e059ed2d85ba66111b1d012f5}{width}
+\begin{DoxyCompactList}\small\item\em width of rectangle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_afd76834755d8698172922b9d1793f630}\label{classjetfuel_1_1draw_1_1Rect2d_afd76834755d8698172922b9d1793f630}} 
+T \hyperlink{classjetfuel_1_1draw_1_1Rect2d_afd76834755d8698172922b9d1793f630}{height}
+\begin{DoxyCompactList}\small\item\em height of rectangle \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class jetfuel\+::draw\+::\+Rect2d$<$ T $>$}
+
+A simple 2d rectangle manipulation class.
+
+Code Example\+: jetfuel\+::draw\+::\+Rect2d\+\_\+int myrect(0,0,5,5); \hyperlink{classjetfuel_1_1draw_1_1Rectangle__2d__shape}{jetfuel\+::draw\+::\+Rectangle\+\_\+2d\+\_\+shape} mydrawablerect(myrect); \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1);
+
+if(!scenemanager.Create\+\_\+window(\char`\"{}example\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(500,500)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+if(!scenemanager.Create\+\_\+renderer())\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+
+scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1);
+
+mydrawablerect.\+Set\+\_\+fill\+\_\+color(jetfuel\+::draw\+::\+Color\+::\+Cyan); scene1.\+Attach\+\_\+drawable(\&mydrawablerect,1\+S);
+
+scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_af5a9c18dea4e196ec326f31ab63ad644}\label{classjetfuel_1_1draw_1_1Rect2d_af5a9c18dea4e196ec326f31ab63ad644}} 
+\index{jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}!Rect2d@{Rect2d}}
+\index{Rect2d@{Rect2d}!jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}}
+\subsubsection{\texorpdfstring{Rect2d()}{Rect2d()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d}$<$ T $>$\+::\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Constructs an empty \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} with all values set to 0. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_aeab9db448df3318ab83fe19f3844f498}\label{classjetfuel_1_1draw_1_1Rect2d_aeab9db448df3318ab83fe19f3844f498}} 
+\index{jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}!Rect2d@{Rect2d}}
+\index{Rect2d@{Rect2d}!jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}}
+\subsubsection{\texorpdfstring{Rect2d()}{Rect2d()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d}$<$ T $>$\+::\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} (\begin{DoxyParamCaption}\item[{const T}]{X,  }\item[{const T}]{Y,  }\item[{const T}]{Width,  }\item[{const T}]{Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} with a x coordinate, a y coordinate, width, and height. 
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} with a x coordinate, a y coordinate, width, and height.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & X \\
+\hline
+{\em T} & Y \\
+\hline
+{\em T} & Width \\
+\hline
+{\em T} & Height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_ad2cf8c7744252e2202284a230c6d7652}\label{classjetfuel_1_1draw_1_1Rect2d_ad2cf8c7744252e2202284a230c6d7652}} 
+\index{jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}!Rect2d@{Rect2d}}
+\index{Rect2d@{Rect2d}!jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}}
+\subsubsection{\texorpdfstring{Rect2d()}{Rect2d()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d}$<$ T $>$\+::\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} (\begin{DoxyParamCaption}\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d}$<$ T $>$}]{position,  }\item[{const \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d}$<$ T $>$}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} with a position vector, and a size vector. 
+
+Constructs a \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} with a position vector, and a size vector.
+
+jetfuel\+::draw\+::\+Vector2d$<$\+T$>$ position jetfuel\+::draw\+::\+Vector2d$<$\+T$>$ size 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_abcc7abd189cc592850484d1314f6220b}\label{classjetfuel_1_1draw_1_1Rect2d_abcc7abd189cc592850484d1314f6220b}} 
+\index{jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}!Get\+\_\+position@{Get\+\_\+position}}
+\index{Get\+\_\+position@{Get\+\_\+position}!jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}}
+\subsubsection{\texorpdfstring{Get\+\_\+position()}{Get\_position()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d}$<$T$>$ \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d}$<$ T $>$\+::Get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the position \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d} of the \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d}. 
+
+Gets the position \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d} of the \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d}. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_a3e14b3f59200c452a08085c724950afb}\label{classjetfuel_1_1draw_1_1Rect2d_a3e14b3f59200c452a08085c724950afb}} 
+\index{jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}!Get\+\_\+size@{Get\+\_\+size}}
+\index{Get\+\_\+size@{Get\+\_\+size}!jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}}
+\subsubsection{\texorpdfstring{Get\+\_\+size()}{Get\_size()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel\+::draw\+::\+Vector2d}$<$T$>$ \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d}$<$ T $>$\+::Get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the size \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d} of the \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d}. 
+
+Gets the size \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{Vector2d} of the \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d}. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_ae29d8f3e8a6f522d6aacdd00b8d3f757}\label{classjetfuel_1_1draw_1_1Rect2d_ae29d8f3e8a6f522d6aacdd00b8d3f757}} 
+\index{jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}!Has\+\_\+collided\+\_\+with\+\_\+rect@{Has\+\_\+collided\+\_\+with\+\_\+rect}}
+\index{Has\+\_\+collided\+\_\+with\+\_\+rect@{Has\+\_\+collided\+\_\+with\+\_\+rect}!jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}}
+\subsubsection{\texorpdfstring{Has\+\_\+collided\+\_\+with\+\_\+rect()}{Has\_collided\_with\_rect()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+bool \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d}$<$ T $>$\+::Has\+\_\+collided\+\_\+with\+\_\+rect (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d}$<$ T $>$}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Detects whether this \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} has collided with another \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} with the same type. 
+
+Detects whether this \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} has collided with another \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} with the same type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rect2d$<$\+T$>$} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_affa3a06a40154e71485b9676710f6d0d}\label{classjetfuel_1_1draw_1_1Rect2d_affa3a06a40154e71485b9676710f6d0d}} 
+\index{jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}!Has\+\_\+mouse\+\_\+collided@{Has\+\_\+mouse\+\_\+collided}}
+\index{Has\+\_\+mouse\+\_\+collided@{Has\+\_\+mouse\+\_\+collided}!jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}}
+\subsubsection{\texorpdfstring{Has\+\_\+mouse\+\_\+collided()}{Has\_mouse\_collided()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+bool \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d}$<$ T $>$\+::Has\+\_\+mouse\+\_\+collided (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} has collided with the mouse. 
+
+Returns whether this \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{Rect2d} has collided with the mouse. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Rect2d_ade151e450d1cc5e7b158a28e7bd6d212}\label{classjetfuel_1_1draw_1_1Rect2d_ade151e450d1cc5e7b158a28e7bd6d212}} 
+\index{jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}!x@{x}}
+\index{x@{x}!jetfuel\+::draw\+::\+Rect2d@{jetfuel\+::draw\+::\+Rect2d}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+T \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel\+::draw\+::\+Rect2d}$<$ T $>$\+::x}
+
+
+
+member data /// 
+
+x coordinate 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/jetfueldraw/rect2d.\+h\end{DoxyCompactItemize}
