@@ -42,7 +42,7 @@ namespace jetfuel {
             std::string previouskey;
             std::string previousaction;
         };
-        /// jetfuel::control::UIS_previous_key
+        /// \class jetfuel::control::UIS_previous_key
         ///
         /// A struct used internally by the Universal Input System
         /// manager (or jetfuel::control::UIS_manager) to track a key
@@ -333,7 +333,7 @@ namespace jetfuel {
             ///^ bus pointer
         };
 
-        /// jetfuel::control::UIS_manager
+        /// \class jetfuel::control::UIS_manager
         ///
         /// An Universal Input System manager to translate SDL Input
         /// events into in-game actions.
@@ -349,6 +349,7 @@ namespace jetfuel {
         /// Code example:
         ///
         ///     C++ Code File:
+        /// 		\code
         ///            jetfuel::core::Message_bus messagebus;
         ///            jetfuel::draw::Scene_manager scenemanager;
         ///            jetfuel::draw::Scene scene1(1);
@@ -399,8 +400,11 @@ namespace jetfuel {
         ///                    UISmanager.Process_input_event(&event);
         ///                }
         ///            }
+        /// 		\endcode
+        ///
         ///
         ///     JSON file(UISConfig.json):
+        /// 	\code
         ///         {
         ///             "keyidnumber": 1,
         ///             "Keys": [
@@ -410,6 +414,7 @@ namespace jetfuel {
         ///               }
         ///             ]
         ///         }
+        /// 	\endcode
     } /* namespace control */
 } /* namespace jetfuel */
 

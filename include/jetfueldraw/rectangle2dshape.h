@@ -185,6 +185,7 @@ namespace jetfuel {
         /// A 2d rectangle that can be drawn to the player.
         ///
         /// Code Example:
+        /// 	\code
         ///     jetfuel::draw::Scene_manager scenemanager;
         ///     jetfuel::draw::Scene scene1(1);
         ///     jetfuel::draw::Rectangle_2d_shape rect(
@@ -208,6 +209,7 @@ namespace jetfuel {
         ///     scene1.Attach_drawable(&rect,2);
         ///
         ///     scenemanager.Draw_current_scene();
+        /// \endcode
 
     } /* namespace draw */
 } /* namespace jetfuel */

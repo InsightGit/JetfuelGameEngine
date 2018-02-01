@@ -1,5 +1,9 @@
 \hypertarget{classjetfuel_1_1core_1_1Message__bus}{}\section{jetfuel\+:\+:core\+:\+:Message\+\_\+bus Class Reference}
 \label{classjetfuel_1_1core_1_1Message__bus}\index{jetfuel\+::core\+::\+Message\+\_\+bus@{jetfuel\+::core\+::\+Message\+\_\+bus}}
+
+
+{\ttfamily \#include $<$messagebus.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,6 +41,29 @@ int \hyperlink{classjetfuel_1_1core_1_1Message__bus_a1703d66bdf3faac3dd7e90edec0
 void \hyperlink{classjetfuel_1_1core_1_1Message__bus_a12c40043878677d0dbb5e9897f48d08f}{Set\+\_\+last\+\_\+message\+\_\+placement} (const int lastmessageplacement)
 \begin{DoxyCompactList}\small\item\em Sets the internal m\+\_\+lastmessageplacement variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Initialize a \hyperlink{classjetfuel_1_1core_1_1Message__bus}{Message\+\_\+bus}, used at the core of Neon, to Send and Recieve messages, and disable logging at the programmer\textquotesingle{}s request.
+
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel::core::Message\_bus} messagebus;
+messagebus.\hyperlink{classjetfuel_1_1core_1_1Message__bus_a7a36c1ebc19327ddb554d6f8199a6965}{Post\_message}(\textcolor{stringliteral}{"hello"});
+\textcolor{keywordflow}{if}(messagebus.\hyperlink{classjetfuel_1_1core_1_1Message__bus_a81015af8f393e028c4e9e670167aa013}{Do\_messages\_exist}())\{
+   \textcolor{keywordflow}{if}(messagebus.\hyperlink{classjetfuel_1_1core_1_1Message__bus_a9bbbbea3cd97a8f8253e08b700dbd05d}{Does\_message\_exist}(\textcolor{stringliteral}{"hello"}))\{
+       std::cout <<
+       \textcolor{stringliteral}{"Hello message recieved and processed!"} << std::endl;
+   \}
+
+   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; messagebus.\hyperlink{classjetfuel_1_1core_1_1Message__bus_aa363b50d4ba99ae86430b5f12610fd39}{Get\_SDL\_events\_size}() > i; i++)\{
+       \textcolor{keywordflow}{if}(messagebus.\hyperlink{classjetfuel_1_1core_1_1Message__bus_ab80c8b51aca00ad4942ee2114fdf2fec}{Get\_SDL\_event}(i) == SDL\_QUIT)\{
+           \textcolor{comment}{// Quit app here...}
+       \}
+   \}
+   Clear\_processed\_messages();
+\}
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1core_1_1Message__bus_abf8b94890bd7223f9fa3f7d861ee96ab}\label{classjetfuel_1_1core_1_1Message__bus_abf8b94890bd7223f9fa3f7d861ee96ab}} 

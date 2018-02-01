@@ -9,7 +9,6 @@ var searchData=
   ['sound',['Sound',['../classjetfuel_1_1media_1_1Sound.html',1,'jetfuel::media']]],
   ['sound_5feffect',['Sound_effect',['../classjetfuel_1_1media_1_1Sound__effect.html',1,'jetfuel::media']]],
   ['sprite',['Sprite',['../classjetfuel_1_1draw_1_1Sprite.html',1,'jetfuel::draw']]],
-  ['string_5flocale_5f',['String_locale_',['../classjetfuel_1_1locale_1_1String__locale__.html',1,'jetfuel::locale']]],
   ['string_5flocale_5ffile',['String_locale_file',['../classjetfuel_1_1locale_1_1String__locale__file.html',1,'jetfuel::locale']]],
   ['string_5flocale_5fmanager',['String_locale_manager',['../classjetfuel_1_1locale_1_1String__locale__manager.html',1,'jetfuel::locale']]]
 ];

@@ -2,8 +2,11 @@
 \label{classjetfuel_1_1draw_1_1Circle2d}\index{jetfuel\+::draw\+::\+Circle2d$<$ T $>$@{jetfuel\+::draw\+::\+Circle2d$<$ T $>$}}
 
 
-Collaboration diagram for jetfuel\+:\+:draw\+:\+:Circle2d$<$ T $>$\+:
-\nopagebreak
+{\ttfamily \#include $<$circle2d.\+h$>$}
+
+
+
+Collaboration diagram for jetfuel\+:\+:draw\+:\+:Circle2d$<$ T $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -39,6 +42,40 @@ T \hyperlink{classjetfuel_1_1draw_1_1Circle2d_a720dee1fceb981cf5245bc82c2d5f8e1}
 T \hyperlink{classjetfuel_1_1draw_1_1Circle2d_ae5e10da97d4a857a6c14179f81bed159}{radius}
 \begin{DoxyCompactList}\small\item\em circle radius \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class jetfuel\+::draw\+::\+Circle2d$<$ T $>$}
+
+A simple 2d circle manipulation class.
+
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1draw_1_1Circle2d}{jetfuel::draw::Circle2d\_int} mycircle(0,0,50);
+\hyperlink{classjetfuel_1_1draw_1_1Circle__2d__shape}{jetfuel::draw::Circle\_2d\_shape} mydrawablecircle(mycircle);
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1(1);
+
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(\textcolor{stringliteral}{"example"},
+                         \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0),
+                         \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(500,500)))\{
+   std::cerr << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer!"} <<
+   \textcolor{stringliteral}{"Error is:"} << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
+
+  \textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+       std::cerr << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer!"} <<
+      \textcolor{stringliteral}{"Error is:"} << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+  \}
+
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\_current\_scene}(&scene1);
+
+mydrawablecircle.Set\_color(\hyperlink{classjetfuel_1_1draw_1_1Color_a9c9781b9377310494e8af2a5fe524ab4}{jetfuel::draw::Color::Cyan});
+scene1.Attach\_drawable(&mydrawablecircle,1S);
+
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\_current\_scene}();
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Circle2d_a265ed4234046e3a5fd669be4f39833bf}\label{classjetfuel_1_1draw_1_1Circle2d_a265ed4234046e3a5fd669be4f39833bf}} 

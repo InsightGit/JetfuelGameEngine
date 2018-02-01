@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+\+Init\+\_\+exception\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+\+Init\+\_\+exception\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+\+In
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+\+Init\+\_\+exception\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+\+Init\+\_\+exception\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,7 +32,13 @@ Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+\+
 \subsection{Detailed Description}
 An exception to throw when the S\+DL initialize function S\+D\+L\+\_\+\+Init fails.
 
-Code Example\+: if(S\+D\+L\+\_\+\+Init(\+S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+V\+I\+D\+E\+O) != 0)\{ throw exceptions\+::\+S\+D\+L\+\_\+\+Init\+\_\+exception(\+S\+D\+L\+\_\+\+Get\+Error()); \} 
+Code Example\+: 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(SDL\_Init(SDL\_INIT\_VIDEO) != 0)\{
+    \textcolor{keywordflow}{throw} exceptions::SDL\_Init\_exception(SDL\_GetError());
+\}
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1draw_1_1exceptions_1_1SDL__Init__exception_a7af9e4d40d575a1bec7b79407e2f7cce}\label{classjetfuel_1_1draw_1_1exceptions_1_1SDL__Init__exception_a7af9e4d40d575a1bec7b79407e2f7cce}} 

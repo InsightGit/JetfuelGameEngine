@@ -41,19 +41,42 @@ Code Example\+:
 
 J\+S\+ON(English\+Locale.\+json)\+:
 
-\{ \char`\"{}strings\char`\"{}\+: \mbox{[} \{ \char`\"{}stringid\char`\"{}\+: \char`\"{}checkboxlabel\char`\"{}, \char`\"{}string\char`\"{} \+: \char`\"{}click it i guess\char`\"{} \} \mbox{]} \}
+
+\begin{DoxyCode}
+\{
+    \textcolor{stringliteral}{"strings"}: [
+        \{
+            \textcolor{stringliteral}{"stringid"}: \textcolor{stringliteral}{"checkboxlabel"},
+            \textcolor{stringliteral}{"string"} : \textcolor{stringliteral}{"click it i guess"}
+        \}
+    ]
+\}
+\end{DoxyCode}
+
 
 C++\+:
 
-\hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+file} englishlocalefile; \hyperlink{classjetfuel_1_1locale_1_1String__locale__manager}{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+manager} localemanager; std\+::string error;
 
-if(!englishlocalefile.Load\+\_\+string\+\_\+locale\+\_\+file(\char`\"{}\+English\+Locale.\+json\char`\"{}, \char`\"{}english\char`\"{}, \&error))\{ std\+::cerr $<$$<$ \char`\"{}\+Could not load English\+Locale J\+S\+O\+N file! \char`\"{} $<$$<$ \char`\"{}\+Error was\+: \char`\"{} $<$$<$ error $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; return 1; \}
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{jetfuel::locale::String\_locale\_file} englishlocalefile;
+\hyperlink{classjetfuel_1_1locale_1_1String__locale__manager}{jetfuel::locale::String\_locale\_manager} localemanager;
+std::string error;
 
-localemanager.\+Load\+\_\+string\+\_\+locale\+\_\+file(englishlocalefile);
+\textcolor{keywordflow}{if}(!englishlocalefile.\hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a904609e7cde4eb624cb940cbba642ea0}{Load\_string\_locale\_file}(\textcolor{stringliteral}{"EnglishLocale.json"},
+    \textcolor{stringliteral}{"english"}, &error))\{
+    std::cerr << \textcolor{stringliteral}{"Could not load EnglishLocale JSON file! "} <<
+    \textcolor{stringliteral}{"Error was: "} << error << \textcolor{stringliteral}{"\(\backslash\)n"};
+    \textcolor{keywordflow}{return} 1;
+\}
 
-localemanager.\+Set\+\_\+active\+\_\+locale(\char`\"{}english\char`\"{});
+localemanager.\hyperlink{classjetfuel_1_1locale_1_1String__locale__manager_a2a972352f2b52a6aec947aad636ca6f1}{Load\_string\_locale\_file}(englishlocalefile);
 
-std\+::cout $<$$<$ \char`\"{}\+Hello in\char`\"{} $<$$<$ localemanager.\+Get\+\_\+active\+\_\+locale() $<$$<$ \char`\"{} is \char`\"{} $<$$<$ localemanager.\+Get\+\_\+string\+\_\+from\+\_\+id(\char`\"{}hello\char`\"{}); 
+localemanager.\hyperlink{classjetfuel_1_1locale_1_1String__locale__manager_a2bca626efc214510e533a8c4ece7cafb}{Set\_active\_locale}(\textcolor{stringliteral}{"english"});
+
+std::cout << \textcolor{stringliteral}{"Hello in"} << localemanager.\hyperlink{classjetfuel_1_1locale_1_1String__locale__manager_a41b25b50b804bce31184b32e6dc97fae}{Get\_active\_locale}() <<  
+            \textcolor{stringliteral}{" is "} << localemanager.\hyperlink{classjetfuel_1_1locale_1_1String__locale__manager_a215fa1aaf302e45b1ab375f764a8d101}{Get\_string\_from\_id}(\textcolor{stringliteral}{"hello"});
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__file_a98b4ccb05ae738101ec1c4af582aa0d8}\label{classjetfuel_1_1locale_1_1String__locale__file_a98b4ccb05ae738101ec1c4af582aa0d8}} 

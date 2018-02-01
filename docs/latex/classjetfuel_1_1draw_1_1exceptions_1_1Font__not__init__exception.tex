@@ -2,8 +2,11 @@
 \label{classjetfuel_1_1draw_1_1exceptions_1_1Font__not__init__exception}\index{jetfuel\+::draw\+::exceptions\+::\+Font\+\_\+not\+\_\+init\+\_\+exception@{jetfuel\+::draw\+::exceptions\+::\+Font\+\_\+not\+\_\+init\+\_\+exception}}
 
 
-Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Font\+\_\+not\+\_\+init\+\_\+exception\+:
-\nopagebreak
+{\ttfamily \#include $<$text.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Font\+\_\+not\+\_\+init\+\_\+exception\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Font\+\_\+not\+\_
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Font\+\_\+not\+\_\+init\+\_\+exception\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Font\+\_\+not\+\_\+init\+\_\+exception\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,6 +28,22 @@ Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Font\+\_\+not\+
 \hyperlink{classjetfuel_1_1draw_1_1exceptions_1_1Font__not__init__exception_af3e44125242cd74a0c2694abc15bec86}{Font\+\_\+not\+\_\+init\+\_\+exception} ()
 \begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classjetfuel_1_1draw_1_1exceptions_1_1Font__not__init__exception}{Font\+\_\+not\+\_\+init\+\_\+exception}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+This exception should be thrown when a font passed into a function as an argument is not loaded and ready for the class to use it. This exception is not meant to be used outside of the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} class.
+
+Code Example\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} Do\_something\_with\_font(Font font)\{
+    \textcolor{keywordflow}{if}(font.Is\_font\_loaded())\{
+        \textcolor{comment}{// do something with the font...}
+    \}\textcolor{keywordflow}{else}\{
+        \textcolor{keywordflow}{throw} jetfuel::draw::exceptions::
+              Font\_not\_init\_exception();
+    \}
+\}
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1draw_1_1exceptions_1_1Font__not__init__exception_af3e44125242cd74a0c2694abc15bec86}\label{classjetfuel_1_1draw_1_1exceptions_1_1Font__not__init__exception_af3e44125242cd74a0c2694abc15bec86}} 

@@ -20,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="jetfueldocslogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JetfuelGameEngine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -80,8 +81,6 @@ $(function() {
 Collaboration diagram for jetfuel::draw::Color:</div>
 <div class="dyncontent">
 <div class="center"><img src="classjetfuel_1_1draw_1_1Color__coll__graph.png" border="0" usemap="#jetfuel_1_1draw_1_1Color_coll__map" alt="Collaboration graph"/></div>
-<map name="jetfuel_1_1draw_1_1Color_coll__map" id="jetfuel_1_1draw_1_1Color_coll__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -164,12 +163,7 @@ Related Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A simple useful class for working with rgba colors. This can be used with the Rectangle2dshape object or with the <a class="el" href="classjetfuel_1_1draw_1_1Text.html">Text</a> object.</p>
-<p>Code Example: <a class="el" href="classjetfuel_1_1draw_1_1Scene__manager.html">jetfuel::draw::Scene_manager</a> scenemanager; <a class="el" href="classjetfuel_1_1draw_1_1Scene.html">jetfuel::draw::Scene</a> scene1(1); <a class="el" href="classjetfuel_1_1draw_1_1Color.html">jetfuel::draw::Color</a> color(jetfuel::draw::Color::Blue); <a class="el" href="classjetfuel_1_1draw_1_1Rectangle__2d__shape.html">jetfuel::draw::Rectangle_2d_shape</a> rectangle( jetfuel::draw::Rect2d_int(50,50,50,100);</p>
-<p>if(!scenemanager.Create_window("example", jetfuel::draw::Vector2d_int(0,0), jetfuel::draw::Vector2d_int(500,500))){ std::cerr &lt;&lt; "[!]ERROR with creating sdl renderer!" &lt;&lt; "Error is:" &lt;&lt; SDL_GetError() &lt;&lt; "\n"; }</p>
-<p>if(!scenemanager.Create_renderer()){ std::cerr &lt;&lt; "[!]ERROR with creating sdl renderer!" &lt;&lt; "Error is:" &lt;&lt; SDL_GetError() &lt;&lt; "\n"; }</p>
-<p>scenemanager.Switch_current_scene(&amp;scene1); scene1.Attach_drawable(&amp;background); rectangle.Set_fill_color(color);</p>
-<p>scenemanager.Draw_current_scene(); </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>Code Example: </p><div class="fragment"><div class="line"><a class="code" href="classjetfuel_1_1draw_1_1Scene__manager.html">jetfuel::draw::Scene_manager</a> scenemanager;</div><div class="line"><a class="code" href="classjetfuel_1_1draw_1_1Scene.html">jetfuel::draw::Scene</a> scene1(1);</div><div class="line"><a class="code" href="classjetfuel_1_1draw_1_1Color.html">jetfuel::draw::Color</a> color(<a class="code" href="classjetfuel_1_1draw_1_1Color.html#a6a9b5ba6b4999d1659b7186fa239f249">jetfuel::draw::Color::Blue</a>);</div><div class="line"><a class="code" href="classjetfuel_1_1draw_1_1Rectangle__2d__shape.html">jetfuel::draw::Rectangle_2d_shape</a> rectangle(</div><div class="line"> <a class="code" href="classjetfuel_1_1draw_1_1Rect2d.html">jetfuel::draw::Rect2d_int</a>(50,50,50,100);</div><div class="line"></div><div class="line"><span class="keywordflow">if</span>(!scenemanager.<a class="code" href="classjetfuel_1_1draw_1_1Scene__manager.html#a5113e9062c272a22d383ba872417ba31">Create_window</a>(<span class="stringliteral">&quot;example&quot;</span>,</div><div class="line">                         <a class="code" href="classjetfuel_1_1draw_1_1Vector2d.html">jetfuel::draw::Vector2d_int</a>(0,0),</div><div class="line">                         <a class="code" href="classjetfuel_1_1draw_1_1Vector2d.html">jetfuel::draw::Vector2d_int</a>(500,500))){</div><div class="line">   std::cerr &lt;&lt; <span class="stringliteral">&quot;[!]ERROR with creating sdl renderer!&quot;</span> &lt;&lt;</div><div class="line">   <span class="stringliteral">&quot;Error is:&quot;</span> &lt;&lt; SDL_GetError() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordflow">if</span>(!scenemanager.<a class="code" href="classjetfuel_1_1draw_1_1Scene__manager.html#afafecd926ce5e4b2543a6d583a7d24b6">Create_renderer</a>()){</div><div class="line">     std::cerr &lt;&lt; <span class="stringliteral">&quot;[!]ERROR with creating sdl renderer!&quot;</span> &lt;&lt;</div><div class="line">    <span class="stringliteral">&quot;Error is:&quot;</span> &lt;&lt; SDL_GetError() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div><div class="line">}</div><div class="line"></div><div class="line">scenemanager.<a class="code" href="classjetfuel_1_1draw_1_1Scene__manager.html#a770c163b88ba8427539ee182315ea989">Switch_current_scene</a>(&amp;scene1);</div><div class="line">scene1.Attach_drawable(&amp;background);</div><div class="line">rectangle.Set_fill_color(color);</div><div class="line"></div><div class="line">scenemanager.<a class="code" href="classjetfuel_1_1draw_1_1Scene__manager.html#a8af9a3abfd5121b1b8556342de435773">Draw_current_scene</a>();</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0deb50ab0c45f96bf039d595fda8d6c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0deb50ab0c45f96bf039d595fda8d6c3">&#9670;&nbsp;</a></span>Color() <span class="overload">[1/2]</span></h2>
 

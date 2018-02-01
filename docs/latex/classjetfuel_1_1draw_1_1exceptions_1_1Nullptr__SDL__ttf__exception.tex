@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Nullptr\+\_\+\+S\+D\+L\+\_\+ttf\+\_\+exception\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Nullptr\+\_\+\+S\+D\+L\+\_\+ttf\+\_\+exception\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Nullptr\+\_\+\+S\
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Nullptr\+\_\+\+S\+D\+L\+\_\+ttf\+\_\+exception\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Nullptr\+\_\+\+S\+D\+L\+\_\+ttf\+\_\+exception\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,13 +30,25 @@ Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:Nullptr\+\_\+\+
 
 
 \subsection{Detailed Description}
-\hyperlink{classjetfuel_1_1draw_1_1exceptions_1_1Font__not__init__exception}{jetfuel\+::draw\+::exceptions\+::\+Font\+\_\+not\+\_\+init\+\_\+exception}
-
-This exception should be thrown when a font passed into a function as an argument is not loaded and ready for the class to use it. This exception is not meant to be used outside of the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} class.
+This exception should be thrown if a S\+D\+L\+\_\+ttf function returns N\+U\+LL or nullptr when it means it indicates an error. This exception is not meant to be used outside of the \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} class.
 
 Code Example\+:
 
-void Do\+\_\+something\+\_\+with\+\_\+font(\+Font font)\{ if(font.\+Is\+\_\+font\+\_\+loaded())\{ // do something with the font... \}else\{ throw jetfuel\+::draw\+::exceptions\+:\+: Font\+\_\+not\+\_\+init\+\_\+exception(); \} \} 
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} Render\_text()\{
+    SDL\_Surface *textsurface = TTF\_RenderUTF8\_Solid(
+                                putinyoursdlfonthere,
+                                \textcolor{stringliteral}{"hello"},
+                               putinyoursdlcolorhere);
+    \textcolor{keywordflow}{if}(textsurface == \textcolor{keyword}{nullptr})\{
+        \textcolor{keywordflow}{throw} jetfuel::draw::exceptions::
+              Nullptr\_SDL\_ttf\_exception();
+    \}
+
+\}
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1draw_1_1exceptions_1_1Nullptr__SDL__ttf__exception_ac6644eee07afa5a2f8a972f98905f250}\label{classjetfuel_1_1draw_1_1exceptions_1_1Nullptr__SDL__ttf__exception_ac6644eee07afa5a2f8a972f98905f250}} 

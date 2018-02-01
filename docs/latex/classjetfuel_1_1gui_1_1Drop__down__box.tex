@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:gui\+:\+:Drop\+\_\+down\+\_\+box\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:gui\+:\+:Drop\+\_\+down\+\_\+box\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:gui\+:\+:Drop\+\_\+down\+\_\+box\+:
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:gui\+:\+:Drop\+\_\+down\+\_\+box\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:gui\+:\+:Drop\+\_\+down\+\_\+box\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -87,9 +85,8 @@ void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a5ed3ca41e8d6147e3af3afc9
 \begin{DoxyCompactList}\small\item\em Adds an std\+::string option to the private m\+\_\+options vector. \end{DoxyCompactList}\item 
 size\+\_\+t \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a72f957e19c3ce5f3da61ef3d47d09b2f}{Get\+\_\+size\+\_\+of\+\_\+dropdown\+\_\+options\+\_\+vector} () const
 \begin{DoxyCompactList}\small\item\em Gets the size of the private m\+\_\+dropdownoptions vector. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_af6ac565eb238a27b8c988143c82cafe4}\label{classjetfuel_1_1gui_1_1Drop__down__box_af6ac565eb238a27b8c988143c82cafe4}} 
-\hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} {\bfseries Get\+\_\+dropdown\+\_\+option\+\_\+in\+\_\+vector} (const size\+\_\+t which)
-\item 
+\hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_af6ac565eb238a27b8c988143c82cafe4}{Get\+\_\+dropdown\+\_\+option\+\_\+in\+\_\+vector} (const size\+\_\+t which)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} from the private m\+\_\+dropdownoptions vector. \end{DoxyCompactList}\item 
 void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_af9d4d77418cc67a85dc98519224458f4}{Set\+\_\+active\+\_\+drop\+\_\+down} (const size\+\_\+t which)
 \begin{DoxyCompactList}\small\item\em Sets which option to be first and displayed in this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s base box. \end{DoxyCompactList}\item 
 void \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a2fac141eb75af5c59b208753634f2e75}{Set\+\_\+base\+\_\+box\+\_\+option} (std\+::string option)
@@ -109,25 +106,56 @@ bool \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_ae29b89b98fa3211ead2fffc7
 \subsection{Detailed Description}
 A simple Drop down box with user-\/specified options.
 
-Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} messagebus; \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box} dropdownbox; \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} dropdownbaseboximage(\char`\"{}basebox.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager} U\+I\+Smanager(\&messagebus, scenemanager.\+Get\+\_\+window\+\_\+id()); \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter} U\+I\+Sinterpreter(\&messagebus); \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} textchars; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{});
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1(1);
+\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel::core::Message\_bus} messagebus;
+\hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{jetfuel::gui::Drop\_down\_box} dropdownbox;
+\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel::draw::Image} dropdownbaseboximage(\textcolor{stringliteral}{"basebox.png"},
+                                          &scenemanager);
+\hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel::control::UIS\_manager} UISmanager(&messagebus,
+                                  scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a1758a86d40dcfaface8958fcd33676bf}{Get\_window\_id}());
+\hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel::control::UIS\_interpreter} UISinterpreter(&messagebus);
+\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel::draw::Text::Text\_characteristics} textchars;
+\hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel::draw::Font} font(\textcolor{stringliteral}{"default.ttf"});
 
-if(!scenemanager.Create\+\_\+window(\char`\"{}\+Hello Dropdownboxes!\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(640,480)))\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl window! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(\textcolor{stringliteral}{"Hello Dropdownboxes!"},
+                               \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0),
+                          \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(640,480)))\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl window! Error is:"}
+    << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-if(!scenemanager.Create\+\_\+renderer())\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \} scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&dropdownbox,1);
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer! Error is:"}
+    << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\_current\_scene}(&scene1);
+scene1.\hyperlink{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}{Attach\_drawable}(&dropdownbox,1);
 
-if(!dropdownbox.Load\+\_\+base\+\_\+box\+\_\+image(dropdownbaseboximage, \hyperlink{classjetfuel_1_1draw_1_1Color_ab75797c1cb6e4dd952037916db39b5e8}{jetfuel\+::draw\+::\+Color\+::\+White}, jetfuel\+::draw\+::\+Vector2d\+\_\+uint( 45,20)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ I\+M\+G\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!dropdownbox.\hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a9624ef3b9af6d1e3e6fcebb7ef7aa17c}{Load\_base\_box\_image}(dropdownbaseboximage,
+                                    \hyperlink{classjetfuel_1_1draw_1_1Color_ab75797c1cb6e4dd952037916db39b5e8}{jetfuel::draw::Color::White},
+                                    \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_uint}(
+                                    45,20)))\{
+    std::cerr << \textcolor{stringliteral}{"[!]ERROR with loading from image! Error is:"} <<
+    IMG\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-dropdownbox.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+dropdownbox.\hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_acba86706261397994c96727a0184a78c}{Set\_position}(\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0));
 
-textchars.\+textstring = \char`\"{}hello\char`\"{}; textchars.\+font = font;
+textchars.textstring = \textcolor{stringliteral}{"hello"};
+textchars.font = font;
 
-\begin{DoxyVerb}dropdownbox.Set_option_text_characteristics(textchars);
 
-dropdownbox.Add_option("A");
-dropdownbox.Add_option("B");
-dropdownbox.Add_option("C");
+dropdownbox.\hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a051d83177f8fa26325dcbdc504ccb0a9}{Set\_option\_text\_characteristics}(textchars);
 
-scenemanager.Draw_current_scene();  \end{DoxyVerb}
+dropdownbox.\hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a2dd70d6c3982232965ecc9b7079b6144}{Add\_option}(\textcolor{stringliteral}{"A"});
+dropdownbox.\hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a2dd70d6c3982232965ecc9b7079b6144}{Add\_option}(\textcolor{stringliteral}{"B"});
+dropdownbox.\hyperlink{classjetfuel_1_1gui_1_1Drop__down__box_a2dd70d6c3982232965ecc9b7079b6144}{Add\_option}(\textcolor{stringliteral}{"C"});
+
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\_current\_scene}();
+\end{DoxyCode}
  
 
 \subsection{Constructor \& Destructor Documentation}
@@ -322,7 +350,24 @@ Gets the border sizes of this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}
 
 Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s color. 
 
-Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s color (from the base box color). \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a8f8bd91ea279110cab98b78854207ae7}\label{classjetfuel_1_1gui_1_1Drop__down__box_a8f8bd91ea279110cab98b78854207ae7}} 
+Gets this \hyperlink{classjetfuel_1_1gui_1_1Drop__down__box}{Drop\+\_\+down\+\_\+box}\textquotesingle{}s color (from the base box color). \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_af6ac565eb238a27b8c988143c82cafe4}\label{classjetfuel_1_1gui_1_1Drop__down__box_af6ac565eb238a27b8c988143c82cafe4}} 
+\index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+dropdown\+\_\+option\+\_\+in\+\_\+vector@{Get\+\_\+dropdown\+\_\+option\+\_\+in\+\_\+vector}}
+\index{Get\+\_\+dropdown\+\_\+option\+\_\+in\+\_\+vector@{Get\+\_\+dropdown\+\_\+option\+\_\+in\+\_\+vector}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
+\subsubsection{\texorpdfstring{Get\+\_\+dropdown\+\_\+option\+\_\+in\+\_\+vector()}{Get\_dropdown\_option\_in\_vector()}}
+{\footnotesize\ttfamily \hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box\+::\+Get\+\_\+dropdown\+\_\+option\+\_\+in\+\_\+vector (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets a \hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} from the private m\+\_\+dropdownoptions vector. 
+
+Gets a \hyperlink{structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option}{Drop\+\_\+down\+\_\+option} from the private m\+\_\+dropdownoptions vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & which \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1gui_1_1Drop__down__box_a8f8bd91ea279110cab98b78854207ae7}\label{classjetfuel_1_1gui_1_1Drop__down__box_a8f8bd91ea279110cab98b78854207ae7}} 
 \index{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}!Get\+\_\+option\+\_\+text\+\_\+characteristics@{Get\+\_\+option\+\_\+text\+\_\+characteristics}}
 \index{Get\+\_\+option\+\_\+text\+\_\+characteristics@{Get\+\_\+option\+\_\+text\+\_\+characteristics}!jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box@{jetfuel\+::gui\+::\+Drop\+\_\+down\+\_\+box}}
 \subsubsection{\texorpdfstring{Get\+\_\+option\+\_\+text\+\_\+characteristics()}{Get\_option\_text\_characteristics()}}

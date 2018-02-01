@@ -31,7 +31,7 @@ namespace jetfuel {
             /// by any class that inherits this class.
             virtual Circle2d_int Get_circle_to_draw() = 0;
         };
-        /// jetfuel::draw::Circle_interface
+        /// \class jetfuel::draw::Circle_interface
         ///
         /// A simple interface that specifies unique functions
         /// Drawable circles should implement.

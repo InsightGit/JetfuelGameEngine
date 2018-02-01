@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:gui\+:\+:Slider\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:gui\+:\+:Slider\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:gui\+:\+:Slider\+:
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:gui\+:\+:Slider\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:gui\+:\+:Slider\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -75,21 +73,44 @@ int \hyperlink{classjetfuel_1_1gui_1_1Slider_a4115f54db7955a6493661ec176b532fd}{
 \subsection{Detailed Description}
 A simple slider G\+UI class that allows the user to pick different spots on a line represesenting different statuses(or, potentially, actions).
 
-Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} messagebus; \hyperlink{classjetfuel_1_1gui_1_1Slider}{jetfuel\+::gui\+::\+Slider} slider; \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager} U\+I\+Smanager(\&messagebus, scenemanager.\+Get\+\_\+window\+\_\+id()); \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter} U\+I\+Sinterpreter(\&messagebus); \hyperlink{structjetfuel_1_1control_1_1UIS__input__actions}{jetfuel\+::control\+::\+U\+I\+S\+\_\+input\+\_\+actions} U\+I\+Sinputactions; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{});
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1(1);
+\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel::core::Message\_bus} messagebus;
+\hyperlink{classjetfuel_1_1gui_1_1Slider}{jetfuel::gui::Slider} slider;
+\hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel::control::UIS\_manager} UISmanager(&messagebus,
+                                  scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a1758a86d40dcfaface8958fcd33676bf}{Get\_window\_id}());
+\hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel::control::UIS\_interpreter} UISinterpreter(&messagebus);
+\hyperlink{structjetfuel_1_1control_1_1UIS__input__actions}{jetfuel::control::UIS\_input\_actions} UISinputactions;
+\hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel::draw::Font} font(\textcolor{stringliteral}{"default.ttf"});
 
-if(!scenemanager.Create\+\_\+window(\char`\"{}\+Hello Sliders!\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(640,480)))\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl window! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(\textcolor{stringliteral}{"Hello Sliders!"},
+                               \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0),
+                          \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(640,480)))\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl window! Error is:"}
+    << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-if(!scenemanager.Create\+\_\+renderer())\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \} scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&slider,1);
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer! Error is:"}
+    << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\_current\_scene}(&scene1);
+scene1.\hyperlink{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}{Attach\_drawable}(&slider,1);
 
-slider.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+slider.\hyperlink{classjetfuel_1_1gui_1_1Slider_a11721a72699e9d1cdd0f6e5709f003e4}{Set\_position}(\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0));
 
-slider.\+Set\+\_\+current\+\_\+status\+\_\+number(0); // zero-\/indexed slider.\+Set\+\_\+max\+\_\+number\+\_\+of\+\_\+statuses(4);
+slider.Set\_current\_status\_number(0); \textcolor{comment}{// zero-indexed}
+slider.Set\_max\_number\_of\_statuses(4);
 
-U\+I\+Sinputactions.\+mousemessagetowatch = 
+UISinputactions.mousemessagetowatch = &messagebus;
 
-slider.\+Set\+\_\+control\+\_\+scheme(\+U\+I\+Sinputactions);
+slider.\hyperlink{classjetfuel_1_1gui_1_1Slider_a64531a8ed9353906ffb8e1b5720e9409}{Set\_control\_scheme}(UISinputactions);
 
-scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\_current\_scene}();
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Slider_a961a11496cee6ab2f38aef1e14e94922}\label{classjetfuel_1_1gui_1_1Slider_a961a11496cee6ab2f38aef1e14e94922}} 

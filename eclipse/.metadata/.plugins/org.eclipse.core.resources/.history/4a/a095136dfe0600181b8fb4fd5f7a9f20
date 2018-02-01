@@ -1,0 +1,165 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2018 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#ifndef JETFUELLOCALE_STRINGLOCALEMANAGER_H
+#define JETFUELLOCALE_STRINGLOCALEMANAGER_H
+
+#include <jetfuellocale/stringlocalefile.h>
+
+namespace jetfuel {
+    namespace locale {
+
+        class String_locale_manager {
+        public:
+			/// \brief Default constructor.
+			///
+			/// Default constructor.
+            String_locale_manager(){}
+
+			/// \brief Loads a String_locale_file into this 
+			/// String_locale_manager as an available locale.
+			///
+			/// Loads a String_locale_file into this 
+			/// String_locale_manager as an available locale.
+			///
+			/// \param jetfuel::locale::String_locale_file localefile
+            bool Load_string_locale_file(String_locale_file localefile){
+                if(localefile.Is_locale_file_set()){
+                    m_localefiles.push_back(localefile);
+
+                    return true;
+                }
+
+                return false;
+            }
+
+			/// \brief Gets the active locale name.
+			///
+			/// Gets the active locale name.
+            std::string Get_active_locale(){
+                return m_activelocale;
+            }
+
+			/// \brief Gets the active String_locale_file.
+			///
+			/// Gets the active String_locale_file.
+            String_locale_file Get_active_string_locale_file() const{
+                return *m_currentlocalefile;
+            }
+
+			/// \brief Sets the active locale from a the loaded vector
+			/// of String_locale_files and returns whether the locale
+			/// was set to be the active locale.
+			///
+			/// Sets the active locale from a the loaded vector
+			/// of String_locale_files and returns whether the locale
+			/// was set to be the active locale.
+			///
+			/// \param std::string localename
+            bool Set_active_locale(const std::string localename){
+                bool foundlocale = false;
+
+                for(int i = 0; m_localefiles.size() > i; ++i){
+                    if(localename == m_localefiles[i].
+                       Get_string_locale_file_locale_name()){
+                        m_currentlocalefile = &m_localefiles[i];
+                        m_activelocale =
+                         m_currentlocalefile->
+                         Get_string_locale_file_locale_name();
+                        foundlocale=true;
+                        break;
+                    }
+                }
+
+                return foundlocale;
+            }
+
+			/// \brief Gets a string with a (hopefully universal) 
+			/// stringid from the active String_locale_file.
+			///
+			/// Gets a string with a (hopefully universal) 
+			/// stringid from the active String_locale_file.
+			///
+			/// \param std::string stringid
+            std::string Get_string_from_id(const std::string stringid) const{
+                std::vector<Locale_string> stringidindex = m_currentlocalefile->
+                                                      Get_locale_string_vector();
+                for(int i = 0; stringidindex.size() > i; ++i){
+                    if(stringidindex[i].stringid == stringid){
+                        return stringidindex[i].string;
+                    }
+                }
+
+                return "";
+            }
+        private:
+            std::string m_activelocale = "NoLocale"; ///< The active 
+													 ///< locale name
+
+            std::vector<String_locale_file> m_localefiles; ///< The 
+														///< String_locale_file
+														   ///< vector 
+														   ///< containing
+														  ///< all the 
+														///< loaded locales.
+
+            String_locale_file *m_currentlocalefile; 
+											///< The active locale.
+        };
+		/// \class jetfuel::locale::String_locale_manager
+		///
+		/// A localization manager using a collection of 
+		/// String_locale_files.
+		///
+		/// Code Example:
+		///
+		/// JSON(EnglishLocale.json):
+		///	\code
+		/// {
+		///		"strings": [
+		///			{
+		///				"stringid": "checkboxlabel",
+		///				"string" : "click it i guess"
+		///			}
+		///		]
+		///	}
+		/// \endcode
+		///
+		/// C++:
+		///
+		/// jetfuel::locale::String_locale_file englishlocalefile;
+		/// jetfuel::locale::String_locale_manager localemanager;
+		/// std::string error;
+		///
+		/// if(!englishlocalefile.Load_string_locale_file("EnglishLocale.json",
+		///		"english", &error)){
+		///		std::cerr << "Could not load EnglishLocale JSON file! " <<
+		///		"Error was: " << error << "\n";
+		///		return 1;
+		///	}
+		///
+		/// localemanager.Load_string_locale_file(englishlocalefile);
+		///
+		///	localemanager.Set_active_locale("english");
+		///
+		/// std::cout << "Hello in" << localemanager.Get_active_locale() <<  
+		///				" is " << localemanager.Get_string_from_id("hello");
+
+    } /* namespace locale */
+} /* namespace jetfuel */
+
+#endif /* JETFUELLOCALE_STRINGLOCALEMANAGER_H */

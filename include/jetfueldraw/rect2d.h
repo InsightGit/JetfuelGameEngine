@@ -281,6 +281,7 @@ namespace jetfuel {
         /// A simple 2d rectangle manipulation class.
         ///
         /// Code Example:
+        ///   \code
         ///   jetfuel::draw::Rect2d_int myrect(0,0,5,5);
         ///   jetfuel::draw::Rectangle_2d_shape mydrawablerect(myrect);
         ///   jetfuel::draw::Scene_manager scenemanager;
@@ -304,6 +305,7 @@ namespace jetfuel {
         ///   scene1.Attach_drawable(&mydrawablerect,1S);
         ///
         ///   scenemanager.Draw_current_scene();
+        ///   \endcode
 
     } /* namespace draw */
 } /* namespace jetfuel */

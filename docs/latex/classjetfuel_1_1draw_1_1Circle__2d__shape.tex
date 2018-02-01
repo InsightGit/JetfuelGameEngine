@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:draw\+:\+:Circle\+\_\+2d\+\_\+shape\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:draw\+:\+:Circle\+\_\+2d\+\_\+shape\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:draw\+:\+:Circle\+\_\+2d\+\_\+shape\+:
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:draw\+:\+:Circle\+\_\+2d\+\_\+shape\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:draw\+:\+:Circle\+\_\+2d\+\_\+shape\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -66,17 +64,33 @@ bool \hyperlink{classjetfuel_1_1draw_1_1Circle__2d__shape_a8be660f3cd624dc077d90
 \subsection{Detailed Description}
 A drawable 2d circle shape to be shown to the player.
 
-Code Example\+: jetfuel\+::draw\+::\+Circle2d\+\_\+int mycircle(0,0,50); \hyperlink{classjetfuel_1_1draw_1_1Circle__2d__shape}{jetfuel\+::draw\+::\+Circle\+\_\+2d\+\_\+shape} mydrawablecircle(mycircle); \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1);
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1draw_1_1Circle2d}{jetfuel::draw::Circle2d\_int} mycircle(0,0,50);
+\hyperlink{classjetfuel_1_1draw_1_1Circle__2d__shape}{jetfuel::draw::Circle\_2d\_shape} mydrawablecircle(mycircle);
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1(1);
 
-if(!scenemanager.Create\+\_\+window(\char`\"{}example\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(500,500)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(\textcolor{stringliteral}{"example"},
+                         \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0),
+                         \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(500,500)))\{
+   std::cerr << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer!"} <<
+   \textcolor{stringliteral}{"Error is:"} << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-if(!scenemanager.Create\+\_\+renderer())\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+  \textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+       std::cerr << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer!"} <<
+      \textcolor{stringliteral}{"Error is:"} << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+  \}
 
-scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1);
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\_current\_scene}(&scene1);
 
-mydrawablecircle.\+Set\+\_\+color(jetfuel\+::draw\+::\+Color\+::\+Cyan); scene1.\+Attach\+\_\+drawable(\&mydrawablecircle,1\+S);
+mydrawablecircle.Set\_color(\hyperlink{classjetfuel_1_1draw_1_1Color_a9c9781b9377310494e8af2a5fe524ab4}{jetfuel::draw::Color::Cyan});
+scene1.Attach\_drawable(&mydrawablecircle,1S);
 
-scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\_current\_scene}();
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Circle__2d__shape_a0c6320cecb7ee7bfff185f4607a5f830}\label{classjetfuel_1_1draw_1_1Circle__2d__shape_a0c6320cecb7ee7bfff185f4607a5f830}} 

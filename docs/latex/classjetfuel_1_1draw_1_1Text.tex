@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:draw\+:\+:Text\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:draw\+:\+:Text\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:draw\+:\+:Text\+:
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:draw\+:\+:Text\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:draw\+:\+:Text\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -143,12 +141,10 @@ bool \hyperlink{classjetfuel_1_1draw_1_1Text_ac3037b299f5e398da3c1bf52fdfa3d00}{
 \begin{DoxyCompactList}\small\item\em Checks if kerning status is waiting to be set. \end{DoxyCompactList}\item 
 bool \hyperlink{classjetfuel_1_1draw_1_1Text_a33158c6a5dfedf26cb0526388c347e93}{Waiting\+\_\+to\+\_\+set\+\_\+font\+\_\+hinting} ()
 \begin{DoxyCompactList}\small\item\em Checks if font hinting is waiting to be set. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_acc627c1cda5f466255b1899cd9477a75}\label{classjetfuel_1_1draw_1_1Text_acc627c1cda5f466255b1899cd9477a75}} 
-void {\bfseries Set\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed} (bool textsurfacefreed)
-\item 
-\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a0968c175395924bca3cc2e543adce3e9}\label{classjetfuel_1_1draw_1_1Text_a0968c175395924bca3cc2e543adce3e9}} 
-bool {\bfseries Has\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed} () const
-\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Text_acc627c1cda5f466255b1899cd9477a75}{Set\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed} (bool textsurfacefreed)
+\begin{DoxyCompactList}\small\item\em Sets whether the internal text S\+D\+L\+\_\+\+Surface has been freed. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Text_a0968c175395924bca3cc2e543adce3e9}{Has\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the internal text S\+D\+L\+\_\+\+Surface has been freed. \end{DoxyCompactList}\item 
 void \hyperlink{classjetfuel_1_1draw_1_1Text_a5ce2072f87c6e02dfbc363e1c489cc3b}{Pre\+\_\+render\+\_\+text} ()
 \begin{DoxyCompactList}\small\item\em Pre renders the text surface. \end{DoxyCompactList}\item 
 void \hyperlink{classjetfuel_1_1draw_1_1Text_ae25b3503ec6fcf36aaeebf4e08612394}{Pre\+\_\+render} ()
@@ -158,19 +154,38 @@ void \hyperlink{classjetfuel_1_1draw_1_1Text_ae25b3503ec6fcf36aaeebf4e08612394}{
 \subsection{Detailed Description}
 A True\+Type text object that draws True\+Type text to the screen.
 
-Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{}); \hyperlink{classjetfuel_1_1draw_1_1Text}{jetfuel\+::draw\+::\+Text} hello(font);
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1;
+\hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel::draw::Font} font(\textcolor{stringliteral}{"default.ttf"});
+\hyperlink{classjetfuel_1_1draw_1_1Text}{jetfuel::draw::Text} hello(font);
 
-if(!scenemanager.Create\+\_\+window(windowlabel, windowposition, windowsize))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(windowlabel,
+                               windowposition,
+                               windowsize))\{
+    std::cerr << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer!"} <<
+    \textcolor{stringliteral}{"Error is:"} << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-if(!scenemanager.Create\+\_\+renderer())\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+    std::cerr << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer!"} <<
+    \textcolor{stringliteral}{"Error is:"} << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1);
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\_current\_scene}(&scene1);
 
-hello.\+Set\+\_\+string(\char`\"{}\+Why Hello There\char`\"{}); hello.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(100,100)); hello.\+Set\+\_\+text\+\_\+color(jetfuel\+::draw\+::\+Color\+::\+Cyan); hello.\+Set\+\_\+font\+\_\+size(50); hello.\+Set\+\_\+render\+\_\+mode(jetfuel\+::draw\+::\+Text\+::\+Render\+\_\+mode\+::\+Blended);
+hello.Set\_string(\textcolor{stringliteral}{"Why Hello There"});
+hello.Set\_position(\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(100,100));
+hello.Set\_text\_color(\hyperlink{classjetfuel_1_1draw_1_1Color_a9c9781b9377310494e8af2a5fe524ab4}{jetfuel::draw::Color::Cyan});
+hello.Set\_font\_size(50);
+hello.Set\_render\_mode(jetfuel::draw::Text::Render\_mode::Blended);
 
-scene1.\+Attach\+\_\+drawable(\&hello,1);
+scene1.\hyperlink{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}{Attach\_drawable}(&hello,1);
 
-scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\_current\_scene}();
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a8b6aed199242a7c69fda591d8769ced9}\label{classjetfuel_1_1draw_1_1Text_a8b6aed199242a7c69fda591d8769ced9}} 
@@ -386,7 +401,17 @@ Gets the text rendered S\+D\+L\+\_\+\+Texture that will be set and drawn upon th
 
 Gets the text\textquotesingle{}s surface to draw when the Draw function is called. 
 
-Gets the text\textquotesingle{}s surface to be converted to a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} S\+D\+L\+\_\+\+Texture when the Draw function is called. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a179a3fb69ac28cba38a6fbfe541e175b}\label{classjetfuel_1_1draw_1_1Text_a179a3fb69ac28cba38a6fbfe541e175b}} 
+Gets the text\textquotesingle{}s surface to be converted to a \hyperlink{classjetfuel_1_1draw_1_1Drawable}{Drawable} S\+D\+L\+\_\+\+Texture when the Draw function is called. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a0968c175395924bca3cc2e543adce3e9}\label{classjetfuel_1_1draw_1_1Text_a0968c175395924bca3cc2e543adce3e9}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Has\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed@{Has\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed}}
+\index{Has\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed@{Has\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Has\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed()}{Has\_text\_surface\_been\_freed()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Text\+::\+Has\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether the internal text S\+D\+L\+\_\+\+Surface has been freed. 
+
+Returns whether the internal text S\+D\+L\+\_\+\+Surface has been freed. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a179a3fb69ac28cba38a6fbfe541e175b}\label{classjetfuel_1_1draw_1_1Text_a179a3fb69ac28cba38a6fbfe541e175b}} 
 \index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Is\+\_\+font\+\_\+created@{Is\+\_\+font\+\_\+created}}
 \index{Is\+\_\+font\+\_\+created@{Is\+\_\+font\+\_\+created}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
 \subsubsection{\texorpdfstring{Is\+\_\+font\+\_\+created()}{Is\_font\_created()}}
@@ -804,6 +829,23 @@ Sets the text surface that will be converted to a S\+D\+L\+\_\+\+Texture upon th
 
 \begin{DoxyParams}{Parameters}
 {\em S\+D\+L\+\_\+\+Surface} & $\ast$textsurface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_acc627c1cda5f466255b1899cd9477a75}\label{classjetfuel_1_1draw_1_1Text_acc627c1cda5f466255b1899cd9477a75}} 
+\index{jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}!Set\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed@{Set\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed}}
+\index{Set\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed@{Set\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed}!jetfuel\+::draw\+::\+Text@{jetfuel\+::draw\+::\+Text}}
+\subsubsection{\texorpdfstring{Set\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed()}{Set\_text\_surface\_been\_freed()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Text\+::\+Set\+\_\+text\+\_\+surface\+\_\+been\+\_\+freed (\begin{DoxyParamCaption}\item[{bool}]{textsurfacefreed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets whether the internal text S\+D\+L\+\_\+\+Surface has been freed. 
+
+Sets whether the internal text S\+D\+L\+\_\+\+Surface has been freed from memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & textsurfacefreed \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Text_a33158c6a5dfedf26cb0526388c347e93}\label{classjetfuel_1_1draw_1_1Text_a33158c6a5dfedf26cb0526388c347e93}} 

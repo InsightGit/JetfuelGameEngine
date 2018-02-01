@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:media\+:\+:Sound\+\_\+effect\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:media\+:\+:Sound\+\_\+effect\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:media\+:\+:Sound\+\_\+effect\+:
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:media\+:\+:Sound\+\_\+effect\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:media\+:\+:Sound\+\_\+effect\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -68,11 +66,19 @@ A sound playback class for short(and sweet) audio files, which supports W\+AV(.w
 
 Code Example\+:
 
-\hyperlink{classjetfuel_1_1media_1_1Sound__effect}{jetfuel\+::media\+::\+Sound\+\_\+effect} sfx;
 
-if(sfx.\+load\+\_\+audio\+\_\+file(\char`\"{}\+S\+F\+X.\+ogg\char`\"{}))\{ std\+::cout $<$$<$ \char`\"{}\+Unable to load S\+F\+X.\+ogg Error\+:\char`\"{} $<$$<$ Mix\+\_\+\+Get\+Error() $<$$<$ std\+:endl; return 1; \}
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1media_1_1Sound__effect}{jetfuel::media::Sound\_effect} sfx;
 
-sfx.\+Play(); 
+\textcolor{keywordflow}{if}(sfx.load\_audio\_file(\textcolor{stringliteral}{"SFX.ogg"}))\{
+    std::cout << \textcolor{stringliteral}{"Unable to load SFX.ogg Error:"} << Mix\_GetError() 
+    << \hyperlink{namespacestd}{std}:endl;
+    \textcolor{keywordflow}{return} 1;
+ \}
+
+sfx.\hyperlink{classjetfuel_1_1media_1_1Sound__effect_a206d3653259cc854fd80fa44a9d333c4}{Play}();
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1media_1_1Sound__effect_a56c5c69d077a4cac1a062b391a9860fc}\label{classjetfuel_1_1media_1_1Sound__effect_a56c5c69d077a4cac1a062b391a9860fc}} 

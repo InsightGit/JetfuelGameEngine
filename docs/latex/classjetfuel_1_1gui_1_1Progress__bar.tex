@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:gui\+:\+:Progress\+\_\+bar\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:gui\+:\+:Progress\+\_\+bar\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:gui\+:\+:Progress\+\_\+bar\+:
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:gui\+:\+:Progress\+\_\+bar\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:gui\+:\+:Progress\+\_\+bar\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -69,17 +67,40 @@ void \hyperlink{classjetfuel_1_1gui_1_1Progress__bar_a4871a444df390b3a4996ce8bb6
 \subsection{Detailed Description}
 A simple progress bar with a holder sprite and a colored rectangle representing the progress bar.
 
-Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} messagebus; \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} progressbarholderimage( \char`\"{}progressbarholder.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{jetfuel\+::gui\+::\+Progress\+\_\+bar} progressbar(progressbarholderimage, \hyperlink{classjetfuel_1_1draw_1_1Color_a529fbdf4a2a9915e3986278715a5daa8}{jetfuel\+::draw\+::\+Color\+::\+Green}, jetfuel\+::draw\+::\+Rect2d\+\_\+int(20, 20,20,20),400);
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1(1);
+\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel::core::Message\_bus} messagebus;
+\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel::draw::Image} progressbarholderimage(
+                                        \textcolor{stringliteral}{"progressbarholder.png"},
+                                          &scenemanager);
+\hyperlink{classjetfuel_1_1gui_1_1Progress__bar}{jetfuel::gui::Progress\_bar} progressbar(progressbarholderimage,
+                                  \hyperlink{classjetfuel_1_1draw_1_1Color_a529fbdf4a2a9915e3986278715a5daa8}{jetfuel::draw::Color::Green},
+                                  \hyperlink{classjetfuel_1_1draw_1_1Rect2d}{jetfuel::draw::Rect2d\_int}(20,
+                                                20,20,20),400);
 
-if(!scenemanager.Create\+\_\+window(\char`\"{}\+Hello Progressbars!\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(640,480)))\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl window! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(\textcolor{stringliteral}{"Hello Progressbars!"},
+                               \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0),
+                          \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(640,480)))\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl window! Error is:"}
+    << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-if(!scenemanager.Create\+\_\+renderer())\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \} scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&progressbar,1);
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer! Error is:"}
+    << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\_current\_scene}(&scene1);
+scene1.\hyperlink{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}{Attach\_drawable}(&progressbar,1);
 
-progressbar.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+progressbar.Set\_position(\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0));
 
-progressbar.\+Set\+\_\+progress\+\_\+bar\+\_\+progress(200);
+progressbar.Set\_progress\_bar\_progress(200);
 
-scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\_current\_scene}();
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Progress__bar_a82ff3b06366efe839c6031281db9b9ac}\label{classjetfuel_1_1gui_1_1Progress__bar_a82ff3b06366efe839c6031281db9b9ac}} 

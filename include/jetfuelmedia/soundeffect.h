@@ -151,6 +151,8 @@ namespace jetfuel{
 	   ///
 	   /// Code Example:
 	   ///
+	   /// \code
+	   ///
 	   /// jetfuel::media::Sound_effect sfx;
 	   ///
 	   /// if(sfx.load_audio_file("SFX.ogg")){
@@ -160,6 +162,8 @@ namespace jetfuel{
 	   ///	}
 	   ///
 	   /// sfx.Play();
+	   ///
+	   /// \endcode
    }
    
 }

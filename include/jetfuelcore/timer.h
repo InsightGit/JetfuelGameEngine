@@ -133,18 +133,20 @@ namespace jetfuel {
         };
 
 
-        /// jetfuel::core::Timer
+        /// \class jetfuel::core::Timer
         ///
         /// jetfuel::core::Timer is a simple timer for use while
         /// delaying an in-game action.
         ///
         /// Code Example:
+        /// 	\code
         ///     jetfuel::core::Timer timer(5.05);
         ///     timer.Start();
         ///     if(timer.Has_timer_finished()){
         ///         std::cout << "Timer with 5.05 seconds has finished!"
         ///         << std::endl;
         ///     }
+        /// 	\endcode
 
     } /* namespace core */
 } /* namespace jetfuel */

@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:draw\+:\+:Sprite\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:draw\+:\+:Sprite\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:draw\+:\+:Sprite\+:
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:draw\+:\+:Sprite\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:draw\+:\+:Sprite\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -64,54 +62,52 @@ void \hyperlink{classjetfuel_1_1draw_1_1Sprite_aa44e34d0f40435ad48d0bf2ccb5c25e0
 \begin{DoxyCompactList}\small\item\em Sets the S\+D\+L\+\_\+\+Texture used for drawing the \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}. \end{DoxyCompactList}\item 
 bool \hyperlink{classjetfuel_1_1draw_1_1Sprite_a31b6b5ee62f3298577bbf78ad7b18cdf}{Is\+\_\+src\+\_\+view\+\_\+rect\+\_\+set} () const
 \begin{DoxyCompactList}\small\item\em Checks whether the source view rect is set. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a9c750d8c54004aa7e9b2de82b46bdb12}\label{classjetfuel_1_1draw_1_1Sprite_a9c750d8c54004aa7e9b2de82b46bdb12}} 
-\hyperlink{classjetfuel_1_1draw_1_1Image}{Image} {\bfseries Get\+\_\+dynamic\+\_\+image} () const
-\item 
-\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a0dfe3a796662980c612833768a785450}\label{classjetfuel_1_1draw_1_1Sprite_a0dfe3a796662980c612833768a785450}} 
-void {\bfseries Set\+\_\+dynamic\+\_\+image} (\hyperlink{classjetfuel_1_1draw_1_1Image}{Image} dynamicimage)
-\item 
-\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a06c4dbfd70dc6d52c2cea3d3f624fe83}\label{classjetfuel_1_1draw_1_1Sprite_a06c4dbfd70dc6d52c2cea3d3f624fe83}} 
-bool {\bfseries Is\+\_\+dynamic\+\_\+image\+\_\+loaded} () const
-\item 
-\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a56b760bfd2717c203c64827128132ef8}\label{classjetfuel_1_1draw_1_1Sprite_a56b760bfd2717c203c64827128132ef8}} 
-void {\bfseries Set\+\_\+dynamic\+\_\+image\+\_\+loaded} (const bool dynamicimageloaded)
-\item 
-\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_ad429e62219ac70a4285cc938f7f06800}\label{classjetfuel_1_1draw_1_1Sprite_ad429e62219ac70a4285cc938f7f06800}} 
-void {\bfseries Destroy\+\_\+image\+\_\+texture} ()
-\end{DoxyCompactItemize}
+\hyperlink{classjetfuel_1_1draw_1_1Image}{Image} \hyperlink{classjetfuel_1_1draw_1_1Sprite_a9c750d8c54004aa7e9b2de82b46bdb12}{Get\+\_\+dynamic\+\_\+image} () const
+\begin{DoxyCompactList}\small\item\em Gets this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s dynamic image. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Sprite_a0dfe3a796662980c612833768a785450}{Set\+\_\+dynamic\+\_\+image} (\hyperlink{classjetfuel_1_1draw_1_1Image}{Image} dynamicimage)
+\begin{DoxyCompactList}\small\item\em Sets this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s dynamic image. \end{DoxyCompactList}\item 
+bool \hyperlink{classjetfuel_1_1draw_1_1Sprite_a06c4dbfd70dc6d52c2cea3d3f624fe83}{Is\+\_\+dynamic\+\_\+image\+\_\+loaded} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s Dynamic image has been loaded. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Sprite_a56b760bfd2717c203c64827128132ef8}{Set\+\_\+dynamic\+\_\+image\+\_\+loaded} (const bool dynamicimageloaded)
+\begin{DoxyCompactList}\small\item\em Sets whether this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s Dynamic image has been loaded. \end{DoxyCompactList}\item 
+void \hyperlink{classjetfuel_1_1draw_1_1Sprite_ad429e62219ac70a4285cc938f7f06800}{Destroy\+\_\+image\+\_\+texture} ()
+\begin{DoxyCompactList}\small\item\em Destroys this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s image texture if it hasn\textquotesingle{}t been already. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 A \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}, when used in conjunction with \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}, displays textures to the screen.
 
-Code Example\+: \begin{DoxyVerb}jetfuel::draw::Scene_manager scenemanager;
-jetfuel::draw::Scene scene1(1);
-jetfuel::draw::Sprite background;
-jetfuel::draw::Image backgroundimage(backgroundlocation,
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1(1);
+\hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel::draw::Sprite} background;
+\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel::draw::Image} backgroundimage(backgroundlocation,
                               &scenemanager);
 
-if(!scenemanager.Create_window("Hello Sprites!",
-                               jetfuel::draw::Vector2d_int(0,0),
-                               jetfuel::draw::Vector2d_int(640,480))){
-    std::cout << "[!]ERROR with creating sdl window! Error is:" <<
-    SDL_GetError() << "\n";
-}
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(\textcolor{stringliteral}{"Hello Sprites!"},
+                               \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0),
+                               \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(640,480)))\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl window! Error is:"} <<
+    SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-if(!scenemanager.Create_renderer()){
-    std::cout << "[!]ERROR with creating sdl renderer! Error is:" <<
-    SDL_GetError() << "\n";
-}
-scenemanager.Switch_current_scene(&scene1);
-scene1.Attach_drawable(&background,1);
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer! Error is:"} <<
+    SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\_current\_scene}(&scene1);
+scene1.\hyperlink{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}{Attach\_drawable}(&background,1);
 
-if(!background.Load_from_image(backgroundimage)){
-    std::cerr << "[!]ERROR with loading from image! Error is:" <<
-    IMG_GetError() << "\n";
-}
+\textcolor{keywordflow}{if}(!background.\hyperlink{classjetfuel_1_1draw_1_1Sprite_a370d0b3b2770348ae57ae5156c59a0ca}{Load\_from\_image}(backgroundimage))\{
+    std::cerr << \textcolor{stringliteral}{"[!]ERROR with loading from image! Error is:"} <<
+    IMG\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-background.Set_position(jetfuel::draw::Vector2d_int(0,0));
+background.\hyperlink{classjetfuel_1_1draw_1_1Drawable_afdd035afe40c706459a6c9df813bcce6}{Set\_position}(\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0));
 
-scenemanager.Draw_current_scene();  \end{DoxyVerb}
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\_current\_scene}();
+\end{DoxyCode}
  
 
 \subsection{Constructor \& Destructor Documentation}
@@ -138,7 +134,17 @@ Virtual destructor.
 Cleans up the \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s resources. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_ae4e52cd12a067e67ed67d5a2a5835143}\label{classjetfuel_1_1draw_1_1Sprite_ae4e52cd12a067e67ed67d5a2a5835143}} 
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_ad429e62219ac70a4285cc938f7f06800}\label{classjetfuel_1_1draw_1_1Sprite_ad429e62219ac70a4285cc938f7f06800}} 
+\index{jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}!Destroy\+\_\+image\+\_\+texture@{Destroy\+\_\+image\+\_\+texture}}
+\index{Destroy\+\_\+image\+\_\+texture@{Destroy\+\_\+image\+\_\+texture}!jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}}
+\subsubsection{\texorpdfstring{Destroy\+\_\+image\+\_\+texture()}{Destroy\_image\_texture()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Sprite\+::\+Destroy\+\_\+image\+\_\+texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Destroys this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s image texture if it hasn\textquotesingle{}t been already. 
+
+Destroys this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s image texture if it hasn\textquotesingle{}t been already. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_ae4e52cd12a067e67ed67d5a2a5835143}\label{classjetfuel_1_1draw_1_1Sprite_ae4e52cd12a067e67ed67d5a2a5835143}} 
 \index{jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}!Draw@{Draw}}
 \index{Draw@{Draw}!jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}}
 \subsubsection{\texorpdfstring{Draw()}{Draw()}}
@@ -189,7 +195,17 @@ If valid dynamic image exists, load it for now. It will re-\/load the image also
 
 Gets the dest rect used for positioning images. 
 
-Gets the dest rect used for positioning images. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a2cd3f83c4fc573be82d3dc3a9c70e317}\label{classjetfuel_1_1draw_1_1Sprite_a2cd3f83c4fc573be82d3dc3a9c70e317}} 
+Gets the dest rect used for positioning images. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a9c750d8c54004aa7e9b2de82b46bdb12}\label{classjetfuel_1_1draw_1_1Sprite_a9c750d8c54004aa7e9b2de82b46bdb12}} 
+\index{jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}!Get\+\_\+dynamic\+\_\+image@{Get\+\_\+dynamic\+\_\+image}}
+\index{Get\+\_\+dynamic\+\_\+image@{Get\+\_\+dynamic\+\_\+image}!jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}}
+\subsubsection{\texorpdfstring{Get\+\_\+dynamic\+\_\+image()}{Get\_dynamic\_image()}}
+{\footnotesize\ttfamily \hyperlink{classjetfuel_1_1draw_1_1Image}{Image} jetfuel\+::draw\+::\+Sprite\+::\+Get\+\_\+dynamic\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s dynamic image. 
+
+Gets this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s dynamic image to be loaded when \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s Draw function is called. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a2cd3f83c4fc573be82d3dc3a9c70e317}\label{classjetfuel_1_1draw_1_1Sprite_a2cd3f83c4fc573be82d3dc3a9c70e317}} 
 \index{jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}!Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}}
 \index{Get\+\_\+rect\+\_\+to\+\_\+draw@{Get\+\_\+rect\+\_\+to\+\_\+draw}!jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}}
 \subsubsection{\texorpdfstring{Get\+\_\+rect\+\_\+to\+\_\+draw()}{Get\_rect\_to\_draw()}}
@@ -233,7 +249,17 @@ Gets the src rect. The src rect is used to display only a certain part of an ima
 
 Gets the S\+D\+L\+\_\+\+Texture used for drawing the \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}. 
 
-Gets the S\+D\+L\+\_\+\+Texture used for drawing the \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}. The S\+D\+L\+\_\+\+Texture is the actual object that gets displayed to the player. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a31b6b5ee62f3298577bbf78ad7b18cdf}\label{classjetfuel_1_1draw_1_1Sprite_a31b6b5ee62f3298577bbf78ad7b18cdf}} 
+Gets the S\+D\+L\+\_\+\+Texture used for drawing the \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}. The S\+D\+L\+\_\+\+Texture is the actual object that gets displayed to the player. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a06c4dbfd70dc6d52c2cea3d3f624fe83}\label{classjetfuel_1_1draw_1_1Sprite_a06c4dbfd70dc6d52c2cea3d3f624fe83}} 
+\index{jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}!Is\+\_\+dynamic\+\_\+image\+\_\+loaded@{Is\+\_\+dynamic\+\_\+image\+\_\+loaded}}
+\index{Is\+\_\+dynamic\+\_\+image\+\_\+loaded@{Is\+\_\+dynamic\+\_\+image\+\_\+loaded}!jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}}
+\subsubsection{\texorpdfstring{Is\+\_\+dynamic\+\_\+image\+\_\+loaded()}{Is\_dynamic\_image\_loaded()}}
+{\footnotesize\ttfamily bool jetfuel\+::draw\+::\+Sprite\+::\+Is\+\_\+dynamic\+\_\+image\+\_\+loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns whether this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s Dynamic image has been loaded. 
+
+Returns whether this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s Dynamic image has been loaded. This happens when this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s draw function is called for the first time. \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a31b6b5ee62f3298577bbf78ad7b18cdf}\label{classjetfuel_1_1draw_1_1Sprite_a31b6b5ee62f3298577bbf78ad7b18cdf}} 
 \index{jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}!Is\+\_\+src\+\_\+view\+\_\+rect\+\_\+set@{Is\+\_\+src\+\_\+view\+\_\+rect\+\_\+set}}
 \index{Is\+\_\+src\+\_\+view\+\_\+rect\+\_\+set@{Is\+\_\+src\+\_\+view\+\_\+rect\+\_\+set}!jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}}
 \subsubsection{\texorpdfstring{Is\+\_\+src\+\_\+view\+\_\+rect\+\_\+set()}{Is\_src\_view\_rect\_set()}}
@@ -292,6 +318,40 @@ Sets the destination S\+DL rectangle\textquotesingle{}s width and height for dra
 
 \begin{DoxyParams}{Parameters}
 {\em jetfuel\+::draw\+::\+Vector2d\+\_\+int} & widthheight \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a0dfe3a796662980c612833768a785450}\label{classjetfuel_1_1draw_1_1Sprite_a0dfe3a796662980c612833768a785450}} 
+\index{jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}!Set\+\_\+dynamic\+\_\+image@{Set\+\_\+dynamic\+\_\+image}}
+\index{Set\+\_\+dynamic\+\_\+image@{Set\+\_\+dynamic\+\_\+image}!jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}}
+\subsubsection{\texorpdfstring{Set\+\_\+dynamic\+\_\+image()}{Set\_dynamic\_image()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Sprite\+::\+Set\+\_\+dynamic\+\_\+image (\begin{DoxyParamCaption}\item[{\hyperlink{classjetfuel_1_1draw_1_1Image}{Image}}]{dynamicimage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s dynamic image. 
+
+Sets this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s dynamic image to be loaded when \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s Draw function is called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classjetfuel_1_1draw_1_1Image}{Image}} & dynamicimage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a56b760bfd2717c203c64827128132ef8}\label{classjetfuel_1_1draw_1_1Sprite_a56b760bfd2717c203c64827128132ef8}} 
+\index{jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}!Set\+\_\+dynamic\+\_\+image\+\_\+loaded@{Set\+\_\+dynamic\+\_\+image\+\_\+loaded}}
+\index{Set\+\_\+dynamic\+\_\+image\+\_\+loaded@{Set\+\_\+dynamic\+\_\+image\+\_\+loaded}!jetfuel\+::draw\+::\+Sprite@{jetfuel\+::draw\+::\+Sprite}}
+\subsubsection{\texorpdfstring{Set\+\_\+dynamic\+\_\+image\+\_\+loaded()}{Set\_dynamic\_image\_loaded()}}
+{\footnotesize\ttfamily void jetfuel\+::draw\+::\+Sprite\+::\+Set\+\_\+dynamic\+\_\+image\+\_\+loaded (\begin{DoxyParamCaption}\item[{const bool}]{dynamicimageloaded }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets whether this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s Dynamic image has been loaded. 
+
+Sets whether this \hyperlink{classjetfuel_1_1draw_1_1Sprite}{Sprite}\textquotesingle{}s Dynamic image has been loaded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & dynamicimageloaded \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Sprite_a684ee9b8ae0faa03878cb4b2f9e0ea19}\label{classjetfuel_1_1draw_1_1Sprite_a684ee9b8ae0faa03878cb4b2f9e0ea19}} 

@@ -154,6 +154,7 @@ namespace jetfuel {
 		/// OggVorbis(.ogg), MP3(.mp3), and FLAC(.flac).
 		///
 		/// Code Example:
+		/// \code
 		///
 		/// jetfuel::media::Music music;
 		///
@@ -164,6 +165,7 @@ namespace jetfuel {
 		///	}
 		///
 		/// music.Play();
+		/// \endcode
     } /* namespace media */
 } /* namespace jetfuel */
 

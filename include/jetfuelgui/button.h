@@ -339,6 +339,7 @@ namespace jetfuel {
         /// image, a color overlay, and text.
         ///
         /// Code Example:
+        /// 	\code
         ///     jetfuel::draw::Scene_manager scenemanager;
         ///     jetfuel::draw::Scene scene1(1);
         ///     jetfuel::core::Message_bus messagebus;
@@ -378,6 +379,7 @@ namespace jetfuel {
         ///     button.Set_button_text_characteristics(textchars);
         ///
         ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
     } /* namespace gui */
 } /* namespace jetfuel */
 

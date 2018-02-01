@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:gui\+:\+:Button\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:gui\+:\+:Button\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:gui\+:\+:Button\+:
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:gui\+:\+:Button\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:gui\+:\+:Button\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -75,21 +73,49 @@ bool \hyperlink{classjetfuel_1_1gui_1_1Button_ac6e616b98179911dd626b018e54b08d7}
 \subsection{Detailed Description}
 A clickable button with a Sprite background displaying an image, a color overlay, and text.
 
-Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} messagebus; \hyperlink{classjetfuel_1_1gui_1_1Button}{jetfuel\+::gui\+::\+Button} button; \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} buttonimage(\char`\"{}button.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager} U\+I\+Smanager(\&messagebus, scenemanager.\+Get\+\_\+window\+\_\+id()); \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter} U\+I\+Sinterpreter(\&messagebus); \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} textchars; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{});
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1(1);
+\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel::core::Message\_bus} messagebus;
+\hyperlink{classjetfuel_1_1gui_1_1Button}{jetfuel::gui::Button} button;
+\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel::draw::Image} buttonimage(\textcolor{stringliteral}{"button.png"},
+                                 &scenemanager);
+\hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel::control::UIS\_manager} UISmanager(&messagebus,
+                                  scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a1758a86d40dcfaface8958fcd33676bf}{Get\_window\_id}());
+\hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel::control::UIS\_interpreter} UISinterpreter(&messagebus);
+\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel::draw::Text::Text\_characteristics} textchars;
+\hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel::draw::Font} font(\textcolor{stringliteral}{"default.ttf"});
 
-if(!scenemanager.Create\+\_\+window(\char`\"{}\+Hello Buttons!\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(640,480)))\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl window! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(\textcolor{stringliteral}{"Hello Buttons!"},
+                               \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0),
+                          \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(640,480)))\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl window! Error is:"}
+    << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-if(!scenemanager.Create\+\_\+renderer())\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \} scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&button,1);
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer! Error is:"}
+    << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\_current\_scene}(&scene1);
+scene1.\hyperlink{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}{Attach\_drawable}(&button,1);
 
-if(!button.Load\+\_\+base\+\_\+button\+\_\+image(backgroundimage))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ I\+M\+G\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!button.\hyperlink{classjetfuel_1_1gui_1_1Button_a2c9b05aeec9661440c2bde16c6bdd791}{Load\_base\_button\_image}(backgroundimage))\{
+    std::cerr << \textcolor{stringliteral}{"[!]ERROR with loading from image! Error is:"} <<
+    IMG\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-button.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+button.\hyperlink{classjetfuel_1_1gui_1_1Button_a642d3f1412339c826458b80dce76ef34}{Set\_position}(\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0));
 
-textchars.\+textstring = \char`\"{}hello\char`\"{}; textchars.\+font = font;
+textchars.textstring = \textcolor{stringliteral}{"hello"};
+textchars.font = font;
 
-button.\+Set\+\_\+button\+\_\+text\+\_\+characteristics(textchars);
+button.\hyperlink{classjetfuel_1_1gui_1_1Button_ab2cf5dbf928df48a55118652e003519a}{Set\_button\_text\_characteristics}(textchars);
 
-scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\_current\_scene}();
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Button_ad9fc0a1426f1fe03563ebac1c4ffcd92}\label{classjetfuel_1_1gui_1_1Button_ad9fc0a1426f1fe03563ebac1c4ffcd92}} 

@@ -130,6 +130,7 @@ namespace jetfuel {
         /// Code example:
         ///
         ///     C++ Code File:
+        /// 	\code
         ///            jetfuel::core::Message_bus messagebus;
         ///            jetfuel::draw::Scene_manager scenemanager;
         ///            jetfuel::draw::Scene scene1(1);
@@ -180,8 +181,10 @@ namespace jetfuel {
         ///                    UISmanager.Process_input_event(&event);
         ///                }
         ///            }
+        /// 	\endcode
         ///
         ///     JSON file(UISConfig.json):
+        /// 	\code
         ///         {
         ///             "keyidnumber": 1,
         ///             "Keys": [
@@ -191,6 +194,7 @@ namespace jetfuel {
         ///               }
         ///             ]
         ///         }
+        /// 	\endcode
 
     } /* namespace control */
 } /* namespace jetfuel */

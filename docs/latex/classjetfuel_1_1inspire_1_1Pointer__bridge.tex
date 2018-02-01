@@ -22,17 +22,49 @@ Code Example\+:
 
 Python(main.\+py)\+:
 
-def main(pointerbridgeref)\+: if(system() == \char`\"{}\+Windows\char`\"{})\+: jetfuelpythonapiso = abspath(\char`\"{}\+Python\+A\+P\+I.\+dll\char`\"{}); else\+: jetfuelpythonapiso = abspath( \char`\"{}lib\+Jetfuel Game Engine Python A\+P\+I.\+so\char`\"{}); jetfuelso = jetfuelsoloader(jetfuelpythonapiso); pointerbridge = pointer\+\_\+bridge(jetfuelpythonapiso, pointerbridgeref); found = True; scenemanager = pointerbridge.\+recieve\+\_\+pointer(\char`\"{}scenemanager\char`\"{}, found); if(found)\+: print(\char`\"{}\+Got scenemanager pointer! It is\+:\char`\"{}+ hex(scenemanager.\+scenemanagerref)); else\+: print(\char`\"{}\+Could not get scenemanager pointer!\char`\"{});
 
-C++\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{jetfuel\+::inspire\+::\+Python\+\_\+module\+\_\+loader} module(\char`\"{}main.\+py\char`\"{}, \char`\"{}main\char`\"{}); \hyperlink{classjetfuel_1_1inspire_1_1Pointer__bridge}{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge} $\ast$bridge = new \hyperlink{classjetfuel_1_1inspire_1_1Pointer__bridge}{jetfuel\+::inspire\+::\+Pointer\+\_\+bridge()}; std\+::string error; bool executed = true;
+\begin{DoxyCode}
+def main(pointerbridgeref):
+    if(system() == \textcolor{stringliteral}{"Windows"}):
+        jetfuelpythonapiso = abspath(\textcolor{stringliteral}{"PythonAPI.dll"});
+    \textcolor{keywordflow}{else}:
+        jetfuelpythonapiso = abspath(
+            \textcolor{stringliteral}{"libJetfuel Game Engine Python API.so"});
+    jetfuelso = jetfuelsoloader(jetfuelpythonapiso);
+    pointerbridge = pointer\_bridge(jetfuelpythonapiso, 
+                                    pointerbridgeref);
+    found = True;
+    scenemanager = pointerbridge.recieve\_pointer(\textcolor{stringliteral}{"scenemanager"}, 
+                                                 found);
+    \textcolor{keywordflow}{if}(found):
+        print(\textcolor{stringliteral}{"Got scenemanager pointer! It is:"}+
+              hex(scenemanager.scenemanagerref));
+    \textcolor{keywordflow}{else}:
+        print(\textcolor{stringliteral}{"Could not get scenemanager pointer!"});
+\end{DoxyCode}
 
-bridge.\+send\+\_\+pointer(\char`\"{}scenemanager\char`\"{}, \&scenemanager);
 
-Py\+Object $\ast$args = Py\+Tuple\+\_\+\+Pack(1, Py\+Long\+\_\+\+From\+Long( reinterpret\+\_\+cast$<$long int$>$(scenemanager)));
+C++\+: 
+\begin{DoxyCode}
+ \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+ \hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{jetfuel::inspire::Python\_module\_loader} module(\textcolor{stringliteral}{"main.py"}, \textcolor{stringliteral}{"main"});
+ \hyperlink{classjetfuel_1_1inspire_1_1Pointer__bridge}{jetfuel::inspire::Pointer\_bridge} *bridge = \textcolor{keyword}{new} 
+                               \hyperlink{classjetfuel_1_1inspire_1_1Pointer__bridge}{jetfuel::inspire::Pointer\_bridge}();
+ std::string error;
+ \textcolor{keywordtype}{bool} executed = \textcolor{keyword}{true};
 
-module.\+Execute(\&executed, \&error, args);
+ bridge.send\_pointer(\textcolor{stringliteral}{"scenemanager"}, &scenemanager);
 
-if(!executed)\{ std\+::cout $<$$<$ \char`\"{}\+Python Error occured! Error was\+:\char`\"{} $<$$<$ error $<$$<$ std\+::endl; 
+ PyObject *args = PyTuple\_Pack(1, PyLong\_FromLong(
+                       reinterpret\_cast<long int>(scenemanager)));
+
+ module.Execute(&executed, &error, args);
+
+\textcolor{keywordflow}{if}(!executed)\{
+   std::cout << \textcolor{stringliteral}{"Python Error occured! Error was:"} << error << 
+   std::endl;
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1inspire_1_1Pointer__bridge_a8b799f891596d70d98ee577ef87a6781}\label{classjetfuel_1_1inspire_1_1Pointer__bridge_a8b799f891596d70d98ee577ef87a6781}} 

@@ -265,11 +265,12 @@ namespace jetfuel {
         typedef Circle2d<int> Circle2d_int;
         typedef Circle2d<float> Circle2d_float;
 
-        /// \class jetfuel::draw::Curcle2d
+        /// \class jetfuel::draw::Circle2d
         ///
         /// A simple 2d circle manipulation class.
         ///
         /// Code Example:
+        ///   \code
         ///   jetfuel::draw::Circle2d_int mycircle(0,0,50);
         ///   jetfuel::draw::Circle_2d_shape mydrawablecircle(mycircle);
         ///   jetfuel::draw::Scene_manager scenemanager;
@@ -293,6 +294,7 @@ namespace jetfuel {
         ///   scene1.Attach_drawable(&mydrawablecircle,1S);
         ///
         ///   scenemanager.Draw_current_scene();
+        ///   \endcode
 
     } /* namespace draw */
 

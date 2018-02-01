@@ -20,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="jetfueldocslogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JetfuelGameEngine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -273,11 +274,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a33158c6a5dfedf26cb0526388c347e93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjetfuel_1_1draw_1_1Text.html#a33158c6a5dfedf26cb0526388c347e93">Waiting_to_set_font_hinting</a> ()</td></tr>
 <tr class="memdesc:a33158c6a5dfedf26cb0526388c347e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if font hinting is waiting to be set.  <a href="#a33158c6a5dfedf26cb0526388c347e93">More...</a><br /></td></tr>
 <tr class="separator:a33158c6a5dfedf26cb0526388c347e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc627c1cda5f466255b1899cd9477a75"><td class="memItemLeft" align="right" valign="top"><a id="acc627c1cda5f466255b1899cd9477a75"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Set_text_surface_been_freed</b> (bool textsurfacefreed)</td></tr>
+<tr class="memitem:acc627c1cda5f466255b1899cd9477a75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjetfuel_1_1draw_1_1Text.html#acc627c1cda5f466255b1899cd9477a75">Set_text_surface_been_freed</a> (bool textsurfacefreed)</td></tr>
+<tr class="memdesc:acc627c1cda5f466255b1899cd9477a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the internal text SDL_Surface has been freed.  <a href="#acc627c1cda5f466255b1899cd9477a75">More...</a><br /></td></tr>
 <tr class="separator:acc627c1cda5f466255b1899cd9477a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0968c175395924bca3cc2e543adce3e9"><td class="memItemLeft" align="right" valign="top"><a id="a0968c175395924bca3cc2e543adce3e9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Has_text_surface_been_freed</b> () const</td></tr>
+<tr class="memitem:a0968c175395924bca3cc2e543adce3e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjetfuel_1_1draw_1_1Text.html#a0968c175395924bca3cc2e543adce3e9">Has_text_surface_been_freed</a> () const</td></tr>
+<tr class="memdesc:a0968c175395924bca3cc2e543adce3e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the internal text SDL_Surface has been freed.  <a href="#a0968c175395924bca3cc2e543adce3e9">More...</a><br /></td></tr>
 <tr class="separator:a0968c175395924bca3cc2e543adce3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ce2072f87c6e02dfbc363e1c489cc3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjetfuel_1_1draw_1_1Text.html#a5ce2072f87c6e02dfbc363e1c489cc3b">Pre_render_text</a> ()</td></tr>
 <tr class="memdesc:a5ce2072f87c6e02dfbc363e1c489cc3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre renders the text surface.  <a href="#a5ce2072f87c6e02dfbc363e1c489cc3b">More...</a><br /></td></tr>
@@ -301,14 +302,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>Has_text_surface_been
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A TrueType text object that draws TrueType text to the screen.</p>
-<p>Code Example: <a class="el" href="classjetfuel_1_1draw_1_1Scene__manager.html">jetfuel::draw::Scene_manager</a> scenemanager; <a class="el" href="classjetfuel_1_1draw_1_1Scene.html">jetfuel::draw::Scene</a> scene1; <a class="el" href="classjetfuel_1_1draw_1_1Font.html">jetfuel::draw::Font</a> font("default.ttf"); <a class="el" href="classjetfuel_1_1draw_1_1Text.html">jetfuel::draw::Text</a> hello(font);</p>
-<p>if(!scenemanager.Create_window(windowlabel, windowposition, windowsize)){ std::cerr &lt;&lt; "[!]ERROR with creating sdl renderer!" &lt;&lt; "Error is:" &lt;&lt; SDL_GetError() &lt;&lt; "\n"; }</p>
-<p>if(!scenemanager.Create_renderer()){ std::cerr &lt;&lt; "[!]ERROR with creating sdl renderer!" &lt;&lt; "Error is:" &lt;&lt; SDL_GetError() &lt;&lt; "\n"; }</p>
-<p>scenemanager.Switch_current_scene(&amp;scene1);</p>
-<p>hello.Set_string("Why Hello There"); hello.Set_position(jetfuel::draw::Vector2d_int(100,100)); hello.Set_text_color(jetfuel::draw::Color::Cyan); hello.Set_font_size(50); hello.Set_render_mode(jetfuel::draw::Text::Render_mode::Blended);</p>
-<p>scene1.Attach_drawable(&amp;hello,1);</p>
-<p>scenemanager.Draw_current_scene(); </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>Code Example: </p><div class="fragment"><div class="line"><a class="code" href="classjetfuel_1_1draw_1_1Scene__manager.html">jetfuel::draw::Scene_manager</a> scenemanager;</div><div class="line"><a class="code" href="classjetfuel_1_1draw_1_1Scene.html">jetfuel::draw::Scene</a> scene1;</div><div class="line"><a class="code" href="classjetfuel_1_1draw_1_1Font.html">jetfuel::draw::Font</a> font(<span class="stringliteral">&quot;default.ttf&quot;</span>);</div><div class="line"><a class="code" href="classjetfuel_1_1draw_1_1Text.html">jetfuel::draw::Text</a> hello(font);</div><div class="line"></div><div class="line"><span class="keywordflow">if</span>(!scenemanager.<a class="code" href="classjetfuel_1_1draw_1_1Scene__manager.html#a5113e9062c272a22d383ba872417ba31">Create_window</a>(windowlabel,</div><div class="line">                               windowposition,</div><div class="line">                               windowsize)){</div><div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;[!]ERROR with creating sdl renderer!&quot;</span> &lt;&lt;</div><div class="line">    <span class="stringliteral">&quot;Error is:&quot;</span> &lt;&lt; SDL_GetError() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordflow">if</span>(!scenemanager.<a class="code" href="classjetfuel_1_1draw_1_1Scene__manager.html#afafecd926ce5e4b2543a6d583a7d24b6">Create_renderer</a>()){</div><div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;[!]ERROR with creating sdl renderer!&quot;</span> &lt;&lt;</div><div class="line">    <span class="stringliteral">&quot;Error is:&quot;</span> &lt;&lt; SDL_GetError() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div><div class="line">}</div><div class="line"></div><div class="line">scenemanager.<a class="code" href="classjetfuel_1_1draw_1_1Scene__manager.html#a770c163b88ba8427539ee182315ea989">Switch_current_scene</a>(&amp;scene1);</div><div class="line"></div><div class="line">hello.Set_string(<span class="stringliteral">&quot;Why Hello There&quot;</span>);</div><div class="line">hello.Set_position(<a class="code" href="classjetfuel_1_1draw_1_1Vector2d.html">jetfuel::draw::Vector2d_int</a>(100,100));</div><div class="line">hello.Set_text_color(<a class="code" href="classjetfuel_1_1draw_1_1Color.html#a9c9781b9377310494e8af2a5fe524ab4">jetfuel::draw::Color::Cyan</a>);</div><div class="line">hello.Set_font_size(50);</div><div class="line">hello.Set_render_mode(jetfuel::draw::Text::Render_mode::Blended);</div><div class="line"></div><div class="line">scene1.<a class="code" href="classjetfuel_1_1draw_1_1Scene.html#aea4b4c4ae25c30d661be4c52787e0ea3">Attach_drawable</a>(&amp;hello,1);</div><div class="line"></div><div class="line">scenemanager.<a class="code" href="classjetfuel_1_1draw_1_1Scene__manager.html#a8af9a3abfd5121b1b8556342de435773">Draw_current_scene</a>();</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8b6aed199242a7c69fda591d8769ced9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b6aed199242a7c69fda591d8769ced9">&#9670;&nbsp;</a></span>Text() <span class="overload">[1/2]</span></h2>
 
@@ -824,6 +818,34 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>Has_text_surface_been
 
 <p>Gets the text's surface to draw when the Draw function is called. </p>
 <p>Gets the text's surface to be converted to a <a class="el" href="classjetfuel_1_1draw_1_1Drawable.html">Drawable</a> SDL_Texture when the Draw function is called. </p>
+
+</div>
+</div>
+<a id="a0968c175395924bca3cc2e543adce3e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0968c175395924bca3cc2e543adce3e9">&#9670;&nbsp;</a></span>Has_text_surface_been_freed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool jetfuel::draw::Text::Has_text_surface_been_freed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the internal text SDL_Surface has been freed. </p>
+<p>Returns whether the internal text SDL_Surface has been freed. </p>
 
 </div>
 </div>
@@ -1756,6 +1778,41 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>Has_text_surface_been
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">SDL_Surface</td><td>*textsurface </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acc627c1cda5f466255b1899cd9477a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc627c1cda5f466255b1899cd9477a75">&#9670;&nbsp;</a></span>Set_text_surface_been_freed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jetfuel::draw::Text::Set_text_surface_been_freed </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>textsurfacefreed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether the internal text SDL_Surface has been freed. </p>
+<p>Sets whether the internal text SDL_Surface has been freed from memory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bool</td><td>textsurfacefreed </td></tr>
   </table>
   </dd>
 </dl>

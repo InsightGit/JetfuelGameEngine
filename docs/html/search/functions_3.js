@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['destroy_5fimage_5ftexture',['Destroy_image_texture',['../classjetfuel_1_1draw_1_1Sprite.html#ad429e62219ac70a4285cc938f7f06800',1,'jetfuel::draw::Sprite']]],
   ['detect_5fdesktop_5fevent',['Detect_desktop_event',['../classjetfuel_1_1control_1_1UIS__manager.html#aed8de35f5209e88eda4dbb87c313420c',1,'jetfuel::control::UIS_manager']]],
   ['detect_5fmobile_5fevent',['Detect_mobile_event',['../classjetfuel_1_1control_1_1UIS__manager.html#a6de02ffd734406ff5187937cf951e297',1,'jetfuel::control::UIS_manager']]],
   ['determine_5fbutton_5fposition',['Determine_button_position',['../classjetfuel_1_1gui_1_1Menu.html#a9432e513bdc7deefab9da0f596144dc5',1,'jetfuel::gui::Menu']]],

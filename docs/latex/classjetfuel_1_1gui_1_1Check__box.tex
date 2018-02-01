@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:gui\+:\+:Check\+\_\+box\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:gui\+:\+:Check\+\_\+box\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:gui\+:\+:Check\+\_\+box\+:
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:gui\+:\+:Check\+\_\+box\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:gui\+:\+:Check\+\_\+box\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -83,21 +81,51 @@ bool \hyperlink{classjetfuel_1_1gui_1_1Check__box_a481eeb0f2c5c6f1165da4243ab5b6
 \subsection{Detailed Description}
 A checkbox object that is exactly what it sounds like. A box that can or cannot be checked from mouse clicks. (What did you expect?)
 
-Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel\+::core\+::\+Message\+\_\+bus} messagebus; \hyperlink{classjetfuel_1_1gui_1_1Check__box}{jetfuel\+::gui\+::\+Check\+\_\+box} checkbox; \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} activecheckboximage(\char`\"{}checkboxchecked.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} disabledcheckboximage(\char`\"{}checkbox.\+png\char`\"{}, \&scenemanager); \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager} U\+I\+Smanager(\&messagebus, scenemanager.\+Get\+\_\+window\+\_\+id()); \hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel\+::control\+::\+U\+I\+S\+\_\+interpreter} U\+I\+Sinterpreter(\&messagebus); \hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel\+::draw\+::\+Text\+::\+Text\+\_\+characteristics} textchars; \hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel\+::draw\+::\+Font} font(\char`\"{}default.\+ttf\char`\"{});
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1(1);
+\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel::core::Message\_bus} messagebus;
+\hyperlink{classjetfuel_1_1gui_1_1Check__box}{jetfuel::gui::Check\_box} checkbox;
+\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel::draw::Image} activecheckboximage(\textcolor{stringliteral}{"checkboxchecked.png"},
+                                         &scenemanager);
+\hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel::draw::Image} disabledcheckboximage(\textcolor{stringliteral}{"checkbox.png"},
+                                           &scenemanager);
+\hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel::control::UIS\_manager} UISmanager(&messagebus,
+                                  scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a1758a86d40dcfaface8958fcd33676bf}{Get\_window\_id}());
+\hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel::control::UIS\_interpreter} UISinterpreter(&messagebus);
+\hyperlink{structjetfuel_1_1draw_1_1Text_1_1Text__characteristics}{jetfuel::draw::Text::Text\_characteristics} textchars;
+\hyperlink{classjetfuel_1_1draw_1_1Font}{jetfuel::draw::Font} font(\textcolor{stringliteral}{"default.ttf"});
 
-if(!scenemanager.Create\+\_\+window(\char`\"{}\+Hello Checkboxes!\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(640,480)))\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl window! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(\textcolor{stringliteral}{"Hello Checkboxes!"},
+                               \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0),
+                          \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(640,480)))\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl window! Error is:"}
+    << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-if(!scenemanager.Create\+\_\+renderer())\{ std\+::cout $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer! Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \} scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&checkbox,1);
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+    std::cout << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer! Error is:"}
+    << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\_current\_scene}(&scene1);
+scene1.\hyperlink{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}{Attach\_drawable}(&checkbox,1);
 
-if(!checkbox.Load\+\_\+check\+\_\+box\+\_\+images(backgroundimage))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ I\+M\+G\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!checkbox.\hyperlink{classjetfuel_1_1gui_1_1Check__box_adadc280e5d14f08e64f974ba9156cd16}{Load\_check\_box\_images}(backgroundimage))\{
+    std::cerr << \textcolor{stringliteral}{"[!]ERROR with loading from image! Error is:"} <<
+    IMG\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-checkbox.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+checkbox.\hyperlink{classjetfuel_1_1gui_1_1Check__box_aca11db17630485a2c44b19780d10cce6}{Set\_position}(\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0));
 
-textchars.\+textstring = \char`\"{}hello\char`\"{}; textchars.\+font = font;
+textchars.textstring = \textcolor{stringliteral}{"hello"};
+textchars.font = font;
 
-checkbox.\+Set\+\_\+label\+\_\+characteristics(textchars);
+checkbox.\hyperlink{classjetfuel_1_1gui_1_1Check__box_aa7dbb21f37090d3a595d0111acc721b3}{Set\_label\_characteristics}(textchars);
 
-scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\_current\_scene}();
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1gui_1_1Check__box_a1e0e07940cfa643c1f019830042553bd}\label{classjetfuel_1_1gui_1_1Check__box_a1e0e07940cfa643c1f019830042553bd}} 

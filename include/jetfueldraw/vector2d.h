@@ -180,11 +180,13 @@ namespace jetfuel {
         /// drawable objects on the screen in Jetfuel.
         ///
         /// Code Example:
+        /// 	\code
         ///     Vector2d_int myvector(5,8);
         ///
         ///     std::cout << "My x coordinate is" << myvector.x <<
         ///                  "My y coordinate is" << myvector.y <<
         ///     std::endl;
+        /// 	\endcode
     } /* namespace draw */
 
 } /* namespace jetfuel */

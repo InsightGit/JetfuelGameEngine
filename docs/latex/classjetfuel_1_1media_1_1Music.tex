@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:media\+:\+:Music\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:media\+:\+:Music\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:media\+:\+:Music\+:
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:media\+:\+:Music\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:media\+:\+:Music\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -59,13 +57,19 @@ void \hyperlink{classjetfuel_1_1media_1_1Music_a390925626dcd2531d1b287f0bfb401fd
 \subsection{Detailed Description}
 A sound playback class for long audio files (example\+: B\+GM), which supports W\+AV(.wav), A\+I\+FF(.aiff), V\+OC(.voc), M\+OD(.mod, .xm, .s3m, and more), M\+I\+DI(.mid), Ogg\+Vorbis(.ogg), M\+P3(.mp3), and F\+L\+AC(.flac).
 
-Code Example\+:
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1media_1_1Music}{jetfuel::media::Music} music;
 
-\hyperlink{classjetfuel_1_1media_1_1Music}{jetfuel\+::media\+::\+Music} music;
+\textcolor{keywordflow}{if}(music.load\_audio\_file(\textcolor{stringliteral}{"BGM.ogg"}))\{
+    std::cout << \textcolor{stringliteral}{"Unable to load BGM.ogg Error:"} << Mix\_GetError() 
+    << \hyperlink{namespacestd}{std}:endl;
+    \textcolor{keywordflow}{return} 1;
+\}
 
-if(music.\+load\+\_\+audio\+\_\+file(\char`\"{}\+B\+G\+M.\+ogg\char`\"{}))\{ std\+::cout $<$$<$ \char`\"{}\+Unable to load B\+G\+M.\+ogg Error\+:\char`\"{} $<$$<$ Mix\+\_\+\+Get\+Error() $<$$<$ std\+:endl; return 1; \}
-
-music.\+Play(); 
+music.\hyperlink{classjetfuel_1_1media_1_1Music_afe9abee662a68ea9391e94e37c79945e}{Play}();
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1media_1_1Music_aa3adce621c89ea9915bd6d13648ac5de}\label{classjetfuel_1_1media_1_1Music_aa3adce621c89ea9915bd6d13648ac5de}} 

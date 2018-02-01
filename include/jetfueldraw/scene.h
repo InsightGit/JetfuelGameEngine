@@ -350,6 +350,7 @@ namespace jetfuel {
         /// of drawable scenes to be presented to the player.
         ///
         /// Code Example:
+        /// 	\code
         ///     jetfuel::draw::Scene_manager scenemanager;
         ///     jetfuel::draw::Scene scene1(1);
         ///     jetfuel::draw::Image image = jetfuel::draw::Image("test.png");
@@ -378,6 +379,7 @@ namespace jetfuel {
         ///     background.Set_position(jetfuel::draw::Vector2d_int(0,0));
         ///
         ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
 
     } /* namespace draw */
 } /* namespace jetfuel */

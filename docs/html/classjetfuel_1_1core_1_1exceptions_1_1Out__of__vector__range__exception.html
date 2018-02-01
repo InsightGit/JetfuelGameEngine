@@ -20,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="jetfueldocslogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JetfuelGameEngine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -70,6 +71,8 @@ $(function() {
 <div class="title">jetfuel::core::exceptions::Out_of_vector_range_exception Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="messagebus_8h_source.html">messagebus.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for jetfuel::core::exceptions::Out_of_vector_range_exception:</div>
 <div class="dyncontent">
@@ -88,7 +91,9 @@ Collaboration diagram for jetfuel::core::exceptions::Out_of_vector_range_excepti
 <area shape="rect" id="node3" title="STL class. " alt="" coords="61,5,165,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This exception is thrown when a function requests for data from a vector location that is outside of that vector's range.</p>
+<p>Code Example: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> Get_int_in_vector(<span class="keyword">const</span> <span class="keywordtype">int</span> location)<span class="keyword"> const </span>{</div><div class="line">    <span class="keywordflow">if</span>(intvector.size() &lt;= location){</div><div class="line">        <span class="keywordflow">throw</span> exceptions::Out_of_vector_range_exception();</div><div class="line">    }<span class="keywordflow">else</span>{</div><div class="line">        <span class="keywordflow">return</span> intvector[location];</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/jetfuelcore/<a class="el" href="messagebus_8h_source.html">messagebus.h</a></li>
 </ul>
 </div><!-- contents -->

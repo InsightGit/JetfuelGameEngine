@@ -40,13 +40,14 @@ namespace jetfuel {
                     std::runtime_error
                     ("[!]Out of Vector Range Exception Thrown!"){}
             };
-            /// jetfuel::core::exceptions::Out_of_vector_range_exception()
+            /// \class jetfuel::core::exceptions::Out_of_vector_range_exception()
             ///
             /// This exception is thrown when a function requests for
             /// data from a vector location
             /// that is outside of that vector's range.
             ///
             /// Code Example:
+            /// 	\code
             ///     int Get_int_in_vector(const int location) const {
             ///         if(intvector.size() <= location){
             ///             throw exceptions::Out_of_vector_range_exception();
@@ -54,6 +55,7 @@ namespace jetfuel {
             ///             return intvector[location];
             ///         }
             ///     }
+            /// 	\endcode
         }
 
         class Message_bus {
@@ -259,13 +261,14 @@ namespace jetfuel {
         };
 
 
-        /// jetfuel::core::Message_bus
+        /// \class jetfuel::core::Message_bus
         ///
         /// Initialize a Message_bus, used at the core of Neon, to
         /// Send and Recieve messages, and disable logging
         /// at the programmer's request.
         ///
         /// Code Example:
+        /// \code
         ///  jetfuel::core::Message_bus messagebus;
         ///  messagebus.Post_message("hello");
         ///  if(messagebus.Do_messages_exist()){
@@ -281,6 +284,7 @@ namespace jetfuel {
         ///     }
         ///     Clear_processed_messages();
         ///  }
+        /// \endcode
 
     } /* namespace core */
 } /* namespace jetfuel */

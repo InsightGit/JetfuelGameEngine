@@ -271,6 +271,7 @@ namespace jetfuel{
 		/// statuses(or, potentially, actions).
 		///
 		/// Code Example:
+		/// 	\code
 		/// 	jetfuel::draw::Scene_manager scenemanager;
 		///     jetfuel::draw::Scene scene1(1);
 		///     jetfuel::core::Message_bus messagebus;
@@ -305,6 +306,7 @@ namespace jetfuel{
 		///     slider.Set_control_scheme(UISinputactions);
 		///
 		///     scenemanager.Draw_current_scene();
+		/// 	\endcode
     }
 }
 

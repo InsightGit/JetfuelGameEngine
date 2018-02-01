@@ -2,8 +2,11 @@
 \label{classjetfuel_1_1core_1_1exceptions_1_1Out__of__vector__range__exception}\index{jetfuel\+::core\+::exceptions\+::\+Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception@{jetfuel\+::core\+::exceptions\+::\+Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception}}
 
 
-Inheritance diagram for jetfuel\+:\+:core\+:\+:exceptions\+:\+:Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception\+:
-\nopagebreak
+{\ttfamily \#include $<$messagebus.\+h$>$}
+
+
+
+Inheritance diagram for jetfuel\+:\+:core\+:\+:exceptions\+:\+:Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:core\+:\+:exceptions\+:\+:Out\+\_\+of\+\_\+
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:core\+:\+:exceptions\+:\+:Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:core\+:\+:exceptions\+:\+:Out\+\_\+of\+\_\+vector\+\_\+range\+\_\+exception\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,6 +23,21 @@ Collaboration diagram for jetfuel\+:\+:core\+:\+:exceptions\+:\+:Out\+\_\+of\+\_
 \end{center}
 \end{figure}
 
+
+\subsection{Detailed Description}
+This exception is thrown when a function requests for data from a vector location that is outside of that vector\textquotesingle{}s range.
+
+Code Example\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} Get\_int\_in\_vector(\textcolor{keyword}{const} \textcolor{keywordtype}{int} location)\textcolor{keyword}{ const }\{
+    \textcolor{keywordflow}{if}(intvector.size() <= location)\{
+        \textcolor{keywordflow}{throw} exceptions::Out\_of\_vector\_range\_exception();
+    \}\textcolor{keywordflow}{else}\{
+        \textcolor{keywordflow}{return} intvector[location];
+    \}
+\}
+\end{DoxyCode}
+ 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

@@ -51,9 +51,11 @@ namespace jetfuel {
             /// function SDL_Init fails.
             ///
             /// Code Example:
+            /// \code
             /// if(SDL_Init(SDL_INIT_VIDEO) != 0){
             ///     throw exceptions::SDL_Init_exception(SDL_GetError());
             /// }
+            /// \endcode
         }
 
         class Scene;
@@ -280,6 +282,7 @@ namespace jetfuel {
         /// fashion.
         ///
         /// Code Example:
+        /// 	\code
         ///     jetfuel::draw::Scene_manager scenemanager;
         ///     jetfuel::draw::Scene scene1(1);
         ///     jetfuel::draw::Image image = jetfuel::draw::Image("test.png");
@@ -308,6 +311,7 @@ namespace jetfuel {
         ///     background.Set_position(jetfuel::draw::Vector2d_int(0,0));
         ///
         ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
 
     } /* namespace inspire */
 } /* namespace jetfuel */

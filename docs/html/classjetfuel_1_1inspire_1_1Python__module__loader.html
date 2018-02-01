@@ -20,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="jetfueldocslogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JetfuelGameEngine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -75,6 +76,8 @@ $(function() {
 <div class="title">jetfuel::inspire::Python_module_loader Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="pythonmoduleloader_8h_source.html">pythonmoduleloader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -159,8 +162,8 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a88da3316adbe919080ad1c92045b4ad3"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjetfuel_1_1inspire_1_1Python__module__loader.html#a88da3316adbe919080ad1c92045b4ad3">Get_string</a> (const wchar_t *widechar)</td></tr>
 <tr class="memdesc:a88da3316adbe919080ad1c92045b4ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an ASCII wchar_t * to an ASCII std::string.  <a href="#a88da3316adbe919080ad1c92045b4ad3">More...</a><br /></td></tr>
 <tr class="separator:a88da3316adbe919080ad1c92045b4ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb872547c2aec3b27e5845fedb7a3f42"><td class="memItemLeft" align="right" valign="top"><a id="adb872547c2aec3b27e5845fedb7a3f42"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Get_py_error</b> (PyObject *errorobject)</td></tr>
+<tr class="memitem:adb872547c2aec3b27e5845fedb7a3f42"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjetfuel_1_1inspire_1_1Python__module__loader.html#adb872547c2aec3b27e5845fedb7a3f42">Get_py_error</a> (PyObject *errorobject)</td></tr>
+<tr class="memdesc:adb872547c2aec3b27e5845fedb7a3f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a python error into a std::string from a PyObject pointer.  <a href="#adb872547c2aec3b27e5845fedb7a3f42">More...</a><br /></td></tr>
 <tr class="separator:adb872547c2aec3b27e5845fedb7a3f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -168,7 +171,11 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a973a8f86d446820b38b18f87fe51465a"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjetfuel_1_1inspire_1_1Python__module__loader.html#a973a8f86d446820b38b18f87fe51465a">pythonclass</a></td></tr>
 <tr class="separator:a973a8f86d446820b38b18f87fe51465a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Loads a Python 3.6 function(Not a class) to be executed. This function can be executed, and can have arguments passed through it via a tuple in a PyObject*.</p>
+<p>The python function can return nothing, a bool, a int(to be converted to a long), a float(to be converted to double), or a String (to be converted to a Cstring(or a char*), which can be implicitly be converted to a std::string).</p>
+<p>Note that the filename cannot have a .py extension, it can only have it's own name.</p>
+<p>Code Example: </p><div class="fragment"><div class="line"><a class="code" href="classjetfuel_1_1inspire_1_1Python__module__loader.html">jetfuel::inspire::Python_module_loader</a> sumof1plus1loader = <a class="code" href="classjetfuel_1_1inspire_1_1Python__module__loader.html">jetfuel::inspire::Python_module_loader</a>(</div><div class="line"><span class="stringliteral">&quot;adder&quot;</span>,<span class="stringliteral">&quot;whatdoes1+1equal&quot;</span>,</div><div class="line"><span class="stringliteral">&quot;./Scripts&quot;</span>);</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> executionstatus;</div><div class="line">std::string error;</div><div class="line"></div><div class="line"><span class="keywordtype">long</span> sumof1plus1 = sumof1plus1loader.<a class="code" href="classjetfuel_1_1inspire_1_1Python__module__loader.html#a7f1608c46e4d3c9f7a019f80a78c6756">Execute_long</a>(&amp;executionstatus,&amp;error,NULL);</div><div class="line"><span class="comment">// NULL = No arguments to pass</span></div><div class="line"></div><div class="line"><span class="keywordflow">if</span>(!executionstatus){</div><div class="line">    <span class="comment">// Not executed... See what&#39;s wrong.</span></div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Python execution error! Error was:&quot;</span> &lt;&lt; error &lt;&lt; std::endl;</div><div class="line">}<span class="keywordflow">else</span>{</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Sum was:&quot;</span> &lt;&lt; std::to_string(sumof1plus1) &lt;&lt; std::endl;</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a30ab85906d5365ca34ca47b456460353"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30ab85906d5365ca34ca47b456460353">&#9670;&nbsp;</a></span>Python_module_loader() <span class="overload">[1/2]</span></h2>
 
@@ -1018,6 +1025,41 @@ Protected Attributes</h2></td></tr>
 
 <p>Gets this Python function name. </p>
 <p>Gets this Python function name. </p>
+
+</div>
+</div>
+<a id="adb872547c2aec3b27e5845fedb7a3f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb872547c2aec3b27e5845fedb7a3f42">&#9670;&nbsp;</a></span>Get_py_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string jetfuel::inspire::Python_module_loader::Get_py_error </td>
+          <td>(</td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>errorobject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a python error into a std::string from a PyObject pointer. </p>
+<p>Gets a python error into a std::string from a PyObject pointer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PyObject</td><td>*errorobject </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

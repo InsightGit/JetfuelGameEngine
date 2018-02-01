@@ -445,6 +445,7 @@ namespace jetfuel {
 		/// container box image around it.
 		///
 		/// Code Example:
+		/// 	\code
 		/// 	jetfuel::draw::Scene_manager scenemanager;
 		///     jetfuel::draw::Scene scene1(1);
 		///     jetfuel::core::Message_bus messagebus;
@@ -500,6 +501,7 @@ namespace jetfuel {
 		///		quitbutton.color = jetfuel::draw::Color(255, 0, 0, 100);
 		///
 		///     scenemanager.Draw_current_scene();
+		/// 	\endcode
 
     } /* namespace gui */
 } /* namespace jetfuel */

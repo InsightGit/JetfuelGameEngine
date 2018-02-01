@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['destroy_5fimage_5ftexture',['Destroy_image_texture',['../classjetfuel_1_1draw_1_1Sprite.html#ad429e62219ac70a4285cc938f7f06800',1,'jetfuel::draw::Sprite']]],
   ['detect_5fdesktop_5fevent',['Detect_desktop_event',['../classjetfuel_1_1control_1_1UIS__manager.html#aed8de35f5209e88eda4dbb87c313420c',1,'jetfuel::control::UIS_manager']]],
   ['detect_5fmobile_5fevent',['Detect_mobile_event',['../classjetfuel_1_1control_1_1UIS__manager.html#a6de02ffd734406ff5187937cf951e297',1,'jetfuel::control::UIS_manager']]],
   ['determine_5fbutton_5fposition',['Determine_button_position',['../classjetfuel_1_1gui_1_1Menu.html#a9432e513bdc7deefab9da0f596144dc5',1,'jetfuel::gui::Menu']]],
@@ -24,7 +25,7 @@ var searchData=
   ['draw_5fslider_5fmember_5fobjects',['Draw_slider_member_objects',['../classjetfuel_1_1gui_1_1Slider.html#a730d18fe513120406907380b7caf3280',1,'jetfuel::gui::Slider']]],
   ['drawable',['Drawable',['../classjetfuel_1_1draw_1_1Drawable.html',1,'jetfuel::draw']]],
   ['drop_5fdown_5fbox',['Drop_down_box',['../classjetfuel_1_1gui_1_1Drop__down__box.html',1,'jetfuel::gui::Drop_down_box'],['../classjetfuel_1_1gui_1_1Drop__down__box.html#af518d68503aa67f76e70fd4e2d9c3cb3',1,'jetfuel::gui::Drop_down_box::Drop_down_box()']]],
-  ['drop_5fdown_5foption',['Drop_down_option',['../structjetfuel_1_1gui_1_1Drop__down__option.html',1,'jetfuel::gui::Drop_down_option'],['../structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option.html',1,'jetfuel::gui::Drop_down_box::Drop_down_option']]],
+  ['drop_5fdown_5foption',['Drop_down_option',['../structjetfuel_1_1gui_1_1Drop__down__box_1_1Drop__down__option.html',1,'jetfuel::gui::Drop_down_box']]],
   ['dynamic_5fload_5fbase_5fbox_5fimage',['Dynamic_load_base_box_image',['../classjetfuel_1_1gui_1_1Drop__down__box.html#a64b807d21f55a85ab9600cfd6369d7dc',1,'jetfuel::gui::Drop_down_box']]],
   ['dynamic_5fload_5fbase_5fbutton_5fimage',['Dynamic_load_base_button_image',['../classjetfuel_1_1gui_1_1Button.html#a452110801fca1b3274d574ebc671e8db',1,'jetfuel::gui::Button']]],
   ['dynamic_5fload_5fcheck_5fbox_5fimages',['Dynamic_load_check_box_images',['../classjetfuel_1_1gui_1_1Check__box.html#a9fd8ee85ef4f17195fbb7bcf53e061dc',1,'jetfuel::gui::Check_box']]],

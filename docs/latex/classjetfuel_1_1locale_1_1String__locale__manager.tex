@@ -1,5 +1,9 @@
 \hypertarget{classjetfuel_1_1locale_1_1String__locale__manager}{}\section{jetfuel\+:\+:locale\+:\+:String\+\_\+locale\+\_\+manager Class Reference}
 \label{classjetfuel_1_1locale_1_1String__locale__manager}\index{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+manager@{jetfuel\+::locale\+::\+String\+\_\+locale\+\_\+manager}}
+
+
+{\ttfamily \#include $<$stringlocalemanager.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,6 +20,48 @@ bool \hyperlink{classjetfuel_1_1locale_1_1String__locale__manager_a2bca626efc214
 std\+::string \hyperlink{classjetfuel_1_1locale_1_1String__locale__manager_a215fa1aaf302e45b1ab375f764a8d101}{Get\+\_\+string\+\_\+from\+\_\+id} (const std\+::string stringid) const
 \begin{DoxyCompactList}\small\item\em Gets a string with a (hopefully universal) stringid from the active \hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{String\+\_\+locale\+\_\+file}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+A localization manager using a collection of String\+\_\+locale\+\_\+files.
+
+Code Example\+:
+
+J\+S\+ON(English\+Locale.\+json)\+: 
+\begin{DoxyCode}
+\{
+    \textcolor{stringliteral}{"strings"}: [
+        \{
+            \textcolor{stringliteral}{"stringid"}: \textcolor{stringliteral}{"checkboxlabel"},
+            \textcolor{stringliteral}{"string"} : \textcolor{stringliteral}{"click it i guess"}
+        \}
+    ]
+\}
+\end{DoxyCode}
+
+
+C++\+:
+
+
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1locale_1_1String__locale__file}{jetfuel::locale::String\_locale\_file} englishlocalefile;
+\hyperlink{classjetfuel_1_1locale_1_1String__locale__manager}{jetfuel::locale::String\_locale\_manager} localemanager;
+std::string error;
+
+\textcolor{keywordflow}{if}(!englishlocalefile.\hyperlink{classjetfuel_1_1locale_1_1String__locale__file_a904609e7cde4eb624cb940cbba642ea0}{Load\_string\_locale\_file}(\textcolor{stringliteral}{"EnglishLocale.json"},
+    \textcolor{stringliteral}{"english"}, &error))\{
+    std::cerr << \textcolor{stringliteral}{"Could not load EnglishLocale JSON file! "} <<
+    \textcolor{stringliteral}{"Error was: "} << error << \textcolor{stringliteral}{"\(\backslash\)n"};
+    \textcolor{keywordflow}{return} 1;
+\}
+
+localemanager.\hyperlink{classjetfuel_1_1locale_1_1String__locale__manager_a2a972352f2b52a6aec947aad636ca6f1}{Load\_string\_locale\_file}(englishlocalefile);
+
+localemanager.\hyperlink{classjetfuel_1_1locale_1_1String__locale__manager_a2bca626efc214510e533a8c4ece7cafb}{Set\_active\_locale}(\textcolor{stringliteral}{"english"});
+
+std::cout << \textcolor{stringliteral}{"Hello in"} << localemanager.\hyperlink{classjetfuel_1_1locale_1_1String__locale__manager_a41b25b50b804bce31184b32e6dc97fae}{Get\_active\_locale}() <<  
+            \textcolor{stringliteral}{" is "} << localemanager.\hyperlink{classjetfuel_1_1locale_1_1String__locale__manager_a215fa1aaf302e45b1ab375f764a8d101}{Get\_string\_from\_id}(\textcolor{stringliteral}{"hello"});
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1locale_1_1String__locale__manager_a347f49d477102a965dcbf288a79b403a}\label{classjetfuel_1_1locale_1_1String__locale__manager_a347f49d477102a965dcbf288a79b403a}} 

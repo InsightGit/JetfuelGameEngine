@@ -105,6 +105,7 @@ namespace jetfuel {
 		///		
 	    /// Python(main.py):
 		///
+		/// \code
 		/// def main(pointerbridgeref):
 		///     if(system() == "Windows"):
 		///			jetfuelpythonapiso = abspath("PythonAPI.dll");
@@ -122,10 +123,12 @@ namespace jetfuel {
 		///               hex(scenemanager.scenemanagerref));
 		///     else:
 		///			print("Could not get scenemanager pointer!");
+		/// \endcode
 		///
 		///
 		///
 		/// C++:
+		/// \code
 		///   jetfuel::draw::Scene_manager scenemanager;
 		///   jetfuel::inspire::Python_module_loader module("main.py", "main");
 		///	  jetfuel::inspire::Pointer_bridge *bridge = new 
@@ -143,6 +146,7 @@ namespace jetfuel {
 		///  if(!executed){
 		///		std::cout << "Python Error occured! Error was:" << error << 
 		///		std::endl;
+		/// \endcode
     } /* namespace inspire */
 } /* namespace jetfuel */
 

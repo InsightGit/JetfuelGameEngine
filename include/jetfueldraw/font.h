@@ -58,9 +58,11 @@ namespace jetfuel {
             /// done within a Font or Text object fails.
             ///
             /// Code Example:
+            /// \code
             /// if(TTF_Init() < 0){
             ///     throw exceptions::SDL_ttf_exception("TTF_Init()");
             /// }
+            /// \endcode
         }
 
         class Font{
@@ -222,6 +224,7 @@ namespace jetfuel {
         /// jetfuel::draw::Text object to display some text.
         ///
         /// Code Example:
+        ///  \code
         ///  jetfuel::draw::Scene_manager scenemanager;
         ///  jetfuel::draw::Scene scene1;
         ///  jetfuel::draw::Font font("default.ttf");
@@ -250,6 +253,7 @@ namespace jetfuel {
         ///  scene1.Attach_drawable(&hello,1);
         ///
         ///  scenemanager.Draw_current_scene();
+        ///  \endcode
 
     } /* namespace draw */
 } /* namespace jetfuel */

@@ -1,5 +1,9 @@
 \hypertarget{classjetfuel_1_1core_1_1Timer}{}\section{jetfuel\+:\+:core\+:\+:Timer Class Reference}
 \label{classjetfuel_1_1core_1_1Timer}\index{jetfuel\+::core\+::\+Timer@{jetfuel\+::core\+::\+Timer}}
+
+
+{\ttfamily \#include $<$timer.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,6 +20,20 @@ bool \hyperlink{classjetfuel_1_1core_1_1Timer_a8d6efef6a9e6aae8156fd1f8dce5f403}
 bool \hyperlink{classjetfuel_1_1core_1_1Timer_a6442806833e30cc94d6c17dd91243c57}{Has\+\_\+timer\+\_\+been\+\_\+started} ()
 \begin{DoxyCompactList}\small\item\em Checks if the timer has been started. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\hyperlink{classjetfuel_1_1core_1_1Timer}{jetfuel\+::core\+::\+Timer} is a simple timer for use while delaying an in-\/game action.
+
+Code Example\+: 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1core_1_1Timer}{jetfuel::core::Timer} timer(5.05);
+timer.Start();
+\textcolor{keywordflow}{if}(timer.Has\_timer\_finished())\{
+    std::cout << \textcolor{stringliteral}{"Timer with 5.05 seconds has finished!"}
+    << std::endl;
+\}
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1core_1_1Timer_ac27fee7c9a0acbdbe7650b087ec26a7b}\label{classjetfuel_1_1core_1_1Timer_ac27fee7c9a0acbdbe7650b087ec26a7b}} 

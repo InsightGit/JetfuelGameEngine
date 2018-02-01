@@ -120,7 +120,7 @@ namespace jetfuel {
             String_locale_file *m_currentlocalefile; 
 											///< The active locale.
         };
-		/// \class jetfuel::locale::String_locale_,amager
+		/// \class jetfuel::locale::String_locale_manager
 		///
 		/// A localization manager using a collection of 
 		/// String_locale_files.
@@ -128,7 +128,7 @@ namespace jetfuel {
 		/// Code Example:
 		///
 		/// JSON(EnglishLocale.json):
-		///
+		///	\code
 		/// {
 		///		"strings": [
 		///			{
@@ -137,9 +137,11 @@ namespace jetfuel {
 		///			}
 		///		]
 		///	}
+		/// \endcode
 		///
 		/// C++:
 		///
+		/// \code
 		/// jetfuel::locale::String_locale_file englishlocalefile;
 		/// jetfuel::locale::String_locale_manager localemanager;
 		/// std::string error;
@@ -157,6 +159,7 @@ namespace jetfuel {
 		///
 		/// std::cout << "Hello in" << localemanager.Get_active_locale() <<  
 		///				" is " << localemanager.Get_string_from_id("hello");
+		/// \endcode
 
     } /* namespace locale */
 } /* namespace jetfuel */

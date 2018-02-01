@@ -179,6 +179,7 @@ namespace jetfuel {
 		///
 		/// JSON(EnglishLocale.json):
 		///
+		/// \code
 		/// {
 		///		"strings": [
 		///			{
@@ -187,8 +188,11 @@ namespace jetfuel {
 		///			}
 		///		]
 		///	}
+		/// \endcode
 		///
 		/// C++:
+		///
+		/// \code
 		///
 		/// jetfuel::locale::String_locale_file englishlocalefile;
 		/// jetfuel::locale::String_locale_manager localemanager;
@@ -207,6 +211,7 @@ namespace jetfuel {
 		///
 		/// std::cout << "Hello in" << localemanager.Get_active_locale() <<  
 		///				" is " << localemanager.Get_string_from_id("hello");
+		/// \endcode
     } /* namespace locale */
 } /* namespace jetfuel */
 

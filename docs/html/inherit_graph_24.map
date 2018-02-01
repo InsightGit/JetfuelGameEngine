@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structjetfuel_1_1gui_1_1Drop__down__option.html" title="jetfuel::gui::Drop\l_down_option" alt="" coords="5,5,124,47"/>
+<area shape="rect" id="node1" title="STL class. " alt="" coords="5,147,109,174"/>
+<area shape="rect" id="node2" href="$classjetfuel_1_1draw_1_1exceptions_1_1SDL__ttf__exception.html" title="jetfuel::draw::exceptions\l::SDL_ttf_exception" alt="" coords="157,111,321,152"/>
+<area shape="rect" id="node3" title="STL class. " alt="" coords="177,177,301,203"/>
+<area shape="rect" id="node4" href="$classjetfuel_1_1core_1_1exceptions_1_1Out__of__vector__range__exception.html" title="jetfuel::core::exceptions\l::Out_of_vector_range_exception" alt="" coords="369,5,584,47"/>
+<area shape="rect" id="node5" href="$classjetfuel_1_1draw_1_1exceptions_1_1Font__not__init__exception.html" title="jetfuel::draw::exceptions\l::Font_not_init_exception" alt="" coords="393,71,561,112"/>
+<area shape="rect" id="node6" href="$classjetfuel_1_1draw_1_1exceptions_1_1Nullptr__SDL__ttf__exception.html" title="jetfuel::draw::exceptions\l::Nullptr_SDL_ttf_exception" alt="" coords="385,136,568,177"/>
+<area shape="rect" id="node7" href="$classjetfuel_1_1draw_1_1exceptions_1_1SDL__Init__exception.html" title="jetfuel::draw::exceptions\l::SDL_Init_exception" alt="" coords="395,201,559,243"/>
+<area shape="rect" id="node8" href="$classjetfuel_1_1inspire_1_1exceptions_1_1Python__returnvalue__ASCII__encoding__exception.html" title="jetfuel::inspire::exceptions\l::Python_returnvalue_ASCII\l_encoding_exception" alt="" coords="384,267,569,323"/>
+<area shape="rect" id="node9" href="$classjetfuel_1_1media_1_1exceptions_1_1SDL__mixer__init__exception.html" title="jetfuel::media::exceptions\l::SDL_mixer_init_exception" alt="" coords="385,348,568,389"/>
 </map>

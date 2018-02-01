@@ -371,6 +371,7 @@ namespace jetfuel {
         /// (What did you expect?)
         ///
         /// Code Example:
+        /// 	\code
         /// 	jetfuel::draw::Scene_manager scenemanager;
         ///     jetfuel::draw::Scene scene1(1);
         ///     jetfuel::core::Message_bus messagebus;
@@ -412,6 +413,7 @@ namespace jetfuel {
         ///     checkbox.Set_label_characteristics(textchars);
         ///
         ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
     } /* namespace gui */
 } /* namespace jetfuel */
 

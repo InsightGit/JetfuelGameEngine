@@ -188,6 +188,7 @@ namespace jetfuel{
         /// A drawable 2d circle shape to be shown to the player.
         ///
         /// Code Example:
+        ///   \code
         ///   jetfuel::draw::Circle2d_int mycircle(0,0,50);
         ///   jetfuel::draw::Circle_2d_shape mydrawablecircle(mycircle);
         ///   jetfuel::draw::Scene_manager scenemanager;
@@ -211,6 +212,7 @@ namespace jetfuel{
         ///   scene1.Attach_drawable(&mydrawablecircle,1S);
         ///
         ///   scenemanager.Draw_current_scene();
+        ///   \endcode
     }
 }
 #endif

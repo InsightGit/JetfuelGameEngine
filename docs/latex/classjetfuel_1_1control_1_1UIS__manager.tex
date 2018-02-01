@@ -68,9 +68,80 @@ rapidjson\+::\+Document \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a8309
 
 
 \subsection{Detailed Description}
-\hyperlink{structjetfuel_1_1control_1_1UIS__previous__key}{jetfuel\+::control\+::\+U\+I\+S\+\_\+previous\+\_\+key}
+An Universal Input System manager to translate S\+DL Input events into in-\/game actions. When used in tandem with the Universal Input System (or U\+IS) interpreter, it allows your players to modify the bindings for certain in-\/game actions via a simple J\+S\+ON file, makes implementing a control binding option in-\/game easier, and allows your program to perform the same action regardless if the player is playing with a Keyboard \& Mouse, a controller, or even a touch screen.
 
-A struct used internally by the Universal Input System manager (or \hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel\+::control\+::\+U\+I\+S\+\_\+manager}) to track a key action. It should not be used outside of the Universal Input System manager. 
+Code example\+: \begin{DoxyVerb}C++ Code File:
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+\hyperlink{classjetfuel_1_1core_1_1Message__bus}{jetfuel::core::Message\_bus} messagebus;
+\hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+\hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1(1);
+\hyperlink{classjetfuel_1_1control_1_1UIS__manager}{jetfuel::control::UIS\_manager} UISmanager(&messagebus,
+                                      scenemanager.
+                                      \hyperlink{classjetfuel_1_1control_1_1UIS__manager_a31b973b02f3a17afed1de151db5704ed}{Get\_window\_id}());
+\hyperlink{classjetfuel_1_1control_1_1UIS__interpreter}{jetfuel::control::UIS\_interpreter} UISinterpreter(&messagebus
+                                                       );
+
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(windowlabel,
+                               windowposition,
+                               windowsize))\{
+     std::cerr << \textcolor{stringliteral}{"[!]ERROR with creating sdl window!"}
+     << \textcolor{stringliteral}{"Error is:"} << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+     \textcolor{comment}{// Quit the application}
+\}
+
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+     std::cerr << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer!"}
+     << \textcolor{stringliteral}{"Error is:"} << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+     \textcolor{comment}{// Quit the application}
+\}
+
+UISmanager.Open\_controller\_config\_file(\textcolor{stringliteral}{"UISConfig.json"});
+
+\textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{
+    \hyperlink{structjetfuel_1_1control_1_1Action}{jetfuel::control::Action} UISactions =
+    UISinterpreter.Interpret();
+    \textcolor{keywordflow}{if}(UISactions.action != \textcolor{stringliteral}{"Nothing to interpret."}
+       )\{
+            \textcolor{keywordflow}{if}(UISactions.action == \textcolor{stringliteral}{"Say\_hello"})\{
+                \textcolor{keywordflow}{if}(UISactions.inputstate ==
+                  UISactions.Down)\{
+                   std::cout << \textcolor{stringliteral}{"Why hello there!\(\backslash\)n"};
+                \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(UISactions.inputstate ==
+                         UISactions.Up)\{
+                    std::cout
+                    << \textcolor{stringliteral}{"Why goodbye there!\(\backslash\)n"};
+                \}
+            \}
+        \}
+\}
+\textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; messagebus.\hyperlink{classjetfuel_1_1core_1_1Message__bus_aa363b50d4ba99ae86430b5f12610fd39}{Get\_SDL\_events\_size}() > i; ++i)\{
+    SDL\_Event \textcolor{keyword}{event} = messagebus.\hyperlink{classjetfuel_1_1core_1_1Message__bus_ab80c8b51aca00ad4942ee2114fdf2fec}{Get\_SDL\_event}(i);
+    \textcolor{keywordflow}{if}(event.type = SDL\_QUIT)\{
+        \textcolor{comment}{// Quit the application}
+    \}\textcolor{keywordflow}{else}\{
+        UISmanager.Process\_input\_event(&event);
+    \}
+\}
+\end{DoxyCode}
+
+
+\begin{DoxyVerb}JSON file(UISConfig.json):
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+\{
+    \textcolor{stringliteral}{"keyidnumber"}: 1,
+    \textcolor{stringliteral}{"Keys"}: [
+      \{
+        \textcolor{stringliteral}{"key"}: \textcolor{stringliteral}{"A"},
+        \textcolor{stringliteral}{"action"}: \textcolor{stringliteral}{"Say\_hello"}
+      \}
+    ]
+\}
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1control_1_1UIS__manager_a04d1feda567af305a4495b189ef9bc8f}\label{classjetfuel_1_1control_1_1UIS__manager_a04d1feda567af305a4495b189ef9bc8f}} 

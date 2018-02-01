@@ -220,22 +220,50 @@ namespace jetfuel {
                 return m_srcviewrectset;
             }
 
+            /// \brief Gets this Sprite's dynamic image.
+            ///
+            /// Gets this Sprite's dynamic image to be loaded when
+            /// Sprite's Draw function is called.
             Image Get_dynamic_image() const{
                 return m_dynamicimage;
             }
 
+            /// \brief Sets this Sprite's dynamic image.
+            ///
+            /// Sets this Sprite's dynamic image to be loaded when
+            /// Sprite's Draw function is called.
+            ///
+            /// \param Image dynamicimage
             void Set_dynamic_image(Image dynamicimage){
                 m_dynamicimage = dynamicimage;
             }
 
+            /// \brief Returns whether this Sprite's Dynamic image has
+            /// been loaded.
+            ///
+            /// Returns whether this Sprite's Dynamic image has
+            /// been loaded. This happens when this Sprite's draw
+            /// function is called for the first time.
             bool Is_dynamic_image_loaded() const{
                 return m_dynamicimageloaded;
             }
 
+            /// \brief Sets whether this Sprite's Dynamic image has
+            /// been loaded.
+            ///
+            /// Sets whether this Sprite's Dynamic image has
+            /// been loaded.
+            ///
+            /// \param bool dynamicimageloaded
             void Set_dynamic_image_loaded(const bool dynamicimageloaded){
                 m_dynamicimageloaded = dynamicimageloaded;
             }
 
+            /// \brief Destroys this Sprite's image texture if
+            /// it hasn't been already.
+            ///
+            /// Destroys this Sprite's image texture if
+            /// it hasn't been already.
             void Destroy_image_texture(){
                 if(m_istexturenotfreed){
                     SDL_DestroyTexture(m_texture);
@@ -278,7 +306,7 @@ namespace jetfuel {
         /// jetfuel::draw::Image, displays textures to the screen.
         ///
         /// Code Example:
-        ///
+        ///		\code
         ///     jetfuel::draw::Scene_manager scenemanager;
         ///     jetfuel::draw::Scene scene1(1);
         ///     jetfuel::draw::Sprite background;
@@ -307,6 +335,7 @@ namespace jetfuel {
         ///     background.Set_position(jetfuel::draw::Vector2d_int(0,0));
         ///
         ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
 
     } /* namespace draw */
 } /* namespace jetfuel */

@@ -46,7 +46,7 @@ namespace jetfuel {
                                                                "when put into+"+
                                                                " Text!"){}
             };
-            /// jetfuel::draw::exceptions::Font_not_init_exception
+            /// \class jetfuel::draw::exceptions::Font_not_init_exception
             ///
             /// This exception should be thrown when a font passed
             /// into a function as an argument is not loaded and ready
@@ -55,7 +55,7 @@ namespace jetfuel {
             ///
             ///
             /// Code Example:
-            ///
+            ///	   \code
             ///    void Do_something_with_font(Font font){
             ///        if(font.Is_font_loaded()){
             ///            // do something with the font...
@@ -64,6 +64,7 @@ namespace jetfuel {
             ///                  Font_not_init_exception();
             ///        }
             ///    }
+            ///    \endcode
 
             class Nullptr_SDL_ttf_exception : public std::runtime_error{
             public:
@@ -73,7 +74,7 @@ namespace jetfuel {
                 Nullptr_SDL_ttf_exception() : std::runtime_error(
 					std::string("SDL_ttf object was nullptr! Error:")+TTF_GetError()){}
             };
-            /// jetfuel::draw::exceptions::Nullptr_SDL_ttf_exception
+            /// \class jetfuel::draw::exceptions::Nullptr_SDL_ttf_exception
             ///
             /// This exception should be thrown if a SDL_ttf function
             /// returns NULL or nullptr when it means it indicates
@@ -82,6 +83,7 @@ namespace jetfuel {
             ///
             /// Code Example:
             ///
+            /// \code
             /// void Render_text(){
             ///     SDL_Surface *textsurface = TTF_RenderUTF8_Solid(
             ///                                 putinyoursdlfonthere,
@@ -93,9 +95,10 @@ namespace jetfuel {
             ///     }
             ///
             /// }
+            /// \endcode
         }
 
-        class Text: public Drawable, public Rectangle_interface {
+        class Text : public Drawable, public Rectangle_interface {
         public:
             enum class Render_mode : unsigned int{
                 Solid,
@@ -660,10 +663,22 @@ namespace jetfuel {
                 return previousvalue;
             }
 
+            /// \brief Sets whether the internal text SDL_Surface
+            /// has been freed.
+            ///
+            /// Sets whether the internal text SDL_Surface
+            /// has been freed from memory.
+            ///
+            /// \param bool textsurfacefreed
 			void Set_text_surface_been_freed(bool textsurfacefreed) {
 				m_istextsurfacefreed = textsurfacefreed;
 			}
 
+			/// \brief Returns whether the internal text SDL_Surface
+			/// has been freed.
+			///
+			/// Returns whether the internal text SDL_Surface
+			/// has been freed.
 			bool Has_text_surface_been_freed() const{
 				return m_istextsurfacefreed;
 			}
@@ -756,13 +771,13 @@ namespace jetfuel {
             int m_fontstyle = FONTSTYLE_NORMAL; ///< The Text object's
                                                 ///< font style.
         };
-
         /// \class jetfuel::draw::Text
         ///
         /// A TrueType text object that draws TrueType text to the
         /// screen.
         ///
         /// Code Example:
+        /// 	\code
         ///     jetfuel::draw::Scene_manager scenemanager;
         ///     jetfuel::draw::Scene scene1;
         ///     jetfuel::draw::Font font("default.ttf");
@@ -791,6 +806,7 @@ namespace jetfuel {
         ///     scene1.Attach_drawable(&hello,1);
         ///
         ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
 
     } /* namespace draw */
 } /* namespace jetfuel */

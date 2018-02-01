@@ -201,7 +201,7 @@ namespace jetfuel {
                 jetfuel::draw::Rectangle_2d_shape containerbox;
                 jetfuel::draw::Text text;
             };
-            /// \struct jetfuel::gui::Drop_down_option
+            /// \struct jetfuel::gui::Drop_down_box::Drop_down_option
             ///
             /// A simple struct representing a option in a
             /// Drop_down_box.
@@ -335,6 +335,13 @@ namespace jetfuel {
                 return m_dropdownoptions.size();
             }
 
+            /// \brief Gets a Drop_down_option from the private
+            /// m_dropdownoptions vector.
+            ///
+            /// Gets a Drop_down_option from the private
+            /// m_dropdownoptions vector.
+            ///
+            /// \param size_t which
             Drop_down_option Get_dropdown_option_in_vector(const size_t which){
                 if(which >= m_dropdownoptions.size()){
                     throw jetfuel::core::exceptions::
@@ -508,6 +515,7 @@ namespace jetfuel {
         /// A simple Drop down box with user-specified options.
         ///
         /// Code Example:
+        /// 	\code
         /// 	jetfuel::draw::Scene_manager scenemanager;
         ///     jetfuel::draw::Scene scene1(1);
         ///     jetfuel::core::Message_bus messagebus;
@@ -555,6 +563,7 @@ namespace jetfuel {
         ///     dropdownbox.Add_option("C");
         ///
         ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
     } /* namespace gui */
 } /* namespace jetfuel */
 

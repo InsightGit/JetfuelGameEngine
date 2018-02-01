@@ -123,6 +123,7 @@ namespace jetfuel {
         /// with the Text object.
         ///
         /// Code Example:
+        /// 	\code
         ///     jetfuel::draw::Scene_manager scenemanager;
         ///     jetfuel::draw::Scene scene1(1);
         ///     jetfuel::draw::Color color(jetfuel::draw::Color::Blue);
@@ -146,6 +147,7 @@ namespace jetfuel {
         ///     rectangle.Set_fill_color(color);
         ///
         ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
 
     } /* namespace draw */
 } /* namespace jetfuel */

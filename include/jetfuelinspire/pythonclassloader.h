@@ -120,13 +120,16 @@ namespace jetfuel {
 		///
 		/// Python(classexample.py):
 		///
+		/// \code
 		///	class classexample:
 		///		def __init__(self) :
 		///			print("classexample inited!");
 		///		def sayhello(self, name) :
 		///			print("Hello" + name);
+		///	\endcode
 		///
 		/// C++:
+		///	\code
 		///  	bool executedstatus;
 		///     std::string fileandclassname = "classexample";
 		///		std::string directory = "./Scripts";    
@@ -152,6 +155,7 @@ namespace jetfuel {
 		///			std::cout << "Python Interpreter ERROR! Error is:" << 
 		///			error << std::endl;
 		///		}
+		/// \endcode
     } /* namespace inspire */
 } /* namespace jetfuel */
 

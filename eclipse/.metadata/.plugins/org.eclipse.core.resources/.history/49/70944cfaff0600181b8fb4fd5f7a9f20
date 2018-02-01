@@ -1,0 +1,800 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2018 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#ifndef JETFUELDRAW_TEXT_H_
+#define JETFUELDRAW_TEXT_H_
+
+#define FONTSTYLE_BOLD 0x01
+#define FONTSTYLE_ITALIC 0x02
+#define FONTSTYLE_NORMAL 0x00
+#define FONTSTYLE_STRIKETHROUGH 0x08
+#define FONTSTYLE_UNDERLINE 0x04
+
+#include <mutex>
+
+#include <jetfueldraw/color.h>
+
+#include <jetfueldraw/drawable.h>
+#include <jetfueldraw/rectangleinterface.h>
+#include <jetfueldraw/font.h>
+
+namespace jetfuel {
+    namespace draw {
+        namespace exceptions {
+            class Font_not_init_exception : public std::runtime_error{
+            public:
+                /// \brief Constructs a Font_not_init_exception.
+                ///
+                /// Constructs a Font_not_init_exception.
+                Font_not_init_exception() : std::runtime_error(std::string(
+                                                               "Font was not")+
+                                                               "initialized "+
+                                                               "when put into+"+
+                                                               " Text!"){}
+            };
+            /// jetfuel::draw::exceptions::Font_not_init_exception
+            ///
+            /// This exception should be thrown when a font passed
+            /// into a function as an argument is not loaded and ready
+            /// for the class to use it. This exception is not meant
+            /// to be used outside of the Text class.
+            ///
+            ///
+            /// Code Example:
+            ///	   \code
+            ///    void Do_something_with_font(Font font){
+            ///        if(font.Is_font_loaded()){
+            ///            // do something with the font...
+            ///        }else{
+            ///            throw jetfuel::draw::exceptions::
+            ///                  Font_not_init_exception();
+            ///        }
+            ///    }
+
+            class Nullptr_SDL_ttf_exception : public std::runtime_error{
+            public:
+                /// \brief Constructs a Nullptr_SDL_ttf_exception.
+                ///
+                /// Constructs a Nullptr_SDL_ttf_exception.
+                Nullptr_SDL_ttf_exception() : std::runtime_error(
+					std::string("SDL_ttf object was nullptr! Error:")+TTF_GetError()){}
+            };
+            /// jetfuel::draw::exceptions::Nullptr_SDL_ttf_exception
+            ///
+            /// This exception should be thrown if a SDL_ttf function
+            /// returns NULL or nullptr when it means it indicates
+            /// an error. This exception is not meant to be used
+            /// outside of the Text class.
+            ///
+            /// Code Example:
+            ///
+            /// void Render_text(){
+            ///     SDL_Surface *textsurface = TTF_RenderUTF8_Solid(
+            ///                                 putinyoursdlfonthere,
+            ///                                 "hello",
+            ///                                putinyoursdlcolorhere);
+            ///     if(textsurface == nullptr){
+            ///         throw jetfuel::draw::exceptions::
+            ///               Nullptr_SDL_ttf_exception();
+            ///     }
+            ///
+            /// }
+        }
+
+        class Text: public Drawable, public Rectangle_interface {
+        public:
+            enum class Render_mode : unsigned int{
+                Solid,
+                Shaded,
+                Blended
+            };
+
+            enum class Font_hinting{
+                Normal,
+                Light,
+                Mono,
+                None
+            };
+
+            struct Text_characteristics{
+                Text::Render_mode rendermode = Text::Render_mode::Solid;
+                std::string textstring;
+                Color textcolor;
+                Color backgroundcolor;
+                unsigned int fontoutlinewidth = 0;
+                bool kerningstatus = true;
+                int fontstyle = FONTSTYLE_NORMAL;
+                unsigned int fontsize = 20;
+                Text::Font_hinting fonthinting = Text::Font_hinting::None;
+                Font font;
+            };
+            /// jetfuel::draw::Text::Text_characteristics
+            ///
+            /// All customizable characteristics of
+            /// jetfuel::draw::Text, packed into one struct, other
+            /// classes can ask for.
+            ///
+            /// \see jetfuel::gui::Button
+
+            /// \brief Default constructor
+            ///
+            /// Constructs an empty Text object.
+            Text(){}
+
+            /// \brief Constructs a Text object with a Font.
+            ///
+            /// Constructs a Text object with a Font object.
+            ///
+            /// \param jetfuel::draw::Font font
+            Text(Font font);
+
+            virtual ~Text();
+
+            /// \brief Gets the Text render mode.
+            ///
+            /// Gets the Text render mode. There are 3
+            /// text modes in SDL_ttf: Solid, Shaded, Blended.
+            /// Basically, Solid is the quick and dirty way with no
+            /// anti-aliasing. Shaded is slower and produces a
+            /// background box around the text,
+            /// but the text looks much nicer, with anti-aliasing.
+            /// Finally, Blended looks the best, but is slow to
+            /// render. It has anti-aliasing and does not need a
+            /// background box like Shaded does.
+            /// Click [here](http://bit.ly/2tvlJUk) to learn more.
+            Render_mode Get_render_mode() const {
+                return m_rendermode;
+            }
+
+            /// \brief Sets the Text render mode.
+            ///
+            /// Sets the Text render mode. There are 3
+            /// text modes in SDL_ttf: Solid, Shaded, Blended.
+            /// Basically Solid is the quick and dirty way with no
+            /// anti-aliasing. Shaded is slower and produces a
+            /// background box around the text,
+            /// but the text looks much nicer, with anti-aliasing.
+            /// Finally, Blended looks the best, but is slow to
+            /// render. It has anti-aliasing and does not need a
+            /// background box like Shaded does.
+            /// Click [here](http://bit.ly/2tvlJUk) to learn more.
+            ///
+            /// \param jetfuel::draw::Text::Render_mode
+            void Set_render_mode(Render_mode rendermode) {
+                m_rendermode = rendermode;
+
+                Pre_render();
+            }
+
+            /// \brief Gets the text's string to display to the user.
+            ///
+            /// Gets the text object's string to display to the user.
+            std::string Get_string() const {
+                return m_string;
+            }
+
+            /// \brief Sets the string to display to the user.
+            ///
+            /// Sets the string to display to the user.
+            /// This string MUST be UTF-8 compliant.
+            ///
+            /// \param std::string string
+            void Set_string(const std::string string) {
+                m_string = string;
+                m_isreadyforprerendering = true;
+
+                Pre_render();
+            }
+
+            /// \brief Gets the text's color to display to the user.
+            ///
+            /// Gets the text's color to display to the user.
+            /// By default, the color is set to black.
+            Color Get_text_color() const {
+                return m_textcolor;
+            }
+
+            /// \brief Sets the text's color to display to the user.
+            ///
+            /// Sets the text object's color to display to the user.
+            /// By default, the color is set to black.
+            ///
+            /// \param jetfuel::draw::Color textcolor
+            void Set_text_color(const Color textcolor) {
+                m_textcolor = textcolor;
+
+                Pre_render();
+            }
+
+            /// \brief Gets the background color of the text.
+            ///
+            /// Gets the background color of the text. This color
+            /// will only be drawn as the background if the render
+            /// mode is set to Shaded. Otherwise, this color won't
+            /// be shown to the user at all.
+            Color Get_background_color() const {
+                return m_backgroundcolor;
+            }
+
+            /// \brief Sets the background color of the text.
+            ///
+            /// Sets the background color of the text. This color
+            /// will only be drawn as the background if the render
+            /// mode is set to Shaded. Otherwise, this color won't
+            /// be shown to the user at all.
+            ///
+            /// \param jetfuel::draw::Color backgroundcolor
+            void Set_background_color(const Color backgroundcolor) {
+                m_backgroundcolor = backgroundcolor;
+
+                if(Get_render_mode() == Render_mode::Shaded){
+                    Pre_render();
+                }
+            }
+
+            /// \brief Gets the font's outline width.
+            ///
+            /// Gets the font's outline width.
+            int Get_font_outline_width() const{
+               return TTF_GetFontOutline(Get_internal_font().
+                                         Get_ttf_font());
+            }
+
+            /// \brief Sets the font's outline width.
+            ///
+            /// Sets the font's outline width. This function is useful
+            /// when you want to force a certain width on this text
+            /// object.
+            ///
+            /// \param int width
+            void Set_font_outline_width(const int width){
+                TTF_SetFontOutline(Get_internal_font().Get_ttf_font(), width);
+            }
+
+            /// \brief Gets the font's kerning status
+            ///
+            /// Gets the font's kerning status. By default, font
+            /// kerning is on. Font kerning is "the process of
+            /// adjusting the spacing between characters in a
+            /// proportional font, usually to achieve a visually
+            /// pleasing result"
+            /// - [Wikipedia](https://en.wikipedia.org/wiki/Kerning)
+            bool Get_kerning_status(){
+                if(Get_internal_font().Get_ttf_font() != NULL){
+                    if(TTF_GetFontKerning(Get_internal_font().Get_ttf_font())
+                       != 0){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                }else{
+                    return true;
+                }
+            }
+
+            /// \brief Sets the font's kerning status.
+            ///
+            /// Sets the font's kerning status. By default, font
+            /// kerning is on. Font kerning is "the process of
+            /// adjusting the spacing between characters in a
+            /// proportional font, usually to achieve a visually
+            /// pleasing result"
+            /// - [Wikipedia](https://en.wikipedia.org/wiki/Kerning)
+            ///
+            /// \param bool kerningon
+            void Set_kerning_status(const bool kerningon){
+                if(Get_internal_font().Get_ttf_font() != NULL){
+
+                    TTF_SetFontKerning(Get_internal_font().Get_ttf_font(),
+                                       kerningon);
+                }else{
+                    m_fontkerningstatus = kerningon;
+                    m_waitingtosetfontkerning = true;
+                }
+            }
+
+            /// \brief Gets the font's style.
+            ///
+            /// Gets the font's style. By default, the font style is
+            /// FONTSTYLE_NORMAL. The font style determines whether
+            /// the text is bold, italic, normal, strikethrough,
+            /// and/or underlined at the same time.
+            int Get_font_style() const {
+                return m_fontstyle;
+            }
+
+            /// \brief Sets the font's style.
+            ///
+            /// Sets the font's style. By default, the font style is
+            /// FONTSTYLE_NORMAL. The font style determines whether
+            /// the text is bold, italic, normal, strikethrough,
+            /// and/or underlined at the same time.
+            ///
+            /// \param int fontstyle
+            void Set_font_style(const int fontstyle) {
+                m_fontstyle = fontstyle;
+
+                Pre_render();
+            }
+
+            /// \brief Gets the font's size (in points).
+            ///
+            /// Gets the font's size (in points). By default, this
+            /// size is set to 20 points.
+            unsigned int Get_font_size() const {
+                return m_fontsize;
+            }
+
+            /// \brief Sets the font's size (in points).
+            ///
+            /// Gets the font's size (in points). By default, this
+            /// size is set to 20 points.
+            ///
+            /// \param unsigned int fontsize
+            void Set_font_size(const unsigned int fontsize) {
+                m_fontsize = fontsize;
+
+                Pre_render();
+            }
+
+            /// \brief Gets the font's hinting.
+            ///
+            /// Gets the font's hinting. Try to call this function
+            /// before Set_font_hinting, even if you want to set
+            /// the font's hinting. If you don't this might cause
+            /// an unnecessary flush of previously renderered text
+            /// glyphs if you set the font hinting to the same
+            /// font hinting it previously had.
+            Font_hinting Get_font_hinting(){
+                return m_fonthinting;
+            }
+            
+            /// \brief Sets the font's hinting.
+            ///
+            /// Sets the font's hinting. Try to call this function
+            /// after Get_font_hinting. If you don't this might cause
+            /// an unnessary flush of previously renderered text
+            /// glyphs if you set the font hinting to the same
+            /// font hinting it previously had.
+            ///
+            /// \param Font_hinting fonthinting
+            void Set_font_hinting(Font_hinting fonthinting) {
+                m_fonthinting = fonthinting;
+                int fonthintingint = static_cast<int>(m_fonthinting);
+
+                if(Get_internal_font().Get_ttf_font() != NULL){
+                    TTF_SetFontHinting(Get_internal_font().Get_ttf_font(),
+                                       fonthintingint);
+                }else{
+                    m_waitingtosethinting = true;
+                }
+            }
+
+            /// \brief Sets the jetfuel::draw::Font of this Text
+            /// object after construction.
+            ///
+            /// Sets the jetfuel::draw::Font of this Text object
+            /// after construction.
+            ///
+            /// \param jetfuel::draw::Font font
+            void Set_font(Font font);
+            
+            /// \brief Gets the Rect2d_int to draw upon Draw being 
+            /// called.
+            ///
+            /// Gets the Rect2d_int to draw upon Draw being 
+            /// called.
+            Rect2d_int Get_rect_to_draw()override{
+                return m_recttodraw;
+            }
+            
+            /// \brief Draws this Text object.
+            ///
+            /// Draws this Text object. This function should not
+            /// be called by you, but rather indirectly using a
+            /// jetfuel::draw::Scene and a
+            /// jetfuel::draw::Scene_manager. However, if you don't
+            /// wish to use one of these types, you can always
+            /// just call this function.
+            bool Draw()override;
+        protected:
+            /// \brief Returns whether this Text object is ready to be
+            /// drawn.
+            ///
+            /// Returns whether this Text object is ready to be drawn.
+            bool Is_ready_to_be_drawn() const {
+                return m_isreadytobedrawn;
+            }
+
+            /// \brief Sets whether the Text object is ready to be 
+            /// drawn.
+            ///
+            /// Sets whether the Text object is ready to be 
+            /// drawn.
+            ///
+            /// \param bool isreadytobedrawn
+            void Set_is_ready_to_be_drawn(bool isreadytobedrawn) {
+                m_isreadytobedrawn = isreadytobedrawn;
+            }
+
+            /// \brief Returns whether the Text object is ready to
+            /// have the Pre_render function called.
+            ///
+            /// Returns whether the Text object is ready to have
+            /// the Pre_render function called.
+            bool Is_ready_for_pre_rendering() const {
+                return m_isreadyforprerendering;
+            }
+
+            /// \brief Returns whether the font was created or not.
+            ///
+            /// Returns whether the font was created or not based
+            /// on the variables m_isfontcreated and the return value
+            /// of the Font's Is_font_loaded function.
+            bool Is_font_created() const {
+                return m_isfontcreated && m_font.Is_font_loaded();
+            }
+
+            /// \brief Sets the boolean m_isfontcreated to indicate
+            /// whether the font is created or not.
+            ///
+            /// Sets the boolean m_isfontcreated to indicate
+            /// whether the font is created or not.
+            ///
+            /// \param bool isfontcreated
+            void Set_is_font_created(bool isfontcreated) {
+                m_isfontcreated = isfontcreated;
+            }
+
+            /// \brief Gets the internal assigned font.
+            ///
+            /// Gets the internal assigned font.
+            Font Get_internal_font() const {
+                return m_font;
+            }
+
+            /// \brief Sets the internal assigned font.
+            ///
+            /// Sets the internal assigned font to be used when
+            /// rendering and drawing text.
+            ///
+            /// \param Font font
+            void Set_internal_font(Font font){
+                m_font = font;
+            }
+
+            /// \brief Gets the past font size used in the last
+            /// time a function was called.
+            ///
+            /// Gets the past font size used in the last
+            /// time a function was called.
+            unsigned int Get_past_font_size() const {
+                return m_pastfontsize;
+            }
+
+            /// \brief Sets the past font size for future reference.
+            ///
+            /// Sets the past font size for future reference.
+            ///
+            /// \param unsigned int pastfontsize
+            void Set_past_font_size(unsigned int pastfontsize) {
+                m_pastfontsize = pastfontsize;
+            }
+            
+            /// \brief Converts a regular Jetfuel Color to a
+            /// SDL_Color.
+            ///
+            /// Converts a regular Jetfuel Color to a SDL_Color. The
+            /// reason this is not an operator in jetfuel::draw::Color
+            /// is because this would be used in only this class in
+            /// the entire Jetfuel game engine and we want to
+            /// discourage developers from using SDL_Color in favor
+            /// of our own Jetfuel Color which was designed in
+            /// C++ utilizing some C++ organizational features
+            /// such as namespaces.
+            ///
+            /// \param jetfuel::draw::Color color
+            SDL_Color Convert_Color_to_SDL_Color(Color color){
+                SDL_Color returnvalue;
+
+                returnvalue.r = color.r;
+                returnvalue.g = color.g;
+                returnvalue.b = color.b;
+                returnvalue.a = color.a;
+
+                return returnvalue;
+            }
+
+            /// \brief Gets the text's surface to draw when the Draw
+            /// function is called.
+            ///
+            /// Gets the text's surface to be converted to a Drawable
+            /// SDL_Texture when the Draw function is called.
+            SDL_Surface *Get_text_surface() const {
+                return m_textsurface;
+            }
+
+            /// \brief Sets the text surface that will be
+            /// converted to a SDL_Texture upon the function Draw
+            /// being called.
+            ///
+            /// Sets the text surface that will be
+            /// converted to a SDL_Texture upon the function Draw
+            /// being called.
+            ///
+            /// \param SDL_Surface *textsurface
+            void Set_text_surface(SDL_Surface *textsurface) {
+                m_textsurface = textsurface;
+            }
+
+            /// \brief Gets the text rendered SDL_Texture that will be
+            /// set and drawn upon the function Draw being called.
+            ///
+            /// Gets the text rendered SDL_Texture that will be
+            /// set and drawn upon the function Draw being called.
+            SDL_Texture *Get_text_rendered() const {
+                return m_textrendered;
+            }
+
+            /// \brief Sets the text rendered SDL_Texture that will be
+            /// set and drawn upon the function Draw being called.
+            ///
+            /// Sets the text rendered SDL_Texture that will be
+            /// set and drawn upon the function Draw being called.
+            ///
+            /// \param SDL_Texture *textrendered
+            void Set_text_rendered(SDL_Texture *textrendered) {
+                m_textrendered = textrendered;
+            }
+
+            /// \brief Returns whether the surface was copied to
+            /// indicate whether the textsurface exists any more.
+            ///
+            /// Returns whether the surface was copied to
+            /// indicate whether the textsurface exists any more.
+            bool Is_surface_copied() const {
+                return m_issurfacecopied;
+            }
+
+            /// \brief Sets whether the surface was copied to 
+            /// indicate whether the textsurface exists any more.
+            ///
+            /// Sets whether the surface was copied to 
+            /// indicate whether the textsurface exists any more.
+            ///
+            /// \param bool issurfacecopied
+            void Set_is_surface_copied(bool issurfacecopied) {
+                m_issurfacecopied = issurfacecopied;
+            }
+
+            /// \brief Sets the publicly available variable of the
+            /// Rect2d to draw.
+            ///
+            /// Sets the publicly available variable of the
+            /// Rect2d to draw.
+            ///
+            /// \param int x
+            /// \param int y
+            /// \param int width
+            /// \param int height
+            void Set_rect_to_draw(int x, int y, int width, int height) {
+                m_recttodraw = jetfuel::draw::Rect2d_int(x,y,width,height);
+            }
+
+            /// \brief Sets the past kerning status.
+            ///
+            /// Sets the past kerning status when
+            /// SDL_TTF font is loaded.
+            void Set_past_kerning_status(){
+				if (Get_internal_font().Get_ttf_font() != nullptr) {
+					TTF_SetFontKerning(Get_internal_font().Get_ttf_font(),
+						m_fontkerningstatus);
+				}
+            }
+
+            /// \brief Sets the past font hinting.
+            ///
+            /// Sets the past font hinting when SDL_TTF font is
+            /// loaded.
+            void Set_past_font_hinting(){
+                int fonthintingint = static_cast<int>(m_fonthinting);
+
+                TTF_SetFontHinting(Get_internal_font().Get_ttf_font(),
+                                   fonthintingint);
+            }
+
+            /// \brief Returns whether rendering the font for the
+            /// first time.
+            ///
+            /// Returns whether rendering the font for the
+            /// first time.
+            bool Is_font_rendering_for_first_time() const{
+                return m_firsttimerendering;
+            }
+
+            /// \brief Sets whether we are the font for the
+            /// first time.
+            ///
+            /// Returns whether we are rendering the font for the
+            /// first time.
+            ///
+            /// \param bool fontrenderingfirst
+            void Set_font_rendering_for_first_time(bool fontrenderingfirst){
+                m_firsttimerendering = fontrenderingfirst;
+            }
+
+            /// \brief Checks if kerning status is waiting to be set.
+            ///
+            /// Checks if kerning status is waiting to be set after
+            /// SDL_TTF font was not loaded.
+            bool Waiting_to_set_kerning_status(){
+				bool previousvalue = m_waitingtosetfontkerning;
+
+                m_waitingtosetfontkerning = false;
+
+                return previousvalue;
+            }
+
+            /// \brief Checks if font hinting is waiting to be set.
+            ///
+            /// Checks if font hinting is waiting to be set after
+            /// SDL_TTF font was not loaded.
+            bool Waiting_to_set_font_hinting(){
+				bool previousvalue = m_waitingtosethinting;
+                m_waitingtosethinting = false;
+
+                return previousvalue;
+            }
+
+			void Set_text_surface_been_freed(bool textsurfacefreed) {
+				m_istextsurfacefreed = textsurfacefreed;
+			}
+
+			bool Has_text_surface_been_freed() const{
+				return m_istextsurfacefreed;
+			}
+
+            /// \brief Pre renders the text surface.
+            ///
+            /// Pre renders the text surface. This function is
+            /// called with the Pre_render function, so you never
+            /// should need to call this function directly.
+            void Pre_render_text();
+
+            /// \brief Pre renders and gets the Text object ready to
+            /// be drawn.
+            ///
+            /// Pre renders and gets the Text object ready to
+            /// be drawn.
+            void Pre_render();
+        private:
+            ///////////////////
+            /// member data ///
+            ///////////////////
+
+            bool m_fontkerningstatus = true; ///< Whether font hinting
+                                             ///< is enabled.
+        
+            bool m_waitingtosetfontkerning = 1; ///< Are we
+                                                    ///< waiting to
+                                                    ///< set the font
+                                                    ///< kerning
+                                                    ///< status?
+
+            bool m_waitingtosethinting = 1; ///< Are we waiting to
+                                                ///< set font hinting?
+            bool m_isfontcreated = false; ///< Whether the Font object
+                                          ///< was created
+            bool m_isreadytobedrawn = false; ///< Whether this Text 
+                                             ///< object is ready to
+                                             ///< be drawn.
+            bool m_isreadyforprerendering = false; ///< Whether this
+                                                   ///< Text object
+                                                   ///< is ready to
+                                                   ///< have the
+                                                   ///< Pre_render
+                                                   ///< function
+                                                   ///< called.
+            bool m_issurfacecopied = false; ///< Whether the text 
+                                            ///< surface exists.
+            bool m_firsttimerendering = true; ///< Whether the font is
+                                              ///< rendering for the
+                                              ///< first time.
+
+            std::string m_string; ///< The text string to display.
+            unsigned int m_fontsize = 20; ///< The font's text size.
+            unsigned int m_pastfontsize = 0; ///< The past font's text
+                                             ///< size.
+
+            Color m_textcolor; ///< The text color to display.
+            Color m_backgroundcolor; ///< The background text color
+                                     ///< to display when the Shaded
+                                     ///< Render_mode is set.
+
+            SDL_Surface *m_textsurface; ///< The Text object's
+                                        ///< pre-Draw function visual
+                                        ///< representation.
+			bool m_istextsurfacefreed = false; ///< Whether the text surface's
+											   ///< data has been freed.
+
+            SDL_Texture *m_textrendered; ///< The Text object's 
+                                         ///< post-Draw
+                                         ///< function visual
+                                         ///< representation.
+
+            jetfuel::draw::Rect2d_int m_recttodraw; ///< The rectangle
+                                                    ///< to draw upon
+                                                    ///< the Draw
+                                                    ///< function
+                                                    ///< being called.
+
+            Font m_font; ///< The Text object's Font object. 
+
+            Render_mode m_rendermode = Render_mode::Solid; ///< The
+                                                           ///< Text
+                                                           ///< object's
+                                                           ///< rendermode.
+            Font_hinting m_fonthinting = Font_hinting::Normal; ///< The
+                                                               ///< Text
+                                                               ///< object's
+                                                               ///< fonthinting.
+
+            int m_fontstyle = FONTSTYLE_NORMAL; ///< The Text object's
+                                                ///< font style.
+        };
+
+        /// \class jetfuel::draw::Text
+        ///
+        /// A TrueType text object that draws TrueType text to the
+        /// screen.
+        ///
+        /// Code Example:
+        /// 	\code
+        ///     jetfuel::draw::Scene_manager scenemanager;
+        ///     jetfuel::draw::Scene scene1;
+        ///     jetfuel::draw::Font font("default.ttf");
+        ///     jetfuel::draw::Text hello(font);
+        ///
+        ///     if(!scenemanager.Create_window(windowlabel,
+        ///                                    windowposition,
+        ///                                    windowsize)){
+        ///         std::cerr << "[!]ERROR with creating sdl renderer!" <<
+        ///         "Error is:" << SDL_GetError() << "\n";
+        ///     }
+        ///
+        ///     if(!scenemanager.Create_renderer()){
+        ///         std::cerr << "[!]ERROR with creating sdl renderer!" <<
+        ///         "Error is:" << SDL_GetError() << "\n";
+        ///     }
+        ///
+        ///     scenemanager.Switch_current_scene(&scene1);
+        ///
+        ///     hello.Set_string("Why Hello There");
+        ///     hello.Set_position(jetfuel::draw::Vector2d_int(100,100));
+        ///     hello.Set_text_color(jetfuel::draw::Color::Cyan);
+        ///     hello.Set_font_size(50);
+        ///     hello.Set_render_mode(jetfuel::draw::Text::Render_mode::Blended);
+        ///
+        ///     scene1.Attach_drawable(&hello,1);
+        ///
+        ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
+
+    } /* namespace draw */
+} /* namespace jetfuel */
+
+#endif /* JETFUELDRAW_TEXT_H_ */

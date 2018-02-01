@@ -1,0 +1,325 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2018 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#ifndef JETFUELDRAW_SPRITE_H_
+#define JETFUELDRAW_SPRITE_H_
+
+#include <string>
+
+#ifdef __linux__
+	#include <SDL2/SDL.h>
+	#include <SDL2/SDL_image.h>
+#else
+	#include <SDL.h>
+	#include <SDL_image.h>
+#endif
+
+#include <jetfueldraw/drawable.h>
+#include <jetfueldraw/image.h>
+#include <jetfueldraw/rect2d.h>
+#include <jetfueldraw/rectangleinterface.h>
+#include <jetfueldraw/scenemanager.h>
+
+
+namespace jetfuel {
+    namespace draw {
+        class Sprite : public Drawable, public Rectangle_interface{
+        public:
+            /// \brief Default constructor
+            ///
+            /// Constructs a Sprite.
+            Sprite();
+
+            /// \brief Virtual destructor
+            ///
+            /// Cleans up the Sprite's resources.
+            virtual ~Sprite();
+
+            /// \brief Loads an image into the Sprite's Texture.
+            ///
+            /// Loads a jetfuel::draw::Image into the Sprite's Texture
+            /// to show that Image when this Sprite is drawn.
+            /// This function can only be called after this Sprite
+            /// has been attached to a Scene
+            /// (or has been assigned a renderer manually) and
+            /// will fail otherwise.
+            /// When this function fails, it will return a boolean of
+            /// false. Otherwise, it will return a boolean of true.
+            ///
+            /// \param jetfuel::draw::Image image
+            bool Load_from_image(const Image image);
+
+            /// \brief Dynamically loads an image into the Sprite's
+            /// texture.
+            ///
+            /// Dynamically loads an image into the Sprite's
+            /// texture. This function functions similar to
+            /// Load_from_image, except instead of converting the
+            /// image immediately, it delays the loading until the
+            /// image is needed when the Draw function is called.
+            /// You should prefer to use Load_from_image, as it
+            /// returns the result of the loading, however this
+            /// function does not.
+            ///
+            /// \param jetfuel::draw::Image image
+            void Dynamic_load_from_image(const Image image);
+
+            /// \brief Gets the area of the Sprite to be drawn.
+            ///
+            /// Gets the area of the Sprite to be drawn. In order to
+            /// ensure an accurate value, make sure to load this
+            /// Sprite with an image first and set this Sprite's
+            /// position.
+            Rect2d_int Get_rect_to_draw()override{
+                return Rect2d_int(m_dest.x,m_dest.y,m_dest.w,m_dest.h);
+            }
+
+            /// \brief Gets the size of the Sprite to be drawn.
+            ///
+            /// Gets the size of the Sprite to be drawn.
+            jetfuel::draw::Vector2d_int Get_size_of_sprite(){
+                return m_widthheight;
+            }
+
+            /// \brief If valid dynamic image exists, load it for now.
+            ///
+            /// If valid dynamic image exists, load it for now. It
+            /// will re-load the image also when the Draw function is
+            /// called even if you call this function. This function
+            /// is mainly to find out the height and width of the
+            /// sprite's image and not much else.
+            void Force_load_dynamic_image(){
+                if(!Is_dynamic_image_loaded() &&
+                    Get_dynamic_image().Get_image_location() != "" &&
+					&m_dynamicimage.Get_image_location() != nullptr){
+                    Load_from_image(Get_dynamic_image());
+                }
+            }
+
+            /// \brief Draws this Sprite to the screen.
+            ///
+            /// Draws this Sprite to the screen. This WILL fail if
+            /// either the renderer has not been assigned(which
+            /// happens when you attach a Sprite to a
+            /// jetfuel::draw::Scene), or the
+            /// image has not been loaded. If it does, this
+            /// function will return a boolean of false. Otherwise,
+            /// it will return a boolean of true.
+            bool Draw()override;
+        protected:
+            /// \brief Sets the destination SDL rectangle's 
+            /// width and height.
+            ///
+            /// Sets the destination SDL rectangle's width and height
+            /// for drawing the Sprite.
+            ///
+            /// \param jetfuel::draw::Vector2d_int widthheight
+            void Set_dest_width_height(const Vector2d_int widthheight){
+                m_dest.w = widthheight.x;
+                m_dest.h = widthheight.y;
+            }
+
+            /// \brief Sets the destination SDL rectangle's position.
+            ///
+            /// Sets the destination SDL rectangle's position for
+            /// drawing the Sprite.
+            ///
+            /// \param Vector2d_int position
+            void Set_dest_position(const Vector2d_int position){
+                m_dest.x = position.x;
+                m_dest.y = position.y;
+            }
+            
+            /// \brief Sets the size of the Sprite.
+            ///
+            /// Sets the publicly-accessible size of the Sprite.
+            ///
+            /// \param jetfuel::draw::Vector2d_int size
+            void Set_size_of_sprite(const Vector2d_int size){
+                m_widthheight = size;
+            }
+
+            /// \brief Sets the image's view rectangle to be shown
+            /// to the player.
+            ///
+            /// Sets the image's view rectangle to be shown
+            /// to the player. This function is useful if you want to
+            /// only show a certain part of an image in a Sprite.
+            ///
+            /// \param jetfuel::draw::Rect2d_int viewrectangle
+            void Set_image_view_rect(const Rect2d_int viewrectangle){
+                m_src.w = viewrectangle.width;
+                m_src.h = viewrectangle.height;
+
+                m_src.x = viewrectangle.x;
+                m_src.y = viewrectangle.y;
+
+                m_srcviewrectset = true;
+            }
+
+            /// \brief Gets the dest rect used for positioning images.
+            ///
+            /// Gets the dest rect used for positioning images.
+            SDL_Rect Get_dest_rect() const {
+                return m_dest;
+            }
+
+            /// \brief Gets the src rect.
+            ///
+            /// Gets the src rect. The src rect is used to
+            /// display only a certain part of an image for the
+            /// Sprite.
+            SDL_Rect Get_src_rect() const {
+                return m_src;
+            }
+
+            /// \brief Gets the SDL_Texture used for drawing the
+            /// Sprite.
+            ///
+            /// Gets the SDL_Texture used for drawing the
+            /// Sprite. The SDL_Texture is the actual object that gets
+            /// displayed to the player.
+            SDL_Texture *Get_texture() const {
+                return m_texture;
+            }
+
+            /// \brief Sets the SDL_Texture used for drawing the
+            /// Sprite.
+            ///
+            /// Sets the SDL_Texture used for drawing the
+            /// Sprite. The SDL_Texture is the actual object that gets
+            /// displayed to the player.
+            ///
+            /// \param SDL_Texture *texture
+            void Set_texture(SDL_Texture *texture) {
+                m_texture = texture;
+
+                m_istexturenotfreed = true;
+            }
+
+            /// \brief Checks whether the source view rect is set.
+            ///
+            /// Checks whether the source view rect is set. The source
+            /// rect allows for the Sprite to only represent a part of
+            /// a bigger image file.
+            bool Is_src_view_rect_set() const {
+                return m_srcviewrectset;
+            }
+
+            /// \brief Gets this Sprite's dynamic image.
+            ///
+            /// Gets this Sprite's dynamic image to be loaded when
+            /// Sprite's Draw function is called.
+            Image Get_dynamic_image() const{
+                return m_dynamicimage;
+            }
+
+            /// \brief Sets this Sprite's dynamic image.
+            ///
+            /// Sets this Sprite's dynamic image to be loaded when
+            /// Sprite's Draw function is called.
+            ///
+            /// \param Image dynamicimage
+            void Set_dynamic_image(Image dynamicimage){
+                m_dynamicimage = dynamicimage;
+            }
+
+            bool Is_dynamic_image_loaded() const{
+                return m_dynamicimageloaded;
+            }
+
+            void Set_dynamic_image_loaded(const bool dynamicimageloaded){
+                m_dynamicimageloaded = dynamicimageloaded;
+            }
+
+            void Destroy_image_texture(){
+                if(m_istexturenotfreed){
+                    SDL_DestroyTexture(m_texture);
+					m_istexturenotfreed = false;
+                }
+            }
+        private:
+            ///////////////////
+            /// member data ///
+            ///////////////////
+
+            bool m_srcviewrectset = false;///< Whether the source view
+                                          ///< rectangle is set.
+
+            jetfuel::draw::Vector2d_int m_widthheight; ///< The width
+                                                       ///< and height
+                                                       ///< of the
+                                                       ///< Sprite.
+
+            jetfuel::draw::Image m_dynamicimage; ///< Whether the
+                                                 ///< Dynamic image is
+                                                 ///< set
+
+            bool m_dynamicimageloaded = false; ///< Whether the
+                                               ///< Dynamic image is
+                                               ///< set.
+
+            bool m_istexturenotfreed = false;
+            SDL_Texture *m_texture; ///< This sprite's texture object.
+
+            SDL_Rect m_dest; ///< destination rectangle for
+                             ///< positioning.
+
+            SDL_Rect m_src; ///< source view rectangle.
+        };
+
+        /// \class jetfuel::draw::Sprite
+        ///
+        /// A Sprite, when used in conjunction with
+        /// jetfuel::draw::Image, displays textures to the screen.
+        ///
+        /// Code Example:
+        ///		\code
+        ///     jetfuel::draw::Scene_manager scenemanager;
+        ///     jetfuel::draw::Scene scene1(1);
+        ///     jetfuel::draw::Sprite background;
+        ///     jetfuel::draw::Image backgroundimage(backgroundlocation,
+        ///                                   &scenemanager);
+        ///
+        ///     if(!scenemanager.Create_window("Hello Sprites!",
+        ///                                    jetfuel::draw::Vector2d_int(0,0),
+        ///                                    jetfuel::draw::Vector2d_int(640,480))){
+        ///         std::cout << "[!]ERROR with creating sdl window! Error is:" <<
+        ///         SDL_GetError() << "\n";
+        ///     }
+        ///
+        ///     if(!scenemanager.Create_renderer()){
+        ///         std::cout << "[!]ERROR with creating sdl renderer! Error is:" <<
+        ///         SDL_GetError() << "\n";
+        ///     }
+        ///     scenemanager.Switch_current_scene(&scene1);
+        ///     scene1.Attach_drawable(&background,1);
+        ///
+        ///     if(!background.Load_from_image(backgroundimage)){
+        ///         std::cerr << "[!]ERROR with loading from image! Error is:" <<
+        ///         IMG_GetError() << "\n";
+        ///     }
+        ///
+        ///     background.Set_position(jetfuel::draw::Vector2d_int(0,0));
+        ///
+        ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
+
+    } /* namespace draw */
+} /* namespace jetfuel */
+
+#endif /* JETFUELDRAW_SPRITE_H_ */

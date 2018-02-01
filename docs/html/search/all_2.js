@@ -15,6 +15,5 @@ var searchData=
   ['create_5fcontainer_5fbox',['Create_container_box',['../classjetfuel_1_1gui_1_1Menu.html#a1efd742a6622d24a3ed6ae6a05fcba63',1,'jetfuel::gui::Menu']]],
   ['create_5frenderer',['Create_renderer',['../classjetfuel_1_1draw_1_1Scene__manager.html#afafecd926ce5e4b2543a6d583a7d24b6',1,'jetfuel::draw::Scene_manager']]],
   ['create_5fwindow',['Create_window',['../classjetfuel_1_1draw_1_1Scene__manager.html#a5113e9062c272a22d383ba872417ba31',1,'jetfuel::draw::Scene_manager']]],
-  ['curcle2d',['Curcle2d',['../classjetfuel_1_1draw_1_1Curcle2d.html',1,'jetfuel::draw']]],
   ['cyan',['Cyan',['../classjetfuel_1_1draw_1_1Color.html#a9c9781b9377310494e8af2a5fe524ab4',1,'jetfuel::draw::Color']]]
 ];

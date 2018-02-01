@@ -27,30 +27,44 @@ Code Example\+:
 
 Python(classexample.\+py)\+:
 
-class classexample\+: def {\bfseries init}(self) \+: print(\char`\"{}classexample inited!\char`\"{}); def sayhello(self, name) \+: print(\char`\"{}\+Hello\char`\"{} + name);
 
-C++\+: bool executedstatus; std\+::string fileandclassname = \char`\"{}classexample\char`\"{}; std\+::string directory = \char`\"{}./\+Scripts\char`\"{};
+\begin{DoxyCode}
+\textcolor{keyword}{class }classexample:
+    def \_\_init\_\_(self) :
+        print("classexample inited!");
+    def sayhello(self, name) :
+        print("Hello" + name);
+\end{DoxyCode}
 
-\begin{DoxyVerb}jetfuel::inspire::Python_class_loader classloader(nullptr, 
+
+C++\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{bool} executedstatus;
+std::string fileandclassname = \textcolor{stringliteral}{"classexample"};
+std::string directory = \textcolor{stringliteral}{"./Scripts"};    
+
+
+\hyperlink{classjetfuel_1_1inspire_1_1Python__class__loader}{jetfuel::inspire::Python\_class\_loader} classloader(\textcolor{keyword}{nullptr}, 
                         &fileandclassname,&fileandclassname,
                         &executedstatus, &error, &directory);
 
-if(!executedstatus){
-    std::cout << "Python Interpreter ERROR! Error is:" << error
+\textcolor{keywordflow}{if}(!executedstatus)\{
+    std::cout << \textcolor{stringliteral}{"Python Interpreter ERROR! Error is:"} << error
     << std::endl;
-}
+\}
 
-jetfuel::inspire::Python_module_loader classfunction(
-                        &classloader,std::string("sayhello"));
+\hyperlink{classjetfuel_1_1inspire_1_1Python__module__loader}{jetfuel::inspire::Python\_module\_loader} classfunction(
+                        &classloader,std::string(\textcolor{stringliteral}{"sayhello"}));
 executedstatus = bool();
 
-bool returnvalue = classfunctiontester.Execute_bool(
+\textcolor{keywordtype}{bool} returnvalue = classfunctiontester.Execute\_bool(
                                     &executedstatus, &error, 
-                PyTuple_Pack(1, PyUnicode_FromString("G'day")));
-if (!executedstatus) {
-    std::cout << "Python Interpreter ERROR! Error is:" << 
+                PyTuple\_Pack(1, PyUnicode\_FromString(\textcolor{stringliteral}{"G'day"})));
+\textcolor{keywordflow}{if} (!executedstatus) \{
+    std::cout << \textcolor{stringliteral}{"Python Interpreter ERROR! Error is:"} << 
     error << std::endl;
-}  \end{DoxyVerb}
+\}
+\end{DoxyCode}
  
 
 \subsection{Constructor \& Destructor Documentation}

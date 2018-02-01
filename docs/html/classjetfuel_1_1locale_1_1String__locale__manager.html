@@ -20,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="jetfueldocslogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JetfuelGameEngine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -71,6 +72,8 @@ $(function() {
 <div class="title">jetfuel::locale::String_locale_manager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="stringlocalemanager_8h_source.html">stringlocalemanager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -93,7 +96,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a215fa1aaf302e45b1ab375f764a8d101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a string with a (hopefully universal) stringid from the active <a class="el" href="classjetfuel_1_1locale_1_1String__locale__file.html">String_locale_file</a>.  <a href="#a215fa1aaf302e45b1ab375f764a8d101">More...</a><br /></td></tr>
 <tr class="separator:a215fa1aaf302e45b1ab375f764a8d101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A localization manager using a collection of String_locale_files.</p>
+<p>Code Example:</p>
+<p>JSON(EnglishLocale.json): </p><div class="fragment"><div class="line">{</div><div class="line">    <span class="stringliteral">&quot;strings&quot;</span>: [</div><div class="line">        {</div><div class="line">            <span class="stringliteral">&quot;stringid&quot;</span>: <span class="stringliteral">&quot;checkboxlabel&quot;</span>,</div><div class="line">            <span class="stringliteral">&quot;string&quot;</span> : <span class="stringliteral">&quot;click it i guess&quot;</span></div><div class="line">        }</div><div class="line">    ]</div><div class="line">}</div></div><!-- fragment --><p>C++:</p>
+<div class="fragment"><div class="line"><a class="code" href="classjetfuel_1_1locale_1_1String__locale__file.html">jetfuel::locale::String_locale_file</a> englishlocalefile;</div><div class="line"><a class="code" href="classjetfuel_1_1locale_1_1String__locale__manager.html">jetfuel::locale::String_locale_manager</a> localemanager;</div><div class="line">std::string error;</div><div class="line"></div><div class="line"><span class="keywordflow">if</span>(!englishlocalefile.<a class="code" href="classjetfuel_1_1locale_1_1String__locale__file.html#a904609e7cde4eb624cb940cbba642ea0">Load_string_locale_file</a>(<span class="stringliteral">&quot;EnglishLocale.json&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;english&quot;</span>, &amp;error)){</div><div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;Could not load EnglishLocale JSON file! &quot;</span> &lt;&lt;</div><div class="line">    <span class="stringliteral">&quot;Error was: &quot;</span> &lt;&lt; error &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div><div class="line">    <span class="keywordflow">return</span> 1;</div><div class="line">}</div><div class="line"></div><div class="line">localemanager.<a class="code" href="classjetfuel_1_1locale_1_1String__locale__manager.html#a2a972352f2b52a6aec947aad636ca6f1">Load_string_locale_file</a>(englishlocalefile);</div><div class="line"></div><div class="line">localemanager.<a class="code" href="classjetfuel_1_1locale_1_1String__locale__manager.html#a2bca626efc214510e533a8c4ece7cafb">Set_active_locale</a>(<span class="stringliteral">&quot;english&quot;</span>);</div><div class="line"></div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Hello in&quot;</span> &lt;&lt; localemanager.<a class="code" href="classjetfuel_1_1locale_1_1String__locale__manager.html#a41b25b50b804bce31184b32e6dc97fae">Get_active_locale</a>() &lt;&lt;  </div><div class="line">            <span class="stringliteral">&quot; is &quot;</span> &lt;&lt; localemanager.<a class="code" href="classjetfuel_1_1locale_1_1String__locale__manager.html#a215fa1aaf302e45b1ab375f764a8d101">Get_string_from_id</a>(<span class="stringliteral">&quot;hello&quot;</span>);</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a347f49d477102a965dcbf288a79b403a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a347f49d477102a965dcbf288a79b403a">&#9670;&nbsp;</a></span>String_locale_manager()</h2>
 

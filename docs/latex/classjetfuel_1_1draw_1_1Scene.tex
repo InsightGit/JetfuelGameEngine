@@ -60,19 +60,38 @@ bool \hyperlink{classjetfuel_1_1draw_1_1Scene_a1d8d53f33a18643e5ee7ea05e9906786}
 \subsection{Detailed Description}
 A scene to be used with \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{Scene\+\_\+manager} to produce a series of drawable scenes to be presented to the player.
 
-Code Example\+: \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel\+::draw\+::\+Scene\+\_\+manager} scenemanager; \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel\+::draw\+::\+Scene} scene1(1); \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image} image = \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel\+::draw\+::\+Image}(\char`\"{}test.\+png\char`\"{}); \hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel\+::draw\+::\+Sprite} background;
+Code Example\+: 
+\begin{DoxyCode}
+  \hyperlink{classjetfuel_1_1draw_1_1Scene__manager}{jetfuel::draw::Scene\_manager} scenemanager;
+  \hyperlink{classjetfuel_1_1draw_1_1Scene}{jetfuel::draw::Scene} scene1(1);
+  \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel::draw::Image} image = \hyperlink{classjetfuel_1_1draw_1_1Image}{jetfuel::draw::Image}(\textcolor{stringliteral}{"test.png"});
+  \hyperlink{classjetfuel_1_1draw_1_1Sprite}{jetfuel::draw::Sprite} background;
 
-if(!scenemanager.Create\+\_\+window(\char`\"{}example\char`\"{}, jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0), jetfuel\+::draw\+::\+Vector2d\+\_\+int(500,500)))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+\textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a5113e9062c272a22d383ba872417ba31}{Create\_window}(\textcolor{stringliteral}{"example"},
+                         \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0),
+                         \hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(500,500)))\{
+   std::cerr << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer!"} <<
+   \textcolor{stringliteral}{"Error is:"} << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+\}
 
-if(!scenemanager.Create\+\_\+renderer())\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with creating sdl renderer!\char`\"{} $<$$<$ \char`\"{}\+Error is\+:\char`\"{} $<$$<$ S\+D\+L\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; \}
+  \textcolor{keywordflow}{if}(!scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_afafecd926ce5e4b2543a6d583a7d24b6}{Create\_renderer}())\{
+       std::cerr << \textcolor{stringliteral}{"[!]ERROR with creating sdl renderer!"} <<
+      \textcolor{stringliteral}{"Error is:"} << SDL\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+  \}
 
-scenemanager.\+Switch\+\_\+current\+\_\+scene(\&scene1); scene1.\+Attach\+\_\+drawable(\&background);
+  scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a770c163b88ba8427539ee182315ea989}{Switch\_current\_scene}(&scene1);
+  scene1.\hyperlink{classjetfuel_1_1draw_1_1Scene_aea4b4c4ae25c30d661be4c52787e0ea3}{Attach\_drawable}(&background);
 
-if(!background.Load\+\_\+from\+\_\+image(backgroundimage))\{ std\+::cerr $<$$<$ \char`\"{}\mbox{[}!\mbox{]}\+E\+R\+R\+O\+R with loading from image! Error is\+:\char`\"{} $<$$<$ I\+M\+G\+\_\+\+Get\+Error() $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; return 1; \}
+  \textcolor{keywordflow}{if}(!background.\hyperlink{classjetfuel_1_1draw_1_1Sprite_a370d0b3b2770348ae57ae5156c59a0ca}{Load\_from\_image}(backgroundimage))\{
+      std::cerr << \textcolor{stringliteral}{"[!]ERROR with loading from image! Error is:"} << IMG\_GetError() << \textcolor{stringliteral}{"\(\backslash\)n"};
+      \textcolor{keywordflow}{return} 1;
+  \}
 
-background.\+Set\+\_\+position(jetfuel\+::draw\+::\+Vector2d\+\_\+int(0,0));
+  background.\hyperlink{classjetfuel_1_1draw_1_1Drawable_afdd035afe40c706459a6c9df813bcce6}{Set\_position}(\hyperlink{classjetfuel_1_1draw_1_1Vector2d}{jetfuel::draw::Vector2d\_int}(0,0));
 
-scenemanager.\+Draw\+\_\+current\+\_\+scene(); 
+  scenemanager.\hyperlink{classjetfuel_1_1draw_1_1Scene__manager_a8af9a3abfd5121b1b8556342de435773}{Draw\_current\_scene}();
+\end{DoxyCode}
+ 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classjetfuel_1_1draw_1_1Scene_ad27192ba7e5f0cb23b55f5ba067cbe94}\label{classjetfuel_1_1draw_1_1Scene_ad27192ba7e5f0cb23b55f5ba067cbe94}} 

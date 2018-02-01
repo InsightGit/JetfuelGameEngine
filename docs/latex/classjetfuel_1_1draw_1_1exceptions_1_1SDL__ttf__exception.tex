@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+ttf\+\_\+exception\+:
-\nopagebreak
+Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+ttf\+\_\+exception\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+ttf\
 \end{figure}
 
 
-Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+ttf\+\_\+exception\+:
-\nopagebreak
+Collaboration diagram for jetfuel\+:\+:draw\+:\+:exceptions\+:\+:S\+D\+L\+\_\+ttf\+\_\+exception\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -35,7 +33,13 @@ virtual const char $\ast$ {\bfseries what} () const  throw ()
 \subsection{Detailed Description}
 An exception to be thrown whenever a S\+D\+L\+\_\+\+T\+TF action done within a \hyperlink{classjetfuel_1_1draw_1_1Font}{Font} or \hyperlink{classjetfuel_1_1draw_1_1Text}{Text} object fails.
 
-Code Example\+: if(\+T\+T\+F\+\_\+\+Init() $<$ 0)\{ throw \hyperlink{classjetfuel_1_1draw_1_1exceptions_1_1SDL__ttf__exception}{exceptions\+::\+S\+D\+L\+\_\+ttf\+\_\+exception}(\char`\"{}\+T\+T\+F\+\_\+\+Init()\char`\"{}); \} 
+Code Example\+: 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(TTF\_Init() < 0)\{
+    \textcolor{keywordflow}{throw} exceptions::SDL\_ttf\_exception(\textcolor{stringliteral}{"TTF\_Init()"});
+\}
+\end{DoxyCode}
+ 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

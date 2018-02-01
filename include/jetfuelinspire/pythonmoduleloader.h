@@ -360,6 +360,13 @@ namespace jetfuel {
                 return std::string(widestring.begin(),widestring.end());
             }
 
+            /// \brief Gets a python error into a std::string from a
+            /// PyObject pointer.
+            ///
+            /// Gets a python error into a std::string from a
+            /// PyObject pointer.
+            ///
+            /// \param PyObject *errorobject
 			static std::string Get_py_error(PyObject *errorobject);
         private:
             //static std::mutex m_pythonoperationsmutex;
@@ -383,7 +390,7 @@ namespace jetfuel {
 													///< replace.
         };
 
-        /// \class sjetfuel::inspire::Python_module_loader
+        /// \class jetfuel::inspire::Python_module_loader
         ///
         /// Loads a Python 3.6 function(Not a class) to be executed.
         /// This function can be executed, and can have
@@ -399,6 +406,7 @@ namespace jetfuel {
         /// have it's own name.
         ///
         /// Code Example:
+        /// 	\code
         ///     jetfuel::inspire::Python_module_loader sumof1plus1loader = jetfuel::inspire::Python_module_loader(
         ///     "adder","whatdoes1+1equal",
         ///     "./Scripts");
@@ -415,6 +423,7 @@ namespace jetfuel {
         ///     }else{
         ///         std::cout << "Sum was:" << std::to_string(sumof1plus1) << std::endl;
         ///     }
+        /// 	\endcode
 
     } /* namespace inspire */
 } /* namespace jetfuel */

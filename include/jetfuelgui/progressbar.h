@@ -267,6 +267,7 @@ namespace jetfuel{
 		/// rectangle representing the progress bar.
 		///
 		/// Code Example:
+		/// 	\code
 		///		jetfuel::draw::Scene_manager scenemanager;
         ///     jetfuel::draw::Scene scene1(1);
         ///     jetfuel::core::Message_bus messagebus;
@@ -297,6 +298,7 @@ namespace jetfuel{
 		///		progressbar.Set_progress_bar_progress(200);
         ///
         ///     scenemanager.Draw_current_scene();
+        /// 	\endcode
     }
 }
 
