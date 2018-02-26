@@ -18,6 +18,9 @@ This README/main documentation page is a Work In Progress.
 
 - GUI joystick/keyboard support.
 - Video playback via FFmpeg
+- Android/macOS/iOS support
+- More robust project helper/creator tool.
+- Better Stability
 
 
 ## Examples:
