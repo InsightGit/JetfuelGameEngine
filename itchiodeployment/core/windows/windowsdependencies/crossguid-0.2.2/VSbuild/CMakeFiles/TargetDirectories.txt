@@ -1,0 +1,4 @@
+Z:/CentralProjectStorage/windowsdependencies/crossguid-0.2.2/VSbuild/CMakeFiles/xg.dir
+Z:/CentralProjectStorage/windowsdependencies/crossguid-0.2.2/VSbuild/CMakeFiles/xgtest.dir
+Z:/CentralProjectStorage/windowsdependencies/crossguid-0.2.2/VSbuild/CMakeFiles/ALL_BUILD.dir
+Z:/CentralProjectStorage/windowsdependencies/crossguid-0.2.2/VSbuild/CMakeFiles/ZERO_CHECK.dir

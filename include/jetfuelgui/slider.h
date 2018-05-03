@@ -15,8 +15,8 @@
 * limitations under the License.
 */
 
-#ifndef NEONDRAW_SLIDER_H_
-#define NEONDRAW_SLIDER_H_
+#ifndef JETFUELGUI_SLIDER_H_
+#define JETFUELGUI_SLIDER_H_
 #include <jetfuelgui/iclickable.h>
 
 #include "../jetfueldraw/drawable.h"

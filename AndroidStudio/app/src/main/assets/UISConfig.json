@@ -1,0 +1,39 @@
+{
+    "keyidnumber": 6,
+    "controllerbuttonidnumber": 1,
+    "Keys": [
+        {
+            "key": "B",
+            "action": "Say_hello"
+        },
+        {
+            "key": "A",
+            "action": "Bar_Down"
+        },
+        {
+            "key": "D",
+            "action": "Bar_Up"
+        },
+        {
+            "key": "P",
+            "action": "Play_Sfx"
+        },
+        {
+            "key": "L",
+            "action": "Play_music"
+        },
+      	{
+      	    "key": "M",
+            "action": "Python_action"
+      	}
+    ],
+    "Mousemove": {
+        "action": "click"
+    },
+    "Controllerbuttons": [
+        {
+            "button": "B",
+            "action": "Say_hello"
+        }
+    ]
+}

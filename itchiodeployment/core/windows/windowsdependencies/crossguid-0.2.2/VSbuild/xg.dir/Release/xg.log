@@ -1,0 +1,5 @@
+﻿  Building Custom Rule Z:/CentralProjectStorage/windowsdependencies/crossguid-0.2.2/CMakeLists.txt
+  CMake does not need to re-run because Z:/CentralProjectStorage/windowsdependencies/crossguid-0.2.2/VSbuild/CMakeFiles/generate.stamp is up-to-date.
+cl : Command line warning D9002: ignoring unknown option '-O3'
+  Guid.cpp
+  xg.vcxproj -> Z:\CentralProjectStorage\windowsdependencies\crossguid-0.2.2\VSbuild\Release\xg.lib

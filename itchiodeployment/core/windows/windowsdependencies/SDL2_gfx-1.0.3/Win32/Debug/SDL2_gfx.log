@@ -1,0 +1,8 @@
+﻿  SDL2_imageFilter.c
+  SDL2_rotozoom.c
+  SDL2_gfxPrimitives.c
+  SDL2_framerate.c
+  Generating Code...
+SDL2_framerate.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+     Creating library Win32\Debug\SDL2_gfx.lib and object Win32\Debug\SDL2_gfx.exp
+  SDL2_gfx.vcxproj -> Z:\CentralProjectStorage\eclipseworkspace\Jetfuel Game Engine Public Git\windowsdependencies\SDL2_gfx-1.0.3\Win32\Debug\SDL2_gfx.dll

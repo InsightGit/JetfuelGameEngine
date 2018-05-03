@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Z:\CentralProjectStorage\windowsdependencies\crossguid-0.2.2\Guid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Z:\CentralProjectStorage\windowsdependencies\crossguid-0.2.2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4B0FD691-31F5-3124-8C23-A8F7E0EB1EAA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

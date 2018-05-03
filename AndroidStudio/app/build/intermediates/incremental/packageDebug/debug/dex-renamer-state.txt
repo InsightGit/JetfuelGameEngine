@@ -1,0 +1,19 @@
+#Tue Mar 13 19:52:12 MST 2018
+renamed.5=classes6.dex
+renamed.4=classes5.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.5=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/31
+base.4=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/32
+base.3=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/33
+base.2=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/34
+base.1=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/35
+base.0=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/36
+file.5=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/31/classes.dex
+file.4=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/32/classes.dex
+file.3=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/33/classes.dex
+file.2=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/34/classes.dex
+file.1=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/35/classes.dex
+file.0=/home/bobby/JetfuelGameEnginePublicGit/AndroidStudio/app/build/intermediates/transforms/dexMerger/debug/36/classes.dex

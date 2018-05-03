@@ -32,19 +32,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>Scripts</name>
-			<type>2</type>
-			<location>/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/graphicalexampleassets/Scripts</location>
-		</link>
-		<link>
 			<name>include</name>
 			<type>2</type>
-			<location>/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/include</location>
+			<locationURI>PARENT-1-WORKSPACE_LOC/include</locationURI>
 		</link>
 		<link>
 			<name>src</name>
 			<type>2</type>
-			<location>/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/src</location>
+			<locationURI>PARENT-1-WORKSPACE_LOC/src</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

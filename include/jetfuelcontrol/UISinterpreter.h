@@ -29,11 +29,11 @@ namespace jetfuel {
     namespace control {
         struct Action{
             std::string action;
-            enum Input_state{
+            enum class Input_state{
                 Up,
                 Down
             };
-            enum Input_type{
+            enum class Input_type{
                 Mouse,
                 Keyboard,
                 Joystick,

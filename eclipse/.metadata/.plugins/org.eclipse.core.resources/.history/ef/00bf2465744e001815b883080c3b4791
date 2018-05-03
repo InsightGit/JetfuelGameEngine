@@ -1,0 +1,34 @@
+/*
+ * textbox.cpp
+ *
+ *  Created on: May 2, 2018
+ *      Author: bobby
+ */
+
+#include <jetfuelgui/textbox.h>
+
+namespace jetfuel{
+	namespace gui{
+		Text_box::Text_box(int maxchars){
+			m_maxchars = maxchars;
+		}
+
+		void Text_box::Update_text(){
+			//
+		}
+
+		void Check_for_clicks(jetfuel::control::Action
+							  UISinterpreterdata){
+			if(UISinterpreterdata.inputstate ==
+			   jetfuel::control::Action::Input_state::Down &&
+			   UISinterpreterdata.inputtype ==
+			   jetfuel::control::Action::Input_type::Mouse){
+				//
+			}
+		}
+
+		void Text_box::Draw(){
+			//
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/*
+ * textbox.cpp
+ *
+ *  Created on: May 2, 2018
+ *      Author: bobby
+ */
+
+#include <jetfuelgui/textbox.h>
+
+namespace jetfuel{
+	namespace gui{
+		Text_box::Text_box(int maxchars){
+			m_maxchars = maxchars;
+		}
+
+		void Text_box::Update_size(){
+			//
+		}
+
+		void Text_box::Draw(){
+			//
+		}
+	}
+}

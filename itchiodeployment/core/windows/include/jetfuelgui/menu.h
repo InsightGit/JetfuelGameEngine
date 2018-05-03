@@ -1,0 +1,509 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2018 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#ifndef JETFUELGUI_MENU_H_
+#define JETFUELGUI_MENU_H_
+#include <jetfuelgui/button.h>
+
+namespace jetfuel {
+    namespace gui {
+        class Menu : public jetfuel::draw::Drawable,
+                     public jetfuel::draw::Rectangle_interface,
+                     public IClickable {
+        public:
+
+            struct Button_characteristics{
+                jetfuel::draw::Image image;
+
+                jetfuel::draw::Color color;
+
+                jetfuel::draw::Text::Text_characteristics buttontextchars;
+            };
+            /// \struct jetfuel::gui::Menu::Button_characteristics
+            ///
+            /// A simple struct with the characteristics of a
+            /// jetfuel::gui::Button.
+
+            /// \brief Default constructor.
+            ///
+            /// Default constructor.
+            Menu(){}
+
+            /// \brief Constructs a Menu with a max height, column gap,
+            /// and button gap numbers.
+            ///
+            /// Constructs a Menu with a max height, column gap,
+            /// and button gap numbers.
+            Menu(const unsigned int maxheight,
+                 const unsigned int columngap,
+                 const unsigned int buttongap){
+                m_maxheight = maxheight;
+                m_columngap = columngap;
+                m_buttongap = buttongap;
+            }
+
+            /// \brief Gets this Menu's max height for it's buttons.
+            ///
+            /// Gets this Menu's max height for it's buttons.
+            unsigned int Get_max_height() const{
+                return m_maxheight;
+            }
+
+            /// \brief Sets this Menu's max height for it's buttons.
+            ///
+            /// Sets this Menu's max height for it's buttons.
+            ///
+            /// \param unsigned int maxheight
+            void Set_max_height(const unsigned int maxheight){
+                m_maxheight = maxheight;
+            }
+
+            /// \brief Gets this Menu's column gap for it's buttons.
+            ///
+            /// Gets this Menu's column gap for it's buttons.
+            unsigned int Get_column_gap() const {
+                return m_columngap;
+            }
+
+            /// \brief Sets this Menu's column gap for it's buttons.
+            ///
+            /// Sets this Menu's column gap for it's buttons.
+            ///
+            /// \param unsigned int columngap
+            void Set_column_gap(const unsigned int columngap) {
+                m_columngap = columngap;
+            }
+            /// \brief Gets this Menu's button gap for it's buttons.
+            ///
+            /// Gets this Menu's button gap for it's buttons.
+            unsigned int Get_button_gap() const {
+                return m_buttongap;
+            }
+
+            /// \brief Sets this Menu's button gap for it's buttons.
+            ///
+            /// Sets this Menu's button gap for it's buttons.
+            ///
+            /// \param unsigned int buttongap
+            void Set_button_gap(const unsigned int buttongap) {
+                m_buttongap = buttongap;
+            }
+
+			/// \brief Gets the Buttons' container box image of this 
+			/// Menu (could be empty if not set).
+			///
+			/// Gets the Buttons' container box image of this Menu
+			/// (could be empty if not set).
+            jetfuel::draw::Image Get_container_box_image() const {
+                return m_containerboximage;
+            }
+
+			/// \brief Sets the Buttons' container box image of this
+			///  Menu.
+			///
+			///  Sets the Buttons' container box image of this
+			///  Menu with the border sizes of that image passed in. 
+			///  This image would contain the Buttons and be
+			///  rendered below them.
+			///
+			/// \param jetfuel::draw::Image containerboximage
+			/// \param jetfuel::draw::Vector2d_uint containerboxborder
+            void Set_container_box_image(const jetfuel::draw::Image
+                                      containerboximage,
+                                      const jetfuel::draw::Vector2d_uint
+                                      containerboxborder) {
+                m_containerboximage = containerboximage;
+                m_containerboxborder = containerboxborder;
+                m_usecontainerboxes = true;
+
+                Create_container_boxes();
+
+                m_buttons.clear();
+            }
+
+			/// \brief Gets the Buttons' contain box borders (could be 
+			/// empty if not set).
+			///
+			/// Gets the Buttons' contain box borders (could be 
+			/// empty if not set).
+            jetfuel::draw::Vector2d_uint Get_container_box_border() const{
+                return m_containerboxborder;
+            }
+
+			/// \brief Adds a button to this Menu.
+			///
+			/// Adds a button, with button characteristics, an action 
+			/// to watch for, a meessage to send upon click, a message 
+			/// bus to send that message to, and finally, optionally, 
+			/// whether to dynamically load the button image to this 
+			/// Menu.
+			///
+			/// \param jetfuel::gui::Menu::Button_characteristics 
+			///  buttonchars
+			/// \param std::string UISactiontowatchfor
+			/// \param std::string messagetosenduponclick
+			/// \param jetfuel::core::Message_bus *bus
+			/// \param bool dynamicallyloadimage
+            bool Add_button(Button_characteristics buttonchars,
+                            const std::string UISactiontowatchfor,
+                            const std::string messagetosenduponclick,
+                            jetfuel::core::Message_bus *bus,
+                            bool dynamicallyloadimage = false);
+
+			/// \brief Assigns a SDL renderer to this Menu's objects.
+			///
+			/// Assigns a SDL renderer to this Menu's objects.
+			///
+			/// \param SDL_Renderer *renderer
+            void Assign_renderer(SDL_Renderer *renderer)override{
+                for(int i = 0; Get_size_of_container_boxes_vector() > i; ++i){
+                    Get_box_in_container_boxes_vector(i)->Assign_renderer(
+                                                               renderer);
+                }
+
+                for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                    Get_button_in_buttons_vector(i)->Assign_renderer(renderer);
+                }
+
+                m_internalrenderer = renderer;
+
+                Set_assigned_renderer(true);
+            }
+
+			/// \brief Gets the SDL renderer previously assigned.
+			///
+			/// Gets the SDL renderer previously assigned.
+            SDL_Renderer *Get_renderer()override {
+                return m_internalrenderer;
+            }
+
+			/// \brief Gets this Menu's position.
+			///
+			/// Gets this Menu's position.
+            jetfuel::draw::Vector2d_int Get_position()override{
+                return m_internalposition;
+            }
+
+			/// \brief Sets this Menu's position.
+			///
+			/// Sets this Menu's position.
+			///
+			/// \param jetfuel::draw::Vector2d_int position
+            void Set_position(jetfuel::draw::Vector2d_int position)override{
+
+                const jetfuel::draw::Vector2d_int difference = Get_position()
+                                                               -position;
+
+                for(int i = 0; Get_size_of_container_boxes_vector() > i; ++i){
+                    Get_box_in_container_boxes_vector(i)->
+                               Set_position(Get_position()-difference);
+                }
+
+                for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                    Get_button_in_buttons_vector(i)->
+                    Set_position(Get_position()-difference);
+                }
+
+                m_internalposition = position;
+            }
+
+			/// \brief Gets this Menu's rect to be drawn when the
+			///  Draw function is called.
+			///
+			/// Gets this Menu's rect to be drawn when the
+			/// Draw function is called.
+            jetfuel::draw::Rect2d_int Get_rect_to_draw()override{
+                int width;
+                int height = m_maxheight;
+
+                if(Use_container_boxes()){
+                    height = m_containerboxes[0].Get_rect_to_draw().height;
+                    for(int i = 0; Get_size_of_container_boxes_vector() > i;
+                        ++i){
+                        if(i != 0){
+                            width += m_columngap;
+                        }
+                        width += m_containerboxes[i].Get_rect_to_draw().width;
+                    }
+                }else{
+                    for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                        if(i != 0){
+                            width += m_columngap;
+                        }
+                        width += m_buttons[i].Get_rect_to_draw().width;
+                    }
+                }
+                return jetfuel::draw::Rect2d_int(Get_position(),
+                                              jetfuel::draw::Vector2d_int(width,
+                                                                       height));
+            }
+
+			/// \brief Checks for clicks on this Menu's buttons.
+			///
+			/// Checks for clicks on this Menu's buttons.
+			///
+			/// \brief jetfuel::control::Action UISinterpreterdata
+            void Check_for_clicks(jetfuel::control::Action
+                                  UISinterpreterdata)override;
+
+			/// \brief Draws this Menu on the screen.
+			///
+			/// Draws this Menu on the screen.
+            bool Draw()override;
+        protected:
+			/// \brief Gets the size of private m_buttons vector.
+			///
+			/// Gets the size of private m_buttons vector.
+            unsigned int Get_size_of_buttons_vector() const{
+                return m_buttons.size();
+            }
+
+			/// \brief Gets a certain button in the private 
+			/// m_buttons vector.
+			///
+			/// Gets a certain button in the private 
+			/// m_buttons vector.
+			///
+			/// \param size_t whichbutton
+            Button *Get_button_in_buttons_vector(const
+                                                 size_t whichbutton){
+                if(whichbutton >= m_buttons.size()){
+                    throw jetfuel::core::exceptions::
+                          Out_of_vector_range_exception();
+                }else{
+                    return &m_buttons[whichbutton];
+                }
+            }
+
+			/// \brief Returns whether this Menu uses container boxes.
+			///
+			/// Returns whether this Menu uses container boxes.
+            bool Use_container_boxes() const {
+                return m_usecontainerboxes;
+            }
+
+			/// \brief Gets the size of the private m_containerboxes 
+			/// vector.
+			///
+			/// Gets the size of the private m_containerboxes 
+			/// vector.
+            size_t Get_size_of_container_boxes_vector() const{
+                return m_containerboxes.size();
+            }
+
+			/// \brief Gets a certain box in the private 
+			/// m_containerboxes vector.
+			///
+			/// Gets a certain box in the private 
+			/// m_containerboxes vector.
+			///
+			/// \param size_t which
+            jetfuel::draw::Sprite *Get_box_in_container_boxes_vector(const
+                                                                 size_t
+                                                                 whichbox){
+                if(whichbox >= m_containerboxes.size()){
+                    throw jetfuel::core::exceptions::
+                          Out_of_vector_range_exception();
+                }else{
+                    return &m_containerboxes[whichbox];
+                }
+            }
+
+			/// \brief Checks whether a container box exists 
+			/// inside the private m_containerboxes vector.
+			///
+			/// Checks whether a container box exists 
+			/// inside the private m_containerboxes vector.
+			///
+			/// \param jetfuel::draw::Vector2d_int withwhatposition
+            bool Does_container_box_exist_inside_vector(const
+                                                     jetfuel::draw::Vector2d_int
+                                                        withwhatposition){
+                for(int i = 0;Get_size_of_container_boxes_vector() > i; ++i){
+                    if(withwhatposition ==
+                       Get_box_in_container_boxes_vector(i)->Get_position()){
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+			/// \brief Gets a Button's image from the private 
+			/// m_buttonimages vector.
+			///
+			/// Gets a Button's image from the private 
+			/// m_buttonimages vector.
+			///
+			/// \param size_t whichimage
+            jetfuel::draw::Image Get_button_image_in_vector(const size_t 
+															whichimage) const{
+                if(whichimage >= m_buttonimages.size()){
+                    throw jetfuel::core::exceptions::
+                          Out_of_vector_range_exception();
+                }else{
+                    return m_buttonimages[whichimage];
+                }
+            }
+
+			/// \brief Pushes back an image into the private m_buttonimages 
+			/// vector.
+			///
+			/// Pushes back an image into the private m_buttonimages 
+			/// vector.
+			///
+			/// \param jetfuel::draw::Image image
+            void Push_back_into_button_image_vector(jetfuel::draw::Image image){
+                m_buttonimages.push_back(image);
+            }
+
+			/// \brief Pushes back a container box Sprite into the private
+			/// m_containerboxes vector.
+			///
+			/// Pushes back a container box Sprite into the private
+			/// m_containerboxes vector.
+			///
+			/// \param jetfuel::draw::Sprite box
+            void Push_back_container_box(jetfuel::draw::Sprite box){
+                m_containerboxes.push_back(box);
+            }
+
+			/// \brief Creates a container box with a position.
+			///
+			/// Creates a container box with a position. This uses the
+			/// previously specified container box image to create it.
+			///
+			/// \param jetfuel::draw::Vector2d_int position
+            void Create_container_box(jetfuel::draw::Vector2d_int position);
+
+			/// \brief Determines where a button should go based upon
+			/// it's button number.
+			///
+			/// Determines where a button should go based upon
+			/// it's button number.
+			///
+			/// \param unsigned int whichbutton
+            jetfuel::draw::Vector2d_int Determine_button_position(unsigned int
+                                                               whichbutton);
+        private:
+            unsigned int m_maxheight = 500; ///< The max height of 
+											///< this Menu's buttons.
+            unsigned int m_columngap = 100; ///< The column gap between
+										    ///< this Menu's buttons.
+            unsigned int m_buttongap = 0; ///< The button gap between
+										  ///< this Menu's buttons.
+
+            SDL_Renderer *m_internalrenderer; ///< The assigned 
+											  ///< renderer
+
+            jetfuel::draw::Vector2d_uint m_containerboxborder =
+            jetfuel::draw::Vector2d_uint(100,100); ///< The container 
+												   ///< box's border.
+            jetfuel::draw::Vector2d_int m_internalposition; ///< This
+															///< Menu's
+															///< position.
+            bool m_usecontainerboxes = false; ///< Whether to use 
+											  ///< container boxes 
+											  ///< or not.
+
+            jetfuel::draw::Image m_containerboximage; ///< The 
+													  ///< container boxes' 
+													  ///< image.
+
+            std::vector<jetfuel::draw::Sprite> m_containerboxes; ///< The 
+																 ///< container 
+																 ///< box 
+																 ///< sprite 
+																 ///< vector.
+            std::vector<Button> m_buttons; ///< The menu buttons vector
+            std::vector<jetfuel::draw::Image> m_buttonimages; ///< The 
+															  ///< button 
+															  ///< image
+															  ///< vector.
+
+			/// \brief Generates container boxes.
+			///
+			/// Generates container boxes.
+            void Create_container_boxes(); 
+        };
+		/// \class jetfuel::gui::Menu
+		///
+		/// A simple collection of Buttons, with an option to have a 
+		/// container box image around it.
+		///
+		/// Code Example:
+		/// 	\code
+		/// 	jetfuel::draw::Scene_manager scenemanager;
+		///     jetfuel::draw::Scene scene1(1);
+		///     jetfuel::core::Message_bus messagebus;
+		///     jetfuel::gui::Menu menu;
+		///		jetfuel::draw::Image buttonimage;
+		///     jetfuel::draw::Image menuboximage("menubasebox.png",
+		///                                      		  &scenemanager);
+		///     jetfuel::control::UIS_manager UISmanager(&messagebus,
+		///                                       scenemanager.Get_window_id());
+		///     jetfuel::control::UIS_interpreter UISinterpreter(&messagebus);
+		///     jetfuel::draw::Text::Text_characteristics textchars;
+		///     jetfuel::gui::Menu::Button_characteristics buttonchars;
+		///     jetfuel::draw::Font font("default.ttf");
+		///
+		///     if(!scenemanager.Create_window("Hello Menus!",
+		///                                    jetfuel::draw::Vector2d_int(0,0),
+		///                               jetfuel::draw::Vector2d_int(640,480))){
+		///         std::cout << "[!]ERROR with creating sdl window! Error is:"
+		///         << SDL_GetError() << "\n";
+		///     }
+		///
+		///     if(!scenemanager.Create_renderer()){
+		///         std::cout << "[!]ERROR with creating sdl renderer! Error is:"
+		///         << SDL_GetError() << "\n";
+		///     }
+		///     scenemanager.Switch_current_scene(&scene1);
+		///     scene1.Attach_drawable(&menu,1);
+		///
+		///     if(!menu.Load_base_box_image(menuboximage,
+		///									 jetfuel::draw::Color::White,
+		///									 jetfuel::draw::Vector2d_uint(
+		///															45,20))){
+		///         std::cerr << "[!]ERROR with loading from image! Error is:" <<
+		///         IMG_GetError() << "\n";
+		///     }
+		///
+		///     menu.Set_position(jetfuel::draw::Vector2d_int(0,0));
+		///
+		///     textchars.textstring = "resume";
+		///     textchars.font = font;
+		///
+		///     resumechars.buttontextchars = textchars;
+		///
+		///		textchars.textstring = "quit";
+		///
+		///     quitchars.buttontextchars = textchars;
+		///
+		///     buttonimage.Set_image("button.png",&scenemanager);
+		///     resumechars.image = buttonimage;
+		///     quitchars.image = buttonimage;
+		///
+		///     resumebutton.color = jetfuel::draw::Color(0, 255, 0, 100);
+		///		quitbutton.color = jetfuel::draw::Color(255, 0, 0, 100);
+		///
+		///     scenemanager.Draw_current_scene();
+		/// 	\endcode
+
+    } /* namespace gui */
+} /* namespace jetfuel */
+
+#endif /* JETFUELGUI_MENU_H_ */

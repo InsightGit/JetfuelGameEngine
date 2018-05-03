@@ -69,6 +69,12 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__ATOMIC_HLE_ACQUIRE" value="4932">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__ATOMIC_HLE_ACQUIRE" value="65536">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -141,12 +147,6 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__DBL_DIG__" value="15">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
                     <entry kind="macro" name="__DBL_EPSILON__" value="((double)2.22044604925031308084726333618164062e-16L)">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -165,7 +165,7 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__DBL_HAS_QUIET_NAN__" value="1">
+                    <entry kind="macro" name="__DBL_HAS_QUIET_NAN__" value="97">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -333,6 +333,12 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__DEC64_SUBNORMAL_MIN__" value="1.08420217248550443400745280086994171e-19L">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__DEC64_SUBNORMAL_MIN__" value="0.000000000000001E-383DD">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -423,12 +429,6 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__FLT128_MAX_10_EXP__" value="4932">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
                     <entry kind="macro" name="__FLT128_MAX_EXP__" value="16384">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -460,6 +460,12 @@
                     </entry>
                     					
                     <entry kind="macro" name="__FLT32X_DECIMAL_DIG__" value="17">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
+                    <entry kind="macro" name="__FLT32X_DENORM_MIN__" value="1.17549435082228750796873653722224568e-38F">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -525,12 +531,6 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__FLT32X_MIN_10_EXP__" value="(-307)">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
                     <entry kind="macro" name="__FLT32X_MIN_EXP__" value="(-1021)">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -543,7 +543,7 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__FLT32_DECIMAL_DIG__" value="9">
+                    <entry kind="macro" name="__FLT32_DECIMAL_DIG__" value="0xff">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -681,6 +681,12 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__FLT64X_MAX_EXP__" value="15">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__FLT64X_MAX_EXP__" value="16384">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -748,6 +754,12 @@
                     </entry>
                     					
                     <entry kind="macro" name="__FLT64_HAS_QUIET_NAN__" value="1">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
+                    <entry kind="macro" name="__FLT64_MANT_DIG__" value="0xffffffffffffffffUL">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -849,6 +861,12 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__FLT_MANT_DIG__" value="0xffffffffU">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__FLT_MANT_DIG__" value="24">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -880,12 +898,6 @@
                     </entry>
                     					
                     <entry kind="macro" name="__FLT_MIN_EXP__" value="(-125)">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__FLT_MIN__" value="1.17549435082228750796873653722224568e-38F">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -1017,7 +1029,7 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__GNUC_MINOR__" value="2">
+                    <entry kind="macro" name="__GNUC_MINOR__" value="3">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -1143,6 +1155,12 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__INTPTR_MAX__" value="long unsigned int">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__INTPTR_MAX__" value="0x7fffffffffffffffL">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -1257,12 +1275,6 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__INT_LEAST32_TYPE__" value="int">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
                     <entry kind="macro" name="__INT_LEAST32_WIDTH__" value="32">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -1276,6 +1288,12 @@
                     </entry>
                     					
                     <entry kind="macro" name="__INT_LEAST64_TYPE__" value="long int">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
+                    <entry kind="macro" name="__INT_LEAST64_WIDTH__" value="int">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -1330,12 +1348,6 @@
                     </entry>
                     					
                     <entry kind="macro" name="__LDBL_DIG__" value="18">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__LDBL_EPSILON__" value="1.08420217248550443400745280086994171e-19L">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -1485,12 +1497,6 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__PTRDIFF_TYPE__" value="long int">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
                     <entry kind="macro" name="__PTRDIFF_WIDTH__" value="64">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -1539,7 +1545,19 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__SIG_ATOMIC_MAX__" value="8">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__SIG_ATOMIC_MAX__" value="0x7fffffff">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
+                    <entry kind="macro" name="__SIG_ATOMIC_MIN__" value="long unsigned int">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -1552,6 +1570,12 @@
                     </entry>
                     					
                     <entry kind="macro" name="__SIG_ATOMIC_TYPE__" value="int">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
+                    <entry kind="macro" name="__SIG_ATOMIC_WIDTH__" value="long int">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -1611,18 +1635,6 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__SIZEOF_LONG__" value="8">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__SIZEOF_POINTER__" value="8">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
                     <entry kind="macro" name="__SIZEOF_PTRDIFF_T__" value="8">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -1653,13 +1665,13 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__SIZE_MAX__" value="0xffffffffffffffffUL">
+                    <entry kind="macro" name="__SIZE_MAX__" value="8">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__SIZE_TYPE__" value="long unsigned int">
+                    <entry kind="macro" name="__SIZE_MAX__" value="0xffffffffffffffffUL">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -1851,18 +1863,6 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__UINTPTR_TYPE__" value="long unsigned int">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__UINT_FAST16_MAX__" value="0xffffffffffffffffUL">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
                     <entry kind="macro" name="__UINT_FAST16_TYPE__" value="long unsigned int">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -1893,12 +1893,6 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__UINT_FAST8_MAX__" value="0xff">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
                     <entry kind="macro" name="__UINT_FAST8_TYPE__" value="unsigned char">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -1917,25 +1911,25 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__UINT_LEAST32_MAX__" value="unsigned int">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__UINT_LEAST32_MAX__" value="0xffffffffU">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__UINT_LEAST32_TYPE__" value="unsigned int">
+                    <entry kind="macro" name="__UINT_LEAST64_MAX__" value="long unsigned int">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
                     </entry>
                     					
                     <entry kind="macro" name="__UINT_LEAST64_MAX__" value="0xffffffffffffffffUL">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__UINT_LEAST64_TYPE__" value="long unsigned int">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -1959,7 +1953,7 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__VERSION__" value="&quot;7.2.0&quot;">
+                    <entry kind="macro" name="__VERSION__" value="&quot;7.3.0&quot;">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -1984,12 +1978,6 @@
                     </entry>
                     					
                     <entry kind="macro" name="__WCHAR_WIDTH__" value="32">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__WINT_MAX__" value="0xffffffffU">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -2080,6 +2068,12 @@
                     </entry>
                     					
                     <entry kind="macro" name="__pie__" value="2">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
+                    <entry kind="macro" name="__unix" value="(-307)">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -2186,12 +2180,6 @@
                     </entry>
                     					
                     <entry kind="macro" name="_STDC_PREDEF_H" value="1">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__ATOMIC_ACQUIRE" value="2">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -2360,6 +2348,12 @@
                     </entry>
                     					
                     <entry kind="macro" name="__DEC128_MANT_DIG__" value="34">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
+                    <entry kind="macro" name="__DEC128_MAX_EXP__" value="long int">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -2623,6 +2617,12 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__FLT32X_DIG__" value="2">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__FLT32X_DIG__" value="15">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -3109,6 +3109,12 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__GCC_ATOMIC_SHORT_LOCK_FREE" value="200704">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__GCC_ATOMIC_SHORT_LOCK_FREE" value="2">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -3151,6 +3157,12 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_8" value="201603">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_8" value="1">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -3169,7 +3181,7 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__GNUC_MINOR__" value="2">
+                    <entry kind="macro" name="__GNUC_MINOR__" value="3">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -3224,12 +3236,6 @@
                     </entry>
                     					
                     <entry kind="macro" name="__INT16_C(c)" value="c">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__INT16_MAX__" value="0x7fff">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -3338,12 +3344,6 @@
                     </entry>
                     					
                     <entry kind="macro" name="__INT_FAST16_MAX__" value="0x7fffffffffffffffL">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__INT_FAST16_TYPE__" value="long int">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -3883,6 +3883,12 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__STDC_IEC_559_COMPLEX__" value="0xffffffffU">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__STDC_IEC_559_COMPLEX__" value="1">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -4093,12 +4099,6 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__UINT_LEAST32_MAX__" value="0xffffffffU">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
                     <entry kind="macro" name="__UINT_LEAST32_TYPE__" value="unsigned int">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -4135,7 +4135,7 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__VERSION__" value="&quot;7.2.0&quot;">
+                    <entry kind="macro" name="__VERSION__" value="&quot;7.3.0&quot;">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -4201,6 +4201,12 @@
                         					
                     </entry>
                     					
+                    <entry kind="macro" name="__code_model_small__" value="0x7fff">
+                        						
+                        <flag value="BUILTIN|READONLY"/>
+                        					
+                    </entry>
+                    					
                     <entry kind="macro" name="__code_model_small__" value="1">
                         						
                         <flag value="BUILTIN|READONLY"/>
@@ -4250,12 +4256,6 @@
                     </entry>
                     					
                     <entry kind="macro" name="__cpp_exceptions" value="199711">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__cpp_hex_float" value="201603">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -4352,12 +4352,6 @@
                     </entry>
                     					
                     <entry kind="macro" name="__cpp_user_defined_literals" value="200809">
-                        						
-                        <flag value="BUILTIN|READONLY"/>
-                        					
-                    </entry>
-                    					
-                    <entry kind="macro" name="__cpp_variadic_templates" value="200704">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -5465,7 +5459,7 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__GNUC_MINOR__" value="2">
+                    <entry kind="macro" name="__GNUC_MINOR__" value="3">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -6407,7 +6401,7 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__VERSION__" value="&quot;7.2.0&quot;">
+                    <entry kind="macro" name="__VERSION__" value="&quot;7.3.0&quot;">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -7617,7 +7611,7 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__GNUC_MINOR__" value="2">
+                    <entry kind="macro" name="__GNUC_MINOR__" value="3">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					
@@ -8583,7 +8577,7 @@
                         					
                     </entry>
                     					
-                    <entry kind="macro" name="__VERSION__" value="&quot;7.2.0&quot;">
+                    <entry kind="macro" name="__VERSION__" value="&quot;7.3.0&quot;">
                         						
                         <flag value="BUILTIN|READONLY"/>
                         					

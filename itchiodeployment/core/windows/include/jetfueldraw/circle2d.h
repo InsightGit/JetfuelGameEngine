@@ -1,0 +1,306 @@
+/*
+* Jetfuel Game Engine- A SDL-based 2D game-engine
+* Copyright (C) 2018 InfernoStudios
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+#ifndef JETFUELDRAW_CIRCLE2D_H_
+#define JETFUELDRAW_CIRCLE2D_H_
+#include <jetfueldraw/rect2d.h>
+
+namespace jetfuel {
+    namespace draw {
+        template <class T>
+        class Circle2d {
+        public:
+
+            /// \brief Default constructor
+            ///
+            /// Constructs a Circle2d with all values set to zero.
+            Circle2d() : Circle2d(0,0,0) {}
+
+            /// \brief Constructs a Circle2d with a position and a
+            /// radius.
+            ///
+            /// Constructs a Circle2d with a position and a
+            /// radius.
+            ///
+            /// \param T X
+            /// \param T Y
+            /// \param T Radius
+            Circle2d(const T X, const T Y, const T Radius);
+
+            /// \brief Constructs a Circle2d with a position vector
+            /// and a radius.
+            ///
+            /// Constructs a Circle2d with a position vector
+            /// and a radius.
+            ///
+            /// \param Vector2d<T> position
+            /// \param T Radius
+            Circle2d(const Vector2d<T> position, const T Radius);
+
+            /// \brief Gets this Circle2d's position.
+            ///
+            /// Gets this Circle2d's position.
+            Vector2d<T> Get_position(){
+                return Vector2d<T>(x,y);
+            }
+
+            /// \brief Checks whether this Circle2d collided with
+            /// another Circle2d.
+            ///
+            /// Checks whether this Circle2d collided with
+            /// another Circle2d. If it has, then it will
+            /// return a boolean of true. Otherwise, it will return a
+            /// boolean of false.
+            ///
+            /// \param Circle2d<T> circle
+            bool Has_collided_with_circle(Circle2d<T> circle){
+                int totalradiussquared = (radius + circle.radius)*
+                                         (radius + circle.radius);
+                Vector2d<T> distancesquared(circle.x - x, circle.y - y);
+                distancesquared *= distancesquared;
+
+                if(distancesquared.x + distancesquared.y < totalradiussquared){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+            /// \brief Checks whether this Circle2d has collided with
+            /// a Rect2d.
+            ///
+            /// Checks whether this Circle2d has collided with
+            /// a Rect2d. If it has, then this function will return a
+            /// boolean of true. Otherwise, it will return a boolean
+            /// of false.
+            ///
+            /// \param Rect2d<T> rect
+            bool Has_collided_with_rect(Rect2d<T> rect){
+                jetfuel::draw::Vector2d<T> closestrectpoint;
+
+                if(x < rect.x){
+                    closestrectpoint.x = rect.x;
+                }else if(x > rect.x + rect.width){
+                    closestrectpoint.x = rect.x+rect.width;
+                }else{
+                    closestrectpoint.x = x;
+                }
+
+                if(y < rect.y){
+                    closestrectpoint.y = rect.y;
+                }else if(y > rect.x + rect.height){
+                    closestrectpoint.y = rect.y+rect.height;
+                }else{
+                    closestrectpoint.y = y;
+                }
+
+                Vector2d<T> distancesquared(closestrectpoint.x - x,
+                                            closestrectpoint.y - y);
+
+                distancesquared.x = distancesquared.x*distancesquared.x;
+                distancesquared.y = distancesquared.y*distancesquared.y;
+
+                if(distancesquared.x+distancesquared.y < radius*radius){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+            /// \brief Checks whether this Circle2d has collided with
+            /// the mouse.
+            ///
+            /// Checks whether this Circle2d has collided with
+            /// the mouse. If it has, then this function will return a
+            /// boolean of true. Otherwise, it will return a boolean
+            /// of false.
+            bool Has_collided_with_mouse(){
+                // TODO(Bobby): Make this work without
+                // -fpermissive on g++
+                int mousex, mousey;
+                SDL_GetMouseState(&mousex,&mousey);
+
+                return Has_collided_with_rect(jetfuel::draw::Rect2d<T>(
+                                             static_cast<T>(mousex),
+                                              static_cast<T>(mousey),
+                                              static_cast<T>(1),
+                                              static_cast<T>(1)));
+            }
+
+
+            ///////////////////
+            /// member data ///
+            ///////////////////
+
+            T x; ///< x position coordinate
+            T y; ///< y position coordinate
+            T radius; ///< circle radius
+        };
+
+        ///////////////////////////////////
+        /// Common assignment operators ///
+        ///////////////////////////////////
+
+        template <typename T>
+        Circle2d<T> operator +(const Circle2d<T> left,const Circle2d<T> right){
+            return Circle2d<T>(left.Get_position() + right.Get_position(),
+                               left.radius + right.radius);
+        }
+
+        template <typename T>
+        Circle2d<T> operator +=(Circle2d<T> &left,const Circle2d<T> right){
+            left.x += right.x;
+            left.y += right.y;
+            left.radius += right.radius;
+
+            return left;
+        }
+
+        template <typename T>
+        Circle2d<T> operator -(const Circle2d<T> left,const Circle2d<T> right){
+            return Circle2d<T>(left.Get_position() + right.Get_position(),
+                               left.radius + right.radius);
+        }
+
+        template <typename T>
+        Circle2d<T> operator -=(Circle2d<T> &left,const Circle2d<T> right){
+            left.Get_position() -= right.Get_position();
+            left.radius -= right.radius;
+
+            return left;
+        }
+
+        template <typename T>
+        Circle2d<T> operator *(const Circle2d<T> left, T right){
+            return Circle2d<T>(left.x * right, left.y * right,
+                               left.radius * right);
+        }
+
+        template <typename T>
+        Circle2d<T> operator *=(Circle2d<T> &left, const T right){
+            left.x * right;
+            left.y * right;
+            left.radius * right;
+
+            return left;
+        }
+
+        template <typename T>
+        Circle2d<T> operator /(const Circle2d<T> left, const T right){
+            return Circle2d<T>(left.x/right, left.y/right, left.radius/right);
+        }
+
+        template <typename T>
+        Circle2d<T> operator /=(Circle2d<T> &left, const T right){
+            left.x /= right;
+            left.y /= right;
+            left.radius /= right;
+
+            return left;
+        }
+
+        template <typename T>
+        Circle2d<T> operator +(const Circle2d<T> left, const T right){
+            return Circle2d<T>(left.x + right, left.y + right,
+                               left.radius + right);
+        }
+
+        template <typename T>
+        Circle2d<T> operator +=(Circle2d<T> &left, const T right){
+            left.x += right;
+            left.y += right;
+            left.radius += right;
+
+            return left;
+        }
+
+        template <typename T>
+        Circle2d<T> operator -(const Circle2d<T> left,const T right){
+            return Circle2d<T>(left.x - right, left.y - right,
+                               left.radius - right);
+        }
+
+
+
+        template <typename T>
+        Vector2d<T> operator -=(Circle2d<T> &left,const T right){
+            left.x -= right;
+            left.y -= right;
+            left.radius -= right;
+
+            return left;
+        }
+
+        template <typename T>
+        bool operator ==(const Circle2d<T> left, const Circle2d<T> right){
+            return (left.x == right.x) && (left.y == right.y) &&
+                   (left.radius == right.radius);
+        }
+
+        template <typename T>
+        bool operator !=(const Circle2d<T> left, const Circle2d<T> right){
+            return (left.x != right.x) && (left.y != right.y) &&
+                   (left.radius != right.radius);
+        }
+
+        ////////////////////////////////
+        /// Common Circle2d typedefs ///
+        ////////////////////////////////
+
+        typedef Circle2d<unsigned int> Circle2d_uint;
+        typedef Circle2d<int> Circle2d_int;
+        typedef Circle2d<float> Circle2d_float;
+
+        /// \class jetfuel::draw::Circle2d
+        ///
+        /// A simple 2d circle manipulation class.
+        ///
+        /// Code Example:
+        ///   \code
+        ///   jetfuel::draw::Circle2d_int mycircle(0,0,50);
+        ///   jetfuel::draw::Circle_2d_shape mydrawablecircle(mycircle);
+        ///   jetfuel::draw::Scene_manager scenemanager;
+        ///   jetfuel::draw::Scene scene1(1);
+        ///
+        ///   if(!scenemanager.Create_window("example",
+        ///                            jetfuel::draw::Vector2d_int(0,0),
+        ///                            jetfuel::draw::Vector2d_int(500,500))){
+        ///      std::cerr << "[!]ERROR with creating sdl renderer!" <<
+        ///      "Error is:" << SDL_GetError() << "\n";
+        ///   }
+        ///
+        ///     if(!scenemanager.Create_renderer()){
+        ///          std::cerr << "[!]ERROR with creating sdl renderer!" <<
+        ///         "Error is:" << SDL_GetError() << "\n";
+        ///     }
+        ///
+        ///   scenemanager.Switch_current_scene(&scene1);
+        ///
+        ///   mydrawablecircle.Set_color(jetfuel::draw::Color::Cyan);
+        ///   scene1.Attach_drawable(&mydrawablecircle,1S);
+        ///
+        ///   scenemanager.Draw_current_scene();
+        ///   \endcode
+
+    } /* namespace draw */
+
+} /* namespace jetfuel */
+
+#include <jetfueldraw/circle2d.tpp>
+
+
+#endif /* JETFUELDRAW_CIRCLE2D_H_ */
