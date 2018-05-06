@@ -557,4 +557,82 @@ extern "C" {
 	EXPORT int Slider_get_rect_to_draw_height(jetfuel::gui::Slider *slider){
         return slider->Get_rect_to_draw().height;
     }
+
+	EXPORT jetfuel::gui::Text_box *Text_box_new(){
+		return new jetfuel::gui::Text_box();
+	}
+
+	EXPORT bool Text_box_is_focused_on(jetfuel::gui::Text_box *textbox){
+		return textbox->Is_focused_on();
+	}
+
+	EXPORT jetfuel::draw::Text::Text_characteristics
+			*Text_box_get_text_box_text_characteristics(jetfuel::gui::Text_box
+														*textbox){
+		jetfuel::draw::Text::Text_characteristics *returnvalue = new jetfuel::
+											draw::Text::Text_characteristics();
+		jetfuel::draw::Text::Text_characteristics textcharstocopy = textbox->
+											Get_text_box_text_characteristics();
+		returnvalue->backgroundcolor = textcharstocopy.backgroundcolor;
+		returnvalue->font = textcharstocopy.font;
+		returnvalue->fonthinting = textcharstocopy.fonthinting;
+		returnvalue->fontoutlinewidth = textcharstocopy.fontoutlinewidth;
+		returnvalue->fontsize = textcharstocopy.fontsize;
+		returnvalue->fontstyle = textcharstocopy.fontstyle;
+		returnvalue->kerningstatus = textcharstocopy.kerningstatus;
+		returnvalue->rendermode = textcharstocopy.rendermode;
+		returnvalue->textcolor = textcharstocopy.textcolor;
+		returnvalue->textstring = textcharstocopy.textstring;
+
+		return returnvalue;
+	}
+
+	EXPORT void Text_box_set_text_box_text_characteristics(jetfuel::gui::
+														Text_box *textbox,
+						jetfuel::draw::Text::Text_characteristics *textchars){
+		textbox->Set_text_box_text_characteristics(*textchars);
+	}
+
+	EXPORT void Text_box_set_text_box_box_fill_color(jetfuel::gui::Text_box
+			*textbox,jetfuel::draw::Color fillcolor){
+		textbox->Set_text_box_box_fill_color(fillcolor);
+	}
+
+	EXPORT int Text_box_get_position_x(jetfuel::gui::Text_box *textbox){
+		return textbox->Get_position().x;
+	}
+
+	EXPORT int Text_box_get_position_y(jetfuel::gui::Text_box *textbox){
+		return textbox->Get_position().y;
+	}
+
+	EXPORT void Text_box_set_position(jetfuel::gui::Text_box *textbox, int x,
+										int y){
+		textbox->Set_position(jetfuel::draw::Vector2d_int(x,y));
+	}
+
+	EXPORT int Text_box_get_rect_to_draw_x(jetfuel::gui::Text_box *textbox){
+		return textbox->Get_rect_to_draw().x;
+	}
+
+	EXPORT int Text_box_get_rect_to_draw_y(jetfuel::gui::Text_box *textbox){
+		return textbox->Get_rect_to_draw().y;
+	}
+
+	EXPORT int Text_box_get_rect_to_draw_width(jetfuel::gui::Text_box *textbox){
+		return textbox->Get_rect_to_draw().width;
+	}
+
+	EXPORT int Text_box_get_rect_to_draw_height(jetfuel::gui::Text_box *textbox){
+		return textbox->Get_rect_to_draw().height;
+	}
+
+	EXPORT int Text_box_get_max_char_limit(jetfuel::gui::Text_box *textbox){
+		return textbox->Get_max_char_limit();
+	}
+
+	EXPORT void Text_box_set_max_char_limit(jetfuel::gui::Text_box *textbox,
+											int maxcharlimit){
+		textbox->Set_max_char_limit(maxcharlimit);
+	}
 }

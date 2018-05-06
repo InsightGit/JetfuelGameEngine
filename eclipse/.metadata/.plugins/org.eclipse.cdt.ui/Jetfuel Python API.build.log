@@ -1,10 +1,281 @@
-18:49:40 **** Incremental Build of configuration Debug for project Jetfuel Python API ****
+18:51:21 **** Incremental Build of configuration Debug for project Jetfuel Python API ****
 make all 
+Building file: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/ctypeswrappers/jetfuelcontrolctypes.d" -MT"src/ctypeswrappers/jetfuelcontrolctypes.o" -o "src/ctypeswrappers/jetfuelcontrolctypes.o" "/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp"
+In file included from ../../../include/jetfuelcore.h:24:0,
+                 from ../../../include/jetfuelcontrol.h:22,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h:25,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp:18:
+../../../include/jetfuelcore/messagebus.h: In member function ‘SDL_Event jetfuel::core::Message_bus::Get_SDL_event(int)’:
+../../../include/jetfuelcore/messagebus.h:142:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_SDL_events_size()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcore/messagebus.h: In member function ‘std::__cxx11::string jetfuel::core::Message_bus::Get_message(int) const’:
+../../../include/jetfuelcore/messagebus.h:188:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(m_messages.size() <= whichqueuedmessage){
+                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/jetfuelcore.h:25:0,
+                 from ../../../include/jetfuelcontrol.h:22,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h:25,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp:18:
+../../../include/jetfuelcore/timer.h: In member function ‘bool jetfuel::core::Timer::Start()’:
+../../../include/jetfuelcore/timer.h:80:32: warning: NULL used in arithmetic [-Wpointer-arith]
+                 if(m_duration==NULL || m_inuse){
+                                ^~~~
+In file included from ../../../include/jetfuelcontrol.h:25:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h:25,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp:18:
+../../../include/jetfuelcontrol/UISmanager.h: In member function ‘jetfuel::control::UIS_previous_key jetfuel::control::UIS_manager::Get_past_key_in_vector(int)’:
+../../../include/jetfuelcontrol/UISmanager.h:223:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_size_of_past_keys_entered_vector()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcontrol/UISmanager.h: In member function ‘void jetfuel::control::UIS_manager::Erase_place_in_past_keys_vector(int)’:
+../../../include/jetfuelcontrol/UISmanager.h:262:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place >= m_pastkeysentered.size()){
+                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp
+ 
+Building file: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcorectypes.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/ctypeswrappers/jetfuelcorectypes.d" -MT"src/ctypeswrappers/jetfuelcorectypes.o" -o "src/ctypeswrappers/jetfuelcorectypes.o" "/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcorectypes.cpp"
+In file included from ../../../include/jetfuelcore.h:24:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcorectypes.cpp:18:
+../../../include/jetfuelcore/messagebus.h: In member function ‘SDL_Event jetfuel::core::Message_bus::Get_SDL_event(int)’:
+../../../include/jetfuelcore/messagebus.h:142:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_SDL_events_size()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcore/messagebus.h: In member function ‘std::__cxx11::string jetfuel::core::Message_bus::Get_message(int) const’:
+../../../include/jetfuelcore/messagebus.h:188:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(m_messages.size() <= whichqueuedmessage){
+                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/jetfuelcore.h:25:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcorectypes.cpp:18:
+../../../include/jetfuelcore/timer.h: In member function ‘bool jetfuel::core::Timer::Start()’:
+../../../include/jetfuelcore/timer.h:80:32: warning: NULL used in arithmetic [-Wpointer-arith]
+                 if(m_duration==NULL || m_inuse){
+                                ^~~~
+Finished building: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcorectypes.cpp
+ 
+Building file: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/ctypeswrappers/jetfueldrawctypes.d" -MT"src/ctypeswrappers/jetfueldrawctypes.o" -o "src/ctypeswrappers/jetfueldrawctypes.o" "/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp"
+In file included from ../../../include/jetfuelcore.h:24:0,
+                 from ../../../include/jetfueldraw.h:22,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp:22:
+../../../include/jetfuelcore/messagebus.h: In member function ‘SDL_Event jetfuel::core::Message_bus::Get_SDL_event(int)’:
+../../../include/jetfuelcore/messagebus.h:142:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_SDL_events_size()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcore/messagebus.h: In member function ‘std::__cxx11::string jetfuel::core::Message_bus::Get_message(int) const’:
+../../../include/jetfuelcore/messagebus.h:188:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(m_messages.size() <= whichqueuedmessage){
+                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/jetfuelcore.h:25:0,
+                 from ../../../include/jetfueldraw.h:22,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp:22:
+../../../include/jetfuelcore/timer.h: In member function ‘bool jetfuel::core::Timer::Start()’:
+../../../include/jetfuelcore/timer.h:80:32: warning: NULL used in arithmetic [-Wpointer-arith]
+                 if(m_duration==NULL || m_inuse){
+                                ^~~~
+In file included from ../../../include/jetfueldraw.h:26:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp:22:
+../../../include/jetfueldraw/sprite.h: In member function ‘void jetfuel::draw::Sprite::Force_load_dynamic_image()’:
+../../../include/jetfueldraw/sprite.h:108:41: warning: taking address of temporary [-fpermissive]
+      &m_dynamicimage.Get_image_location() != nullptr){
+                                         ^
+Finished building: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp
+ 
+Building file: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/ctypeswrappers/jetfuelguictypes.d" -MT"src/ctypeswrappers/jetfuelguictypes.o" -o "src/ctypeswrappers/jetfuelguictypes.o" "/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp"
+In file included from ../../../include/jetfuelgui.h:29:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp:18:
+../../../include/jetfuelgui/textbox.h:106:6: warning: multi-line comment [-Wcomment]
+      // TODO(Bobby): Support scrolling for no max char \
+      ^
+In file included from ../../../include/jetfuelcore.h:24:0,
+                 from ../../../include/jetfuelgui.h:22,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp:18:
+../../../include/jetfuelcore/messagebus.h: In member function ‘SDL_Event jetfuel::core::Message_bus::Get_SDL_event(int)’:
+../../../include/jetfuelcore/messagebus.h:142:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_SDL_events_size()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcore/messagebus.h: In member function ‘std::__cxx11::string jetfuel::core::Message_bus::Get_message(int) const’:
+../../../include/jetfuelcore/messagebus.h:188:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(m_messages.size() <= whichqueuedmessage){
+                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/jetfuelcore.h:25:0,
+                 from ../../../include/jetfuelgui.h:22,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp:18:
+../../../include/jetfuelcore/timer.h: In member function ‘bool jetfuel::core::Timer::Start()’:
+../../../include/jetfuelcore/timer.h:80:32: warning: NULL used in arithmetic [-Wpointer-arith]
+                 if(m_duration==NULL || m_inuse){
+                                ^~~~
+In file included from ../../../include/jetfueldraw.h:26:0,
+                 from ../../../include/jetfuelgui/button.h:23,
+                 from ../../../include/jetfuelgui/menu.h:20,
+                 from ../../../include/jetfuelgui.h:24,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp:18:
+../../../include/jetfueldraw/sprite.h: In member function ‘void jetfuel::draw::Sprite::Force_load_dynamic_image()’:
+../../../include/jetfueldraw/sprite.h:108:41: warning: taking address of temporary [-fpermissive]
+      &m_dynamicimage.Get_image_location() != nullptr){
+                                         ^
+In file included from ../../../include/jetfuelinspire.h:26:0,
+                 from ../../../include/jetfuelgui/button.h:25,
+                 from ../../../include/jetfuelgui/menu.h:20,
+                 from ../../../include/jetfuelgui.h:24,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp:18:
+../../../include/jetfuelinspire/pointerbridge.h: In member function ‘void* jetfuel::inspire::Pointer_bridge::Recieve_pointer(std::__cxx11::string, bool*)’:
+../../../include/jetfuelinspire/pointerbridge.h:50:52: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_pointerids.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../../include/jetfuelgui.h:24:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp:18:
+../../../include/jetfuelgui/menu.h: In member function ‘virtual void jetfuel::gui::Menu::Assign_renderer(SDL_Renderer*)’:
+../../../include/jetfuelgui/menu.h:173:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; Get_size_of_container_boxes_vector() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h:178:61: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h: In member function ‘virtual void jetfuel::gui::Menu::Set_position(jetfuel::draw::Vector2d_int)’:
+../../../include/jetfuelgui/menu.h:211:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; Get_size_of_container_boxes_vector() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h:216:61: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h: In member function ‘virtual jetfuel::draw::Rect2d_int jetfuel::gui::Menu::Get_rect_to_draw()’:
+../../../include/jetfuelgui/menu.h:235:73: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                     for(int i = 0; Get_size_of_container_boxes_vector() > i;
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h:243:65: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                     for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h: In member function ‘bool jetfuel::gui::Menu::Does_container_box_exist_inside_vector(jetfuel::draw::Vector2d_int)’:
+../../../include/jetfuelgui/menu.h:336:68: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0;Get_size_of_container_boxes_vector() > i; ++i){
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../../include/jetfuelgui.h:26:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp:18:
+../../../include/jetfuelgui/dropdownbox.h: In member function ‘void jetfuel::gui::Drop_down_box::Add_option_to_vector(std::__cxx11::string)’:
+../../../include/jetfuelgui/dropdownbox.h:318:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_options.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/dropdownbox.h: In member function ‘bool jetfuel::gui::Drop_down_box::Draw_all_option_boxes()’:
+../../../include/jetfuelgui/dropdownbox.h:430:57: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_dropdownoptions.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/dropdownbox.h: In member function ‘void jetfuel::gui::Drop_down_box::Regenerate_options()’:
+../../../include/jetfuelgui/dropdownbox.h:504:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_options.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~^~~
+In file included from ../../../include/jetfuelcontrol.h:25:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h:25,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp:22:
+../../../include/jetfuelcontrol/UISmanager.h: In member function ‘jetfuel::control::UIS_previous_key jetfuel::control::UIS_manager::Get_past_key_in_vector(int)’:
+../../../include/jetfuelcontrol/UISmanager.h:223:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_size_of_past_keys_entered_vector()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcontrol/UISmanager.h: In member function ‘void jetfuel::control::UIS_manager::Erase_place_in_past_keys_vector(int)’:
+../../../include/jetfuelcontrol/UISmanager.h:262:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place >= m_pastkeysentered.size()){
+                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp
+ 
+Building file: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelinspirectypes.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/ctypeswrappers/jetfuelinspirectypes.d" -MT"src/ctypeswrappers/jetfuelinspirectypes.o" -o "src/ctypeswrappers/jetfuelinspirectypes.o" "/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelinspirectypes.cpp"
+In file included from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelinspirectypes.cpp:18:0:
+../../../include/jetfuelinspire/pointerbridge.h: In member function ‘void* jetfuel::inspire::Pointer_bridge::Recieve_pointer(std::__cxx11::string, bool*)’:
+../../../include/jetfuelinspire/pointerbridge.h:50:52: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_pointerids.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~^~~
+Finished building: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelinspirectypes.cpp
+ 
+Building file: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/ctypeswrappers/jetfuellocalectypes.d" -MT"src/ctypeswrappers/jetfuellocalectypes.o" -o "src/ctypeswrappers/jetfuellocalectypes.o" "/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp"
+In file included from ../../../include/jetfuelcore.h:24:0,
+                 from ../../../include/jetfuellocale.h:22,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp:18:
+../../../include/jetfuelcore/messagebus.h: In member function ‘SDL_Event jetfuel::core::Message_bus::Get_SDL_event(int)’:
+../../../include/jetfuelcore/messagebus.h:142:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_SDL_events_size()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcore/messagebus.h: In member function ‘std::__cxx11::string jetfuel::core::Message_bus::Get_message(int) const’:
+../../../include/jetfuelcore/messagebus.h:188:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(m_messages.size() <= whichqueuedmessage){
+                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/jetfuelcore.h:25:0,
+                 from ../../../include/jetfuellocale.h:22,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp:18:
+../../../include/jetfuelcore/timer.h: In member function ‘bool jetfuel::core::Timer::Start()’:
+../../../include/jetfuelcore/timer.h:80:32: warning: NULL used in arithmetic [-Wpointer-arith]
+                 if(m_duration==NULL || m_inuse){
+                                ^~~~
+In file included from ../../../include/jetfuellocale.h:24:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp:18:
+../../../include/jetfuellocale/stringlocalemanager.h: In member function ‘bool jetfuel::locale::String_locale_manager::Set_active_locale(std::__cxx11::string)’:
+../../../include/jetfuellocale/stringlocalemanager.h:76:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_localefiles.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuellocale/stringlocalemanager.h: In member function ‘std::__cxx11::string jetfuel::locale::String_locale_manager::Get_string_from_id(std::__cxx11::string) const’:
+../../../include/jetfuellocale/stringlocalemanager.h:101:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; stringidindex.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~^~~
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp: In function ‘wchar_t* String_locale_file_load_string_locale_file(jetfuel::locale::String_locale_file*, wchar_t*, wchar_t*)’:
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp:79:18: warning: ISO C++ forbids converting a string constant to ‘wchar_t*’ [-Wwrite-strings]
+    returnvalue = L"None";
+                  ^~~~~~~
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp: In function ‘jetfuel::locale::Locale_string* String_locale_file_get_locale_string_vector_element(jetfuel::locale::String_locale_file*, int)’:
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp:103:64: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if(stringlocalefile->Get_locale_string_vector().size() <= place){
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+Finished building: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp
+ 
+Building file: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/ctypeswrappers/jetfuelmediactypes.d" -MT"src/ctypeswrappers/jetfuelmediactypes.o" -o "src/ctypeswrappers/jetfuelmediactypes.o" "/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp"
+In file included from ../../../include/jetfuelcore.h:24:0,
+                 from ../../../include/jetfuelmedia.h:21,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp:18:
+../../../include/jetfuelcore/messagebus.h: In member function ‘SDL_Event jetfuel::core::Message_bus::Get_SDL_event(int)’:
+../../../include/jetfuelcore/messagebus.h:142:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_SDL_events_size()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcore/messagebus.h: In member function ‘std::__cxx11::string jetfuel::core::Message_bus::Get_message(int) const’:
+../../../include/jetfuelcore/messagebus.h:188:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(m_messages.size() <= whichqueuedmessage){
+                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/jetfuelcore.h:25:0,
+                 from ../../../include/jetfuelmedia.h:21,
+                 from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp:18:
+../../../include/jetfuelcore/timer.h: In member function ‘bool jetfuel::core::Timer::Start()’:
+../../../include/jetfuelcore/timer.h:80:32: warning: NULL used in arithmetic [-Wpointer-arith]
+                 if(m_duration==NULL || m_inuse){
+                                ^~~~
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp: In function ‘wchar_t* Get_sdl_error()’:
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp:76:17: warning: address of local variable ‘returnvalue’ returned [-Wreturn-local-addr]
+         wchar_t returnvalue[4096];
+                 ^~~~~~~~~~~
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp: In function ‘wchar_t* Sound_effect_get_loaded_sound_effect_file(jetfuel::media::Sound_effect*)’:
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp:100:17: warning: address of local variable ‘returnvalue’ returned [-Wreturn-local-addr]
+         wchar_t returnvalue[MAX_FILE_NAME_SIZE];
+                 ^~~~~~~~~~~
+Finished building: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp
+ 
+Building file: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/stringconversions.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/stringconversions.d" -MT"src/stringconversions.o" -o "src/stringconversions.o" "/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/stringconversions.cpp"
+Finished building: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/stringconversions.cpp
+ 
 Building target: libJetfuel Python API.so
 Invoking: GCC C++ Linker
-g++ -L"/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/eclipse/Jetfuel Game Engine/Debug" -shared -o "libJetfuel Python API.so"  ./src/ctypeswrappers/jetfuelcontrolctypes.o ./src/ctypeswrappers/jetfuelcorectypes.o ./src/ctypeswrappers/jetfueldrawctypes.o ./src/ctypeswrappers/jetfuelguictypes.o ./src/ctypeswrappers/jetfuelinspirectypes.o ./src/ctypeswrappers/jetfuellocalectypes.o ./src/ctypeswrappers/jetfuelmediactypes.o  ./src/stringconversions.o   -lJetfuel\ Game\ Engine -lSDL2 -lSDL2_mixer -lSDL2_image -lSDL2_ttf
+g++ -L"/home/bobby/JetfuelGameEnginePublicGit/eclipse/Jetfuel Game Engine/Debug" -shared -o "libJetfuel Python API.so"  ./src/ctypeswrappers/jetfuelcontrolctypes.o ./src/ctypeswrappers/jetfuelcorectypes.o ./src/ctypeswrappers/jetfueldrawctypes.o ./src/ctypeswrappers/jetfuelguictypes.o ./src/ctypeswrappers/jetfuelinspirectypes.o ./src/ctypeswrappers/jetfuellocalectypes.o ./src/ctypeswrappers/jetfuelmediactypes.o  ./src/stringconversions.o   -lJetfuel\ Game\ Engine -lSDL2 -lSDL2_mixer -lSDL2_image -lSDL2_ttf
 Finished building target: libJetfuel Python API.so
  
 
-18:49:42 Build Finished (took 2s.286ms)
+18:51:29 Build Finished (took 7s.433ms)
 

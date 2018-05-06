@@ -1,5 +1,5 @@
 src/ctypeswrappers/jetfuelguictypes.o: \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp \
+ /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp \
  ../../../include/jetfuelgui.h ../../../include/jetfuelcore.h \
  ../../../include/jetfuelcore/messagebus.h \
  ../../../include/jetfuelcore/timer.h ../../../include/config.h \
@@ -38,8 +38,9 @@ src/ctypeswrappers/jetfuelguictypes.o: \
  ../../../include/jetfuelgui/../jetfueldraw/rectangle2dshape.h \
  ../../../include/jetfuelgui/slider.h \
  ../../../include/jetfuelgui/../jetfueldraw/circle2dshape.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../stringconversions.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h \
+ ../../../include/jetfuelgui/textbox.h \
+ /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../stringconversions.h \
+ /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h \
  ../../../include/jetfuelcontrol.h \
  ../../../include/jetfuelcontrol/UISmanager.h \
  ../../../windowsdependencies/rapidjson-master/include/rapidjson/document.h \
@@ -66,10 +67,10 @@ src/ctypeswrappers/jetfuelguictypes.o: \
  ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../stream.h \
  ../../../windowsdependencies/rapidjson-master/include/rapidjson/internal/../rapidjson.h \
  ../../../include/jetfuelcontrol/../config.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfueldraw/rectangle2dshapecharacteristicsreplacement.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfueldraw/circle2dshapecharacteristicsreplacement.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelgui/buttoncharacteristicsreplacement.h \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelgui/../jetfueldraw/textcharacteristicsreplacement.h
+ /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfueldraw/rectangle2dshapecharacteristicsreplacement.h \
+ /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfueldraw/circle2dshapecharacteristicsreplacement.h \
+ /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelgui/buttoncharacteristicsreplacement.h \
+ /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelgui/../jetfueldraw/textcharacteristicsreplacement.h
 
 ../../../include/jetfuelgui.h:
 
@@ -155,9 +156,11 @@ src/ctypeswrappers/jetfuelguictypes.o: \
 
 ../../../include/jetfuelgui/../jetfueldraw/circle2dshape.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../stringconversions.h:
+../../../include/jetfuelgui/textbox.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h:
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../stringconversions.h:
+
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h:
 
 ../../../include/jetfuelcontrol.h:
 
@@ -211,10 +214,10 @@ src/ctypeswrappers/jetfuelguictypes.o: \
 
 ../../../include/jetfuelcontrol/../config.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfueldraw/rectangle2dshapecharacteristicsreplacement.h:
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfueldraw/rectangle2dshapecharacteristicsreplacement.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfueldraw/circle2dshapecharacteristicsreplacement.h:
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfueldraw/circle2dshapecharacteristicsreplacement.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelgui/buttoncharacteristicsreplacement.h:
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelgui/buttoncharacteristicsreplacement.h:
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelgui/../jetfueldraw/textcharacteristicsreplacement.h:
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelgui/../jetfueldraw/textcharacteristicsreplacement.h:

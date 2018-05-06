@@ -4,8 +4,8 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire/pythonclassloader.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire/pythonmoduleloader.cpp 
+/home/bobby/JetfuelGameEnginePublicGit/src/jetfuelinspire/pythonclassloader.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/src/jetfuelinspire/pythonmoduleloader.cpp 
 
 OBJS += \
 ./src/jetfuelinspire/pythonclassloader.o \
@@ -17,14 +17,14 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/jetfuelinspire/pythonclassloader.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire/pythonclassloader.cpp
+src/jetfuelinspire/pythonclassloader.o: /home/bobby/JetfuelGameEnginePublicGit/src/jetfuelinspire/pythonclassloader.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++14 -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/jetfuelinspire/pythonmoduleloader.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelinspire/pythonmoduleloader.cpp
+src/jetfuelinspire/pythonmoduleloader.o: /home/bobby/JetfuelGameEnginePublicGit/src/jetfuelinspire/pythonmoduleloader.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++14 -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"

@@ -38,10 +38,9 @@ namespace jetfuel {
             // that action was activated with a keyboard.
 
             const int keyidnumber = jsondoc["keyidnumber"].GetInt();
+            const char *key = SDL_GetKeyName(event->key.keysym.sym);
 
             for(int i = 0; keyidnumber > i; ++i){
-                const char *key = SDL_GetKeyName(event->key.keysym.sym);
-
                 char *jsonkey;
                 if(jsondoc["Keys"][i]["key"].IsInt()){
                     jsonkey = const_cast<char *>(std::to_string(jsondoc["Keys"]

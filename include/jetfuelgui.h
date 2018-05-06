@@ -26,5 +26,6 @@
 #include <jetfuelgui/dropdownbox.h>
 #include <jetfuelgui/progressbar.h>
 #include <jetfuelgui/slider.h>
+#include <jetfuelgui/textbox.h>
 
 #endif /* JETFUELGUI_H_ */

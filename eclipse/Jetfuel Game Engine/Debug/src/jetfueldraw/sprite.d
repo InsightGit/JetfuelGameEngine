@@ -1,5 +1,5 @@
 src/jetfueldraw/sprite.o: \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfueldraw/sprite.cpp \
+ /home/bobby/JetfuelGameEnginePublicGit/src/jetfueldraw/sprite.cpp \
  ../../../include/jetfueldraw/sprite.h \
  ../../../include/jetfueldraw/drawable.h \
  ../../../include/jetfueldraw/rect2d.h \

@@ -28,7 +28,7 @@
 		<link>
 			<name>src</name>
 			<type>2</type>
-			<location>/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/PythonAPI/src</location>
+			<locationURI>PARENT-1-WORKSPACE_LOC/PythonAPI/src</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -81,10 +81,6 @@ namespace jetfuel {
             ///
             /// \param SDL_Event *event
             void Process_input_event(SDL_Event *event);
-
-            std::vector<std::string> Get_last_keys_entered(){
-            	return m_lastkeyboardkeysspreseed;
-            }
         protected:
             /// \brief Loads a JSON file from a JSON file's path into
             /// the internal rapidjson value.
@@ -322,8 +318,6 @@ namespace jetfuel {
             rapidjson::Document jsondoc; ///< rapidjson JSON document
             ///^ file
         private:
-            std::vector<std::string> m_lastkeyboardkeysspreseed;
-
             std::string m_filename; ///< JSON filename
             std::string m_pastfilename; ///< past JSON filename
             std::string m_lastmouseaction; ///< the last mouse action

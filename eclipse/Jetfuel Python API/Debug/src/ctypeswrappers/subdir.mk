@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelcorectypes.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelinspirectypes.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp 
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcorectypes.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelinspirectypes.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp 
 
 OBJS += \
 ./src/ctypeswrappers/jetfuelcontrolctypes.o \
@@ -32,49 +32,49 @@ CPP_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/ctypeswrappers/jetfuelcontrolctypes.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp
+src/ctypeswrappers/jetfuelcontrolctypes.o: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/ctypeswrappers/jetfuelcorectypes.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelcorectypes.cpp
+src/ctypeswrappers/jetfuelcorectypes.o: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcorectypes.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/ctypeswrappers/jetfueldrawctypes.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp
+src/ctypeswrappers/jetfueldrawctypes.o: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfueldrawctypes.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/ctypeswrappers/jetfuelguictypes.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp
+src/ctypeswrappers/jetfuelguictypes.o: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/ctypeswrappers/jetfuelinspirectypes.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelinspirectypes.cpp
+src/ctypeswrappers/jetfuelinspirectypes.o: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelinspirectypes.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/ctypeswrappers/jetfuellocalectypes.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp
+src/ctypeswrappers/jetfuellocalectypes.o: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuellocalectypes.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/ctypeswrappers/jetfuelmediactypes.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp
+src/ctypeswrappers/jetfuelmediactypes.o: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelmediactypes.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"

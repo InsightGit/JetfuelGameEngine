@@ -4,12 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/button.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/checkbox.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/dropdownbox.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/menu.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/progressbar.cpp \
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/slider.cpp 
+/home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/button.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/checkbox.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/dropdownbox.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/menu.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/progressbar.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/slider.cpp \
+/home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/textbox.cpp 
 
 OBJS += \
 ./src/jetfuelgui/button.o \
@@ -17,7 +18,8 @@ OBJS += \
 ./src/jetfuelgui/dropdownbox.o \
 ./src/jetfuelgui/menu.o \
 ./src/jetfuelgui/progressbar.o \
-./src/jetfuelgui/slider.o 
+./src/jetfuelgui/slider.o \
+./src/jetfuelgui/textbox.o 
 
 CPP_DEPS += \
 ./src/jetfuelgui/button.d \
@@ -25,46 +27,54 @@ CPP_DEPS += \
 ./src/jetfuelgui/dropdownbox.d \
 ./src/jetfuelgui/menu.d \
 ./src/jetfuelgui/progressbar.d \
-./src/jetfuelgui/slider.d 
+./src/jetfuelgui/slider.d \
+./src/jetfuelgui/textbox.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/jetfuelgui/button.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/button.cpp
+src/jetfuelgui/button.o: /home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/button.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++14 -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/jetfuelgui/checkbox.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/checkbox.cpp
+src/jetfuelgui/checkbox.o: /home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/checkbox.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++14 -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/jetfuelgui/dropdownbox.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/dropdownbox.cpp
+src/jetfuelgui/dropdownbox.o: /home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/dropdownbox.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++14 -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/jetfuelgui/menu.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/menu.cpp
+src/jetfuelgui/menu.o: /home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/menu.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++14 -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/jetfuelgui/progressbar.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/progressbar.cpp
+src/jetfuelgui/progressbar.o: /home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/progressbar.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++14 -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/jetfuelgui/slider.o: /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/slider.cpp
+src/jetfuelgui/slider.o: /home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/slider.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C++ Compiler'
+	g++ -std=c++14 -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+src/jetfuelgui/textbox.o: /home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/textbox.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++14 -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"

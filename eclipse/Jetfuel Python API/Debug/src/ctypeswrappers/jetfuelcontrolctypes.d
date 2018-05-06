@@ -1,6 +1,6 @@
 src/ctypeswrappers/jetfuelcontrolctypes.o: \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h \
+ /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelcontrolctypes.cpp \
+ /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h \
  ../../../include/jetfuelcontrol.h ../../../include/jetfuelcore.h \
  ../../../include/jetfuelcore/messagebus.h \
  ../../../include/jetfuelcore/timer.h ../../../include/config.h \
@@ -33,7 +33,7 @@ src/ctypeswrappers/jetfuelcontrolctypes.o: \
  ../../../include/jetfuelcontrol/../config.h \
  ../../../include/jetfueldraw/rect2d.h
 
-/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h:
+/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/../jetfuelcontrol/uisinputactionsreplacement.h:
 
 ../../../include/jetfuelcontrol.h:
 

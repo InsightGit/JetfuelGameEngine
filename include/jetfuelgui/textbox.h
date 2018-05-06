@@ -76,13 +76,23 @@ namespace jetfuel{
 				return m_textrectanglebox.Get_rect_to_draw();
 			}
 
+			int Get_max_char_limit() const {
+				return m_maxchars;
+			}
+
+			void Set_max_char_limit(int maxchars) {
+				m_maxchars = maxchars;
+
+				Update_box_size();
+			}
+
 			void Check_for_clicks(jetfuel::control::Action
                                   UISinterpreterdata)override;
 
-			void Draw()override;
-		protected:
-			void Update_text();
+			void Process_text_input_event(SDL_Event *event);
 
+			bool Draw()override;
+		protected:
 			void Update_box_size(){
 				if(m_maxchars > 0){
 					// Constrain max amount of characters.
@@ -100,6 +110,8 @@ namespace jetfuel{
 		private:
 			int m_maxchars;
 			bool m_focusedon = false;
+
+			std::string m_currenttext;
 
 			jetfuel::draw::Text::Text_characteristics m_textboxtextchars;
 			jetfuel::draw::Text m_textentered;

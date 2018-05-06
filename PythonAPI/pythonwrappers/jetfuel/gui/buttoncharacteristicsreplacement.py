@@ -95,8 +95,9 @@ class button_characteristics_replacement(object):
 
         returnvalue.delete_ref();
 
-        returnvalue.colorref = self._jetfuel.\
-            Button_characteristics_replacement_get_color(self.buttoncharsref);
+        returnvalue.textcharsref = self._jetfuel.\
+            Button_characteristics_replacement_get_text_chars(self.\
+                                                        buttoncharsref);
 
         return returnvalue;
 

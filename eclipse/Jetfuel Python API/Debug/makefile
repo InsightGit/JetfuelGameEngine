@@ -45,7 +45,7 @@ all: libJetfuel\ Python\ API.so
 libJetfuel\ Python\ API.so: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/eclipse/Jetfuel Game Engine/Debug" -shared -o "libJetfuel Python API.so" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/bobby/JetfuelGameEnginePublicGit/eclipse/Jetfuel Game Engine/Debug" -shared -o "libJetfuel Python API.so" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

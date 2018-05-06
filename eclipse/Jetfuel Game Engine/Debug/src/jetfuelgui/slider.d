@@ -1,5 +1,5 @@
 src/jetfuelgui/slider.o: \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/src/jetfuelgui/slider.cpp \
+ /home/bobby/JetfuelGameEnginePublicGit/src/jetfuelgui/slider.cpp \
  ../../../include/jetfuelgui/slider.h \
  ../../../include/jetfuelgui/iclickable.h \
  ../../../include/jetfuelgui/../jetfuelcontrol/UISinterpreter.h \
