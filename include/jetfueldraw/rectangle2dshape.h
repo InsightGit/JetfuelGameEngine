@@ -119,7 +119,7 @@ namespace jetfuel {
             ///
             /// Returns the outline color of the rectangle.
             Color Get_outline_color() const {
-                return m_rectfillcolor;
+                return m_rectoutlinecolor;
             }
 
             /// \brief Sets the outline color of the rectangle.
@@ -131,7 +131,7 @@ namespace jetfuel {
             ///
             /// \param jetfuel::draw::Color rectcolor
             void Set_outline_color(const Color rectcolor) {
-                m_rectfillcolor = rectcolor;
+                m_rectoutlinecolor = rectcolor;
                 m_drawoutline = true;
             }
 

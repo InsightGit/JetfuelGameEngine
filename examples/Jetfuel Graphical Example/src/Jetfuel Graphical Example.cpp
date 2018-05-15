@@ -92,11 +92,13 @@ int main(){
     jetfuel::gui::Drop_down_box dropdownbox;
     jetfuel::gui::Progress_bar progressbar;
     jetfuel::gui::Slider slider;
+    jetfuel::gui::Text_box textbox;
 
     jetfuel::gui::Menu::Button_characteristics resumebutton;
     jetfuel::gui::Menu::Button_characteristics quitbutton;
     jetfuel::draw::Text::Text_characteristics checkboxlabelchars;
     jetfuel::draw::Text::Text_characteristics dropdownboxchars;
+    jetfuel::draw::Text::Text_characteristics textboxchars;
     jetfuel::draw::Rectangle_2d_shape::Rectangle_2d_shape_characteristics
      sliderrailchars;
     jetfuel::draw::Circle_2d_shape::Circle_2d_shape_characteristics
@@ -344,6 +346,20 @@ int main(){
 
                 sliderinputactions.mousemessagetowatch = "Mouse_click";
                 slider.Set_control_scheme(sliderinputactions);
+                messagebus.Post_message("spawntextbox");
+            }else if(messagebus.Does_message_exist("spawntextbox")){
+            	scene2.Attach_drawable(&textbox, 7);
+
+				textboxchars.font = globalfont;
+				textboxchars.rendermode = jetfuel::draw::Text::Render_mode::
+											Solid;
+				textboxchars.textcolor = jetfuel::draw::Color::White;
+				textboxchars.fontsize = 20;
+
+				textbox.Set_text_box_text_characteristics(textboxchars);
+				textbox.Set_text_box_box_fill_color(jetfuel::draw::Color::Black);
+
+				textbox.Set_position(jetfuel::draw::Vector2d_int(1100,600));
             }else if(messagebus.Does_message_exist("resume")){
                 if(!limitclickstimerset){
                     scene2.Disable_drawable(&menu);
@@ -354,7 +370,6 @@ int main(){
                 }else if(limitclickstimer.Has_timer_finished()){
                     limitclickstimerset = false;
                 }
-
             }else if(messagebus.Does_message_exist("quit")){
                 return 0;
             }else if(messagebus.Does_message_exist("draw")){
@@ -365,8 +380,13 @@ int main(){
                SDL_Event event = messagebus.Get_SDL_event(i);
 
                if(event.type == SDL_QUIT){
-                       return 0;
-               }else{
+				   return 0;
+               }else if(textbox.Is_focused_on()){
+            	   textbox.Process_text_input_event(&event);
+               }
+
+               if(!textbox.Is_focused_on() || (event.type != SDL_KEYDOWN &&
+				   event.type != SDL_KEYUP)){
                    UISmanager.Process_input_event(&event);
                }
             }
@@ -397,64 +417,63 @@ int main(){
             }
 
             if(checkboxspawned){
+                textbox.Check_for_clicks(UISaction);
                 checkbox.Check_for_clicks(UISaction);
                 dropdownbox.Check_for_clicks(UISaction);
                 slider.Check_for_clicks(UISaction);
             }else{
                 menu.Check_for_clicks(UISaction);
-
-                if(reinterpret_cast<long int>(pythonbuttonpointer) != winnull &&
-					pythonbuttonpointer != nullptr){
-                    pythonbuttonpointer->Check_for_clicks(UISaction);
-                }else{
-                    pythonbuttonpointer = static_cast<jetfuel::gui::Button*>(
-                            pointerbridge.Recieve_pointer("pythonbutton",
-                                                           &hasbuttonpointer));
-                }
-
-                if(reinterpret_cast<long int>(pythoncheckboxpointer)!= winnull &&
-					pythoncheckboxpointer != nullptr){
-                    pythoncheckboxpointer->Check_for_clicks(UISaction);
-                }else{
-                    pythoncheckboxpointer =
-                            static_cast<jetfuel::gui::Check_box*>(
-                            pointerbridge.Recieve_pointer("pythoncheckbox",
-                                                           &hascheckboxpointer));
-                }
-
-                if(reinterpret_cast<long int>(pythondropdownboxpointer)!= winnull
-					&& pythondropdownboxpointer != nullptr){
-                    pythondropdownboxpointer->Check_for_clicks(UISaction);
-                    std::clog << "Checking Drop down box...\n";
-                }else{
-                    pythondropdownboxpointer = static_cast<
-                                          jetfuel::gui::Drop_down_box*>(
-                          pointerbridge.Recieve_pointer("pythondropdownbox",
-                                                   &hasdropdownboxpointer));
-                }
-
-                if(reinterpret_cast<long int>(pythonmenupointer) != winnull &&
-					pythonmenupointer != nullptr){
-                    pythonmenupointer->Check_for_clicks(UISaction);
-                    std::clog << "Checking Menu...\n";
-                }else{
-                    pythonmenupointer = static_cast<
-                                          jetfuel::gui::Menu*>(
-                          pointerbridge.Recieve_pointer("pythonmenu",
-                                                   &hasmenupointer));
-                }
-
-	            if(reinterpret_cast<long int>(pythonsliderpointer) != winnull &&
-					pythonsliderpointer != nullptr){
-                    pythonsliderpointer->Check_for_clicks(UISaction);
-                    std::clog << "Checking Slider...\n";
-                }else{
-                    pythonsliderpointer = static_cast<
-                                          jetfuel::gui::Slider*>(
-                          pointerbridge.Recieve_pointer("pythonslider",
-                                                       &hassliderpointer));
-                }
             }
+
+            if(reinterpret_cast<long int>(pythonbuttonpointer) != winnull &&
+				pythonbuttonpointer != nullptr){
+            	pythonbuttonpointer->Check_for_clicks(UISaction);
+			}else{
+				pythonbuttonpointer = static_cast<jetfuel::gui::Button*>(
+						pointerbridge.Recieve_pointer("pythonbutton",
+														&hasbuttonpointer));
+			}
+
+		    if(reinterpret_cast<long int>(pythoncheckboxpointer)!= winnull &&
+			 pythoncheckboxpointer != nullptr){
+			    pythoncheckboxpointer->Check_for_clicks(UISaction);
+		    }else{
+			    pythoncheckboxpointer =
+			 		   static_cast<jetfuel::gui::Check_box*>(
+			 		   pointerbridge.Recieve_pointer("pythoncheckbox",
+													  &hascheckboxpointer));
+		    }
+
+			if(reinterpret_cast<long int>(pythondropdownboxpointer)!= winnull
+				&& pythondropdownboxpointer != nullptr){
+				pythondropdownboxpointer->Check_for_clicks(UISaction);
+				std::clog << "Checking Drop down box...\n";
+			}else{
+				pythondropdownboxpointer = static_cast<jetfuel::gui::
+						Drop_down_box*>(pointerbridge.Recieve_pointer(
+								"pythondropdownbox",&hasdropdownboxpointer));
+			}
+
+			if(reinterpret_cast<long int>(pythonmenupointer) != winnull &&
+			   pythonmenupointer != nullptr){
+				pythonmenupointer->Check_for_clicks(UISaction);
+				std::clog << "Checking Menu...\n";
+		    }else{
+			   pythonmenupointer = static_cast<jetfuel::gui::Menu*>(
+						 pointerbridge.Recieve_pointer("pythonmenu",
+												  &hasmenupointer));
+			   }
+
+			if(reinterpret_cast<long int>(pythonsliderpointer) != winnull &&
+				pythonsliderpointer != nullptr){
+				   pythonsliderpointer->Check_for_clicks(UISaction);
+				   std::clog << "Checking Slider...\n";
+			   }else{
+				   pythonsliderpointer = static_cast<
+										 jetfuel::gui::Slider*>(
+						 pointerbridge.Recieve_pointer("pythonslider",
+													  &hassliderpointer));
+			   }
 
             messagebus.Post_message("draw");
         }

@@ -15,6 +15,7 @@
 
 from ctypes import c_void_p
 from ctypes import c_bool
+from ctypes import c_int
 
 from jetfuel.draw.rectangleinterface import rectangle_interface
 
@@ -61,3 +62,66 @@ class text_box(rectangle_interface):
         
         self._jetfuel.Text_box_set_text_box_box_fill_color(self.drawableref,
                                                             color.colorref);
+                                                            
+    def get_position_x(self):
+        self._jetfuel.Text_box_get_position_x.argtypes = [c_void_p];
+
+        self._jetfuel.Text_box_get_position_x.restype = c_int;
+
+        return self._jetfuel.Text_box_get_position_x(self.drawableref);
+
+    def get_position_y(self):
+        self._jetfuel.Text_box_get_position_y.argtypes = [c_void_p];
+
+        self._jetfuel.Text_box_get_position_y.restype = c_int;
+
+        return self._jetfuel.Text_box_get_position_y(self.drawableref);
+
+    def set_position(self, x, y):
+        self._jetfuel.Text_box_set_position.argtypes = [c_void_p, c_int, c_int];
+
+        self._jetfuel.Text_box_set_position(self.drawableref, x, y);
+        
+    def get_rect_to_draw_x(self):
+        self._jetfuel.Text_box_get_rect_to_draw_x.argtypes = [c_void_p];
+
+        self._jetfuel.Text_box_get_rect_to_draw_x.restype = c_int;
+
+        return self._jetfuel.Text_box_get_rect_to_draw_x(self.drawableref);
+
+    def get_rect_to_draw_y(self):
+        self._jetfuel.Text_box_get_rect_to_draw_y.argtypes = [
+                                                     c_void_p];
+
+        self._jetfuel.Text_box_get_rect_to_draw_y.restype = c_int;
+
+        return self._jetfuel.Text_box_get_rect_to_draw_y(self.drawableref);
+
+    def get_rect_to_draw_width(self):
+        self._jetfuel.Text_box_get_rect_to_draw_width.argtypes = [
+                                                     c_void_p];
+
+        self._jetfuel.Text_box_get_rect_to_draw_width.restype = c_int;
+
+        return self._jetfuel.Text_box_get_rect_to_draw_width(self.drawableref);
+
+    def get_rect_to_draw_height(self):
+        self._jetfuel.Text_box_get_rect_to_draw_height.argtypes = [
+                                                     c_void_p];
+
+        self._jetfuel.Text_box_get_rect_to_draw_height.restype = c_int;
+
+        return self._jetfuel.Text_box_get_rect_to_draw_height(self.drawableref);
+    
+    def get_max_char_limit(self):
+        self._jetfuel.Text_box_get_max_char_limit.argtypes = [c_void_p];
+
+        self._jetfuel.Text_box_get_max_char_limit.restype = c_int;
+
+        return self._jetfuel.Text_box_get_max_char_limit(self.drawableref);
+    
+    def set_max_char_limit(self, maxcharlimit):
+        self._jetfuel.Text_box_set_max_char_limit.argtypes = [c_void_p, c_int];
+        
+        self._jetfuel.Text_box_set_max_char_limit(self.drawableref, \
+                                                  maxcharlimit);

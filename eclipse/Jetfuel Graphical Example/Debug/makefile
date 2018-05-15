@@ -44,7 +44,7 @@ all: Jetfuel\ Graphical\ Example
 Jetfuel\ Graphical\ Example: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/eclipse/Jetfuel Game Engine/Debug" -L"/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/eclipse/Jetfuel Python API/Debug" -o "Jetfuel Graphical Example" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/bobby/JetfuelGameEnginePublicGit/eclipse/Jetfuel Game Engine/Debug" -L"/home/bobby/JetfuelGameEnginePublicGit/eclipse/Jetfuel Python API/Debug" -o "Jetfuel Graphical Example" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

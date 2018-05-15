@@ -119,6 +119,7 @@ namespace jetfuel {
             void Set_button_text_characteristics(
                     jetfuel::draw::Text::Text_characteristics
                     buttontextchars){
+                m_buttontext.Set_font(buttontextchars.font);
                 m_buttontext.Set_render_mode(buttontextchars.rendermode);
                 m_buttontext.Set_string(buttontextchars.textstring);
                 m_buttontext.Set_text_color(buttontextchars.textcolor);
@@ -134,7 +135,6 @@ namespace jetfuel {
                 m_buttontext.Set_font_style(buttontextchars.fontstyle);
                 m_buttontext.Set_font_size(buttontextchars.fontsize);
                 m_buttontext.Set_font_hinting(buttontextchars.fonthinting);
-                m_buttontext.Set_font(buttontextchars.font);
             }
 
             /// \brief Sets the message to send to the message bus

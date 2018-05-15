@@ -1,5 +1,5 @@
 src/Jetfuel\ Graphical\ Example.d: \
- /media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel\ Game\ Engine\ Public\ Git/examples/Jetfuel\ Graphical\ Example/src/Jetfuel\ Graphical\ Example.cpp \
+ /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel\ Graphical\ Example/src/Jetfuel\ Graphical\ Example.cpp \
  ../../../include/jetfueldraw.h ../../../include/jetfuelcore.h \
  ../../../include/jetfuelcore/messagebus.h \
  ../../../include/jetfuelcore/timer.h ../../../include/config.h \
@@ -64,7 +64,7 @@ src/Jetfuel\ Graphical\ Example.d: \
  ../../../include/jetfuelgui/../jetfueldraw/rectangle2dshape.h \
  ../../../include/jetfuelgui/slider.h \
  ../../../include/jetfuelgui/../jetfueldraw/circle2dshape.h \
- ../../../include/jetfuelmedia.h \
+ ../../../include/jetfuelgui/textbox.h ../../../include/jetfuelmedia.h \
  ../../../include/jetfuelmedia/soundeffect.h \
  ../../../include/jetfuelmedia/sound.h \
  ../../../include/jetfuelmedia/music.h \
@@ -208,6 +208,8 @@ src/Jetfuel\ Graphical\ Example.d: \
 ../../../include/jetfuelgui/slider.h:
 
 ../../../include/jetfuelgui/../jetfueldraw/circle2dshape.h:
+
+../../../include/jetfuelgui/textbox.h:
 
 ../../../include/jetfuelmedia.h:
 

@@ -13,8 +13,6 @@ namespace jetfuel{
 			m_textrectanglebox.Set_outline_color(jetfuel::draw::Color::Black);
 
 			m_maxchars = maxchars;
-
-			Update_box_size();
 		}
 
 		void Text_box::Process_text_input_event(SDL_Event *event){
@@ -27,12 +25,17 @@ namespace jetfuel{
 					updatetext = true;
 				}
 			}else if(event->type == SDL_TEXTINPUT){
-				m_currenttext += event->text.text;
-				updatetext = true;
+				if(m_currenttext.length() <= m_maxchars-1 ||
+				   m_maxchars < 0){
+					m_currenttext += event->text.text;
+					updatetext = true;
+				}
 			}
 
 			if(updatetext){
-				m_textentered.Set_string(m_currenttext);
+				if(m_currenttext.length() > 0){
+					m_textentered.Set_string(m_currenttext);
+				}
 			}
 		}
 
@@ -63,7 +66,13 @@ namespace jetfuel{
 		}
 
 		bool Text_box::Draw(){
-			return m_textrectanglebox.Draw() && m_textentered.Draw();
+			Update_box_size();
+
+			if(m_currenttext.length() > 0){
+				return m_textrectanglebox.Draw() && m_textentered.Draw();
+			}else{
+				return m_textrectanglebox.Draw();
+			}
 		}
 	}
 }

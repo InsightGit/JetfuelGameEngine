@@ -47,13 +47,11 @@ namespace jetfuel {
             sdlrect.h = Get_rect_to_draw().height;
             sdlrect.w = Get_rect_to_draw().width;
 
-            // Sets fill color for rectangle.
+            // Sets fill color for rectangle and renders the filled
+            // rectangle with it.
 
-            SDL_SetRenderDrawColor(Get_renderer(), Get_fill_color().r, 
+            SDL_SetRenderDrawColor(Get_renderer(), Get_fill_color().r,
              Get_fill_color().g, Get_fill_color().b, Get_fill_color().a);
-
-            // Renders a filled rectangle with fill color.
-
             SDL_RenderFillRect(Get_renderer(), &sdlrect);
 
             // Draws outline if it needs to.

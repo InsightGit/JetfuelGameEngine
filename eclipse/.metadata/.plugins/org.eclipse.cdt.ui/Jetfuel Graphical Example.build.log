@@ -1,10 +1,10 @@
-18:50:32 **** Incremental Build of configuration Debug for project Jetfuel Graphical Example ****
+18:36:27 **** Incremental Build of configuration Debug for project Jetfuel Graphical Example ****
 make all 
 Building target: Jetfuel Graphical Example
 Invoking: GCC C++ Linker
-g++ -L"/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/eclipse/Jetfuel Game Engine/Debug" -L"/media/bobby/PVSERVER01/CentralProjectStorage/eclipseworkspace/Jetfuel Game Engine Public Git/eclipse/Jetfuel Python API/Debug" -o "Jetfuel Graphical Example"  ./src/Jetfuel\ Graphical\ Example.o   -lJetfuel\ Game\ Engine -lJetfuel\ Python\ API -lpthread -lpython3.6m -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_gfx -lSDL2_mixer
+g++ -L"/home/bobby/JetfuelGameEnginePublicGit/eclipse/Jetfuel Game Engine/Debug" -L"/home/bobby/JetfuelGameEnginePublicGit/eclipse/Jetfuel Python API/Debug" -o "Jetfuel Graphical Example"  ./src/Jetfuel\ Graphical\ Example.o   -lJetfuel\ Game\ Engine -lJetfuel\ Python\ API -lpthread -lpython3.6m -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_gfx -lSDL2_mixer
 Finished building target: Jetfuel Graphical Example
  
 
-18:50:34 Build Finished (took 2s.223ms)
+18:36:28 Build Finished (took 520ms)
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="-1" key="dialogHeight"/>
-		<item value="-1" key="dialogWidth"/>
+		<item value="244" key="dialogHeight"/>
+		<item value="344" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
@@ -11,5 +11,12 @@
 		</list>
 		<list key="textArray">
 		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item value="684" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="826" key="DIALOG_HEIGHT"/>
+		<item value="-79" key="DIALOG_X_ORIGIN"/>
+		<item value="-173" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

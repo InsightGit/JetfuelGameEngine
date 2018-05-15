@@ -8,6 +8,7 @@ var searchData=
   ['is_5fchecked',['Is_checked',['../classjetfuel_1_1gui_1_1Check__box.html#a906b159264ffa88cab5d9d467331f229',1,'jetfuel::gui::Check_box']]],
   ['is_5fdraw_5foutline',['Is_draw_outline',['../classjetfuel_1_1draw_1_1Rectangle__2d__shape.html#a10cb5ef4b0d1b10b9d1b1bf32a805613',1,'jetfuel::draw::Rectangle_2d_shape']]],
   ['is_5fdynamic_5fimage_5floaded',['Is_dynamic_image_loaded',['../classjetfuel_1_1draw_1_1Sprite.html#a06c4dbfd70dc6d52c2cea3d3f624fe83',1,'jetfuel::draw::Sprite']]],
+  ['is_5ffocused_5fon',['Is_focused_on',['../classjetfuel_1_1gui_1_1Text__box.html#ab98bbc61a1355002c5f92e52ecd986ea',1,'jetfuel::gui::Text_box']]],
   ['is_5ffont_5fcreated',['Is_font_created',['../classjetfuel_1_1draw_1_1Text.html#a179a3fb69ac28cba38a6fbfe541e175b',1,'jetfuel::draw::Text']]],
   ['is_5ffont_5floaded',['Is_font_loaded',['../classjetfuel_1_1draw_1_1Font.html#a23a8e0aed90fac334f939d1b10864976',1,'jetfuel::draw::Font']]],
   ['is_5ffont_5frendering_5ffor_5ffirst_5ftime',['Is_font_rendering_for_first_time',['../classjetfuel_1_1draw_1_1Text.html#a007454f20452791fe80f981e45fab1d7',1,'jetfuel::draw::Text']]],
