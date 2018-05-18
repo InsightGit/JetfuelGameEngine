@@ -1,5 +1,5 @@
 #     Jetfuel Game Engine- A SDL-based 2D game-engine
-#     Copyright (C) 2017 InfernoStudios
+#     Copyright (C) 2018 InfernoStudios
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -91,7 +91,7 @@ class check_box(rectangle_interface):
         self._jetfuel.Check_box_set_UIS_action_to_watch(self.drawableref,
                                                         action);
 
-    def get_checkbox_rect_to_draw_x(self):
+    def get_rect_to_draw_x(self):
         self._jetfuel.Check_box_get_checkbox_rect_to_draw_x.argtypes = [
                                                      c_void_p];
 
@@ -99,7 +99,7 @@ class check_box(rectangle_interface):
 
         return self._jetfuel.Check_box_get_checkbox_rect_to_draw_x(self.drawableref);
 
-    def get_checkbox_rect_to_draw_y(self):
+    def get_rect_to_draw_y(self):
         self._jetfuel.Check_box_get_checkbox_rect_to_draw_y.argtypes = [
                                                      c_void_p];
 
@@ -107,7 +107,7 @@ class check_box(rectangle_interface):
 
         return self._jetfuel.Check_box_get_checkbox_rect_to_draw_y(self.drawableref);
 
-    def get_checkbox_rect_to_draw_width(self):
+    def get_rect_to_draw_width(self):
         self._jetfuel.Check_box_get_checkbox_rect_to_draw_width.argtypes = [
                                                      c_void_p];
 
@@ -116,7 +116,7 @@ class check_box(rectangle_interface):
         return self._jetfuel.Check_box_get_checkbox_rect_to_draw_width(
                                                       self.drawableref);
 
-    def get_checkbox_rect_to_draw_height(self):
+    def get_rect_to_draw_height(self):
         self._jetfuel.Check_box_get_checkbox_rect_to_draw_height.argtypes = [
                                                      c_void_p];
 

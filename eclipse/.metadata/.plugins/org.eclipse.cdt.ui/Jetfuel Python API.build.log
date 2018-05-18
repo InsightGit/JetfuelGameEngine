@@ -1,11 +1,14 @@
-18:35:57 **** Incremental Build of configuration Debug for project Jetfuel Python API ****
+18:29:09 **** Incremental Build of configuration Debug for project Jetfuel Python API ****
 make all 
 Building file: /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp
 Invoking: GCC C++ Compiler
 g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -fPIC -MMD -MP -MF"src/ctypeswrappers/jetfuelguictypes.d" -MT"src/ctypeswrappers/jetfuelguictypes.o" -o "src/ctypeswrappers/jetfuelguictypes.o" "/home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp"
 In file included from ../../../include/jetfuelgui.h:29:0,
                  from /home/bobby/JetfuelGameEnginePublicGit/PythonAPI/src/ctypeswrappers/jetfuelguictypes.cpp:18:
-../../../include/jetfuelgui/textbox.h:118:6: warning: multi-line comment [-Wcomment]
+../../../include/jetfuelgui/textbox.h:75:4: warning: multi-line comment [-Wcomment]
+    /// \param jetfuel::draw::Text::Text_characteristics \
+    ^
+../../../include/jetfuelgui/textbox.h:208:6: warning: multi-line comment [-Wcomment]
       // TODO(Bobby): Support scrolling for no max char \
       ^
 In file included from ../../../include/jetfuelcore.h:24:0,
@@ -104,5 +107,5 @@ g++ -L"/home/bobby/JetfuelGameEnginePublicGit/eclipse/Jetfuel Game Engine/Debug"
 Finished building target: libJetfuel Python API.so
  
 
-18:35:59 Build Finished (took 2s.273ms)
+18:29:11 Build Finished (took 2s.228ms)
 

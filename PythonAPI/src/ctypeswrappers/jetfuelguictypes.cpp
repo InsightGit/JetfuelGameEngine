@@ -566,36 +566,40 @@ extern "C" {
 		return textbox->Is_focused_on();
 	}
 
-	EXPORT jetfuel::draw::Text::Text_characteristics
-			*Text_box_get_text_box_text_characteristics(jetfuel::gui::Text_box
-														*textbox){
+	EXPORT jetfuel::draw::Text::Text_characteristics *Text_box_get_text_chars(
+											jetfuel::gui::Text_box *textbox){
 		jetfuel::draw::Text::Text_characteristics *returnvalue = new jetfuel::
-											draw::Text::Text_characteristics();
-		jetfuel::draw::Text::Text_characteristics textcharstocopy = textbox->
-											Get_text_box_text_characteristics();
-		returnvalue->backgroundcolor = textcharstocopy.backgroundcolor;
-		returnvalue->font = textcharstocopy.font;
-		returnvalue->fonthinting = textcharstocopy.fonthinting;
-		returnvalue->fontoutlinewidth = textcharstocopy.fontoutlinewidth;
-		returnvalue->fontsize = textcharstocopy.fontsize;
-		returnvalue->fontstyle = textcharstocopy.fontstyle;
-		returnvalue->kerningstatus = textcharstocopy.kerningstatus;
-		returnvalue->rendermode = textcharstocopy.rendermode;
-		returnvalue->textcolor = textcharstocopy.textcolor;
-		returnvalue->textstring = textcharstocopy.textstring;
+				draw::Text::Text_characteristics();
+
+		*returnvalue = textbox->Get_text_box_text_characteristics();
 
 		return returnvalue;
 	}
 
-	EXPORT void Text_box_set_text_box_text_characteristics(jetfuel::gui::
-														Text_box *textbox,
+	EXPORT void Text_box_set_text_chars(jetfuel::gui::Text_box *textbox,
 						jetfuel::draw::Text::Text_characteristics *textchars){
 		textbox->Set_text_box_text_characteristics(*textchars);
+	}
+
+	EXPORT jetfuel::draw::Color *Text_box_get_text_box_box_fill_color(
+								jetfuel::gui::Text_box *textbox){
+		jetfuel::draw::Color *returnvalue = new jetfuel::draw::Color();
+		jetfuel::draw::Color valuetocopy = textbox->Get_text_box_box_fill_color();
+
+		*returnvalue = valuetocopy;
+
+		return returnvalue;
 	}
 
 	EXPORT void Text_box_set_text_box_box_fill_color(jetfuel::gui::Text_box
 			*textbox,jetfuel::draw::Color fillcolor){
 		textbox->Set_text_box_box_fill_color(fillcolor);
+	}
+
+	EXPORT wchar_t* Text_box_get_current_text(jetfuel::gui::Text_box
+											  *textbox){
+		return String_conversions::Convert_narrow_char_to_wide_char(textbox->
+												Get_current_text().c_str());
 	}
 
 	EXPORT int Text_box_get_position_x(jetfuel::gui::Text_box *textbox){

@@ -1,5 +1,117 @@
-18:36:27 **** Incremental Build of configuration Debug for project Jetfuel Graphical Example ****
+19:49:54 **** Incremental Build of configuration Debug for project Jetfuel Graphical Example ****
 make all 
+Building file: /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -I../../../include -I../../../windowsdependencies/rapidjson-master/include -O0 -g3 -Wall -c -fmessage-length=0 -fpermissive -MMD -MP -MF"src/Jetfuel Graphical Example.d" -MT"src/Jetfuel\ Graphical\ Example.d" -o "src/Jetfuel Graphical Example.o" "/home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp"
+In file included from ../../../include/jetfuelgui.h:29:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:34:
+../../../include/jetfuelgui/textbox.h:75:4: warning: multi-line comment [-Wcomment]
+    /// \param jetfuel::draw::Text::Text_characteristics \
+    ^
+../../../include/jetfuelgui/textbox.h:208:6: warning: multi-line comment [-Wcomment]
+      // TODO(Bobby): Support scrolling for no max char \
+      ^
+In file included from ../../../include/jetfuelcore.h:24:0,
+                 from ../../../include/jetfueldraw.h:22,
+                 from /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:31:
+../../../include/jetfuelcore/messagebus.h: In member function ‘SDL_Event jetfuel::core::Message_bus::Get_SDL_event(int)’:
+../../../include/jetfuelcore/messagebus.h:142:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_SDL_events_size()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcore/messagebus.h: In member function ‘std::__cxx11::string jetfuel::core::Message_bus::Get_message(int) const’:
+../../../include/jetfuelcore/messagebus.h:188:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(m_messages.size() <= whichqueuedmessage){
+                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/jetfuelcore.h:25:0,
+                 from ../../../include/jetfueldraw.h:22,
+                 from /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:31:
+../../../include/jetfuelcore/timer.h: In member function ‘bool jetfuel::core::Timer::Start()’:
+../../../include/jetfuelcore/timer.h:80:32: warning: NULL used in arithmetic [-Wpointer-arith]
+                 if(m_duration==NULL || m_inuse){
+                                ^~~~
+In file included from ../../../include/jetfueldraw.h:26:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:31:
+../../../include/jetfueldraw/sprite.h: In member function ‘void jetfuel::draw::Sprite::Force_load_dynamic_image()’:
+../../../include/jetfueldraw/sprite.h:108:41: warning: taking address of temporary [-fpermissive]
+      &m_dynamicimage.Get_image_location() != nullptr){
+                                         ^
+In file included from ../../../include/jetfuelinspire.h:26:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:32:
+../../../include/jetfuelinspire/pointerbridge.h: In member function ‘void* jetfuel::inspire::Pointer_bridge::Recieve_pointer(std::__cxx11::string, bool*)’:
+../../../include/jetfuelinspire/pointerbridge.h:50:52: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_pointerids.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../../include/jetfuelcontrol.h:25:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:33:
+../../../include/jetfuelcontrol/UISmanager.h: In member function ‘jetfuel::control::UIS_previous_key jetfuel::control::UIS_manager::Get_past_key_in_vector(int)’:
+../../../include/jetfuelcontrol/UISmanager.h:223:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place>=Get_size_of_past_keys_entered_vector()){
+                    ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../include/jetfuelcontrol/UISmanager.h: In member function ‘void jetfuel::control::UIS_manager::Erase_place_in_past_keys_vector(int)’:
+../../../include/jetfuelcontrol/UISmanager.h:262:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if(place >= m_pastkeysentered.size()){
+                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/jetfuelgui.h:24:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:34:
+../../../include/jetfuelgui/menu.h: In member function ‘virtual void jetfuel::gui::Menu::Assign_renderer(SDL_Renderer*)’:
+../../../include/jetfuelgui/menu.h:173:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; Get_size_of_container_boxes_vector() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h:178:61: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h: In member function ‘virtual void jetfuel::gui::Menu::Set_position(jetfuel::draw::Vector2d_int)’:
+../../../include/jetfuelgui/menu.h:211:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; Get_size_of_container_boxes_vector() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h:216:61: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h: In member function ‘virtual jetfuel::draw::Rect2d_int jetfuel::gui::Menu::Get_rect_to_draw()’:
+../../../include/jetfuelgui/menu.h:235:73: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                     for(int i = 0; Get_size_of_container_boxes_vector() > i;
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h:243:65: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                     for(int i = 0; Get_size_of_buttons_vector() > i; ++i){
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/menu.h: In member function ‘bool jetfuel::gui::Menu::Does_container_box_exist_inside_vector(jetfuel::draw::Vector2d_int)’:
+../../../include/jetfuelgui/menu.h:336:68: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0;Get_size_of_container_boxes_vector() > i; ++i){
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../../include/jetfuelgui.h:26:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:34:
+../../../include/jetfuelgui/dropdownbox.h: In member function ‘void jetfuel::gui::Drop_down_box::Add_option_to_vector(std::__cxx11::string)’:
+../../../include/jetfuelgui/dropdownbox.h:318:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_options.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/dropdownbox.h: In member function ‘bool jetfuel::gui::Drop_down_box::Draw_all_option_boxes()’:
+../../../include/jetfuelgui/dropdownbox.h:430:57: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_dropdownoptions.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuelgui/dropdownbox.h: In member function ‘void jetfuel::gui::Drop_down_box::Regenerate_options()’:
+../../../include/jetfuelgui/dropdownbox.h:504:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_options.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~^~~
+In file included from ../../../include/jetfuellocale.h:24:0,
+                 from /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:36:
+../../../include/jetfuellocale/stringlocalemanager.h: In member function ‘bool jetfuel::locale::String_locale_manager::Set_active_locale(std::__cxx11::string)’:
+../../../include/jetfuellocale/stringlocalemanager.h:76:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; m_localefiles.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~^~~
+../../../include/jetfuellocale/stringlocalemanager.h: In member function ‘std::__cxx11::string jetfuel::locale::String_locale_manager::Get_string_from_id(std::__cxx11::string) const’:
+../../../include/jetfuellocale/stringlocalemanager.h:101:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 for(int i = 0; stringidindex.size() > i; ++i){
+                                ~~~~~~~~~~~~~~~~~~~~~^~~
+/home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp: In function ‘void Scene_manager_python_tests_thread(jetfuel::draw::Scene_manager*, jetfuel::core::Message_bus*, jetfuel::inspire::Pointer_bridge*)’:
+/home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:57:6: warning: unused variable ‘holdingGIL’ [-Wunused-variable]
+  int holdingGIL = PyGILState_Check(); // for debugging purposes
+      ^~~~~~~~~~
+/home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp: In function ‘int main()’:
+/home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp:381:61: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for(int i = 0; messagebus.Get_SDL_events_size() > i; ++i){
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+Finished building: /home/bobby/JetfuelGameEnginePublicGit/examples/Jetfuel Graphical Example/src/Jetfuel Graphical Example.cpp
+ 
 Building target: Jetfuel Graphical Example
 Invoking: GCC C++ Linker
 g++ -L"/home/bobby/JetfuelGameEnginePublicGit/eclipse/Jetfuel Game Engine/Debug" -L"/home/bobby/JetfuelGameEnginePublicGit/eclipse/Jetfuel Python API/Debug" -o "Jetfuel Graphical Example"  ./src/Jetfuel\ Graphical\ Example.o   -lJetfuel\ Game\ Engine -lJetfuel\ Python\ API -lpthread -lpython3.6m -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_gfx -lSDL2_mixer

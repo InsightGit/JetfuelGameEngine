@@ -123,6 +123,8 @@ int main(){
     bool hasmenupointer = false;
     jetfuel::gui::Slider *pythonsliderpointer;
     bool hassliderpointer = false;
+    jetfuel::gui::Text_box *pythontextboxpointer;
+    bool hastextboxpointer = false;
 
     bool limitclickstimerset = false;
     jetfuel::core::Timer limitclickstimer(0.1);
@@ -383,9 +385,20 @@ int main(){
 				   return 0;
                }else if(textbox.Is_focused_on()){
             	   textbox.Process_text_input_event(&event);
+               }else if(hastextboxpointer){
+            	   if(pythontextboxpointer->Is_focused_on()){
+            		   //pythontextboxpointer->
+            	   }
                }
 
-               if(!textbox.Is_focused_on() || (event.type != SDL_KEYDOWN &&
+               if(hastextboxpointer){
+            	   if(!(pythontextboxpointer->Is_focused_on() &&
+					   textbox.Is_focused_on()) || (event.type
+					   != SDL_KEYDOWN && event.type != SDL_KEYUP)){
+            		   // If either one of the textboxes aren't
+            		   // focused on or that
+            	   }
+               }if(!textbox.Is_focused_on() || (event.type != SDL_KEYDOWN &&
 				   event.type != SDL_KEYUP)){
                    UISmanager.Process_input_event(&event);
                }
@@ -447,7 +460,6 @@ int main(){
 			if(reinterpret_cast<long int>(pythondropdownboxpointer)!= winnull
 				&& pythondropdownboxpointer != nullptr){
 				pythondropdownboxpointer->Check_for_clicks(UISaction);
-				std::clog << "Checking Drop down box...\n";
 			}else{
 				pythondropdownboxpointer = static_cast<jetfuel::gui::
 						Drop_down_box*>(pointerbridge.Recieve_pointer(
@@ -457,23 +469,30 @@ int main(){
 			if(reinterpret_cast<long int>(pythonmenupointer) != winnull &&
 			   pythonmenupointer != nullptr){
 				pythonmenupointer->Check_for_clicks(UISaction);
-				std::clog << "Checking Menu...\n";
 		    }else{
 			   pythonmenupointer = static_cast<jetfuel::gui::Menu*>(
 						 pointerbridge.Recieve_pointer("pythonmenu",
 												  &hasmenupointer));
-			   }
+		    }
 
 			if(reinterpret_cast<long int>(pythonsliderpointer) != winnull &&
 				pythonsliderpointer != nullptr){
-				   pythonsliderpointer->Check_for_clicks(UISaction);
-				   std::clog << "Checking Slider...\n";
-			   }else{
-				   pythonsliderpointer = static_cast<
-										 jetfuel::gui::Slider*>(
+				pythonsliderpointer->Check_for_clicks(UISaction);
+		    }else{
+				pythonsliderpointer = static_cast<jetfuel::gui::Slider*>(
 						 pointerbridge.Recieve_pointer("pythonslider",
 													  &hassliderpointer));
-			   }
+		    }
+
+			if(reinterpret_cast<long int>(pythontextboxpointer) != winnull &&
+				pythontextboxpointer != nullptr){
+				   pythontextboxpointer->Check_for_clicks(UISaction);
+			}else{
+				   pythontextboxpointer = static_cast<
+										 jetfuel::gui::Text_box*>(
+						 pointerbridge.Recieve_pointer("pythontextbox",
+													  &hastextboxpointer));
+		    }
 
             messagebus.Post_message("draw");
         }

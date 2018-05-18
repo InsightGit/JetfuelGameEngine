@@ -49,6 +49,7 @@ from jetfuel.gui.buttoncharacteristicsreplacement import \
      button_characteristics_replacement
 from jetfuel.gui.progressbar import progress_bar
 from jetfuel.gui.slider import slider
+from jetfuel.gui.textbox import text_box
 
 from jetfuel.locale.stringlocalefile import string_locale_file
 from jetfuel.locale.localestring import locale_string
@@ -105,11 +106,11 @@ def create_progress_bar(jetfuelso, scenemanager):
 
     print("Attached progressbar");
 
-    while(not progressbar.has_progress_bar_completed()):
-        progressbar.set_progress_bar_progress(
-                                    progressbar.get_progress_bar_progress()+1);
-        print("Incrementing progress");
-        sleep(0.1);
+    #while(not progressbar.has_progress_bar_completed()):
+     #   progressbar.set_progress_bar_progress(
+      #                              progressbar.get_progress_bar_progress()+1);
+      #  print("Incrementing progress");
+       # sleep(0.1);
 
 def create_menu(jetfuelso, scenemanager, pointerbridge, messagebus):
     print("Creating menu...");
@@ -313,6 +314,26 @@ def create_quit_button(jetfuelso, scenemanager, messagebus, pointerbridge):
     currentbutton.set_uis_action_to_watch("Mouse_click");
 
     pointerbridge.send_pointer("pythonbutton", currentbutton.drawableref);
+    
+    
+def create_text_box(jetfuelso, scenemanager, pointerbridge):
+    print("create_text_box called");
+    fontfilepath = abspath("default.ttf");
+
+    textbox = text_box(jetfuelso);
+    
+    scenemanager.attach_drawable(textbox, 77);
+    
+    textboxtextchars = textchars(jetfuelso);
+  
+    textboxtextchars.set_font(font(jetfuelso, fontfilepath));
+    
+    textbox.set_position(100, 500);
+    
+    textbox.set_text_chars(textboxtextchars);
+    textbox.set_text_box_box_fill_color(color(jetfuelso, 255, 0, 0, 255));
+
+    pointerbridge.send_pointer("pythontextbox", textbox.drawableref);
 
 def drawabledisplay(scenemanagerpointer, messagebuspointer,
                     pointerbridgepointer):
@@ -422,6 +443,10 @@ def drawabledisplay(scenemanagerpointer, messagebuspointer,
         create_menu(jetfuelso, scenemanager, pointerbridge, messagebus);
 
     create_slider(jetfuelso, scenemanager, pointerbridge, messagebus);
+
+    create_text_box(jetfuelso, scenemanager, pointerbridge);
+    
+    # PUT THIS ONE ALWAYS LAST
     create_progress_bar(jetfuelso, scenemanager);
 
     print("Finished python tasks!");

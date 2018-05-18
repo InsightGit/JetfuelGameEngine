@@ -1,5 +1,5 @@
 #     Jetfuel Game Engine- A SDL-based 2D game-engine
-#     Copyright (C) 2017 InfernoStudios
+#     Copyright (C) 2018 InfernoStudios
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -95,8 +95,9 @@ class button_characteristics_replacement(object):
 
         returnvalue.delete_ref();
 
-        returnvalue.colorref = self._jetfuel.\
-            Button_characteristics_replacement_get_color(self.buttoncharsref);
+        returnvalue.textcharsref = self._jetfuel.\
+            Button_characteristics_replacement_get_text_chars(self.\
+                                                        buttoncharsref);
 
         return returnvalue;
 
