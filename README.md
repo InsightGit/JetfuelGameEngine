@@ -1,4 +1,7 @@
 # Jetfuel Game Engine
+## Archived due to Microsoft's acquisition of GitHub 
+New project link: https://gitlab.com/insightgit/JetfuelGameEngine
+
 
 **A new moddable 2D game engine**
 
